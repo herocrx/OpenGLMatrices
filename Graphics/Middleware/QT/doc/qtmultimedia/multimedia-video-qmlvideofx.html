@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmlvideofx.qdoc -->
+  <title>qtmultimedia 5.0: QML Video Shader Effects Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#overview">Overview</a></li>
+<li class="level1"><a href="#application-structure">Application structure</a></li>
+<li class="level1"><a href="#calculating-and-displaying-qml-painting-rate">Calculating and displaying QML painting rate</a></li>
+</ul>
+</div>
+<h1 class="title">QML Video Shader Effects Example</h1>
+<span class="subtitle"></span>
+<!-- $$$multimedia/video/qmlvideofx-description -->
+<div class="descr"> <a name="details"></a>
+<p>The QML Video Shader Effects Example shows how <a href="../qtquick/qml-qtquick2-shadereffect.html">ShaderEffect</a> can be used to apply postprocessing effects, expressed in <tt>GLSL</tt>, to video and camera viewfinder content.<a name="overview"></a>
+<h2>Overview</h2>
+<p>This example shows how a ShaderEffectItem can be used to apply postprocessing effects, expressed in GLSL, to QML <a href="qml-qtmultimedia5-videooutput.html">VideoOutput</a> items.</p>
+<p>It also shows how native code can be combined with QML to implement more advanced functionality - in this case, C++ code is used to calculate the QML frame rate. This value is rendered in QML in a semi-transparent item overlaid on the video content.</p>
+<p>Finally, this application demonstrates the use of different top-level QML files to handle different physical screen sizes. On small-screen devices, menus are by default hidden, and only appear when summoned by a gesture. Large-screen devices show a more traditional layout in which menus are displayed around the video content pane.</p>
+<p>The following screenshots show shader effects being applied. In each case, the effect is implemented using a fragment shader.</p>
+<p>Here we see an edge detection algorithm being applied to a video clip (<a href="http://orange.blender.org/">Elephant's Dream from blender.org</a>).</p>
+<p class="centerAlign"><img src="images/qmlvideofx-video-edgedetection.png" alt="" /></p><p>This image shows a page curl effect, applied to the same video clip.</p>
+<p class="centerAlign"><img src="images/qmlvideofx-video-pagecurl.png" alt="" /></p><p>Here we see a 'glow' effect (edge detection plus colour quantization) being applied to the camera viewfinder.</p>
+<p class="centerAlign"><img src="images/qmlvideofx-camera-glow.png" alt="" /></p><p>This image shows a 'lens magnification' effect applied to the viewfinder.</p>
+<p class="centerAlign"><img src="images/qmlvideofx-camera-magnify.png" alt="" /></p><p>The application includes many more effects than the ones shown here - look for Effect*.qml files in the list above to see the full range.</p>
+<a name="application-structure"></a>
+<h2>Application structure</h2>
+<p>Shader effects can be applied to video or viewfinder content using ShaderEffectItem, as shown in the following example, which applies a wiggly effect to the content:</p>
+<pre class="cpp">import <span class="type"><a href="../qtquick/qtquick-module.html">QtQuick</a></span> <span class="number">2.0</span>
+import <span class="type"><a href="qtmultimedia-module.html">QtMultimedia</a></span> <span class="number">5.0</span>
+
+Rectangle {
+    width: <span class="number">300</span>
+    height: <span class="number">300</span>
+    color: <span class="string">&quot;black&quot;</span>
+
+    MediaPlayer {
+        id: mediaPlayer
+        source: <span class="string">&quot;test.mp4&quot;</span>
+        playing: <span class="keyword">true</span>
+    }
+
+    VideoOutput {
+        id: video
+        anchors<span class="operator">.</span>fill: parent
+        source: mediaPlayer
+    }
+
+    ShaderEffect {
+        property variant source: ShaderEffectSource { sourceItem: video; hideSource: <span class="keyword">true</span> }
+        property real wiggleAmount: <span class="number">0.005</span>
+        anchors<span class="operator">.</span>fill: video
+
+        fragmentShader: <span class="string">&quot;
+            varying highp vec2 qt_TexCoord0;
+            uniform sampler2D source;
+            uniform highp float wiggleAmount;
+            void main(void)
+            {
+                highp vec2 wiggledTexCoord = qt_TexCoord0;
+                wiggledTexCoord.s += sin(4.0 * 3.141592653589 * wiggledTexCoord.t) * wiggleAmount;
+                gl_FragColor = texture2D(source, wiggledTexCoord.st);
+            }
+        &quot;</span>
+    }
+}</pre>
+<p>In this application, the usage of the <a href="../qtquick/qml-qtquick2-shadereffect.html">ShaderEffect</a> and <a href="qml-qtmultimedia5-videooutput.html">VideoOutput</a> types is a bit more complicated, for the following reasons:</p>
+<ul>
+<li>Each effect can be applied to either a <a href="qml-qtmultimedia5-videooutput.html">VideoOutput</a> or an <a href="../qtquick/qml-qtquick2-image.html">Image</a> item, so the type of the source item must be abstracted away from the effect implementation</li>
+<li>For some effects (such as the edge detection and glow examples shown in the screenshots above), the transformation is applied only to pixels to the left of a dividing line - this allows the effect to be easily compared with the untransformed image on the right</li>
+<li>Most effects have one or more parameters which can be modified by the user - these are controlled by sliders in the UI which are connected to uniform values passed into the GLSL code</li>
+</ul>
+<p>The abstraction of source item type is achieved by the <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-content-qml.html">Content</a>, which uses a <a href="../qtquick/qml-qtquick2-loader.html">Loader</a> to create either a <a href="qml-qtmultimedia5-mediaplayer.html">MediaPlayer</a>, <a href="qml-qtmultimedia5-camera.html">Camera</a> or <a href="../qtquick/qml-qtquick2-image.html">Image</a>:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    ...
+    <span class="type"><a href="../qtquick/qml-qtquick2-loader.html">Loader</a></span> {
+        <span class="name">id</span>: <span class="name">contentLoader</span>
+    }
+
+    ...
+    <span class="keyword">function</span> <span class="name">openImage</span>(<span class="name">path</span>) {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideofx] Content.openImage \&quot;&quot;</span> <span class="operator">+</span> <span class="name">path</span> <span class="operator">+</span> <span class="string">&quot;\&quot;&quot;</span>)
+        <span class="name">stop</span>()
+        <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;ContentImage.qml&quot;</span>
+        <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">source</span> <span class="operator">=</span> <span class="name">path</span>
+    }
+
+    <span class="keyword">function</span> <span class="name">openVideo</span>(<span class="name">path</span>) {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideofx] Content.openVideo \&quot;&quot;</span> <span class="operator">+</span> <span class="name">path</span> <span class="operator">+</span> <span class="string">&quot;\&quot;&quot;</span>)
+        <span class="name">stop</span>()
+        <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;ContentVideo.qml&quot;</span>
+        <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">mediaSource</span> <span class="operator">=</span> <span class="name">path</span>
+    }
+
+    <span class="keyword">function</span> <span class="name">openCamera</span>() {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideofx] Content.openCamera&quot;</span>)
+        <span class="name">stop</span>()
+        <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;ContentCamera.qml&quot;</span>
+    }
+
+}</pre>
+<p>Each effect is implemented as a QML item which is based on the <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effect-qml.html">Effect</a>, which in turn is based on the <a href="../qtquick/qml-qtquick2-shadereffect.html">ShaderEffect</a>:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-shadereffect.html">ShaderEffect</a></span> {
+    property <span class="type">variant</span> <span class="name">source</span>
+    property <span class="type">ListModel</span> <span class="name">parameters</span>: <span class="name">ListModel</span> { }
+    property <span class="type">bool</span> <span class="name">divider</span>: <span class="number">true</span>
+    property <span class="type">real</span> <span class="name">dividerValue</span>: <span class="number">0.5</span>
+    property <span class="type">real</span> <span class="name">targetWidth</span>: <span class="number">0</span>
+    property <span class="type">real</span> <span class="name">targetHeight</span>: <span class="number">0</span>
+    property <span class="type">string</span> <span class="name">fragmentShaderFilename</span>
+    property <span class="type">string</span> <span class="name">vertexShaderFilename</span>
+
+    <span class="type"><a href="../qtqml/qml-qtquick2-qtobject.html">QtObject</a></span> {
+        <span class="name">id</span>: <span class="name">d</span>
+        property <span class="type">string</span> <span class="name">fragmentShaderCommon</span>: <span class="string">&quot;
+            #ifdef GL_ES
+                precision mediump float;
+            #else
+            #   define lowp
+            #   define mediump
+            #   define highp
+            #endif // GL_ES
+        &quot;</span>
+    }
+
+    <span class="comment">// The following is a workaround for the fact that ShaderEffect</span>
+    <span class="comment">// doesn't provide a way for shader programs to be read from a file,</span>
+    <span class="comment">// rather than being inline in the QML file</span>
+
+    <span class="name">onFragmentShaderFilenameChanged</span>:
+        <span class="name">fragmentShader</span> <span class="operator">=</span> <span class="name">d</span>.<span class="name">fragmentShaderCommon</span> <span class="operator">+</span> <span class="name">fileReader</span>.<span class="name">readFile</span>(<span class="string">&quot;:shaders/&quot;</span> <span class="operator">+</span> <span class="name">fragmentShaderFilename</span>)
+    <span class="name">onVertexShaderFilenameChanged</span>:
+        <span class="name">vertexShader</span> <span class="operator">=</span> <span class="name">fileReader</span>.<span class="name">readFile</span>(<span class="name">vertexShaderFilename</span>)
+}</pre>
+<p>The interface of the Effect allows for derived effects to specify the number of parameters which they support (and therefore the number of sliders which should be displayed), and whether a vertical dividing line should be drawn between transformed and untransformed image regions. As an example, here is the implementation of the pixelation effect. As you can see, the pixelation effect supports one parameter (which controls the pixelation granularity), and states that the divider should be displayed.</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type">Effect</span> {
+    <span class="name">parameters</span>: <span class="name">ListModel</span> {
+        <span class="type">ListElement</span> {
+            <span class="name">name</span>: <span class="string">&quot;granularity&quot;</span>
+            <span class="name">value</span>: <span class="number">0.5</span>
+        }
+    }
+
+    <span class="comment">// Transform slider values, and bind result to shader uniforms</span>
+    property <span class="type">real</span> <span class="name">granularity</span>: <span class="name">parameters</span>.<span class="name">get</span>(<span class="number">0</span>).<span class="name">value</span> <span class="operator">*</span> <span class="number">20</span>
+
+    <span class="name">fragmentShaderFilename</span>: <span class="string">&quot;pixelate.fsh&quot;</span>
+}</pre>
+<p>The main.qml file shows a <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-fileopen-qml.html">FileOpen</a>, which allows the user to select the input source and an <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectselectionpanel-qml.html">EffectSelectionPanel</a> item, which lists each of the available shader effects. As described above, a <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-content-qml.html">Content</a> item is used to load the appropriate input and effect type. A <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-divider-qml.html">Divider</a> item draws the vertical dividing line, which can be dragged left / right by the user. Finally, a <a href="multimedia-video-qmlvideofx-qml-qmlvideofx-parameterpanel-qml.html">ParameterPanel</a> item renders the sliders corresponding to each effect parameter.</p>
+<p>Here is the source selection menu:</p>
+<p class="centerAlign"><img src="images/qmlvideofx-source-menu.png" alt="" /></p><p>And here is the effect selection menu:</p>
+<p class="centerAlign"><img src="images/qmlvideofx-effects-menu.png" alt="" /></p><a name="calculating-and-displaying-qml-painting-rate"></a>
+<h2>Calculating and displaying QML painting rate</h2>
+<p>The QML painting rate is calculated by the FrequencyMonitor class, which turns a stream of events (received via the notify() slot), into an instantaneous and an averaged frequency:</p>
+<pre class="qml"><span class="keyword">class</span> FrequencyMonitor : <span class="keyword">public</span> <span class="type"><a href="../qtcore/qobject.html">QObject</a></span>
+{
+    Q_OBJECT
+    Q_PROPERTY(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> instantaneousFrequency READ instantaneousFrequency NOTIFY instantaneousFrequencyChanged)
+    Q_PROPERTY(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> averageFrequency READ averageFrequency NOTIFY averageFrequencyChanged)
+
+<span class="keyword">public</span>:
+    ...
+    <span class="keyword">static</span> <span class="type">void</span> qmlRegisterType();
+
+<span class="keyword">public</span> <span class="keyword">slots</span>:
+    Q_INVOKABLE <span class="type">void</span> notify();
+};</pre>
+<p>The FrequencyMonitor class is exposed to QML like this</p>
+<pre class="qml"><span class="type">void</span> FrequencyMonitor<span class="operator">::</span><a href="../qtqml/qqmlengine.html#qmlRegisterType">qmlRegisterType</a>()
+{
+    <span class="operator">::</span>qmlRegisterType<span class="operator">&lt;</span>FrequencyMonitor<span class="operator">&gt;</span>(<span class="string">&quot;FrequencyMonitor&quot;</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="string">&quot;FrequencyMonitor&quot;</span>);
+}</pre>
+<p>and its data is displayed by defining a QML item called FrequencyItem, like this:</p>
+<pre class="qml">import FrequencyMonitor 1.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    ...
+    <span class="keyword">function</span> <span class="name">notify</span>() {
+        <span class="name">monitor</span>.<span class="name">notify</span>()
+    }
+
+    <span class="type">FrequencyMonitor</span> {
+        <span class="name">id</span>: <span class="name">monitor</span>
+        <span class="name">onAverageFrequencyChanged</span>: {
+            <span class="name">averageFrequencyText</span>.<span class="name">text</span> <span class="operator">=</span> <span class="name">monitor</span>.<span class="name">averageFrequency</span>.<span class="name">toFixed</span>(<span class="number">2</span>)
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">labelText</span>
+        <span class="type">anchors</span> {
+            <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>
+            <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>
+            <span class="name">margins</span>: <span class="number">10</span>
+        }
+        <span class="name">color</span>: <span class="name">root</span>.<span class="name">textColor</span>
+        <span class="name">font</span>.pixelSize: <span class="number">0.6</span> <span class="operator">*</span> <span class="name">root</span>.<span class="name">textSize</span>
+        <span class="name">text</span>: <span class="name">root</span>.<span class="name">label</span>
+        <span class="name">width</span>: <span class="name">root</span>.<span class="name">width</span> <span class="operator">-</span> <span class="number">2</span><span class="operator">*</span><span class="name">anchors</span>.<span class="name">margins</span>
+        <span class="name">elide</span>: <span class="name">Text</span>.<span class="name">ElideRight</span>
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">averageFrequencyText</span>
+        <span class="type">anchors</span> {
+            <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>
+            <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>
+            <span class="name">margins</span>: <span class="number">10</span>
+        }
+        <span class="name">color</span>: <span class="name">root</span>.<span class="name">textColor</span>
+        <span class="name">font</span>.pixelSize: <span class="name">root</span>.<span class="name">textSize</span>
+    }
+}</pre>
+<p>The result looks like this:</p>
+<p class="centerAlign"><img src="images/video-qml-paint-rate.png" alt="" /></p><p>All that remains is to connect the afterRendering() signal of the <a href="../qtquick/qquickview.html">QQuickView</a> object to a JavaScript function, which will eventually call frequencyItem.notify():</p>
+<pre class="qml"><span class="preprocessor">#include &lt;QtGui/QGuiApplication&gt;</span>
+<span class="preprocessor">#include &lt;QtQuick/QQuickItem&gt;</span>
+<span class="preprocessor">#include &lt;QtQuick/QQuickView&gt;</span>
+<span class="preprocessor">#include &quot;filereader.h&quot;</span>
+<span class="preprocessor">#include &quot;trace.h&quot;</span>
+
+<span class="preprocessor">#ifdef SMALL_SCREEN_LAYOUT</span>
+    <span class="keyword">static</span> <span class="keyword">const</span> QLatin1String MainQmlFile(<span class="string">&quot;main-smallscreen.qml&quot;</span>);
+    ...
+    <span class="type"><a href="../qtquick/qquickitem.html">QQuickItem</a></span> <span class="operator">*</span>rootObject <span class="operator">=</span> viewer<span class="operator">.</span>rootObject();
+    ...
+    <span class="type"><a href="../qtcore/qobject.html">QObject</a></span><span class="operator">::</span>connect(<span class="operator">&amp;</span>viewer<span class="operator">,</span> SIGNAL(afterRendering())<span class="operator">,</span>
+                     rootObject<span class="operator">,</span> SLOT(qmlFramePainted()));</pre>
+<p>Files:</p>
+<ul>
+<li><a href="multimedia-video-qmlvideofx-filereader-cpp.html">multimedia/video/qmlvideofx/filereader.cpp</a></li>
+<li><a href="multimedia-video-qmlvideofx-filereader-h.html">multimedia/video/qmlvideofx/filereader.h</a></li>
+<li><a href="multimedia-video-qmlvideofx-qmlvideofx-svg.html">multimedia/video/qmlvideofx/qmlvideofx.svg</a></li>
+<li><a href="multimedia-video-qmlvideofx-trace-h.html">multimedia/video/qmlvideofx/trace.h</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-button-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/Button.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-content-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/Content.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-contentcamera-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/ContentCamera.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-contentimage-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/ContentImage.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-contentvideo-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/ContentVideo.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-disablescreensaver-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/DisableScreenSaver.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-divider-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/Divider.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effect-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/Effect.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectbillboard-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectBillboard.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectblackandwhite-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectBlackAndWhite.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectemboss-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectEmboss.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectgaussianblur-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectGaussianBlur.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectglow-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectGlow.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectisolate-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectIsolate.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectmagnify-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectMagnify.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectpagecurl-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectPageCurl.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectpassthrough-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectPassThrough.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectpixelate-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectPixelate.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectposterize-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectPosterize.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectripple-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectRipple.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectselectionpanel-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSelectionPanel.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectsepia-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSepia.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectsharpen-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSharpen.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectshockwave-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectShockwave.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectsobeledgedetection1-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSobelEdgeDetection1.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectsobeledgedetection2-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSobelEdgeDetection2.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effecttiltshift-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectTiltShift.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effecttoon-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectToon.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectvignette-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectVignette.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectwarhol-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectWarhol.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-effectwobble-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectWobble.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-filebrowser-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/FileBrowser.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-fileopen-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/FileOpen.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-hintedmousearea-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/HintedMouseArea.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-parameterpanel-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/ParameterPanel.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-slider-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/Slider.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-main-largescreen-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/main-largescreen.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qml-qmlvideofx-main-smallscreen-qml.html">multimedia/video/qmlvideofx/qml/qmlvideofx/main-smallscreen.qml</a></li>
+<li><a href="multimedia-video-qmlvideofx-qmlapplicationviewer-qmlapplicationviewer-cpp.html">multimedia/video/qmlvideofx/qmlapplicationviewer/qmlapplicationviewer.cpp</a></li>
+<li><a href="multimedia-video-qmlvideofx-qmlapplicationviewer-qmlapplicationviewer-h.html">multimedia/video/qmlvideofx/qmlapplicationviewer/qmlapplicationviewer.h</a></li>
+<li><a href="multimedia-video-qmlvideofx-main-cpp.html">multimedia/video/qmlvideofx/main.cpp</a></li>
+<li><a href="multimedia-video-qmlvideofx-qmlvideofx-pro.html">multimedia/video/qmlvideofx/qmlvideofx.pro</a></li>
+<li><a href="multimedia-video-qmlvideofx-qmlvideofx-qrc.html">multimedia/video/qmlvideofx/qmlvideofx.qrc</a></li>
+</ul>
+<p>Images:</p>
+<ul>
+<li><a href="images/used-in-examples/multimedia/video/qmlvideofx/images/close.png">multimedia/video/qmlvideofx/images/close.png</a></li>
+<li><a href="images/used-in-examples/multimedia/video/qmlvideofx/images/folder.png">multimedia/video/qmlvideofx/images/folder.png</a></li>
+<li><a href="images/used-in-examples/multimedia/video/qmlvideofx/images/qt-logo.png">multimedia/video/qmlvideofx/images/qt-logo.png</a></li>
+<li><a href="images/used-in-examples/multimedia/video/qmlvideofx/images/titlebar.png">multimedia/video/qmlvideofx/images/titlebar.png</a></li>
+<li><a href="images/used-in-examples/multimedia/video/qmlvideofx/images/up.png">multimedia/video/qmlvideofx/images/up.png</a></li>
+</ul>
+</div>
+<!-- @@@multimedia/video/qmlvideofx -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

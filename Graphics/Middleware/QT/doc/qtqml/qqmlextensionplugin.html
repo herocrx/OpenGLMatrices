@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qqmlextensionplugin.cpp -->
+  <title>QtQml 5.0: QQmlExtensionPlugin Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#an-example">An example</a></li>
+</ul>
+</div>
+<h1 class="title">QQmlExtensionPlugin Class</h1>
+<!-- $$$QQmlExtensionPlugin-brief -->
+<p>The QQmlExtensionPlugin class provides an abstract base for custom QML extension plugins. <a href="#details">More...</a></p>
+<!-- @@@QQmlExtensionPlugin -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QQmlExtensionPlugin&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<p>This class was introduced in QtQml 5.0.</p>
+<ul>
+<li><a href="qqmlextensionplugin-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qqmlextensionplugin.html#QQmlExtensionPlugin">QQmlExtensionPlugin</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+</table>
+<a name="reimplemented-public-functions"></a>
+<h2>Reimplemented Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qqmlextensionplugin.html#initializeEngine">initializeEngine</a></b>(QQmlEngine *<i> engine</i>, const char *<i> uri</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qqmlextensionplugin.html#registerTypes">registerTypes</a></b>(const char *<i> uri</i>) = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QQmlExtensionPlugin-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QQmlExtensionPlugin class provides an abstract base for custom QML extension plugins.</p>
+<p>QQmlExtensionPlugin is a plugin interface that makes it possible to create QML extensions that can be loaded dynamically into QML applications. These extensions allow custom QML types to be made available to the QML engine.</p>
+<p>To write a QML extension plugin:</p>
+<ul>
+<li>Subclass QQmlExtensionPlugin, implement <a href="qqmlextensionplugin.html#registerTypes">registerTypes</a>() method to register types using <a href="qqmlengine.html#qmlRegisterType">qmlRegisterType</a>(), and export the class using the <a href="../qtcore/qtplugin.html#Q_PLUGIN_METADATA">Q_PLUGIN_METADATA</a>() macro</li>
+<li>Write an appropriate project file for the plugin</li>
+<li>Create a <a href="qtqml-modules-qmldir.html">qmldir file</a> to describe the plugin</li>
+</ul>
+<p>QML extension plugins can be used to provide either application-specific or library-like plugins. Library plugins should limit themselves to registering types, as any manipulation of the engine's root context may cause conflicts or other issues in the library user's code.</p>
+<a name="an-example"></a>
+<h3>An example</h3>
+<p>Suppose there is a new <tt>TimeModel</tt> C++ class that should be made available as a new QML element. It provides the current time through <tt>hour</tt> and <tt>minute</tt> properties, like this:</p>
+<pre class="cpp">    ...</pre>
+<p>To make this class available as a QML type, create a plugin that registers this type with a specific <a href="qtqml-modules-topic.html">module</a> using <a href="qqmlengine.html#qmlRegisterType">qmlRegisterType</a>(). For this example the plugin module will be named <tt>TimeExample</tt> (as defined in the project file further below).</p>
+<pre class="cpp"></pre>
+<p>This registers the <tt>TimeModel</tt> class with the 1.0 version of this plugin library, as a QML type called <tt>Time</tt>. The Q_ASSERT statement ensures the module is imported correctly by any QML components that use this plugin.</p>
+<p>The project file defines the project as a plugin library and specifies it should be built into the <tt>imports/TimeExample</tt> directory:</p>
+<pre class="cpp">TEMPLATE <span class="operator">=</span> lib
+CONFIG <span class="operator">+</span><span class="operator">=</span> qt plugin
+QT <span class="operator">+</span><span class="operator">=</span> qml
+
+DESTDIR <span class="operator">=</span> imports<span class="operator">/</span>TimeExample
+TARGET <span class="operator">=</span> qmlqtimeexampleplugin
+<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span></pre>
+<p>Finally, a <a href="qtqml-modules-qmldir.html">qmldir file</a> is required in the <tt>imports/TimeExample</tt> directory that describes the plugin. This directory includes a <tt>Clock.qml</tt> file that should be bundled with the plugin, so it needs to be specified in the <tt>qmldir</tt> file:</p>
+<pre class="cpp"></pre>
+<p>Once the project is built and installed, the new <tt>Time</tt> element can be used by any QML component that imports the <tt>TimeExample</tt> module:</p>
+<pre class="qml"></pre>
+<p>The full source code is available in the <a href="../qtquick/qtquick-porting-qt5.html#qml-plugins">plugins example</a>.</p>
+<p>The <a href="qml-extending-tutorial-index.html">Writing QML Extensions with C++</a> tutorial also contains a chapter on creating QML plugins.</p>
+<p>Note that the <a href="../qtquick/qtquick-module.html">QtQuick</a> 1 version is called QDeclarativeExtensionPlugin.</p>
+</div>
+<p><b>See also </b><a href="qqmlengine.html#importPlugin">QQmlEngine::importPlugin</a>() and <a href="../qtcore/plugins-howto.html">How to Create Qt Plugins</a>.</p>
+<!-- @@@QQmlExtensionPlugin -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QQmlExtensionPlugin[overload1]$$$QQmlExtensionPluginQObject* -->
+<h3 class="fn"><a name="QQmlExtensionPlugin"></a>QQmlExtensionPlugin::<span class="name">QQmlExtensionPlugin</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<p>Constructs a QML extension plugin with the given <i>parent</i>.</p>
+<p>Note that this constructor is invoked automatically by the <a href="../qtcore/qtplugin.html#Q_PLUGIN_METADATA">Q_PLUGIN_METADATA</a>() macro, so there is no need for calling it explicitly.</p>
+<!-- @@@QQmlExtensionPlugin -->
+<!-- $$$initializeEngine[overload1]$$$initializeEngineQQmlEngine*constchar* -->
+<h3 class="fn"><a name="initializeEngine"></a><span class="type">void</span> QQmlExtensionPlugin::<span class="name">initializeEngine</span>(<span class="type"><a href="qqmlengine.html">QQmlEngine</a></span> *<i> engine</i>, const <span class="type">char</span> *<i> uri</i>)<tt> [virtual]</tt></h3>
+<p>Initializes the extension from the <i>uri</i> using the <i>engine</i>. Here an application plugin might, for example, expose some data or objects to QML, as context properties on the engine's root context.</p>
+<!-- @@@initializeEngine -->
+<!-- $$$registerTypes[overload1]$$$registerTypesconstchar* -->
+<h3 class="fn"><a name="registerTypes"></a><span class="type">void</span> QQmlExtensionPlugin::<span class="name">registerTypes</span>(const <span class="type">char</span> *<i> uri</i>)<tt> [pure virtual]</tt></h3>
+<p>Registers the QML types in the given <i>uri</i>. Subclasses should implement this to call <a href="qqmlengine.html#qmlRegisterType">qmlRegisterType</a>() for all types which are provided by the extension plugin.</p>
+<p>The <i>uri</i> is an identifier for the plugin generated by the QML engine based on the name and path of the extension's plugin library.</p>
+<!-- @@@registerTypes -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

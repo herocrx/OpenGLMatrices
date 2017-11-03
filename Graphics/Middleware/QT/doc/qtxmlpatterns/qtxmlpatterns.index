@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="" title="qtxmlpatterns Reference Documentation" version="">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <page access="public" status="commendable" name="xmlpatterns/filetree" href="xmlpatterns-filetree.html" subtype="example" title="File System Example" fulltitle="File System Example" subtitle="" location="filetree.qdoc" module="qtxmlpatterns" groups="xmlpattern_examples">
+            <target name="node-type"/>
+            <target name="main-tonodeindex"/>
+            <target name="tonodeindex-of-convenience"/>
+            <target name="next-node-on-axis"/>
+            <target name="to-file-info"/>
+            <target name="nextsibling-helper"/>
+            <target name="the-standard-code-pattern"/>
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="the-user-inteface" title="The User Inteface" level="2"/>
+            <contents name="running-your-own-xqueries" title="Running your own XQueries" level="2"/>
+            <contents name="code-walk-through" title="Code Walk-Through" level="1"/>
+            <contents name="the-custom-node-model-class-filetree" title="The Custom Node Model Class: FileTree" level="2"/>
+            <contents name="accessing-the-node-model" title="Accessing The Node Model" level="3"/>
+            <contents name="building-and-traversing-the-node-model" title="Building And Traversing The Node Model" level="3"/>
+            <contents name="the-ui-class-mainwindow" title="The UI Class: MainWindow" level="2"/>
+            <contents name="selecting-a-directory-to-model" title="Selecting A Directory To Model" level="3"/>
+            <contents name="selecting-and-running-an-xquery" title="Selecting And Running An XQuery" level="3"/>
+            <contents name="node-model-building-strategy" title="Node Model Building Strategy" level="2"/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/filetree.cpp" href="xmlpatterns-filetree-filetree-cpp.html" subtype="file" title="" fulltitle="filetree.cpp Example File" subtitle="xmlpatterns/filetree/filetree.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/filetree.h" href="xmlpatterns-filetree-filetree-h.html" subtype="file" title="" fulltitle="filetree.h Example File" subtitle="xmlpatterns/filetree/filetree.h" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/filetree.pro" href="xmlpatterns-filetree-filetree-pro.html" subtype="file" title="" fulltitle="filetree.pro Example File" subtitle="xmlpatterns/filetree/filetree.pro" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/forms/mainwindow.ui" href="xmlpatterns-filetree-forms-mainwindow-ui.html" subtype="file" title="" fulltitle="mainwindow.ui Example File" subtitle="xmlpatterns/filetree/forms/mainwindow.ui" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/main.cpp" href="xmlpatterns-filetree-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="xmlpatterns/filetree/main.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/mainwindow.cpp" href="xmlpatterns-filetree-mainwindow-cpp.html" subtype="file" title="" fulltitle="mainwindow.cpp Example File" subtitle="xmlpatterns/filetree/mainwindow.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/mainwindow.h" href="xmlpatterns-filetree-mainwindow-h.html" subtype="file" title="" fulltitle="mainwindow.h Example File" subtitle="xmlpatterns/filetree/mainwindow.h" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/queries.qrc" href="xmlpatterns-filetree-queries-qrc.html" subtype="file" title="" fulltitle="queries.qrc Example File" subtitle="xmlpatterns/filetree/queries.qrc" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/queries/listCPPFiles.xq" href="xmlpatterns-filetree-queries-listcppfiles-xq.html" subtype="file" title="" fulltitle="listCPPFiles.xq Example File" subtitle="xmlpatterns/filetree/queries/listCPPFiles.xq" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/filetree/queries/wholeTree.xq" href="xmlpatterns-filetree-queries-wholetree-xq.html" subtype="file" title="" fulltitle="wholeTree.xq Example File" subtitle="xmlpatterns/filetree/queries/wholeTree.xq" location=""/>
+        </page>
+        <page access="public" status="commendable" name="xmlpatterns/recipes" href="xmlpatterns-recipes.html" subtype="example" title="Recipes Example" fulltitle="Recipes Example" subtitle="" location="recipes.qdoc" module="qtxmlpatterns" groups="xmlpattern_examples">
+            <target name="displayquery-slot"/>
+            <target name="evaluate-function"/>
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="the-user-interface" title="The User Interface" level="2"/>
+            <contents name="running-your-own-xqueries" title="Running your own XQueries" level="2"/>
+            <contents name="code-walk-through" title="Code Walk-Through" level="1"/>
+            <contents name="the-ui-class-querymainwindow" title="The UI Class: QueryMainWindow" level="2"/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/files/allRecipes.xq" href="xmlpatterns-recipes-files-allrecipes-xq.html" subtype="file" title="" fulltitle="allRecipes.xq Example File" subtitle="xmlpatterns/recipes/files/allRecipes.xq" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/files/cookbook.xml" href="xmlpatterns-recipes-files-cookbook-xml.html" subtype="file" title="" fulltitle="cookbook.xml Example File" subtitle="xmlpatterns/recipes/files/cookbook.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/files/liquidIngredientsInSoup.xq" href="xmlpatterns-recipes-files-liquidingredientsinsoup-xq.html" subtype="file" title="" fulltitle="liquidIngredientsInSoup.xq Example File" subtitle="xmlpatterns/recipes/files/liquidIngredientsInSoup.xq" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/files/mushroomSoup.xq" href="xmlpatterns-recipes-files-mushroomsoup-xq.html" subtype="file" title="" fulltitle="mushroomSoup.xq Example File" subtitle="xmlpatterns/recipes/files/mushroomSoup.xq" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/files/preparationLessThan30.xq" href="xmlpatterns-recipes-files-preparationlessthan30-xq.html" subtype="file" title="" fulltitle="preparationLessThan30.xq Example File" subtitle="xmlpatterns/recipes/files/preparationLessThan30.xq" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/files/preparationTimes.xq" href="xmlpatterns-recipes-files-preparationtimes-xq.html" subtype="file" title="" fulltitle="preparationTimes.xq Example File" subtitle="xmlpatterns/recipes/files/preparationTimes.xq" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/forms/querywidget.ui" href="xmlpatterns-recipes-forms-querywidget-ui.html" subtype="file" title="" fulltitle="querywidget.ui Example File" subtitle="xmlpatterns/recipes/forms/querywidget.ui" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/forms/querywidget_mobiles.ui" href="xmlpatterns-recipes-forms-querywidget-mobiles-ui.html" subtype="file" title="" fulltitle="querywidget_mobiles.ui Example File" subtitle="xmlpatterns/recipes/forms/querywidget_mobiles.ui" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/main.cpp" href="xmlpatterns-recipes-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="xmlpatterns/recipes/main.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/querymainwindow.cpp" href="xmlpatterns-recipes-querymainwindow-cpp.html" subtype="file" title="" fulltitle="querymainwindow.cpp Example File" subtitle="xmlpatterns/recipes/querymainwindow.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/querymainwindow.h" href="xmlpatterns-recipes-querymainwindow-h.html" subtype="file" title="" fulltitle="querymainwindow.h Example File" subtitle="xmlpatterns/recipes/querymainwindow.h" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/recipes.pro" href="xmlpatterns-recipes-recipes-pro.html" subtype="file" title="" fulltitle="recipes.pro Example File" subtitle="xmlpatterns/recipes/recipes.pro" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/recipes/recipes.qrc" href="xmlpatterns-recipes-recipes-qrc.html" subtype="file" title="" fulltitle="recipes.qrc Example File" subtitle="xmlpatterns/recipes/recipes.qrc" location=""/>
+        </page>
+        <page access="public" status="commendable" name="xmlpatterns/schema" href="xmlpatterns-schema.html" subtype="example" title="XML Schema Validation Example" fulltitle="XML Schema Validation Example" subtitle="" location="schema.qdoc" module="qtxmlpatterns" groups="xmlpattern_examples">
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="the-user-interface" title="The User Interface" level="2"/>
+            <contents name="validating-xml-instance-documents" title="Validating XML Instance Documents" level="2"/>
+            <contents name="code-walk-through" title="Code Walk-Through" level="1"/>
+            <contents name="the-ui-class-mainwindow" title="The UI Class: MainWindow" level="2"/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/files/invalid_contact.xml" href="xmlpatterns-schema-files-invalid-contact-xml.html" subtype="file" title="" fulltitle="invalid_contact.xml Example File" subtitle="xmlpatterns/schema/files/invalid_contact.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/files/invalid_order.xml" href="xmlpatterns-schema-files-invalid-order-xml.html" subtype="file" title="" fulltitle="invalid_order.xml Example File" subtitle="xmlpatterns/schema/files/invalid_order.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/files/invalid_recipe.xml" href="xmlpatterns-schema-files-invalid-recipe-xml.html" subtype="file" title="" fulltitle="invalid_recipe.xml Example File" subtitle="xmlpatterns/schema/files/invalid_recipe.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/files/valid_contact.xml" href="xmlpatterns-schema-files-valid-contact-xml.html" subtype="file" title="" fulltitle="valid_contact.xml Example File" subtitle="xmlpatterns/schema/files/valid_contact.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/files/valid_order.xml" href="xmlpatterns-schema-files-valid-order-xml.html" subtype="file" title="" fulltitle="valid_order.xml Example File" subtitle="xmlpatterns/schema/files/valid_order.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/files/valid_recipe.xml" href="xmlpatterns-schema-files-valid-recipe-xml.html" subtype="file" title="" fulltitle="valid_recipe.xml Example File" subtitle="xmlpatterns/schema/files/valid_recipe.xml" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/main.cpp" href="xmlpatterns-schema-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="xmlpatterns/schema/main.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/mainwindow.cpp" href="xmlpatterns-schema-mainwindow-cpp.html" subtype="file" title="" fulltitle="mainwindow.cpp Example File" subtitle="xmlpatterns/schema/mainwindow.cpp" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/mainwindow.h" href="xmlpatterns-schema-mainwindow-h.html" subtype="file" title="" fulltitle="mainwindow.h Example File" subtitle="xmlpatterns/schema/mainwindow.h" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/schema.pro" href="xmlpatterns-schema-schema-pro.html" subtype="file" title="" fulltitle="schema.pro Example File" subtitle="xmlpatterns/schema/schema.pro" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/schema.qrc" href="xmlpatterns-schema-schema-qrc.html" subtype="file" title="" fulltitle="schema.qrc Example File" subtitle="xmlpatterns/schema/schema.qrc" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/schema.ui" href="xmlpatterns-schema-schema-ui.html" subtype="file" title="" fulltitle="schema.ui Example File" subtitle="xmlpatterns/schema/schema.ui" location=""/>
+            <page access="public" status="commendable" name="xmlpatterns/schema/schema_mobiles.ui" href="xmlpatterns-schema-schema-mobiles-ui.html" subtype="file" title="" fulltitle="schema_mobiles.ui Example File" subtitle="xmlpatterns/schema/schema_mobiles.ui" location=""/>
+        </page>
+        <page access="public" status="commendable" name="xmlpatterns/xquery/globalVariables" href="xmlpatterns-xquery-globalvariables.html" subtype="example" title="C++ Source Code Analyzer Example" fulltitle="C++ Source Code Analyzer Example" subtitle="" location="globalVariables.qdoc" module="qtxmlpatterns" groups="xmlpattern_examples">
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="reporting-uses-of-mutable-global-variables" title="Reporting Uses of Mutable Global Variables" level="2"/>
+            <contents name="a-c-application" title="A C++ application" level="3"/>
+            <contents name="the-xml-description-of-the-c-application" title="The XML description of the C++ application" level="3"/>
+            <contents name="the-xquery-for-finding-global-variables" title="The XQuery for finding global variables" level="3"/>
+            <contents name="running-the-xquery" title="Running the XQuery" level="3"/>
+            <contents name="the-xquery-output" title="The XQuery output" level="3"/>
+            <contents name="xquery-code-walk-through" title="XQuery Code Walk-Through" level="1"/>
+        </page>
+        <class access="public" threadsafety="thread safe" status="commendable" name="QAbstractMessageHandler" href="qabstractmessagehandler.html" location="qabstractmessagehandler.h" since="4.4" bases="QObject" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAbstractMessageHandler" fullname="QAbstractMessageHandler::QAbstractMessageHandler" href="qabstractmessagehandler.html#QAbstractMessageHandler" location="qabstractmessagehandler.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAbstractMessageHandler(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="handleMessage" fullname="QAbstractMessageHandler::handleMessage" href="qabstractmessagehandler.html#handleMessage" location="qabstractmessagehandler.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="handleMessage(QtMsgType type, const QString &amp; description, const QUrl &amp; identifier, const QSourceLocation &amp; sourceLocation)">
+                <parameter left="QtMsgType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="description" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="identifier" default=""/>
+                <parameter left="const QSourceLocation &amp;" right="" name="sourceLocation" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="message" fullname="QAbstractMessageHandler::message" href="qabstractmessagehandler.html#message" location="qabstractmessagehandler.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="message(QtMsgType type, const QString &amp; description, const QUrl &amp; identifier, const QSourceLocation &amp; sourceLocation)">
+                <parameter left="QtMsgType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="description" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="identifier" default="QUrl()"/>
+                <parameter left="const QSourceLocation &amp;" right="" name="sourceLocation" default="QSourceLocation()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractMessageHandler" fullname="QAbstractMessageHandler::~QAbstractMessageHandler" href="qabstractmessagehandler.html#dtor.QAbstractMessageHandler" location="qabstractmessagehandler.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractMessageHandler()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QAbstractUriResolver" href="qabstracturiresolver.html" location="qabstracturiresolver.h" since="4.4" bases="QObject" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAbstractUriResolver" fullname="QAbstractUriResolver::QAbstractUriResolver" href="qabstracturiresolver.html#QAbstractUriResolver" location="qabstracturiresolver.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAbstractUriResolver(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="resolve" fullname="QAbstractUriResolver::resolve" href="qabstracturiresolver.html#resolve" location="qabstracturiresolver.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QUrl" signature="resolve(const QUrl &amp; relative, const QUrl &amp; baseURI) const">
+                <parameter left="const QUrl &amp;" right="" name="relative" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="baseURI" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractUriResolver" fullname="QAbstractUriResolver::~QAbstractUriResolver" href="qabstracturiresolver.html#dtor.QAbstractUriResolver" location="qabstracturiresolver.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractUriResolver()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="qIsForwardIteratorEnd" href="qabstractxmlforwarditerator.html#qIsForwardIteratorEnd" location="qabstractxmlforwarditerator_p.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="false" relates="QAbstractXmlForwardIterator" type="bool" signature="qIsForwardIteratorEnd(const T &amp; unit)">
+            <parameter left="const T &amp;" right="" name="unit" default=""/>
+        </function>
+        <class access="public" threadsafety="thread safe" status="commendable" name="QAbstractXmlNodeModel" href="qabstractxmlnodemodel.html" location="qabstractxmlnodemodel.h" since="4.4" bases="QSharedData" module="QtXmlPatterns" groups="xml-tools">
+            <contents name="usage" title="Usage" level="1"/>
+            <contents name="subclassing" title="Subclassing" level="1"/>
+            <contents name="thread-safety" title="Thread Safety" level="1"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="SimpleAxis" fullname="QAbstractXmlNodeModel::SimpleAxis" href="qabstractxmlnodemodel.html#SimpleAxis-enum" location="qabstractxmlnodemodel.h">
+                <value name="Parent" value="0"/>
+                <value name="FirstChild" value="1"/>
+                <value name="PreviousSibling" value="2"/>
+                <value name="NextSibling" value="3"/>
+            </enum>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="List" fullname="QAbstractXmlNodeModel::List" href="qabstractxmlnodemodel.html#List-typedef" location="qabstractxmlnodemodel.h"/>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="Ptr" fullname="QAbstractXmlNodeModel::Ptr" href="qabstractxmlnodemodel.html#Ptr-typedef" location="qabstractxmlnodemodel.h"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAbstractXmlNodeModel" fullname="QAbstractXmlNodeModel::QAbstractXmlNodeModel" href="qabstractxmlnodemodel.html#QAbstractXmlNodeModel" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAbstractXmlNodeModel()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="attributes" fullname="QAbstractXmlNodeModel::attributes" href="qabstractxmlnodemodel.html#attributes" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QVector&lt;QXmlNodeModelIndex&gt;" signature="attributes(const QXmlNodeModelIndex &amp; element) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="element" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="baseUri" fullname="QAbstractXmlNodeModel::baseUri" href="qabstractxmlnodemodel.html#baseUri" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QUrl" signature="baseUri(const QXmlNodeModelIndex &amp; n) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="n" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="compareOrder" fullname="QAbstractXmlNodeModel::compareOrder" href="qabstractxmlnodemodel.html#compareOrder" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex::DocumentOrder" signature="compareOrder(const QXmlNodeModelIndex &amp; ni1, const QXmlNodeModelIndex &amp; ni2) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="ni1" default=""/>
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="ni2" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="createIndex" fullname="QAbstractXmlNodeModel::createIndex" href="qabstractxmlnodemodel.html#createIndex" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex" signature="createIndex(qint64 data) const">
+                <parameter left="qint64" right="" name="data" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="createIndex" fullname="QAbstractXmlNodeModel::createIndex" href="qabstractxmlnodemodel.html#createIndex-3" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="3" type="QXmlNodeModelIndex" signature="createIndex(qint64 data, qint64 additionalData) const">
+                <parameter left="qint64" right="" name="data" default=""/>
+                <parameter left="qint64" right="" name="additionalData" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="createIndex" fullname="QAbstractXmlNodeModel::createIndex" href="qabstractxmlnodemodel.html#createIndex-2" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QXmlNodeModelIndex" signature="createIndex(void * pointer, qint64 additionalData) const">
+                <parameter left="void *" right="" name="pointer" default=""/>
+                <parameter left="qint64" right="" name="additionalData" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="documentUri" fullname="QAbstractXmlNodeModel::documentUri" href="qabstractxmlnodemodel.html#documentUri" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QUrl" signature="documentUri(const QXmlNodeModelIndex &amp; n) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="n" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="elementById" fullname="QAbstractXmlNodeModel::elementById" href="qabstractxmlnodemodel.html#elementById" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex" signature="elementById(const QXmlName &amp; id) const">
+                <parameter left="const QXmlName &amp;" right="" name="id" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="kind" fullname="QAbstractXmlNodeModel::kind" href="qabstractxmlnodemodel.html#kind" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex::NodeKind" signature="kind(const QXmlNodeModelIndex &amp; ni) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="ni" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="name" fullname="QAbstractXmlNodeModel::name" href="qabstractxmlnodemodel.html#name" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QXmlName" signature="name(const QXmlNodeModelIndex &amp; ni) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="ni" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namespaceBindings" fullname="QAbstractXmlNodeModel::namespaceBindings" href="qabstractxmlnodemodel.html#namespaceBindings" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QVector&lt;QXmlName&gt;" signature="namespaceBindings(const QXmlNodeModelIndex &amp; n) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="n" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="nextFromSimpleAxis" fullname="QAbstractXmlNodeModel::nextFromSimpleAxis" href="qabstractxmlnodemodel.html#nextFromSimpleAxis" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex" signature="nextFromSimpleAxis(SimpleAxis axis, const QXmlNodeModelIndex &amp; origin) const">
+                <parameter left="SimpleAxis" right="" name="axis" default=""/>
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="origin" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="nodesByIdref" fullname="QAbstractXmlNodeModel::nodesByIdref" href="qabstractxmlnodemodel.html#nodesByIdref" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QVector&lt;QXmlNodeModelIndex&gt;" signature="nodesByIdref(const QXmlName &amp; idref) const">
+                <parameter left="const QXmlName &amp;" right="" name="idref" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="root" fullname="QAbstractXmlNodeModel::root" href="qabstractxmlnodemodel.html#root" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex" signature="root(const QXmlNodeModelIndex &amp; n) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="n" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sourceLocation" fullname="QAbstractXmlNodeModel::sourceLocation" href="qabstractxmlnodemodel.html#sourceLocation" location="qabstractxmlnodemodel.h" since="4.6" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSourceLocation" signature="sourceLocation(const QXmlNodeModelIndex &amp; index) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="stringValue" fullname="QAbstractXmlNodeModel::stringValue" href="qabstractxmlnodemodel.html#stringValue" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="stringValue(const QXmlNodeModelIndex &amp; n) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="n" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="typedValue" fullname="QAbstractXmlNodeModel::typedValue" href="qabstractxmlnodemodel.html#typedValue" location="qabstractxmlnodemodel.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="typedValue(const QXmlNodeModelIndex &amp; node) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="node" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractXmlNodeModel" fullname="QAbstractXmlNodeModel::~QAbstractXmlNodeModel" href="qabstractxmlnodemodel.html#dtor.QAbstractXmlNodeModel" location="qabstractxmlnodemodel.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractXmlNodeModel()"/>
+            <variable access="protected" threadsafety="unspecified" status="commendable" name="d_ptr" fullname="QAbstractXmlNodeModel::d_ptr" href="qabstractxmlnodemodel.html#d_ptr-var" location="qabstractxmlnodemodel.h" type="QScopedPointer&lt;QAbstractXmlNodeModelPrivate&gt;" static="false"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlItem" href="qxmlitem.html" location="qabstractxmlnodemodel.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="Iterator" fullname="QXmlItem::Iterator" href="qxmlitem.html#Iterator-typedef" location="qabstractxmlnodemodel.h"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlItem" fullname="QXmlItem::QXmlItem" href="qxmlitem.html#QXmlItem" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlItem()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlItem" fullname="QXmlItem::QXmlItem" href="qxmlitem.html#QXmlItem-4" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QXmlItem(const QVariant &amp; atomicValue)">
+                <parameter left="const QVariant &amp;" right="" name="atomicValue" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlItem" fullname="QXmlItem::QXmlItem" href="qxmlitem.html#QXmlItem-2" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlItem(const QXmlItem &amp; other)">
+                <parameter left="const QXmlItem &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlItem" fullname="QXmlItem::QXmlItem" href="qxmlitem.html#QXmlItem-3" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QXmlItem(const QXmlNodeModelIndex &amp; node)">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="node" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isAtomicValue" fullname="QXmlItem::isAtomicValue" href="qxmlitem.html#isAtomicValue" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isAtomicValue() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNode" fullname="QXmlItem::isNode" href="qxmlitem.html#isNode" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNode() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QXmlItem::isNull" href="qxmlitem.html#isNull" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QXmlItem::operator=" href="qxmlitem.html#operator=" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QXmlItem &amp;" signature="operator=(const QXmlItem &amp; other)">
+                <parameter left="const QXmlItem &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toAtomicValue" fullname="QXmlItem::toAtomicValue" href="qxmlitem.html#toAtomicValue" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="toAtomicValue() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toNodeModelIndex" fullname="QXmlItem::toNodeModelIndex" href="qxmlitem.html#toNodeModelIndex" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex" signature="toNodeModelIndex() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QXmlItem" fullname="QXmlItem::~QXmlItem" href="qxmlitem.html#dtor.QXmlItem" location="qabstractxmlnodemodel.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QXmlItem()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlNodeModelIndex" href="qxmlnodemodelindex.html" location="qabstractxmlnodemodel.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="DocumentOrder" fullname="QXmlNodeModelIndex::DocumentOrder" href="qxmlnodemodelindex.html#DocumentOrder-enum" location="qabstractxmlnodemodel.h">
+                <value name="Precedes" value="-1"/>
+                <value name="Is" value="0"/>
+                <value name="Follows" value="1"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="NodeKind" fullname="QXmlNodeModelIndex::NodeKind" href="qxmlnodemodelindex.html#NodeKind-enum" location="qabstractxmlnodemodel.h">
+                <value name="Attribute" value="1"/>
+                <value name="Comment" value="2"/>
+                <value name="Document" value="4"/>
+                <value name="Element" value="8"/>
+                <value name="Namespace" value="16"/>
+                <value name="ProcessingInstruction" value="32"/>
+                <value name="Text" value="64"/>
+            </enum>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="List" fullname="QXmlNodeModelIndex::List" href="qxmlnodemodelindex.html#List-typedef" location="qabstractxmlnodemodel.h"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlNodeModelIndex" fullname="QXmlNodeModelIndex::QXmlNodeModelIndex" href="qxmlnodemodelindex.html#QXmlNodeModelIndex" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlNodeModelIndex()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlNodeModelIndex" fullname="QXmlNodeModelIndex::QXmlNodeModelIndex" href="qxmlnodemodelindex.html#QXmlNodeModelIndex-2" location="qabstractxmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlNodeModelIndex(const QXmlNodeModelIndex &amp; other)">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="additionalData" fullname="QXmlNodeModelIndex::additionalData" href="qxmlnodemodelindex.html#additionalData" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="qint64" signature="additionalData() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="data" fullname="QXmlNodeModelIndex::data" href="qxmlnodemodelindex.html#data" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="qint64" signature="data() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="internalPointer" fullname="QXmlNodeModelIndex::internalPointer" href="qxmlnodemodelindex.html#internalPointer" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="void *" signature="internalPointer() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QXmlNodeModelIndex::isNull" href="qxmlnodemodelindex.html#isNull" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="model" fullname="QXmlNodeModelIndex::model" href="qxmlnodemodelindex.html#model" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QAbstractXmlNodeModel *" signature="model() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator!=" fullname="QXmlNodeModelIndex::operator!=" href="qxmlnodemodelindex.html#operator!=" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator!=(const QXmlNodeModelIndex &amp; other) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator==" fullname="QXmlNodeModelIndex::operator==" href="qxmlnodemodelindex.html#operator==" location="qabstractxmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator==(const QXmlNodeModelIndex &amp; other) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="other" default=""/>
+            </function>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="qHash" href="../qtcore/qhash.html#qHash-24" location="qabstractxmlnodemodel.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="24" relates="QHash" type="uint" signature="qHash(const QXmlNodeModelIndex &amp; index)">
+            <parameter left="const QXmlNodeModelIndex &amp;" right="" name="index" default=""/>
+        </function>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QAbstractXmlReceiver" href="qabstractxmlreceiver.html" location="qabstractxmlreceiver.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <target name="xquery-sequence"/>
+            <contents name="xquery-sequences" title="XQuery Sequences" level="1"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAbstractXmlReceiver" fullname="QAbstractXmlReceiver::QAbstractXmlReceiver" href="qabstractxmlreceiver.html#QAbstractXmlReceiver" location="qabstractxmlreceiver.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAbstractXmlReceiver()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="atomicValue" fullname="QAbstractXmlReceiver::atomicValue" href="qabstractxmlreceiver.html#atomicValue" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="atomicValue(const QVariant &amp; value)">
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="attribute" fullname="QAbstractXmlReceiver::attribute" href="qabstractxmlreceiver.html#attribute" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="attribute(const QXmlName &amp; name, const QStringRef &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QStringRef &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="characters" fullname="QAbstractXmlReceiver::characters" href="qabstractxmlreceiver.html#characters" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="characters(const QStringRef &amp; value)">
+                <parameter left="const QStringRef &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="comment" fullname="QAbstractXmlReceiver::comment" href="qabstractxmlreceiver.html#comment" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="comment(const QString &amp; value)">
+                <parameter left="const QString &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endDocument" fullname="QAbstractXmlReceiver::endDocument" href="qabstractxmlreceiver.html#endDocument" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="endDocument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endElement" fullname="QAbstractXmlReceiver::endElement" href="qabstractxmlreceiver.html#endElement" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="endElement()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endOfSequence" fullname="QAbstractXmlReceiver::endOfSequence" href="qabstractxmlreceiver.html#endOfSequence" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="endOfSequence()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namespaceBinding" fullname="QAbstractXmlReceiver::namespaceBinding" href="qabstractxmlreceiver.html#namespaceBinding" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="namespaceBinding(const QXmlName &amp; name)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="processingInstruction" fullname="QAbstractXmlReceiver::processingInstruction" href="qabstractxmlreceiver.html#processingInstruction" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="processingInstruction(const QXmlName &amp; target, const QString &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="target" default=""/>
+                <parameter left="const QString &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startDocument" fullname="QAbstractXmlReceiver::startDocument" href="qabstractxmlreceiver.html#startDocument" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="startDocument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startElement" fullname="QAbstractXmlReceiver::startElement" href="qabstractxmlreceiver.html#startElement" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="startElement(const QXmlName &amp; name)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startOfSequence" fullname="QAbstractXmlReceiver::startOfSequence" href="qabstractxmlreceiver.html#startOfSequence" location="qabstractxmlreceiver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="startOfSequence()"/>
+            <variable access="protected" threadsafety="unspecified" status="commendable" name="d_ptr" fullname="QAbstractXmlReceiver::d_ptr" href="qabstractxmlreceiver.html#d_ptr-var" location="qabstractxmlreceiver.h" type="QScopedPointer&lt;QAbstractXmlReceiverPrivate&gt;" static="false"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractXmlReceiver" fullname="QAbstractXmlReceiver::~QAbstractXmlReceiver" href="qabstractxmlreceiver.html#dtor.QAbstractXmlReceiver" location="qsequencereceiver.cpp" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractXmlReceiver()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QSimpleXmlNodeModel" href="qsimplexmlnodemodel.html" location="qsimplexmlnodemodel.h" since="4.4" bases="QAbstractXmlNodeModel" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSimpleXmlNodeModel" fullname="QSimpleXmlNodeModel::QSimpleXmlNodeModel" href="qsimplexmlnodemodel.html#QSimpleXmlNodeModel" location="qsimplexmlnodemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSimpleXmlNodeModel(const QXmlNamePool &amp; namePool)">
+                <parameter left="const QXmlNamePool &amp;" right="" name="namePool" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="baseUri" fullname="QSimpleXmlNodeModel::baseUri" href="qsimplexmlnodemodel.html#baseUri" location="qsimplexmlnodemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QUrl" signature="baseUri(const QXmlNodeModelIndex &amp; node) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="node" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="elementById" fullname="QSimpleXmlNodeModel::elementById" href="qsimplexmlnodemodel.html#elementById" location="qsimplexmlnodemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QXmlNodeModelIndex" signature="elementById(const QXmlName &amp; id) const">
+                <parameter left="const QXmlName &amp;" right="" name="id" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namePool" fullname="QSimpleXmlNodeModel::namePool" href="qsimplexmlnodemodel.html#namePool" location="qsimplexmlnodemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlNamePool &amp;" signature="namePool() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namespaceBindings" fullname="QSimpleXmlNodeModel::namespaceBindings" href="qsimplexmlnodemodel.html#namespaceBindings" location="qsimplexmlnodemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVector&lt;QXmlName&gt;" signature="namespaceBindings(const QXmlNodeModelIndex &amp; node) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="node" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="nodesByIdref" fullname="QSimpleXmlNodeModel::nodesByIdref" href="qsimplexmlnodemodel.html#nodesByIdref" location="qsimplexmlnodemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVector&lt;QXmlNodeModelIndex&gt;" signature="nodesByIdref(const QXmlName &amp; idref) const">
+                <parameter left="const QXmlName &amp;" right="" name="idref" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="stringValue" fullname="QSimpleXmlNodeModel::stringValue" href="qsimplexmlnodemodel.html#stringValue" location="qsimplexmlnodemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="stringValue(const QXmlNodeModelIndex &amp; node) const">
+                <parameter left="const QXmlNodeModelIndex &amp;" right="" name="node" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSimpleXmlNodeModel" fullname="QSimpleXmlNodeModel::~QSimpleXmlNodeModel" href="qsimplexmlnodemodel.html#dtor.QSimpleXmlNodeModel" location="qsimplexmlnodemodel.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSimpleXmlNodeModel()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QSourceLocation" href="qsourcelocation.html" location="qsourcelocation.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSourceLocation" fullname="QSourceLocation::QSourceLocation" href="qsourcelocation.html#QSourceLocation" location="qsourcelocation.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSourceLocation()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSourceLocation" fullname="QSourceLocation::QSourceLocation" href="qsourcelocation.html#QSourceLocation-2" location="qsourcelocation.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSourceLocation(const QSourceLocation &amp; other)">
+                <parameter left="const QSourceLocation &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSourceLocation" fullname="QSourceLocation::QSourceLocation" href="qsourcelocation.html#QSourceLocation-3" location="qsourcelocation.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QSourceLocation(const QUrl &amp; u, int l, int c)">
+                <parameter left="const QUrl &amp;" right="" name="u" default=""/>
+                <parameter left="int" right="" name="l" default="-1"/>
+                <parameter left="int" right="" name="c" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="column" fullname="QSourceLocation::column" href="qsourcelocation.html#column" location="qsourcelocation.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="qint64" signature="column() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QSourceLocation::isNull" href="qsourcelocation.html#isNull" location="qsourcelocation.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="line" fullname="QSourceLocation::line" href="qsourcelocation.html#line" location="qsourcelocation.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="qint64" signature="line() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator!=" fullname="QSourceLocation::operator!=" href="qsourcelocation.html#operator!=" location="qsourcelocation.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator!=(const QSourceLocation &amp; other) const">
+                <parameter left="const QSourceLocation &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSourceLocation::operator=" href="qsourcelocation.html#operator=" location="qsourcelocation.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSourceLocation &amp;" signature="operator=(const QSourceLocation &amp; other)">
+                <parameter left="const QSourceLocation &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator==" fullname="QSourceLocation::operator==" href="qsourcelocation.html#operator==" location="qsourcelocation.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator==(const QSourceLocation &amp; other) const">
+                <parameter left="const QSourceLocation &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setColumn" fullname="QSourceLocation::setColumn" href="qsourcelocation.html#setColumn" location="qsourcelocation.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setColumn(qint64 newColumn)">
+                <parameter left="qint64" right="" name="newColumn" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setLine" fullname="QSourceLocation::setLine" href="qsourcelocation.html#setLine" location="qsourcelocation.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setLine(qint64 newLine)">
+                <parameter left="qint64" right="" name="newLine" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setUri" fullname="QSourceLocation::setUri" href="qsourcelocation.html#setUri" location="qsourcelocation.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setUri(const QUrl &amp; newUri)">
+                <parameter left="const QUrl &amp;" right="" name="newUri" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="uri" fullname="QSourceLocation::uri" href="qsourcelocation.html#uri" location="qsourcelocation.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QUrl" signature="uri() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSourceLocation" fullname="QSourceLocation::~QSourceLocation" href="qsourcelocation.html#dtor.QSourceLocation" location="qsourcelocation.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSourceLocation()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qsourcelocation.html#operator&lt;&lt;-42" location="qsourcelocation.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="42" relates="QSourceLocation" type="QDebug" signature="operator&lt;&lt;(QDebug debug, const QSourceLocation &amp; sourceLocation)">
+            <parameter left="QDebug" right="" name="debug" default=""/>
+            <parameter left="const QSourceLocation &amp;" right="" name="sourceLocation" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="qHash" href="qsourcelocation.html#qHash-25" location="qsourcelocation.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="25" relates="QSourceLocation" type="uint" signature="qHash(const QSourceLocation &amp; location)">
+            <parameter left="const QSourceLocation &amp;" right="" name="location" default=""/>
+        </function>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlFormatter" href="qxmlformatter.html" location="qxmlformatter.h" since="4.4" bases="QXmlSerializer" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlFormatter" fullname="QXmlFormatter::QXmlFormatter" href="qxmlformatter.html#QXmlFormatter" location="qxmlformatter.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlFormatter(const QXmlQuery &amp; query, QIODevice * outputDevice)">
+                <parameter left="const QXmlQuery &amp;" right="" name="query" default=""/>
+                <parameter left="QIODevice *" right="" name="outputDevice" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="atomicValue" fullname="QXmlFormatter::atomicValue" href="qxmlformatter.html#atomicValue" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="atomicValue(const QVariant &amp; value)">
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="attribute" fullname="QXmlFormatter::attribute" href="qxmlformatter.html#attribute" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="attribute(const QXmlName &amp; name, const QStringRef &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QStringRef &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="characters" fullname="QXmlFormatter::characters" href="qxmlformatter.html#characters" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="characters(const QStringRef &amp; value)">
+                <parameter left="const QStringRef &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="comment" fullname="QXmlFormatter::comment" href="qxmlformatter.html#comment" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="comment(const QString &amp; value)">
+                <parameter left="const QString &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endDocument" fullname="QXmlFormatter::endDocument" href="qxmlformatter.html#endDocument" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="endDocument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endElement" fullname="QXmlFormatter::endElement" href="qxmlformatter.html#endElement" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="endElement()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endOfSequence" fullname="QXmlFormatter::endOfSequence" href="qxmlformatter.html#endOfSequence" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="endOfSequence()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="indentationDepth" fullname="QXmlFormatter::indentationDepth" href="qxmlformatter.html#indentationDepth" location="qxmlformatter.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="indentationDepth() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="processingInstruction" fullname="QXmlFormatter::processingInstruction" href="qxmlformatter.html#processingInstruction" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="processingInstruction(const QXmlName &amp; name, const QString &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setIndentationDepth" fullname="QXmlFormatter::setIndentationDepth" href="qxmlformatter.html#setIndentationDepth" location="qxmlformatter.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setIndentationDepth(int depth)">
+                <parameter left="int" right="" name="depth" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startDocument" fullname="QXmlFormatter::startDocument" href="qxmlformatter.html#startDocument" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="startDocument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startElement" fullname="QXmlFormatter::startElement" href="qxmlformatter.html#startElement" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="startElement(const QXmlName &amp; name)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startOfSequence" fullname="QXmlFormatter::startOfSequence" href="qxmlformatter.html#startOfSequence" location="qxmlformatter.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="startOfSequence()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="qHash" href="qxmlname.html#qHash-26" location="qxmlname.cpp" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="26" relates="QXmlName" type="uint" signature="qHash(const QXmlName &amp; name)">
+            <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+        </function>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlName" href="qxmlname.html" location="qxmlname.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <target name="comparing-qxmlnames"/>
+            <contents name="comparing-qxmlnames" title="Comparing QXmlNames" level="1"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlName" fullname="QXmlName::QXmlName" href="qxmlname.html#QXmlName" location="qxmlname.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlName()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlName" fullname="QXmlName::QXmlName" href="qxmlname.html#QXmlName-2" location="qxmlname.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlName(QXmlNamePool &amp; namePool, const QString &amp; localName, const QString &amp; namespaceURI, const QString &amp; prefix)">
+                <parameter left="QXmlNamePool &amp;" right="" name="namePool" default=""/>
+                <parameter left="const QString &amp;" right="" name="localName" default=""/>
+                <parameter left="const QString &amp;" right="" name="namespaceURI" default="QString()"/>
+                <parameter left="const QString &amp;" right="" name="prefix" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fromClarkName" fullname="QXmlName::fromClarkName" href="qxmlname.html#fromClarkName" location="qxmlname.h" since="4.5" virtual="non" meta="plain" const="false" static="true" overload="false" type="QXmlName" signature="fromClarkName(const QString &amp; clarkName, const QXmlNamePool &amp; namePool)">
+                <parameter left="const QString &amp;" right="" name="clarkName" default=""/>
+                <parameter left="const QXmlNamePool &amp;" right="" name="namePool" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNCName" fullname="QXmlName::isNCName" href="qxmlname.html#isNCName" location="qxmlname.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="isNCName(const QString &amp; candidate)">
+                <parameter left="const QString &amp;" right="" name="candidate" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QXmlName::isNull" href="qxmlname.html#isNull" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="localName" fullname="QXmlName::localName" href="qxmlname.html#localName" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="localName(const QXmlNamePool &amp; namePool) const">
+                <parameter left="const QXmlNamePool &amp;" right="" name="namePool" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namespaceUri" fullname="QXmlName::namespaceUri" href="qxmlname.html#namespaceUri" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="namespaceUri(const QXmlNamePool &amp; namePool) const">
+                <parameter left="const QXmlNamePool &amp;" right="" name="namePool" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator!=" fullname="QXmlName::operator!=" href="qxmlname.html#operator!=" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator!=(const QXmlName &amp; other) const">
+                <parameter left="const QXmlName &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QXmlName::operator=" href="qxmlname.html#operator=" location="qxmlname.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QXmlName &amp;" signature="operator=(const QXmlName &amp; other)">
+                <parameter left="const QXmlName &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator==" fullname="QXmlName::operator==" href="qxmlname.html#operator==" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator==(const QXmlName &amp; other) const">
+                <parameter left="const QXmlName &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="prefix" fullname="QXmlName::prefix" href="qxmlname.html#prefix" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="prefix(const QXmlNamePool &amp; namePool) const">
+                <parameter left="const QXmlNamePool &amp;" right="" name="namePool" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toClarkName" fullname="QXmlName::toClarkName" href="qxmlname.html#toClarkName" location="qxmlname.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="toClarkName(const QXmlNamePool &amp; namePool) const">
+                <parameter left="const QXmlNamePool &amp;" right="" name="namePool" default=""/>
+            </function>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlNamePool" href="qxmlnamepool.html" location="qxmlnamepool.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlNamePool" fullname="QXmlNamePool::QXmlNamePool" href="qxmlnamepool.html#QXmlNamePool" location="qxmlnamepool.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlNamePool()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlNamePool" fullname="QXmlNamePool::QXmlNamePool" href="qxmlnamepool.html#QXmlNamePool-2" location="qxmlnamepool.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlNamePool(const QXmlNamePool &amp; other)">
+                <parameter left="const QXmlNamePool &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QXmlNamePool::operator=" href="qxmlnamepool.html#operator=" location="qxmlnamepool.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QXmlNamePool &amp;" signature="operator=(const QXmlNamePool &amp; other)">
+                <parameter left="const QXmlNamePool &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QXmlNamePool" fullname="QXmlNamePool::~QXmlNamePool" href="qxmlnamepool.html#dtor.QXmlNamePool" location="qxmlnamepool.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QXmlNamePool()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlQuery" href="qxmlquery.html" location="qxmlquery.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <contents name="running-xqueries" title="Running XQueries" level="1"/>
+            <contents name="running-xpath-expressions" title="Running XPath Expressions" level="1"/>
+            <contents name="running-xslt-stylesheets" title="Running XSLT stylesheets" level="1"/>
+            <contents name="binding-a-query-to-a-starting-node" title="Binding A Query To A Starting Node" level="1"/>
+            <contents name="reentrancy-and-thread-safety" title="Reentrancy and Thread-Safety" level="1"/>
+            <contents name="error-handling" title="Error Handling" level="1"/>
+            <contents name="resource-management" title="Resource Management" level="1"/>
+            <contents name="event-handling" title="Event Handling" level="1"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="QueryLanguage" fullname="QXmlQuery::QueryLanguage" href="qxmlquery.html#QueryLanguage-enum" location="qxmlquery.h" since="4.5">
+                <value name="XQuery10" value="1"/>
+                <value name="XSLT20" value="2"/>
+                <value name="XmlSchema11IdentityConstraintSelector" value="1024"/>
+                <value name="XmlSchema11IdentityConstraintField" value="2048"/>
+                <value name="XPath20" value="4096"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlQuery" fullname="QXmlQuery::QXmlQuery" href="qxmlquery.html#QXmlQuery" location="qxmlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlQuery()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlQuery" fullname="QXmlQuery::QXmlQuery" href="qxmlquery.html#QXmlQuery-4" location="qxmlquery.h" since="4.5" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QXmlQuery(QueryLanguage queryLanguage, const QXmlNamePool &amp; np)">
+                <parameter left="QueryLanguage" right="" name="queryLanguage" default=""/>
+                <parameter left="const QXmlNamePool &amp;" right="" name="np" default="QXmlNamePool()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlQuery" fullname="QXmlQuery::QXmlQuery" href="qxmlquery.html#QXmlQuery-3" location="qxmlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QXmlQuery(const QXmlNamePool &amp; np)">
+                <parameter left="const QXmlNamePool &amp;" right="" name="np" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlQuery" fullname="QXmlQuery::QXmlQuery" href="qxmlquery.html#QXmlQuery-2" location="qxmlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlQuery(const QXmlQuery &amp; other)">
+                <parameter left="const QXmlQuery &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindVariable" fullname="QXmlQuery::bindVariable" href="qxmlquery.html#bindVariable-5" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="5" type="void" signature="bindVariable(const QString &amp; localName, QIODevice * device)">
+                <parameter left="const QString &amp;" right="" name="localName" default=""/>
+                <parameter left="QIODevice *" right="" name="device" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindVariable" fullname="QXmlQuery::bindVariable" href="qxmlquery.html#bindVariable-4" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="4" type="void" signature="bindVariable(const QString &amp; localName, const QXmlItem &amp; value)">
+                <parameter left="const QString &amp;" right="" name="localName" default=""/>
+                <parameter left="const QXmlItem &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindVariable" fullname="QXmlQuery::bindVariable" href="qxmlquery.html#bindVariable-6" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="6" type="void" signature="bindVariable(const QString &amp; localName, const QXmlQuery &amp; query)">
+                <parameter left="const QString &amp;" right="" name="localName" default=""/>
+                <parameter left="const QXmlQuery &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindVariable" fullname="QXmlQuery::bindVariable" href="qxmlquery.html#bindVariable-2" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="bindVariable(const QXmlName &amp; name, QIODevice * device)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="QIODevice *" right="" name="device" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindVariable" fullname="QXmlQuery::bindVariable" href="qxmlquery.html#bindVariable" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="bindVariable(const QXmlName &amp; name, const QXmlItem &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QXmlItem &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindVariable" fullname="QXmlQuery::bindVariable" href="qxmlquery.html#bindVariable-3" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="void" signature="bindVariable(const QXmlName &amp; name, const QXmlQuery &amp; query)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QXmlQuery &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluateTo" fullname="QXmlQuery::evaluateTo" href="qxmlquery.html#evaluateTo-2" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="bool" signature="evaluateTo(QAbstractXmlReceiver * callback) const">
+                <parameter left="QAbstractXmlReceiver *" right="" name="callback" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluateTo" fullname="QXmlQuery::evaluateTo" href="qxmlquery.html#evaluateTo-5" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="5" type="bool" signature="evaluateTo(QIODevice * target) const">
+                <parameter left="QIODevice *" right="" name="target" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluateTo" fullname="QXmlQuery::evaluateTo" href="qxmlquery.html#evaluateTo-4" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="4" type="bool" signature="evaluateTo(QString * output) const">
+                <parameter left="QString *" right="" name="output" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluateTo" fullname="QXmlQuery::evaluateTo" href="qxmlquery.html#evaluateTo-3" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="3" type="bool" signature="evaluateTo(QStringList * target) const">
+                <parameter left="QStringList *" right="" name="target" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluateTo" fullname="QXmlQuery::evaluateTo" href="qxmlquery.html#evaluateTo" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="void" signature="evaluateTo(QXmlResultItems * result) const">
+                <parameter left="QXmlResultItems *" right="" name="result" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="initialTemplateName" fullname="QXmlQuery::initialTemplateName" href="qxmlquery.html#initialTemplateName" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlName" signature="initialTemplateName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QXmlQuery::isValid" href="qxmlquery.html#isValid" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="messageHandler" fullname="QXmlQuery::messageHandler" href="qxmlquery.html#messageHandler" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAbstractMessageHandler *" signature="messageHandler() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namePool" fullname="QXmlQuery::namePool" href="qxmlquery.html#namePool" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlNamePool" signature="namePool() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="networkAccessManager" fullname="QXmlQuery::networkAccessManager" href="qxmlquery.html#networkAccessManager" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QNetworkAccessManager *" signature="networkAccessManager() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QXmlQuery::operator=" href="qxmlquery.html#operator=" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QXmlQuery &amp;" signature="operator=(const QXmlQuery &amp; other)">
+                <parameter left="const QXmlQuery &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="queryLanguage" fullname="QXmlQuery::queryLanguage" href="qxmlquery.html#queryLanguage" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QueryLanguage" signature="queryLanguage() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFocus" fullname="QXmlQuery::setFocus" href="qxmlquery.html#setFocus-3" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="bool" signature="setFocus(QIODevice * document)">
+                <parameter left="QIODevice *" right="" name="document" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFocus" fullname="QXmlQuery::setFocus" href="qxmlquery.html#setFocus-4" location="qxmlquery.h" since="4.6" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="4" type="bool" signature="setFocus(const QString &amp; focus)">
+                <parameter left="const QString &amp;" right="" name="focus" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFocus" fullname="QXmlQuery::setFocus" href="qxmlquery.html#setFocus-2" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="setFocus(const QUrl &amp; documentURI)">
+                <parameter left="const QUrl &amp;" right="" name="documentURI" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFocus" fullname="QXmlQuery::setFocus" href="qxmlquery.html#setFocus" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setFocus(const QXmlItem &amp; item)">
+                <parameter left="const QXmlItem &amp;" right="" name="item" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setInitialTemplateName" fullname="QXmlQuery::setInitialTemplateName" href="qxmlquery.html#setInitialTemplateName-2" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="setInitialTemplateName(const QString &amp; localName)">
+                <parameter left="const QString &amp;" right="" name="localName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setInitialTemplateName" fullname="QXmlQuery::setInitialTemplateName" href="qxmlquery.html#setInitialTemplateName" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setInitialTemplateName(const QXmlName &amp; name)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setMessageHandler" fullname="QXmlQuery::setMessageHandler" href="qxmlquery.html#setMessageHandler" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setMessageHandler(QAbstractMessageHandler * aMessageHandler)">
+                <parameter left="QAbstractMessageHandler *" right="" name="aMessageHandler" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNetworkAccessManager" fullname="QXmlQuery::setNetworkAccessManager" href="qxmlquery.html#setNetworkAccessManager" location="qxmlquery.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNetworkAccessManager(QNetworkAccessManager * newManager)">
+                <parameter left="QNetworkAccessManager *" right="" name="newManager" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QXmlQuery::setQuery" href="qxmlquery.html#setQuery" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setQuery(QIODevice * sourceCode, const QUrl &amp; documentURI)">
+                <parameter left="QIODevice *" right="" name="sourceCode" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="documentURI" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QXmlQuery::setQuery" href="qxmlquery.html#setQuery-3" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="void" signature="setQuery(const QString &amp; sourceCode, const QUrl &amp; documentURI)">
+                <parameter left="const QString &amp;" right="" name="sourceCode" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="documentURI" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QXmlQuery::setQuery" href="qxmlquery.html#setQuery-2" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="setQuery(const QUrl &amp; queryURI, const QUrl &amp; baseURI)">
+                <parameter left="const QUrl &amp;" right="" name="queryURI" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="baseURI" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setUriResolver" fullname="QXmlQuery::setUriResolver" href="qxmlquery.html#setUriResolver" location="qxmlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setUriResolver(const QAbstractUriResolver * resolver)">
+                <parameter left="const QAbstractUriResolver *" right="" name="resolver" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="uriResolver" fullname="QXmlQuery::uriResolver" href="qxmlquery.html#uriResolver" location="qxmlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QAbstractUriResolver *" signature="uriResolver() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QXmlQuery" fullname="QXmlQuery::~QXmlQuery" href="qxmlquery.html#dtor.QXmlQuery" location="qxmlquery.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QXmlQuery()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlResultItems" href="qxmlresultitems.html" location="qxmlresultitems.h" since="4.4" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlResultItems" fullname="QXmlResultItems::QXmlResultItems" href="qxmlresultitems.html#QXmlResultItems" location="qxmlresultitems.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlResultItems()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="current" fullname="QXmlResultItems::current" href="qxmlresultitems.html#current" location="qxmlresultitems.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlItem" signature="current() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasError" fullname="QXmlResultItems::hasError" href="qxmlresultitems.html#hasError" location="qxmlresultitems.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="next" fullname="QXmlResultItems::next" href="qxmlresultitems.html#next" location="qxmlresultitems.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QXmlItem" signature="next()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QXmlResultItems" fullname="QXmlResultItems::~QXmlResultItems" href="qxmlresultitems.html#dtor.QXmlResultItems" location="qxmlresultitems.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QXmlResultItems()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlSchema" href="qxmlschema.html" location="qxmlschema.h" since="4.6" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <contents name="xml-schema-version" title="XML Schema Version" level="1"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlSchema" fullname="QXmlSchema::QXmlSchema" href="qxmlschema.html#QXmlSchema" location="qxmlschema.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlSchema()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlSchema" fullname="QXmlSchema::QXmlSchema" href="qxmlschema.html#QXmlSchema-2" location="qxmlschema.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlSchema(const QXmlSchema &amp; other)">
+                <parameter left="const QXmlSchema &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="documentUri" fullname="QXmlSchema::documentUri" href="qxmlschema.html#documentUri" location="qxmlschema.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QUrl" signature="documentUri() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QXmlSchema::isValid" href="qxmlschema.html#isValid" location="qxmlschema.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QXmlSchema::load" href="qxmlschema.html#load-2" location="qxmlschema.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="load(QIODevice * source, const QUrl &amp; documentUri)">
+                <parameter left="QIODevice *" right="" name="source" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="documentUri" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QXmlSchema::load" href="qxmlschema.html#load-3" location="qxmlschema.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="bool" signature="load(const QByteArray &amp; data, const QUrl &amp; documentUri)">
+                <parameter left="const QByteArray &amp;" right="" name="data" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="documentUri" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QXmlSchema::load" href="qxmlschema.html#load" location="qxmlschema.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="load(const QUrl &amp; source)">
+                <parameter left="const QUrl &amp;" right="" name="source" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="messageHandler" fullname="QXmlSchema::messageHandler" href="qxmlschema.html#messageHandler" location="qxmlschema.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAbstractMessageHandler *" signature="messageHandler() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namePool" fullname="QXmlSchema::namePool" href="qxmlschema.html#namePool" location="qxmlschema.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlNamePool" signature="namePool() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="networkAccessManager" fullname="QXmlSchema::networkAccessManager" href="qxmlschema.html#networkAccessManager" location="qxmlschema.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QNetworkAccessManager *" signature="networkAccessManager() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setMessageHandler" fullname="QXmlSchema::setMessageHandler" href="qxmlschema.html#setMessageHandler" location="qxmlschema.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setMessageHandler(QAbstractMessageHandler * handler)">
+                <parameter left="QAbstractMessageHandler *" right="" name="handler" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNetworkAccessManager" fullname="QXmlSchema::setNetworkAccessManager" href="qxmlschema.html#setNetworkAccessManager" location="qxmlschema.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNetworkAccessManager(QNetworkAccessManager * manager)">
+                <parameter left="QNetworkAccessManager *" right="" name="manager" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setUriResolver" fullname="QXmlSchema::setUriResolver" href="qxmlschema.html#setUriResolver" location="qxmlschema.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setUriResolver(const QAbstractUriResolver * resolver)">
+                <parameter left="const QAbstractUriResolver *" right="" name="resolver" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="uriResolver" fullname="QXmlSchema::uriResolver" href="qxmlschema.html#uriResolver" location="qxmlschema.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QAbstractUriResolver *" signature="uriResolver() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QXmlSchema" fullname="QXmlSchema::~QXmlSchema" href="qxmlschema.html#dtor.QXmlSchema" location="qxmlschema.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QXmlSchema()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlSchemaValidator" href="qxmlschemavalidator.html" location="qxmlschemavalidator.h" since="4.6" bases="" module="QtXmlPatterns" groups="xml-tools">
+            <contents name="xml-schema-version" title="XML Schema Version" level="1"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlSchemaValidator" fullname="QXmlSchemaValidator::QXmlSchemaValidator" href="qxmlschemavalidator.html#QXmlSchemaValidator" location="qxmlschemavalidator.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlSchemaValidator()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlSchemaValidator" fullname="QXmlSchemaValidator::QXmlSchemaValidator" href="qxmlschemavalidator.html#QXmlSchemaValidator-2" location="qxmlschemavalidator.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QXmlSchemaValidator(const QXmlSchema &amp; schema)">
+                <parameter left="const QXmlSchema &amp;" right="" name="schema" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="messageHandler" fullname="QXmlSchemaValidator::messageHandler" href="qxmlschemavalidator.html#messageHandler" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAbstractMessageHandler *" signature="messageHandler() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namePool" fullname="QXmlSchemaValidator::namePool" href="qxmlschemavalidator.html#namePool" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlNamePool" signature="namePool() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="networkAccessManager" fullname="QXmlSchemaValidator::networkAccessManager" href="qxmlschemavalidator.html#networkAccessManager" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QNetworkAccessManager *" signature="networkAccessManager() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="schema" fullname="QXmlSchemaValidator::schema" href="qxmlschemavalidator.html#schema" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QXmlSchema" signature="schema() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setMessageHandler" fullname="QXmlSchemaValidator::setMessageHandler" href="qxmlschemavalidator.html#setMessageHandler" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setMessageHandler(QAbstractMessageHandler * handler)">
+                <parameter left="QAbstractMessageHandler *" right="" name="handler" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNetworkAccessManager" fullname="QXmlSchemaValidator::setNetworkAccessManager" href="qxmlschemavalidator.html#setNetworkAccessManager" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNetworkAccessManager(QNetworkAccessManager * manager)">
+                <parameter left="QNetworkAccessManager *" right="" name="manager" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setSchema" fullname="QXmlSchemaValidator::setSchema" href="qxmlschemavalidator.html#setSchema" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setSchema(const QXmlSchema &amp; schema)">
+                <parameter left="const QXmlSchema &amp;" right="" name="schema" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setUriResolver" fullname="QXmlSchemaValidator::setUriResolver" href="qxmlschemavalidator.html#setUriResolver" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setUriResolver(const QAbstractUriResolver * resolver)">
+                <parameter left="const QAbstractUriResolver *" right="" name="resolver" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="uriResolver" fullname="QXmlSchemaValidator::uriResolver" href="qxmlschemavalidator.html#uriResolver" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QAbstractUriResolver *" signature="uriResolver() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="validate" fullname="QXmlSchemaValidator::validate" href="qxmlschemavalidator.html#validate-2" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="bool" signature="validate(QIODevice * source, const QUrl &amp; documentUri) const">
+                <parameter left="QIODevice *" right="" name="source" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="documentUri" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="validate" fullname="QXmlSchemaValidator::validate" href="qxmlschemavalidator.html#validate-3" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="3" type="bool" signature="validate(const QByteArray &amp; data, const QUrl &amp; documentUri) const">
+                <parameter left="const QByteArray &amp;" right="" name="data" default=""/>
+                <parameter left="const QUrl &amp;" right="" name="documentUri" default="QUrl()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="validate" fullname="QXmlSchemaValidator::validate" href="qxmlschemavalidator.html#validate" location="qxmlschemavalidator.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="validate(const QUrl &amp; source) const">
+                <parameter left="const QUrl &amp;" right="" name="source" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QXmlSchemaValidator" fullname="QXmlSchemaValidator::~QXmlSchemaValidator" href="qxmlschemavalidator.html#dtor.QXmlSchemaValidator" location="qxmlschemavalidator.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QXmlSchemaValidator()"/>
+        </class>
+        <class access="public" threadsafety="reentrant" status="commendable" name="QXmlSerializer" href="qxmlserializer.html" location="qxmlserializer.h" since="4.4" bases="QAbstractXmlReceiver" module="QtXmlPatterns" groups="xml-tools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QXmlSerializer" fullname="QXmlSerializer::QXmlSerializer" href="qxmlserializer.html#QXmlSerializer" location="qxmlserializer.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QXmlSerializer(const QXmlQuery &amp; query, QIODevice * outputDevice)">
+                <parameter left="const QXmlQuery &amp;" right="" name="query" default=""/>
+                <parameter left="QIODevice *" right="" name="outputDevice" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="atomicValue" fullname="QXmlSerializer::atomicValue" href="qxmlserializer.html#atomicValue" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="atomicValue(const QVariant &amp; value)">
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="attribute" fullname="QXmlSerializer::attribute" href="qxmlserializer.html#attribute" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="attribute(const QXmlName &amp; name, const QStringRef &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QStringRef &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="characters" fullname="QXmlSerializer::characters" href="qxmlserializer.html#characters" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="characters(const QStringRef &amp; value)">
+                <parameter left="const QStringRef &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="codec" fullname="QXmlSerializer::codec" href="qxmlserializer.html#codec" location="qxmlserializer.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QTextCodec *" signature="codec() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="comment" fullname="QXmlSerializer::comment" href="qxmlserializer.html#comment" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="comment(const QString &amp; value)">
+                <parameter left="const QString &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endDocument" fullname="QXmlSerializer::endDocument" href="qxmlserializer.html#endDocument" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="endDocument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endElement" fullname="QXmlSerializer::endElement" href="qxmlserializer.html#endElement" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="endElement()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endOfSequence" fullname="QXmlSerializer::endOfSequence" href="qxmlserializer.html#endOfSequence" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="endOfSequence()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="namespaceBinding" fullname="QXmlSerializer::namespaceBinding" href="qxmlserializer.html#namespaceBinding" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="namespaceBinding(const QXmlName &amp; nb)">
+                <parameter left="const QXmlName &amp;" right="" name="nb" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="outputDevice" fullname="QXmlSerializer::outputDevice" href="qxmlserializer.html#outputDevice" location="qxmlserializer.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QIODevice *" signature="outputDevice() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="processingInstruction" fullname="QXmlSerializer::processingInstruction" href="qxmlserializer.html#processingInstruction" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="processingInstruction(const QXmlName &amp; name, const QString &amp; value)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setCodec" fullname="QXmlSerializer::setCodec" href="qxmlserializer.html#setCodec" location="qxmlserializer.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setCodec(const QTextCodec * outputCodec)">
+                <parameter left="const QTextCodec *" right="" name="outputCodec" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startDocument" fullname="QXmlSerializer::startDocument" href="qxmlserializer.html#startDocument" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="startDocument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startElement" fullname="QXmlSerializer::startElement" href="qxmlserializer.html#startElement" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="startElement(const QXmlName &amp; name)">
+                <parameter left="const QXmlName &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startOfSequence" fullname="QXmlSerializer::startOfSequence" href="qxmlserializer.html#startOfSequence" location="qxmlserializer.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="startOfSequence()"/>
+        </class>
+        <page access="public" status="commendable" name="qtxmlpatterns-index.html" href="qtxmlpatterns-index.html" subtype="page" title="Qt XML Patterns" fulltitle="Qt XML Patterns" subtitle="" location="qtxmlpatterns-index.qdoc" module="qtxmlpatterns">
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="articles-and-guides" title="Articles and Guides" level="1"/>
+            <contents name="api-reference" title="API Reference" level="1"/>
+            <contents name="license-information" title="License Information" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="QtXmlPatterns" href="qtxmlpatterns-module.html" subtype="module" title="Qt XML Patterns C++ Classes" fulltitle="Qt XML Patterns C++ Classes" subtitle="" location="qtxmlpatterns-module.qdoc" groups="modules,technology-apis"/>
+        <page access="public" status="commendable" name="xmlprocessing.html" href="xmlprocessing.html" subtype="page" title="XQuery" fulltitle="XQuery" subtitle="" location="xml-patterns.qdoc" module="qtxmlpatterns">
+            <target name="qtxmlpatterns-example-query"/>
+            <target name="qtxdm"/>
+            <target name="qtxmlpatterns-example-query2"/>
+            <target name="binding-to-time"/>
+            <target name="binding-to-qvariantlist"/>
+            <target name="handling-qxmlnames"/>
+            <target name="xstime-not-mapped"/>
+            <keyword name="patternist"/>
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="advantages-of-using-qt-xml-patterns-and-xquery" title="Advantages of using Qt XML Patterns and XQuery" level="1"/>
+            <contents name="using-the-qt-xml-patterns-module" title="Using the Qt XML Patterns module" level="1"/>
+            <contents name="running-the-query-engine-from-your-qt-application" title="Running the query engine from your Qt application" level="2"/>
+            <contents name="running-the-query-engine-from-the-command-line-utility" title="Running the query engine from the command line utility" level="2"/>
+            <contents name="the-xquery-data-model" title="The XQuery Data Model" level="1"/>
+            <contents name="binding-program-variables-to-xquery-variables" title="Binding program variables to XQuery variables" level="2"/>
+            <contents name="binding-to-qvariant-time" title="Binding To QVariant::Time" level="3"/>
+            <contents name="binding-to-qvariantlist" title="Binding To QVariantList" level="3"/>
+            <contents name="interpreting-xquery-results" title="Interpreting XQuery results" level="2"/>
+            <contents name="handling-qxmlnames" title="Handling QXmlNames" level="3"/>
+            <contents name="no-mapping-for-xs-time" title="No mapping for xs:time" level="3"/>
+            <contents name="using-xquery-with-non-xml-data" title="Using XQuery with Non-XML Data" level="1"/>
+            <contents name="more-on-using-qt-xml-patterns-with-non-xml-data" title="More on using Qt XML Patterns with non-XML Data" level="1"/>
+            <contents name="security-considerations" title="Security Considerations" level="1"/>
+            <contents name="code-injection" title="Code Injection" level="2"/>
+            <contents name="denial-of-service-attacks" title="Denial of Service Attacks" level="2"/>
+            <contents name="features-and-conformance" title="Features and Conformance" level="1"/>
+            <contents name="xquery-1-0" title="XQuery 1.0" level="2"/>
+            <contents name="xslt-2-0" title="XSLT 2.0" level="2"/>
+            <contents name="xpath-2-0" title="XPath 2.0" level="2"/>
+            <contents name="xml-id" title="xml:id" level="2"/>
+            <contents name="xml-schema-1-0" title="XML Schema 1.0" level="2"/>
+            <contents name="resource-loading" title="Resource Loading" level="2"/>
+            <contents name="xml" title="XML" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="xquery-introduction.html" href="xquery-introduction.html" subtype="page" title="A Short Path to XQuery" fulltitle="A Short Path to XQuery" subtitle="" location="xquery-introduction.qdoc" module="qtxmlpatterns">
+            <target name="xquery-introduction"/>
+            <target name="shorthand-form"/>
+            <target name="name-tests"/>
+            <target name="empty-method-not-robust"/>
+            <target name="constructing-elements"/>
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="using-path-expressions-to-match-and-select-items" title="Using Path Expressions To Match And Select Items" level="1"/>
+            <contents name="axis-steps" title="Axis Steps" level="2"/>
+            <contents name="axis-specifiers" title="Axis Specifiers" level="2"/>
+            <contents name="node-tests" title="Node Tests" level="2"/>
+            <contents name="shorthand-form" title="Shorthand Form" level="2"/>
+            <contents name="name-tests" title="Name Tests" level="2"/>
+            <contents name="wildcards-in-name-tests" title="Wildcards in Name Tests" level="3"/>
+            <contents name="using-predicates-in-path-expressions" title="Using Predicates In Path Expressions" level="1"/>
+            <contents name="positional-predicates" title="Positional Predicates" level="2"/>
+            <contents name="boolean-predicates" title="Boolean Predicates" level="2"/>
+            <contents name="constructing-elements" title="Constructing Elements" level="1"/>
+            <contents name="element-constructors-are-expressions" title="Element Constructors are Expressions" level="2"/>
+            <contents name="constructing-atomic-values" title="Constructing Atomic Values" level="1"/>
+            <contents name="running-the-cookbook-examples" title="Running The Cookbook Examples" level="1"/>
+            <contents name="further-reading" title="Further Reading" level="1"/>
+            <contents name="faq" title="FAQ" level="1"/>
+            <contents name="why-didn-t-my-path-expression-match-anything" title="Why didn't my path expression match anything?" level="2"/>
+            <contents name="what-if-my-input-namespace-is-different-from-my-output-namespace" title="What if my input namespace is different from my output namespace?" level="2"/>
+            <contents name="why-doesn-t-my-return-clause-work" title="Why doesn't my return clause work?" level="2"/>
+            <contents name="why-didn-t-my-expression-get-evaluated" title="Why didn't my expression get evaluated?" level="2"/>
+            <contents name="my-predicate-is-correct-so-why-doesn-t-it-select-the-right-stuff" title="My predicate is correct, so why doesn't it select the right stuff?" level="2"/>
+            <contents name="why-doesn-t-my-flwor-behave-as-expected" title="Why doesn't my FLWOR behave as expected?" level="2"/>
+            <contents name="why-are-my-elements-created-in-the-wrong-order" title="Why are my elements created in the wrong order?" level="2"/>
+            <contents name="why-can-t-i-use-keyword-true-keyword-and-keyword-false-keyword-in-my-xquery" title="Why can't I use &lt;@keyword&gt;true&lt;/@keyword&gt; and &lt;@keyword&gt;false&lt;/@keyword&gt; in my XQuery?" level="2"/>
+        </page>
+    </namespace>
+</INDEX>

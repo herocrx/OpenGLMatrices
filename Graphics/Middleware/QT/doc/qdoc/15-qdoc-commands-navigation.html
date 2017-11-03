@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-manual.qdoc -->
+  <title>QDoc 5.0: Document Navigation</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="14-qdoc-commands-contextcommands.html" />
+  <link rel="next" href="16-qdoc-commands-status.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="14-qdoc-commands-contextcommands.html">Context Commands</a>
+<a class="nextPage" href="16-qdoc-commands-status.html">Reporting Status</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#example">Example</a></li>
+<li class="level1"><a href="#commands">Commands</a></li>
+<li class="level2"><a href="#previouspage">\previouspage</a></li>
+<li class="level2"><a href="#nextpage">\nextpage</a></li>
+<li class="level2"><a href="#startpage">\startpage</a></li>
+<li class="level2"><a href="#contentspage">\contentspage</a></li>
+<li class="level2"><a href="#indexpage">\indexpage</a></li>
+</ul>
+</div>
+<h1 class="title">Document Navigation</h1>
+<span class="subtitle"></span>
+<!-- $$$15-qdoc-commands-navigation.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The navigation commands are for linking the pages of a document in a meaningful sequence. Below is a sequence of QDoc comments that shows a typical use of the navigation commands.</p>
+<a name="example"></a>
+<h2>Example</h2>
+<pre class="cpp"><span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    \page basicqt<span class="operator">.</span>html
+    \contentspage {Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>} {Contents}
+    \nextpage Getting Started
+
+    \indexpage Index
+    \startpage Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>
+
+    \title Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>
+
+    The <span class="type"><a href="../qtcore/qt.html">Qt</a></span> toolkit is a C<span class="operator">+</span><span class="operator">+</span> <span class="keyword">class</span> library <span class="keyword">and</span> a set of tools <span class="keyword">for</span>
+    building multiplatform GUI programs <span class="keyword">using</span> a <span class="string">&quot;write once,
+    compile anywhere approach&quot;</span><span class="operator">.</span>
+
+    Table of contents:
+
+    \list
+    \li \l {Getting Started}
+    \li \l {Creating Dialogs}
+    \li \l {Creating Main Windows}
+    \endlist
+<span class="operator">*</span> <span class="operator">/</span>
+
+<span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    \page gettingstarted<span class="operator">.</span>html
+    \previouspage Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>
+    \contentspage {Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>} {Contents}
+    \nextpage Creating Dialogs
+
+    \indexpage Index
+    \startpage Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>
+
+    \title Getting Started
+
+    This chapter shows how to combine basic C<span class="operator">+</span><span class="operator">+</span> with the
+    functionality provided by <span class="type"><a href="../qtcore/qt.html">Qt</a></span> to create a few small graphical
+    interface (GUI) applications<span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span>
+
+<span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    \page creatingdialogs<span class="operator">.</span>html
+    \previouspage Getting Started
+    \contentspage {Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>} {Contents}
+
+    \indexpage Index
+    \startpage Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>
+
+    \title Creating Dialogs
+
+    This chapter will teach you how to create dialog boxes <span class="keyword">using</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span>
+
+<span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    \page index<span class="operator">.</span>html
+
+    \indexpage Index
+    \startpage Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>
+
+    \title Index
+
+    \list
+        \li \l {Basic <span class="type"><a href="../qtcore/qt.html">Qt</a></span>}
+        \li \l {Creating Dialogs}
+        \li \l {Getting Started}
+    \endlist
+<span class="operator">*</span> <span class="operator">/</span></pre>
+<p>QDoc renders the &quot;Getting Started&quot; page in <tt>creatingdialogs.html</tt>:</p>
+<blockquote>        <table border="0" cellpadding="0" cellspacing="5" width="100%">
+
+        <tr>
+        <p>
+        [Previous: <a href="15-qdoc-commands-navigation.html#deadlink">
+        Basic Qt</a>]
+        [<a href="15-qdoc-commands-navigation.html#deadlink">Contents</a>]
+        [Next: <a href="15-qdoc-commands-navigation.html#deadlink">
+        Creating Dialogs</a>]
+        </p>
+
+        <h1 align="center">Getting Started<br /></h1>
+
+        <p>
+        This chapter shows how to combine basic C++ with the
+        functionality provided by Qt to create a few small graphical
+        interface (GUI) applications.
+        </p>
+
+        <p>
+        [Previous: <a href="15-qdoc-commands-navigation.html#deadlink">
+        Basic Qt</a>]
+        [<a href="15-qdoc-commands-navigation.html#deadlink">Contents</a>]
+        [Next: <a href="15-qdoc-commands-navigation.html#deadlink">
+        Creating Dialogs</a>]
+        </p>
+
+        </table>
+    </blockquote>
+<p>The <a href="#indexpage-command">\indexpage</a> and <a href="#startpage-command">\startpage</a> commands create links to the page's index page and start page. These links can be used by browsers and search engines.</p>
+<p>The index page is typically an alphabetical list of the document's titles and topics, while the start page is the page considered by the author to be the starting point of a multipage document.</p>
+<p>The links are included in the generated HTML source code but have no visual effect on the documentation:</p>
+<pre class="cpp"><span class="operator">&lt;</span>head<span class="operator">&gt;</span>
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    <span class="operator">&lt;</span>link rel<span class="operator">=</span><span class="string">&quot;index&quot;</span> href<span class="operator">=</span><span class="string">&quot;index.html&quot;</span> <span class="operator">/</span><span class="operator">&gt;</span>
+    <span class="operator">&lt;</span>link rel<span class="operator">=</span><span class="string">&quot;start&quot;</span> href<span class="operator">=</span><span class="string">&quot;basicqt.html&quot;</span> <span class="operator">/</span><span class="operator">&gt;</span>
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+<span class="operator">&lt;</span><span class="operator">/</span>head<span class="operator">&gt;</span></pre>
+<a name="commands"></a>
+<h2>Commands</h2>
+<a name="previouspage-command"></a><a name="previouspage"></a>
+<h3>\previouspage</h3>
+<p>The \previouspage command links the current page to the previous page in a sequence.a The command has two arguments, each enclosed by curly braces: The first is the link target, i.e&#x2e; the title of the previous page, the second is the link text. If the page's title is equivalent to the link text, the second argument can be omitted.</p>
+<p>The command must stand alone on its own line.</p>
+<a name="nextpage-command"></a><a name="nextpage"></a>
+<h3>\nextpage</h3>
+<p>The \nextpage command links the current page to the next page in a sequence. The command follows the same syntax and argument convention as the <a href="#previouspage-command">\previouspage</a> command.</p>
+<a name="startpage-command"></a><a name="startpage"></a>
+<h3>\startpage</h3>
+<p>The \startpage command specifies the first page of a sequence of pages. The command must stand alone on its own line, and its unique argument is the title of the first document.</p>
+<p>QDoc will generate a link to the start page and include it in the generated HTML file, but this has no visual effect on the documentation. The generated link type tells browsers and search engines which document is considered by the author to be the starting point of the collection.</p>
+<a name="contentspage-command"></a><a name="contentspage"></a>
+<h3>\contentspage</h3>
+<p>The \contentspage command links the current page to a table of contents page. The command follows the same syntax and argument convention as the <a href="#previouspage-command">\previouspage</a> command.</p>
+<a name="indexpage-command"></a><a name="indexpage"></a>
+<h3>\indexpage</h3>
+<p>The \indexpage command specifies an index page for the current document. The command must stand alone on its own line, and its unique argument is the title of the index document.</p>
+<p>QDoc will generate a link to the index page and include it in the generated HTML file, but this has no visual effect on the documentation. The generated link type tells browsers and search engines which document is considered by the author to be the index page of the collection.</p>
+</div>
+<!-- @@@15-qdoc-commands-navigation.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="14-qdoc-commands-contextcommands.html">Context Commands</a>
+<a class="nextPage" href="16-qdoc-commands-status.html">Reporting Status</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

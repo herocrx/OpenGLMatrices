@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- whatsnew.qdoc -->
+  <title>QtQuick 5.0: Qt Quick Release Notes</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#qt-5-0-qtquick-c-module">Qt 5.0 - QtQuick C++ Module</a></li>
+<li class="level1"><a href="#qt-5-0-qtquick-qml-module">Qt 5.0 - QtQuick QML Module</a></li>
+<li class="level2"><a href="#visual-types-graphical-effects-and-sprites">Visual types, Graphical Effects and Sprites</a></li>
+<li class="level2"><a href="#animations-and-transitions">Animations and Transitions</a></li>
+<li class="level2"><a href="#paths">Paths</a></li>
+<li class="level2"><a href="#text">Text</a></li>
+<li class="level2"><a href="#user-input">User Input</a></li>
+<li class="level2"><a href="#specialised-containers">Specialised Containers</a></li>
+<li class="level2"><a href="#positioners-row-column-grid-flow-types">Positioners (Row, Column, Grid, Flow types):</a></li>
+<li class="level2"><a href="#models-and-views">Models and Views</a></li>
+<li class="level2"><a href="#utility-types">Utility types</a></li>
+<li class="level2"><a href="#property-types">Property types</a></li>
+<li class="level1"><a href="#qt-5-0-additional-qml-modules">Qt 5.0 - Additional QML Modules</a></li>
+<li class="level2"><a href="#qtquick-particles">QtQuick.Particles</a></li>
+<li class="level2"><a href="#qtquick-window">QtQuick.Window</a></li>
+<li class="level2"><a href="#qtquick-xmllistmodel">QtQuick.XmlListModel</a></li>
+<li class="level2"><a href="#qtquick-localstorage">QtQuick.LocalStorage</a></li>
+</ul>
+</div>
+<h1 class="title">Qt Quick Release Notes</h1>
+<span class="subtitle"></span>
+<!-- $$$qtquick-releasenotes.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="qt-5-0-qtquick-c-module"></a>
+<h2>Qt 5.0 - QtQuick C++ Module</h2>
+<p>The <a href="qtquick-module.html">QtQuick</a> C++ module is new in Qt 5. It provides the visual canvas and scenegraph back-end as well as the <a href="qtquick-module.html">QtQuick</a> QML module for QML application development.</p>
+<p>As of Qt 5, the <a href="qtquick-module.html">QtQuick</a> module is based on an OpenGL scenegraph. Many of the classes in the <a href="qtquick-module.html">QtQuick</a> module have been ported from the <tt>QtDeclarative</tt> module from Qt 4.8 to use the scenegraph architecture; these classes have been renamed to use a <tt>QQuick*</tt> prefix. (See the <a href="qtquick-porting-qt5.html">Porting QML Applications to Qt 5</a> for porting information.)</p>
+<p>The following classes provide the basic functionality for interacting with the QML visual canvas from C++:</p>
+<ul>
+<li><a href="qquickitem.html">QQuickItem</a> - the base visual QML type (replaces <tt>QDeclarativeItem</tt>)</li>
+<li><a href="qquickview.html">QQuickView</a> - a convenience window for rendering a QML scene from a QML file (replaces <tt>QDeclarativeView</tt>)</li>
+<li><a href="qquickwindow.html">QQuickWindow</a> - a base window for displaying a QML scene</li>
+<li><a href="qquickpainteditem.html">QQuickPaintedItem</a> - convenience for using the <a href="../qtgui/qpainter.html">QPainter</a> API with the scenegraph</li>
+<li><a href="qquickimageprovider.html">QQuickImageProvider</a> - fetches custom images for use in QML applications (replaces <tt>QDeclarativeImageProvider</tt>)</li>
+<li><a href="qquicktexturefactory.html">QQuickTextureFactory</a> - use with <a href="qquickimageprovider.html#requestTexture">QQuickImageProvider::requestTexture</a>()</li>
+</ul>
+<p>Custom rendering can be performed on the scenegraph using the following new classes:</p>
+<ul>
+<li><a href="qsgnode.html">QSGNode</a></li>
+<li><a href="qsgmaterial.html">QSGMaterial</a></li>
+<li><a href="qsgbasicgeometrynode.html">QSGBasicGeometryNode</a></li>
+<li><a href="qsggeometrynode.html">QSGGeometryNode</a></li>
+<li><a href="qsgclipnode.html">QSGClipNode</a></li>
+<li><a href="qsgtransformnode.html">QSGTransformNode</a></li>
+<li><a href="qsgopacitynode.html">QSGOpacityNode</a></li>
+<li><a href="qsgflatcolormaterial.html">QSGFlatColorMaterial</a></li>
+<li><a href="qsgsimplerectnode.html">QSGSimpleRectNode</a></li>
+<li><a href="qsgsimpletexturenode.html">QSGSimpleTextureNode</a></li>
+<li><a href="qsgtexture.html">QSGTexture</a></li>
+<li><a href="qsgdynamictexture.html">QSGDynamicTexture</a></li>
+<li><a href="qsgopaquetexturematerial.html">QSGOpaqueTextureMaterial</a></li>
+<li><a href="qsgtexturematerial.html">QSGTextureMaterial</a></li>
+<li><a href="qsgtextureprovider.html">QSGTextureProvider</a></li>
+<li><a href="qsgvertexcolormaterial.html">QSGVertexColorMaterial</a></li>
+</ul>
+<a name="qt-5-0-qtquick-qml-module"></a>
+<h2>Qt 5.0 - QtQuick QML Module</h2>
+<p>The <a href="qtquick-module.html">QtQuick</a> 2.0 QML module is a major update.</p>
+<p>Below are the additions in <a href="qtquick-module.html">QtQuick</a> 2.0&#x2e; For a list of behavioral changes which may affect applications ported from <a href="qtquick-module.html">QtQuick</a> 1.x, see the <a href="qtquick-porting-qt5.html">Porting QML Applications to Qt 5</a>.</p>
+<a name="visual-types-graphical-effects-and-sprites"></a>
+<h3>Visual types, Graphical Effects and Sprites</h3>
+<ul>
+<li>New <a href="qml-qtquick2-canvas.html">Canvas</a> type for drawing. This provides an API similar to that of the HTML5 Canvas API, along with some additional features.<ul>
+<li>Supports two render targets: <tt>Canvas.Image</tt> and <tt>Canvas.FramebufferObject</tt>.</li>
+<li>Supports background thread rendering.</li>
+<li>Supports tiled canvas rendering.</li>
+<li>Supports most of the HTML5 context2d APIs.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-item.html">Item</a>:<ul>
+<li>New <a href="qml-qtquick2-item.html#layer.enabled-prop">layer.enabled</a> property enables an item to be rendered into an offscreen cache for optimization.</li>
+<li>New <a href="qml-qtquick2-item.html#contains-method">contains()</a> method returns whether an item contains a specified point.</li>
+<li>New <a href="qml-qtquick2-item.html#anchors.alignWhenCentered-prop">anchors.alignWhenCentered</a> property can force centered anchors to align on a whole pixel.</li>
+<li>New <a href="qml-qtquick2-item.html#enabled-prop">enabled</a> property is available, which stops input event delivery and removes active focus.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-image.html">Image</a>:<ul>
+<li>New <a href="qml-qtquick2-image.html#horizontalAlignment-prop">horizontalAlignment</a> and <a href="qml-qtquick2-image.html#verticalAlignment-prop">verticalAlignment</a> properties to set the image alignment.</li>
+<li>New <tt>Image.Pad</tt> enumeration value for <a href="qml-qtquick2-image.html#fillMode-prop">fillMode</a> that does not transform the image, unlike other <a href="qml-qtquick2-image.html#fillMode-prop">fillMode</a> enumeration values.</li>
+</ul>
+</li>
+<li>New <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a> and <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> types enable GLSL shader programs to be integrated directly into QML code and applied to QML items and images. (This obsoletes the experimental Qt.labs.shaders module.)</li>
+<li>New <a href="qml-qtquick2-spritesequence.html">SpriteSequence</a> type renders animated sprites and can transition between animations. Each animation in a sequence is represented by the new <a href="qml-qtquick2-sprite.html">Sprite</a> type.</li>
+<li>New <a href="qml-qtquick2-animatedsprite.html">AnimatedSprite</a> type for drawing single sprite animations.</li>
+</ul>
+<a name="animations-and-transitions"></a>
+<h3>Animations and Transitions</h3>
+<ul>
+<li>New <a href="qml-qtquick2-animationcontroller.html">AnimationController</a> type enables an animation to be manually driven by a <a href="qml-qtquick2-animationcontroller.html#progress-prop">progress</a> value.</li>
+<li>New <a href="qml-qtquick2-pathanimation.html">PathAnimation</a> type animates an item along a <a href="qml-qtquick2-path.html">Path</a>.</li>
+<li>New <a href="qml-qtquick2-pathinterpolator.html">PathInterpolator</a> type provides updated attribute values for an item animating along a path. It can be used as an low-level alternative to <a href="qml-qtquick2-pathanimation.html">PathAnimation</a>.</li>
+<li><a href="qml-qtquick2-transition.html">Transition</a>:<ul>
+<li>New <a href="qml-qtquick2-transition.html#running-prop">running</a> property holds whether a transition is currently running.</li>
+<li>New <a href="qml-qtquick2-transition.html#enabled-prop">enabled</a> property controls whether a transition is enabled.</li>
+</ul>
+</li>
+</ul>
+<a name="paths"></a>
+<h3>Paths</h3>
+<ul>
+<li>New <a href="qml-qtquick2-patharc.html">PathArc</a> type creates an arc-type path.</li>
+<li>New <a href="qml-qtquick2-pathcurve.html">PathCurve</a> type creates a catmull-rom curve path.</li>
+<li>New <a href="qml-qtquick2-pathsvg.html">PathSvg</a> type creates a path from a SVG string.</li>
+<li>Changes common to <a href="qml-qtquick2-pathline.html">PathLine</a>, <a href="qml-qtquick2-pathquad.html">PathQuad</a> and <a href="qml-qtquick2-pathcubic.html">PathCubic</a>:<ul>
+<li>New <tt>relativeX</tt> and <tt>relativeY</tt> properties define the start and end points of a path relative to its start.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-pathcubic.html">PathCubic</a> only:<ul>
+<li>New <a href="qml-qtquick2-pathcubic.html#relativeControl1X-prop">relativeControl1X</a>, <a href="qml-qtquick2-pathcubic.html#relativeControl1Y-prop">relativeControl1Y</a>, <a href="qml-qtquick2-pathcubic.html#relativeControl2X-prop">relativeControl2X</a> and <a href="qml-qtquick2-pathcubic.html#relativeControl2Y-prop">relativeControl2Y</a> properties define the positions of the control points relative to the start of the curve.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-pathquad.html">PathQuad</a> only:<ul>
+<li>New <a href="qml-qtquick2-pathquad.html#relativeControlX-prop">relativeControlX</a> and <a href="qml-qtquick2-pathquad.html#relativeControlY-prop">relativeControlY</a> define the positions of the control points relative to the start of the curve.</li>
+</ul>
+</li>
+</ul>
+<a name="text"></a>
+<h3>Text</h3>
+<ul>
+<li>Changes common to <a href="qml-qtquick2-text.html">Text</a>, <a href="qml-qtquick2-textedit.html">TextEdit</a> and <a href="qml-qtquick2-textinput.html">TextInput</a>:<ul>
+<li>New <tt>contentWidth</tt> and <tt>contentHeight</tt> properties provide the dimensions of the textual content.</li>
+<li>New <tt>effectiveHorizontalAlignment</tt> property provides the read-only actual horizontal alignment.</li>
+</ul>
+</li>
+<li>Changes common to both <a href="qml-qtquick2-textedit.html">TextEdit</a> and <a href="qml-qtquick2-textinput.html">TextInput</a>:<ul>
+<li>New <tt>canUndo</tt> and <tt>canRedo</tt> properties specify whether undo and redo operations are available.</li>
+<li>New <tt>getText()</tt> method returns the text located between specified start and end indexes. Additionally <a href="qml-qtquick2-textedit.html">TextEdit</a> has a <a href="qml-qtquick2-textedit.html#getFormattedText-method">getFormattedText()</a> method that returns the formatted text.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-text.html">Text</a> only:<ul>
+<li><tt>Text.RightElide</tt> is now supported where text spans multiple lines.</li>
+<li>New <a href="qml-qtquick2-text.html#linkColor-prop">linkColor</a> property controls the color of linked text.</li>
+<li>New <a href="qml-qtquick2-text.html#onLineLaidOut-signal">onLineLaidOut</a> handler is called for every line during the layout process to give the option of positioning and/or resizing lines as they are laid out.</li>
+<li>New doLayout() method will trigger the text layout from Javascript.</li>
+<li>New <a href="qml-qtquick2-text.html#fontSizeMode-prop">fontSizeMode</a> property allows text to be fitted to the item size.</li>
+<li>New <a href="qml-qtquick2-text.html#minimumPixelSize-prop">minimumPixelSize</a> and <a href="qml-qtquick2-text.html#minimumPointSize-prop">minimumPointSize</a> properties can be used to specify a lower bound when auto-fitting.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-textedit.html">TextEdit</a> only:<ul>
+<li>New <a href="qml-qtquick2-textedit.html#baseUrl-prop">baseUrl</a> property specified the base URL used to resolve relative URLs within the text.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-textinput.html">TextInput</a> only:<ul>
+<li>New <a href="qml-qtquick2-textinput.html#wrapMode-prop">wrapMode</a> property sets the text wrapping mode.</li>
+<li>New <a href="qml-qtquick2-textinput.html#horizontalAlignment-prop">horizontalAlignment</a> and <a href="qml-qtquick2-textinput.html#verticalAlignment-prop">verticalAlignment</a> properties.</li>
+<li>New <a href="qml-qtquick2-textinput.html#length-prop">length</a> property provides the total number of text characters.</li>
+<li>New <a href="qml-qtquick2-textinput.html#persistentSelection-prop">persistentSelection</a> property enables the text selection to persist when the window loses focus.</li>
+<li><a href="qml-qtquick2-textinput.html#positionAt-method">positionAt()</a> method now takes a y parameter.</li>
+</ul>
+</li>
+</ul>
+<a name="user-input"></a>
+<h3>User Input</h3>
+<ul>
+<li>New <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a> type processes multi-point touches and provides information on touch points including position, pressure and velocity. Touch point data is provided by the new <a href="qml-qtquick2-touchpoint.html">TouchPoint</a> type.</li>
+<li>New <a href="qml-qtquick2-droparea.html">DropArea</a> type provides more advanced drag and drop functionality.</li>
+<li><a href="qml-qtquick2-mousearea.html">MouseArea</a>:<ul>
+<li>Wheel events are now supported; events are provided through the new <a href="qml-qtquick2-wheelevent.html">WheelEvent</a> type.</li>
+<li>New <a href="qml-qtquick2-mousearea.html#propagateComposedEvents-prop">propagateComposedEvents</a> property sets whether composed events are propagated to other mouse areas. If this property is true and the l{<a href="qml-qtquick2-mousearea.html#onClicked-signal">MouseArea::onClicked</a>}{clicked}, <a href="qml-qtquick2-mousearea.html#onDoubleClicked-signal">doubleClicked</a> or <a href="qml-qtquick2-mousearea.html#onPressAndHold-signal">pressAndHold</a> handlers reject a mouse event, the event will be propagated to overlapping <a href="qml-qtquick2-mousearea.html">MouseArea</a> items in the same area that are lower in the stacking order.</li>
+<li>New <a href="qml-qtquick2-mousearea.html#cursorShape-prop">cursorShape</a> property controls the cursor shape.</li>
+</ul>
+</li>
+</ul>
+<a name="specialised-containers"></a>
+<h3>Specialised Containers</h3>
+<ul>
+<li>Flickable:<ul>
+<li>New <a href="qml-qtquick2-flickable.html#rebound-prop">rebound</a> property specifies the transition to be applied when a flickable snaps back to its bounds.</li>
+<li>New <a href="qml-qtquick2-flickable.html#topMargin-prop">topMargin</a>, <a href="qml-qtquick2-flickable.html#bottomMargin-prop">bottomMargin</a>, <a href="qml-qtquick2-flickable.html#leftMargin-prop">leftMargin</a>, <a href="qml-qtquick2-flickable.html#rightMargin-prop">rightMargin</a> allow extra margin space to be specified for a flickable. This can be used, for example, to implement pull-to-refresh functionality for a list.</li>
+<li>New <a href="qml-qtquick2-flickable.html#originX-prop">originX</a> and <a href="qml-qtquick2-flickable.html#originY-prop">originY</a> properties provide the top left position of the content item.</li>
+<li>New <a href="qml-qtquick2-flickable.html#dragging-prop">dragging</a>, <a href="qml-qtquick2-flickable.html#draggingHorizontally-prop">draggingHorizontally</a> and <a href="qml-qtquick2-flickable.html#draggingVertically-prop">draggingVertically</a> properties provide information on whether a flickable is currently being dragged.</li>
+<li>New <a href="qml-qtquick2-flickable.html#flick-method">flick()</a> method flicks the view with a specific velocity.</li>
+<li>New <a href="qml-qtquick2-flickable.html#cancelFlick-method">cancelFlick()</a> method stops any current flicking movement.</li>
+</ul>
+</li>
+</ul>
+<a name="positioners-row-column-grid-flow-types"></a>
+<h3>Positioners (Row, Column, Grid, Flow types):</h3>
+<ul>
+<li>Changes common to <a href="qml-qtquick2-row.html">Row</a>, <a href="qml-qtquick2-column.html">Column</a>, <a href="qml-qtquick2-grid.html">Grid</a> and <a href="qml-qtquick2-flow.html">Flow</a>:<ul>
+<li>The <tt>add</tt> and <tt>move</tt> transitions can access a new <a href="qml-qtquick2-viewtransition.html">ViewTransition</a> attached property (see the <a href="qml-qtquick2-viewtransition.html">ViewTransition</a> documentation for examples) and can now animate arbitrary item properties (instead of being restricted to animating an item's position).</li>
+<li>New <tt>effectiveLayoutDirection</tt> property provides the read-only actual layout direction of a positioner.</li>
+<li>New <a href="qml-qtquick2-positioner.html">Positioner</a> type provides <tt>index</tt>, <tt>isFirstItem</tt> and <tt>isLastItem</tt> attached properties for items within positioners.</li>
+<li>All <tt>spacing</tt> properties on positioners now use real numbers instead of integers.</li>
+</ul>
+</li>
+<li>Grid only:<ul>
+<li>New <a href="qml-qtquick2-grid.html#rowSpacing-prop">rowSpacing</a> and <a href="qml-qtquick2-grid.html#columnSpacing-prop">columnSpacing</a> properties.</li>
+</ul>
+</li>
+</ul>
+<a name="models-and-views"></a>
+<h3>Models and Views</h3>
+<ul>
+<li>Any delegate of a view that uses a <a href="../qtcore/qabstractitemmodel.html">QAbstractItemModel</a>-derived model type can use the syntax <tt>model.&lt;role&gt; = &lt;newDataValue&gt;</tt> to modify the data for a particular role. (Previously, the <tt>model.&lt;role&gt;</tt> syntax was only available for reading, not writing to, a role value.)</li>
+<li>ListModel:<ul>
+<li>By default, roles can no longer change type during a model's lifetime. The new dynamicRoles property can be set to restore the original (less performant) behavior.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a>:<ul>
+<li>Now has features to filter the items to be displayed in a view. This is supported by the new <a href="qml-qtquick2-visualdatamodel.html#groups-prop">groups</a>, <a href="qml-qtquick2-visualdatamodel.html#filterOnGroup-prop">filterOnGroup</a>, <a href="qml-qtquick2-visualdatamodel.html#items-prop">items</a> and <a href="qml-qtquick2-visualdatamodel.html#persistedItems-prop">persistedItems</a> properties.</li>
+</ul>
+</li>
+<li>Changes common to both <a href="qml-qtquick2-listview.html">ListView</a> and <a href="qml-qtquick2-gridview.html">GridView</a>:<ul>
+<li>New transition support for animating the adding, removing and moving of items in a <a href="qml-qtquick2-listview.html">ListView</a> or <a href="qml-qtquick2-gridview.html">GridView</a>. See the <a href="qml-qtquick2-viewtransition.html">ViewTransition</a> documentation for details.</li>
+<li>New <tt>verticalLayoutDirection</tt> property enables items to be laid out from bottom-to-top using the new <tt>BottomToTop</tt> enumeration value.</li>
+<li>New <tt>headerItem</tt> and <tt>footerItem</tt> properties provide access to the instantiated header and footer items.</li>
+<li>The <tt>cacheBuffer</tt> property now has a non-zero default.</li>
+<li>Delegates in the cache buffer are now created asynchronously.</li>
+<li>Setting a <tt>RightToLeft</tt> layout now also reverses the <tt>preferredHighlightBegin</tt> and <tt>preferredHighlightEnd</tt>.</li>
+<li>If the model is changed after the component is completed, currentIndex is reset to 0.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-listview.html">ListView</a> only:<ul>
+<li>New <a href="qml-qtquick2-listview.html#section.labelPositioning-prop">section.labelPositioning</a> property can fix the current section label to the start of the view, and the next section label to the end of the view, to prevent labels from scrolling while section items are still in view.</li>
+<li><tt>highlightMoveSpeed</tt> and <tt>highlightResizeSpeed</tt> have been renamed to <a href="qml-qtquick2-listview.html#highlightMoveVelocity-prop">highlightMoveVelocity</a> and <a href="qml-qtquick2-listview.html#highlightResizeVelocity-prop">highlightResizeVelocity</a>.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-gridview.html">GridView</a> only:<ul>
+<li><a href="qml-qtquick2-gridview.html#cellWidth-prop">cellWidth</a> and <a href="qml-qtquick2-gridview.html#cellHeight-prop">cellHeight</a> now use real numbers instead of integers.</li>
+</ul>
+</li>
+<li><a href="qml-qtquick2-pathview.html">PathView</a>:<ul>
+<li>New <a href="qml-qtquick2-pathview.html#currentItem-prop">currentItem</a> property holds the current item in the view.</li>
+<li>New <a href="qml-qtquick2-pathview.html#maximumFlickVelocity-prop">maximumFlickVelocity</a> property controls the maximum flick velocity of the view.</li>
+<li>New <a href="qml-qtquick2-pathview.html#snapMode-prop">snapMode</a> property controls the snap model when flicking between items</li>
+<li>If the model is changed after the component is completed, the offset and currentIndex are reset to 0.</li>
+<li>New <a href="qml-qtquick2-pathview.html#positionViewAtIndex-method">positionViewAtIndex()</a> function allows the view to be moved to display the specified index.</li>
+<li>New <a href="qml-qtquick2-pathview.html#indexAt-method">indexAt()</a> and <a href="qml-qtquick2-pathview.html#itemAt-method">itemAt()</a> functions return the index or item at a specified point in the view.</li>
+</ul>
+</li>
+</ul>
+<a name="utility-types"></a>
+<h3>Utility types</h3>
+<ul>
+<li>New <a href="qml-qtquick2-accessible.html">Accessible</a> attached property for implementing accessibility features in QML applications.</li>
+<li><a href="qml-qtquick2-loader.html">Loader</a>:<ul>
+<li>New <a href="qml-qtquick2-loader.html#asynchronous-prop">asynchronous</a> property allows components to be instantiated with lower chance of blocking. If source is used with <i>asynchonous: true</i> the component will be compiled in a background thread.</li>
+<li>New <a href="qml-qtquick2-loader.html#active-prop">active</a> property can delay instantiation of a <a href="qml-qtquick2-loader.html">Loader</a> object's <a href="qml-qtquick2-loader.html#item-prop">item</a>.</li>
+<li>New <a href="qml-qtquick2-loader.html#setSource-method">setSource()</a> method loads an object with specific initial property values, similar to <a href="../qtqml/qml-qtquick2-component.html#createObject-method">Component::createObject</a>().</li>
+</ul>
+</li>
+<li><a href="../qtqml/qml-qtquick2-binding.html">Binding</a>:<ul>
+<li>This type can now be used as a value source, and will also restore any previously set binding when its <a href="../qtqml/qml-qtquick2-binding.html#when-prop">when</a> clause becomes false.</li>
+</ul>
+</li>
+</ul>
+<a name="property-types"></a>
+<h3>Property types</h3>
+<p>Support for various math and geometry-related value types, including <a href="../qtgui/qvector2d.html">QVector2D</a>, <a href="../qtgui/qvector3d.html">QVector3D</a>, <a href="../qtgui/qvector4d.html">QVector4D</a>, <a href="../qtgui/qmatrix4x4.html">QMatrix4x4</a> and <a href="../qtgui/qquaternion.html">QQuaternion</a>, as well as <a href="../qtgui/qcolor.html">QColor</a> and <a href="../qtgui/qfont.html">QFont</a>, are now provided by <a href="qtquick-module.html">QtQuick</a>. Properties of these types can be declared in QML documents via the property syntax where the type name is <tt>vector2d</tt>, <tt>vector3d</tt>, <tt>vector4d</tt>, <tt>matrix4x4</tt>, <tt>quaternion</tt>, <tt>color</tt> and <tt>font</tt> respectively.</p>
+<p><a href="qtquick-module.html">QtQuick</a> also provides implementation for the various value type factory or utility functions of the <tt>Qt</tt> object which return or operate on values of the above types. The functions are:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Value type</th><th >Functions</th></tr></thead>
+<tr valign="top" class="odd"><td >color</td><td >Qt.rgba(), Qt.hsla(), Qt.tint(), Qt.lighter(), Qt.darker(), Qt.colorEqual()</td></tr>
+<tr valign="top" class="even"><td >font</td><td >Qt.<a href="qml-font.html">font</a>(), Qt.fontFamilies()</td></tr>
+<tr valign="top" class="odd"><td >vector2d</td><td >Qt.<a href="qml-vector2d.html">vector2d</a>()</td></tr>
+<tr valign="top" class="even"><td >vector3d</td><td >Qt.<a href="qml-vector3d.html">vector3d</a>()</td></tr>
+<tr valign="top" class="odd"><td >vector4d</td><td >Qt.<a href="qml-vector4d.html">vector4d</a>()</td></tr>
+<tr valign="top" class="even"><td >matrix4x4</td><td >Qt.<a href="qml-matrix4x4.html">matrix4x4</a>()</td></tr>
+<tr valign="top" class="odd"><td >quaternion</td><td >Qt.<a href="qml-quaternion.html">quaternion</a>()</td></tr>
+</table>
+<p>The <tt>Qt.rgba()</tt>, <tt>Qt.hsla()</tt>, <tt>Qt.tint()</tt>, <tt>Qt.lighter()</tt>, <tt>Qt.darker()</tt> and <tt>Qt.fontFamilies()</tt> functions already existed in <tt>QtDeclarative</tt> prior to <a href="qtquick-module.html">QtQuick</a> 2.0; the other functions are all new in <a href="qtquick-module.html">QtQuick</a> 2.0&#x2e;</p>
+<a name="qt-5-0-additional-qml-modules"></a>
+<h2>Qt 5.0 - Additional QML Modules</h2>
+<a name="qtquick-particles"></a>
+<h3>QtQuick.Particles</h3>
+<p>This new module provides particle system support for creating a variety of 2D particle systems. See the <a href="qmlmodule-qtquick-particles2-qtquick-particles-2.html">QtQuick.Particles</a> documentation for comprehensive details.</p>
+<p>This obsoletes the experimental <tt>Qt.labs.particles</tt> module.</p>
+<a name="qtquick-window"></a>
+<h3>QtQuick.Window</h3>
+<p>This new module contains the <a href="qml-qtquick-window2-window.html">Window</a> type for creating a basic window and the <a href="qml-qtquick-window2-screen.html">Screen</a> type for accessing a screen's resolution and other details. See the <a href="qmlmodule-qtquick-window2-qtquick-window-2.html">QtQuick.Window</a> documentation for comprehensive details.</p>
+<a name="qtquick-xmllistmodel"></a>
+<h3>QtQuick.XmlListModel</h3>
+<p>This new module contains <a href="qml-qtquick-xmllistmodel2-xmllistmodel.html">XmlListModel</a> and associated types, which were previously in the <a href="qtquick-module.html">QtQuick</a> module. See the <a href="qmlmodule-qtquick-xmllistmodel2-qtquick-xmllistmodel-2.html">QtQuick.XmlListModel</a> documentation for details.</p>
+<a name="qtquick-localstorage"></a>
+<h3>QtQuick.LocalStorage</h3>
+<p>This new module provides access to the SQL Local Storage API that was previously accessible from the <a href="../qtqml/qtqml-javascript-qmlglobalobject.html">QML Global Object</a>. See the <a href="qmlmodule-qtquick-localstorage2-qtquick-localstorage-2.html">QtQuick.LocalStorage</a> documentation for details.</p>
+</div>
+<!-- @@@qtquick-releasenotes.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

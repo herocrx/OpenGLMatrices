@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qpixmap.cpp -->
+  <title>QtGui 5.0: Compatibility Members for QPixmap</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Compatibility Members for QPixmap</h1>
+<p><b>The following class members are part of the Qt compatibility layer.</b> We advise against using them in new code.</p>
+<p><ul><li><a href="qpixmap.html">QPixmap class reference</a></li></ul></p>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QPixmap </td><td class="memItemRight bottomAlign"><b><a href="qpixmap-compat.html#alphaChannel">alphaChannel</a></b>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qpixmap-compat.html#serialNumber">serialNumber</a></b>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qpixmap-compat.html#setAlphaChannel">setAlphaChannel</a></b>(const QPixmap &amp;<i> p</i>)</td></tr>
+</table>
+<h2>Member Function Documentation</h2>
+<!-- $$$alphaChannel[overload1]$$$alphaChannel -->
+<h3 class="fn"><a name="alphaChannel"></a><span class="type">QPixmap</span> QPixmap::<span class="name">alphaChannel</span>() const</h3>
+<p>Most use cases for this can be achieved using a <a href="qpainter.html">QPainter</a> and <a href="qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> instead.</p>
+<p><b>See also </b><a href="qpixmap-compat.html#setAlphaChannel">setAlphaChannel</a>().</p>
+<!-- @@@alphaChannel -->
+<!-- $$$serialNumber[overload1]$$$serialNumber -->
+<h3 class="fn"><a name="serialNumber"></a><span class="type">int</span> QPixmap::<span class="name">serialNumber</span>() const</h3>
+<p>Returns a number that identifies the contents of this <a href="qpixmap.html">QPixmap</a> object. Distinct <a href="qpixmap.html">QPixmap</a> objects can only have the same serial number if they refer to the same contents (but they don't have to).</p>
+<p>Use <a href="qpixmap.html#cacheKey">cacheKey</a>() instead.</p>
+<p><b>Warning:</b> The serial number doesn't necessarily change when the pixmap is altered. This means that it may be dangerous to use it as a cache key. For caching pixmaps, we recommend using the <a href="qpixmapcache.html">QPixmapCache</a> class whenever possible.</p>
+<!-- @@@serialNumber -->
+<!-- $$$setAlphaChannel[overload1]$$$setAlphaChannelconstQPixmap& -->
+<h3 class="fn"><a name="setAlphaChannel"></a><span class="type">void</span> QPixmap::<span class="name">setAlphaChannel</span>(const <span class="type">QPixmap</span> &amp;<i> p</i>)</h3>
+<p>Most use cases for this can be achieved using <i>p</i> with <a href="qpainter.html">QPainter</a> and <a href="qpainter.html#CompositionMode-enum">QPainter::CompositionMode</a> instead.</p>
+<p><b>See also </b><a href="qpixmap-compat.html#alphaChannel">alphaChannel</a>().</p>
+<!-- @@@setAlphaChannel -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

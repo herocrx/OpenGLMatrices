@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickwindow.cpp -->
+  <title>QtQuick 5.0: Window</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">Window</h1>
+<span class="subtitle"></span>
+<!-- $$$Window-brief -->
+<p>Creates a new top-level window <a href="#details">More...</a></p>
+<!-- @@@Window -->
+<p>Window instantiates the C++ class <a href="qquickwindow.html">QQuickWindow</a></p>
+<ul>
+<li><a href="qml-qtquick-window2-window-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick-window2-window.html#color-prop">color</a></b></b> : color</li>
+<li class="fn"><b><b><a href="qml-qtquick-window2-window.html#modality-prop">modality</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-qtquick-window2-window.html#title-prop">title</a></b></b> : string</li>
+</ul>
+<!-- $$$Window-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Window object creates a new top-level window for a <a href="qtquick-module.html">QtQuick</a> scene. It automatically sets up the window for use with <a href="qtquick-module.html">QtQuick</a> 2.0 graphical types.</p>
+<p>To use this type, you will need to import the module with the following line:</p>
+<pre class="cpp">import <span class="type"><a href="qtquick-module.html">QtQuick</a></span><span class="operator">.</span>Window <span class="number">2.0</span></pre>
+<p>Restricting this import will allow you to have a QML environment without access to window system features.</p>
+<!-- @@@Window -->
+<h2>Property Documentation</h2>
+<!-- $$$color -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="color-prop"></a><span class="name">color</span> : <span class="type"><a href="qml-color.html">color</a></span></p></td></tr></table></div><div class="qmldoc"><p>The background color for the window.</p>
+<p>Setting this property is more efficient than using a separate Rectangle.</p>
+</div></div><!-- @@@color -->
+<br/>
+<!-- $$$modality -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="modality-prop"></a><span class="name">modality</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>The modality of the window.</p>
+<p>A modal window prevents other windows from receiving input events. Possible values are Qt.NonModal (the default), Qt.WindowModal, and Qt.ApplicationModal.</p>
+</div></div><!-- @@@modality -->
+<br/>
+<!-- $$$title -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="title-prop"></a><span class="name">title</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>The window's title in the windowing system.</p>
+<p>The window title might appear in the title area of the window decorations, depending on the windowing system and the window flags. It might also be used by the windowing system to identify the window in other contexts, such as in the task switcher.</p>
+</div></div><!-- @@@title -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

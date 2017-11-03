@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qevent.cpp -->
+  <title>QtGui 5.0: QEnterEvent Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QEnterEvent Class</h1>
+<!-- $$$QEnterEvent-brief -->
+<p>The QEnterEvent class contains parameters that describe an enter event. <a href="#details">More...</a></p>
+<!-- @@@QEnterEvent -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QEnterEvent&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qevent.html">QEvent</a>.</p>
+<p>This class was introduced in QtGui 5.0.</p>
+<ul>
+<li><a href="qenterevent-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#QEnterEvent">QEnterEvent</a></b>(const QPointF &amp;<i> localPos</i>, const QPointF &amp;<i> windowPos</i>, const QPointF &amp;<i> screenPos</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#globalPos">globalPos</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#globalX">globalX</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#globalY">globalY</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QPointF &amp; </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#localPos">localPos</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPoint </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#pos">pos</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QPointF &amp; </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#screenPos">screenPos</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QPointF &amp; </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#windowPos">windowPos</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#x">x</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qenterevent.html#y">y</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">6 public functions inherited from <a href="../qtcore/qevent.html#public-functions">QEvent</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qevent.html#properties">QEvent</a></li>
+<li class="fn">1 static public member inherited from <a href="../qtcore/qevent.html#static-public-members">QEvent</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qevent.html#protected-variables">QEvent</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QEnterEvent-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QEnterEvent class contains parameters that describe an enter event.</p>
+<p>Enter events occur when the mouse cursor enters a window or a widget.</p>
+</div>
+<!-- @@@QEnterEvent -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QEnterEvent[overload1]$$$QEnterEventconstQPointF&constQPointF&constQPointF& -->
+<h3 class="fn"><a name="QEnterEvent"></a>QEnterEvent::<span class="name">QEnterEvent</span>(const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp;<i> localPos</i>, const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp;<i> windowPos</i>, const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp;<i> screenPos</i>)</h3>
+<p>Constructs an enter event object.</p>
+<p>The points <i>localPos</i>, <i>windowPos</i> and <i>screenPos</i> specify the mouse cursor's position relative to the receiving widget or item, window, and screen, respectively.</p>
+<!-- @@@QEnterEvent -->
+<!-- $$$globalPos[overload1]$$$globalPos -->
+<h3 class="fn"><a name="globalPos"></a><span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> QEnterEvent::<span class="name">globalPos</span>() const</h3>
+<!-- @@@globalPos -->
+<!-- $$$globalX[overload1]$$$globalX -->
+<h3 class="fn"><a name="globalX"></a><span class="type">int</span> QEnterEvent::<span class="name">globalX</span>() const</h3>
+<!-- @@@globalX -->
+<!-- $$$globalY[overload1]$$$globalY -->
+<h3 class="fn"><a name="globalY"></a><span class="type">int</span> QEnterEvent::<span class="name">globalY</span>() const</h3>
+<!-- @@@globalY -->
+<!-- $$$localPos[overload1]$$$localPos -->
+<h3 class="fn"><a name="localPos"></a>const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp; QEnterEvent::<span class="name">localPos</span>() const</h3>
+<!-- @@@localPos -->
+<!-- $$$pos[overload1]$$$pos -->
+<h3 class="fn"><a name="pos"></a><span class="type"><a href="../qtcore/qpoint.html">QPoint</a></span> QEnterEvent::<span class="name">pos</span>() const</h3>
+<!-- @@@pos -->
+<!-- $$$screenPos[overload1]$$$screenPos -->
+<h3 class="fn"><a name="screenPos"></a>const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp; QEnterEvent::<span class="name">screenPos</span>() const</h3>
+<!-- @@@screenPos -->
+<!-- $$$windowPos[overload1]$$$windowPos -->
+<h3 class="fn"><a name="windowPos"></a>const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp; QEnterEvent::<span class="name">windowPos</span>() const</h3>
+<!-- @@@windowPos -->
+<!-- $$$x[overload1]$$$x -->
+<h3 class="fn"><a name="x"></a><span class="type">int</span> QEnterEvent::<span class="name">x</span>() const</h3>
+<!-- @@@x -->
+<!-- $$$y[overload1]$$$y -->
+<h3 class="fn"><a name="y"></a><span class="type">int</span> QEnterEvent::<span class="name">y</span>() const</h3>
+<!-- @@@y -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

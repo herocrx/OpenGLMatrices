@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- platform-notes-rtos.qdoc -->
+  <title>QtDoc 5.0: Platform and Compiler Notes - QNX</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<p class="naviNextPrevious headerNavi">
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#supported-architectures-and-qnx-versions">Supported Architectures and QNX Versions</a></li>
+<li class="level1"><a href="#build-requirements">Build Requirements</a></li>
+<li class="level2"><a href="#screen-and-opengl">Screen and OpenGL</a></li>
+<li class="level1"><a href="#runtime-requirements">Runtime Requirements</a></li>
+<li class="level2"><a href="#ui-core-qnx-screen">UI Core (QNX Screen)</a></li>
+<li class="level2"><a href="#ipv6-support">IPv6 Support</a></li>
+<li class="level2"><a href="#dev-random">/dev/random</a></li>
+<li class="level2"><a href="#physical-screen-size">Physical Screen Size</a></li>
+<li class="level1"><a href="#development-board-setup">Development Board Setup</a></li>
+<li class="level2"><a href="#ssh">ssh</a></li>
+<li class="level2"><a href="#pdebug">pdebug</a></li>
+</ul>
+</div>
+<h1 class="title">Platform and Compiler Notes - QNX</h1>
+<span class="subtitle"></span>
+<!-- $$$platform-notes-qnx.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="qnx"></a><p><b>Note: </b>QNX is a community supported platform.</p><a name="supported-architectures-and-qnx-versions"></a>
+<h2>Supported Architectures and QNX Versions</h2>
+<p>Qt 5 is currently tested and supported on QNX 6.5&#x2e;0 SP1 supplemented by the new QNX UI Core graphics framework (Screen). Supported architectures are ARMle-v7 and x86. Other QNX versions and architectures may also work, but are not subject to regular builds and testing. For a specific list of available boards, displays and input devices, contact QNX Software Systems (info@qnx.com) or KDAB (qnx-info@kdab.com).</p>
+<a name="build-requirements"></a>
+<h2>Build Requirements</h2>
+<p>Building Qt 5 requires <a href="http://www.qnx.com/download/group.html?programid=20905">QNX SDP 6.5&#x2e;0 SP1</a> from the <a href="http://www.qnx.com/">QNX website</a> and the new QNX UI Core graphics framework (contact QNX for access).</p>
+<p>Supported compiler is qcc for both ARMle-v7 (<a href="qmake-environment-reference.html#qmakespec">QMakespec</a> qnx-armv7le-qcc) and x86 (qnx-x86-qcc).</p>
+<p>When building qtbase, recommended configure flags include:</p>
+<pre class="cpp"><span class="operator">-</span>opengl es2 <span class="operator">-</span>egl <span class="operator">-</span>no<span class="operator">-</span>cups <span class="operator">-</span>no<span class="operator">-</span>xcb <span class="operator">-</span>no<span class="operator">-</span>eglfs <span class="operator">-</span>no<span class="operator">-</span>javascript<span class="operator">-</span>jit <span class="operator">-</span>no<span class="operator">-</span>gtkstyle <span class="operator">-</span>no<span class="operator">-</span>iconv</pre>
+<a name="screen-and-opengl"></a>
+<h3>Screen and OpenGL</h3>
+<p>As noted above, building Qt 5 requires the QNX 6.5&#x2e;0 SP1 and the new UI Core graphics framework headers and libraries. Both are available through QNX. For OpenGL support (GL widgets and QML2), OpenGL ES2 or higher must be available.</p>
+<a name="runtime-requirements"></a>
+<h2>Runtime Requirements</h2>
+<p>On the QNX target device, certain requirements must be met at runtime to ensure Qt functions correctly.</p>
+<a name="ui-core-qnx-screen"></a>
+<h3>UI Core (QNX Screen)</h3>
+<p>Before starting any Qt application, QNX Screen, the UI framework driver, must be started. To ensure QNX Screen is configured correctly, verify that applications like gles2-gears can be started and run without problems.</p>
+<a name="ipv6-support"></a>
+<h3>IPv6 Support</h3>
+<p>Qt's networking stack, <a href="../qtnetwork/qtnetwork-index.html">Qt Network</a>, requires IPv6 support to be enabled, independent of whether the actual networking uses IPv4 or IPv6. That means, that io-pkt-v6-hc must be running, <i>not</i> io-pkt-v4.</p>
+<a name="dev-random"></a>
+<h3>/dev/random</h3>
+<p>Qt requires <tt>/dev/random</tt> to be present and functional. Thus, start <tt>random</tt> before starting any Qt application:</p>
+<pre class="cpp">random <span class="operator">-</span>t</pre>
+<a name="physical-screen-size"></a>
+<h3>Physical Screen Size</h3>
+<p>Qt needs information about the physical dimensions of the attached display to determine DPI information and thus correct font sizes. This information is provided by Screen. In some cases you may see an invalid screen size such as 0mmx0mm. In such a case Qt requires an environment variable <tt>QQNX_PHYSICAL_SCREEN_SIZE</tt> to get the required information. If Qt applications exits with an error message saying that the physical screen size couldn't be determined, set the variable like this before starting the Qt application:</p>
+<pre class="cpp"><span class="keyword">export</span> QQNX_PHYSICAL_SCREEN_SIZE<span class="operator">=</span><span class="number">150</span><span class="operator">,</span><span class="number">100</span></pre>
+<p>to inform Qt that the screen has a width of 150mm and a height of 100mm. (Note that the physical screen size is measured in millimeters (mm))</p>
+<a name="development-board-setup"></a>
+<h2>Development Board Setup</h2>
+<p>To develop for QNX with Qt Creator, the development board needs the following setup:</p>
+<a name="ssh"></a>
+<h3>ssh</h3>
+<p>For deploying and running a binary remotely on the development board with Qt Creator, ssh must be installed and running. ssh in turn also requires <tt>/dev/random</tt>.</p>
+<a name="pdebug"></a>
+<h3>pdebug</h3>
+<p>For remote debugging to work, pdebug must be running on the development device. See the QNX documentation included with the QNX Momentics development tool suite for more details pertaining to pdebug and other QNX development tools.</p>
+</div>
+<!-- @@@platform-notes-qnx.html -->
+<p class="naviNextPrevious footerNavi">
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

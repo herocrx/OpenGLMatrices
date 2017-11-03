@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-guide.qdoc -->
+  <title>QDoc 5.0: Configuration File Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="qdoc-categories.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="qdoc-categories.html">Categories of Documentation</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#macros-and-other-definitions">Macros and other Definitions</a></li>
+<li class="level1"><a href="#project-information">Project Information</a></li>
+<li class="level1"><a href="#html-styles">HTML Styles</a></li>
+<li class="level1"><a href="#project-file">Project File</a></li>
+</ul>
+</div>
+<h1 class="title">Configuration File Example</h1>
+<span class="subtitle"></span>
+<!-- $$$config-description -->
+<div class="descr"> <a name="details"></a>
+<p>configuration files for the QDoc Manual and QDoc Guide<p>The QDoc Manual uses these <tt>qdocconf</tt> files to generate the QDoc Guide and the QDoc Manual.</p>
+<p><b>Note: </b>The configuration files are similar to the Qt Reference Documentation and the QDoc Manual do not use all of the variables. The variables are included to demonstrate a full project scenario.</p><a name="macros-and-other-definitions"></a>
+<h2>Macros and other Definitions</h2>
+<ul>
+<li>config/compat.qdocconf</li>
+<li>config/macros.qdocconf</li>
+<li>config/qt-cpp-ignore.qdocconf</li>
+<li>config/qt-defines.qdocconf</li>
+</ul>
+<p>QDoc allows macros to help with aliasing and for inputting special HTML characters within the documentation. Macros are a form of workarounds if QDoc is unable to resolve formatting issues such as when QDoc should disregard QDoc comments in documentation paragraphs.</p>
+<p>QDoc is also aware of the common C++ and Qt preprocessors and can decide which documentation to generate according to the definitions in the configuration files.</p>
+<a name="project-information"></a>
+<h2>Project Information</h2>
+<ul>
+<li>config/qdoc-online.qdocconf</li>
+<li>config/qdoc.qdocconf</li>
+<li>config/qdoc-project.qdocconf</li>
+</ul>
+<p>These configuration files dictate how QDoc will generate the project. Depending which configuration file QDoc processes, the formatting and the information about the project will be different. If QDoc processes <tt>qdoc-online.qdocconf</tt>, QDoc will generate the HTML version of the manual will have the style suitable for online viewing.</p>
+<p>Additionally, the settings for creating the <a href="../qthelp/qthelp-framework.html">Qt Help File</a> is in the configuration.</p>
+<p><b>Note: </b>The project file uses variables used during Qt's configuration step.</p><a name="html-styles"></a>
+<h2>HTML Styles</h2>
+<ul>
+<li>config/qt-html-default-styles.qdocconf</li>
+<li>config/qt-html-online-styles.qdocconf</li>
+<li>config/qt-html-templates-online.qdocconf</li>
+<li>config/qt-html-templates.qdocconf</li>
+</ul>
+<p>These files indicate which styles QDoc should use for the HTML formats. Typically, there are two templates, one for online viewing and one for offline. Qt Creator is able to fit more content in a page with the offline template. The templates store HTML information as strings and QDoc will copy the template to each HTML page.</p>
+<a name="project-file"></a>
+<h2>Project File</h2>
+<ul>
+<li>config/config.pro</li>
+</ul>
+<p>Every example page (such as this one) needs a Qt project file. QDoc will use the project file to determine which files are part of the example. QDoc will then create a page listing all the files that are part of the example.</p>
+<p><b>Note: </b>the directory name of the example and the name of the project file must match. The example directory is found using the <a href="qdoc-guide-conf.html#qdoc-input-output-dir">exampledirs</a> variable.</p></div>
+<!-- @@@config -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qdoc-categories.html">Categories of Documentation</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

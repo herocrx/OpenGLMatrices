@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- changes.qdoc -->
+  <title>qtmultimedia 5.0: Changes in Qt Multimedia</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#new-features-in-qt-5-0">New features in Qt 5.0</a></li>
+<li class="level1"><a href="#removed-features">Removed features</a></li>
+<li class="level1"><a href="#changed-features">Changed features</a></li>
+</ul>
+</div>
+<h1 class="title">Changes in Qt Multimedia</h1>
+<span class="subtitle"></span>
+<!-- $$$changes.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The Qt Multimedia module in Qt 5 combines (and replaces) two older modules, namely the Qt Multimedia module from Qt 4.x, and Qt Multimedia Kit module from Qt Mobility. Existing code that uses Qt Multimedia from Qt 4 can be ported with minimal effort, but porting code that uses Qt Multimedia Kit may be a more involved process. The <a href="#changed-features">changed features</a> section highlights changes relevant to porting.</p>
+<p>Also, note that widget-based classes, such as <a href="qvideowidget.html">QVideoWidget</a>, are now in a separate module called Qt Multimedia Widgets.</p>
+<a name="new-features-in-qt-5-0"></a>
+<h2>New features in Qt 5.0</h2>
+<p>There are a number of new features in Qt Multimedia:</p>
+<ul>
+<li>Expanded QML API</li>
+<li>In addition to the <a href="qml-qtmultimedia5-video.html">Video</a> QML type, there is now the option of using <a href="qml-qtmultimedia5-mediaplayer.html">MediaPlayer</a> and <a href="qml-qtmultimedia5-videooutput.html">VideoOutput</a> together</li>
+<li>QML <a href="qml-qtmultimedia5-torch.html">Torch</a> class</li>
+<li>New <a href="qaudiorecorder.html">QAudioRecorder</a> class</li>
+<li>Volume support for <a href="qaudiooutput.html">QAudioOutput</a> and <a href="qaudioinput.html">QAudioInput</a></li>
+<li>More examples and documentation</li>
+<li><a href="qsound.html">QSound</a> moved from Qt GUI to Qt Multimedia</li>
+<li><a href="qsoundeffect.html">QSoundEffect</a> available to C++ now, as well as QML</li>
+<li>FM Radio Data System classes and types now available (<a href="qradiodata.html">QRadioData</a>, <a href="qml-qtmultimedia5-radiodata.html">RadioData</a>)</li>
+<li>Various other API improvements and bugfixes</li>
+</ul>
+<a name="removed-features"></a>
+<h2>Removed features</h2>
+<p>A number of classes or features previously offered in Qt Multimedia or Qt Multimedia Kit have been removed.</p>
+<table class="generic" width="70%">
+ <thead><tr class="qt-style"><th >Removed feature</th><th >Notes</th></tr></thead>
+<tr valign="top" class="odd"><td >QMediaImageViewer</td><td >This class (and related controls and services) were removed since their functionality was not suitable for many applications</td></tr>
+</table>
+<a name="changed-features"></a>
+<h2>Changed features</h2>
+<p>A number of classes previously offered in Qt Multimedia or Qt Multimedia Kit have changed in ways that may affect previously written code. This table highlights such changes.</p>
+<table class="generic" width="70%">
+ <thead><tr class="qt-style"><th >Changed feature</th><th >Notes</th></tr></thead>
+<tr valign="top" class="odd"><td ><tt>qmake</tt> project file changes</td><td >Previously, to use Qt Multimedia Kit, the <tt>qmake</tt> project file must contain<pre class="cpp">CONFIG <span class="operator">+</span><span class="operator">=</span> mobility
+MOBILITY <span class="operator">+</span><span class="operator">=</span> multimedia</pre>
+<p>Now, you only need to write</p>
+<pre class="cpp">QT <span class="operator">+</span><span class="operator">=</span> multimedia</pre>
+<p>Or, if you want to use the widget classes,</p>
+<pre class="cpp">QT <span class="operator">+</span><span class="operator">=</span> multimedia multimediawidgets</pre>
+</td></tr>
+<tr valign="top" class="even"><td >Namespaces</td><td >The <tt>QtMultimediaKit</tt> namespace has been renamed to <a href="qmultimedia.html">QMultimedia</a>. This affects a few enumerations, namely <tt>SupportEstimate</tt>, <tt>EncodingQuality</tt>, <tt>EncodingMode</tt> and <tt>AvailabilityStatus</tt>. Searching and replacing <tt>QtMultimediaKit</tt> with <tt>QMultimedia</tt> will greatly aid porting efforts. Metadata have been split off into their own namespace, <a href="qmediametadata.html">QMediaMetaData</a>.</td></tr>
+<tr valign="top" class="odd"><td >Metadata types</td><td >In Qt Multimedia Kit, pre-defined metadata keys were enumerations in the <tt>QtMultimediaKit</tt> namespace. These pre-defined keys have been changed to string literals in the <tt>QMediaMetaData</tt> namespace, for consistency with extended keys.</td></tr>
+<tr valign="top" class="even"><td >Metadata accessor methods</td><td >In Qt Multimedia Kit, there were two different families of methods to access metadata. Functions such as <tt>QMediaObject::metaData()</tt> operated on pre-defined metadata using enumerated keys, while functions such as <tt>QMediaObject::extendedMetaData()</tt> operated on extended metadata using string keys. Qt 5 combines both families into one (e.g&#x2e; <a href="qmediaobject.html#metaData">QMediaObject::metaData</a>()), which can operate on both pre-defined and extended metadata, using string keys.</td></tr>
+<tr valign="top" class="odd"><td >Qt Metatype registration</td><td >Qt 5 registers many more classes and types with the meta-object system than before. If you have previously applied Q_DECLARE_METATYPE macros to any Qt Multimedia class, you will probably need to remove them.</td></tr>
+<tr valign="top" class="even"><td ><a href="qsoundeffect.html">QSoundEffect</a> availability</td><td >The <a href="qml-qtmultimedia5-soundeffect.html">SoundEffect</a> QML type was publically accessible in Qt Multimeda Kit, and now the C++ version is officially public too. If your code contains the previously undocumented <a href="qsoundeffect.html">QSoundEffect</a>, you may need to update it.</td></tr>
+<tr valign="top" class="odd"><td >Camera controls</td><td >A large number of the camera controls (<a href="qcameraimageprocessingcontrol.html">QCameraImageProcessingControl</a>, <a href="qcamerafocuscontrol.html">QCameraFocusControl</a>, etc.) have been updated to address a number of design flaws. In particular, a number of discrete accessor methods have been collapsed into parametrized methods, and the ranges or data types of some parameters have been adjusted.</td></tr>
+</table>
+</div>
+<!-- @@@changes.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

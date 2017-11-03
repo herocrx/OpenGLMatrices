@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-manual.qdoc -->
+  <title>QDoc 5.0: Creating Links</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="07-0-qdoc-commands-includingexternalcode.html" />
+  <link rel="next" href="09-qdoc-commands-includingimages.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="07-0-qdoc-commands-includingexternalcode.html">Including External Code</a>
+<a class="nextPage" href="09-qdoc-commands-includingimages.html">Including Images</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#l-link">\l (link)</a></li>
+<li class="level1"><a href="#sa-see-also">\sa (see also)</a></li>
+<li class="level1"><a href="#target">\target</a></li>
+<li class="level1"><a href="#keyword">\keyword</a></li>
+</ul>
+</div>
+<h1 class="title">Creating Links</h1>
+<span class="subtitle"></span>
+<!-- $$$08-qdoc-commands-creatinglinks.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>These commands are for creating hyperlinks to classes, functions, examples, and other targets.</p>
+<a name="l-command"></a><a name="l-link"></a>
+<h2>\l (link)</h2>
+<p>The \l link command is used to create a hyperlink to many different kinds of targets. The command's general syntax is:</p>
+<pre class="cpp">\l {link target} {link text}</pre>
+<pre class="cpp"> <span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    Read the \l {http:<span class="comment">//qt-project.org/doc/qt-5.0/}</span>
+    {<span class="type"><a href="../qtcore/qt.html">Qt</a></span> <span class="number">5.0</span> Documentation} carefully<span class="operator">.</span>
+ <span class="operator">*</span> <span class="operator">/</span></pre>
+<p>QDoc renders this as:</p>
+<blockquote><p>Read the <a href="http://qt-project.org/doc/qt-5.0/">Qt 5.0 Documentation</a> carefully.</p>
+</blockquote>
+<p>If the link target is equivalent to the link text, the second argument can be omitted.</p>
+<p>For example, if you have documentation like:</p>
+<pre class="cpp"><span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+   \target assertions
+
+   Assertions make some statement about the text at the
+   point where they occur in the regexp but they <span class="keyword">do</span> <span class="keyword">not</span>
+   match any characters<span class="operator">.</span>
+
+   <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+
+   Regexps are built up from expressions<span class="operator">,</span> quantifiers<span class="operator">,</span> <span class="keyword">and</span>
+   \l {assertions} {assertions}<span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span></pre>
+<p>You can simplify this as follows:</p>
+<pre class="cpp"><span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+  \target assertions
+
+  Assertions make some statement about the text at the
+  point where they occur in the regexp but they <span class="keyword">do</span> <span class="keyword">not</span>
+  match any characters<span class="operator">.</span>
+
+  <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+
+  Regexps are built up from expressions<span class="operator">,</span> quantifiers<span class="operator">,</span> <span class="keyword">and</span>
+  \l assertions<span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span></pre>
+<p>For the one-parameter version the braces can often be omitted. The \l command supports several kinds of links:</p>
+<ul>
+<li><tt>\l QWidget</tt> - The name of a class documented with the <a href="13-qdoc-commands-topics.html#class-command">\class</a> command.</li>
+<li><tt>\l QWidget::sizeHint()</tt> - The name of a member function, documented with or without an <a href="13-qdoc-commands-topics.html#fn-command">\fn</a> command.</li>
+<li><tt>\l &lt;QtGlobal&gt;</tt> - The subject of a <a href="13-qdoc-commands-topics.html#headerfile-command">\headerfile</a> command.</li>
+<li><tt>\l widgets/wiggly</tt> - The relative path used in an <a href="13-qdoc-commands-topics.html#example-command">\example</a> command.</li>
+<li><tt>\l {QWidget Class Reference}</tt> - The title used in a <a href="20-qdoc-commands-namingthings.html#title-command">\title</a> command.</li>
+<li><tt>\l {Introduction to QDoc}</tt>- The text from one of the <a href="05-qdoc-commands-documentstructure.html#part-command">\part</a>, <a href="05-qdoc-commands-documentstructure.html#chapter">\chapter</a> or <a href="05-qdoc-commands-documentstructure.html#sectionone-command">\section</a> commands.</li>
+<li><tt>\l fontmatching</tt> - The argument of a <a href="#target-command">\target</a> command.</li>
+<li><tt>\l {Shared Classes}</tt> - A keyword named in a <a href="#keyword-command">\keyword</a> command.</li>
+<li><tt>\l network.html</tt> - The file name used in a <a href="13-qdoc-commands-topics.html#page-command">\page</a> command.</li>
+<li><tt>\l http://qt-project.org/</tt> - A URL.</li>
+</ul>
+<p>QDoc also tries to make a link out of any words that don't resemble any normal English words, for example Qt class names or functions, like <a href="../qtwidgets/qwidget.html">QWidget</a> or <a href="../qtwidgets/qwidget.html#sizeHint-prop">QWidget::sizeHint</a>(). In these cases, the \l command can actually be omitted, but by using the command, you ensure that QDoc will emit a warning if it cannot find the link target. In addition, if you only want the function name to appear in the link, you can use the following syntax:</p>
+<ul>
+<li><tt>\l {QWidget::} {sizeHint()}</tt></li>
+</ul>
+<p>QDoc renders this as:</p>
+<blockquote><p><a href="../qtwidgets/qwidget.html#sizeHint-prop">sizeHint()</a></p>
+</blockquote>
+<p>See also <a href="#sa-command">\sa</a>, <a href="#target-command">\target</a> and <a href="#keyword-command">\keyword</a>.</p>
+<a name="sa-command"></a><a name="sa-see-also"></a>
+<h2>\sa (see also)</h2>
+<p>The \sa command defines a list of links that will be rendered in a separate &quot;See also&quot; section at the bottom of the documentation unit.</p>
+<p>The command takes a comma-separated list of links as its argument. If the line ends with a comma, you can continue the list on the next line. The general syntax is:</p>
+<pre class="cpp">\sa {the first link}<span class="operator">,</span> {the second link}<span class="operator">,</span>
+    {the third link}<span class="operator">,</span> <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span></pre>
+<p>QDoc will automatically try to generate &quot;See also&quot; links interconnecting a property's various functions. For example, a setVisible() function will automatically get a link to visible() and vice versa.</p>
+<p>In general, QDoc will generate &quot;See also&quot; links that interconnect the functions that access the same property. It recognizes four different syntax versions:</p>
+<ul>
+<li><tt>property()</tt></li>
+<li><tt>setProperty()</tt></li>
+<li><tt>isProperty()</tt></li>
+<li><tt>hasProperty()</tt></li>
+</ul>
+<p>The \sa command supports the same kind of links as the <a href="#l-command">\l</a> command.</p>
+<pre class="cpp">  <span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+     Appends the actions \a actions to <span class="keyword">this</span> widget<span class="char">'s
+     list of actions.
+
+     \sa removeAction(), QMenu, addAction()
+  * /
+  void QWidget::addActions(QList&lt;QAction *&gt; actions)
+  {
+  ...
+  }
+</span></pre>
+<p>QDoc renders this as:</p>
+<blockquote><p><b>void QWidget::addActions ( <a href="../qtcore/qlist.html">QList</a>&lt;<a href="../qtwidgets/qaction.html">QAction</a>*&gt; <i>actions</i> )</b></p>
+<p>Appends the actions <i>actions</i> to this widget's list of actions.</p>
+<p>See also <a href="../qtwidgets/qwidget.html#removeAction">removeAction()</a>, <a href="../qtwidgets/qmenu.html">QMenu</a>, and <a href="../qtwidgets/qwidget.html#addAction">addAction()</a>.</p>
+</blockquote>
+<p>See also <a href="#l-command">\l</a>, <a href="#target-command">\target</a> and <a href="#keyword-command">\keyword</a>.</p>
+<a name="target-command"></a><a name="target"></a>
+<h2>\target</h2>
+<p>The \target command names a place in the documentation that you can link to using the <a href="#l-command">\l (link)</a> and <a href="#sa-command">\sa (see also)</a> commands.</p>
+<p>The text up to the line break becomes the target name. Be sure to follow the target name with a line break. Curly brackets are not required around the target name, but they may be required when the target name is used in a link command. See below.</p>
+<pre class="cpp"><span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    \target capturing parentheses
+    \section1 Capturing Text
+
+    Parentheses allow us to group elements together so that
+    we can quantify <span class="keyword">and</span> capture them<span class="operator">.</span>
+
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span></pre>
+<p>The target name <i>capturing parentheses</i> can be linked from within the same document containing the target in two ways:</p>
+<ul>
+<li><tt>\l {capturing parentheses}</tt> (from within the same qdoc comment)</li>
+<li><tt>\l qregexp.html#capturing-parentheses</tt> (from elsewhere in the same document)</li>
+</ul>
+<p><b>Note: </b>The brackets in the link example are required because the target name contains spaces.</p><p>From other documents, the target name can be linked this way:</p>
+<ul>
+<li><tt>\l http://qt-project.org/doc/qt-5.0/qtcore/qregexp.html#capturing-parentheses</tt></li>
+</ul>
+<p>See also <a href="#l-command">\l</a>, <a href="#sa-command">\sa</a> and <a href="#keyword-command">\keyword</a>.</p>
+<a name="keyword-command"></a><a name="keyword"></a>
+<h2>\keyword</h2>
+<p>The \keyword command names a place in the documentation that you can link to using the <a href="#l-command">\l (link)</a> and <a href="#sa-command">\sa (see also)</a> commands.</p>
+<p>The \keyword command is like the <a href="#target-command">\target</a> command, but stronger. A keyword can be linked from anywhere using a simple syntax.</p>
+<p>Keywords must be unique over all the documents processed during the QDoc run. The command uses the rest of the line as its argument. Be sure to follow the keyword with a line break.</p>
+<pre class="cpp"><span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    \<span class="keyword">class</span> <span class="type"><a href="../qtcore/qregexp.html">QRegExp</a></span>
+    \reentrant
+    \brief The <span class="type"><a href="../qtcore/qregexp.html">QRegExp</a></span> <span class="keyword">class</span> provides pattern
+           matching <span class="keyword">using</span> regular expressions<span class="operator">.</span>
+    \ingroup tools
+    \ingroup misc
+    \ingroup shared
+    \mainclass
+
+    \keyword regular expression
+
+    Regular expressions<span class="operator">,</span> <span class="keyword">or</span> <span class="string">&quot;regexps&quot;</span><span class="operator">,</span> provide a way to
+    find patterns within text<span class="operator">.</span>
+
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span></pre>
+<p>The location marked with the keyword can be linked with:</p>
+<pre class="cpp"><span class="operator">/</span> <span class="operator">*</span><span class="operator">!</span>
+    When a string is surrounded by slashes<span class="operator">,</span> it is
+    interpreted as a \l {regular expression}<span class="operator">.</span>
+<span class="operator">*</span> <span class="operator">/</span></pre>
+<p>QDoc renders this as:</p>
+<blockquote><p>When a string is surrounded by slashes, it's interpreted as a regular expression.</p>
+</blockquote>
+<p>If the keyword text contains spaces, the brackets are required.</p>
+<p>See also <a href="#l-command">\l (link)</a>, <a href="#sa-command">\sa (see also)</a> and <a href="#target-command">\target</a>.</p>
+</div>
+<!-- @@@08-qdoc-commands-creatinglinks.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="07-0-qdoc-commands-includingexternalcode.html">Including External Code</a>
+<a class="nextPage" href="09-qdoc-commands-includingimages.html">Including Images</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

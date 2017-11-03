@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- threading.qdoc -->
+  <title>QtQuick 5.0: QtQuick Examples - Threading</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">QtQuick Examples - Threading</h1>
+<span class="subtitle"></span>
+<!-- $$$threading-description -->
+<div class="descr"> <a name="details"></a>
+<p>This is a collection of QML Multithreading examples.<p class="centerAlign"><img src="images/qml-threading-example.png" alt="" /></p><p>Threaded ListModel contains a <a href="qml-qtquick2-listview.html">ListView</a> and a ListModel. The ListModel is updated asynchronusly in another thread, and the results propagate back to the main thread. A timer requests updates from the worker thread periodically:</p>
+<pre class="qml"></pre>
+<p>Inside the worker thread, the ListModel is synchronized once the data is finished loading:</p>
+<pre class="js"></pre>
+<p><a href="../qtqml/qml-qtquick2-workerscript.html">WorkerScript</a> contains an example of using a <a href="../qtqml/qml-qtquick2-workerscript.html">WorkerScript</a> to offload expensive calculations into another thread. This keeps the UI from being blocked. This example calculates numbers in Pascal's Triangle, and not in a very optimal way, so it will often take several seconds to complete the calculation. By doing this in a <a href="../qtqml/qml-qtquick2-workerscript.html">WorkerScript</a> in another thread, the UI is not blocked during this time.</p>
+<p>When the UI needs another value, a request is sent to the <a href="../qtqml/qml-qtquick2-workerscript.html">WorkerScript</a>:</p>
+<pre class="qml"></pre>
+<p>The workerscript then is free to take a really long time to calculate it:</p>
+<pre class="js"></pre>
+<p>When it's done, the result returns to the main scene via the <a href="../qtqml/qml-qtquick2-workerscript.html">WorkerScript</a> element:</p>
+<pre class="qml"></pre>
+<p>Files:</p>
+<ul>
+<li><a href="threading-threading-qml.html">threading/threading.qml</a></li>
+<li><a href="threading-threadedlistmodel-dataloader-js.html">threading/threadedlistmodel/dataloader.js</a></li>
+<li><a href="threading-threadedlistmodel-timedisplay-qml.html">threading/threadedlistmodel/timedisplay.qml</a></li>
+<li><a href="threading-workerscript-spinner-qml.html">threading/workerscript/Spinner.qml</a></li>
+<li><a href="threading-workerscript-workerscript-js.html">threading/workerscript/workerscript.js</a></li>
+<li><a href="threading-workerscript-workerscript-qml.html">threading/workerscript/workerscript.qml</a></li>
+<li><a href="threading-main-cpp.html">threading/main.cpp</a></li>
+<li><a href="threading-threading-pro.html">threading/threading.pro</a></li>
+<li><a href="threading-threading-qmlproject.html">threading/threading.qmlproject</a></li>
+<li><a href="threading-threading-qrc.html">threading/threading.qrc</a></li>
+<li><a href="threading-threadedlistmodel-threadedlistmodel-qmlproject.html">threading/threadedlistmodel/threadedlistmodel.qmlproject</a></li>
+<li><a href="threading-workerscript-workerscript-qmlproject.html">threading/workerscript/workerscript.qmlproject</a></li>
+</ul>
+</div>
+<!-- @@@threading -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

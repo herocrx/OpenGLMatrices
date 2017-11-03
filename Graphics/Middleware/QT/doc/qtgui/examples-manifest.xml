@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtGui">
+    <examples>
+        <example name="Analog Clock Window Example" docUrl="qthelp://org.qt-project.qtgui.502/qtgui/analogclock.html" projectPath="gui/analogclock/analogclock.pro" imageUrl="qthelp://org.qt-project.qtgui.502/qtgui/images/analogclock-window-example.png">
+            <description><![CDATA[The Analog Clock Window example shows how to draw the contents of a custom window.]]></description>
+            <tags>window,analog,clock</tags>
+            <fileToOpen>gui/analogclock/main.cpp</fileToOpen>
+        </example>
+        <example name="OpenGL Window Example" docUrl="qthelp://org.qt-project.qtgui.502/qtgui/openglwindow.html" projectPath="gui/openglwindow/openglwindow.pro" imageUrl="qthelp://org.qt-project.qtgui.502/qtgui/images/openglwindow-example.png">
+            <description><![CDATA[This example shows how to create a minimal QWindow based application for the purpose of using OpenGL.]]></description>
+            <tags>window,opengl</tags>
+            <fileToOpen>gui/openglwindow/openglwindow.cpp</fileToOpen>
+            <fileToOpen>gui/openglwindow/openglwindow.h</fileToOpen>
+            <fileToOpen>gui/openglwindow/main.cpp</fileToOpen>
+        </example>
+        <example name="Raster Window Example" docUrl="qthelp://org.qt-project.qtgui.502/qtgui/rasterwindow.html" projectPath="gui/rasterwindow/rasterwindow.pro">
+            <description><![CDATA[This example shows how to create a minimal QWindow based application using QPainter for rendering.]]></description>
+            <tags>window,raster</tags>
+            <fileToOpen>gui/rasterwindow/rasterwindow.cpp</fileToOpen>
+            <fileToOpen>gui/rasterwindow/rasterwindow.h</fileToOpen>
+            <fileToOpen>gui/rasterwindow/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

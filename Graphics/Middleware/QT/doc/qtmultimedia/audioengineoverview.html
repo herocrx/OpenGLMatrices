@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- audioengineoverview.qdoc -->
+  <title>qtmultimedia 5.0: Positional Audio</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#qtaudioengine-features">QtAudioEngine Features</a></li>
+<li class="level1"><a href="#examples">Examples</a></li>
+<li class="level1"><a href="#reference-documentation">Reference Documentation</a></li>
+<li class="level2"><a href="#qml-types">QML Types</a></li>
+</ul>
+</div>
+<h1 class="title">Positional Audio</h1>
+<span class="subtitle"></span>
+<!-- $$$audioengineoverview.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="qtaudioengine-features"></a>
+<h2>QtAudioEngine Features</h2>
+<p>Qt Multimedia includes the <tt>QtAudioEngine</tt> QML module for providing 3D positional audio playback and content management.</p>
+<p>QtAudioEngine enables developers to organize wave files into discrete <a href="qml-qtaudioengine1-sound.html">Sound</a> with different <a href="qml-qtaudioengine1-playvariation.html">play variations</a>, group sound controls by <a href="qml-qtaudioengine1-audiocategory.html">AudioCategory</a> categories and define <a href="qml-qtaudioengine1-attenuationmodellinear.html">attenuation models</a> and various 3d audio settings all in one place. Playback of <a href="qml-qtaudioengine1-soundinstance.html">sound instances</a> can be conveniently activated by in-app events and managed by QtAudioEngine or controlled by explicitly defining <a href="qml-qtaudioengine1-soundinstance.html">SoundInstance</a> for easier QML bindings.</p>
+<p>To access these QML types import the <b>QtAudioEngine 1.0</b> module.</p>
+<pre class="qml">import QtQuick 2.0
+import QtAudioEngine 1.0
+
+<span class="type"><a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a></span> {
+<span class="comment">//...</span>
+}</pre>
+<a name="examples"></a>
+<h2>Examples</h2>
+<ul>
+<li><a href="multimedia-audioengine.html">Audio Engine</a></li>
+</ul>
+<a name="reference-documentation"></a>
+<h2>Reference Documentation</h2>
+<a name="qml-types"></a>
+<h3>QML Types</h3>
+<ul>
+<li><a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a></li>
+<li><a href="qml-qtaudioengine1-audiosample.html">AudioSample</a></li>
+<li><a href="qml-qtaudioengine1-audiocategory.html">AudioCategory</a></li>
+<li><a href="qml-qtaudioengine1-attenuationmodellinear.html">AttenuationModelLinear</a></li>
+<li><a href="qml-qtaudioengine1-attenuationmodelinverse.html">AttenuationModelInverse</a></li>
+<li><a href="qml-qtaudioengine1-sound.html">Sound</a></li>
+<li><a href="qml-qtaudioengine1-playvariation.html">PlayVariation</a></li>
+<li><a href="qml-qtaudioengine1-audiolistener.html">AudioListener</a></li>
+<li><a href="qml-qtaudioengine1-soundinstance.html">SoundInstance</a></li>
+</ul>
+</div>
+<!-- @@@audioengineoverview.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

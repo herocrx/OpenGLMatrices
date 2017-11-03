@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtConcurrent">
+    <examples>
+        <example name="Image Scaling Example" docUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/imagescaling.html" projectPath="qtconcurrent/imagescaling/imagescaling.pro" imageUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/images/imagescaling_example.png">
+            <description><![CDATA[Demonstrates how to asynchronously scale images.]]></description>
+            <tags>scaling,image</tags>
+            <fileToOpen>qtconcurrent/imagescaling/imagescaling.cpp</fileToOpen>
+            <fileToOpen>qtconcurrent/imagescaling/imagescaling.h</fileToOpen>
+            <fileToOpen>qtconcurrent/imagescaling/main.cpp</fileToOpen>
+        </example>
+        <example name="Map Example" docUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/map.html" projectPath="qtconcurrent/map/map.pro">
+            <description><![CDATA[Demonstrates how to scale images synchronously.]]></description>
+            <tags>map</tags>
+            <fileToOpen>qtconcurrent/map/main.cpp</fileToOpen>
+        </example>
+        <example name="QtConcurrent Progress Dialog Example" docUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/progressdialog.html" projectPath="qtconcurrent/progressdialog/progressdialog.pro" imageUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/images/qtconcurrent-progressdialog.png">
+            <description><![CDATA[Demonstrates how to monitor the progress of the active processes.]]></description>
+            <tags>dialog,progress,qtconcurrent</tags>
+            <fileToOpen>qtconcurrent/progressdialog/main.cpp</fileToOpen>
+        </example>
+        <example name="QtConcurrent Word Count Example" docUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/wordcount.html" projectPath="qtconcurrent/wordcount/wordcount.pro">
+            <description><![CDATA[Demonstrates how to use the map-reduce algorithm]]></description>
+            <tags>word,count,qtconcurrent</tags>
+            <fileToOpen>qtconcurrent/wordcount/main.cpp</fileToOpen>
+        </example>
+        <example name="Run Function Example" docUrl="qthelp://org.qt-project.qtconcurrent.502/qtconcurrent/runfunction.html" projectPath="qtconcurrent/runfunction/runfunction.pro">
+            <description><![CDATA[Demonstrates how to run standard functions concurrently.]]></description>
+            <tags>run,function</tags>
+            <fileToOpen>qtconcurrent/runfunction/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- plugin.cpp -->
+  <title>QtQuick 5.0: Qt Quick Local Storage QML Types</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#detailed-description">Detailed Description</a></li>
+<li class="level3"><a href="#open-or-create-a-databasedata">Open or create a databaseData</a></li>
+<li class="level3"><a href="#db-changeversion-from-to-callback-tx">db.changeVersion(from, to, callback(tx))</a></li>
+<li class="level3"><a href="#db-transaction-callback-tx">db.transaction(callback(tx))</a></li>
+<li class="level3"><a href="#db-readtransaction-callback-tx">db.readTransaction(callback(tx))</a></li>
+<li class="level3"><a href="#results-tx-executesql-statement-values">results = tx.executeSql(statement, values)</a></li>
+<li class="level1"><a href="#method-documentation">Method Documentation</a></li>
+</ul>
+</div>
+<h1 class="title">Qt Quick Local Storage QML Types</h1>
+<span class="subtitle"></span>
+<!-- $$$QtQuick.LocalStorage 2-description -->
+<div class="descr"> <a name="details"></a>
+<p>This is a singleton type for reading and writing to SQLite databases.</p>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li>object <b><a href="#opendatabasesync">openDatabaseSync</a></b>(string name, string version, string description, int estimated_size, jsobject callback(db))</li>
+</ul>
+<a name="detailed-description"></a>
+<h2>Detailed Description</h2>
+<p>To use the types in this module, import the module and call the relevant functions using the <tt>LocalStorage</tt> type:</p>
+<pre class="cpp">import <span class="type"><a href="qtquick-module.html">QtQuick</a></span><span class="operator">.</span>LocalStorage <span class="number">2.0</span>
+import <span class="type"><a href="qtquick-module.html">QtQuick</a></span> <span class="number">2.0</span>
+
+Item {
+    Component<span class="operator">.</span>onCompleted: {
+        var db <span class="operator">=</span> LocalStorage<span class="operator">.</span>openDatabaseSync(<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>)
+    }
+}</pre>
+<p>These databases are user-specific and QML-specific, but accessible to all QML applications. They are stored in the <tt>Databases</tt> subdirectory of <a href="../qtqml/qqmlengine.html#offlineStoragePath-prop">QQmlEngine::offlineStoragePath</a>(), currently as SQLite databases.</p>
+<p>Database connections are automatically closed during Javascript garbage collection.</p>
+<p>The API can be used from JavaScript functions in your QML:</p>
+<pre class="qml"></pre>
+<p>The API conforms to the Synchronous API of the HTML5 Web Database API, <a href="http://www.w3.org/TR/2009/WD-webdatabase-20091029/">W3C Working Draft 29 October 2009</a>.</p>
+<p>The SQL Local Storage example demonstrates the basics of using the Offline Storage API.</p>
+<a name="open-or-create-a-databasedata"></a>
+<h4>Open or create a databaseData</h4>
+<pre class="cpp">import <span class="type"><a href="qtquick-module.html">QtQuick</a></span><span class="operator">.</span>LocalStorage <span class="number">2.0</span> as LS
+
+db <span class="operator">=</span> Sql<span class="operator">.</span>openDatabaseSync(identifier<span class="operator">,</span> version<span class="operator">,</span> description<span class="operator">,</span> estimated_size<span class="operator">,</span> callback(db))</pre>
+<p>The above code returns the database identified by <i>identifier</i>. If the database does not already exist, it is created, and the function <i>callback</i> is called with the database as a parameter. <i>description</i> and <i>estimated_size</i> are written to the INI file (described below), but are otherwise currently unused.</p>
+<p>May throw exception with code property SQLException.DATABASE_ERR, or SQLException.VERSION_ERR.</p>
+<p>When a database is first created, an INI file is also created specifying its characteristics:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th ><b>Key</b></th><th ><b>Value</b></th></tr></thead>
+<tr valign="top" class="odd"><td >Name</td><td >The name of the database passed to <tt>openDatabase()</tt></td></tr>
+<tr valign="top" class="even"><td >Version</td><td >The version of the database passed to <tt>openDatabase()</tt></td></tr>
+<tr valign="top" class="odd"><td >Description</td><td >The description of the database passed to <tt>openDatabase()</tt></td></tr>
+<tr valign="top" class="even"><td >EstimatedSize</td><td >The estimated size (in bytes) of the database passed to <tt>openDatabase()</tt></td></tr>
+<tr valign="top" class="odd"><td >Driver</td><td >Currently &quot;QSQLITE&quot;</td></tr>
+</table>
+<p>This data can be used by application tools.</p>
+<a name="db-changeversion-from-to-callback-tx"></a>
+<h4>db.changeVersion(from, to, callback(tx))</h4>
+<p>This method allows you to perform a <i>Scheme Upgrade</i>.</p>
+<p>If the current version of <i>db</i> is not <i>from</i>, then an exception is thrown.</p>
+<p>Otherwise, a database transaction is created and passed to <i>callback</i>. In this function, you can call <i>executeSql</i> on <i>tx</i> to upgrade the database.</p>
+<p>May throw exception with code property SQLException.DATABASE_ERR or SQLException.UNKNOWN_ERR.</p>
+<a name="db-transaction-callback-tx"></a>
+<h4>db.transaction(callback(tx))</h4>
+<p>This method creates a read/write transaction and passed to <i>callback</i>. In this function, you can call <i>executeSql</i> on <i>tx</i> to read and modify the database.</p>
+<p>If the callback throws exceptions, the transaction is rolled back.</p>
+<a name="db-readtransaction-callback-tx"></a>
+<h4>db.readTransaction(callback(tx))</h4>
+<p>This method creates a read-only transaction and passed to <i>callback</i>. In this function, you can call <i>executeSql</i> on <i>tx</i> to read the database (with SELECT statements).</p>
+<a name="results-tx-executesql-statement-values"></a>
+<h4>results = tx.executeSql(statement, values)</h4>
+<p>This method executes a SQL <i>statement</i>, binding the list of <i>values</i> to SQL positional parameters (&quot;?&quot;).</p>
+<p>It returns a results object, with the following properties:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th ><b>Type</b></th><th ><b>Property</b></th><th ><b>Value</b></th><th ><b>Applicability</b></th></tr></thead>
+<tr valign="top" class="odd"><td >int</td><td >rows.length</td><td >The number of rows in the result</td><td >SELECT</td></tr>
+<tr valign="top" class="even"><td >var</td><td >rows.item(i)</td><td >Function that returns row <i>i</i> of the result</td><td >SELECT</td></tr>
+<tr valign="top" class="odd"><td >int</td><td >rowsAffected</td><td >The number of rows affected by a modification</td><td >UPDATE, DELETE</td></tr>
+<tr valign="top" class="even"><td >string</td><td >insertId</td><td >The id of the row inserted</td><td >INSERT</td></tr>
+</table>
+<p>May throw exception with code property SQLException.DATABASE_ERR, SQLException.SYNTAX_ERR, or SQLException.UNKNOWN_ERR.</p>
+<a name="method-documentation"></a>
+<h2>Method Documentation</h2>
+<a name="opendatabasesync"></a><pre class="cpp">object openDatabaseSync(string name<span class="operator">,</span> string version<span class="operator">,</span> string description<span class="operator">,</span> <span class="type">int</span> estimated_size<span class="operator">,</span> jsobject callback(db))</pre>
+<p>Opens or creates a local storage sql database by the given parameters.</p>
+<ul>
+<li><tt>name</tt> is the database name</li>
+<li><tt>version</tt> is the database version</li>
+<li><tt>description</tt> is the database display name</li>
+<li><tt>estimated_size</tt> is the database's estimated size, in bytes</li>
+<li><tt>callback</tt> is an optional parameter, which is invoked if the database has not yet been created.</li>
+</ul>
+<p>Returns the created database object.</p>
+</div>
+<!-- @@@QtQuick.LocalStorage 2 -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qjsonparser.cpp -->
+  <title>QtCore 5.0: QJsonParseError Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-variables">Public Variables</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QJsonParseError Class</h1>
+<!-- $$$QJsonParseError-brief -->
+<p>The QJsonParseError class is used to report errors during JSON parsing. <a href="#details">More...</a></p>
+<!-- @@@QJsonParseError -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QJsonParseError&gt;</span></pre><p><b>Note:</b> All functions in this class are <a href="threads-reentrancy.html#reentrant">reentrant</a>.</p>
+<p>This class was introduced in QtCore 5.0.</p>
+<ul>
+<li><a href="qjsonparseerror-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qjsonparseerror.html#ParseError-enum">ParseError</a></b> { NoError, UnterminatedObject, MissingNameSeparator, UnterminatedArray, ..., DeepNesting }</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qjsonparseerror.html#errorString">errorString</a></b>() const</td></tr>
+</table>
+<a name="public-variables"></a>
+<h2>Public Variables</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> ParseError </td><td class="memItemRight bottomAlign"><b><a href="qjsonparseerror.html#error-var">error</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qjsonparseerror.html#offset-var">offset</a></b></td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QJsonParseError-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QJsonParseError class is used to report errors during JSON parsing.</p>
+</div>
+<!-- @@@QJsonParseError -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$ParseError$$$NoError$$$UnterminatedObject$$$MissingNameSeparator$$$UnterminatedArray$$$MissingValueSeparator$$$IllegalValue$$$TerminationByNumber$$$IllegalNumber$$$IllegalEscapeSequence$$$IllegalUTF8String$$$UnterminatedString$$$MissingObject$$$DeepNesting -->
+<h3 class="fn"><a name="ParseError-enum"></a>enum QJsonParseError::<span class="name">ParseError</span></h3>
+<p>This enum describes the type of error that occurred during the parsing of a JSON document.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::NoError</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">No error occurred</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::UnterminatedObject</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">An object is not correctly terminated with a closing curly bracket</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::MissingNameSeparator</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">A comma separating different items is missing</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::UnterminatedArray</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">The array is not correctly terminated with a closing square bracket</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::MissingValueSeparator</tt></td><td class="topAlign"><tt>4</tt></td><td class="topAlign">A colon separating keys from values inside objects is missing</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::IllegalValue</tt></td><td class="topAlign"><tt>5</tt></td><td class="topAlign">The value is illegal</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::TerminationByNumber</tt></td><td class="topAlign"><tt>6</tt></td><td class="topAlign">The input stream ended while parsing a number</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::IllegalNumber</tt></td><td class="topAlign"><tt>7</tt></td><td class="topAlign">The number is not well formed</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::IllegalEscapeSequence</tt></td><td class="topAlign"><tt>8</tt></td><td class="topAlign">An illegal escape sequence occurred in the input</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::IllegalUTF8String</tt></td><td class="topAlign"><tt>9</tt></td><td class="topAlign">An illegal UTF8 sequence occurred in the input</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::UnterminatedString</tt></td><td class="topAlign"><tt>10</tt></td><td class="topAlign">A string wasn't terminated with a quote</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::MissingObject</tt></td><td class="topAlign"><tt>11</tt></td><td class="topAlign">An object was expected but couldn't be found</td></tr>
+<tr><td class="topAlign"><tt>QJsonParseError::DeepNesting</tt></td><td class="topAlign"><tt>12</tt></td><td class="topAlign">The JSON document is too deeply nested for the parser to parse it</td></tr>
+</table>
+<!-- @@@ParseError -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$errorString[overload1]$$$errorString -->
+<h3 class="fn"><a name="errorString"></a><span class="type"><a href="qstring.html">QString</a></span> QJsonParseError::<span class="name">errorString</span>() const</h3>
+<p>Returns the human-readable message appropriate to the reported JSON parsing error.</p>
+<p><b>See also </b><a href="qjsonparseerror.html#error-var">error</a>.</p>
+<!-- @@@errorString -->
+</div>
+<div class="vars">
+<h2>Member Variable Documentation</h2>
+<!-- $$$error -->
+<h3 class="fn"><a name="error-var"></a><span class="type"><a href="qjsonparseerror.html#ParseError-enum">ParseError</a></span> QJsonParseError::<span class="name">error</span></h3>
+<p>Contains the type of the parse error. Is equal to <a href="qjsonparseerror.html#ParseError-enum">QJsonParseError::NoError</a> if the document was parsed correctly.</p>
+<p><b>See also </b><a href="qjsonparseerror.html#ParseError-enum">ParseError</a> and <a href="qjsonparseerror.html#errorString">errorString</a>().</p>
+<!-- @@@error -->
+<!-- $$$offset -->
+<h3 class="fn"><a name="offset-var"></a><span class="type">int</span> QJsonParseError::<span class="name">offset</span></h3>
+<p>Contains the offset in the input string where the parse error occurred.</p>
+<p><b>See also </b><a href="qjsonparseerror.html#error-var">error</a> and <a href="qjsonparseerror.html#errorString">errorString</a>().</p>
+<!-- @@@offset -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

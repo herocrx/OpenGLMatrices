@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-manual.qdoc -->
+  <title>QDoc 5.0: Generic Configuration Variables</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="21-0-qdoc-configuration.html" />
+  <link rel="next" href="22-creating-help-project-files.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="21-0-qdoc-configuration.html">The QDoc Configuration File</a>
+<a class="nextPage" href="22-creating-help-project-files.html">Creating Help Project Files</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#alias">alias</a></li>
+<li class="level1"><a href="#codeindent">codeindent</a></li>
+<li class="level1"><a href="#defines">defines</a></li>
+<li class="level1"><a href="#edition">edition</a></li>
+<li class="level1"><a href="#exampledirs">exampledirs</a></li>
+<li class="level1"><a href="#examples">examples</a></li>
+<li class="level1"><a href="#examples-fileextensions">examples.fileextensions</a></li>
+<li class="level1"><a href="#excludedirs">excludedirs</a></li>
+<li class="level1"><a href="#excludefiles">excludefiles</a></li>
+<li class="level1"><a href="#extraimages">extraimages</a></li>
+<li class="level1"><a href="#falsehoods">falsehoods</a></li>
+<li class="level1"><a href="#generateindex">generateindex</a></li>
+<li class="level1"><a href="#headerdirs">headerdirs</a></li>
+<li class="level1"><a href="#headers">headers</a></li>
+<li class="level1"><a href="#headers-fileextensions">headers.fileextensions</a></li>
+<li class="level1"><a href="#imagedirs">imagedirs</a></li>
+<li class="level1"><a href="#images">images</a></li>
+<li class="level1"><a href="#images-fileextensions">images.fileextensions</a></li>
+<li class="level1"><a href="#language">language</a></li>
+<li class="level1"><a href="#macro">macro</a></li>
+<li class="level1"><a href="#manifestmeta">manifestmeta</a></li>
+<li class="level1"><a href="#naturallanguage">naturallanguage</a></li>
+<li class="level1"><a href="#outputdir">outputdir</a></li>
+<li class="level1"><a href="#outputencoding">outputencoding</a></li>
+<li class="level1"><a href="#outputformats">outputformats</a></li>
+<li class="level1"><a href="#outputprefixes">outputprefixes</a></li>
+<li class="level1"><a href="#qhp">qhp</a></li>
+<li class="level1"><a href="#sourcedirs">sourcedirs</a></li>
+<li class="level1"><a href="#sourceencoding">sourceencoding</a></li>
+<li class="level1"><a href="#sources">sources</a></li>
+<li class="level1"><a href="#sources-fileextensions">sources.fileextensions</a></li>
+<li class="level1"><a href="#spurious">spurious</a></li>
+<li class="level1"><a href="#syntaxhighlighting">syntaxhighlighting</a></li>
+<li class="level1"><a href="#tabsize">tabsize</a></li>
+<li class="level1"><a href="#tagfile">tagfile</a></li>
+<li class="level1"><a href="#version">version</a></li>
+<li class="level1"><a href="#versionsym">versionsym</a></li>
+</ul>
+</div>
+<h1 class="title">Generic Configuration Variables</h1>
+<span class="subtitle"></span>
+<!-- $$$22-qdoc-configuration-generalvariables.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>With the general QDoc configuration variables, you can define where QDoc will find the various source files it needs to generate the documentation, as well as the directory to put the generated documentation. You can also do some minor manipulation of QDoc itself, controlling its output and processing behavior.</p>
+<a name="alias-variable"></a><a name="alias"></a>
+<h2>alias</h2>
+<p>The <tt>alias</tt> variable renames a QDoc command.</p>
+<p>The general syntax is <tt>alias.<i>original-command-name</i> = <i>temporary-command-name</i></tt>.</p>
+<pre class="cpp">alias<span class="operator">.</span>e <span class="operator">=</span> i</pre>
+<p>This renames the built-in command \e (italics) to be \i. The <tt>alias</tt> variable is often used for compatibility reasons.</p>
+<p>See also <a href="#macro-variable">macro</a>.</p>
+<a name="codeindent-variable"></a><a name="codeindent"></a>
+<h2>codeindent</h2>
+<p>The <tt>codeindent</tt> variable specifies the level of indentation that QDoc uses when writing code snippets.</p>
+<p>QDoc originally used a hard-coded value of four spaces for code indentation to ensure that code snippets could be easily distinguished from surrounding text. Since we can use <a href="24-qdoc-configuration-htmlvariables.html#html-stylesheets">stylesheets</a> to adjust the appearance of certain types of HTML elements, this level of indentation is not always required.</p>
+<a name="defines-variable"></a><a name="defines"></a>
+<h2>defines</h2>
+<p>The <tt>defines</tt> variable specifies the C++ preprocessor symbols that QDoc will recognize and respond to.</p>
+<p>When a preprocessor symbol is specified using the <tt>defines</tt> variable, you can also use the <a href="12-0-qdoc-commands-miscellaneous.html#if-command">\if</a> command to enclose documentation that only will be included if the preprocessor symbol is defined.</p>
+<p>The values of the variable are regular expressions (see <a href="../qtcore/qregexp.html">QRegExp</a> for details). By default, no symbol is defined, meaning that code protected with #ifdef..&#x2e;#endif will be ignored.</p>
+<pre class="cpp">defines <span class="operator">=</span> Q_QDOC \
+          QT_<span class="operator">.</span><span class="operator">*</span>_SUPPORT \
+          QT_<span class="operator">.</span><span class="operator">*</span>_LIB \
+          QT_COMPAT \
+          QT3_SUPPORT \
+          Q_WS_<span class="operator">.</span><span class="operator">*</span> \
+          Q_OS_<span class="operator">.</span><span class="operator">*</span> \
+          Q_BYTE_ORDER \
+          __cplusplus</pre>
+<p>This ensures that QDoc will process the code that requires these symbols to be defined. For example:</p>
+<pre class="cpp"><span class="preprocessor">#ifdef Q_WS_WIN</span>
+  HDC getDC() <span class="keyword">const</span>;
+  <span class="type">void</span> releaseDC(HDC) <span class="keyword">const</span>;
+<span class="preprocessor">#endif</span></pre>
+<p>Since the Q_WS_.* regular expression (specified using the <tt>defines</tt> variable) matches Q_WS_WIN, QDoc will process the code within #ifdef and #endif in our example.</p>
+<p>You can also define preprocessor symbols manually on the command line using the -D option. For example:</p>
+<pre class="cpp">currentdirectory$ qdoc <span class="operator">-</span>Dconsoleedition qt<span class="operator">.</span>qdocconf</pre>
+<p>In this case the -D option ensures that the <tt>consoleedition</tt> preprocessor symbol is defined when QDoc processes the source files defined in the qt.qdocconf file.</p>
+<p>See also <a href="#falsehoods-variable">falsehoods</a> and <a href="12-0-qdoc-commands-miscellaneous.html#if-command">\if</a>.</p>
+<a name="edition-variable"></a><a name="edition"></a>
+<h2>edition</h2>
+<p>The <tt>edition</tt> variable specifies which modules are included in each edition of a package, and provides QDoc with information to provide class lists for each edition.</p>
+<p>This feature is mostly used when providing documentation for Qt packages.</p>
+<p>The <tt>edition</tt> variable is always used with a particular edition name to define the modules for that edition:</p>
+<pre class="cpp">edition<span class="operator">.</span>Console      <span class="operator">=</span> <span class="type"><a href="../qtcore/qtcore-module.html">QtCore</a></span> <span class="type"><a href="../qtnetwork/qtnetwork-module.html">QtNetwork</a></span> <span class="type"><a href="../qtsql/qtsql-module.html">QtSql</a></span> <span class="type"><a href="../qtxml/qtxml-module.html">QtXml</a></span>
+edition<span class="operator">.</span>Desktop      <span class="operator">=</span> <span class="type"><a href="../qtcore/qtcore-module.html">QtCore</a></span> <span class="type"><a href="../qtgui/qtgui-module.html">QtGui</a></span> <span class="type"><a href="../qtnetwork/qtnetwork-module.html">QtNetwork</a></span> <span class="type"><a href="../qtopengl/qtopengl-module.html">QtOpenGL</a></span> <span class="type"><a href="../qtsql/qtsql-module.html">QtSql</a></span> <span class="type"><a href="../qtxml/qtxml-module.html">QtXml</a></span> \
+                       <span class="type"><a href="../qtdesigner/qtdesigner-module.html">QtDesigner</a></span> <span class="type">QtAssistant</span> <span class="type">Qt3Support</span> <span class="type"><a href="../activeqt/qaxcontainer-module.html">QAxContainer</a></span> \
+                       <span class="type"><a href="../activeqt/qaxserver-module.html">QAxServer</a></span>
+edition<span class="operator">.</span>DesktopLight <span class="operator">=</span> <span class="type"><a href="../qtcore/qtcore-module.html">QtCore</a></span> <span class="type"><a href="../qtgui/qtgui-module.html">QtGui</a></span> <span class="type">Qt3SupportLight</span></pre>
+<p>In the above examples, the <tt>Console</tt> edition only includes the contents of four modules. Only the classes from these modules will be used when the <a href="12-0-qdoc-commands-miscellaneous.html#generatelist-command">generatelist</a> command is used to generate a list of classes for this edition:</p>
+<pre class="cpp">\generatelist{classesbyedition Console}</pre>
+<a name="exampledirs-variable"></a><a name="exampledirs"></a>
+<h2>exampledirs</h2>
+<p>The <tt>exampledirs</tt> variable specifies the directories containing the source code of the example files.</p>
+<p>The <a href="#examples-variable">examples</a> {examples} and <a href="#exampledirs-variable">exampledirs</a> variables are used by the <a href="07-0-qdoc-commands-includingexternalcode.html#quotefromfile-command">\quotefromfile</a>, <a href="07-0-qdoc-commands-includingexternalcode.html#quotefile-command">\quotefile</a> and <a href="13-qdoc-commands-topics.html#example-command">\example</a> commands. If both the <a href="#examples-variable">examples</a> and <a href="#exampledirs-variable">exampledirs</a> variables are defined, QDoc will search in both, first in <a href="#examples-variable">examples</a> then in <a href="#exampledirs-variable">exampledirs</a>.</p>
+<p>QDoc will search through the directories in the specified order, and accept the first matching file it finds. It will only search in the specified directories, <i>not</i> in subdirectories.</p>
+<pre class="cpp">exampledirs <span class="operator">=</span> $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src \
+              $QTDIR<span class="operator">/</span>examples \
+              $QTDIR \
+              $QTDIR<span class="operator">/</span>qmake<span class="operator">/</span>examples
+
+examples    <span class="operator">=</span> $QTDIR<span class="operator">/</span>examples<span class="operator">/</span>widgets<span class="operator">/</span>analogclock<span class="operator">/</span>analogclock<span class="operator">.</span>cpp</pre>
+<p>When processing</p>
+<pre class="cpp">\quotefromfile widgets<span class="operator">/</span>calculator<span class="operator">/</span>calculator<span class="operator">.</span>cpp</pre>
+<p>QDoc will then see if there exists a file called <tt>calculator.cpp</tt> listed as a value in the <tt>examples</tt> variable. If it doesn't, it will search in the <tt>exampledirs</tt> variable, and first see if there exists a file called</p>
+<pre class="cpp">$QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src<span class="operator">/</span>widgets<span class="operator">/</span>calculator<span class="operator">/</span>calculator<span class="operator">.</span>cpp</pre>
+<p>If it doesn't, QDoc will continue looking for a file called</p>
+<pre class="cpp">$QTDIR<span class="operator">/</span>examples<span class="operator">/</span>widgets<span class="operator">/</span>calculator<span class="operator">/</span>calculator<span class="operator">.</span>cpp</pre>
+<p>and so forth.</p>
+<p>See also examples.</p>
+<a name="examples-variable"></a><a name="examples"></a>
+<h2>examples</h2>
+<p>The <tt>examples</tt> variable allows you to specify individual example files in addition to those located in the directories specified by the <a href="#exampledirs-variable"><tt>exampledirs</tt></a> variable.</p>
+<p>The <tt>examples</tt> and <a href="#exampledirs-variable"><tt>exampledirs</tt></a> variables are used by the <a href="07-0-qdoc-commands-includingexternalcode.html#quotefromfile-command">\quotefromfile</a>, <a href="07-0-qdoc-commands-includingexternalcode.html#quotefile-command">\quotefile</a> and \example commands. If both the <tt>examples</tt> and <a href="#exampledirs-variable"><tt>exampledirs</tt></a> variables are defined, QDoc will search in both, first in <tt>examples</tt> then in <a href="#exampledirs-variable"><tt>exampledirs</tt></a>.</p>
+<p>QDoc will search through the values listed for the <tt>examples</tt> variable, in the specified order, and accept the first one it finds.</p>
+<p>For an extensive example, see the <a href="#exampledirs-variable"><tt>exampledirs</tt></a> command. But note that if you know the file is listed in the <tt>examples</tt> variable, you don't need to specify its path:</p>
+<pre class="cpp">\quotefromfile calculator<span class="operator">.</span>cpp</pre>
+<p>See also <a href="#exampledirs-variable">exampledirs</a>.</p>
+<a name="examples-fileextensions-variable"></a><a name="examples-fileextensions"></a>
+<h2>examples.fileextensions</h2>
+<p>The <tt>examples.fileextensions</tt> variable specifies the file extensions that qdoc will look for when collecting example files for display in the documentation.</p>
+<p>The default extensions are *.cpp, *.h, *.js, *.xq, *.svg, *.xml and *.ui.</p>
+<p>The extensions are given as standard wildcard expressions. You can add a file extension to the filter using '+='. For example:</p>
+<pre class="cpp">examples<span class="operator">.</span>fileextensions <span class="operator">+</span><span class="operator">=</span> <span class="operator">*</span><span class="operator">.</span>qrc</pre>
+<p>See also <a href="#headers-fileextensions">headers.fileextensions</a>.</p>
+<a name="excludedirs-variable"></a><a name="excludedirs"></a>
+<h2>excludedirs</h2>
+<p>The <tt>excludedirs</tt> variable is for listing directories that should <i>not</i> be processed by qdoc, even if the same directories are included by the <a href="#sourcedirs-variable">sourcedirs</a> or <a href="#headerdirs-variable">headerdirs</a> variables.</p>
+<p>For example,</p>
+<pre class="cpp">sourcedirs <span class="operator">=</span>  src<span class="operator">/</span>corelib
+excludedirs <span class="operator">=</span> src<span class="operator">/</span>corelib<span class="operator">/</span>tmp</pre>
+<p>When executed, QDoc will exclude the listed directories from further consideration. Files in these directories will not be read by qdoc.</p>
+<p>See also <a href="#excludefiles-variable">excludefiles</a>.</p>
+<a name="excludefiles-variable"></a><a name="excludefiles"></a>
+<h2>excludefiles</h2>
+<p>The <tt>excludefiles</tt> variable allows you to specify individual files that should <i>not</i> be processed by qdoc.</p>
+<pre class="cpp">excludefiles <span class="operator">+</span><span class="operator">=</span> $QT_CORE_SOURCES<span class="operator">/</span><span class="operator">.</span><span class="operator">.</span><span class="operator">/</span><span class="operator">.</span><span class="operator">.</span><span class="operator">/</span>src<span class="operator">/</span>widgets<span class="operator">/</span>kernel<span class="operator">/</span>qwidget<span class="operator">.</span>h \
+                $QT_CORE_SOURCES<span class="operator">/</span><span class="operator">.</span><span class="operator">.</span><span class="operator">/</span><span class="operator">.</span><span class="operator">.</span><span class="operator">/</span>src<span class="operator">/</span>widgets<span class="operator">/</span>kernel<span class="operator">/</span>qwidget<span class="operator">.</span>cpp</pre>
+<p>If you include the above in your qdocconf file for qtbase, there will be no qwidget.html generated for html and no qwidget.xml generated for DITA XML.</p>
+<p>See also <a href="#excludedirs-variable">excludedirs</a>.</p>
+<a name="extraimages-variable"></a><a name="extraimages"></a>
+<h2>extraimages</h2>
+<p>The <tt>extraimages</tt> variable tells QDoc to incorporate specific images in the generated documentation.</p>
+<p>QDoc will not recognize images used within HTML (or any other markup language). If we want the images to be copied from the directories specified by <a href="#imagedirs"><tt>imagedirs</tt></a> (the images in question must be located in these directories) to the output directory, we must specify the images using the <tt>extraimages</tt> variable.</p>
+<p>The general syntax is <tt>extraimages.<i>format</i> = <i>image</i></tt>. The file extension is optional.</p>
+<p>For example, in <a href="21-2-qt-qdocconf.html">qt.qdocconf</a> we use a couple of images within the HTML.postheader variable which value is pure HTML. For that reason, these images are specified using the <tt>extraimages</tt> variable:</p>
+<pre class="cpp">    extraimages<span class="operator">.</span>HTML <span class="operator">=</span> qt<span class="operator">-</span>logo</pre>
+<p>See also <a href="#images">images</a> and <a href="#imagedirs">imagedirs</a>.</p>
+<a name="falsehoods-variable"></a><a name="falsehoods"></a>
+<h2>falsehoods</h2>
+<p>The <tt>falsehoods</tt> variable defines the truth value of specified preprocessor symbols as false.</p>
+<p>If this variable is not set for a preprocessor symbol, QDoc assumes its truth value is true. The exception is '0', which value always is false.</p>
+<p>QDoc will recognize, and is able to evaluate, the following preprocessor syntax:</p>
+<pre class="cpp">    <span class="preprocessor">#ifdef NOTYET</span>
+     <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    <span class="preprocessor">#endif</span>
+
+    <span class="preprocessor">#if defined (NOTYET)</span>
+     <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    <span class="preprocessor">#end if</span></pre>
+<p>However, faced with unknown syntax like</p>
+<pre class="cpp">    <span class="preprocessor">#if NOTYET</span>
+        <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    <span class="preprocessor">#endif</span></pre>
+<p>QDoc will evaluate it as true by default, <i>unless</i> the preprocessor symbol is specified within the <tt>falsehoods</tt> variable entry:</p>
+<pre class="cpp">    falsehoods <span class="operator">=</span> NOTYET</pre>
+<p>See also <a href="../qtdoc/qmake-variable-reference.html#defines">defines</a>.</p>
+<a name="generateindex-variable"></a><a name="generateindex"></a>
+<h2>generateindex</h2>
+<p>The <tt>generateindex</tt> variable contains a boolean value that specifies whether to generate an index file when HTML documentation is generated.</p>
+<p>By default, an index file is always generated with HTML documentation, so this variable is typically only used when disabling this feature (by setting the value to <tt>false</tt>) or when enabling index generation for the WebXML output (by setting the value to <tt>true</tt>).</p>
+<a name="headerdirs-variable"></a><a name="headerdirs"></a>
+<h2>headerdirs</h2>
+<p>The <tt>headerdirs</tt> variable specifies the directories containing the header files associated with the <tt>.cpp</tt> source files used in the documentation.</p>
+<pre class="cpp">    headerdirs <span class="operator">=</span> $QTDIR<span class="operator">/</span>src \
+                 $QTDIR<span class="operator">/</span>extensions<span class="operator">/</span>activeqt \
+                 $QTDIR<span class="operator">/</span>extensions<span class="operator">/</span>motif \
+                 $QTDIR<span class="operator">/</span>tools<span class="operator">/</span>designer<span class="operator">/</span>src<span class="operator">/</span>lib<span class="operator">/</span>extension \
+                 $QTDIR<span class="operator">/</span>tools<span class="operator">/</span>designer<span class="operator">/</span>src<span class="operator">/</span>lib<span class="operator">/</span>sdk \
+                 $QTDIR<span class="operator">/</span>tools<span class="operator">/</span>designer<span class="operator">/</span>src<span class="operator">/</span>lib<span class="operator">/</span>uilib</pre>
+<p>When executed, the first thing QDoc will do is to read through the headers specified in the <a href="../qtdoc/qmake-variable-reference.html#headers"><tt>headers</tt></a> variable, and the ones located in the directories specified in the <tt>headerdir</tt> variable (including all subdirectories), building an internal structure of the classes and their functions.</p>
+<p>Then it will read through the sources specified in the <a href="#sources-variable"><tt>sources</tt></a>, and the ones located in the directories specified in the <a href="#sourcedirs-variable"><tt>sourcedirs</tt></a> varible (including all subdirectories), merging the documentation with the structure it retrieved from the header files.</p>
+<p>If both the <tt>headers</tt> and <tt>headerdirs</tt> variables are defined, QDoc will read through both, first <a href="../qtdoc/qmake-variable-reference.html#headers"><tt>headers</tt></a> then <tt>headerdirs</tt>.</p>
+<p>In the specified directories, QDoc will only read the files with the fileextensions specified in the <a href="#headers-fileextensions"><tt>headers.fileextensions</tt></a> variable. The default extensions are *.ch, *.h, *.h++, *.hh, *.hpp and *.hxx&quot;. The files specified by <a href="../qtdoc/qmake-variable-reference.html#headers"><tt>headers</tt></a> will be read independent of their fileextensions.</p>
+<p>See also <a href="../qtdoc/qmake-variable-reference.html#headers">headers</a> and <a href="#headers-fileextensions">headers.fileextensions</a>.</p>
+<a name="headers-variable"></a><a name="headers"></a>
+<h2>headers</h2>
+<p>The <tt>headers</tt> variable allows you to specify individual header files in addition to those located in the directories specified by the <a href="#headerdirs"><tt>headerdirs</tt></a> variable.</p>
+<pre class="cpp">    headers <span class="operator">=</span> $QTDIR<span class="operator">/</span>src<span class="operator">/</span>gui<span class="operator">/</span>widgets<span class="operator">/</span>qlineedit<span class="operator">.</span>h \
+              $QTDIR<span class="operator">/</span>src<span class="operator">/</span>gui<span class="operator">/</span>widgets<span class="operator">/</span>qpushbutton<span class="operator">.</span>h</pre>
+<p>When processing the <tt>headers</tt> variable, QDoc behaves in the same way as it does when processing the <a href="#headerdirs"><tt>headerdirs</tt></a> variable. For more information, see the <a href="#headerdirs"><tt>headerdirs</tt></a> variable.</p>
+<p>See also <a href="#headerdirs">headerdirs</a>.</p>
+<a name="headers-fileextensions-variable"></a><a name="headers-fileextensions"></a>
+<h2>headers.fileextensions</h2>
+<p>The <tt>headers.fileextensions</tt> variable specify the extension used by the headers.</p>
+<p>When processing the header files specified in the <a href="#headerdirs"><tt>headerdirs</tt></a> variable, QDoc will only read the files with the fileextensions specified in the <tt>headers.fileextensions</tt> variable. In this way QDoc avoid spending time reading irrelevant files.</p>
+<p>The default extensions are *.ch, *.h, *.h++, *.hh, *.hpp and *.hxx.</p>
+<p>The extensions are given as standard wildcard expressions. You can add a file extension to the filter using '+='. For example:</p>
+<pre class="cpp">    header<span class="operator">.</span>fileextensions <span class="operator">+</span><span class="operator">=</span> <span class="operator">*</span><span class="operator">.</span>H</pre>
+<p><b>Warning:</b> The above assignment may not work as described.</p>
+<p>See also <a href="#headerdirs">headerdirs</a>.</p>
+<a name="imagedirs-variable"></a><a name="imagedirs"></a>
+<h2>imagedirs</h2>
+<p>The <tt>imagedirs</tt> variable specifies the directories containing the images used in the documentation.</p>
+<p>The <a href="#images"><tt>images</tt></a> and <tt>imagedirs</tt> variables are used by the <a href="09-qdoc-commands-includingimages.html#image-command">\image</a> and <a href="09-qdoc-commands-includingimages.html#inlineimage-command">\inlineimage</a> commands. If both the <a href="#images"><tt>images</tt></a> and <tt>imagedirs</tt> variables are defined, QDoc will search in both, first in <a href="#images"><tt>images</tt></a> then in <tt>imagedirs</tt>.</p>
+<p>QDoc will search through the directories in the specified order, and accept the first matching file it finds. It will only search in the specified directories, <i>not</i> in subdirectories.</p>
+<pre class="cpp">    imagedirs <span class="operator">=</span> $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src<span class="operator">/</span>images \
+                $QTDIR<span class="operator">/</span>examples
+
+    images    <span class="operator">=</span> $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src<span class="operator">/</span>images<span class="operator">/</span>calculator<span class="operator">-</span>example<span class="operator">.</span>png</pre>
+<p>When processing</p>
+<pre class="cpp">    \image calculator<span class="operator">-</span>example<span class="operator">.</span>png</pre>
+<p>QDoc will then see if there exists a file called calculator-example.png listed as a value in the <tt>images</tt> variable. If it doesn't, it will search in the <tt>imagedirs</tt> variable, and first see if there exists a file called</p>
+<pre class="cpp">    $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src<span class="operator">/</span>images<span class="operator">/</span>calculator<span class="operator">-</span>example<span class="operator">.</span>png</pre>
+<p>If it doesn't, QDoc will look for a file called</p>
+<pre class="cpp">    $QTDIR<span class="operator">/</span>examples<span class="operator">/</span>calculator<span class="operator">-</span>example<span class="operator">.</span>png</pre>
+<p>You can filter the images in an image directory using the <a href="#images-fileextensions"><tt>images.fileextensions</tt></a> variable. The general idea behind the <a href="#images-fileextensions"><tt>images.fileextensions</tt></a> variable is to enable different image format for different output format.</p>
+<p><b>Warning:</b> The <a href="#images-fileextensions"><tt>images.fileextensions</tt></a> variable's functionality is preliminay since QDoc at this point only support HTML.</p>
+<p>See also <a href="#images">images</a> and <a href="#images-fileextensions">images.fileextensions</a>.</p>
+<a name="images-variable"></a><a name="images"></a>
+<h2>images</h2>
+<p>The <tt>images</tt> variable allows you to specify individual image files in addition to those located in the directories specified by the <a href="#imagedirs"><tt>imagedirs</tt></a> variable.</p>
+<pre class="cpp">    images <span class="operator">=</span> $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src<span class="operator">/</span>images<span class="operator">/</span>calculator<span class="operator">-</span>example<span class="operator">.</span>png</pre>
+<p>When processing the <tt>images</tt> variable, QDoc behaves in the same way as it does when processing the <a href="#imagedirs"><tt>imagedirs</tt></a> variable. For more information, see the <a href="#imagedirs"><tt>imagedirs</tt></a> variable.</p>
+<p>See also <a href="#imagedirs">imagedirs</a> and <a href="#images-fileextensions">images.fileextensions</a>.</p>
+<a name="images-fileextensions-variable"></a><a name="images-fileextensions"></a>
+<h2>images.fileextensions</h2>
+<p>The images.fileextensions variable filters the files within an image directory.</p>
+<p>The variable's values (the extensions) are given as standard wildcard expressions. The general syntax is: <tt>images.fileextensions.<i>format</i> = *.<i>extension</i></tt>.</p>
+<p>The idea is to enable different image format for different output format.</p>
+<pre class="cpp">    images<span class="operator">.</span>fileextensions<span class="operator">.</span>HTML <span class="operator">=</span> <span class="operator">*</span><span class="operator">.</span>png
+    images<span class="operator">.</span>fileextensions<span class="operator">.</span>LOUT <span class="operator">=</span> <span class="operator">*</span><span class="operator">.</span>eps</pre>
+<p>Then, when processing the <a href="09-qdoc-commands-includingimages.html#image-command">\image</a> and <a href="09-qdoc-commands-includingimages.html#inlineimage-command">\inlineimage</a> commands, QDoc will only search for files with extensions specified in the output format's associated image extension variable.</p>
+<p><b>Warning:</b> This is preliminary functionality since QDoc at this point only support HTML.</p>
+<p>The default extensions for HTML are *.png, *.jpg, *.jpeg and *.gif.</p>
+<p>You can add a file extension to the filter using '+='. For example:</p>
+<pre class="cpp">    images<span class="operator">.</span>fileextensions<span class="operator">.</span>HTML <span class="operator">+</span><span class="operator">=</span> <span class="operator">*</span><span class="operator">.</span>eps</pre>
+<p>See also <a href="#imagedirs">imagedirs</a> and <a href="#images">images</a>.</p>
+<a name="language-variable"></a><a name="language"></a>
+<h2>language</h2>
+<p>The <tt>language</tt> variable specifies the language of the source code that is used in the documentation.</p>
+<p>Currently, C++ is the only language that QDoc understands. It is also the default language, and doesn't really need to be specified. But for example in <a href="21-2-qt-qdocconf.html">qt.qdocconf</a>:</p>
+<pre class="cpp">    language <span class="operator">=</span> Cpp</pre>
+<p>identifies the language of the Qt source code as C++.</p>
+<a name="macro-variable"></a><a name="macro"></a>
+<h2>macro</h2>
+<p>The <tt>macro</tt> variable is used to create your own simple QDoc commands. The syntax is <tt>macro.<i>command</i> = <i>definition</i></tt>, where the definition is written using QDoc syntax.</p>
+<p>A macro variable can be restricted for use in one type of output generation. By appending <tt>.HTML</tt> to the macro name, for example, the macro is only used when generating HTML output. By appending <tt>.DITAXML</tt> to the macro name, the macro is only used when generating DITA XML.</p>
+<pre class="cpp">    macro<span class="operator">.</span>gui              <span class="operator">=</span> <span class="string">&quot;\\b&quot;</span>
+    macro<span class="operator">.</span>raisedaster<span class="operator">.</span>HTML <span class="operator">=</span> <span class="string">&quot;&lt;sup&gt;*&lt;/sup&gt;&quot;</span></pre>
+<p>The first macro defines the \gui command to render its argument using a bold font. The second macro defines the \raisedaster command to render a superscript asterisk, but only when generating HTML.</p>
+<p>See also <a href="#alias-variable">alias</a>.</p>
+<a name="manifestmeta-variable"></a><a name="manifestmeta"></a>
+<h2>manifestmeta</h2>
+<p>The <tt>manifestmeta</tt> variable specifies additional meta-content for the example manifest files generated by QDoc.</p>
+<p>See the <a href="26-qdoc-configuration-example-manifest-files.html#manifest-meta-content">Manifest Meta Content</a> section for more information.</p>
+<a name="naturallanguage-variable"></a><a name="naturallanguage"></a>
+<h2>naturallanguage</h2>
+<p>The <tt>naturallanguage</tt> variable specifies the natural language used for the documentation generated by qdoc.</p>
+<pre class="cpp">    naturallanguage <span class="operator">=</span> zh<span class="operator">-</span>Hans</pre>
+<p>By default, the natural language is <tt>en</tt> for compatibility with legacy documentation.</p>
+<p>qdoc will add the natural language information to the HTML it generates, using the <tt>lang</tt> and <tt>xml:lang</tt> attributes.</p>
+<p>See also <a href="#sourceencoding-variable">sourceencoding</a>, <a href="#outputencoding-variable">outputencoding</a>, <a href="http://www.w3.org/TR/xhtml1/#C_7">C.7&#x2e; The lang and xml:lang Attributes</a> and <a href="http://www.w3.org/TR/i18n-html-tech-lang/#ri20040429.113217290">Best Practice 13: Using Hans and Hant codes</a>.</p>
+<a name="outputdir-variable"></a><a name="outputdir"></a>
+<h2>outputdir</h2>
+<p>The <tt>outputdir</tt> variable specifies the directory where QDoc will put the generated documentation.</p>
+<p>In qt.qdocconf:</p>
+<pre class="cpp">    outputdir <span class="operator">=</span> $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>html</pre>
+<p>locates the generated Qt reference documentation in $QTDIR/doc/html. For example, the documentation of the <a href="../qtwidgets/qwidget.html">QWidget</a> class is located in</p>
+<pre class="cpp">    $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>html<span class="operator">/</span>qwidget<span class="operator">.</span>html</pre>
+<p>The associated images will be put in an <tt>images</tt> subdirectory.</p>
+<p><b>Warning:</b> When running QDoc multiple times using the same output directory, all files from the previous run will be lost.</p>
+<a name="outputencoding-variable"></a><a name="outputencoding"></a>
+<h2>outputencoding</h2>
+<p>The <tt>outputencoding</tt> variable specifies the encoding used for the documentation generated by qdoc.</p>
+<pre class="cpp">    outputencoding <span class="operator">=</span> UTF<span class="operator">-</span><span class="number">8</span></pre>
+<p>By default, the output encoding is <tt>ISO-8859-1</tt> (Latin1) for compatibility with legacy documentation. When generating documentation for some languages, particularly non-European languages, this is not sufficient and an encoding such as UTF-8 is required.</p>
+<p>qdoc will encode HTML using this encoding and generate the correct declarations to indicate to browsers which encoding is being used. The <a href="#naturallanguage">naturallanguage</a> configuration variable should also be specified to provide browsers with a complete set of character encoding and language information.</p>
+<p>See also <a href="#outputencoding">outputencoding</a> and <a href="#naturallanguage">naturallanguage</a>.</p>
+<a name="outputformats-variable"></a><a name="outputformats"></a>
+<h2>outputformats</h2>
+<p>The <tt>outputformats</tt> variable specifies the format of the generated documentation.</p>
+<p>Currently, QDoc only supports the HTML format. It is also the default format, and doesn't need to be specified.</p>
+<a name="outputprefixes"></a><a name="outputprefixes"></a>
+<h2>outputprefixes</h2>
+<p>The <tt>outputprefixes</tt> variable specifies a mapping between types of files and the prefixes to prepend to the HTML file names in the generated documentation.</p>
+<pre class="cpp">    outputprefixes <span class="operator">=</span> QML
+    outputprefixes<span class="operator">.</span>QML <span class="operator">=</span> uicomponents<span class="operator">-</span></pre>
+<p>By default, files containing the API documentation for QML types are prefixed with &quot;qml-&quot;. In the above example, the prefix <tt>&quot;uicomponents&quot;</tt> is used instead.</p>
+<a name="qhp-variable"></a><a name="qhp"></a>
+<h2>qhp</h2>
+<p>The <tt>qhp</tt> variable is used to define the information to be written out to Qt Help Project (<tt>qhp</tt>) files.</p>
+<p>See the <a href="22-creating-help-project-files.html">Creating Help Project Files</a> chapter for information about this process.</p>
+<a name="sourcedirs-variable"></a><a name="sourcedirs"></a>
+<h2>sourcedirs</h2>
+<p>The <tt>sourcedirs</tt> variable specifies the directories containing the <tt>.cpp</tt> or <tt>.qdoc</tt> files used in the documentation.</p>
+<p>For example in <a href="21-2-qt-qdocconf.html">qt.qdocconf</a></p>
+<pre class="cpp">    sourcedirs <span class="operator">=</span> $QTDIR<span class="operator">/</span>src \
+                 $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>src \
+                 $QTDIR<span class="operator">/</span>extensions<span class="operator">/</span>activeqt \
+                 $QTDIR<span class="operator">/</span>extensions<span class="operator">/</span>motif \
+                 $QTDIR<span class="operator">/</span>tools<span class="operator">/</span>designer<span class="operator">/</span>src<span class="operator">/</span>lib<span class="operator">/</span>extension \
+                 $QTDIR<span class="operator">/</span>tools<span class="operator">/</span>designer<span class="operator">/</span>src<span class="operator">/</span>lib<span class="operator">/</span>sdk \
+                 $QTDIR<span class="operator">/</span>tools<span class="operator">/</span>designer<span class="operator">/</span>src<span class="operator">/</span>lib<span class="operator">/</span>uilib</pre>
+<p>When executed, the first thing QDoc will do is to read through the headers specified in the <a href="10-qdoc-commands-tablesandlists.html#header-command"><tt>header</tt></a> variable, and the ones located in the directories specified in the <tt>headerdir</tt> variable (including all subdirectories), building an internal structure of the classes and their functions.</p>
+<p>Then it will read through the sources specified in the <a href="../qtdoc/qmake-variable-reference.html#sources"><tt>sources</tt></a>, and the ones located in the directories specified in the <a href="#sourcedirs"><tt>sourcedirs</tt></a> varible (including all subdirectories), merging the documentation with the structure it retrieved from the header files.</p>
+<p>If both the <tt>sources</tt> and <tt>sourcedirs</tt> variables are defined, QDoc will read through both, first <a href="../qtdoc/qmake-variable-reference.html#sources"><tt>sources</tt></a> then <tt>sourcedirs</tt>.</p>
+<p>In the specified directories, QDoc will only read the files with the fileextensions specified in the <a href="#sources-fileextensions"><tt>sources.fileextensions</tt></a> variable. The default extensions are *.c++, *.cc, *.cpp and *.cxx. The files specified by <a href="../qtdoc/qmake-variable-reference.html#sources"><tt>sources</tt></a> will be read independent of their fileextensions.</p>
+<p>See also <a href="#sources-variable">sources</a> and <a href="#sources-fileextensions-variable">sources.fileextensions</a>.</p>
+<a name="sourceencoding-variable"></a><a name="sourceencoding"></a>
+<h2>sourceencoding</h2>
+<p>The <tt>sourceencoding</tt> variable specifies the encoding used for the source code and documentation.</p>
+<pre class="cpp">    sourceencoding <span class="operator">=</span> UTF<span class="operator">-</span><span class="number">8</span></pre>
+<p>By default, the source encoding is <tt>ISO-8859-1</tt> (Latin1) for compatibility with legacy documentation. For some languages, particularly non-European languages, this is not sufficient and an encoding such as UTF-8 is required.</p>
+<p>Although qdoc will use the encoding to read source and documentation files, limitations of C++ compilers may prevent you from using non-ASCII characters in source code comments. In cases like these, it is possible to write API documentation completely in documentation files.</p>
+<p>See also <a href="#naturallanguage-variable">naturallanguage</a> and <a href="#outputencoding-variable">outputencoding</a>.</p>
+<a name="sources-variable"></a><a name="sources"></a>
+<h2>sources</h2>
+<p>The <tt>sources</tt> variable allows you to specify individual source files in addition to those located in the directories specified by the <a href="#sourcedirs-variable">sourcedirs</a> variable.</p>
+<pre class="cpp">    sources <span class="operator">=</span> $QTDIR<span class="operator">/</span>src<span class="operator">/</span>gui<span class="operator">/</span>widgets<span class="operator">/</span>qlineedit<span class="operator">.</span>cpp \
+              $QTDIR<span class="operator">/</span>src<span class="operator">/</span>gui<span class="operator">/</span>widgets<span class="operator">/</span>qpushbutton<span class="operator">.</span>cpp</pre>
+<p>When processing the <tt>sources</tt> variable, QDoc behaves in the same way as it does when processing the <a href="#sourcedirs-variable">sourcedirs</a> variable. For more information, see the <a href="#sourcedirs-variable">sourcedirs</a> variable.</p>
+<p>See also <a href="#sourcedirs-variable">sourcedirs</a>.</p>
+<a name="sources-fileextensions-variable"></a><a name="sources-fileextensions"></a>
+<h2>sources.fileextensions</h2>
+<p>The <tt>sources.fileextensions</tt> variable filters the files within a source directory.</p>
+<p>When processing the source files specified in the <a href="#sourcedirs"><tt>sourcedirs</tt></a> variable, QDoc will only read the files with the fileextensions specified in the <tt>sources.fileextensions</tt> variable. In this way QDoc avoid spending time reading irrelevant files.</p>
+<p>The default extensions are *.c++, *.cc, *.cpp and *.cxx.</p>
+<p>The extensions are given as standard wildcard expressions. You can add a file extension to the filter using '+='. For example:</p>
+<pre class="cpp">    sources<span class="operator">.</span>fileextensions <span class="operator">+</span><span class="operator">=</span> <span class="operator">*</span><span class="operator">.</span>CC</pre>
+<p><b>Warning:</b> The above assignment may not work as described.</p>
+<p>See also <a href="#sourcedirs-variable">sourcedirs</a> and <a href="#sources-variable">(sources-variable}</a> {sources}.</p>
+<a name="spurious-variable"></a><a name="spurious"></a>
+<h2>spurious</h2>
+<p>The <tt>spurious</tt> variable excludes specified QDoc warnings from the output. The warnings are specified using standard wildcard expressions.</p>
+<pre class="cpp">    spurious <span class="operator">=</span> <span class="string">&quot;Cannot find .*&quot;</span> \
+    <span class="string">&quot;Missing .*&quot;</span></pre>
+<p>makes sure that warnings matching either of these expressions, will not be part of the output when running QDoc. For example would the following warning be omitted from the output:</p>
+<pre class="cpp">    qt<span class="operator">-</span><span class="number">4.0</span><span class="operator">/</span>src<span class="operator">/</span>opengl<span class="operator">/</span>qgl_mac<span class="operator">.</span>cpp:<span class="number">156</span>: Missing parameter name</pre>
+<a name="syntaxhighlighting"></a><a name="syntaxhighlighting"></a>
+<h2>syntaxhighlighting</h2>
+<p>The <tt>syntaxhighlighting</tt> variable specifies whether QDoc should perform syntax highlighting on source code quoted in the documentation it generates.</p>
+<pre class="cpp">    syntaxhighlighting <span class="operator">=</span> <span class="keyword">true</span></pre>
+<p>will enable syntax highlighting for all supported programming languages.</p>
+<a name="tabsize-variable"></a><a name="tabsize"></a>
+<h2>tabsize</h2>
+<p>The <tt>tabsize</tt> variable defines the size of a tab character.</p>
+<pre class="cpp">tabsize <span class="operator">=</span> <span class="number">4</span></pre>
+<p>will give the tab character the size of 4 spaces. The default value of the variable is 8, and doesn't need to be specified.</p>
+<a name="tagfile-variable"></a><a name="tagfile"></a>
+<h2>tagfile</h2>
+<p>The <tt>tagfile</tt> variable specifies the Doxygen tag file to be written when HTML is generated.</p>
+<a name="version-variable"></a><a name="version"></a>
+<h2>version</h2>
+<p>The <tt>version</tt> variable specifies the version number of the documented software.</p>
+<pre class="cpp">    version <span class="operator">=</span> <span class="number">4.0.1</span></pre>
+<p>When a version number is specified (using the <tt><a href="../qtdoc/qmake-variable-reference.html#version">version</a></tt> or <tt><a href="#versionsym">versionsym</a></tt> variables in a <tt>.qdocconf</tt> file), it is accessible through the corresponding \version command for use in the documentation.</p>
+<p><b>Warning:</b> The \version command's functionality is not fully implemented; currently it only works within raw HTML code.</p>
+<p>See also <a href="#versionsym">versionsym</a>.</p>
+<a name="versionsym-variable"></a><a name="versionsym"></a>
+<h2>versionsym</h2>
+<p>The <tt>versionsym</tt> variable specifies a C++ preprocessor symbol that defines the version number of the documented software.</p>
+<p>For example in <a href="21-2-qt-qdocconf.html">qt.qdocconf</a>:</p>
+<pre class="cpp">    versionsym <span class="operator">=</span> QT_VERSION_STR</pre>
+<p><a href="../qtcore/qtglobal.html#QT_VERSION_STR">QT_VERSION_STR</a> is defined in qglobal.h as follows</p>
+<pre class="cpp">    <span class="preprocessor">#define QT_VERSION_STR   &quot;4.0.1&quot;</span></pre>
+<p>When a version number is specified (using the <tt><a href="../qtdoc/qmake-variable-reference.html#version">version</a></tt> or <tt><a href="#versionsym">versionsym</a></tt> variables in a <tt>.qdocconf</tt> file), it is accessible through the corresponding \version command for use in the documentation.</p>
+<p><b>Warning:</b> The \version command's functionality is not fully implemented; currently it only works within raw HTML code.</p>
+<p>See also <a href="../qtdoc/qmake-variable-reference.html#version">\version</a>.</p>
+</div>
+<!-- @@@22-qdoc-configuration-generalvariables.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="21-0-qdoc-configuration.html">The QDoc Configuration File</a>
+<a class="nextPage" href="22-creating-help-project-files.html">Creating Help Project Files</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

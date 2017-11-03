@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmediaserviceprovider.cpp -->
+  <title>qtmultimedia 5.0: QMediaServiceProviderPlugin Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QMediaServiceProviderPlugin Class</h1>
+<!-- $$$QMediaServiceProviderPlugin-brief -->
+<p>The QMediaServiceProviderPlugin class interface provides an interface for <a href="qmediaservice.html">QMediaService</a> plug-ins. <a href="#details">More...</a></p>
+<!-- @@@QMediaServiceProviderPlugin -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QMediaServiceProviderPlugin&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<ul>
+<li><a href="qmediaserviceproviderplugin-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QMediaService * </td><td class="memItemRight bottomAlign"><b><a href="qmediaserviceproviderplugin.html#create">create</a></b>(const QString &amp;<i> key</i>) = 0</td></tr>
+</table>
+<a name="reimplemented-public-functions"></a>
+<h2>Reimplemented Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qmediaserviceproviderplugin.html#release">release</a></b>(QMediaService *<i> service</i>) = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QMediaServiceProviderPlugin-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QMediaServiceProviderPlugin class interface provides an interface for <a href="qmediaservice.html">QMediaService</a> plug-ins.</p>
+<p>A media service provider plug-in may implement one or more of <a href="qmediaservicesupportedformatsinterface.html">QMediaServiceSupportedFormatsInterface</a>, <a href="qmediaservicesupporteddevicesinterface.html">QMediaServiceSupportedDevicesInterface</a>, and <a href="qmediaservicefeaturesinterface.html">QMediaServiceFeaturesInterface</a> to identify the features it supports.</p>
+</div>
+<!-- @@@QMediaServiceProviderPlugin -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$create[overload1]$$$createconstQString& -->
+<h3 class="fn"><a name="create"></a><span class="type"><a href="qmediaservice.html">QMediaService</a></span> * QMediaServiceProviderPlugin::<span class="name">create</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> key</i>)<tt> [pure virtual]</tt></h3>
+<p>Constructs a new instance of the <a href="qmediaservice.html">QMediaService</a> identified by <i>key</i>.</p>
+<p>The <a href="qmediaservice.html">QMediaService</a> returned must be destroyed with <a href="qmediaserviceproviderplugin.html#release">release</a>().</p>
+<!-- @@@create -->
+<!-- $$$release[overload1]$$$releaseQMediaService* -->
+<h3 class="fn"><a name="release"></a><span class="type">void</span> QMediaServiceProviderPlugin::<span class="name">release</span>(<span class="type"><a href="qmediaservice.html">QMediaService</a></span> *<i> service</i>)<tt> [pure virtual]</tt></h3>
+<p>Destroys a media <i>service</i> constructed with <a href="qmediaserviceproviderplugin.html#create">create</a>().</p>
+<!-- @@@release -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- supported-platforms.qdoc -->
+  <title>QtDoc 5.0: Supported Platforms</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#desktop-platforms">Desktop Platforms</a></li>
+<li class="level1"><a href="#embedded-platforms">Embedded platforms</a></li>
+<li class="level1"><a href="#mobile-platforms">Mobile platforms</a></li>
+<li class="level1"><a href="#reference-configurations">Reference Configurations</a></li>
+<li class="level1"><a href="#availability-of-binary-installation-packages">Availability of Binary Installation Packages</a></li>
+<li class="level1"><a href="#general-legal-disclaimer">General Legal Disclaimer</a></li>
+</ul>
+</div>
+<h1 class="title">Supported Platforms</h1>
+<span class="subtitle"></span>
+<!-- $$$platform-details-description -->
+<div class="descr"> <a name="details"></a>
+<p>Qt is a cross-platform application and UI framework. Using Qt, you can write GUI applications once and deploy them across desktop, mobile and embedded operating systems without rewriting the source code.In Qt 5 all platforms are created using the new <a href="qpa.html">Qt Platform Abstraction</a> (QPA), which makes it easier than before to port Qt into a new operating system.</p>
+<p>Qt is supported on a variety of 32-bit and 64-bit platforms, and can usually be built on each platform with GCC, a vendor-supplied compiler, or a third party compiler. Open GL (ES) 2.0 or DirectX 9 (with ANGLE) is required for Qt Quick 2. Widgets and Qt Quick 1 can be used also without hardware acceleration.</p>
+<a name="desktop-platforms"></a>
+<h2>Desktop Platforms</h2>
+<p>You can develop with Qt on the following desktop platforms:</p>
+<ul>
+<li><a href="windows-support.html">Windows</a></li>
+<li><a href="linuxx11-support.html">Linux/X11</a></li>
+<li><a href="mac-support.html">Mac OS X</a></li>
+</ul>
+<a name="embedded-platforms"></a>
+<h2>Embedded platforms</h2>
+<p>You can develop with Qt for the following embedded platforms:</p>
+<ul>
+<li>Embedded Linux (DirectFB, EGLFS, KMS, and Wayland)</li>
+<li>Windows Embedded (Compact and Standard)</li>
+<li>Real-Time Operating Systems, such as <a href="platform-notes-qnx.html#qnx">QNX</a>, <a href="platform-notes-vxworks.html#vxworks">VxWorks</a> and INTEGRITY</li>
+</ul>
+<a name="mobile-platforms"></a>
+<h2>Mobile platforms</h2>
+<p>Qt 5 will support all leading mobile operating systems. There already exists work in progress support for:</p>
+<ul>
+<li>Android</li>
+<li>iOS</li>
+<li>Windows 8 (WinRT)</li>
+<li><a href="../qtmultimedia/blackberry.html">BlackBerry</a> 10</li>
+</ul>
+<a name="reference-configurations"></a>
+<h2>Reference Configurations</h2>
+<p>A <i>reference configuration</i> is a combination of an operating system version, a compiler version, and a graphics system. The following table lists the configurations that are tested by the Qt Project:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Platform</th><th >Compiler</th></tr></thead>
+<tr valign="top" class="odd"><td >Ubuntu Linux 11.10, X11 (64-bit)</td><td >As provided by Ubuntu</td></tr>
+<tr valign="top" class="even"><td >Ubuntu Linux 12.04, X11 (64-bit)</td><td >As provided by Ubuntu</td></tr>
+<tr valign="top" class="odd"><td >Microsoft Windows 7 (32-bit)</td><td >MSVC 2010 SP1</td></tr>
+<tr valign="top" class="even"><td >Microsoft Windows 7 (32-bit)</td><td ><a href="http://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.7.2/32-bit/threads-posix/sjlj/x32-4.7.2-release-posix-sjlj-rev8.7z">MinGW-builds gcc 4.7&#x2e;2 (32-bit)</a></td></tr>
+<tr valign="top" class="odd"><td >Microsoft Windows 8 (64-bit)</td><td >MSVC 2012</td></tr>
+<tr valign="top" class="even"><td >Apple Mac OS X 10.7 &quot;Lion&quot;, Cocoa (64-bit)</td><td >Clang as provided by Apple</td></tr>
+<tr valign="top" class="odd"><td >Apple Mac OS X 10.8 &quot;Mountain Lion&quot;, Cocoa (64-bit)</td><td >Clang as provided by Apple</td></tr>
+</table>
+<p>All these reference configurations are run on the continuous integration (CI) system of the Qt Project. In addition, they are subjected to unit test suite and other internal testing tools on a frequent basis (prior to new version releases, source tree branching, and at other significant period points in the development process). Errors or bugs discovered in these platforms are prioritized for correction. Significant errors discovered in tested configurations can impact release dates.</p>
+<p>Any configurations not listed above are not actively tested by the Qt Project. The Qt Project does not run its unit test suite or perform any other internal tests on configurations not listed above. However, Qt may run on configurations other than those actively tested on, and additional configurations may be raised to tested state, if sufficient effort is made to bring continuous integration to an acceptable state for that particular configuration.</p>
+<p>In addition to the reference platforms Qt is occasionally tested on other configurations in which it is known to run well. These include, for example:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Platform</th><th >Compiler</th></tr></thead>
+<tr valign="top" class="odd"><td >Ubuntu Linux 10.04, X11 (32-bit)</td><td >As provided by Ubuntu</td></tr>
+<tr valign="top" class="even"><td >Microsoft Windows XP (32-bit)</td><td >MSVC 2008</td></tr>
+<tr valign="top" class="odd"><td >Apple Mac OS X 10.6 &quot;Snow Leopard&quot;, Cocoa (32-bit)</td><td >GCC as provided by Apple</td></tr>
+</table>
+<p>Digia, Qt partners, open source projects and community users are able to provide assistance with various different supported platforms and configurations.</p>
+<a name="availability-of-binary-installation-packages"></a>
+<h2>Availability of Binary Installation Packages</h2>
+<p>The Qt Project provides binary Qt installation packages for all of the reference platforms.</p>
+<p>To develop with Qt on other supported platforms, you need to build it from source.</p>
+<p>Fore more information about the platforms Qt runs on, and the compilers used on each platform, see the <a href="platform-notes.html">Platform and Compiler Notes</a> page.</p>
+<a name="general-legal-disclaimer"></a>
+<h2>General Legal Disclaimer</h2>
+<p>Please note that Qt is offered on an &quot;as is&quot; basis without warranty of any kind and that our products are not error or bug free. To the maximum extent permitted by applicable law, Digia on behalf of itself and its suppliers, disclaims all warranties and conditions, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, title and non-infringement with regard to the Licensed Software.</p>
+</div>
+<!-- @@@platform-details -->
+<table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="windows-support.html">Support for Windows</a></p></td><td class="tblDescr"><p>Platform support for Windows.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="linuxx11-support.html">Support for Linux/X11</a></p></td><td class="tblDescr"><p>Platform support for Linux/X11.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="mac-support.html">Support for Mac OS X</a></p></td><td class="tblDescr"><p>Platform support for Mac OS X.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="platform-specific.html">Platform-Specific Documentation</a></p></td><td class="tblDescr"><p>Documents describing platform-specific features of Qt.</p></td></tr>
+</table>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

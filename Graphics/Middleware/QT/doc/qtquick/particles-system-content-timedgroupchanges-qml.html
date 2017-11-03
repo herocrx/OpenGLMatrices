@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtQuick 5.0: timedgroupchanges.qml Example File (particles/system/content/timedgroupchanges.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">timedgroupchanges.qml Example File</h1>
+<span class="small-subtitle">particles/system/content/timedgroupchanges.qml</span>
+<!-- $$$particles/system/content/timedgroupchanges.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the examples of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
+**
+** &quot;Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
+**
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+import QtQuick.Particles 2.0
+
+<span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">360</span>
+    <span class="name">height</span>: <span class="number">600</span>
+    <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+    <span class="type"><a href="qml-qtquick-particles2-particlesystem.html">ParticleSystem</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">id</span>: <span class="name">syssy</span>
+        <span class="type"><a href="qml-qtquick-particles2-particlegroup.html">ParticleGroup</a></span> {
+            <span class="name">name</span>: <span class="string">&quot;fire&quot;</span>
+            <span class="name">duration</span>: <span class="number">2000</span>
+            <span class="name">durationVariation</span>: <span class="number">2000</span>
+            <span class="name">to</span>: {&quot;splode&quot;:<span class="number">1</span>}
+        }
+        <span class="type"><a href="qml-qtquick-particles2-particlegroup.html">ParticleGroup</a></span> {
+            <span class="name">name</span>: <span class="string">&quot;splode&quot;</span>
+            <span class="name">duration</span>: <span class="number">400</span>
+            <span class="name">to</span>: {&quot;dead&quot;:<span class="number">1</span>}
+            <span class="type"><a href="qml-qtquick-particles2-trailemitter.html">TrailEmitter</a></span> {
+                <span class="name">group</span>: <span class="string">&quot;works&quot;</span>
+                <span class="name">emitRatePerParticle</span>: <span class="number">100</span>
+                <span class="name">lifeSpan</span>: <span class="number">1000</span>
+                <span class="name">maximumEmitted</span>: <span class="number">1200</span>
+                <span class="name">size</span>: <span class="number">8</span>
+                <span class="name">velocity</span>: <span class="name">AngleDirection</span> {<span class="name">angle</span>: <span class="number">270</span>; <span class="name">angleVariation</span>: <span class="number">45</span>; <span class="name">magnitude</span>: <span class="number">20</span>; <span class="name">magnitudeVariation</span>: <span class="number">20</span>;}
+                <span class="name">acceleration</span>: <span class="name">PointDirection</span> {<span class="name">y</span>:<span class="number">100</span>; <span class="name">yVariation</span>: <span class="number">20</span>}
+            }
+        }
+        <span class="type"><a href="qml-qtquick-particles2-particlegroup.html">ParticleGroup</a></span> {
+            <span class="name">name</span>: <span class="string">&quot;dead&quot;</span>
+            <span class="name">duration</span>: <span class="number">1000</span>
+            <span class="type"><a href="qml-qtquick-particles2-affector.html">Affector</a></span> {
+                <span class="name">once</span>: <span class="number">true</span>
+                <span class="name">onAffected</span>: <span class="name">worksEmitter</span>.<span class="name">burst</span>(<span class="number">400</span>,<span class="name">x</span>,<span class="name">y</span>)
+            }
+        }
+
+        <span class="type"><a href="../qtqml/qml-qtquick2-timer.html">Timer</a></span> {
+            <span class="name">interval</span>: <span class="number">6000</span>
+            <span class="name">running</span>: <span class="number">true</span>
+            <span class="name">triggeredOnStart</span>: <span class="number">true</span>
+            <span class="name">repeat</span>: <span class="number">true</span>
+            <span class="name">onTriggered</span>:<span class="name">startingEmitter</span>.<span class="name">pulse</span>(<span class="number">100</span>);
+        }
+        <span class="type"><a href="qml-qtquick-particles2-emitter.html">Emitter</a></span> {
+            <span class="name">id</span>: <span class="name">startingEmitter</span>
+            <span class="name">group</span>: <span class="string">&quot;fire&quot;</span>
+            <span class="name">width</span>: <span class="name">parent</span>.<span class="name">width</span>
+            <span class="name">y</span>: <span class="name">parent</span>.<span class="name">height</span>
+            <span class="name">enabled</span>: <span class="number">false</span>
+            <span class="name">emitRate</span>: <span class="number">80</span>
+            <span class="name">lifeSpan</span>: <span class="number">6000</span>
+            <span class="name">velocity</span>: <span class="name">PointDirection</span> {<span class="name">y</span>:-<span class="number">100</span>;}
+            <span class="name">size</span>: <span class="number">32</span>
+        }
+
+        <span class="type"><a href="qml-qtquick-particles2-emitter.html">Emitter</a></span> {
+            <span class="name">id</span>: <span class="name">worksEmitter</span>
+            <span class="name">group</span>: <span class="string">&quot;works&quot;</span>
+            <span class="name">enabled</span>: <span class="number">false</span>
+            <span class="name">emitRate</span>: <span class="number">100</span>
+            <span class="name">lifeSpan</span>: <span class="number">1600</span>
+            <span class="name">maximumEmitted</span>: <span class="number">6400</span>
+            <span class="name">size</span>: <span class="number">8</span>
+            <span class="name">velocity</span>: <span class="name">CumulativeDirection</span> {
+                <span class="type"><a href="qml-qtquick-particles2-pointdirection.html">PointDirection</a></span> {<span class="name">y</span>:-<span class="number">100</span>}
+                <span class="type"><a href="qml-qtquick-particles2-angledirection.html">AngleDirection</a></span> {<span class="name">angleVariation</span>: <span class="number">360</span>; <span class="name">magnitudeVariation</span>: <span class="number">80</span>;}
+            }
+            <span class="name">acceleration</span>: <span class="name">PointDirection</span> {<span class="name">y</span>:<span class="number">100</span>; <span class="name">yVariation</span>: <span class="number">20</span>}
+        }
+
+        <span class="type"><a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a></span> {
+            <span class="name">groups</span>: [<span class="string">&quot;works&quot;</span>, <span class="string">&quot;fire&quot;</span>, <span class="string">&quot;splode&quot;</span>]
+            <span class="name">source</span>: <span class="string">&quot;../../images/particle.png&quot;</span>
+            <span class="name">entryEffect</span>: <span class="name">ImageParticle</span>.<span class="name">Scale</span>
+        }
+    }
+}</pre>
+</div>
+<!-- @@@particles/system/content/timedgroupchanges.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

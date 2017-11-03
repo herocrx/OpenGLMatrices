@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qcamerazoomcontrol.cpp -->
+  <title>qtmultimedia 5.0: QCameraZoomControl Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#macros">Macros</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QCameraZoomControl Class</h1>
+<!-- $$$QCameraZoomControl-brief -->
+<p>The QCameraZoomControl class supplies control for optical and digital camera zoom. <a href="#details">More...</a></p>
+<!-- @@@QCameraZoomControl -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QCameraZoomControl&gt;</span></pre><p><b>Inherits: </b><a href="qmediacontrol.html">QMediaControl</a>.</p>
+<ul>
+<li><a href="qcamerazoomcontrol-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#dtor.QCameraZoomControl">~QCameraZoomControl</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#currentDigitalZoom">currentDigitalZoom</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#currentOpticalZoom">currentOpticalZoom</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#maximumDigitalZoom">maximumDigitalZoom</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#maximumOpticalZoom">maximumOpticalZoom</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#requestedDigitalZoom">requestedDigitalZoom</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#requestedOpticalZoom">requestedOpticalZoom</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#zoomTo">zoomTo</a></b>(qreal<i> optical</i>, qreal<i> digital</i>) = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#currentDigitalZoomChanged">currentDigitalZoomChanged</a></b>(qreal<i> zoom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#currentOpticalZoomChanged">currentOpticalZoomChanged</a></b>(qreal<i> zoom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#maximumDigitalZoomChanged">maximumDigitalZoomChanged</a></b>(qreal<i> zoom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#maximumOpticalZoomChanged">maximumOpticalZoomChanged</a></b>(qreal<i> zoom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#requestedDigitalZoomChanged">requestedDigitalZoomChanged</a></b>(qreal<i> zoom</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#requestedOpticalZoomChanged">requestedOpticalZoomChanged</a></b>(qreal<i> zoom</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2>Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#QCameraZoomControl">QCameraZoomControl</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+</table>
+<ul>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+</ul>
+<a name="macros"></a>
+<h2>Macros</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qcamerazoomcontrol.html#QCameraZoomControl_iid">QCameraZoomControl_iid</a></b></td></tr>
+</table>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QCameraZoomControl-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QCameraZoomControl class supplies control for optical and digital camera zoom.</p>
+<p>The interface name of QCameraZoomControl is <tt>org.qt-project.qt.camerazoomcontrol/5.0</tt> as defined in <a href="qcamerazoomcontrol.html#QCameraZoomControl_iid">QCameraZoomControl_iid</a>.</p>
+</div>
+<p><b>See also </b><a href="qmediaservice.html#requestControl">QMediaService::requestControl</a>() and <a href="qcamera.html">QCamera</a>.</p>
+<!-- @@@QCameraZoomControl -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QCameraZoomControl[overload1]$$$QCameraZoomControlQObject* -->
+<h3 class="fn"><a name="QCameraZoomControl"></a>QCameraZoomControl::<span class="name">QCameraZoomControl</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)<tt> [protected]</tt></h3>
+<p>Constructs a camera zoom control object with <i>parent</i>.</p>
+<!-- @@@QCameraZoomControl -->
+<!-- $$$~QCameraZoomControl[overload1]$$$~QCameraZoomControl -->
+<h3 class="fn"><a name="dtor.QCameraZoomControl"></a>QCameraZoomControl::<span class="name">~QCameraZoomControl</span>()</h3>
+<p>Destruct the camera zoom control object.</p>
+<!-- @@@~QCameraZoomControl -->
+<!-- $$$currentDigitalZoom[overload1]$$$currentDigitalZoom -->
+<h3 class="fn"><a name="currentDigitalZoom"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QCameraZoomControl::<span class="name">currentDigitalZoom</span>() const<tt> [pure virtual]</tt></h3>
+<p>Return the current digital zoom value.</p>
+<!-- @@@currentDigitalZoom -->
+<!-- $$$currentDigitalZoomChanged[overload1]$$$currentDigitalZoomChangedqreal -->
+<h3 class="fn"><a name="currentDigitalZoomChanged"></a><span class="type">void</span> QCameraZoomControl::<span class="name">currentDigitalZoomChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> zoom</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the current digital <i>zoom</i> value changed.</p>
+<!-- @@@currentDigitalZoomChanged -->
+<!-- $$$currentOpticalZoom[overload1]$$$currentOpticalZoom -->
+<h3 class="fn"><a name="currentOpticalZoom"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QCameraZoomControl::<span class="name">currentOpticalZoom</span>() const<tt> [pure virtual]</tt></h3>
+<p>Return the current optical zoom value.</p>
+<!-- @@@currentOpticalZoom -->
+<!-- $$$currentOpticalZoomChanged[overload1]$$$currentOpticalZoomChangedqreal -->
+<h3 class="fn"><a name="currentOpticalZoomChanged"></a><span class="type">void</span> QCameraZoomControl::<span class="name">currentOpticalZoomChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> zoom</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the current optical <i>zoom</i> value changed.</p>
+<!-- @@@currentOpticalZoomChanged -->
+<!-- $$$maximumDigitalZoom[overload1]$$$maximumDigitalZoom -->
+<h3 class="fn"><a name="maximumDigitalZoom"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QCameraZoomControl::<span class="name">maximumDigitalZoom</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the maximum digital zoom value, or 1.0 if digital zoom is not supported.</p>
+<!-- @@@maximumDigitalZoom -->
+<!-- $$$maximumDigitalZoomChanged[overload1]$$$maximumDigitalZoomChangedqreal -->
+<h3 class="fn"><a name="maximumDigitalZoomChanged"></a><span class="type">void</span> QCameraZoomControl::<span class="name">maximumDigitalZoomChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> zoom</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the maximum supported digital <i>zoom</i> value changed.</p>
+<p>The maximum supported zoom value can depend on other camera settings, like capture mode or resolution.</p>
+<!-- @@@maximumDigitalZoomChanged -->
+<!-- $$$maximumOpticalZoom[overload1]$$$maximumOpticalZoom -->
+<h3 class="fn"><a name="maximumOpticalZoom"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QCameraZoomControl::<span class="name">maximumOpticalZoom</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the maximum optical zoom value, or 1.0 if optical zoom is not supported.</p>
+<!-- @@@maximumOpticalZoom -->
+<!-- $$$maximumOpticalZoomChanged[overload1]$$$maximumOpticalZoomChangedqreal -->
+<h3 class="fn"><a name="maximumOpticalZoomChanged"></a><span class="type">void</span> QCameraZoomControl::<span class="name">maximumOpticalZoomChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> zoom</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the maximum supported optical <i>zoom</i> value changed.</p>
+<p>The maximum supported zoom value can depend on other camera settings, like focusing mode.</p>
+<!-- @@@maximumOpticalZoomChanged -->
+<!-- $$$requestedDigitalZoom[overload1]$$$requestedDigitalZoom -->
+<h3 class="fn"><a name="requestedDigitalZoom"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QCameraZoomControl::<span class="name">requestedDigitalZoom</span>() const<tt> [pure virtual]</tt></h3>
+<p>Return the requested digital zoom value.</p>
+<!-- @@@requestedDigitalZoom -->
+<!-- $$$requestedDigitalZoomChanged[overload1]$$$requestedDigitalZoomChangedqreal -->
+<h3 class="fn"><a name="requestedDigitalZoomChanged"></a><span class="type">void</span> QCameraZoomControl::<span class="name">requestedDigitalZoomChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> zoom</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the requested digital <i>zoom</i> value changed.</p>
+<!-- @@@requestedDigitalZoomChanged -->
+<!-- $$$requestedOpticalZoom[overload1]$$$requestedOpticalZoom -->
+<h3 class="fn"><a name="requestedOpticalZoom"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QCameraZoomControl::<span class="name">requestedOpticalZoom</span>() const<tt> [pure virtual]</tt></h3>
+<p>Return the requested optical zoom value.</p>
+<!-- @@@requestedOpticalZoom -->
+<!-- $$$requestedOpticalZoomChanged[overload1]$$$requestedOpticalZoomChangedqreal -->
+<h3 class="fn"><a name="requestedOpticalZoomChanged"></a><span class="type">void</span> QCameraZoomControl::<span class="name">requestedOpticalZoomChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> zoom</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the requested optical <i>zoom</i> value changed.</p>
+<!-- @@@requestedOpticalZoomChanged -->
+<!-- $$$zoomTo[overload1]$$$zoomToqrealqreal -->
+<h3 class="fn"><a name="zoomTo"></a><span class="type">void</span> QCameraZoomControl::<span class="name">zoomTo</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> optical</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> digital</i>)<tt> [pure virtual]</tt></h3>
+<p>Sets <i>optical</i> and <i>digital</i> zoom values.</p>
+<p>Zooming can be asynchronous with value changes reported with <a href="qcamerazoomcontrol.html#currentDigitalZoomChanged">currentDigitalZoomChanged</a>() and <a href="qcamerazoomcontrol.html#currentOpticalZoomChanged">currentOpticalZoomChanged</a>() signals.</p>
+<p>The backend should expect and correctly handle frequent zoomTo() calls during zoom animations or slider movements.</p>
+<!-- @@@zoomTo -->
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+<!-- $$$QCameraZoomControl_iid[overload1]$$$QCameraZoomControl_iid -->
+<h3 class="fn"><a name="QCameraZoomControl_iid"></a><span class="name">QCameraZoomControl_iid</span></h3>
+<p><tt>org.qt-project.qt.camerazoomcontrol/5.0</tt></p>
+<p>Defines the interface name of the <a href="qcamerazoomcontrol.html">QCameraZoomControl</a> class.</p>
+<!-- @@@QCameraZoomControl_iid -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

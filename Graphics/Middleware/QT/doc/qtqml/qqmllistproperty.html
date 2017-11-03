@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qqmllist.cpp -->
+  <title>QtQml 5.0: QQmlListProperty Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QQmlListProperty Class</h1>
+<!-- $$$QQmlListProperty-brief -->
+<p>The QQmlListProperty class allows applications to expose list-like properties to QML. <a href="#details">More...</a></p>
+<!-- @@@QQmlListProperty -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QQmlListProperty&gt;</span></pre><p>This class was introduced in QtQml 5.0.</p>
+<ul>
+<li><a href="qqmllistproperty-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> typedef </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#AppendFunction-typedef">AppendFunction</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> typedef </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#AtFunction-typedef">AtFunction</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> typedef </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#ClearFunction-typedef">ClearFunction</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> typedef </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#CountFunction-typedef">CountFunction</a></b></td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#QQmlListProperty">QQmlListProperty</a></b>(QObject *<i> object</i>, QList&lt;T *&gt; &amp;<i> list</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#QQmlListProperty-3">QQmlListProperty</a></b>(QObject *<i> object</i>, void *<i> data</i>, AppendFunction<i> append</i>, CountFunction<i> count</i>, AtFunction<i> at</i>, ClearFunction<i> clear</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#QQmlListProperty-4">QQmlListProperty</a></b>(QObject *<i> object</i>, void *<i> data</i>, CountFunction<i> count</i>, AtFunction<i> at</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qqmllistproperty.html#operator-eq-eq">operator==</a></b>(const QQmlListProperty &amp;<i> other</i>) const</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QQmlListProperty-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QQmlListProperty class allows applications to expose list-like properties to QML.</p>
+<p>QML has many list properties, where more than one object value can be assigned. The use of a list property from QML looks like this:</p>
+<pre class="cpp">FruitBasket {
+    fruit: <span class="operator">[</span>
+        Apple {}<span class="operator">,</span>
+        Orange{}<span class="operator">,</span>
+        Banana{}
+    <span class="operator">]</span>
+}</pre>
+<p>The QQmlListProperty encapsulates a group of function pointers that represet the set of actions QML can perform on the list - adding items, retrieving items and clearing the list. In the future, additional operations may be supported. All list properties must implement the append operation, but the rest are optional.</p>
+<p>To provide a list property, a C++ class must implement the operation callbacks, and then return an appropriate QQmlListProperty value from the property getter. List properties should have no setter. In the example above, the <a href="../qtcore/qobject.html#Q_PROPERTY">Q_PROPERTY</a>() declarative will look like this:</p>
+<pre class="cpp"><a href="../qtcore/qobject.html#Q_PROPERTY">Q_PROPERTY</a>(<span class="type">QQmlListProperty</span><span class="operator">&lt;</span>Fruit<span class="operator">&gt;</span> fruit READ fruit);</pre>
+<p>QML list properties are typesafe - in this case <tt>Fruit</tt> is a <a href="../qtcore/qobject.html">QObject</a> type that <tt>Apple</tt>, <tt>Orange</tt> and <tt>Banana</tt> all derive from.</p>
+<p>The <a href="../qtquick/qtquick-module.html">QtQuick</a> 1 version of this class is named QDeclarativeListProperty.</p>
+<p><b>Note: </b>QQmlListProperty can only be used for lists of <a href="../qtcore/qobject.html">QObject</a>-derived object pointers.</p></div>
+<!-- @@@QQmlListProperty -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$AppendFunction -->
+<h3 class="fn"><a name="AppendFunction-typedef"></a>typedef QQmlListProperty::<span class="name">AppendFunction</span></h3>
+<p>Synonym for <tt>void (*)(QQmlListProperty&lt;T&gt; *property, T *value)</tt>.</p>
+<p>Append the <i>value</i> to the list <i>property</i>.</p>
+<!-- @@@AppendFunction -->
+<!-- $$$AtFunction -->
+<h3 class="fn"><a name="AtFunction-typedef"></a>typedef QQmlListProperty::<span class="name">AtFunction</span></h3>
+<p>Synonym for <tt>T *(*)(QQmlListProperty&lt;T&gt; *property, int index)</tt>.</p>
+<p>Return the element at position <i>index</i> in the list <i>property</i>.</p>
+<!-- @@@AtFunction -->
+<!-- $$$ClearFunction -->
+<h3 class="fn"><a name="ClearFunction-typedef"></a>typedef QQmlListProperty::<span class="name">ClearFunction</span></h3>
+<p>Synonym for <tt>void (*)(QQmlListProperty&lt;T&gt; *property)</tt>.</p>
+<p>Clear the list <i>property</i>.</p>
+<!-- @@@ClearFunction -->
+<!-- $$$CountFunction -->
+<h3 class="fn"><a name="CountFunction-typedef"></a>typedef QQmlListProperty::<span class="name">CountFunction</span></h3>
+<p>Synonym for <tt>int (*)(QQmlListProperty&lt;T&gt; *property)</tt>.</p>
+<p>Return the number of elements in the list <i>property</i>.</p>
+<!-- @@@CountFunction -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QQmlListProperty[overload1]$$$QQmlListPropertyQObject*QList<T*>& -->
+<h3 class="fn"><a name="QQmlListProperty"></a>QQmlListProperty::<span class="name">QQmlListProperty</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> object</i>, <span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type">T</span> *&gt; &amp;<i> list</i>)</h3>
+<p>Convenience constructor for making a <a href="qqmllistproperty.html">QQmlListProperty</a> value from an existing <a href="../qtcore/qlist.html">QList</a> <i>list</i>. The <i>list</i> reference must remain valid for as long as <i>object</i> exists. <i>object</i> must be provided.</p>
+<p>Generally this constructor should not be used in production code, as a writable <a href="../qtcore/qlist.html">QList</a> violates QML's memory management rules. However, this constructor can very useful while prototyping.</p>
+<!-- @@@QQmlListProperty -->
+<!-- $$$QQmlListProperty$$$QQmlListPropertyQObject*void*AppendFunctionCountFunctionAtFunctionClearFunction -->
+<h3 class="fn"><a name="QQmlListProperty-3"></a>QQmlListProperty::<span class="name">QQmlListProperty</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> object</i>, <span class="type">void</span> *<i> data</i>, <span class="type"><a href="qqmllistproperty.html#AppendFunction-typedef">AppendFunction</a></span><i> append</i>, <span class="type"><a href="qqmllistproperty.html#CountFunction-typedef">CountFunction</a></span><i> count</i>, <span class="type"><a href="qqmllistproperty.html#AtFunction-typedef">AtFunction</a></span><i> at</i>, <span class="type"><a href="qqmllistproperty.html#ClearFunction-typedef">ClearFunction</a></span><i> clear</i>)</h3>
+<p>Construct a <a href="qqmllistproperty.html">QQmlListProperty</a> from a set of operation functions. An opaque <i>data</i> handle may be passed which can be accessed from within the operation functions. The list property remains valid while <i>object</i> exists.</p>
+<p>You can pass a null pointer, but than the list will be not designable or changeable by the debugger. So provide all function, except it is not possible.</p>
+<!-- @@@QQmlListProperty -->
+<!-- $$$QQmlListProperty$$$QQmlListPropertyQObject*void*CountFunctionAtFunction -->
+<h3 class="fn"><a name="QQmlListProperty-4"></a>QQmlListProperty::<span class="name">QQmlListProperty</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> object</i>, <span class="type">void</span> *<i> data</i>, <span class="type"><a href="qqmllistproperty.html#CountFunction-typedef">CountFunction</a></span><i> count</i>, <span class="type"><a href="qqmllistproperty.html#AtFunction-typedef">AtFunction</a></span><i> at</i>)</h3>
+<p>Construct a readonly <a href="qqmllistproperty.html">QQmlListProperty</a> from a set of operation functions. An opaque <i>data</i> handle may be passed which can be accessed from within the operation functions. The list property remains valid while <i>object</i> exists.</p>
+<!-- @@@QQmlListProperty -->
+<!-- $$$operator==[overload1]$$$operator==constQQmlListProperty& -->
+<h3 class="fn"><a name="operator-eq-eq"></a><span class="type">bool</span> QQmlListProperty::<span class="name">operator==</span>(const <span class="type">QQmlListProperty</span> &amp;<i> other</i>) const</h3>
+<p>Returns true if this <a href="qqmllistproperty.html">QQmlListProperty</a> is equal to <i>other</i>, otherwise false.</p>
+<!-- @@@operator== -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

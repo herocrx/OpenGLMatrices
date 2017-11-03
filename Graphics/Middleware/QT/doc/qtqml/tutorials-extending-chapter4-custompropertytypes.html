@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- extending-tutorial.qdoc -->
+  <title>QtQml 5.0: Chapter 4: Using Custom Property Types</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Chapter 4: Using Custom Property Types</h1>
+<span class="subtitle"></span>
+<!-- $$$tutorials/extending/chapter4-customPropertyTypes-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>PieChart</tt> type currently has a string-type property and a color-type property. It could have many other types of properties. For example, it could have an int-type property to store an identifier for each chart:</p>
+<pre class="cpp"><span class="comment">// C++</span>
+<span class="keyword">class</span> PieChart : <span class="keyword">public</span> <span class="type"><a href="../qtquick/qquickpainteditem.html">QQuickPaintedItem</a></span>
+{
+    Q_PROPERTY(<span class="type">int</span> chartId READ chartId WRITE setChartId NOTIFY chartIdChanged)
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+
+<span class="keyword">public</span>:
+    <span class="type">void</span> setChartId(<span class="type">int</span> chartId);
+    <span class="type">int</span> chartId() <span class="keyword">const</span>;
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+
+<span class="keyword">signals</span>:
+    <span class="type">void</span> chartIdChanged();
+};
+
+<span class="comment">// QML</span>
+PieChart {
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    chartId: <span class="number">100</span>
+}</pre>
+<p>Aside from <tt>int</tt>, we could use various other property types. Many of the Qt data types such as <a href="../qtgui/qcolor.html">QColor</a>, <a href="../qtcore/qsize.html">QSize</a> and <a href="../qtcore/qrect.html">QRect</a> are automatically supported from QML. (See <a href="qtqml-cppintegration-data.html">Data Type Conversion Between QML and C++</a> documentation for a full list.)</p>
+<p>If we want to create a property whose type is not supported by QML by default, we need to register the type with the QML engine.</p>
+<p>For example, let's replace the use of the <tt>property</tt> with a type called &quot;PieSlice&quot; that has a <tt>color</tt> property. Instead of assigning a color, we assign an <tt>PieSlice</tt> value which itself contains a <tt>color</tt>:</p>
+<pre class="qml"></pre>
+<p>Like <tt>PieChart</tt>, this new <tt>PieSlice</tt> type inherits from <a href="../qtquick/qquickpainteditem.html">QQuickPaintedItem</a> and declares its properties with <a href="../qtcore/qobject.html#Q_PROPERTY">Q_PROPERTY</a>():</p>
+<pre class="cpp"></pre>
+<p>To use it in <tt>PieChart</tt>, we modify the <tt>color</tt> property declaration and associated method signatures:</p>
+<pre class="cpp">    ...
+    ...
+    ...</pre>
+<p>There is one thing to be aware of when implementing <tt>setPieSlice()</tt>. The <tt>PieSlice</tt> is a visual item, so it must be set as a child of the <tt>PieChart</tt> using <a href="../qtquick/qquickitem.html#parent-prop">QQuickItem::setParentItem</a>() so that the <tt>PieChart</tt> knows to paint this child item when its contents are drawn:</p>
+<pre class="cpp"></pre>
+<p>Like the <tt>PieChart</tt> type, the <tt>PieSlice</tt> type has to be registered using <a href="qqmlengine.html#qmlRegisterType">qmlRegisterType</a>() to be used from QML. As with <tt>PieChart</tt>, we'll add the type to the &quot;Charts&quot; type namespace, version 1.0:</p>
+<pre class="cpp">    ...
+    ...</pre>
+<p>Try it out with the code in Qt's <tt>examples/quick/tutorials/extending/chapter4-customPropertyTypes</tt> directory.</p>
+</div>
+<!-- @@@tutorials/extending/chapter4-customPropertyTypes -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

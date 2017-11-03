@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickshadereffectsource.cpp -->
+  <title>QtQuick 5.0: ShaderEffectSource</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">ShaderEffectSource</h1>
+<span class="subtitle"></span>
+<!-- $$$ShaderEffectSource-brief -->
+<p>Renders a <a href="qtquick-module.html">QtQuick</a> item into a texture and displays it <a href="#details">More...</a></p>
+<!-- @@@ShaderEffectSource -->
+<p>Inherits <a href="qml-qtquick2-item.html">Item</a></p>
+<p>This type was introduced in  QtQuick 2.0.</p>
+<ul>
+<li><a href="qml-qtquick2-shadereffectsource-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#format-prop">format</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#hideSource-prop">hideSource</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#live-prop">live</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#mipmap-prop">mipmap</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#recursive-prop">recursive</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a></b></b> : Item</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#sourceRect-prop">sourceRect</a></b></b> : rect</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#textureSize-prop">textureSize</a></b></b> : size</li>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#wrapMode-prop">wrapMode</a></b></b> : enumeration</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-shadereffectsource.html#scheduleUpdate-method">scheduleUpdate</a></b></b>()</li>
+</ul>
+<!-- $$$ShaderEffectSource-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The ShaderEffectSource type renders <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> into a texture and displays it in the scene. <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> is drawn into the texture as though it was a fully opaque root item. Thus <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> itself can be invisible, but still appear in the texture.</p>
+<p>ShaderEffectSource can be used as:</p>
+<ul>
+<li>a texture source in a <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a>. This allows you to apply custom shader effects to any <a href="qtquick-module.html">QtQuick</a> item.</li>
+<li>a cache for a complex item. The complex item can be rendered once into the texture, which can then be animated freely without the need to render the complex item again every frame.</li>
+<li>an opacity layer. ShaderEffectSource allows you to apply an opacity to items as a group rather than each item individually.</li>
+</ul>
+<table class="generic">
+ <tr valign="top" class="odd"><td ><p class="centerAlign"><img src="images/declarative-shadereffectsource.png" alt="" /></p></td><td ><pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>
+    <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">gradient</span>: <span class="name">Gradient</span> {
+        <span class="type"><a href="qml-qtquick2-gradientstop.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">0</span>; <span class="name">color</span>: <span class="string">&quot;white&quot;</span> }
+        <span class="type"><a href="qml-qtquick2-gradientstop.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">1</span>; <span class="name">color</span>: <span class="string">&quot;black&quot;</span> }
+    }
+    <span class="type"><a href="qml-qtquick2-row.html">Row</a></span> {
+        <span class="name">opacity</span>: <span class="number">0.5</span>
+        <span class="type"><a href="qml-qtquick2-item.html">Item</a></span> {
+            <span class="name">id</span>: <span class="name">foo</span>
+            <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+            <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> { <span class="name">x</span>: <span class="number">5</span>; <span class="name">y</span>: <span class="number">5</span>; <span class="name">width</span>: <span class="number">60</span>; <span class="name">height</span>: <span class="number">60</span>; <span class="name">color</span>: <span class="string">&quot;red&quot;</span> }
+            <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> { <span class="name">x</span>: <span class="number">20</span>; <span class="name">y</span>: <span class="number">20</span>; <span class="name">width</span>: <span class="number">60</span>; <span class="name">height</span>: <span class="number">60</span>; <span class="name">color</span>: <span class="string">&quot;orange&quot;</span> }
+            <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> { <span class="name">x</span>: <span class="number">35</span>; <span class="name">y</span>: <span class="number">35</span>; <span class="name">width</span>: <span class="number">60</span>; <span class="name">height</span>: <span class="number">60</span>; <span class="name">color</span>: <span class="string">&quot;yellow&quot;</span> }
+        }
+        <span class="type">ShaderEffectSource</span> {
+            <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+            <span class="name">sourceItem</span>: <span class="name">foo</span>
+        }
+    }
+}</pre>
+</td></tr>
+</table>
+<p>The ShaderEffectSource type does not redirect any mouse or keyboard input to <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a>. If you hide the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> by setting <a href="qml-qtquick2-item.html#visible-prop">visible</a> to false or <a href="qml-qtquick2-item.html#opacity-prop">opacity</a> to zero, it will no longer react to input. In cases where the ShaderEffectSource is meant to replace the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a>, you typically want to hide the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> while still handling input. For this, you can use the <a href="qml-qtquick2-shadereffectsource.html#hideSource-prop">hideSource</a> property.</p>
+<p><b>Note: </b>If <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> is a <a href="qml-qtquick2-rectangle.html">Rectangle</a> with border, by default half the border width falls outside the texture. To get the whole border, you can extend the <a href="qml-qtquick2-shadereffectsource.html#sourceRect-prop">sourceRect</a>.</p><p><b>Note: </b>The ShaderEffectSource relies on FBO multisampling support to antialias edges. If the underlying hardware does not support this, which is the case for most embedded graphics chips, edges rendered inside a ShaderEffectSource will not be antialiased. One way to remedy this is to double the size of the effect source and render it with <tt>smooth: true</tt> (this is the default value of smooth). This will be equivalent to 4x multisampling, at the cost of lower performance and higher memory use.</p><p><b>Warning:</b> In most cases, using a ShaderEffectSource will decrease performance, and in all cases, it will increase video memory usage. Rendering through a ShaderEffectSource might also lead to lower quality since some OpenGL implementations support multisampled backbuffer, but not multisampled framebuffer objects.</p>
+<!-- @@@ShaderEffectSource -->
+<h2>Property Documentation</h2>
+<!-- $$$format -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="format-prop"></a><span class="name">format</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property defines the internal OpenGL format of the texture. Modifying this property makes most sense when the item is used as a source texture of a <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a>. Depending on the OpenGL implementation, this property might allow you to save some texture memory.</p>
+<ul>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.Alpha - GL_ALPHA</li>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.RGB - GL_RGB</li>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.RGBA - GL_RGBA</li>
+</ul>
+<p><b>Note: </b>Some OpenGL implementations do not support the GL_ALPHA format.</p></div></div><!-- @@@format -->
+<br/>
+<!-- $$$hideSource -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="hideSource-prop"></a><span class="name">hideSource</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>If this property is true, the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> is hidden, though it will still be rendered into the texture. As opposed to hiding the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> by setting <a href="qml-qtquick2-item.html#visible-prop">visible</a> to false, setting this property to true will not prevent mouse or keyboard input from reaching <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a>. The property is useful when the <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> is anchored on top of, and meant to replace the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a>.</p>
+</div></div><!-- @@@hideSource -->
+<br/>
+<!-- $$$live -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="live-prop"></a><span class="name">live</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>If this property is true, the texture is updated whenever the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> updates. Otherwise, it will be a frozen image, even if <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> is assigned a new item. The property is true by default.</p>
+</div></div><!-- @@@live -->
+<br/>
+<!-- $$$mipmap -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="mipmap-prop"></a><span class="name">mipmap</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>If this property is true, mipmaps are generated for the texture.</p>
+<p><b>Note: </b>Some OpenGL ES 2 implementations do not support mipmapping of non-power-of-two textures.</p></div></div><!-- @@@mipmap -->
+<br/>
+<!-- $$$recursive -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="recursive-prop"></a><span class="name">recursive</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>Set this property to true if the <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> has a dependency on itself. ShaderEffectSources form a dependency chain, where one <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> can be part of the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> of another. If there is a loop in this chain, a <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> could end up trying to render into the same texture it is using as source, which is not allowed by OpenGL. When this property is set to true, an extra texture is allocated so that <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> can keep a copy of the texture from the previous frame. It can then render into one texture and use the texture from the previous frame as source.</p>
+<p>Setting both this property and <a href="qml-qtquick2-shadereffectsource.html#live-prop">live</a> to true will cause the scene graph to render continuously. Since the <a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> depends on itself, updating it means that it immediately becomes dirty again.</p>
+</div></div><!-- @@@recursive -->
+<br/>
+<!-- $$$sourceItem -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sourceItem-prop"></a><span class="name">sourceItem</span> : <span class="type"><a href="qml-qtquick2-item.html">Item</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the item to be rendered into the texture. Setting this to null while <a href="qml-qtquick2-shadereffectsource.html#live-prop">live</a> is true, will release the texture resources.</p>
+</div></div><!-- @@@sourceItem -->
+<br/>
+<!-- $$$sourceRect -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sourceRect-prop"></a><span class="name">sourceRect</span> : <span class="type"><a href="../qtqml/qml-rect.html">rect</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property defines which rectangular area of the <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> to render into the texture. The source rectangle can be larger than <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> itself. If the rectangle is null, which is the default, the whole <a href="qml-qtquick2-shadereffectsource.html#sourceItem-prop">sourceItem</a> is rendered to texture.</p>
+</div></div><!-- @@@sourceRect -->
+<br/>
+<!-- $$$textureSize -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="textureSize-prop"></a><span class="name">textureSize</span> : <span class="type"><a href="../qtqml/qml-size.html">size</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the requested size of the texture. If it is empty, which is the default, the size of the source rectangle is used.</p>
+<p><b>Note: </b>Some platforms have a limit on how small framebuffer objects can be, which means the actual texture size might be larger than the requested size.</p></div></div><!-- @@@textureSize -->
+<br/>
+<!-- $$$wrapMode -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="wrapMode-prop"></a><span class="name">wrapMode</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property defines the OpenGL wrap modes associated with the texture. Modifying this property makes most sense when the item is used as a source texture of a <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a>.</p>
+<ul>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.ClampToEdge - GL_CLAMP_TO_EDGE both horizontally and vertically</li>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.RepeatHorizontally - GL_REPEAT horizontally, GL_CLAMP_TO_EDGE vertically</li>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.RepeatVertically - GL_CLAMP_TO_EDGE horizontally, GL_REPEAT vertically</li>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a>.Repeat - GL_REPEAT both horizontally and vertically</li>
+</ul>
+<p><b>Note: </b>Some OpenGL ES 2 implementations do not support the GL_REPEAT wrap mode with non-power-of-two textures.</p></div></div><!-- @@@wrapMode -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$scheduleUpdate -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="scheduleUpdate-method"></a>ShaderEffectSource::<span class="name">scheduleUpdate</span>()</p></td></tr></table></div><div class="qmldoc"><p>Schedules a re-rendering of the texture for the next frame. Use this to update the texture when <a href="qml-qtquick2-shadereffectsource.html#live-prop">live</a> is false.</p>
+</div></div><!-- @@@scheduleUpdate -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

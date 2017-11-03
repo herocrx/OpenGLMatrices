@@ -1,0 +1,14 @@
+prefix=/home/heroadm/Qt//5.0.2/gcc_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 DesignerComponents
+Description: Qt DesignerComponents module
+Version: 5.0.2
+Libs: -L${libdir} -lQt5DesignerComponents 
+Libs.private: -L/usr/X11R6/lib64 
+Cflags: -I${includedir}/QtDesignerComponents -I${includedir}
+Requires: Qt5Core Qt5Gui Qt5Widgets Qt5Designer
+

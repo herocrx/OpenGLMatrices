@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmediagaplessplaybackcontrol.cpp -->
+  <title>qtmultimedia 5.0: QMediaGaplessPlaybackControl Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#macros">Macros</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QMediaGaplessPlaybackControl Class</h1>
+<!-- $$$QMediaGaplessPlaybackControl-brief -->
+<p>The QMediaGaplessPlaybackControl class provides access to the gapless playback related control of a <a href="qmediaservice.html">QMediaService</a>. <a href="#details">More...</a></p>
+<!-- @@@QMediaGaplessPlaybackControl -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QMediaGaplessPlaybackControl&gt;</span></pre><p><b>Inherits: </b><a href="qmediacontrol.html">QMediaControl</a>.</p>
+<ul>
+<li><a href="qmediagaplessplaybackcontrol-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#dtor.QMediaGaplessPlaybackControl">~QMediaGaplessPlaybackControl</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual qreal </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#crossfadeTime">crossfadeTime</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#isCrossfadeSupported">isCrossfadeSupported</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QMediaContent </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#nextMedia">nextMedia</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#setCrossfadeTime">setCrossfadeTime</a></b>(qreal<i> crossfadeTime</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#setNextMedia">setNextMedia</a></b>(const QMediaContent &amp;<i> media</i>) = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#advancedToNextMedia">advancedToNextMedia</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#crossfadeTimeChanged">crossfadeTimeChanged</a></b>(qreal<i> crossfadeTime</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#nextMediaChanged">nextMediaChanged</a></b>(const QMediaContent &amp;<i> media</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2>Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#QMediaGaplessPlaybackControl">QMediaGaplessPlaybackControl</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+</table>
+<ul>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+</ul>
+<a name="macros"></a>
+<h2>Macros</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qmediagaplessplaybackcontrol.html#QMediaGaplessPlaybackControl_iid">QMediaGaplessPlaybackControl_iid</a></b></td></tr>
+</table>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QMediaGaplessPlaybackControl-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QMediaGaplessPlaybackControl class provides access to the gapless playback related control of a <a href="qmediaservice.html">QMediaService</a>.</p>
+<p>If a <a href="qmediaservice.html">QMediaService</a> supports gapless playback it will implement QMediaGaplessPlaybackControl. This control provides a means to set the <a href="qmediagaplessplaybackcontrol.html#setNextMedia">next media</a> or <a href="qmediagaplessplaybackcontrol.html#setCrossfadeTime">crossfade time</a> for smooth transitions between tracks.</p>
+<p>The functionality provided by this control is exposed to application code through the <a href="qmediaplayer.html">QMediaPlayer</a> class.</p>
+<p>The interface name of QMediaGaplessPlaybackControl is <tt>org.qt-project.qt.mediagaplessplaybackcontrol/5.0</tt> as defined in <a href="qmediagaplessplaybackcontrol.html#QMediaGaplessPlaybackControl_iid">QMediaGaplessPlaybackControl_iid</a>.</p>
+</div>
+<p><b>See also </b><a href="qmediaservice.html#requestControl">QMediaService::requestControl</a>() and <a href="qmediaplayer.html">QMediaPlayer</a>.</p>
+<!-- @@@QMediaGaplessPlaybackControl -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QMediaGaplessPlaybackControl[overload1]$$$QMediaGaplessPlaybackControlQObject* -->
+<h3 class="fn"><a name="QMediaGaplessPlaybackControl"></a>QMediaGaplessPlaybackControl::<span class="name">QMediaGaplessPlaybackControl</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)<tt> [protected]</tt></h3>
+<p>Constructs a new gapless playback control with the given <i>parent</i>.</p>
+<!-- @@@QMediaGaplessPlaybackControl -->
+<!-- $$$~QMediaGaplessPlaybackControl[overload1]$$$~QMediaGaplessPlaybackControl -->
+<h3 class="fn"><a name="dtor.QMediaGaplessPlaybackControl"></a>QMediaGaplessPlaybackControl::<span class="name">~QMediaGaplessPlaybackControl</span>()<tt> [virtual]</tt></h3>
+<p>Destroys a gapless playback control.</p>
+<!-- @@@~QMediaGaplessPlaybackControl -->
+<!-- $$$advancedToNextMedia[overload1]$$$advancedToNextMedia -->
+<h3 class="fn"><a name="advancedToNextMedia"></a><span class="type">void</span> QMediaGaplessPlaybackControl::<span class="name">advancedToNextMedia</span>()<tt> [signal]</tt></h3>
+<p>Signals when the player advances to the next media (the content of next media will be cleared).</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#nextMedia">nextMedia</a>().</p>
+<!-- @@@advancedToNextMedia -->
+<!-- $$$crossfadeTime[overload1]$$$crossfadeTime -->
+<h3 class="fn"><a name="crossfadeTime"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QMediaGaplessPlaybackControl::<span class="name">crossfadeTime</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns current crossfade time in seconds.</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#setCrossfadeTime">setCrossfadeTime</a>().</p>
+<!-- @@@crossfadeTime -->
+<!-- $$$crossfadeTimeChanged[overload1]$$$crossfadeTimeChangedqreal -->
+<h3 class="fn"><a name="crossfadeTimeChanged"></a><span class="type">void</span> QMediaGaplessPlaybackControl::<span class="name">crossfadeTimeChanged</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> crossfadeTime</i>)<tt> [signal]</tt></h3>
+<p>Signals that the <i>crossfadeTime</i> has changed.</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#crossfadeTime">crossfadeTime</a>().</p>
+<!-- @@@crossfadeTimeChanged -->
+<!-- $$$isCrossfadeSupported[overload1]$$$isCrossfadeSupported -->
+<h3 class="fn"><a name="isCrossfadeSupported"></a><span class="type">bool</span> QMediaGaplessPlaybackControl::<span class="name">isCrossfadeSupported</span>() const<tt> [pure virtual]</tt></h3>
+<p>Indicates whether crossfading is supported or not. If crossfading is not supported, <a href="qmediagaplessplaybackcontrol.html#setCrossfadeTime">setCrossfadeTime</a>() will be ignored and <a href="qmediagaplessplaybackcontrol.html#crossfadeTime">crossfadeTime</a>() will always return 0.</p>
+<!-- @@@isCrossfadeSupported -->
+<!-- $$$nextMedia[overload1]$$$nextMedia -->
+<h3 class="fn"><a name="nextMedia"></a><span class="type"><a href="qmediacontent.html">QMediaContent</a></span> QMediaGaplessPlaybackControl::<span class="name">nextMedia</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the content of the next media</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#setNextMedia">setNextMedia</a>().</p>
+<!-- @@@nextMedia -->
+<!-- $$$nextMediaChanged[overload1]$$$nextMediaChangedconstQMediaContent& -->
+<h3 class="fn"><a name="nextMediaChanged"></a><span class="type">void</span> QMediaGaplessPlaybackControl::<span class="name">nextMediaChanged</span>(const <span class="type"><a href="qmediacontent.html">QMediaContent</a></span> &amp;<i> media</i>)<tt> [signal]</tt></h3>
+<p>Signals that the next <i>media</i> has changed (either explicitly via <a href="qmediagaplessplaybackcontrol.html#setNextMedia">setNextMedia</a>() or when the player clears the next media while advancing to it).</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#nextMedia">nextMedia</a>().</p>
+<!-- @@@nextMediaChanged -->
+<!-- $$$setCrossfadeTime[overload1]$$$setCrossfadeTimeqreal -->
+<h3 class="fn"><a name="setCrossfadeTime"></a><span class="type">void</span> QMediaGaplessPlaybackControl::<span class="name">setCrossfadeTime</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> crossfadeTime</i>)<tt> [pure virtual]</tt></h3>
+<p>Sets the <i>crossfadeTime</i> in seconds for smooth transition.</p>
+<p>Positive value means how much time it will take for the next media to transit from silent to full volume and vice versa for current one. So both current and the next one will be playing during this period of time.</p>
+<p>A crossfade time of zero or negative will result in gapless playback (suitable for some continuous media).</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#crossfadeTime">crossfadeTime</a>().</p>
+<!-- @@@setCrossfadeTime -->
+<!-- $$$setNextMedia[overload1]$$$setNextMediaconstQMediaContent& -->
+<h3 class="fn"><a name="setNextMedia"></a><span class="type">void</span> QMediaGaplessPlaybackControl::<span class="name">setNextMedia</span>(const <span class="type"><a href="qmediacontent.html">QMediaContent</a></span> &amp;<i> media</i>)<tt> [pure virtual]</tt></h3>
+<p>Sets the next <i>media</i> for smooth transition.</p>
+<p><b>See also </b><a href="qmediagaplessplaybackcontrol.html#nextMedia">nextMedia</a>().</p>
+<!-- @@@setNextMedia -->
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+<!-- $$$QMediaGaplessPlaybackControl_iid[overload1]$$$QMediaGaplessPlaybackControl_iid -->
+<h3 class="fn"><a name="QMediaGaplessPlaybackControl_iid"></a><span class="name">QMediaGaplessPlaybackControl_iid</span></h3>
+<p><tt>org.qt-project.qt.mediagaplessplaybackcontrol/5.0</tt></p>
+<p>Defines the interface name of the <a href="qmediagaplessplaybackcontrol.html">QMediaGaplessPlaybackControl</a> class.</p>
+<!-- @@@QMediaGaplessPlaybackControl_iid -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- abstractformwindowmanager.cpp -->
+  <title>QtDesigner : QDesignerFormWindowManagerInterface Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QDesignerFormWindowManagerInterface Class</h1>
+<!-- $$$QDesignerFormWindowManagerInterface-brief -->
+<p>The QDesignerFormWindowManagerInterface class allows you to manipulate the collection of form windows in Qt Designer, and control Qt Designer's form editing actions. <a href="#details">More...</a></p>
+<!-- @@@QDesignerFormWindowManagerInterface -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QDesignerFormWindowManagerInterface&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<p><b>Inherited by: </b><a href="qdesigner-internal-qdesignerformwindowmanager.html">qdesigner_internal::QDesignerFormWindowManager</a>.</p>
+<ul>
+<li><a href="qdesignerformwindowmanagerinterface-members.html">List of all members, including inherited members</a></li>
+<li><a href="qdesignerformwindowmanagerinterface-obsolete.html">Obsolete members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#Action-enum">Action</a></b> { CutAction, CopyAction, PasteAction, DeleteAction, ..., FormWindowSettingsDialogAction }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#ActionGroup-enum">ActionGroup</a></b> { StyledPreviewActionGroup }</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#QDesignerFormWindowManagerInterface">QDesignerFormWindowManagerInterface</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#dtor.QDesignerFormWindowManagerInterface">~QDesignerFormWindowManagerInterface</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QAction * </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#action">action</a></b>(Action<i> action</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QActionGroup * </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#actionGroup">actionGroup</a></b>(ActionGroup<i> actionGroup</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QDesignerFormWindowInterface * </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#activeFormWindow">activeFormWindow</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QDesignerFormEditorInterface * </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#core">core</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QDesignerFormWindowInterface * </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#createFormWindow">createFormWindow</a></b>(QWidget *<i> parent</i> = 0, Qt::WindowFlags<i> flags</i> = 0) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QPixmap </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#createPreviewPixmap">createPreviewPixmap</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QDesignerFormWindowInterface * </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#formWindow">formWindow</a></b>(int<i> index</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual int </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#formWindowCount">formWindowCount</a></b>() const = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#addFormWindow">addFormWindow</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#closeAllPreviews">closeAllPreviews</a></b>() = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#removeFormWindow">removeFormWindow</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#setActiveFormWindow">setActiveFormWindow</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#showPluginDialog">showPluginDialog</a></b>() = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#showPreview">showPreview</a></b>() = 0</td></tr>
+</table>
+<ul>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#activeFormWindowChanged">activeFormWindowChanged</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#formWindowAdded">formWindowAdded</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#formWindowRemoved">formWindowRemoved</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qdesignerformwindowmanagerinterface.html#formWindowSettingsChanged">formWindowSettingsChanged</a></b>(QDesignerFormWindowInterface *<i> formWindow</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QDesignerFormWindowManagerInterface-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QDesignerFormWindowManagerInterface class allows you to manipulate the collection of form windows in Qt Designer, and control Qt Designer's form editing actions.</p>
+<p>QDesignerFormWindowManagerInterface is not intended to be instantiated directly. <i>Qt Designer</i> uses the form window manager to control the various form windows in its workspace. You can retrieve an interface to <i>Qt Designer</i>'s form window manager using the <a href="qdesignerformeditorinterface.html#formWindowManager">QDesignerFormEditorInterface::formWindowManager</a>() function. For example:</p>
+<pre class="cpp">        <span class="type">QDesignerFormWindowManagerInterface</span> <span class="operator">*</span>manager <span class="operator">=</span> <span class="number">0</span>;
+        <span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> <span class="operator">*</span>formWindow <span class="operator">=</span> <span class="number">0</span>;
+
+        manager <span class="operator">=</span> formEditor<span class="operator">-</span><span class="operator">&gt;</span>formWindowManager();
+        formWindow <span class="operator">=</span> manager<span class="operator">-</span><span class="operator">&gt;</span><a href="qdesignerformwindowmanagerinterface.html#formWindow">formWindow</a>(<span class="number">0</span>);
+
+        manager<span class="operator">-</span><span class="operator">&gt;</span><a href="qdesignerformwindowmanagerinterface.html#setActiveFormWindow">setActiveFormWindow</a>(formWindow);</pre>
+<p>When implementing a custom widget plugin, a pointer to <i>Qt Designer</i>'s current <a href="qdesignerformeditorinterface.html">QDesignerFormEditorInterface</a> object (<tt>formEditor</tt> in the example above) is provided by the <a href="qdesignercustomwidgetinterface.html#initialize">QDesignerCustomWidgetInterface::initialize</a>() function's parameter. You must subclass the <a href="qdesignercustomwidgetinterface.html">QDesignerCustomWidgetInterface</a> to expose your plugin to Qt Designer.</p>
+<p>The form window manager interface provides the <a href="qdesignerformwindowmanagerinterface.html#createFormWindow">createFormWindow</a>() function that enables you to create a new form window which you can add to the collection of form windows that the manager maintains, using the <a href="qdesignerformwindowmanagerinterface.html#addFormWindow">addFormWindow</a>() slot. It also provides the <a href="qdesignerformwindowmanagerinterface.html#formWindowCount">formWindowCount</a>() function returning the number of form windows currently under the manager's control, the <a href="qdesignerformwindowmanagerinterface.html#formWindow">formWindow</a>() function returning the form window associated with a given index, and the <a href="qdesignerformwindowmanagerinterface.html#activeFormWindow">activeFormWindow</a>() function returning the currently selected form window. The <a href="qdesignerformwindowmanagerinterface.html#removeFormWindow">removeFormWindow</a>() slot allows you to reduce the number of form windows the manager must maintain, and the <a href="qdesignerformwindowmanagerinterface.html#setActiveFormWindow">setActiveFormWindow</a>() slot allows you to change the form window focus in <i>Qt Designer</i>'s workspace.</p>
+<p>In addition, QDesignerFormWindowManagerInterface contains a collection of functions that enables you to intervene and control <i>Qt Designer</i>'s form editing actions. All these functions return the original action, making it possible to propagate the function further after intervention.</p>
+<p>Finally, the interface provides three signals which are emitted when a form window is added, when the currently selected form window changes, or when a form window is removed, respectively. All the signals carry the form window in question as their parameter.</p>
+</div>
+<p><b>See also </b><a href="qdesignerformeditorinterface.html">QDesignerFormEditorInterface</a> and <a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a>.</p>
+<!-- @@@QDesignerFormWindowManagerInterface -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Action$$$CutAction$$$CopyAction$$$PasteAction$$$DeleteAction$$$SelectAllAction$$$LowerAction$$$RaiseAction$$$UndoAction$$$RedoAction$$$HorizontalLayoutAction$$$VerticalLayoutAction$$$SplitHorizontalAction$$$SplitVerticalAction$$$GridLayoutAction$$$FormLayoutAction$$$BreakLayoutAction$$$AdjustSizeAction$$$SimplifyLayoutAction$$$DefaultPreviewAction$$$FormWindowSettingsDialogAction -->
+<h3 class="fn"><a name="Action-enum"></a>enum QDesignerFormWindowManagerInterface::<span class="name">Action</span></h3>
+<p>Specifies an action of <i>Qt Designer</i>.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::CutAction</tt></td><td class="topAlign"><tt>100</tt></td><td class="topAlign">Clipboard Cut</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::CopyAction</tt></td><td class="topAlign"><tt>101</tt></td><td class="topAlign">Clipboard Copy</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::PasteAction</tt></td><td class="topAlign"><tt>102</tt></td><td class="topAlign">Clipboard Paste</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::DeleteAction</tt></td><td class="topAlign"><tt>103</tt></td><td class="topAlign">Clipboard Delete</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::SelectAllAction</tt></td><td class="topAlign"><tt>104</tt></td><td class="topAlign">Select All</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::LowerAction</tt></td><td class="topAlign"><tt>200</tt></td><td class="topAlign">Lower current widget</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::RaiseAction</tt></td><td class="topAlign"><tt>201</tt></td><td class="topAlign">Raise current widget</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::UndoAction</tt></td><td class="topAlign"><tt>300</tt></td><td class="topAlign">Undo</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::RedoAction</tt></td><td class="topAlign"><tt>301</tt></td><td class="topAlign">Redo</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::HorizontalLayoutAction</tt></td><td class="topAlign"><tt>400</tt></td><td class="topAlign">Lay out using <a href="../qtwidgets/qhboxlayout.html">QHBoxLayout</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::VerticalLayoutAction</tt></td><td class="topAlign"><tt>401</tt></td><td class="topAlign">Lay out using <a href="../qtwidgets/qvboxlayout.html">QVBoxLayout</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::SplitHorizontalAction</tt></td><td class="topAlign"><tt>402</tt></td><td class="topAlign">Lay out in horizontal <a href="../qtwidgets/qsplitter.html">QSplitter</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::SplitVerticalAction</tt></td><td class="topAlign"><tt>403</tt></td><td class="topAlign">Lay out in vertical <a href="../qtwidgets/qsplitter.html">QSplitter</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::GridLayoutAction</tt></td><td class="topAlign"><tt>404</tt></td><td class="topAlign">Lay out using <a href="../qtwidgets/qgridlayout.html">QGridLayout</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::FormLayoutAction</tt></td><td class="topAlign"><tt>405</tt></td><td class="topAlign">Lay out using <a href="../qtwidgets/qformlayout.html">QFormLayout</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::BreakLayoutAction</tt></td><td class="topAlign"><tt>406</tt></td><td class="topAlign">Break existing layout</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::AdjustSizeAction</tt></td><td class="topAlign"><tt>407</tt></td><td class="topAlign">Adjust size</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::SimplifyLayoutAction</tt></td><td class="topAlign"><tt>408</tt></td><td class="topAlign">Simplify <a href="../qtwidgets/qgridlayout.html">QGridLayout</a> or <a href="../qtwidgets/qformlayout.html">QFormLayout</a></td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::DefaultPreviewAction</tt></td><td class="topAlign"><tt>500</tt></td><td class="topAlign">Create a preview in default style</td></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::FormWindowSettingsDialogAction</tt></td><td class="topAlign"><tt>600</tt></td><td class="topAlign">Show dialog with form settings</td></tr>
+</table>
+<p>This enum was introduced or modified in QtDesigner 5.0.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#action">action</a>().</p>
+<!-- @@@Action -->
+<!-- $$$ActionGroup$$$StyledPreviewActionGroup -->
+<h3 class="fn"><a name="ActionGroup-enum"></a>enum QDesignerFormWindowManagerInterface::<span class="name">ActionGroup</span></h3>
+<p>Specifies an action group of <i>Qt Designer</i>.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QDesignerFormWindowManagerInterface::StyledPreviewActionGroup</tt></td><td class="topAlign"><tt>100</tt></td><td class="topAlign">Action group containing styled preview actions</td></tr>
+</table>
+<p>This enum was introduced or modified in QtDesigner 5.0.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#actionGroup">actionGroup</a>().</p>
+<!-- @@@ActionGroup -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QDesignerFormWindowManagerInterface[overload1]$$$QDesignerFormWindowManagerInterfaceQObject* -->
+<h3 class="fn"><a name="QDesignerFormWindowManagerInterface"></a>QDesignerFormWindowManagerInterface::<span class="name">QDesignerFormWindowManagerInterface</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<p>Constructs an interface with the given <i>parent</i> for the form window manager.</p>
+<!-- @@@QDesignerFormWindowManagerInterface -->
+<!-- $$$~QDesignerFormWindowManagerInterface[overload1]$$$~QDesignerFormWindowManagerInterface -->
+<h3 class="fn"><a name="dtor.QDesignerFormWindowManagerInterface"></a>QDesignerFormWindowManagerInterface::<span class="name">~QDesignerFormWindowManagerInterface</span>()<tt> [virtual]</tt></h3>
+<p>Destroys the interface for the form window manager.</p>
+<!-- @@@~QDesignerFormWindowManagerInterface -->
+<!-- $$$action[overload1]$$$actionAction -->
+<h3 class="fn"><a name="action"></a><span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span> * QDesignerFormWindowManagerInterface::<span class="name">action</span>(<span class="type"><a href="qdesignerformwindowmanagerinterface.html#Action-enum">Action</a></span><i> action</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns the action specified by the enumeration value <i>action</i>.</p>
+<p>Obsoletes the action accessors of Qt 4.X&#x2e;</p>
+<p>This function was introduced in QtDesigner 5.0.</p>
+<!-- @@@action -->
+<!-- $$$actionGroup[overload1]$$$actionGroupActionGroup -->
+<h3 class="fn"><a name="actionGroup"></a><span class="type"><a href="../qtwidgets/qactiongroup.html">QActionGroup</a></span> * QDesignerFormWindowManagerInterface::<span class="name">actionGroup</span>(<span class="type"><a href="qdesignerformwindowmanagerinterface.html#ActionGroup-enum">ActionGroup</a></span><i> actionGroup</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns the action group specified by the enumeration value <i>actionGroup</i>.</p>
+<p>This function was introduced in QtDesigner 5.0.</p>
+<!-- @@@actionGroup -->
+<!-- $$$activeFormWindow[overload1]$$$activeFormWindow -->
+<h3 class="fn"><a name="activeFormWindow"></a><span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> * QDesignerFormWindowManagerInterface::<span class="name">activeFormWindow</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the currently active form window in <i>Qt Designer</i>'s workspace.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#setActiveFormWindow">setActiveFormWindow</a>() and <a href="qdesignerformwindowmanagerinterface.html#removeFormWindow">removeFormWindow</a>().</p>
+<!-- @@@activeFormWindow -->
+<!-- $$$activeFormWindowChanged[overload1]$$$activeFormWindowChangedQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="activeFormWindowChanged"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">activeFormWindowChanged</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [signal]</tt></h3>
+<p>This signal is emitted when the contents of the currently active form window in <i>Qt Designer</i>'s workspace changed. A pointer to the currently active <i>formWindow</i> is passed as an argument.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#activeFormWindow">activeFormWindow</a>().</p>
+<!-- @@@activeFormWindowChanged -->
+<!-- $$$addFormWindow[overload1]$$$addFormWindowQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="addFormWindow"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">addFormWindow</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [pure virtual slot]</tt></h3>
+<p>Adds the given <i>formWindow</i> to the collection of windows that <i>Qt Designer</i>'s form window manager maintains.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#formWindowAdded">formWindowAdded</a>().</p>
+<!-- @@@addFormWindow -->
+<!-- $$$closeAllPreviews[overload1]$$$closeAllPreviews -->
+<h3 class="fn"><a name="closeAllPreviews"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">closeAllPreviews</span>()<tt> [pure virtual slot]</tt></h3>
+<p>Close all currently open previews.</p>
+<p>This function was introduced in QtDesigner 5.0.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#showPreview">showPreview</a>().</p>
+<!-- @@@closeAllPreviews -->
+<!-- $$$core[overload1]$$$core -->
+<h3 class="fn"><a name="core"></a><span class="type"><a href="qdesignerformeditorinterface.html">QDesignerFormEditorInterface</a></span> * QDesignerFormWindowManagerInterface::<span class="name">core</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns a pointer to <i>Qt Designer</i>'s current <a href="qdesignerformeditorinterface.html">QDesignerFormEditorInterface</a> object.</p>
+<!-- @@@core -->
+<!-- $$$createFormWindow[overload1]$$$createFormWindowQWidget*Qt::WindowFlags -->
+<h3 class="fn"><a name="createFormWindow"></a><span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> * QDesignerFormWindowManagerInterface::<span class="name">createFormWindow</span>(<span class="type"><a href="../qtwidgets/qwidget.html">QWidget</a></span> *<i> parent</i> = 0, <span class="type"><a href="../qtcore/qt.html#WindowFlags-typedef">Qt::WindowFlags</a></span><i> flags</i> = 0)<tt> [pure virtual]</tt></h3>
+<p>Creates a form window with the given <i>parent</i> and the given window <i>flags</i>.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#addFormWindow">addFormWindow</a>().</p>
+<!-- @@@createFormWindow -->
+<!-- $$$createPreviewPixmap[overload1]$$$createPreviewPixmap -->
+<h3 class="fn"><a name="createPreviewPixmap"></a><span class="type">QPixmap</span> QDesignerFormWindowManagerInterface::<span class="name">createPreviewPixmap</span>() const<tt> [pure virtual]</tt></h3>
+<!-- @@@createPreviewPixmap -->
+<!-- $$$formWindow[overload1]$$$formWindowint -->
+<h3 class="fn"><a name="formWindow"></a><span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> * QDesignerFormWindowManagerInterface::<span class="name">formWindow</span>(<span class="type">int</span><i> index</i>) const<tt> [pure virtual]</tt></h3>
+<!-- @@@formWindow -->
+<!-- $$$formWindowAdded[overload1]$$$formWindowAddedQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="formWindowAdded"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">formWindowAdded</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [signal]</tt></h3>
+<p>This signal is emitted when a new form window is added to the collection of windows that <i>Qt Designer</i>'s form window manager maintains. A pointer to the new <i>formWindow</i> is passed as an argument.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#addFormWindow">addFormWindow</a>() and <a href="qdesignerformwindowmanagerinterface.html#setActiveFormWindow">setActiveFormWindow</a>().</p>
+<!-- @@@formWindowAdded -->
+<!-- $$$formWindowCount[overload1]$$$formWindowCount -->
+<h3 class="fn"><a name="formWindowCount"></a><span class="type">int</span> QDesignerFormWindowManagerInterface::<span class="name">formWindowCount</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the number of form windows maintained by <i>Qt Designer</i>'s form window manager.</p>
+<!-- @@@formWindowCount -->
+<!-- $$$formWindowRemoved[overload1]$$$formWindowRemovedQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="formWindowRemoved"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">formWindowRemoved</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [signal]</tt></h3>
+<p>This signal is emitted when a form window is removed from the collection of windows that <i>Qt Designer</i>'s form window manager maintains. A pointer to the removed <i>formWindow</i> is passed as an argument.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#removeFormWindow">removeFormWindow</a>().</p>
+<!-- @@@formWindowRemoved -->
+<!-- $$$formWindowSettingsChanged[overload1]$$$formWindowSettingsChangedQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="formWindowSettingsChanged"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">formWindowSettingsChanged</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [signal]</tt></h3>
+<p>This signal is emitted when the settings of the form window change. It can be used to update window titles, etc. accordingly. A pointer to the <i>formWindow</i> is passed as an argument.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#Action-enum">FormWindowSettingsDialogAction</a>.</p>
+<!-- @@@formWindowSettingsChanged -->
+<!-- $$$removeFormWindow[overload1]$$$removeFormWindowQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="removeFormWindow"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">removeFormWindow</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [pure virtual slot]</tt></h3>
+<p>Removes the given <i>formWindow</i> from the collection of windows that <i>Qt Designer</i>'s form window manager maintains.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#formWindow">formWindow</a>() and <a href="qdesignerformwindowmanagerinterface.html#formWindowRemoved">formWindowRemoved</a>().</p>
+<!-- @@@removeFormWindow -->
+<!-- $$$setActiveFormWindow[overload1]$$$setActiveFormWindowQDesignerFormWindowInterface* -->
+<h3 class="fn"><a name="setActiveFormWindow"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">setActiveFormWindow</span>(<span class="type"><a href="qdesignerformwindowinterface.html">QDesignerFormWindowInterface</a></span> *<i> formWindow</i>)<tt> [pure virtual slot]</tt></h3>
+<p>Sets the given <i>formWindow</i> to be the currently active form window in <i>Qt Designer</i>'s workspace.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#activeFormWindow">activeFormWindow</a>() and <a href="qdesignerformwindowmanagerinterface.html#activeFormWindowChanged">activeFormWindowChanged</a>().</p>
+<!-- @@@setActiveFormWindow -->
+<!-- $$$showPluginDialog[overload1]$$$showPluginDialog -->
+<h3 class="fn"><a name="showPluginDialog"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">showPluginDialog</span>()<tt> [pure virtual slot]</tt></h3>
+<p>Opens a dialog showing the plugins loaded by <i>Qt Designer</i>'s and its plugin load failures.</p>
+<p>This function was introduced in QtDesigner 5.0.</p>
+<!-- @@@showPluginDialog -->
+<!-- $$$showPreview[overload1]$$$showPreview -->
+<h3 class="fn"><a name="showPreview"></a><span class="type">void</span> QDesignerFormWindowManagerInterface::<span class="name">showPreview</span>()<tt> [pure virtual slot]</tt></h3>
+<p>Show a preview of the current form using the default parameters.</p>
+<p>This function was introduced in QtDesigner 5.0.</p>
+<p><b>See also </b><a href="qdesignerformwindowmanagerinterface.html#closeAllPreviews">closeAllPreviews</a>().</p>
+<!-- @@@showPreview -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

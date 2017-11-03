@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: modelmenu.cpp Example File (webkitwidgets/browser/modelmenu.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">modelmenu.cpp Example File</h1>
+<span class="small-subtitle">webkitwidgets/browser/modelmenu.cpp</span>
+<!-- $$$webkitwidgets/browser/modelmenu.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the demonstration applications of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+<span class="preprocessor">#include &quot;modelmenu.h&quot;</span>
+
+<span class="preprocessor">#include &lt;QtCore/QAbstractItemModel&gt;</span>
+<span class="preprocessor">#include &lt;qdebug.h&gt;</span>
+
+ModelMenu<span class="operator">::</span>ModelMenu(<span class="type"><a href="../qtwidgets/qwidget.html">QWidget</a></span> <span class="operator">*</span> parent)
+    : <span class="type"><a href="../qtwidgets/qmenu.html">QMenu</a></span>(parent)
+    <span class="operator">,</span> m_maxRows(<span class="number">7</span>)
+    <span class="operator">,</span> m_firstSeparator(<span class="operator">-</span><span class="number">1</span>)
+    <span class="operator">,</span> m_maxWidth(<span class="operator">-</span><span class="number">1</span>)
+    <span class="operator">,</span> m_hoverRole(<span class="number">0</span>)
+    <span class="operator">,</span> m_separatorRole(<span class="number">0</span>)
+    <span class="operator">,</span> m_model(<span class="number">0</span>)
+{
+    connect(<span class="keyword">this</span><span class="operator">,</span> SIGNAL(aboutToShow())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(aboutToShow()));
+}
+
+<span class="type">bool</span> ModelMenu<span class="operator">::</span>prePopulated()
+{
+    <span class="keyword">return</span> <span class="keyword">false</span>;
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>postPopulated()
+{
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>setModel(<span class="type"><a href="../qtcore/qabstractitemmodel.html">QAbstractItemModel</a></span> <span class="operator">*</span>model)
+{
+    m_model <span class="operator">=</span> model;
+}
+
+<span class="type"><a href="../qtcore/qabstractitemmodel.html">QAbstractItemModel</a></span> <span class="operator">*</span>ModelMenu<span class="operator">::</span>model() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_model;
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>setMaxRows(<span class="type">int</span> max)
+{
+    m_maxRows <span class="operator">=</span> max;
+}
+
+<span class="type">int</span> ModelMenu<span class="operator">::</span>maxRows() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_maxRows;
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>setFirstSeparator(<span class="type">int</span> offset)
+{
+    m_firstSeparator <span class="operator">=</span> offset;
+}
+
+<span class="type">int</span> ModelMenu<span class="operator">::</span>firstSeparator() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_firstSeparator;
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>setRootIndex(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> <span class="operator">&amp;</span>index)
+{
+    m_root <span class="operator">=</span> index;
+}
+
+<span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> ModelMenu<span class="operator">::</span>rootIndex() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_root;
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>setHoverRole(<span class="type">int</span> role)
+{
+    m_hoverRole <span class="operator">=</span> role;
+}
+
+<span class="type">int</span> ModelMenu<span class="operator">::</span>hoverRole() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_hoverRole;
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>setSeparatorRole(<span class="type">int</span> role)
+{
+    m_separatorRole <span class="operator">=</span> role;
+}
+
+<span class="type">int</span> ModelMenu<span class="operator">::</span>separatorRole() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_separatorRole;
+}
+
+<a href="../qtcore/qmetatype.html#Q_DECLARE_METATYPE">Q_DECLARE_METATYPE</a>(<span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span>)
+<span class="type">void</span> ModelMenu<span class="operator">::</span>aboutToShow()
+{
+    <span class="keyword">if</span> (<span class="type"><a href="../qtwidgets/qmenu.html">QMenu</a></span> <span class="operator">*</span>menu <span class="operator">=</span> qobject_cast<span class="operator">&lt;</span><span class="type"><a href="../qtwidgets/qmenu.html">QMenu</a></span><span class="operator">*</span><span class="operator">&gt;</span>(sender())) {
+        <span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> v <span class="operator">=</span> menu<span class="operator">-</span><span class="operator">&gt;</span>menuAction()<span class="operator">-</span><span class="operator">&gt;</span>data();
+        <span class="keyword">if</span> (v<span class="operator">.</span>canConvert<span class="operator">&lt;</span><span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span><span class="operator">&gt;</span>()) {
+            <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> idx <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span><span class="operator">&gt;</span>(v);
+            createMenu(idx<span class="operator">,</span> <span class="operator">-</span><span class="number">1</span><span class="operator">,</span> menu<span class="operator">,</span> menu);
+            disconnect(menu<span class="operator">,</span> SIGNAL(aboutToShow())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(aboutToShow()));
+            <span class="keyword">return</span>;
+        }
+    }
+
+    clear();
+    <span class="keyword">if</span> (prePopulated())
+        addSeparator();
+    <span class="type">int</span> max <span class="operator">=</span> m_maxRows;
+    <span class="keyword">if</span> (max <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
+        max <span class="operator">+</span><span class="operator">=</span> m_firstSeparator;
+    createMenu(m_root<span class="operator">,</span> max<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="keyword">this</span>);
+    postPopulated();
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>createMenu(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> <span class="operator">&amp;</span>parent<span class="operator">,</span> <span class="type">int</span> max<span class="operator">,</span> <span class="type"><a href="../qtwidgets/qmenu.html">QMenu</a></span> <span class="operator">*</span>parentMenu<span class="operator">,</span> <span class="type"><a href="../qtwidgets/qmenu.html">QMenu</a></span> <span class="operator">*</span>menu)
+{
+    <span class="keyword">if</span> (<span class="operator">!</span>menu) {
+        <span class="type"><a href="../qtcore/qstring.html">QString</a></span> title <span class="operator">=</span> parent<span class="operator">.</span>data()<span class="operator">.</span>toString();
+        menu <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="../qtwidgets/qmenu.html">QMenu</a></span>(title<span class="operator">,</span> <span class="keyword">this</span>);
+        <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> icon <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtgui/qicon.html">QIcon</a></span><span class="operator">&gt;</span>(parent<span class="operator">.</span>data(<span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>DecorationRole));
+        menu<span class="operator">-</span><span class="operator">&gt;</span>setIcon(icon);
+        parentMenu<span class="operator">-</span><span class="operator">&gt;</span>addMenu(menu);
+        <span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> v;
+        v<span class="operator">.</span>setValue(parent);
+        menu<span class="operator">-</span><span class="operator">&gt;</span>menuAction()<span class="operator">-</span><span class="operator">&gt;</span>setData(v);
+        connect(menu<span class="operator">,</span> SIGNAL(aboutToShow())<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(aboutToShow()));
+        <span class="keyword">return</span>;
+    }
+
+    <span class="type">int</span> end <span class="operator">=</span> m_model<span class="operator">-</span><span class="operator">&gt;</span>rowCount(parent);
+    <span class="keyword">if</span> (max <span class="operator">!</span><span class="operator">=</span> <span class="operator">-</span><span class="number">1</span>)
+        end <span class="operator">=</span> <a href="../qtcore/qtglobal.html#qMin">qMin</a>(max<span class="operator">,</span> end);
+
+    connect(menu<span class="operator">,</span> SIGNAL(triggered(<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span><span class="operator">*</span>))<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(triggered(<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span><span class="operator">*</span>)));
+    connect(menu<span class="operator">,</span> SIGNAL(hovered(<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span><span class="operator">*</span>))<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(hovered(<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span><span class="operator">*</span>)));
+
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> end; <span class="operator">+</span><span class="operator">+</span>i) {
+        <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> idx <span class="operator">=</span> m_model<span class="operator">-</span><span class="operator">&gt;</span>index(i<span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> parent);
+        <span class="keyword">if</span> (m_model<span class="operator">-</span><span class="operator">&gt;</span>hasChildren(idx)) {
+            createMenu(idx<span class="operator">,</span> <span class="operator">-</span><span class="number">1</span><span class="operator">,</span> menu);
+        } <span class="keyword">else</span> {
+            <span class="keyword">if</span> (m_separatorRole <span class="operator">!</span><span class="operator">=</span> <span class="number">0</span>
+                <span class="operator">&amp;</span><span class="operator">&amp;</span> idx<span class="operator">.</span>data(m_separatorRole)<span class="operator">.</span>toBool())
+                addSeparator();
+            <span class="keyword">else</span>
+                menu<span class="operator">-</span><span class="operator">&gt;</span>addAction(makeAction(idx));
+        }
+        <span class="keyword">if</span> (menu <span class="operator">=</span><span class="operator">=</span> <span class="keyword">this</span> <span class="operator">&amp;</span><span class="operator">&amp;</span> i <span class="operator">=</span><span class="operator">=</span> m_firstSeparator <span class="operator">-</span> <span class="number">1</span>)
+            addSeparator();
+    }
+}
+
+<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span> <span class="operator">*</span>ModelMenu<span class="operator">::</span>makeAction(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> <span class="operator">&amp;</span>index)
+{
+    <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> icon <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtgui/qicon.html">QIcon</a></span><span class="operator">&gt;</span>(index<span class="operator">.</span>data(<span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>DecorationRole));
+    <span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span> <span class="operator">*</span>action <span class="operator">=</span> makeAction(icon<span class="operator">,</span> index<span class="operator">.</span>data()<span class="operator">.</span>toString()<span class="operator">,</span> <span class="keyword">this</span>);
+    <span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> v;
+    v<span class="operator">.</span>setValue(index);
+    action<span class="operator">-</span><span class="operator">&gt;</span>setData(v);
+    <span class="keyword">return</span> action;
+}
+
+<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span> <span class="operator">*</span>ModelMenu<span class="operator">::</span>makeAction(<span class="keyword">const</span> <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> <span class="operator">&amp;</span>icon<span class="operator">,</span> <span class="keyword">const</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="operator">&amp;</span>text<span class="operator">,</span> <span class="type"><a href="../qtcore/qobject.html">QObject</a></span> <span class="operator">*</span>parent)
+{
+    <span class="type"><a href="../qtgui/qfontmetrics.html">QFontMetrics</a></span> fm(font());
+    <span class="keyword">if</span> (<span class="operator">-</span><span class="number">1</span> <span class="operator">=</span><span class="operator">=</span> m_maxWidth)
+        m_maxWidth <span class="operator">=</span> fm<span class="operator">.</span>width(QLatin1Char(<span class="char">'m'</span>)) <span class="operator">*</span> <span class="number">30</span>;
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> smallText <span class="operator">=</span> fm<span class="operator">.</span>elidedText(text<span class="operator">,</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>ElideMiddle<span class="operator">,</span> m_maxWidth);
+    <span class="keyword">return</span> <span class="keyword">new</span> <span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span>(icon<span class="operator">,</span> smallText<span class="operator">,</span> parent);
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>triggered(<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span> <span class="operator">*</span>action)
+{
+    <span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> v <span class="operator">=</span> action<span class="operator">-</span><span class="operator">&gt;</span>data();
+    <span class="keyword">if</span> (v<span class="operator">.</span>canConvert<span class="operator">&lt;</span><span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span><span class="operator">&gt;</span>()) {
+        <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> idx <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span><span class="operator">&gt;</span>(v);
+        <span class="keyword">emit</span> activated(idx);
+    }
+}
+
+<span class="type">void</span> ModelMenu<span class="operator">::</span>hovered(<span class="type"><a href="../qtwidgets/qaction.html">QAction</a></span> <span class="operator">*</span>action)
+{
+    <span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> v <span class="operator">=</span> action<span class="operator">-</span><span class="operator">&gt;</span>data();
+    <span class="keyword">if</span> (v<span class="operator">.</span>canConvert<span class="operator">&lt;</span><span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span><span class="operator">&gt;</span>()) {
+        <span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span> idx <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtcore/qmodelindex.html">QModelIndex</a></span><span class="operator">&gt;</span>(v);
+        <span class="type"><a href="../qtcore/qstring.html">QString</a></span> hoveredString <span class="operator">=</span> idx<span class="operator">.</span>data(m_hoverRole)<span class="operator">.</span>toString();
+        <span class="keyword">if</span> (<span class="operator">!</span>hoveredString<span class="operator">.</span>isEmpty())
+            <span class="keyword">emit</span> hovered(hoveredString);
+    }
+}</pre>
+</div>
+<!-- @@@webkitwidgets/browser/modelmenu.cpp -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

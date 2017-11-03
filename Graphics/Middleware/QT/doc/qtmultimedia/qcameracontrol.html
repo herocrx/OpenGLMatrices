@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qcameracontrol.cpp -->
+  <title>qtmultimedia 5.0: QCameraControl Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#macros">Macros</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QCameraControl Class</h1>
+<!-- $$$QCameraControl-brief -->
+<p>The QCameraControl class is an abstract base class for classes that control still cameras or video cameras. <a href="#details">More...</a></p>
+<!-- @@@QCameraControl -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QCameraControl&gt;</span></pre><p><b>Inherits: </b><a href="qmediacontrol.html">QMediaControl</a>.</p>
+<ul>
+<li><a href="qcameracontrol-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#PropertyChangeType-enum">PropertyChangeType</a></b> { CaptureMode, ImageEncodingSettings, VideoEncodingSettings, Viewfinder }</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#dtor.QCameraControl">~QCameraControl</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#canChangeProperty">canChangeProperty</a></b>(PropertyChangeType<i> changeType</i>, QCamera::Status<i> status</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QCamera::CaptureModes </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#captureMode">captureMode</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#isCaptureModeSupported">isCaptureModeSupported</a></b>(QCamera::CaptureModes<i> mode</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#setCaptureMode">setCaptureMode</a></b>(QCamera::CaptureModes<i> mode</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#setState">setState</a></b>(QCamera::State<i> state</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QCamera::State </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#state">state</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QCamera::Status </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#status">status</a></b>() const = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#captureModeChanged">captureModeChanged</a></b>(QCamera::CaptureModes<i> mode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#error">error</a></b>(int<i> error</i>, const QString &amp;<i> errorString</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#stateChanged">stateChanged</a></b>(QCamera::State<i> state</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#statusChanged">statusChanged</a></b>(QCamera::Status<i> status</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2>Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#QCameraControl">QCameraControl</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+</table>
+<ul>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+</ul>
+<a name="macros"></a>
+<h2>Macros</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qcameracontrol.html#QCameraControl_iid">QCameraControl_iid</a></b></td></tr>
+</table>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QCameraControl-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QCameraControl class is an abstract base class for classes that control still cameras or video cameras.</p>
+<p>This service is provided by a <a href="qmediaservice.html">QMediaService</a> object via QMediaService::control(). It is used by <a href="qcamera.html">QCamera</a>.</p>
+<p>The interface name of QCameraControl is <tt>org.qt-project.qt.cameracontrol/5.0</tt> as defined in <a href="qcameracontrol.html#QCameraControl_iid">QCameraControl_iid</a>.</p>
+</div>
+<p><b>See also </b><a href="qmediaservice.html#requestControl">QMediaService::requestControl</a>() and <a href="qcamera.html">QCamera</a>.</p>
+<!-- @@@QCameraControl -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$PropertyChangeType$$$CaptureMode$$$ImageEncodingSettings$$$VideoEncodingSettings$$$Viewfinder -->
+<h3 class="fn"><a name="PropertyChangeType-enum"></a>enum QCameraControl::<span class="name">PropertyChangeType</span></h3>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QCameraControl::CaptureMode</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">Indicates the capture mode is changed.</td></tr>
+<tr><td class="topAlign"><tt>QCameraControl::ImageEncodingSettings</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">Image encoder settings are changed, including resolution.</td></tr>
+<tr><td class="topAlign"><tt>QCameraControl::VideoEncodingSettings</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">Video encoder settings are changed, including audio, video and container settings.</td></tr>
+<tr><td class="topAlign"><tt>QCameraControl::Viewfinder</tt></td><td class="topAlign"><tt>4</tt></td><td class="topAlign">Viewfinder is changed.</td></tr>
+</table>
+<!-- @@@PropertyChangeType -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QCameraControl[overload1]$$$QCameraControlQObject* -->
+<h3 class="fn"><a name="QCameraControl"></a>QCameraControl::<span class="name">QCameraControl</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)<tt> [protected]</tt></h3>
+<p>Constructs a camera control object with <i>parent</i>.</p>
+<!-- @@@QCameraControl -->
+<!-- $$$~QCameraControl[overload1]$$$~QCameraControl -->
+<h3 class="fn"><a name="dtor.QCameraControl"></a>QCameraControl::<span class="name">~QCameraControl</span>()</h3>
+<p>Destruct the camera control object.</p>
+<!-- @@@~QCameraControl -->
+<!-- $$$canChangeProperty[overload1]$$$canChangePropertyPropertyChangeTypeQCamera::Status -->
+<h3 class="fn"><a name="canChangeProperty"></a><span class="type">bool</span> QCameraControl::<span class="name">canChangeProperty</span>(<span class="type"><a href="qcameracontrol.html#PropertyChangeType-enum">PropertyChangeType</a></span><i> changeType</i>, <span class="type"><a href="qcamera.html#Status-enum">QCamera::Status</a></span><i> status</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns true if backend can effectively apply changing camera properties of <i>changeType</i> type while the camera state is QCamera::Active and camera status matches <i>status</i> parameter.</p>
+<p>If backend doesn't support applying this change in the active state, it will be stopped before the settings are changed and restarted after. Otherwise the backend should apply the change in the current state, with the camera status indicating the progress, if necessary.</p>
+<!-- @@@canChangeProperty -->
+<!-- $$$captureMode[overload1]$$$captureMode -->
+<h3 class="fn"><a name="captureMode"></a><span class="type"><a href="qcamera.html#CaptureMode-enum">QCamera::CaptureModes</a></span> QCameraControl::<span class="name">captureMode</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the current capture mode.</p>
+<p><b>See also </b><a href="qcameracontrol.html#setCaptureMode">setCaptureMode</a>().</p>
+<!-- @@@captureMode -->
+<!-- $$$captureModeChanged[overload1]$$$captureModeChangedQCamera::CaptureModes -->
+<h3 class="fn"><a name="captureModeChanged"></a><span class="type">void</span> QCameraControl::<span class="name">captureModeChanged</span>(<span class="type"><a href="qcamera.html#CaptureMode-enum">QCamera::CaptureModes</a></span><i> mode</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the camera capture <i>mode</i> changes.</p>
+<!-- @@@captureModeChanged -->
+<!-- $$$error[overload1]$$$errorintconstQString& -->
+<h3 class="fn"><a name="error"></a><span class="type">void</span> QCameraControl::<span class="name">error</span>(<span class="type">int</span><i> error</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> errorString</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when an error occurs with error code <i>error</i> and a description of the error <i>errorString</i>.</p>
+<!-- @@@error -->
+<!-- $$$isCaptureModeSupported[overload1]$$$isCaptureModeSupportedQCamera::CaptureModes -->
+<h3 class="fn"><a name="isCaptureModeSupported"></a><span class="type">bool</span> QCameraControl::<span class="name">isCaptureModeSupported</span>(<span class="type"><a href="qcamera.html#CaptureMode-enum">QCamera::CaptureModes</a></span><i> mode</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns true if the capture <i>mode</i> is suported.</p>
+<!-- @@@isCaptureModeSupported -->
+<!-- $$$setCaptureMode[overload1]$$$setCaptureModeQCamera::CaptureModes -->
+<h3 class="fn"><a name="setCaptureMode"></a><span class="type">void</span> QCameraControl::<span class="name">setCaptureMode</span>(<span class="type"><a href="qcamera.html#CaptureMode-enum">QCamera::CaptureModes</a></span><i> mode</i>)<tt> [pure virtual]</tt></h3>
+<p>Sets the current capture <i>mode</i>.</p>
+<p>The capture mode changes are synchronous and allowed in any camera state.</p>
+<p>If the capture mode is changed while camera is active, it's recommended to change status to <a href="qcamera.html#Status-enum">QCamera::LoadedStatus</a> and start activating the camera in the next event loop with the status changed to <a href="qcamera.html#Status-enum">QCamera::StartingStatus</a>. This allows the capture settings to be applied before camera is started. Than change the status to QCamera::StartedStatus when the capture mode change is done.</p>
+<p><b>See also </b><a href="qcameracontrol.html#captureMode">captureMode</a>().</p>
+<!-- @@@setCaptureMode -->
+<!-- $$$setState[overload1]$$$setStateQCamera::State -->
+<h3 class="fn"><a name="setState"></a><span class="type">void</span> QCameraControl::<span class="name">setState</span>(<span class="type"><a href="qcamera.html#State-enum">QCamera::State</a></span><i> state</i>)<tt> [pure virtual]</tt></h3>
+<p>Sets the camera <i>state</i>.</p>
+<p>State changes are synchronous and indicate user intention, while camera status is used as a feedback mechanism to inform application about backend status. Status changes are reported asynchronously with <a href="qcameracontrol.html#statusChanged">QCameraControl::statusChanged</a>() signal.</p>
+<p><b>See also </b><a href="qcameracontrol.html#state">state</a>() and <a href="qcamera.html#State-enum">QCamera::State</a>.</p>
+<!-- @@@setState -->
+<!-- $$$state[overload1]$$$state -->
+<h3 class="fn"><a name="state"></a><span class="type"><a href="qcamera.html#State-enum">QCamera::State</a></span> QCameraControl::<span class="name">state</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the state of the camera service.</p>
+<p><b>See also </b><a href="qcameracontrol.html#setState">setState</a>() and <a href="qcamera.html#state-prop">QCamera::state</a>.</p>
+<!-- @@@state -->
+<!-- $$$stateChanged[overload1]$$$stateChangedQCamera::State -->
+<h3 class="fn"><a name="stateChanged"></a><span class="type">void</span> QCameraControl::<span class="name">stateChanged</span>(<span class="type"><a href="qcamera.html#State-enum">QCamera::State</a></span><i> state</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the camera <i>state</i> changes.</p>
+<p>In most cases the state chage is caused by <a href="qcameracontrol.html#setState">QCameraControl::setState</a>(), but if critical error has occurred the state changes to <a href="qcamera.html#State-enum">QCamera::UnloadedState</a>.</p>
+<!-- @@@stateChanged -->
+<!-- $$$status[overload1]$$$status -->
+<h3 class="fn"><a name="status"></a><span class="type"><a href="qcamera.html#Status-enum">QCamera::Status</a></span> QCameraControl::<span class="name">status</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the status of the camera service.</p>
+<p><b>See also </b><a href="qcamera.html#state-prop">QCamera::state</a>.</p>
+<!-- @@@status -->
+<!-- $$$statusChanged[overload1]$$$statusChangedQCamera::Status -->
+<h3 class="fn"><a name="statusChanged"></a><span class="type">void</span> QCameraControl::<span class="name">statusChanged</span>(<span class="type"><a href="qcamera.html#Status-enum">QCamera::Status</a></span><i> status</i>)<tt> [signal]</tt></h3>
+<p>Signal emitted when the camera <i>status</i> changes.</p>
+<!-- @@@statusChanged -->
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+<!-- $$$QCameraControl_iid[overload1]$$$QCameraControl_iid -->
+<h3 class="fn"><a name="QCameraControl_iid"></a><span class="name">QCameraControl_iid</span></h3>
+<p><tt>org.qt-project.qt.cameracontrol/5.0</tt></p>
+<p>Defines the interface name of the <a href="qcameracontrol.html">QCameraControl</a> class.</p>
+<!-- @@@QCameraControl_iid -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

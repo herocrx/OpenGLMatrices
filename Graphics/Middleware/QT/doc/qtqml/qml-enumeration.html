@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- basictypes.qdoc -->
+  <title>QtQml 5.0: QML Basic Type: enumeration</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#using-the-enumeration-type-in-qml">Using the enumeration type in QML</a></li>
+</ul>
+</div>
+<h1 class="title">QML Basic Type: enumeration</h1>
+<span class="subtitle"></span>
+<!-- $$$enumeration-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>enumeration</tt> type refers to a named enumeration value.</p>
+<p>Each named value can be referred to as <tt>&lt;Type&gt;.&lt;value&gt;</tt>. For example, the <a href="../qtquick/qml-qtquick2-text.html">Text</a> type has an <tt>AlignRight</tt> enumeration value:</p>
+<pre class="qml"><span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> { <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignRight</span> }</pre>
+<p>(For backwards compatibility, the enumeration value may also be specified as a string, e.g&#x2e; &quot;AlignRight&quot;. This form is not recommended for new code.)</p>
+<p>When integrating with C++, note that any <tt>enum</tt> value <a href="qtqml-cppintegration-data.html">passed into QML from C++</a> is automatically converted into an <tt>enumeration</tt> value, and vice-versa.</p>
+<p>This basic type is provided by the QML language. Some enumeration values are provided by the <a href="../qtquick/qtquick-module.html">QtQuick</a> import.</p>
+<a name="using-the-enumeration-type-in-qml"></a>
+<h2>Using the enumeration type in QML</h2>
+<p>The <tt>enumeration</tt> type is a representation of a C++ <tt>enum</tt> type. It is not possible to refer to the <tt>enumeration</tt> type in QML itself; instead, the <a href="qml-int.html">int</a> or <a href="qml-var.html">var</a> types can be used when referring to <tt>enumeration</tt> values from QML code.</p>
+<p>For example:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-item.html">Item</a></span> {
+    <span class="comment">// refer to Text.AlignRight using an int type</span>
+    property <span class="type">int</span> <span class="name">enumValue</span>: <span class="name">textItem</span>.<span class="name">horizontalAlignment</span>
+
+    signal <span class="type">valueEmitted</span>(int someValue)
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">textItem</span>
+        <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignRight</span>
+    }
+
+    <span class="comment">// emit valueEmitted() signal, which expects an int, with Text.AlignRight</span>
+    <span class="name">Component</span>.onCompleted: <span class="name">valueEmitted</span>(<span class="name">Text</span>.<span class="name">AlignRight</span>)
+}</pre>
+</div>
+<p><b>See also </b><a href="qtqml-typesystem-basictypes.html">QML Basic Types</a>.</p>
+<!-- @@@enumeration -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- dynamicview-tutorial.qdoc -->
+  <title>QtQuick 5.0: QML Dynamic View Ordering Tutorial 4 - Sorting Items</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="qtquick2-tutorials-dynamicview-dynamicview3.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="qtquick2-tutorials-dynamicview-dynamicview3.html">QML Dynamic View Ordering Tutorial 3 - Moving Dragged Items</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level2"><a href="#walkthrough">Walkthrough</a></li>
+</ul>
+</div>
+<h1 class="title">QML Dynamic View Ordering Tutorial 4 - Sorting Items</h1>
+<span class="subtitle"></span>
+<!-- $$$tutorials/dynamicview/dynamicview4-description -->
+<div class="descr"> <a name="details"></a>
+<p>Drag and drop isn't the only way items in a view can be re-ordered, using a <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> it is also possible to sort items based on model data. To do that we extend our <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> instance like this:</p>
+<pre class="qml"></pre>
+<a name="walkthrough"></a>
+<h3>Walkthrough</h3>
+<p>Items in a <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> are filtered into groups represented by the <a href="qml-qtquick2-visualdatagroup.html">VisualDataGroup</a> type, normally all items in the model belong to a default <a href="qml-qtquick2-visualdatamodel.html#items-prop">items</a> group but this default can be changed with the includeByDefault property. To implement our sorting we want items to first be added to an unsorted group from where we can transfer them to a sorted position in the items group. To do that we clear includeByDefault on the items group and set it on a new group name 'unsorted'.</p>
+<pre class="qml"></pre>
+<p>We sort the items by first finding the position in the items group to insert the first unsorted item and then transfer the item to the items group before moving it to the pre-determined index and repeat until the unsorted group is empty.</p>
+<p>To find the insert position for an item we request a handle for the item from the unsorted group with the get function. Through the model property on this handle we can access the same model data that is available in a delegate instance of that item and compare against other items to determine relative position.</p>
+<pre class="qml"></pre>
+<p>The lessThan argument to the sort function is a comparsion function which will determine the order of the list. In this example it can be one of the following:</p>
+<pre class="qml"></pre>
+<p>A sort is triggered whenever new items are added to the unsorted <a href="qml-qtquick2-visualdatagroup.html">VisualDataGroup</a> which we are notified of by the <a href="qml-qtquick2-visualdatagroup.html#onChanged-signal">onChanged</a> handler. If no sort function is currently selected we simply transfer all items from the unsorted group to the items group, otherwise we call sort with the selected sort function.</p>
+<pre class="qml"></pre>
+<p>Finally when the selected sort order changes we can trigger a full re-sort of the list by moving all items from the items group to the unsorted group, which will trigger the <a href="qml-qtquick2-visualdatagroup.html#onChanged-signal">onChanged</a> handler and transfer the items back to the items group in correct order. Note that the <a href="qml-qtquick2-visualdatagroup.html#onChanged-signal">onChanged</a> handler will not be invoked recursively so there's no issue with it being invoked during a sort.</p>
+<pre class="qml"></pre>
+<p>Files:</p>
+<ul>
+<li><a href="tutorials-dynamicview-dynamicview4-listselector-qml.html">tutorials/dynamicview/dynamicview4/ListSelector.qml</a></li>
+<li><a href="tutorials-dynamicview-dynamicview4-petsmodel-qml.html">tutorials/dynamicview/dynamicview4/PetsModel.qml</a></li>
+<li><a href="tutorials-dynamicview-dynamicview4-dynamicview-qml.html">tutorials/dynamicview/dynamicview4/dynamicview.qml</a></li>
+<li><a href="tutorials-dynamicview-dynamicview4-dynamicview4-qmlproject.html">tutorials/dynamicview/dynamicview4/dynamicview4.qmlproject</a></li>
+</ul>
+</div>
+<!-- @@@tutorials/dynamicview/dynamicview4 -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qtquick2-tutorials-dynamicview-dynamicview3.html">QML Dynamic View Ordering Tutorial 3 - Moving Dragged Items</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

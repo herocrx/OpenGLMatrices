@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- customparticle.qdoc -->
+  <title>QtQuick 5.0: QtQuick.Particles Examples - CustomParticle</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">QtQuick.Particles Examples - CustomParticle</h1>
+<span class="subtitle"></span>
+<!-- $$$particles/customparticle-description -->
+<div class="descr"> <a name="details"></a>
+<p>This is a collection of examples using <a href="qml-qtquick-particles2-customparticle.html">CustomParticle</a> in the QML particle system.<p class="centerAlign"><img src="images/qml-customparticle-example.png" alt="" /></p><p>This is a collection of small QML examples relating to using <a href="qml-qtquick-particles2-customparticle.html">CustomParticle</a> in the particle system. Each example is a small QML file emphasizing a different way to use <a href="qml-qtquick-particles2-customparticle.html">CustomParticle</a>.</p>
+<p>Blur Particles adds a blur effect to the particles, which increases over the particle's life time. It uses a custom vertex shader:</p>
+<pre class="qml"></pre>
+<p>to propagate life time simulation to a custom fragement shader:</p>
+<pre class="qml"></pre>
+<p>which has access to both the normal image sampler and a blurred sampler, the image plus a <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a>.</p>
+<p>Fragment Shader just uses the particle system as a vertex delivery system.</p>
+<pre class="qml"></pre>
+<p>Image Colors uses <a href="qml-qtquick-particles2-customparticle.html">CustomParticle</a> to assign colors to particles based on their location in a picture. The vertex shader,</p>
+<pre class="qml"></pre>
+<p>passes along the starting position for each vertex to the fragment shader,</p>
+<pre class="qml"></pre>
+<p>which uses it to determine the color for that particle.</p>
+<p>Files:</p>
+<ul>
+<li><a href="particles-customparticle-customparticle-qml.html">particles/customparticle/customparticle.qml</a></li>
+<li><a href="particles-customparticle-content-blurparticles-qml.html">particles/customparticle/content/blurparticles.qml</a></li>
+<li><a href="particles-customparticle-content-fragmentshader-qml.html">particles/customparticle/content/fragmentshader.qml</a></li>
+<li><a href="particles-customparticle-content-imagecolors-qml.html">particles/customparticle/content/imagecolors.qml</a></li>
+<li><a href="particles-customparticle-main-cpp.html">particles/customparticle/main.cpp</a></li>
+<li><a href="particles-customparticle-customparticle-pro.html">particles/customparticle/customparticle.pro</a></li>
+<li><a href="particles-customparticle-customparticle-qmlproject.html">particles/customparticle/customparticle.qmlproject</a></li>
+<li><a href="particles-customparticle-customparticle-qrc.html">particles/customparticle/customparticle.qrc</a></li>
+</ul>
+</div>
+<!-- @@@particles/customparticle -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

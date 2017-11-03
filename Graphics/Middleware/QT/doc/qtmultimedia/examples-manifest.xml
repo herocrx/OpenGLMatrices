@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="qtmultimedia">
+    <examples>
+        <example name="Audio Devices Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-audiodevices.html" projectPath="multimedia/audiodevices/audiodevices.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/audiodevices.png">
+            <description><![CDATA[The Audio Devices example shows the application of the audio devices APIs]]></description>
+            <tags>devices,audio</tags>
+            <fileToOpen>multimedia/audiodevices/audiodevices.cpp</fileToOpen>
+            <fileToOpen>multimedia/audiodevices/audiodevices.h</fileToOpen>
+            <fileToOpen>multimedia/audiodevices/main.cpp</fileToOpen>
+        </example>
+        <example name="Audio Input Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-audioinput.html" projectPath="multimedia/audioinput/audioinput.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/audioinput-example.png">
+            <description><![CDATA[The Audio Input Example shows the use of the QAudioInput class. The example demonstrates the basic use cases of the QAudioInput class.]]></description>
+            <tags>input,audio</tags>
+            <fileToOpen>multimedia/audioinput/audioinput.cpp</fileToOpen>
+            <fileToOpen>multimedia/audioinput/audioinput.h</fileToOpen>
+            <fileToOpen>multimedia/audioinput/main.cpp</fileToOpen>
+        </example>
+        <example name="Audio Output Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-audiooutput.html" projectPath="multimedia/audiooutput/audiooutput.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/audiooutput-example.png">
+            <description><![CDATA[The Audio Output Example show the use of the QAudioOutput API.]]></description>
+            <tags>output,audio</tags>
+            <fileToOpen>multimedia/audiooutput/audiooutput.cpp</fileToOpen>
+            <fileToOpen>multimedia/audiooutput/audiooutput.h</fileToOpen>
+            <fileToOpen>multimedia/audiooutput/main.cpp</fileToOpen>
+        </example>
+        <example name="Audio Recorder Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-audiorecorder.html" projectPath="multimedia/audiorecorder/audiorecorder.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/audiorecorder.png">
+            <description><![CDATA[The Audio Recorder Example shows how to create a simple audio recorder.]]></description>
+            <tags>recorder,audio</tags>
+            <fileToOpen>multimedia/audiorecorder/audiorecorder.cpp</fileToOpen>
+            <fileToOpen>multimedia/audiorecorder/audiorecorder.h</fileToOpen>
+            <fileToOpen>multimedia/audiorecorder/main.cpp</fileToOpen>
+        </example>
+        <example name="AudioEngine Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-audioengine.html" projectPath="multimedia/audioengine/audioengine.pro">
+            <description><![CDATA[The Audio Engine example demonstrates 3D sound control using the QtAudioEngine API.]]></description>
+            <tags>audioengine</tags>
+            <fileToOpen>multimedia/audioengine/qml/audioengine.qml</fileToOpen>
+        </example>
+        <example name="Camera Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimediawidgets-camera.html" projectPath="multimediawidgets/camera/camera.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/camera-example.png">
+            <description><![CDATA[The Camera Example shows how to use the API to capture a still image or video.]]></description>
+            <tags>camera</tags>
+            <fileToOpen>multimediawidgets/camera/camera.cpp</fileToOpen>
+            <fileToOpen>multimediawidgets/camera/camera.h</fileToOpen>
+            <fileToOpen>multimediawidgets/camera/main.cpp</fileToOpen>
+        </example>
+        <example name="Declarative Radio Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-declarative-radio.html" projectPath="multimedia/declarative-radio/declarative-radio.pro">
+            <description><![CDATA[Demonstrates the radio functionality]]></description>
+            <tags>declarative,radio</tags>
+            <fileToOpen>multimedia/declarative-radio/main.cpp</fileToOpen>
+        </example>
+        <example name="Media Player Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimediawidgets-player.html" projectPath="multimediawidgets/player/player.pro">
+            <description><![CDATA[Demonstrates the audio and video playback functionality]]></description>
+            <tags>player,media</tags>
+            <fileToOpen>multimediawidgets/player/player.cpp</fileToOpen>
+            <fileToOpen>multimediawidgets/player/player.h</fileToOpen>
+            <fileToOpen>multimediawidgets/player/main.cpp</fileToOpen>
+        </example>
+        <example name="QML Camera Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimediawidgets-declarative-camera.html" projectPath="multimediawidgets/declarative-camera/declarative-camera.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/qml-camera.png">
+            <description><![CDATA[The Camera Example shows how to use the API to capture a still image or video.]]></description>
+            <tags>qml,camera</tags>
+            <fileToOpen>multimediawidgets/declarative-camera/declarative-camera.qml</fileToOpen>
+        </example>
+        <example name="QML Video Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-video-qmlvideo.html" projectPath="multimedia/video/qmlvideo/qmlvideo.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/qmlvideo-overlay.png">
+            <description><![CDATA[The QML Video Example demonstrates the various manipulations (move; resize; rotate; change aspect ratio) which can be applied to QML VideoOutput items.]]></description>
+            <tags>qml,video</tags>
+            <fileToOpen>multimedia/video/qmlvideo/qml/qmlvideo/main.qml</fileToOpen>
+            <fileToOpen>multimedia/video/qmlvideo/main.cpp</fileToOpen>
+        </example>
+        <example name="QML Video Shader Effects Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-video-qmlvideofx.html" projectPath="multimedia/video/qmlvideofx/qmlvideofx.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/qmlvideofx-video-edgedetection.png">
+            <description><![CDATA[The QML Video Shader Effects Example shows how ShaderEffect can be used to apply postprocessing effects, expressed in GLSL, to video and camera viewfinder content.]]></description>
+            <tags>shader,qml,video,effects</tags>
+            <fileToOpen>multimedia/video/qmlvideofx/main.cpp</fileToOpen>
+        </example>
+        <example name="Spectrum Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimedia-spectrum.html" projectPath="multimedia/spectrum/spectrum.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/spectrum-demo.png">
+            <description><![CDATA[The Spectrum Example uses a combination multimedia APIs to process microphone input.]]></description>
+            <tags>spectrum</tags>
+            <fileToOpen>multimedia/spectrum/app/spectrum.h</fileToOpen>
+            <fileToOpen>multimedia/spectrum/app/main.cpp</fileToOpen>
+        </example>
+        <example name="Video Graphics Item Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimediawidgets-videographicsitem.html" projectPath="multimediawidgets/videographicsitem/videographicsitem.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/video-videographicsitem.png">
+            <description><![CDATA[This example demonstrates how to stream video on a graphics scene.]]></description>
+            <tags>graphics,item,video</tags>
+            <fileToOpen>multimediawidgets/videographicsitem/main.cpp</fileToOpen>
+        </example>
+        <example name="Video Widget Example" docUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/multimediawidgets-videowidget.html" projectPath="multimediawidgets/videowidget/videowidget.pro" imageUrl="qthelp://org.qt-project.qtmultimedia.502/qtmultimedia/images/video-videowidget.png">
+            <description><![CDATA[This example is a simple video player]]></description>
+            <tags>video,widget</tags>
+            <fileToOpen>multimediawidgets/videowidget/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

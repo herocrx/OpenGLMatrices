@@ -1,0 +1,15 @@
+prefix=/home/heroadm/Qt//5.0.2/gcc_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=
+qt_config=minimal-config small-config medium-config large-config full-config build_all debug_and_release gtkstyle fontconfig evdev xlib xrender xcb-qt xcb-xlib accessibility-atspi-bridge linuxfb c++11 accessibility opengl shared qpa reduce_exports reduce_relocations clock-gettime clock-monotonic mremap getaddrinfo ipv6ifname getifaddrs inotify png system-freetype zlib nis cups iconv glib gstreamer dbus openssl xcb xinput2 rpath alsa pulseaudio icu concurrent audio-backend v8 v8snapshot debug release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.0.2
+Libs: -L${libdir} -lQt5Core 
+Libs.private: 
+Cflags: -I${includedir}/QtCore -I${includedir}
+

@@ -1,0 +1,14 @@
+prefix=/home/heroadm/Qt//5.0.2/gcc_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 CLucene
+Description: Qt CLucene module
+Version: 5.0.2
+Libs: -L${libdir} -lQt5CLucene 
+Libs.private: 
+Cflags: -I${includedir}/QtCLucene -I${includedir}
+Requires: Qt5Core
+

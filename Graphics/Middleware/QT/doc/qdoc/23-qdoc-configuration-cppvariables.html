@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-manual.qdoc -->
+  <title>QDoc 5.0: C++ Specific Configuration Variables</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="22-creating-help-project-files.html" />
+  <link rel="next" href="24-qdoc-configuration-htmlvariables.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="22-creating-help-project-files.html">Creating Help Project Files</a>
+<a class="nextPage" href="24-qdoc-configuration-htmlvariables.html">HTML Specific Configuration Variables</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#cpp-ignoredirectives">Cpp.ignoredirectives</a></li>
+<li class="level1"><a href="#cpp-ignoretokens">Cpp.ignoretokens</a></li>
+</ul>
+</div>
+<h1 class="title">C++ Specific Configuration Variables</h1>
+<span class="subtitle"></span>
+<!-- $$$23-qdoc-configuration-cppvariables.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The C++ specific configuration variables are provided to avoid erroneous documentation due to non-standard C++ constructs.</p>
+<a name="cpp-ignoredirectives-variable"></a><a name="cpp-ignoredirectives"></a>
+<h2>Cpp.ignoredirectives</h2>
+<p>The <tt>Cpp.ignoredirectives</tt> variable makes QDoc ignore the specified non-standard constructs, within C++ source code.</p>
+<p>If not specified by the <tt><a href="#cpp-ignoretokens">Cpp.ignoretokens</a></tt> or <tt><a href="#cpp-ignoredirectives">Cpp.ignoredirectives</a></tt> variables, non-standard constructs (typically macros) can result in erroneous documentation.</p>
+<p>In <a href="21-2-qt-qdocconf.html">qt.qdocconf</a>:</p>
+<pre class="cpp">Cpp<span class="operator">.</span>ignoredirectives <span class="operator">=</span> Q_DECLARE_INTERFACE \
+                       Q_DECLARE_OPERATORS_FOR_FLAGS \
+                       Q_DECLARE_PRIVATE \
+                       Q_DECLARE_PUBLIC \
+                       Q_DISABLE_COPY \
+                       Q_DUMMY_COMPARISON_OPERATOR \
+                       Q_ENUMS \
+                       Q_FLAGS \
+                       Q_INTERFACES \
+                       __attribute__</pre>
+<p>makes sure that when processing the code below, for example, QDoc will simply ignore the 'Q_ENUMS' and 'Q_FLAGS' expressions:</p>
+<pre class="cpp">    <span class="keyword">class</span> Q_CORE_EXPORT <span class="type"><a href="../qtcore/qt.html">Qt</a></span> {
+        Q_OBJECT
+        Q_ENUMS(Orientation TextFormat BackgroundMode
+                DateFormat ScrollBarPolicy FocusPolicy
+                ContextMenuPolicy CaseSensitivity
+                LayoutDirection ArrowType)
+        Q_ENUMS(ToolButtonStyle)
+        Q_FLAGS(Alignment)
+        Q_FLAGS(Orientations)
+        Q_FLAGS(DockWidgetAreas)
+
+      <span class="keyword">public</span>:
+        <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    };</pre>
+<p>The <a href="../qtcore/qobject.html#Q_OBJECT">Q_OBJECT</a> macro, however, is an exception: QDoc recognizes this particular non-standard construct, so there is no need specifying it using the <tt><a href="#cpp-ignoredirectives">Cpp.ignoredirectives</a></tt> variable.</p>
+<p>Regarding the Q_CORE_EXPORT macro; see the documentation of the <tt><a href="#cpp-ignoretokens">Cpp.ignoretokens</a></tt> variable.</p>
+<p>See also <a href="#cpp-ignoretokens">Cpp.ignoretokens</a>.</p>
+<a name="cpp-ignoretokens-variable"></a><a name="cpp-ignoretokens"></a>
+<h2>Cpp.ignoretokens</h2>
+<p>The <tt>Cpp.ignoretokens</tt> variable makes QDoc ignore the specified non-standard constructs, within C++ source code.</p>
+<p>If not specified by the <tt><a href="#cpp-ignoretokens">Cpp.ignoretokens</a></tt> or <tt><a href="#cpp-ignoredirectives">Cpp.ignoredirectives</a></tt> variables, non-standard constructs (typically macros) can result in erroneous documentation.</p>
+<p>In <a href="21-2-qt-qdocconf.html">qt.qdocconf</a>:</p>
+<pre class="cpp">Cpp<span class="operator">.</span>ignoretokens <span class="operator">=</span> QAXFACTORY_EXPORT \
+                   QM_EXPORT_CANVAS \
+                   <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+                   Q_COMPAT_EXPORT \
+                   Q_CORE_EXPORT \
+                   Q_EXPLICIT \
+                   Q_EXPORT \
+                   <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+                   Q_XML_EXPORT</pre>
+<p>makes sure that when processing the code below, for example, QDoc will simply ignore the 'Q_CORE_EXPORT' expression:</p>
+<pre class="cpp">    <span class="keyword">class</span> Q_CORE_EXPORT <span class="type"><a href="../qtcore/qt.html">Qt</a></span> {
+        Q_OBJECT
+        Q_ENUMS(Orientation TextFormat BackgroundMode
+                DateFormat ScrollBarPolicy FocusPolicy
+                ContextMenuPolicy CaseSensitivity
+                LayoutDirection ArrowType)
+        Q_ENUMS(ToolButtonStyle)
+        Q_FLAGS(Alignment)
+        Q_FLAGS(Orientations)
+        Q_FLAGS(DockWidgetAreas)
+      <span class="keyword">public</span>:
+        <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+    };</pre>
+<p>Regarding the <a href="../qtcore/qobject.html#Q_OBJECT">Q_OBJECT</a>, Q_ENUMS and Q_FLAGS macros; see the documentation of the <tt><a href="#cpp-ignoredirectives">Cpp.ignoredirectives</a></tt> variable.</p>
+<p>See also <a href="#cpp-ignoredirectives">Cpp.ignoredirectives</a>.</p>
+</div>
+<!-- @@@23-qdoc-configuration-cppvariables.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="22-creating-help-project-files.html">Creating Help Project Files</a>
+<a class="nextPage" href="24-qdoc-configuration-htmlvariables.html">HTML Specific Configuration Variables</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

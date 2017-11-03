@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickitemparticle.cpp -->
+  <title>QtQuick 5.0: ItemParticle</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">ItemParticle</h1>
+<span class="subtitle"></span>
+<!-- $$$ItemParticle-brief -->
+<p>For specifying a delegate to paint particles <a href="#details">More...</a></p>
+<!-- @@@ItemParticle -->
+<p>Inherits <a href="qml-qtquick-particles2-particlepainter.html">ParticlePainter</a></p>
+<ul>
+<li><a href="qml-qtquick-particles2-itemparticle-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick-particles2-itemparticle.html#delegate-prop">delegate</a></b></b> : Component</li>
+<li class="fn"><b><b><a href="qml-qtquick-particles2-itemparticle.html#fade-prop">fade</a></b></b> : bool</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="qml-qtquick-particles2-itemparticle.html#freeze-method">freeze</a></b></b>(Item <i>item</i>)</li>
+<li class="fn">void <b><b><a href="qml-qtquick-particles2-itemparticle.html#give-method">give</a></b></b>(Item <i>item</i>)</li>
+<li class="fn">void <b><b><a href="qml-qtquick-particles2-itemparticle.html#take-method">take</a></b></b>(Item <i>item</i>, bool <i>prioritize</i>)</li>
+<li class="fn">void <b><b><a href="qml-qtquick-particles2-itemparticle.html#unfreeze-method">unfreeze</a></b></b>(Item <i>item</i>)</li>
+</ul>
+<!-- $$$ItemParticle-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<!-- @@@ItemParticle -->
+<h2>Property Documentation</h2>
+<!-- $$$delegate -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="delegate-prop"></a><span class="name">delegate</span> : <span class="type"><a href="../qtqml/qml-qtquick2-component.html">Component</a></span></p></td></tr></table></div><div class="qmldoc"><p>An instance of the delegate will be created for every logical particle, and moved along with it.</p>
+</div></div><!-- @@@delegate -->
+<br/>
+<!-- $$$fade -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="fade-prop"></a><span class="name">fade</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>If true, the item will automatically be faded in and out at the ends of its lifetime. If false, you will have to implement any entry effect yourself.</p>
+<p>Default is true.</p>
+</div></div><!-- @@@fade -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$freeze -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="freeze-method"></a><span class="type">void</span> ItemParticle::<span class="name">freeze</span>(<span class="type"><a href="qml-qtquick2-item.html">Item</a></span><i> item</i>)</p></td></tr></table></div><div class="qmldoc"><p>Suspends the flow of time for the logical particle which item represents, allowing you to control its movement.</p>
+</div></div><!-- @@@freeze -->
+<br/>
+<!-- $$$give -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="give-method"></a><span class="type">void</span> ItemParticle::<span class="name">give</span>(<span class="type"><a href="qml-qtquick2-item.html">Item</a></span><i> item</i>)</p></td></tr></table></div><div class="qmldoc"><p>Orders the <a href="qml-qtquick-particles2-itemparticle.html">ItemParticle</a> to give you control of the item. It will cease controlling it and the item will lose its association to the logical particle.</p>
+</div></div><!-- @@@give -->
+<br/>
+<!-- $$$take -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="take-method"></a><span class="type">void</span> ItemParticle::<span class="name">take</span>(<span class="type"><a href="qml-qtquick2-item.html">Item</a></span><i> item</i>, <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span><i> prioritize</i>)</p></td></tr></table></div><div class="qmldoc"><p>Asks the <a href="qml-qtquick-particles2-itemparticle.html">ItemParticle</a> to take over control of item. It will be emitted when there is a logical particle available.</p>
+<p>By default items form a queue when waiting for a logical particle, but if prioritize is true then it will go immediately to the head of the queue.</p>
+</div></div><!-- @@@take -->
+<br/>
+<!-- $$$unfreeze -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="unfreeze-method"></a><span class="type">void</span> ItemParticle::<span class="name">unfreeze</span>(<span class="type"><a href="qml-qtquick2-item.html">Item</a></span><i> item</i>)</p></td></tr></table></div><div class="qmldoc"><p>Restarts the flow of time for the logical particle which item represents, allowing it to be moved by the particle system again.</p>
+</div></div><!-- @@@unfreeze -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

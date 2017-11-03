@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- web-content.qdoc -->
+  <title>QtDoc 5.0: Integrating Web Content</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#qtwebkit-widgets-integration">QtWebKit Widgets integration</a></li>
+<li class="level1"><a href="#qtwebkit-qt-quick-integration">QtWebKit Qt Quick integration</a></li>
+</ul>
+</div>
+<h1 class="title">Integrating Web Content</h1>
+<span class="subtitle"></span>
+<!-- $$$topics-web-content.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The QtWebKit module provides a <a href="http://www.webkit.org/">WebKit</a>-based layout engine with support for a wide range of standard web techologies such as HTML, CSS and JavaScript, that make it possible to embed content from the World Wide Web into your Qt application.</p>
+<p>QtWebKit provides the QtWebKit Widgets C++ classes to integrate web content into your <a href="../qtwidgets/qwidget.html">QWidget</a> and <a href="../qtwidgets/qgraphicsview.html">QGraphicsView</a> based application. QtWebKit also includes a WebView QML component for embedding into <a href="../qtquick/qtquick-index.html">Qt Quick</a>.</p>
+<a name="qtwebkit-widgets-integration"></a>
+<h2>QtWebKit Widgets integration</h2>
+<p>The QtWebKit Widgets module provides a number of different classes with a feature-rich C++ API that facilitates loading, viewing and editing web documents (QGraphicsWebView, QWebView, QWebPage, QWebFrame) or traversing the document model represented by a tree structure of <a href="http://www.w3.org/DOM/">DOM</a> elements (QWebElement). The QtWebKit Widgets classes provide traditional in-process rendering of web content.</p>
+<a name="qtwebkit-qt-quick-integration"></a>
+<h2>QtWebKit Qt Quick integration</h2>
+<p>The QtWebKit module can be integrated into Qt Quick by importing the WebView QML component. The WebView item has a minimalistic QML API for web content visualization which is not as feature-rich as the C++ API of the widget classes but it has out-of-the-box multi-touch support and employs a multi-process architecture to render web content in a separate helper process (QtWebProcess). The WebView makes it possible to interact with content using touch gestures such as panning with inertia (flick), pinch-zoom, tap and double-tap-to-zoom. The underlying split-process model (<a href="http://trac.webkit.org/wiki/WebKit2">WebKit2</a>) assures smooth animations in the embedding application (UI process) as well as increases stability.</p>
+<p>Examples demonstrating how to embed web content into a Qt application can be found in the qtwebkit-examples-and-demos module. Specifically the QML examples flickrview and youtubeview in this module show how to integrate web content into a Qt Quick application.</p>
+</div>
+<!-- @@@topics-web-content.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

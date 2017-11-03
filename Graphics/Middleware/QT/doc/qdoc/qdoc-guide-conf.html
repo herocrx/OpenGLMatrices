@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-guide.qdoc -->
+  <title>QDoc 5.0: Creating QDoc Configuration Files</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="qdoc-guide.html" />
+  <link rel="next" href="qdoc-guide-writing.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="qdoc-guide.html">Getting Started with QDoc</a>
+<a class="nextPage" href="qdoc-guide-writing.html">Writing Documentation</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#qdoc-configuration-files">QDoc Configuration Files</a></li>
+<li class="level2"><a href="#project-information">Project Information</a></li>
+<li class="level2"><a href="#input-and-output-directories">Input and Output Directories</a></li>
+<li class="level2"><a href="#extra-files">Extra Files</a></li>
+<li class="level2"><a href="#qt-help-framework-configuration">Qt Help Framework Configuration</a></li>
+<li class="level2"><a href="#html-configuration">HTML Configuration</a></li>
+<li class="level2"><a href="#dita-xml-configuration">DITA XML Configuration</a></li>
+<li class="level2"><a href="#qt-index-reference">Qt Index Reference</a></li>
+<li class="level1"><a href="#macros-and-other-configurations">Macros and Other Configurations</a></li>
+<li class="level2"><a href="#qml-additions">QML Additions</a></li>
+</ul>
+</div>
+<h1 class="title">Creating QDoc Configuration Files</h1>
+<span class="subtitle"></span>
+<!-- $$$qdoc-guide-conf.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>To generate documentation, QDoc uses configuration files, with the <tt>qdocconf</tt> extension, to store configuration settings.</p>
+<p>The <a href="21-0-qdoc-configuration.html">The QDoc Configuration File</a> article covers the various configuration variables in greater detail.</p>
+<a name="qdoc-configuration-files"></a>
+<h2>QDoc Configuration Files</h2>
+<p>QDoc's configuration settings can reside in a single <i>qdocconf</i> file, but can also be in other qdocconf files. The <tt>include(&lt;filepath&gt;)</tt> command allows configuration files to include other configuration files.</p>
+<p>QDoc has two outputs, HTML documentation and documentation in DITA XML format. The main distinction between the two outputs is that HTML documentation needs to have its HTML styling information in the configuration files. DITA XML documentation does not, and a separate process can style the documentation in DITA at a later time. DITA XML is therefore more flexible in allowing different styles to apply to the same information.</p>
+<p>To run qdoc, the project configuration file is supplied as an argument.</p>
+<pre class="cpp">qdoc project<span class="operator">.</span>qdocconf</pre>
+<p>The project configuration contains information that qdoc uses to create the documentation.</p>
+<a name="project-information"></a>
+<h3>Project Information</h3>
+<p>QDoc uses the <tt>project</tt> information to generate the documentation.</p>
+<pre class="cpp">    project <span class="operator">=</span> <span class="type">QDoc</span> Project
+    description <span class="operator">=</span> Sample <span class="type">QDoc</span> project</pre>
+<a name="qdoc-input-output-dir"></a><a name="input-and-output-directories"></a>
+<h3>Input and Output Directories</h3>
+<p>Specifying the path to the source directories allow QDoc to find sources and generate documentation.</p>
+<pre class="cpp">    sourcedirs <span class="operator">=</span> <span class="operator">&lt;</span>path to source code<span class="operator">&gt;</span>
+    exampledirs <span class="operator">=</span> <span class="operator">&lt;</span>path to examples directory<span class="operator">&gt;</span>
+    imagedirs <span class="operator">=</span> <span class="operator">&lt;</span>path to image directory<span class="operator">&gt;</span>
+
+    sources<span class="operator">.</span>fileextensions <span class="operator">=</span> <span class="string">&quot;*.cpp *.qdoc *.mm *.qml&quot;</span>
+    headers<span class="operator">.</span>fileextensions <span class="operator">=</span> <span class="string">&quot;*.h *.ch *.h++ *.hh *.hpp *.hxx&quot;</span>
+    examples<span class="operator">.</span>fileextensions <span class="operator">=</span> <span class="string">&quot;*.cpp *.h *.js *.xq *.svg *.xml *.ui *.qhp *.qhcp *.qml&quot;</span>
+    examples<span class="operator">.</span>imageextensions <span class="operator">=</span> <span class="string">&quot;*.png *.jpeg *.jpg *.gif *.mng&quot;</span></pre>
+<p>QDoc will process headers and sources from the ones specified in the <tt>fileextensions</tt> variable.</p>
+<p>Likewise, QDoc needs the path to the output directory. The <tt>outputformats</tt> variable determines the type of documentation. These variables should be in separate configuration files to modularize the documentation build.</p>
+<pre class="cpp">    outputdir  <span class="operator">=</span>    $SAMPLE_PROJECT<span class="operator">/</span>doc<span class="operator">/</span>html
+    outputformats <span class="operator">=</span> HTML</pre>
+<p>QDoc can resolve the paths relative to the qdocconf file as well as environment variables.</p>
+<p><b>Note: </b>During each QDoc run, the output directory is deleted.</p><a name="extra-files"></a>
+<h3>Extra Files</h3>
+<p>QDoc will output generated documentation into the directory specified in the <a href="#input-and-output-directories">output</a> directory. It is also possible to specify extra files that QDoc should export.</p>
+<pre class="cpp">    extraimages<span class="operator">.</span>HTML <span class="operator">=</span> extraImage<span class="operator">.</span>png \
+                       extraImage2<span class="operator">.</span>png</pre>
+<p>The <tt>extraImage.png</tt> and the <tt>extraImage2.png</tt> files will be copied to the HTML output directory.</p>
+<a name="qt-help-framework-configuration"></a>
+<h3>Qt Help Framework Configuration</h3>
+<p>QDoc will also export a <a href="../qthelp/qthelpproject.html">Qt Help Project</a> file, in a <tt>qhp</tt> file. The qhp file is then used by the <tt>qhelpgenerator</tt> to package the documentation into a <tt>qch</tt> file. Qt Creator and Qt Assistant reads the qch file to display the documentation.</p>
+<p>The <a href="22-creating-help-project-files.html">Creating Help Project Files</a> article covers the configuration options.</p>
+<a name="html-configuration"></a>
+<h3>HTML Configuration</h3>
+<p>QDoc has an HTML generator that will export a set of documentation into HTML files using various configuration settings. QDoc will place the generated documentation into the directory specified by the <tt>outputdir</tt> variable.</p>
+<pre class="cpp">    outputformats <span class="operator">=</span> HTML
+    outputdir <span class="operator">=</span>  <span class="operator">&lt;</span>path to output directory<span class="operator">&gt;</span></pre>
+<p>QDoc needs to know where the styles and templates for generating HTML are located. Typically, the templates directory contains a <tt>scripts</tt>, <tt>images</tt>, and a <tt>style</tt> directory, containing scripts and CSS files.</p>
+<pre class="cpp">    HTML<span class="operator">.</span>templatedir <span class="operator">=</span> <span class="operator">&lt;</span>path to templates<span class="operator">&gt;</span></pre>
+<p>The main configuration variables are:</p>
+<pre class="cpp">    HTML<span class="operator">.</span>postheader
+    HTML<span class="operator">.</span>postpostheader
+    HTML<span class="operator">.</span>postheader
+    HTML<span class="operator">.</span>footer
+
+    HTML<span class="operator">.</span>headerstyles
+    HTML<span class="operator">.</span>stylesheets <span class="operator">=</span> style<span class="operator">.</span>css \
+                       style1<span class="operator">.</span>css
+
+    HTML<span class="operator">.</span>scripts <span class="operator">=</span> script<span class="operator">.</span>js</pre>
+<p>The <tt>HTML.headerstyles</tt> variable inserts the style information into the HTML file and the <tt>HTML.stylesheets</tt> specifies which files QDoc should copy into the output directory. As well, QDoc will embed the string in the <tt>postheader</tt>, <tt>footer</tt>, and related variables into each HTML file.</p>
+<p>The <a href="24-qdoc-configuration-htmlvariables.html">HTML Specific Configuration Variables</a> article outlines the usage of each variable.</p>
+<a name="dita-xml-configuration"></a>
+<h3>DITA XML Configuration</h3>
+<p>DITA XML output is enabled using the <tt>outputformats</tt> variable. Unlike HTML documentation, QDoc does not need HTML style templates for generating documentation in DITA XML format.</p>
+<pre class="cpp">    outputformats <span class="operator">=</span> DITAXML
+    outputdir</pre>
+<a name="qt-index-reference"></a>
+<h3>Qt Index Reference</h3>
+<p>Documentation projects can link to Qt APIs and other articles by specifying the path to the <tt>qt.index</tt> file. When qdoc generates the Qt Reference Documentation, it will also generate an index file, containing the URLs to the articles. Other projects can use the links in the index file so that they can link to other articles and API documentation within Qt.</p>
+<pre class="cpp">    indexes <span class="operator">=</span> $QT_INSTALL_DOCS<span class="operator">/</span>html<span class="operator">/</span>qt<span class="operator">.</span>index $OTHER_PROJECT<span class="operator">/</span>html<span class="operator">/</span>qt<span class="operator">.</span>index</pre>
+<p>It is possible to specify multiple index files from several projects.</p>
+<a name="macros-and-other-configurations"></a>
+<h2>Macros and Other Configurations</h2>
+<p>Macros for substituting HTML characters exist and are helpful for generating specific HTML-valid characters.</p>
+<pre class="cpp">macro<span class="operator">.</span>pi<span class="operator">.</span>HTML         <span class="operator">=</span> <span class="string">&quot;&amp;Pi;&quot;</span></pre>
+<p>The snippet code will replace any instances of <tt>\\pi</tt> with <tt>&amp;Pi</tt>; in the HTML file, which will appear as the Greek &Pi; symbol when viewed in browsers.</p>
+<a name="qml-additions"></a>
+<h3>QML Additions</h3>
+<p>QDoc is able to parse QML files for QDoc comments. QDoc will parse files with the QML extension, <tt>.qml</tt>, if the extension type is included in the <a href="#input-and-output-directories">fileextensions</a> variable.</p>
+<p>Also, the generated HTML files can have a prefix, specified in the QDoc configuration file.</p>
+<pre class="cpp">outputprefixes <span class="operator">=</span> QML
+outputprefixes<span class="operator">.</span>QML <span class="operator">=</span> uicomponents<span class="operator">-</span></pre>
+<p>The outputprefixes will, for example, prefix QML type HTML filenames.</p>
+<pre class="cpp">files:
+    uicomponents<span class="operator">-</span>button<span class="operator">.</span>html
+    uicomponents<span class="operator">-</span>scrollbar<span class="operator">.</span>html</pre>
+</div>
+<!-- @@@qdoc-guide-conf.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qdoc-guide.html">Getting Started with QDoc</a>
+<a class="nextPage" href="qdoc-guide-writing.html">Writing Documentation</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

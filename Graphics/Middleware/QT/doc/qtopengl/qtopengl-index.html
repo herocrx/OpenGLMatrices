@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qtopengl-index.qdoc -->
+  <title>qtopengl : Qt OpenGL</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Qt OpenGL</h1>
+<span class="subtitle"></span>
+<!-- $$$qtopengl-index.html-description -->
+<div class="descr"> <a name="details"></a>
+<p><b>Warning:</b> Apart from the <a href="qglwidget.html">QGLWidget</a> class, this module should not be used anymore for new code. Please use the corresponding OpenGL classes in <a href="../qtgui/qtgui-index.html">Qt Gui</a>.</p>
+<p>OpenGL is a standard API for rendering 3D graphics. OpenGL only deals with 3D rendering and provides little or no support for GUI programming issues. The user interface for an OpenGL application must be created with another toolkit, such as Cocoa on the Mac OS X platform, Microsoft Foundation Classes (MFC) under Windows, or Qt on both platforms.</p>
+<p><b>Note: </b>OpenGL is a trademark of Silicon Graphics, Inc. in the United States and other countries.</p><p>The Qt OpenGL module makes it easy to use OpenGL in Qt applications. It provides an OpenGL widget class that can be used just like any other Qt widget, except that it opens an OpenGL display buffer where you can use the OpenGL API to render the contents.</p>
+<p>To include the definitions of the module's classes, use the following directive:</p>
+<pre class="cpp"><span class="preprocessor">#include &lt;QtOpenGL&gt;</span></pre>
+<p>To link against the module, add this line to your qmake <tt>.pro</tt> file:</p>
+<pre class="cpp">QT += opengl</pre>
+<p>The Qt OpenGL module is implemented as a platform-independent Qt/C++ wrapper around the platform-dependent GLX (version 1.3 or later), WGL, or AGL C APIs. Although the basic functionality provided is very similar to Mark Kilgard's GLUT library, applications using the Qt OpenGL module can take advantage of the whole Qt API for non-OpenGL-specific GUI functionality.</p>
+<p>The <a href="qtopengl-module.html">Qt OpenGL C++ classes</a> page gives an overview over the available classes int this module.</p>
+</div>
+<!-- @@@qtopengl-index.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

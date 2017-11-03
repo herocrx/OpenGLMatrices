@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- textballoons.qdoc -->
+  <title>QtQuick 5.0: Scenegraph Painted Item Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#textballoon-class-declaration">TextBalloon Class Declaration</a></li>
+<li class="level1"><a href="#textballoon-class-definition">TextBalloon Class Definition</a></li>
+<li class="level1"><a href="#textballoons-qml-file">textballoons.qml file</a></li>
+<li class="level2"><a href="#balloonview">BalloonView</a></li>
+<li class="level2"><a href="#controls">Controls</a></li>
+</ul>
+</div>
+<h1 class="title">Scenegraph Painted Item Example</h1>
+<span class="subtitle"></span>
+<!-- $$$customitems/painteditem-description -->
+<div class="descr"> <a name="details"></a>
+<p>Shows how to implement <a href="../qtgui/qpainter.html">QPainter</a>-based custom scenegraph items.<p>The Painted Item example shows how to use the QML Scene Graph framework to implement custom scenegraph items using <a href="../qtgui/qpainter.html">QPainter</a>.</p>
+<p class="centerAlign"><img src="images/declarative-textballoons_example.png" alt="" /></p><p>The <a href="qquickpainteditem.html">QQuickPaintedItem</a> class is a class derived from <a href="qquickitem.html">QQuickItem</a> for implementing custom QML Scene Graph items using the <a href="../qtgui/qpainter.html">QPainter</a> interfaces.</p>
+<p>The example consists of an item class, a plugin class and a QML file to use this plugin. The <tt>TextBalloon</tt> class represents the individual text balloons extending <a href="qquickpainteditem.html">QQuickPaintedItem</a>, the <tt>TextBalloonPlugin</tt> class represents the skeleton code for a <a href="qtquick-module.html">QtQuick</a> plugin and the <tt>textballoons.qml</tt> file is used to load the plugin and display the text balloons.</p>
+<p>We will focus on the <tt>TextBalloon</tt> class first and continue with the <tt>textballoons.qml</tt> file. For an example on how to implement a <a href="qtquick-module.html">QtQuick</a> plugin please look at Writing an Extension Plugin</p>
+<a name="textballoon-class-declaration"></a>
+<h2>TextBalloon Class Declaration</h2>
+<p>The <tt>TextBalloon</tt> class inherits from <a href="qquickpainteditem.html">QQuickPaintedItem</a>. <a href="qquickpainteditem.html">QQuickPaintedItem</a> is the base class for all <a href="../qtgui/qpainter.html">QPainter</a> based items in the QML Scene Graph framework.</p>
+<pre class="cpp"></pre>
+<p>To implement a <a href="qquickpainteditem.html">QQuickPaintedItem</a> you must implement QQuickPaintedIem's pure virtual function <a href="qquickpainteditem.html#paint">paint()</a> which implements the painting of the element.</p>
+<a name="textballoon-class-definition"></a>
+<h2>TextBalloon Class Definition</h2>
+<p>We have to be sure to initialize the rightAligned property for a TextBalloon item.</p>
+<pre class="cpp"></pre>
+<p>Then we implement the <tt>paint()</tt> function which is automatically called by the Scenegraph framework to paint the contents of the item. The function paints the item in local coordinates.</p>
+<pre class="cpp"></pre>
+<p>We start with setting the pen and brush on the item to define the look of the item. After that we start drawing. Note that the boundingRect() item is called to draw depending on the size of the item. The rectangle returned by the boundingRect() function is the size of the item as defined in the QML file.</p>
+<a name="textballoons-qml-file"></a>
+<h2>textballoons.qml file</h2>
+<p>The Interface consists of two main parts. The scrollable area with the textballoons and the controls button to add new balloons.</p>
+<a name="balloonview"></a>
+<h3>BalloonView</h3>
+<pre class="qml"></pre>
+<p>The balloonModel contains two elements at application start which will be displayed by the <a href="#balloonview">balloonView</a>. The <a href="#balloonview">balloonView</a> alernates the TextBalloon delegate items between left-aligned and right-aligned.</p>
+<a name="controls"></a>
+<h3>Controls</h3>
+<pre class="qml"></pre>
+<p>The controls part of the UI contains a rectangle with a <a href="qml-qtquick2-mousearea.html">MouseArea</a> which changes color when the mouse hovers over it. This control 'button' adds a new element to the end of the model with a random width.</p>
+<p>Files:</p>
+<ul>
+<li><a href="customitems-painteditem-textballoon-cpp.html">customitems/painteditem/textballoon.cpp</a></li>
+<li><a href="customitems-painteditem-textballoon-h.html">customitems/painteditem/textballoon.h</a></li>
+<li><a href="customitems-painteditem-textballoons-qml.html">customitems/painteditem/textballoons.qml</a></li>
+<li><a href="customitems-painteditem-textballoonplugin-plugin-h.html">customitems/painteditem/TextBalloonPlugin/plugin.h</a></li>
+<li><a href="customitems-painteditem-painteditem-pro.html">customitems/painteditem/painteditem.pro</a></li>
+<li><a href="customitems-painteditem-painteditem-qrc.html">customitems/painteditem/painteditem.qrc</a></li>
+<li><a href="customitems-painteditem-textballoonplugin-qmldir.html">customitems/painteditem/TextBalloonPlugin/qmldir</a></li>
+</ul>
+</div>
+<!-- @@@customitems/painteditem -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

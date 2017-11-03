@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtQuick 5.0: canvas.qml Example File (canvas/canvas.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">canvas.qml Example File</h1>
+<span class="small-subtitle">canvas/canvas.qml</span>
+<!-- $$$canvas/canvas.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the examples of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
+**
+** &quot;Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
+**
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+import &quot;../shared&quot; as Examples
+
+<span class="type"><a href="qml-qtquick2-item.html">Item</a></span> {
+    <span class="name">height</span>: <span class="number">480</span>
+    <span class="name">width</span>: <span class="number">320</span>
+    <span class="type">Examples</span>.LauncherList {
+        <span class="name">id</span>: <span class="name">ll</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">Component</span>.onCompleted: {
+            <span class="name">addExample</span>(<span class="string">&quot;Red heart&quot;</span>, <span class="string">&quot;Draws a red heart with bezier curves&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;bezierCurve/bezierCurve.qml&quot;</span>));
+            <span class="name">addExample</span>(<span class="string">&quot;Talk bubble&quot;</span>, <span class="string">&quot;Draws a talk bubble with quadratic curves&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;quadraticCurveTo/quadraticCurveTo.qml&quot;</span>));
+            <span class="name">addExample</span>(<span class="string">&quot;Squircle&quot;</span>, <span class="string">&quot;Draws a smooth squircle with simple lines&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;squircle/squircle.qml&quot;</span>));
+            <span class="name">addExample</span>(<span class="string">&quot;Rounded rectangle&quot;</span>, <span class="string">&quot;Draws a rounded rectangle with lines and arcs&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;roundedrect/roundedrect.qml&quot;</span>));
+            <span class="name">addExample</span>(<span class="string">&quot;Smile face&quot;</span>, <span class="string">&quot;Draws a smile face with complex paths&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;smile/smile.qml&quot;</span>));
+            <span class="name">addExample</span>(<span class="string">&quot;Clip&quot;</span>, <span class="string">&quot;Shows the canvas clip feature&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;clip/clip.qml&quot;</span>));
+            <span class="name">addExample</span>(<span class="string">&quot;Tiger&quot;</span>, <span class="string">&quot;Draw a tiger with a collection of SVG paths&quot;</span>,  <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;tiger/tiger.qml&quot;</span>));
+        }
+    }
+}</pre>
+</div>
+<!-- @@@canvas/canvas.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

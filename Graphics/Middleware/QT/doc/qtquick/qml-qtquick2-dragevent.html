@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickdroparea.cpp -->
+  <title>QtQuick 5.0: DragEvent</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">DragEvent</h1>
+<span class="subtitle"></span>
+<!-- $$$DragEvent-brief -->
+<p>Provides information about a drag event <a href="#details">More...</a></p>
+<!-- @@@DragEvent -->
+<ul>
+<li><a href="qml-qtquick2-dragevent-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#accepted-prop">accepted</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#action-prop">action</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#drag.source-prop">drag.source</a></b></b> : Object</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#keys-prop">keys</a></b></b> : stringlist</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#supportedActions-prop">supportedActions</a></b></b> : flags</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#x-prop">x</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#y-prop">y</a></b></b> : real</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#accept-method">accept</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-qtquick2-dragevent.html#accept-method-2">accept</a></b></b>(enumeration <i>action</i>)</li>
+</ul>
+<!-- $$$DragEvent-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The position of the drag event can be obtained from the <a href="qml-qtquick2-dragevent.html#x-prop">x</a> and <a href="qml-qtquick2-dragevent.html#y-prop">y</a> properties, and the <a href="qml-qtquick2-dragevent.html#keys-prop">keys</a> property identifies the drag keys of the event source.</p>
+<!-- @@@DragEvent -->
+<h2>Property Documentation</h2>
+<!-- $$$accepted -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="accepted-prop"></a><span class="name">accepted</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds whether the drag event was accepted by a handler.</p>
+<p>The default value is true.</p>
+</div></div><!-- @@@accepted -->
+<br/>
+<!-- $$$action -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="action-prop"></a><span class="name">action</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the action that the source is to perform on an accepted drop.</p>
+<p>The drop action may be one of:</p>
+<ul>
+<li>Qt.CopyAction Copy the data to the target</li>
+<li>Qt.MoveAction Move the data from the source to the target</li>
+<li>Qt.LinkAction Create a link from the source to the target.</li>
+<li>Qt.IgnoreAction Ignore the action (do nothing with the data).</li>
+</ul>
+</div></div><!-- @@@action -->
+<br/>
+<!-- $$$drag.source -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="drag.source-prop"></a><span class="name">drag.source</span> : <span class="type">Object</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the source of a drag event.</p>
+</div></div><!-- @@@drag.source -->
+<br/>
+<!-- $$$keys -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="keys-prop"></a><span class="name">keys</span> : <span class="type">stringlist</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds a list of keys identifying the data type or source of a drag event.</p>
+</div></div><!-- @@@keys -->
+<br/>
+<!-- $$$supportedActions -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="supportedActions-prop"></a><span class="name">supportedActions</span> : <span class="type">flags</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the set of <a href="qml-qtquick2-dragevent.html#action-prop">actions</a> supported by the drag source.</p>
+</div></div><!-- @@@supportedActions -->
+<br/>
+<!-- $$$x -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="x-prop"></a><span class="name">x</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the x coordinate of a drag event.</p>
+</div></div><!-- @@@x -->
+<br/>
+<!-- $$$y -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="y-prop"></a><span class="name">y</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the y coordinate of a drag event.</p>
+</div></div><!-- @@@y -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$accept -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="accept-method"></a>DragEvent::<span class="name">accept</span>()</p></td></tr></table></div><div class="qmldoc"><p>Accepts the drag event.</p>
+<p>If an <i>action</i> is specified it will overwrite the value of the <a href="qml-qtquick2-dragevent.html#action-prop">action</a> property.</p>
+</div></div><!-- @@@accept -->
+<br/>
+<!-- $$$accept -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="accept-method-2"></a>DragEvent::<span class="name">accept</span>(<span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span><i> action</i>)</p></td></tr></table></div><div class="qmldoc"><p>Accepts the drag event.</p>
+<p>If an <i>action</i> is specified it will overwrite the value of the <a href="qml-qtquick2-dragevent.html#action-prop">action</a> property.</p>
+</div></div><!-- @@@accept -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

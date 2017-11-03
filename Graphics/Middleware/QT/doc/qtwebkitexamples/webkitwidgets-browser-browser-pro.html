@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: browser.pro Example File (webkitwidgets/browser/browser.pro)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">browser.pro Example File</h1>
+<span class="small-subtitle">webkitwidgets/browser/browser.pro</span>
+<!-- $$$webkitwidgets/browser/browser.pro-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp">TEMPLATE = app
+TARGET = browser
+QT += webkitwidgets network widgets printsupport
+
+qtHaveModule(uitools):!embedded: QT += uitools
+else: DEFINES += QT_NO_UITOOLS
+
+FORMS += \
+    addbookmarkdialog.ui \
+    bookmarks.ui \
+    cookies.ui \
+    cookiesexceptions.ui \
+    downloaditem.ui \
+    downloads.ui \
+    history.ui \
+    passworddialog.ui \
+    proxy.ui \
+    settings.ui
+
+HEADERS += \
+    autosaver.h \
+    bookmarks.h \
+    browserapplication.h \
+    browsermainwindow.h \
+    chasewidget.h \
+    cookiejar.h \
+    downloadmanager.h \
+    edittableview.h \
+    edittreeview.h \
+    history.h \
+    modelmenu.h \
+    networkaccessmanager.h \
+    searchlineedit.h \
+    settings.h \
+    squeezelabel.h \
+    tabwidget.h \
+    toolbarsearch.h \
+    urllineedit.h \
+    webview.h \
+    xbel.h
+
+SOURCES += \
+    autosaver.cpp \
+    bookmarks.cpp \
+    browserapplication.cpp \
+    browsermainwindow.cpp \
+    chasewidget.cpp \
+    cookiejar.cpp \
+    downloadmanager.cpp \
+    edittableview.cpp \
+    edittreeview.cpp \
+    history.cpp \
+    modelmenu.cpp \
+    networkaccessmanager.cpp \
+    searchlineedit.cpp \
+    settings.cpp \
+    squeezelabel.cpp \
+    tabwidget.cpp \
+    toolbarsearch.cpp \
+    urllineedit.cpp \
+    webview.cpp \
+    xbel.cpp \
+    main.cpp
+
+RESOURCES += data/data.qrc htmls/htmls.qrc
+
+build_all:!build_pass {
+    CONFIG -= build_all
+    CONFIG += release
+}
+
+win32 {
+   RC_FILE = browser.rc
+}
+
+mac {
+    ICON = browser.icns
+    QMAKE_INFO_PLIST = Info_mac.plist
+    TARGET = Browser
+
+    # No 64-bit Flash on Mac, so build the browser 32-bit
+    contains(QT_CONFIG, x86) {
+        CONFIG -= x86_64
+        CONFIG += x86
+    }
+    contains(QT_CONFIG, ppc) {
+        CONFIG -= ppc64
+        CONFIG += ppc
+    }
+}
+
+wince*: {
+    DEPLOYMENT_PLUGIN += qjpeg qgif
+}
+
+EXAMPLE_FILES = Info_mac.plist browser.icns browser.ico browser.rc
+
+# install
+target.path = $$[QT_INSTALL_EXAMPLES]/webkitwidgets/browser
+INSTALLS += target</pre>
+</div>
+<!-- @@@webkitwidgets/browser/browser.pro -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: youtubeview.qml Example File (webkitqml/youtubeview/youtubeview.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">youtubeview.qml Example File</h1>
+<span class="small-subtitle">webkitqml/youtubeview/youtubeview.qml</span>
+<!-- $$$webkitqml/youtubeview/youtubeview.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the examples of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
+**
+** &quot;Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
+**
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+import QtWebKit 3.0
+import QtQuick.XmlListModel 2.0
+import &quot;qrc:/shared&quot; as Shared
+import &quot;qrc:/content&quot; as Content
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    <span class="name">width</span>: <span class="number">850</span>
+    <span class="name">height</span>: <span class="number">480</span>
+    <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+    <span class="name">focus</span>: <span class="number">true</span>
+
+    property <span class="type">QtObject</span> <span class="name">videoStatus</span>: <span class="name">QtObject</span> {
+        property <span class="type">int</span> <span class="name">initial</span>: -<span class="number">1</span>
+        property <span class="type">int</span> <span class="name">ready</span>: <span class="number">0</span>
+        property <span class="type">int</span> <span class="name">playing</span>: <span class="number">1</span>
+        property <span class="type">int</span> <span class="name">paused</span>: <span class="number">2</span>
+    }
+
+    <span class="type">QtObject</span> {
+        <span class="name">id</span>: <span class="name">currentVideo</span>
+        property <span class="type">string</span> <span class="name">vId</span>: <span class="string">&quot;&quot;</span>
+        property <span class="type">string</span> <span class="name">title</span>: <span class="string">&quot;&quot;</span>
+        property <span class="type">int</span> <span class="name">status</span>: <span class="name">videoStatus</span>.<span class="name">initial</span>
+    }
+
+    readonly property <span class="type">int</span> <span class="name">padding</span>: <span class="number">20</span>
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">content</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+
+        <span class="type">WebView</span> {
+            <span class="name">id</span>: <span class="name">webView</span>
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">opacity</span>: <span class="number">0</span>
+
+            <span class="name">url</span>: <span class="string">&quot;qrc:///content/player.html?&quot;</span> <span class="operator">+</span> <span class="name">currentVideo</span>.<span class="name">vId</span>
+
+            Behavior on <span class="name">opacity</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">200</span> } }
+
+            <span class="name">onLoadingChanged</span>: {
+                <span class="keyword">switch</span> (<span class="name">loadRequest</span>.<span class="name">status</span>)
+                {
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">LoadSucceededStatus</span>:
+                    <span class="name">opacity</span> <span class="operator">=</span> <span class="number">1</span>
+                    <span class="keyword">return</span>
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">LoadStartedStatus</span>:
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">LoadStoppedStatus</span>:
+                    <span class="keyword">break</span>
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">LoadFailedStatus</span>:
+                    <span class="name">topInfo</span>.<span class="name">text</span> <span class="operator">=</span> <span class="string">&quot;Failed to load the requested video&quot;</span>
+                    <span class="keyword">break</span>
+                }
+                <span class="name">opacity</span> <span class="operator">=</span> <span class="number">0</span>
+            }
+            <span class="name">onTitleChanged</span>: {
+                <span class="name">currentVideo</span>.<span class="name">status</span> <span class="operator">=</span> <span class="number">1</span> <span class="operator">*</span> <span class="name">title</span>
+                <span class="keyword">if</span> (<span class="name">title</span> <span class="operator">==</span> <span class="name">videoStatus</span>.<span class="name">paused</span> <span class="operator">||</span> <span class="name">title</span> <span class="operator">==</span> <span class="name">videoStatus</span>.<span class="name">ready</span>)
+                    <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;list&quot;</span>
+                <span class="keyword">else</span> <span class="keyword">if</span> (<span class="name">title</span> <span class="operator">==</span> <span class="name">videoStatus</span>.<span class="name">playing</span>)
+                    <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;hidden&quot;</span>
+            }
+        }
+
+        <span class="type">Content</span>.YouTubeDialog {
+            <span class="name">id</span>: <span class="name">presetDialog</span>
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">visible</span>: <span class="number">false</span>
+            <span class="name">onPresetClicked</span>: {
+                <span class="name">model</span>.<span class="name">userName</span> <span class="operator">=</span> <span class="name">name</span>
+                <span class="name">model</span>.<span class="name">startIndex</span> <span class="operator">=</span> <span class="number">1</span>
+                <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;list&quot;</span>
+                <span class="name">searchBinding</span>.<span class="name">when</span> <span class="operator">=</span> <span class="number">false</span>
+                <span class="name">presetsBinding</span>.<span class="name">when</span> <span class="operator">=</span> <span class="number">true</span>
+                <span class="name">model</span>.<span class="name">reload</span>()
+            }
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">panel</span>
+        <span class="name">height</span>: <span class="number">100</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>;
+        <span class="name">state</span>: <span class="string">&quot;list&quot;</span>
+
+        Behavior on <span class="name">y</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">200</span> } }
+        Behavior on <span class="name">height</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">200</span> } }
+        Behavior on <span class="name">opacity</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">400</span> } }
+
+        <span class="type">Binding</span> { <span class="name">id</span>: <span class="name">presetsBinding</span>; <span class="name">target</span>: <span class="name">model</span>; <span class="name">property</span>: <span class="string">&quot;source&quot;</span>; <span class="name">value</span>: <span class="name">model</span>.<span class="name">usersSource</span>; <span class="name">when</span>: <span class="number">false</span> }
+        <span class="type">Binding</span> { <span class="name">id</span>: <span class="name">searchBinding</span>; <span class="name">target</span>: <span class="name">model</span>; <span class="name">property</span>: <span class="string">&quot;source&quot;</span>; <span class="name">value</span>: <span class="name">model</span>.<span class="name">searchSource</span>; <span class="name">when</span>: <span class="number">false</span> }
+
+        <span class="type">anchors</span> {
+            <span class="name">left</span>: <span class="name">container</span>.<span class="name">left</span>
+            <span class="name">right</span>: <span class="name">container</span>.<span class="name">right</span>
+        }
+
+        <span class="name">states</span>: [
+            <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                <span class="name">name</span>: <span class="string">&quot;search&quot;</span>
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">panel</span>; <span class="name">color</span>: <span class="string">&quot;black&quot;</span>; <span class="name">opacity</span>: <span class="number">0.8</span>; <span class="name">y</span>: -<span class="name">height</span> <span class="operator">+</span> <span class="name">topInfo</span>.<span class="name">height</span> <span class="operator">+</span> <span class="name">searchPanel</span>.<span class="name">height</span> <span class="operator">+</span> <span class="name">button</span>.<span class="name">height</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">listView</span>; <span class="name">visible</span>: <span class="number">false</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">searchPanel</span>; <span class="name">opacity</span>: <span class="number">0.8</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">hideTimer</span>; <span class="name">running</span>: <span class="number">false</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">presetDialog</span>; <span class="name">visible</span>: <span class="number">true</span> }
+            },
+
+            <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                <span class="name">name</span>: <span class="string">&quot;list&quot;</span>
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">panel</span>; <span class="name">color</span>: <span class="string">&quot;black&quot;</span>; <span class="name">opacity</span>: <span class="number">0.8</span>; <span class="name">y</span>: <span class="number">0</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">listView</span>; <span class="name">visible</span>: <span class="number">true</span>; <span class="name">focus</span>: <span class="number">true</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">searchPanel</span>; <span class="name">visible</span>: <span class="number">false</span> }
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">listView</span>; <span class="name">visible</span>: <span class="number">true</span> }
+            },
+
+            <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                <span class="name">name</span>: <span class="string">&quot;hidden&quot;</span>
+                <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">panel</span>; <span class="name">color</span>: <span class="string">&quot;gray&quot;</span>; <span class="name">opacity</span>: <span class="number">0.2</span>; <span class="name">y</span>: -<span class="name">height</span> }
+            }
+        ]
+
+        <span class="type">Timer</span> {
+            <span class="name">id</span>: <span class="name">hideTimer</span>
+            <span class="name">interval</span>: <span class="number">3000</span>
+            <span class="name">repeat</span>: <span class="number">false</span>
+            <span class="name">onTriggered</span>: <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;hidden&quot;</span>
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-listview.html">ListView</a></span> {
+            <span class="name">id</span>: <span class="name">listView</span>
+            <span class="name">orientation</span>: <span class="string">&quot;Horizontal&quot;</span>
+
+            <span class="type">anchors</span> {
+                <span class="name">top</span>: <span class="name">panel</span>.<span class="name">top</span>
+                <span class="name">bottom</span>: <span class="name">button</span>.<span class="name">top</span>
+                <span class="name">left</span>: <span class="name">panel</span>.<span class="name">left</span>
+                <span class="name">right</span>: <span class="name">panel</span>.<span class="name">right</span>
+            }
+
+            <span class="name">focus</span>: <span class="number">true</span>
+            <span class="name">model</span>: <span class="name">model</span>
+
+            <span class="name">header</span>: <span class="name">Component</span> {
+                <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+                    <span class="name">visible</span>: <span class="name">model</span>.<span class="name">startIndex</span> <span class="operator">!=</span> <span class="number">1</span> <span class="operator">&amp;&amp;</span> <span class="name">model</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">XmlListModel</span>.<span class="name">Ready</span>
+                    <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+                    <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+                    <span class="name">width</span>: <span class="name">height</span>
+                    <span class="name">height</span>: <span class="name">visible</span> ? <span class="name">listView</span>.<span class="name">contentItem</span>.<span class="name">height</span> : <span class="number">0</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> { <span class="name">anchors</span>.centerIn: <span class="name">parent</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span>; <span class="name">source</span>: <span class="string">&quot;qrc:/shared/images/less.png&quot;</span> }
+                    <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+                        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                        <span class="name">onClicked</span>: <span class="name">model</span>.<span class="name">requestLess</span>()
+                    }
+                }
+            }
+
+            <span class="name">footer</span>: <span class="name">Component</span> {
+                <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+                    <span class="name">visible</span>: <span class="name">model</span>.<span class="name">totalResults</span> <span class="operator">&gt;</span> <span class="name">model</span>.<span class="name">endIndex</span> <span class="operator">&amp;&amp;</span> <span class="name">model</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">XmlListModel</span>.<span class="name">Ready</span>
+                    <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+                    <span class="name">anchors</span>.verticalCenter: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+                    <span class="name">width</span>: <span class="name">height</span>
+                    <span class="name">height</span>: <span class="name">visible</span> ? <span class="name">listView</span>.<span class="name">contentItem</span>.<span class="name">height</span> : <span class="number">0</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> { <span class="name">anchors</span>.centerIn: <span class="name">parent</span>; <span class="name">width</span>: <span class="number">50</span>; <span class="name">height</span>: <span class="number">50</span>; <span class="name">source</span>: <span class="string">&quot;qrc:/shared/images/more.png&quot;</span> }
+                    <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+                        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                        <span class="name">onClicked</span>: <span class="name">model</span>.<span class="name">requestMore</span>()
+                    }
+                }
+            }
+
+            <span class="name">delegate</span>: <span class="name">Component</span> {
+                <span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> {
+                    <span class="name">source</span>: <span class="name">thumbnail</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+                        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                        <span class="name">onClicked</span>: {
+                            <span class="name">currentVideo</span>.<span class="name">vId</span> <span class="operator">=</span> <span class="name">id</span>
+                            <span class="name">currentVideo</span>.<span class="name">title</span> <span class="operator">=</span> <span class="name">title</span>
+                        }
+                    }
+                    <span class="name">Component</span>.onCompleted: {
+                        <span class="keyword">if</span> (<span class="name">currentVideo</span>.<span class="name">title</span> <span class="operator">==</span> <span class="string">&quot;&quot;</span>) {
+                            <span class="name">currentVideo</span>.<span class="name">vId</span> <span class="operator">=</span> <span class="name">id</span>
+                            <span class="name">currentVideo</span>.<span class="name">title</span> <span class="operator">=</span> <span class="name">title</span>
+                        }
+                    }
+                }
+            }
+
+            <span class="name">onDraggingChanged</span>: {
+                <span class="keyword">if</span> (<span class="name">dragging</span>)
+                    <span class="name">hideTimer</span>.<span class="name">stop</span>()
+                <span class="keyword">else</span> <span class="keyword">if</span> (<span class="name">currentVideo</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">videoStatus</span>.<span class="name">playing</span>)
+                    <span class="name">hideTimer</span>.<span class="name">start</span>()
+            }
+        }
+
+        <span class="type">Shared</span>.LoadIndicator {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+            <span class="name">running</span>: <span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;list&quot;</span> <span class="operator">&amp;&amp;</span> <span class="name">model</span>.<span class="name">status</span> <span class="operator">!=</span> <span class="name">XmlListModel</span>.<span class="name">Ready</span>
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+            <span class="name">id</span>: <span class="name">searchPanel</span>
+            Behavior on <span class="name">opacity</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">400</span> } }
+
+            <span class="name">height</span>: <span class="name">searchField</span>.<span class="name">height</span> <span class="operator">+</span> <span class="name">container</span>.<span class="name">padding</span>
+
+            <span class="type">anchors</span> {
+                <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>
+                <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>
+                <span class="name">bottom</span>: <span class="name">button</span>.<span class="name">top</span>
+            }
+
+            <span class="name">opacity</span>: <span class="number">0</span>
+            <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+
+            <span class="name">gradient</span>: <span class="name">Gradient</span> {
+                <span class="type"><a href="../qtquick/qml-qtquick2-gradientstop.html">GradientStop</a></span> {
+                    <span class="name">position</span>: <span class="number">0.0</span>
+                    <span class="name">color</span>: <span class="string">&quot;grey&quot;</span>
+                }
+                <span class="type"><a href="../qtquick/qml-qtquick2-gradientstop.html">GradientStop</a></span> {
+                    <span class="name">position</span>: <span class="number">1.0</span>
+                    <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+                }
+            }
+
+            <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+                <span class="name">id</span>: <span class="name">searchField</span>
+                <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+                <span class="name">radius</span>: <span class="number">2</span>
+                <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                <span class="name">width</span>: <span class="number">220</span>
+                <span class="name">border</span>.color: <span class="string">&quot;black&quot;</span>
+                <span class="name">border</span>.width: <span class="number">2</span>
+                <span class="name">height</span>: <span class="name">input</span>.<span class="name">height</span> <span class="operator">+</span> <span class="name">container</span>.<span class="name">padding</span>
+                <span class="type"><a href="../qtquick/qml-qtquick2-textinput.html">TextInput</a></span> {
+                    <span class="name">id</span>: <span class="name">input</span>
+                    <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+                    <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                    <span class="name">horizontalAlignment</span>: <span class="name">TextInput</span>.<span class="name">AlignHCenter</span>
+                    <span class="name">font</span>.capitalization: <span class="name">Font</span>.<span class="name">AllLowercase</span>
+                    <span class="name">maximumLength</span>: <span class="number">30</span>
+                    <span class="name">cursorVisible</span>: <span class="number">true</span>
+                    <span class="name">focus</span>: <span class="name">parent</span>.<span class="name">visible</span>
+                    <span class="name">text</span>: <span class="string">&quot;movie trailers&quot;</span>
+                    <span class="name">Keys</span>.onPressed: {
+                        <span class="keyword">if</span> (<span class="name">event</span>.<span class="name">key</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Key_Return</span> <span class="operator">||</span> <span class="name">event</span>.<span class="name">key</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">Key_Enter</span>) {
+                            <span class="name">model</span>.<span class="name">startIndex</span> <span class="operator">=</span> <span class="number">1</span>
+                            <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;list&quot;</span>
+                            <span class="name">presetsBinding</span>.<span class="name">when</span> <span class="operator">=</span> <span class="number">false</span>
+                            <span class="name">searchBinding</span>.<span class="name">when</span> <span class="operator">=</span> <span class="number">true</span>
+                            <span class="name">model</span>.<span class="name">reload</span>()
+                        }
+                    }
+                }
+                <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+                    <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                    <span class="name">onPressed</span>: <span class="name">input</span>.<span class="name">focus</span> <span class="operator">=</span> <span class="number">true</span>
+                }
+            }
+        }
+
+        <span class="type">Shared</span>.Button {
+            <span class="name">id</span>: <span class="name">button</span>
+            <span class="name">buttonHeight</span>: <span class="name">container</span>.<span class="name">padding</span>
+            <span class="name">buttonWidth</span>: <span class="name">container</span>.<span class="name">width</span>
+            <span class="name">fontSize</span>: <span class="number">8</span>
+
+            <span class="name">visible</span>: <span class="name">panel</span>.<span class="name">state</span> <span class="operator">!=</span> <span class="string">&quot;hidden&quot;</span>
+
+            <span class="type">anchors</span> {
+                <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>
+                <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>
+                <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>
+            }
+
+            <span class="name">states</span>: [
+                <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                    <span class="name">name</span>: <span class="string">&quot;search&quot;</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">text</span>: <span class="string">&quot;Press to switch back to the video list&quot;</span> }
+                },
+
+                <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                    <span class="name">name</span>: <span class="string">&quot;list&quot;</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">button</span>; <span class="name">text</span>: <span class="string">&quot;Press to search for videos&quot;</span> }
+                }
+            ]
+
+            <span class="name">state</span>: <span class="name">panel</span>.<span class="name">state</span>
+
+            <span class="name">onClicked</span>: {
+                <span class="keyword">if</span> (<span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;search&quot;</span>)
+                    <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;list&quot;</span>
+                <span class="keyword">else</span>
+                    <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;search&quot;</span>
+            }
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">height</span>: <span class="number">10</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+        <span class="name">opacity</span>: (<span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;hidden&quot;</span>) ? <span class="number">0</span> : <span class="number">0.8</span>
+
+        Behavior on <span class="name">opacity</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">200</span> } }
+
+        <span class="type">anchors</span> {
+            <span class="name">top</span>: <span class="name">container</span>.<span class="name">top</span>
+            <span class="name">left</span>: <span class="name">container</span>.<span class="name">left</span>
+            <span class="name">right</span>: <span class="name">container</span>.<span class="name">right</span>
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">topInfo</span>
+            <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+            <span class="name">font</span>.pointSize: <span class="number">8</span>
+            <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+            Binding on <span class="name">text</span> {
+                <span class="name">value</span>: <span class="string">&quot;Results &quot;</span> <span class="operator">+</span> <span class="name">model</span>.<span class="name">startIndex</span> <span class="operator">+</span> <span class="string">&quot; through &quot;</span> <span class="operator">+</span> ((<span class="name">model</span>.<span class="name">endIndex</span> <span class="operator">&gt;</span> <span class="name">model</span>.<span class="name">totalResults</span>) ? <span class="name">model</span>.<span class="name">totalResults</span> : <span class="name">model</span>.<span class="name">endIndex</span>) <span class="operator">+</span> <span class="string">&quot; out of &quot;</span> <span class="operator">+</span> <span class="name">model</span>.<span class="name">totalResults</span>
+                <span class="name">when</span>: <span class="name">model</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">XmlListModel</span>.<span class="name">Ready</span> <span class="operator">&amp;&amp;</span> <span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;list&quot;</span> <span class="operator">&amp;&amp;</span> <span class="name">model</span>.<span class="name">count</span>
+            }
+            Binding on <span class="name">text</span> {
+                <span class="name">value</span>: <span class="string">&quot;No results found.&quot;</span>;
+                <span class="name">when</span>: <span class="name">model</span>.<span class="name">state</span> <span class="operator">==</span> <span class="name">XmlListModel</span>.<span class="name">Ready</span> <span class="operator">&amp;&amp;</span> !<span class="name">model</span>.<span class="name">count</span>
+            }
+            Binding on <span class="name">text</span> {
+                <span class="name">value</span>: <span class="string">&quot;Search for videos&quot;</span>
+                <span class="name">when</span>: <span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;search&quot;</span>
+            }
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">height</span>: <span class="name">container</span>.<span class="name">padding</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+        <span class="name">opacity</span>: (<span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;hidden&quot;</span>) ? <span class="number">0.2</span> : <span class="number">0.8</span>
+
+        Behavior on <span class="name">opacity</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">200</span> } }
+
+        <span class="type">anchors</span> {
+            <span class="name">top</span>: <span class="name">panel</span>.<span class="name">bottom</span>
+            <span class="name">left</span>: <span class="name">container</span>.<span class="name">left</span>
+            <span class="name">right</span>: <span class="name">container</span>.<span class="name">right</span>
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">bottomInfo</span>
+            <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+            <span class="name">font</span>.weight: <span class="name">Font</span>.<span class="name">DemiBold</span>
+            <span class="name">font</span>.pointSize: <span class="number">8</span>
+            <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+            <span class="name">text</span>: {
+                <span class="keyword">if</span> (<span class="name">panel</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;search&quot;</span>)
+                    <span class="keyword">return</span> <span class="string">&quot;Choose from preset video streams&quot;</span>
+                <span class="keyword">else</span>
+                    <span class="keyword">return</span> <span class="name">currentVideo</span>.<span class="name">title</span>
+            }
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+            <span class="comment">// Responsible for showing and hiding the thumbnail list.</span>
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">onPressed</span>: {
+                <span class="keyword">if</span> (<span class="name">panel</span>.<span class="name">state</span> <span class="operator">!=</span> <span class="string">&quot;list&quot;</span>) {
+                    <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;list&quot;</span>
+                    <span class="keyword">if</span> (<span class="name">currentVideo</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">videoStatus</span>.<span class="name">playing</span>)
+                        <span class="name">hideTimer</span>.<span class="name">restart</span>()
+                } <span class="keyword">else</span>
+                    <span class="name">panel</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;hidden&quot;</span>
+            }
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmllistmodel.html">XmlListModel</a></span> {
+        <span class="name">id</span>: <span class="name">model</span>
+
+        property <span class="type">int</span> <span class="name">totalResults</span>: <span class="number">0</span>
+        property <span class="type">int</span> <span class="name">itemsPerPage</span>: <span class="number">0</span>
+        property <span class="type">int</span> <span class="name">startIndex</span>: <span class="number">1</span>
+        property <span class="type">int</span> <span class="name">endIndex</span>: <span class="name">itemsPerPage</span> <span class="operator">+</span> <span class="name">startIndex</span> <span class="operator">-</span> <span class="number">1</span>
+
+        property <span class="type">string</span> <span class="name">userName</span>: <span class="string">&quot;trailers&quot;</span>
+        property <span class="type">string</span> <span class="name">baseUrl</span>: <span class="string">&quot;https://gdata.youtube.com/feeds/api&quot;</span>
+        property <span class="type">string</span> <span class="name">defaultQuery</span>: <span class="string">&quot;alt=rss&amp;orderby=published&amp;v=2&amp;start-index=&quot;</span> <span class="operator">+</span> <span class="name">startIndex</span>
+        property <span class="type">string</span> <span class="name">searchSource</span>: <span class="name">baseUrl</span> <span class="operator">+</span> <span class="string">&quot;/videos?&quot;</span> <span class="operator">+</span> <span class="name">defaultQuery</span> <span class="operator">+</span> <span class="string">&quot;&amp;q=\'&quot;</span> <span class="operator">+</span> <span class="name">input</span>.<span class="name">text</span> <span class="operator">+</span> <span class="string">&quot;\'&quot;</span>
+        property <span class="type">string</span> <span class="name">usersSource</span>: <span class="name">baseUrl</span> <span class="operator">+</span> <span class="string">&quot;/users/&quot;</span> <span class="operator">+</span> <span class="name">userName</span> <span class="operator">+</span> <span class="string">&quot;/uploads?&quot;</span> <span class="operator">+</span> <span class="name">defaultQuery</span>
+
+        <span class="keyword">function</span> <span class="name">requestMore</span>() {
+            <span class="name">startIndex</span> <span class="operator">+=</span> <span class="name">itemsPerPage</span>
+            <span class="name">reload</span>()
+        }
+
+        <span class="keyword">function</span> <span class="name">requestLess</span>() {
+            <span class="name">startIndex</span> <span class="operator">-=</span> <span class="name">itemsPerPage</span>
+            <span class="name">reload</span>()
+        }
+
+        <span class="name">onSourceChanged</span>: {
+            var <span class="name">xhr</span> = new <span class="name">XMLHttpRequest</span>();
+            <span class="name">xhr</span>.<span class="name">onreadystatechange</span> <span class="operator">=</span> <span class="keyword">function</span>(){
+                <span class="keyword">if</span> (<span class="name">xhr</span>.<span class="name">readyState</span> <span class="operator">==</span> <span class="name">XMLHttpRequest</span>.<span class="name">DONE</span>) {
+                    <span class="keyword">if</span> (<span class="name">xhr</span>.<span class="name">status</span> <span class="operator">!=</span> <span class="number">200</span>) {
+                        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Something went wrong, received HTTP status code &quot;</span> <span class="operator">+</span> <span class="name">xhr</span>.<span class="name">status</span>);
+                        <span class="keyword">return</span>;
+                    }
+                    var <span class="name">doc</span> = <span class="name">xhr</span>.<span class="name">responseXML</span>.<span class="name">documentElement</span>;
+                    <span class="keyword">for</span> (<span class="keyword">var</span> <span class="name">i</span> = <span class="number">0</span>; <span class="name">i</span> <span class="operator">&lt;</span> <span class="name">doc</span>.<span class="name">childNodes</span>.<span class="name">length</span>; ++<span class="name">i</span>) {
+                        var <span class="name">child</span> = <span class="name">doc</span>.<span class="name">childNodes</span>[<span class="name">i</span>];
+                        <span class="keyword">for</span> (<span class="keyword">var</span> <span class="name">j</span> = <span class="number">0</span>; <span class="name">j</span> <span class="operator">&lt;</span> <span class="name">child</span>.<span class="name">childNodes</span>.<span class="name">length</span>; ++<span class="name">j</span>) {
+                            <span class="keyword">if</span> (<span class="name">child</span>.<span class="name">childNodes</span>[<span class="name">j</span>].<span class="name">nodeName</span> <span class="operator">==</span> <span class="string">&quot;itemsPerPage&quot;</span>)
+                                <span class="name">itemsPerPage</span> <span class="operator">=</span> <span class="name">child</span>.<span class="name">childNodes</span>[<span class="name">j</span>].<span class="name">childNodes</span>[<span class="number">0</span>].<span class="name">nodeValue</span>;
+                            <span class="keyword">if</span> (<span class="name">child</span>.<span class="name">childNodes</span>[<span class="name">j</span>].<span class="name">nodeName</span> <span class="operator">==</span> <span class="string">&quot;totalResults&quot;</span>)
+                                <span class="name">totalResults</span> <span class="operator">=</span> <span class="name">child</span>.<span class="name">childNodes</span>[<span class="name">j</span>].<span class="name">childNodes</span>[<span class="number">0</span>].<span class="name">nodeValue</span>;
+                        }
+                    }
+                }
+            }
+            <span class="name">xhr</span>.<span class="name">open</span>(<span class="string">&quot;GET&quot;</span>, <span class="name">source</span>);
+            <span class="name">xhr</span>.<span class="name">send</span>();
+        }
+
+        <span class="name">namespaceDeclarations</span>: <span class="string">&quot;declare namespace media='http://search.yahoo.com/mrss/';declare namespace yt='http://gdata.youtube.com/schemas/2007';&quot;</span>
+
+        <span class="name">source</span>: <span class="name">usersSource</span>
+        <span class="name">query</span>: <span class="string">&quot;/rss/channel/item&quot;</span>
+
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;id&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:group/yt:videoid/string()&quot;</span>}
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;title&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:group/media:title/string()&quot;</span> }
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;thumbnail&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:group/media:thumbnail[1]/@url/string()&quot;</span> }
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;thumbnailHeight&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:group/media:thumbnail[1]/@height/number()&quot;</span> }
+    }
+}</pre>
+</div>
+<!-- @@@webkitqml/youtubeview/youtubeview.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

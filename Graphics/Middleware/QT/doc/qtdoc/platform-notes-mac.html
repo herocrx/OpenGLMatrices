@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- platform-notes.qdoc -->
+  <title>QtDoc 5.0: Platform and Compiler Notes - Mac OS X</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<p class="naviNextPrevious headerNavi">
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#general-information">General Information</a></li>
+<li class="level2"><a href="#required-compiler-versions">Required Compiler Versions</a></li>
+<li class="level2"><a href="#binary-package">Binary Package</a></li>
+<li class="level2"><a href="#mac-os-x-on-powerpc-hardware">Mac OS X on PowerPC hardware</a></li>
+<li class="level2"><a href="#fink">Fink</a></li>
+<li class="level2"><a href="#mysql-and-mac-os-x">MySQL and Mac OS X</a></li>
+<li class="level2"><a href="#attributes">Attributes</a></li>
+<li class="level2"><a href="#mixing-qt-with-native-code">Mixing Qt with native code</a></li>
+<li class="level3"><a href="#using-native-cocoa-panels">Using native Cocoa panels</a></li>
+</ul>
+</div>
+<h1 class="title">Platform and Compiler Notes - Mac OS X</h1>
+<span class="subtitle"></span>
+<!-- $$$platform-notes-mac.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>This page contains information about the Mac OS X versions Qt is currently known to run on, with links to platform-specific notes. More information about the combinations of platforms and compilers supported by Qt can be found on the <a href="platform-details.html">Supported Platforms</a> page.</p>
+<a name="general-information"></a>
+<h2>General Information</h2>
+<p>Qt 5 applications can be deployed on Mac OS X 10.6 (Snow Leopard) and higher. We recommend using the most recent version of Mac OS for developing applications. Qt binaries built on 10.7 can be deployed on 10.6&#x2e;</p>
+<a name="required-compiler-versions"></a>
+<h3>Required Compiler Versions</h3>
+<p>Use the latest gcc or clang as supplied with Xcode. Currently tested versions are Apple gcc 4.2&#x2e;1 and Apple clang version 3.1&#x2e;</p>
+<a name="binary-package"></a>
+<h3>Binary Package</h3>
+<a name="mac-os-x-on-powerpc-hardware"></a>
+<h3>Mac OS X on PowerPC hardware</h3>
+<p>Qt 5 does not support OS X on PowerPC.</p>
+<a name="fink"></a>
+<h3>Fink</h3>
+<p>If you have installed the Qt for X11 package from <a href="#fink">Fink</a>, it will set the QMAKESPEC environment variable to darwin-g++. This will cause problems when you build the Qt for Mac OS X package. To fix this, simply unset your QMAKESPEC or set it to macx-g++ before you run configure. You need to have a fresh Qt distribution (make confclean).</p>
+<a name="mysql-and-mac-os-x"></a>
+<h3>MySQL and Mac OS X</h3>
+<p>There seems to be a issue when both -prebind and -multi_module are defined when linking static C libraries into dynamic library. If you get the following error message when linking Qt:</p>
+<pre class="cpp">ld: common symbols <span class="keyword">not</span> allowed with MH_DYLIB output format with the <span class="operator">-</span>multi_module option
+<span class="operator">/</span>usr<span class="operator">/</span>local<span class="operator">/</span>mysql<span class="operator">/</span>lib<span class="operator">/</span>libmysqlclient<span class="operator">.</span>a(my_error<span class="operator">.</span>o) definition of common _errbuff (size <span class="number">512</span>)
+<span class="operator">/</span>usr<span class="operator">/</span>bin<span class="operator">/</span>libtool: internal link edit command failed</pre>
+<p>re-link Qt using -single_module. This is only a problem when building the MySQL driver into Qt. It does not affect plugins or static builds.</p>
+<a name="attributes"></a>
+<h3>Attributes</h3>
+<p>The following lists a set of useful attributes that can be used to tweak applications on Mac:</p>
+<p><a href="../qtcore/qt.html#ApplicationAttribute-enum">Qt::AA_MacPluginApplication</a>, <a href="../qtcore/qt.html#ApplicationAttribute-enum">Qt::AA_DontUseNativeMenuBar</a>, <a href="../qtcore/qt.html#ApplicationAttribute-enum">Qt::AA_MacDontSwapCtrlAndMeta</a> <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacNoClickThrough</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacOpaqueSizeGrip</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacShowFocusRect</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacNormalSize</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacSmallSize</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacMiniSize</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacVariableSize</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacBrushedMetal</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacAlwaysShowToolWindow</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacFrameworkScaled</a>, <a href="../qtcore/qt.html#WidgetAttribute-enum">Qt::WA_MacNoShadow</a>, <a href="../qtcore/qt.html#WindowType-enum">Qt::Sheet</a>, <a href="../qtcore/qt.html#WindowType-enum">Qt::Drawer</a>, <a href="../qtcore/qt.html#WindowType-enum">Qt::MacWindowToolBarButtonHint</a>, <a href="../qtwidgets/qmainwindow-obsolete.html#unifiedTitleAndToolBarOnMac-prop" class="obsolete">QMainWindow::unifiedTitleAndToolBarOnMac</a></p>
+<a name="mixing-qt-with-native-code"></a>
+<h3>Mixing Qt with native code</h3>
+<p>Two classes are available for either adding native Cocoa views/controls inside a Qt application, or the opposite, embedding Qt into a native Cocoa application:</p>
+<p>QMacCocoaViewContainer, QMacNativeWidget</p>
+<a name="using-native-cocoa-panels"></a>
+<h4>Using native Cocoa panels</h4>
+<p>Launching native Cocoa panels from within a Qt application can sometimes be problematic. The reason is that Qt's event dispatcher is more flexible than what Cocoa offers, and lets the user spin the event dispatcher (and running QEventLoop::exec) without having to think about whether or not modal dialogs are showing on screen (which is a difference to Cocoa). Therefore we need to do special bookkeeping in Qt to handle this correctly, which unfortunately make mixing in native panels hard. The best way at the moment to do this, is to follow the pattern below, where we post the call to the function with native code rather than calling it directly. Then we know that Qt has cleanly updated any pending event loop recursions before the native panel is shown:</p>
+<pre class="cpp"><span class="preprocessor">#include &lt;QtGui&gt;</span>
+
+<span class="keyword">class</span> NativeProxyObject : <span class="keyword">public</span> <span class="type"><a href="../qtcore/qobject.html">QObject</a></span>
+{
+    Q_OBJECT
+<span class="keyword">public</span> <span class="keyword">slots</span>:
+    <span class="type">void</span> execNativeDialogLater()
+    {
+        <span class="type"><a href="../qtcore/qmetaobject.html">QMetaObject</a></span><span class="operator">::</span>invokeMethod(<span class="keyword">this</span><span class="operator">,</span> <span class="string">&quot;execNativeDialogNow&quot;</span><span class="operator">,</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>QueuedConnection);
+    }
+
+    <span class="type">void</span> execNativeDialogNow()
+    {
+        NSRunAlertPanel(@<span class="string">&quot;A Native dialog&quot;</span><span class="operator">,</span> @<span class="string">&quot;&quot;</span><span class="operator">,</span> @<span class="string">&quot;OK&quot;</span><span class="operator">,</span> @<span class="string">&quot;&quot;</span><span class="operator">,</span> @<span class="string">&quot;&quot;</span>);
+    }
+
+};
+
+<span class="preprocessor">#include &quot;main.moc&quot;</span>
+
+<span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span>argv){
+    <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span> app(argc<span class="operator">,</span> argv);
+    NativeProxyObject proxy;
+    <span class="type"><a href="../qtwidgets/qpushbutton.html">QPushButton</a></span> button(<span class="string">&quot;Show native dialog&quot;</span>);
+    <span class="type"><a href="../qtcore/qobject.html">QObject</a></span><span class="operator">::</span>connect(<span class="operator">&amp;</span>button<span class="operator">,</span> SIGNAL(clicked())<span class="operator">,</span> <span class="operator">&amp;</span>proxy<span class="operator">,</span> SLOT(execNativeDialogLater()));
+    button<span class="operator">.</span>show();
+    <span class="keyword">return</span> app<span class="operator">.</span>exec();
+}</pre>
+</div>
+<!-- @@@platform-notes-mac.html -->
+<p class="naviNextPrevious footerNavi">
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

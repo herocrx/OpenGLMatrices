@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qgraphicsitem.cpp -->
+  <title>QtWidgets 5.0: Compatibility Members for QGraphicsItem</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Compatibility Members for QGraphicsItem</h1>
+<p><b>The following class members are part of the Qt compatibility layer.</b> We advise against using them in new code.</p>
+<p><ul><li><a href="qgraphicsitem.html">QGraphicsItem class reference</a></li></ul></p>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#acceptsHoverEvents">acceptsHoverEvents</a></b>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> QList&lt;QGraphicsItem *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#children">children</a></b>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#rotate">rotate</a></b>(qreal<i> angle</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#scale-2">scale</a></b>(qreal<i> sx</i>, qreal<i> sy</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#setAcceptsHoverEvents">setAcceptsHoverEvents</a></b>(bool<i> enabled</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#shear">shear</a></b>(qreal<i> sh</i>, qreal<i> sv</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsitem-compat.html#translate">translate</a></b>(qreal<i> dx</i>, qreal<i> dy</i>)</td></tr>
+</table>
+<h2>Member Function Documentation</h2>
+<!-- $$$acceptsHoverEvents[overload1]$$$acceptsHoverEvents -->
+<h3 class="fn"><a name="acceptsHoverEvents"></a><span class="type">bool</span> QGraphicsItem::<span class="name">acceptsHoverEvents</span>() const</h3>
+<p>Call <a href="qgraphicsitem.html#acceptHoverEvents">acceptHoverEvents</a>() instead.</p>
+<p><b>See also </b><a href="qgraphicsitem-compat.html#setAcceptsHoverEvents">setAcceptsHoverEvents</a>().</p>
+<!-- @@@acceptsHoverEvents -->
+<!-- $$$children[overload1]$$$children -->
+<h3 class="fn"><a name="children"></a><span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type">QGraphicsItem</span> *&gt; QGraphicsItem::<span class="name">children</span>() const</h3>
+<p>Use <a href="qgraphicsitem.html#childItems">childItems</a>() instead.</p>
+<p><b>See also </b><a href="qgraphicsitem.html#setParentItem">setParentItem</a>().</p>
+<!-- @@@children -->
+<!-- $$$rotate[overload1]$$$rotateqreal -->
+<h3 class="fn"><a name="rotate"></a><span class="type">void</span> QGraphicsItem::<span class="name">rotate</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> angle</i>)</h3>
+<p>Use</p>
+<pre class="cpp"><a href="qgraphicsitem.html#setRotation">setRotation</a>(rotation() <span class="operator">+</span> angle);</pre>
+<p>instead.</p>
+<p>Rotates the current item transformation <i>angle</i> degrees clockwise around its origin. To translate around an arbitrary point (x, y), you need to combine translation and rotation with <a href="qgraphicsitem.html#setTransform">setTransform</a>().</p>
+<p>Example:</p>
+<pre class="cpp"><span class="comment">// Rotate an item 45 degrees around (0, 0).</span>
+item<span class="operator">-</span><span class="operator">&gt;</span>rotate(<span class="number">45</span>);
+
+<span class="comment">// Rotate an item 45 degrees around (x, y).</span>
+item<span class="operator">-</span><span class="operator">&gt;</span><a href="qgraphicsitem.html#setTransform">setTransform</a>(<span class="type"><a href="../qtgui/qtransform.html">QTransform</a></span>()<span class="operator">.</span>translate(x<span class="operator">,</span> y)<span class="operator">.</span>rotate(<span class="number">45</span>)<span class="operator">.</span>translate(<span class="operator">-</span>x<span class="operator">,</span> <span class="operator">-</span>y));</pre>
+<p><b>See also </b><a href="qgraphicsitem.html#setTransform">setTransform</a>(), <a href="qgraphicsitem.html#transform">transform</a>(), <a href="qgraphicsitem.html#scale">scale</a>(), <a href="qgraphicsitem-compat.html#shear">shear</a>(), and <a href="qgraphicsitem-compat.html#translate">translate</a>().</p>
+<!-- @@@rotate -->
+<!-- $$$scale$$$scaleqrealqreal -->
+<h3 class="fn"><a name="scale-2"></a><span class="type">void</span> QGraphicsItem::<span class="name">scale</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> sx</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> sy</i>)</h3>
+<p>Use</p>
+<pre class="cpp"><a href="qgraphicsitem.html#setTransform">setTransform</a>(<span class="type"><a href="../qtgui/qtransform.html">QTransform</a></span><span class="operator">::</span>fromScale(sx<span class="operator">,</span> sy)<span class="operator">,</span> <span class="keyword">true</span>);</pre>
+<p>instead.</p>
+<p>Scales the current item transformation by (<i>sx</i>, <i>sy</i>) around its origin. To scale from an arbitrary point (x, y), you need to combine translation and scaling with <a href="qgraphicsitem.html#setTransform">setTransform</a>().</p>
+<p>Example:</p>
+<pre class="cpp"><span class="comment">// Scale an item by 3x2 from its origin</span>
+item<span class="operator">-</span><span class="operator">&gt;</span><a href="qgraphicsitem.html#scale">scale</a>(<span class="number">3</span><span class="operator">,</span> <span class="number">2</span>);
+
+<span class="comment">// Scale an item by 3x2 from (x, y)</span>
+item<span class="operator">-</span><span class="operator">&gt;</span><a href="qgraphicsitem.html#setTransform">setTransform</a>(<span class="type"><a href="../qtgui/qtransform.html">QTransform</a></span>()<span class="operator">.</span>translate(x<span class="operator">,</span> y)<span class="operator">.</span>scale(<span class="number">3</span><span class="operator">,</span> <span class="number">2</span>)<span class="operator">.</span>translate(<span class="operator">-</span>x<span class="operator">,</span> <span class="operator">-</span>y));</pre>
+<p><b>See also </b><a href="qgraphicsitem.html#setTransform">setTransform</a>() and <a href="qgraphicsitem.html#transform">transform</a>().</p>
+<!-- @@@scale -->
+<!-- $$$setAcceptsHoverEvents[overload1]$$$setAcceptsHoverEventsbool -->
+<h3 class="fn"><a name="setAcceptsHoverEvents"></a><span class="type">void</span> QGraphicsItem::<span class="name">setAcceptsHoverEvents</span>(<span class="type">bool</span><i> enabled</i>)</h3>
+<p>Use setAcceptHoverEvents(<i>enabled</i>) instead.</p>
+<p><b>See also </b><a href="qgraphicsitem-compat.html#acceptsHoverEvents">acceptsHoverEvents</a>().</p>
+<!-- @@@setAcceptsHoverEvents -->
+<!-- $$$shear[overload1]$$$shearqrealqreal -->
+<h3 class="fn"><a name="shear"></a><span class="type">void</span> QGraphicsItem::<span class="name">shear</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> sh</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> sv</i>)</h3>
+<p>Use</p>
+<pre class="cpp"><a href="qgraphicsitem.html#setTransform">setTransform</a>(<span class="type"><a href="../qtgui/qtransform.html">QTransform</a></span>()<span class="operator">.</span>shear(sh<span class="operator">,</span> sv)<span class="operator">,</span> <span class="keyword">true</span>);</pre>
+<p>instead.</p>
+<p>Shears the current item transformation by (<i>sh</i>, <i>sv</i>).</p>
+<p><b>See also </b><a href="qgraphicsitem.html#setTransform">setTransform</a>() and <a href="qgraphicsitem.html#transform">transform</a>().</p>
+<!-- @@@shear -->
+<!-- $$$translate[overload1]$$$translateqrealqreal -->
+<h3 class="fn"><a name="translate"></a><span class="type">void</span> QGraphicsItem::<span class="name">translate</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> dx</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> dy</i>)</h3>
+<p>Use <a href="qgraphicsitem.html#setPos">setPos</a>() or <a href="qgraphicsitem.html#setTransformOriginPoint">setTransformOriginPoint</a>() instead. For identical behavior, use</p>
+<pre class="cpp"><a href="qgraphicsitem.html#setTransform">setTransform</a>(<span class="type"><a href="../qtgui/qtransform.html">QTransform</a></span><span class="operator">::</span>fromTranslate(dx<span class="operator">,</span> dy)<span class="operator">,</span> <span class="keyword">true</span>);</pre>
+<p>Translates the current item transformation by (<i>dx</i>, <i>dy</i>).</p>
+<p>If all you want is to move an item, you should call <a href="qgraphicsitem.html#moveBy">moveBy</a>() or <a href="qgraphicsitem.html#setPos">setPos</a>() instead; this function changes the item's translation, which is conceptually separate from its position.</p>
+<p><b>See also </b><a href="qgraphicsitem.html#setTransform">setTransform</a>() and <a href="qgraphicsitem.html#transform">transform</a>().</p>
+<!-- @@@translate -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

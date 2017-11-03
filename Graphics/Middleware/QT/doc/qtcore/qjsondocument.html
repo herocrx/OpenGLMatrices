@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qjsondocument.cpp -->
+  <title>QtCore 5.0: QJsonDocument Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QJsonDocument Class</h1>
+<!-- $$$QJsonDocument-brief -->
+<p>The QJsonDocument class provides a way to read and write JSON documents. <a href="#details">More...</a></p>
+<!-- @@@QJsonDocument -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QJsonDocument&gt;</span></pre><p><b>Note:</b> All functions in this class are <a href="threads-reentrancy.html#reentrant">reentrant</a>.</p>
+<p>This class was introduced in QtCore 5.0.</p>
+<ul>
+<li><a href="qjsondocument-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#DataValidation-enum">DataValidation</a></b> { Validate, BypassValidation }</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#QJsonDocument">QJsonDocument</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#QJsonDocument-2">QJsonDocument</a></b>(const QJsonObject &amp;<i> object</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#QJsonDocument-3">QJsonDocument</a></b>(const QJsonArray &amp;<i> array</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#QJsonDocument-4">QJsonDocument</a></b>(const QJsonDocument &amp;<i> other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#dtor.QJsonDocument">~QJsonDocument</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonArray </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#array">array</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#isArray">isArray</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#isEmpty">isEmpty</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#isNull">isNull</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#isObject">isObject</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonObject </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#object">object</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const char * </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#rawData">rawData</a></b>(int *<i> size</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#setArray">setArray</a></b>(const QJsonArray &amp;<i> array</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#setObject">setObject</a></b>(const QJsonObject &amp;<i> object</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#toBinaryData">toBinaryData</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QByteArray </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#toJson">toJson</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#toVariant">toVariant</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#operator-not-eq">operator!=</a></b>(const QJsonDocument &amp;<i> other</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonDocument &amp; </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#operator-eq">operator=</a></b>(const QJsonDocument &amp;<i> other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#operator-eq-eq">operator==</a></b>(const QJsonDocument &amp;<i> other</i>) const</td></tr>
+</table>
+<a name="static-public-members"></a>
+<h2>Static Public Members</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonDocument </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#fromBinaryData">fromBinaryData</a></b>(const QByteArray &amp;<i> data</i>, DataValidation<i> validation</i> = Validate)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonDocument </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#fromJson">fromJson</a></b>(const QByteArray &amp;<i> json</i>, QJsonParseError *<i> error</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonDocument </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#fromRawData">fromRawData</a></b>(const char *<i> data</i>, int<i> size</i>, DataValidation<i> validation</i> = Validate)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJsonDocument </td><td class="memItemRight bottomAlign"><b><a href="qjsondocument.html#fromVariant">fromVariant</a></b>(const QVariant &amp;<i> variant</i>)</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QJsonDocument-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QJsonDocument class provides a way to read and write JSON documents.</p>
+<p>QJsonDocument is a class that wraps a complete JSON document and can read and write this document both from a UTF-8 encoded text based representation as well as Qt's own binary format.</p>
+<p>A JSON document can be converted from its text-based representation to a QJsonDocument using <a href="qjsondocument.html#fromJson">QJsonDocument::fromJson</a>(). <a href="qjsondocument.html#toJson">toJson</a>() converts it back to text. The parser is very fast and efficient and converts the JSON to the binary representation used by Qt.</p>
+<p>Validity of the parsed document can be queried with !<a href="qjsondocument.html#isNull">isNull</a>()</p>
+<p>A document can be queried as to whether it contains an array or an object using <a href="qjsondocument.html#isArray">isArray</a>() and <a href="qjsondocument.html#isObject">isObject</a>(). The array or object contained in the document can be retrieved using <a href="qjsondocument.html#array">array</a>() or <a href="qjsondocument.html#object">object</a>() and then read or manipulated.</p>
+<p>A document can also be created from a stored binary representation using <a href="qjsondocument.html#fromBinaryData">fromBinaryData</a>() or <a href="qjsondocument.html#fromRawData">fromRawData</a>().</p>
+</div>
+<!-- @@@QJsonDocument -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$DataValidation$$$Validate$$$BypassValidation -->
+<h3 class="fn"><a name="DataValidation-enum"></a>enum QJsonDocument::<span class="name">DataValidation</span></h3>
+<p>This value is used to tell <a href="qjsondocument.html">QJsonDocument</a> whether to validate the binary data when converting to a <a href="qjsondocument.html">QJsonDocument</a> using <a href="qjsondocument.html#fromBinaryData">fromBinaryData</a>() or <a href="qjsondocument.html#fromRawData">fromRawData</a>().</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QJsonDocument::Validate</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">Validate the data before using it. This is the default.</td></tr>
+<tr><td class="topAlign"><tt>QJsonDocument::BypassValidation</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">Bypasses data validation. Only use if you received the data from a trusted place and know it's valid, as using of invalid data can crash the application.</td></tr>
+</table>
+<!-- @@@DataValidation -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QJsonDocument[overload1]$$$QJsonDocument -->
+<h3 class="fn"><a name="QJsonDocument"></a>QJsonDocument::<span class="name">QJsonDocument</span>()</h3>
+<p>Constructs an empty and invalid document.</p>
+<!-- @@@QJsonDocument -->
+<!-- $$$QJsonDocument$$$QJsonDocumentconstQJsonObject& -->
+<h3 class="fn"><a name="QJsonDocument-2"></a>QJsonDocument::<span class="name">QJsonDocument</span>(const <span class="type"><a href="qjsonobject.html">QJsonObject</a></span> &amp;<i> object</i>)</h3>
+<p>Creates a <a href="qjsondocument.html">QJsonDocument</a> from <i>object</i>.</p>
+<!-- @@@QJsonDocument -->
+<!-- $$$QJsonDocument$$$QJsonDocumentconstQJsonArray& -->
+<h3 class="fn"><a name="QJsonDocument-3"></a>QJsonDocument::<span class="name">QJsonDocument</span>(const <span class="type"><a href="qjsonarray.html">QJsonArray</a></span> &amp;<i> array</i>)</h3>
+<p>Constructs a <a href="qjsondocument.html">QJsonDocument</a> from <i>array</i>.</p>
+<!-- @@@QJsonDocument -->
+<!-- $$$QJsonDocument$$$QJsonDocumentconstQJsonDocument& -->
+<h3 class="fn"><a name="QJsonDocument-4"></a>QJsonDocument::<span class="name">QJsonDocument</span>(const <span class="type">QJsonDocument</span> &amp;<i> other</i>)</h3>
+<p>Creates a copy of the <i>other</i> document.</p>
+<!-- @@@QJsonDocument -->
+<!-- $$$~QJsonDocument[overload1]$$$~QJsonDocument -->
+<h3 class="fn"><a name="dtor.QJsonDocument"></a>QJsonDocument::<span class="name">~QJsonDocument</span>()</h3>
+<p>Deletes the document.</p>
+<p>Binary data set with fromRawData is not freed.</p>
+<!-- @@@~QJsonDocument -->
+<!-- $$$array[overload1]$$$array -->
+<h3 class="fn"><a name="array"></a><span class="type"><a href="qjsonarray.html">QJsonArray</a></span> QJsonDocument::<span class="name">array</span>() const</h3>
+<p>Returns the <a href="qjsonarray.html">QJsonArray</a> contained in the document.</p>
+<p>Returns an empty array if the document contains an object.</p>
+<p><b>See also </b><a href="qjsondocument.html#isArray">isArray</a>(), <a href="qjsondocument.html#object">object</a>(), and <a href="qjsondocument.html#setArray">setArray</a>().</p>
+<!-- @@@array -->
+<!-- $$$fromBinaryData[overload1]$$$fromBinaryDataconstQByteArray&DataValidation -->
+<h3 class="fn"><a name="fromBinaryData"></a><span class="type">QJsonDocument</span> QJsonDocument::<span class="name">fromBinaryData</span>(const <span class="type"><a href="qbytearray.html">QByteArray</a></span> &amp;<i> data</i>, <span class="type"><a href="qjsondocument.html#DataValidation-enum">DataValidation</a></span><i> validation</i> = Validate)<tt> [static]</tt></h3>
+<p>Creates a <a href="qjsondocument.html">QJsonDocument</a> from <i>data</i>.</p>
+<p><i>validation</i> decides whether the data is checked for validity before being used. By default the data is validated. If the <i>data</i> is not valid, the method returns a null document.</p>
+<p><b>See also </b><a href="qjsondocument.html#toBinaryData">toBinaryData</a>(), <a href="qjsondocument.html#fromRawData">fromRawData</a>(), <a href="qjsondocument.html#isNull">isNull</a>(), and <a href="qjsondocument.html#DataValidation-enum">DataValidation</a>.</p>
+<!-- @@@fromBinaryData -->
+<!-- $$$fromJson[overload1]$$$fromJsonconstQByteArray&QJsonParseError* -->
+<h3 class="fn"><a name="fromJson"></a><span class="type">QJsonDocument</span> QJsonDocument::<span class="name">fromJson</span>(const <span class="type"><a href="qbytearray.html">QByteArray</a></span> &amp;<i> json</i>, <span class="type"><a href="qjsonparseerror.html">QJsonParseError</a></span> *<i> error</i> = 0)<tt> [static]</tt></h3>
+<p>Parses a UTF-8 encoded JSON document and creates a <a href="qjsondocument.html">QJsonDocument</a> from it.</p>
+<p><i>json</i> contains the json document to be parsed.</p>
+<p>The optional <i>error</i> variable can be used to pass in a <a href="qjsonparseerror.html">QJsonParseError</a> data structure that will contain information about possible errors encountered during parsing.</p>
+<p><b>See also </b><a href="qjsondocument.html#toJson">toJson</a>() and <a href="qjsonparseerror.html">QJsonParseError</a>.</p>
+<!-- @@@fromJson -->
+<!-- $$$fromRawData[overload1]$$$fromRawDataconstchar*intDataValidation -->
+<h3 class="fn"><a name="fromRawData"></a><span class="type">QJsonDocument</span> QJsonDocument::<span class="name">fromRawData</span>(const <span class="type">char</span> *<i> data</i>, <span class="type">int</span><i> size</i>, <span class="type"><a href="qjsondocument.html#DataValidation-enum">DataValidation</a></span><i> validation</i> = Validate)<tt> [static]</tt></h3>
+<p>Creates a <a href="qjsondocument.html">QJsonDocument</a> that uses the first <i>size</i> bytes from <i>data</i>. It assumes <i>data</i> contains a binary encoded JSON document. The created document does not take ownership of <i>data</i> and the caller has to guarantee that <i>data</i> will not be deleted or modified as long as any <a href="qjsondocument.html">QJsonDocument</a>, <a href="qjsonobject.html">QJsonObject</a> or <a href="qjsonarray.html">QJsonArray</a> still references the data.</p>
+<p><i>data</i> has to be aligned to a 4 byte boundary.</p>
+<p><i>validation</i> decides whether the data is checked for validity before being used. By default the data is validated. If the <i>data</i> is not valid, the method returns a null document.</p>
+<p>Returns a <a href="qjsondocument.html">QJsonDocument</a> representing the data.</p>
+<p><b>See also </b><a href="qjsondocument.html#rawData">rawData</a>(), <a href="qjsondocument.html#fromBinaryData">fromBinaryData</a>(), <a href="qjsondocument.html#isNull">isNull</a>(), and <a href="qjsondocument.html#DataValidation-enum">DataValidation</a>.</p>
+<!-- @@@fromRawData -->
+<!-- $$$fromVariant[overload1]$$$fromVariantconstQVariant& -->
+<h3 class="fn"><a name="fromVariant"></a><span class="type">QJsonDocument</span> QJsonDocument::<span class="name">fromVariant</span>(const <span class="type"><a href="qvariant.html">QVariant</a></span> &amp;<i> variant</i>)<tt> [static]</tt></h3>
+<p>Creates a <a href="qjsondocument.html">QJsonDocument</a> from the <a href="qvariant.html">QVariant</a> <i>variant</i>.</p>
+<p>If the <i>variant</i> contains any other type than a <a href="qvariant-obsolete.html#Type-enum" class="obsolete">QVariant::Map<sup>(obsolete)</sup></a>, <a href="qvariant-obsolete.html#Type-enum" class="obsolete">QVariant::List<sup>(obsolete)</sup></a> or <a href="qvariant-obsolete.html#Type-enum" class="obsolete">QVariant::StringList<sup>(obsolete)</sup></a>, the returned document document is invalid.</p>
+<p><b>See also </b><a href="qjsondocument.html#toVariant">toVariant</a>().</p>
+<!-- @@@fromVariant -->
+<!-- $$$isArray[overload1]$$$isArray -->
+<h3 class="fn"><a name="isArray"></a><span class="type">bool</span> QJsonDocument::<span class="name">isArray</span>() const</h3>
+<p>Returns true if the document contains an array.</p>
+<p><b>See also </b><a href="qjsondocument.html#array">array</a>() and <a href="qjsondocument.html#isObject">isObject</a>().</p>
+<!-- @@@isArray -->
+<!-- $$$isEmpty[overload1]$$$isEmpty -->
+<h3 class="fn"><a name="isEmpty"></a><span class="type">bool</span> QJsonDocument::<span class="name">isEmpty</span>() const</h3>
+<p>Returns true if the document doesn't contain any data.</p>
+<!-- @@@isEmpty -->
+<!-- $$$isNull[overload1]$$$isNull -->
+<h3 class="fn"><a name="isNull"></a><span class="type">bool</span> QJsonDocument::<span class="name">isNull</span>() const</h3>
+<p>returns true if this document is null.</p>
+<p>Null documents are documents created through the default constructor.</p>
+<p>Documents created from UTF-8 encoded text or the binary format are validated during parsing. If validation fails, the returned document will also be null.</p>
+<!-- @@@isNull -->
+<!-- $$$isObject[overload1]$$$isObject -->
+<h3 class="fn"><a name="isObject"></a><span class="type">bool</span> QJsonDocument::<span class="name">isObject</span>() const</h3>
+<p>Returns true if the document contains an object.</p>
+<p><b>See also </b><a href="qjsondocument.html#object">object</a>() and <a href="qjsondocument.html#isArray">isArray</a>().</p>
+<!-- @@@isObject -->
+<!-- $$$object[overload1]$$$object -->
+<h3 class="fn"><a name="object"></a><span class="type"><a href="qjsonobject.html">QJsonObject</a></span> QJsonDocument::<span class="name">object</span>() const</h3>
+<p>Returns the <a href="qjsonobject.html">QJsonObject</a> contained in the document.</p>
+<p>Returns an empty object if the document contains an array.</p>
+<p><b>See also </b><a href="qjsondocument.html#isObject">isObject</a>(), <a href="qjsondocument.html#array">array</a>(), and <a href="qjsondocument.html#setObject">setObject</a>().</p>
+<!-- @@@object -->
+<!-- $$$rawData[overload1]$$$rawDataint* -->
+<h3 class="fn"><a name="rawData"></a>const <span class="type">char</span> * QJsonDocument::<span class="name">rawData</span>(<span class="type">int</span> *<i> size</i>) const</h3>
+<p>Returns the raw binary representation of the data <i>size</i> will contain the size of the returned data.</p>
+<p>This method is useful to e.g&#x2e; stream the JSON document in it's binary form to a file.</p>
+<!-- @@@rawData -->
+<!-- $$$setArray[overload1]$$$setArrayconstQJsonArray& -->
+<h3 class="fn"><a name="setArray"></a><span class="type">void</span> QJsonDocument::<span class="name">setArray</span>(const <span class="type"><a href="qjsonarray.html">QJsonArray</a></span> &amp;<i> array</i>)</h3>
+<p>Sets <i>array</i> as the main object of this document.</p>
+<p><b>See also </b><a href="qjsondocument.html#setObject">setObject</a>() and <a href="qjsondocument.html#array">array</a>().</p>
+<!-- @@@setArray -->
+<!-- $$$setObject[overload1]$$$setObjectconstQJsonObject& -->
+<h3 class="fn"><a name="setObject"></a><span class="type">void</span> QJsonDocument::<span class="name">setObject</span>(const <span class="type"><a href="qjsonobject.html">QJsonObject</a></span> &amp;<i> object</i>)</h3>
+<p>Sets <i>object</i> as the main object of this document.</p>
+<p><b>See also </b><a href="qjsondocument.html#setArray">setArray</a>() and <a href="qjsondocument.html#object">object</a>().</p>
+<!-- @@@setObject -->
+<!-- $$$toBinaryData[overload1]$$$toBinaryData -->
+<h3 class="fn"><a name="toBinaryData"></a><span class="type"><a href="qbytearray.html">QByteArray</a></span> QJsonDocument::<span class="name">toBinaryData</span>() const</h3>
+<p>Returns a binary representation of the document.</p>
+<p>The binary representation is also the native format used internally in Qt, and is very efficient and fast to convert to and from.</p>
+<p>The binary format can be stored on disk and interchanged with other applications or computers. <a href="qjsondocument.html#fromBinaryData">fromBinaryData</a>() can be used to convert it back into a JSON document.</p>
+<p><b>See also </b><a href="qjsondocument.html#fromBinaryData">fromBinaryData</a>().</p>
+<!-- @@@toBinaryData -->
+<!-- $$$toJson[overload1]$$$toJson -->
+<h3 class="fn"><a name="toJson"></a><span class="type"><a href="qbytearray.html">QByteArray</a></span> QJsonDocument::<span class="name">toJson</span>() const</h3>
+<p>Converts the <a href="qjsondocument.html">QJsonDocument</a> to a UTF-8 encoded JSON document.</p>
+<p><b>See also </b><a href="qjsondocument.html#fromJson">fromJson</a>().</p>
+<!-- @@@toJson -->
+<!-- $$$toVariant[overload1]$$$toVariant -->
+<h3 class="fn"><a name="toVariant"></a><span class="type"><a href="qvariant.html">QVariant</a></span> QJsonDocument::<span class="name">toVariant</span>() const</h3>
+<p>Returns a <a href="qvariant.html">QVariant</a> representing the Json document.</p>
+<p>The returned variant will be a <a href="qvariant.html#QVariantList-typedef">QVariantList</a> if the document is a <a href="qjsonarray.html">QJsonArray</a> and a <a href="qvariant.html#QVariantMap-typedef">QVariantMap</a> if the document is a <a href="qjsonobject.html">QJsonObject</a>.</p>
+<p><b>See also </b><a href="qjsondocument.html#fromVariant">fromVariant</a>() and <a href="qjsonvalue.html#toVariant">QJsonValue::toVariant</a>().</p>
+<!-- @@@toVariant -->
+<!-- $$$operator!=[overload1]$$$operator!=constQJsonDocument& -->
+<h3 class="fn"><a name="operator-not-eq"></a><span class="type">bool</span> QJsonDocument::<span class="name">operator!=</span>(const <span class="type">QJsonDocument</span> &amp;<i> other</i>) const</h3>
+<p>returns <tt>true</tt> if <i>other</i> is not equal to this document</p>
+<!-- @@@operator!= -->
+<!-- $$$operator=[overload1]$$$operator=constQJsonDocument& -->
+<h3 class="fn"><a name="operator-eq"></a><span class="type">QJsonDocument</span> &amp; QJsonDocument::<span class="name">operator=</span>(const <span class="type">QJsonDocument</span> &amp;<i> other</i>)</h3>
+<p>Assigns the <i>other</i> document to this <a href="qjsondocument.html">QJsonDocument</a>. Returns a reference to this object.</p>
+<!-- @@@operator= -->
+<!-- $$$operator==[overload1]$$$operator==constQJsonDocument& -->
+<h3 class="fn"><a name="operator-eq-eq"></a><span class="type">bool</span> QJsonDocument::<span class="name">operator==</span>(const <span class="type">QJsonDocument</span> &amp;<i> other</i>) const</h3>
+<p>Returns <tt>true</tt> if the <i>other</i> document is equal to this document.</p>
+<!-- @@@operator== -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

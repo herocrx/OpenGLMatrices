@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- platform-notes.qdoc -->
+  <title>QtDoc 5.0: Platform and Compiler Notes - X11</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<p class="naviNextPrevious headerNavi">
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#linux">Linux</a></li>
+<li class="level2"><a href="#installation-problems">Installation problems</a></li>
+<li class="level2"><a href="#intel-c-compiler-for-linux">Intel C++ Compiler for Linux</a></li>
+<li class="level2"><a href="#known-issues-with-intel-c-compiler-for-linux">Known Issues with Intel C++ Compiler for Linux</a></li>
+</ul>
+</div>
+<h1 class="title">Platform and Compiler Notes - X11</h1>
+<span class="subtitle"></span>
+<!-- $$$platform-notes-x11.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>This page contains information about the X11 platforms Qt is currently known to run on, with links to platform-specific notes. More information about the combinations of platforms and compilers supported by Qt can be found on the <a href="platform-details.html">Supported Platforms</a> page.</p>
+<a name="linux"></a>
+<h2>Linux</h2>
+<p>There are no known problems with using Qt on production versions of Linux/x86, Linux/ppc, Linux/amd64 and Linux/ia64 (including Altix(R)).</p>
+<p>For the GCC compiler, please also see the relevant <a href="platform-notes.html#general-compiler-notes">General Compiler Notes</a>.</p>
+<a name="installation-problems"></a>
+<h3>Installation problems</h3>
+<p>If you experience problems when installing new open source versions of Qt versions, try to use the open source Qt archives (e.g&#x2e;, RPM) provided by your Linux distribution. If you need to install the source (.tgz) archive, be aware that you will probably end up with two different versions of the Qt library installed on your system, which will probably lead to link errors, like this:</p>
+<pre class="cpp">undefined reference to <span class="char">'_vt.11QPushButton'</span></pre>
+<p>Fix this by removing the old version of the library.</p>
+<p>If you have problems installing open source versions of Qt provided by your Linux distribution (e.g&#x2e;, RPM), please consult the maintainers of the distribution, not us.</p>
+<p>Some RPM versions have problems installing some of the Qt RPM archives where installation stops with an error message warning about a &quot;Failed Dependency&quot;. Use the <tt>--nodeps</tt> option to <tt>rpm</tt> to workaround this problem.</p>
+<a name="intel-c-compiler-for-linux"></a>
+<h3>Intel C++ Compiler for Linux</h3>
+<p>Qt can be compiled with the Intel C++ compile for Linux. The configuration is not tested on a regular basis.</p>
+<a name="known-issues-with-intel-c-compiler-for-linux"></a>
+<h3>Known Issues with Intel C++ Compiler for Linux</h3>
+<ul>
+<li>Precompiled header support does not work in version 10.0&#x2e;025 and older. For these compilers, you should configure Qt with -no-pch. Precompiled header support works properly in version 10.0&#x2e;026 and later.</li>
+<li>Version 10.0&#x2e;026 for Intel 64 is known to miscompile qmake when building in release mode. For now, configure Qt with -debug. Version 10.1&#x2e;008 and later can compile qmake in release mode.</li>
+<li>Versions 10.1&#x2e;008 to 10.1&#x2e;015 for both IA-32 and Intel 64 are known crash with &quot;(0): internal error: 0_47021&quot; when compiling <a href="../qtxmlpatterns/qtxmlpatterns-module.html">QtXmlPatterns</a>, QtWebKit, and Designer in release mode. Version 10.1&#x2e;017 compiles these modules correctly in release mode.</li>
+</ul>
+</div>
+<!-- @@@platform-notes-x11.html -->
+<p class="naviNextPrevious footerNavi">
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

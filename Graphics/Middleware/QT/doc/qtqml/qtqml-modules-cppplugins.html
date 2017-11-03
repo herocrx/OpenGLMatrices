@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- cppplugins.qdoc -->
+  <title>QtQml 5.0: Creating C++ Plugins for QML</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#creating-a-plugin">Creating a Plugin</a></li>
+<li class="level1"><a href="#plugin-example">Plugin Example</a></li>
+<li class="level1"><a href="#reference">Reference</a></li>
+</ul>
+</div>
+<h1 class="title">Creating C++ Plugins for QML</h1>
+<span class="subtitle"></span>
+<!-- $$$qtqml-modules-cppplugins.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="creating-a-plugin"></a>
+<h2>Creating a Plugin</h2>
+<p>The <a href="qqmlengine.html">QML engine</a> load C++ plugins for QML. Such plugins are usually provided in a QML extension module, and can provide types and functionality for use by clients in QML documents which import the module.</p>
+<p><a href="qqmlextensionplugin.html">QQmlExtensionPlugin</a> is a plugin interface that makes it possible to create QML extensions that can be loaded dynamically into QML applications. These extensions allow custom QML types to be made available to the QML engine.</p>
+<p>To write a QML extension plugin:</p>
+<ol class="1">
+<li>Subclass <a href="qqmlextensionplugin.html">QQmlExtensionPlugin</a><ul>
+<li>Use the <a href="../qtcore/qtplugin.html#Q_PLUGIN_METADATA">Q_PLUGIN_METADATA</a>() macro to register the plugin with the Qt meta object system</li>
+<li>Override the <a href="qqmlextensionplugin.html#registerTypes">registerTypes()</a> method and call <a href="qqmlengine.html#qmlRegisterType">qmlRegisterType</a>() to register the types to be exported by the plugin</li>
+</ul>
+</li>
+<li>Write a project file for the plugin</li>
+<li>Create a <a href="qtqml-modules-qmldir.html">qmldir file</a> to describe the plugin</li>
+</ol>
+<p>QML extension plugins are for either application-specific or library-like plugins. Library plugins should limit themselves to registering types, as any manipulation of the engine's root context may cause conflicts or other issues in the library user's code.</p>
+<a name="plugin-example"></a>
+<h2>Plugin Example</h2>
+<p>Suppose there is a new <tt>TimeModel</tt> C++ class that should be made available as a new QML element. It provides the current time through <tt>hour</tt> and <tt>minute</tt> properties.</p>
+<pre class="cpp">    ...</pre>
+<p>To make this type available, we create a plugin class named <tt>QExampleQmlPlugin</tt> which is a subclass of <a href="qqmlextensionplugin.html">QQmlExtensionPlugin</a>. It overrides the <a href="qqmlextensionplugin.html#registerTypes">registerTypes()</a> method in order to register the <tt>TimeModel</tt> type using <a href="qqmlengine.html#qmlRegisterType">qmlRegisterType</a>(). It also uses the <a href="../qtcore/qtplugin.html#Q_PLUGIN_METADATA">Q_PLUGIN_METADATA</a>() macro in the class definition to register the plugin with the Qt meta object system using a unique identifier for the plugin.</p>
+<pre class="cpp"></pre>
+<p>The <tt>TimeModel</tt> class receives a <tt>1.0</tt> version of this plugin library, as a QML type called <tt>Time</tt>. The <a href="../qtcore/qtglobal.html#Q_ASSERT">Q_ASSERT</a>() macro can ensure the type namespace is imported correctly by any QML components that use this plugin. The <a href="qtqml-cppintegration-definetypes.html">Defining QML Types from C++</a> article has more information about registering C++ types into the runtime.</p>
+<p>For this example, the TimeExample source directory is in <tt>imports/TimeExample</tt>. The plugin's type namespace will mirror this structure, so the types are registered into the namespace &quot;TimeExample&quot;.</p>
+<p>Additionally, the project file, in a <tt>.pro</tt> file, defines the project as a plugin library, specifies it should be built into the <tt>imports/TimeExample</tt> directory, and registers the plugin target name and various other details:</p>
+<pre class="cpp">TEMPLATE <span class="operator">=</span> lib
+CONFIG <span class="operator">+</span><span class="operator">=</span> qt plugin
+QT <span class="operator">+</span><span class="operator">=</span> qml
+
+DESTDIR <span class="operator">=</span> imports<span class="operator">/</span>TimeExample
+TARGET <span class="operator">=</span> qmlqtimeexampleplugin
+SOURCES <span class="operator">+</span><span class="operator">=</span> qexampleqmlplugin<span class="operator">.</span>cpp</pre>
+<p>Finally, a <a href="qtqml-modules-qmldir.html">qmldir file</a> is required in the <tt>imports/TimeExample</tt> directory to describe the plugin and the types that it exports. The plugin includes a <tt>Clock.qml</tt> file along with the <tt>qmlqtimeexampleplugin</tt> that is built by the project (as shown above in the <tt>.pro</tt> file) so both of these need to be specified in the <tt>qmldir</tt> file:</p>
+<pre class="cpp"></pre>
+<p>Once the project is built and installed, the new <tt>Time</tt> component is accessible by any QML component that imports the <tt>TimeExample</tt> module</p>
+<pre class="qml"></pre>
+<p>The full source code is available in the <a href="../qtquick/qtquick-porting-qt5.html#qml-plugins">plugins example</a>.</p>
+<a name="reference"></a>
+<h2>Reference</h2>
+<ul>
+<li><a href="qml-extending-tutorial-index.html">Writing QML Extensions with C++</a> - contains a chapter on creating QML plugins.</li>
+<li><a href="qtqml-cppintegration-definetypes.html">Defining QML Types from C++</a> - information about registering C++ types into the runtime.</li>
+<li><a href="../qtcore/plugins-howto.html">How to Create Qt Plugins</a> - information about Qt plugins</li>
+</ul>
+</div>
+<!-- @@@qtqml-modules-cppplugins.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

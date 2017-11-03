@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/qtassistant" title="Qt Assistant Manual" version="">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <page access="public" status="commendable" name="remotecontrol" href="remotecontrol.html" subtype="example" title="Remote Control Example" fulltitle="Remote Control Example" subtitle="" location="remotecontrol.qdoc" module="QtAssistant" groups="examples-qtassistant">
+            <page access="public" status="commendable" name="remotecontrol/main.cpp" href="remotecontrol-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="remotecontrol/main.cpp" location=""/>
+            <page access="public" status="commendable" name="remotecontrol/remotecontrol.cpp" href="remotecontrol-remotecontrol-cpp.html" subtype="file" title="" fulltitle="remotecontrol.cpp Example File" subtitle="remotecontrol/remotecontrol.cpp" location=""/>
+            <page access="public" status="commendable" name="remotecontrol/remotecontrol.h" href="remotecontrol-remotecontrol-h.html" subtype="file" title="" fulltitle="remotecontrol.h Example File" subtitle="remotecontrol/remotecontrol.h" location=""/>
+            <page access="public" status="commendable" name="remotecontrol/remotecontrol.pro" href="remotecontrol-remotecontrol-pro.html" subtype="file" title="" fulltitle="remotecontrol.pro Example File" subtitle="remotecontrol/remotecontrol.pro" location=""/>
+            <page access="public" status="commendable" name="remotecontrol/remotecontrol.qrc" href="remotecontrol-remotecontrol-qrc.html" subtype="file" title="" fulltitle="remotecontrol.qrc Example File" subtitle="remotecontrol/remotecontrol.qrc" location=""/>
+            <page access="public" status="commendable" name="remotecontrol/remotecontrol.ui" href="remotecontrol-remotecontrol-ui.html" subtype="file" title="" fulltitle="remotecontrol.ui Example File" subtitle="remotecontrol/remotecontrol.ui" location=""/>
+        </page>
+        <page access="public" status="commendable" name="simpletextviewer" href="simpletextviewer.html" subtype="example" title="Simple Text Viewer Example" fulltitle="Simple Text Viewer Example" subtitle="" location="simpletextviewer.qdoc" module="QtAssistant" groups="examples-qtassistant">
+            <contents name="creating-documentation-and-customizing-qt-assistant" title="Creating Documentation and Customizing Qt Assistant" level="1"/>
+            <contents name="organizing-documentation-for-qt-assistant" title="Organizing Documentation for Qt Assistant" level="2"/>
+            <contents name="customizing-qt-assistant" title="Customizing Qt Assistant" level="2"/>
+            <contents name="controlling-qt-assistant-via-the-assistant-class" title="Controlling Qt Assistant via the Assistant Class" level="1"/>
+            <contents name="mainwindow-class" title="MainWindow Class" level="1"/>
+            <contents name="findfiledialog-class" title="FindFileDialog Class" level="1"/>
+            <contents name="summary" title="Summary" level="1"/>
+            <page access="public" status="commendable" name="simpletextviewer/assistant.cpp" href="simpletextviewer-assistant-cpp.html" subtype="file" title="" fulltitle="assistant.cpp Example File" subtitle="simpletextviewer/assistant.cpp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/assistant.h" href="simpletextviewer-assistant-h.html" subtype="file" title="" fulltitle="assistant.h Example File" subtitle="simpletextviewer/assistant.h" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/documentation/simpletextviewer.qhcp" href="simpletextviewer-documentation-simpletextviewer-qhcp.html" subtype="file" title="" fulltitle="simpletextviewer.qhcp Example File" subtitle="simpletextviewer/documentation/simpletextviewer.qhcp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/documentation/simpletextviewer.qhp" href="simpletextviewer-documentation-simpletextviewer-qhp.html" subtype="file" title="" fulltitle="simpletextviewer.qhp Example File" subtitle="simpletextviewer/documentation/simpletextviewer.qhp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/findfiledialog.cpp" href="simpletextviewer-findfiledialog-cpp.html" subtype="file" title="" fulltitle="findfiledialog.cpp Example File" subtitle="simpletextviewer/findfiledialog.cpp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/findfiledialog.h" href="simpletextviewer-findfiledialog-h.html" subtype="file" title="" fulltitle="findfiledialog.h Example File" subtitle="simpletextviewer/findfiledialog.h" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/main.cpp" href="simpletextviewer-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="simpletextviewer/main.cpp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/mainwindow.cpp" href="simpletextviewer-mainwindow-cpp.html" subtype="file" title="" fulltitle="mainwindow.cpp Example File" subtitle="simpletextviewer/mainwindow.cpp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/mainwindow.h" href="simpletextviewer-mainwindow-h.html" subtype="file" title="" fulltitle="mainwindow.h Example File" subtitle="simpletextviewer/mainwindow.h" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/simpletextviewer.pro" href="simpletextviewer-simpletextviewer-pro.html" subtype="file" title="" fulltitle="simpletextviewer.pro Example File" subtitle="simpletextviewer/simpletextviewer.pro" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/textedit.cpp" href="simpletextviewer-textedit-cpp.html" subtype="file" title="" fulltitle="textedit.cpp Example File" subtitle="simpletextviewer/textedit.cpp" location=""/>
+            <page access="public" status="commendable" name="simpletextviewer/textedit.h" href="simpletextviewer-textedit-h.html" subtype="file" title="" fulltitle="textedit.h Example File" subtitle="simpletextviewer/textedit.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="assistant-custom-help-viewer.html" href="assistant-custom-help-viewer.html" subtype="page" title="Customizing Qt Assistant" fulltitle="Customizing Qt Assistant" subtitle="" location="assistant-manual.qdoc" module="QtAssistant">
+            <contents name="qt-help-collection-files" title="Qt Help Collection Files" level="1"/>
+            <contents name="displaying-custom-documentation" title="Displaying Custom Documentation" level="1"/>
+            <contents name="changing-the-appearance-of-qt-assistant" title="Changing the Appearance of Qt Assistant" level="1"/>
+            <contents name="creating-a-custom-help-collection-file" title="Creating a Custom Help Collection File" level="2"/>
+            <contents name="using-qt-assistant-remotely" title="Using Qt Assistant Remotely" level="1"/>
+            <contents name="compatibility-with-old-formats" title="Compatibility with Old Formats" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="assistant-details.html" href="assistant-details.html" subtype="page" title="Using Qt Assistant" fulltitle="Using Qt Assistant" subtitle="" location="assistant-manual.qdoc" module="QtAssistant">
+            <contents name="searching-from-page-contents" title="Searching from Page Contents" level="1"/>
+            <contents name="full-text-searching" title="Full Text Searching" level="1"/>
+            <contents name="filtering-help-contents" title="Filtering Help Contents" level="1"/>
+            <contents name="adding-documentation" title="Adding Documentation" level="1"/>
+            <contents name="specifying-home-page" title="Specifying Home Page" level="1"/>
+            <contents name="using-command-line-options" title="Using Command Line Options" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="assistant-quick-guide.html" href="assistant-quick-guide.html" subtype="page" title="Qt Assistant Quick Guide" fulltitle="Qt Assistant Quick Guide" subtitle="" location="assistant-manual.qdoc" module="QtAssistant">
+            <contents name="managing-bookmarks" title="Managing Bookmarks" level="1"/>
+            <contents name="searching-for-keywords" title="Searching for Keywords" level="1"/>
+            <contents name="using-free-text-search" title="Using Free Text Search" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qtassistant-index.html" href="qtassistant-index.html" subtype="page" title="Qt Assistant Manual" fulltitle="Qt Assistant Manual" subtitle="" location="assistant-manual.qdoc" module="QtAssistant" groups="qttools">
+            <keyword name="qt-assistant"/>
+            <contents name="table-of-contents" title="Table of Contents" level="1"/>
+        </page>
+    </namespace>
+    <page access="public" status="commendable" name="examples-qtassistant" href="examples-qtassistant.html" subtype="group" seen="true" members="remotecontrol,simpletextviewer,all-examples" title="Qt Assistant Examples" fulltitle="Qt Assistant Examples" subtitle="" location="assistant-example.qdoc" groups="all-examples"/>
+</INDEX>

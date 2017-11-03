@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: flickrview.qml Example File (webkitqml/flickrview/flickrview.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">flickrview.qml Example File</h1>
+<span class="small-subtitle">webkitqml/flickrview/flickrview.qml</span>
+<!-- $$$webkitqml/flickrview/flickrview.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the examples of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
+**
+** &quot;Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
+**
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+import QtWebKit 3.0
+import QtQuick.XmlListModel 2.0
+import &quot;qrc:/shared&quot; as Shared
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    <span class="name">width</span>: <span class="number">1024</span>
+    <span class="name">height</span>: <span class="number">768</span>
+
+    property <span class="type">string</span> <span class="name">initialUrl</span>: <span class="string">&quot;https://www.flickr.com/explore/interesting/7days/?&quot;</span>
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">thumbnailContainer</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+
+        <span class="name">anchors</span>.bottom: <span class="name">container</span>.<span class="name">bottom</span>
+        <span class="name">width</span>: <span class="name">container</span>.<span class="name">width</span>
+        <span class="name">height</span>: <span class="number">100</span>
+
+        <span class="name">gradient</span>: <span class="name">Gradient</span> {
+            <span class="type"><a href="../qtquick/qml-qtquick2-gradientstop.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">0.0</span>; <span class="name">color</span>: <span class="string">&quot;gray&quot;</span> }
+            <span class="type"><a href="../qtquick/qml-qtquick2-gradientstop.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">0.33</span>; <span class="name">color</span>: <span class="string">&quot;black&quot;</span> }
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+            <span class="name">id</span>: <span class="name">info</span>
+            <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+            <span class="name">anchors</span>.horizontalCenter: <span class="name">thumbnailContainer</span>.<span class="name">horizontalCenter</span>
+            <span class="name">text</span>: <span class="name">webView</span>.<span class="name">title</span>
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-listview.html">ListView</a></span> {
+            <span class="name">id</span>: <span class="name">listView</span>
+            <span class="name">orientation</span>: <span class="string">&quot;Horizontal&quot;</span>
+            <span class="type">anchors</span> {
+                <span class="name">topMargin</span>: <span class="number">20</span>
+                <span class="name">fill</span>: <span class="name">parent</span>
+            }
+
+            <span class="name">model</span>: <span class="name">model</span>
+            <span class="name">delegate</span>: <span class="name">Component</span> {
+                <span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> {
+                    <span class="name">source</span>: <span class="name">thumbnail</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+                        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+                        <span class="name">onClicked</span>: <span class="name">webView</span>.<span class="name">url</span> <span class="operator">=</span> <span class="name">link</span> <span class="operator">+</span> <span class="string">&quot;/lightbox&quot;</span>
+                    }
+                }
+            }
+
+            <span class="name">focus</span>: <span class="number">true</span>
+            <span class="name">spacing</span>: <span class="number">10</span>
+            <span class="name">leftMargin</span>: <span class="number">10</span>
+            <span class="name">rightMargin</span>: <span class="number">35</span>
+            <span class="name">visible</span>: <span class="name">model</span>.<span class="name">status</span> <span class="operator">==</span> <span class="name">XmlListModel</span>.<span class="name">Ready</span>
+        }
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+            <span class="name">id</span>: <span class="name">updateInfo</span>
+
+            property <span class="type">real</span> <span class="name">distance</span>: -(<span class="name">listView</span>.<span class="name">contentWidth</span> <span class="operator">-</span> <span class="name">listView</span>.<span class="name">contentX</span> <span class="operator">-</span> <span class="name">thumbnailContainer</span>.<span class="name">width</span>)
+            property <span class="type">real</span> <span class="name">threshold</span>: <span class="name">Math</span>.<span class="name">max</span>(<span class="number">2.5</span> <span class="operator">*</span> <span class="name">listView</span>.<span class="name">height</span>, <span class="name">thumbnailContainer</span>.<span class="name">width</span> <span class="operator">-</span> <span class="name">listView</span>.<span class="name">contentWidth</span> <span class="operator">+</span> <span class="number">2</span> <span class="operator">*</span> <span class="name">listView</span>.<span class="name">height</span>)
+            property <span class="type">bool</span> <span class="name">triggerUpdate</span>: <span class="number">false</span>
+
+            <span class="name">opacity</span>: <span class="number">0.8</span>
+            <span class="name">x</span>: <span class="name">thumbnailContainer</span>.<span class="name">width</span> <span class="operator">-</span> <span class="name">distance</span>
+            <span class="name">width</span>: <span class="name">listView</span>.<span class="name">height</span>
+            <span class="name">color</span>: <span class="string">&quot;transparent&quot;</span>
+
+            <span class="type">anchors</span> {
+                <span class="name">top</span>: <span class="name">thumbnailContainer</span>.<span class="name">top</span>
+                <span class="name">bottom</span>: <span class="name">thumbnailContainer</span>.<span class="name">bottom</span>
+            }
+
+            <span class="type">Timer</span> {
+                <span class="name">interval</span>: <span class="number">200</span>; <span class="name">running</span>: <span class="name">updateInfo</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;update&quot;</span>; <span class="name">repeat</span>: <span class="number">false</span>
+                <span class="name">onTriggered</span>: { <span class="name">model</span>.<span class="name">reload</span>(); <span class="name">updateInfo</span>.<span class="name">triggerUpdate</span> <span class="operator">=</span> <span class="number">false</span>; }
+            }
+
+            <span class="name">states</span>: [
+                <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                    <span class="name">name</span>: <span class="string">&quot;pull&quot;</span>
+                    <span class="name">when</span>: <span class="name">updateInfo</span>.<span class="name">distance</span> <span class="operator">&lt;=</span> <span class="name">updateInfo</span>.<span class="name">threshold</span> <span class="operator">&amp;&amp;</span> <span class="name">listView</span>.<span class="name">dragging</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">message</span>; <span class="name">text</span>: <span class="string">&quot;Pull\nto\nupdate&quot;</span> }
+                },
+
+                <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                    <span class="name">name</span>: <span class="string">&quot;release&quot;</span>
+                    <span class="name">when</span>: <span class="name">updateInfo</span>.<span class="name">distance</span> <span class="operator">&gt;</span> <span class="name">updateInfo</span>.<span class="name">threshold</span> <span class="operator">&amp;&amp;</span> <span class="name">listView</span>.<span class="name">dragging</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">message</span>; <span class="name">text</span>: <span class="string">&quot;Release\nto\nupdate&quot;</span> }
+                },
+
+                <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                    <span class="name">name</span>: <span class="string">&quot;update&quot;</span>
+                    <span class="name">when</span>: <span class="name">updateInfo</span>.<span class="name">triggerUpdate</span> <span class="operator">&amp;&amp;</span> <span class="name">listView</span>.<span class="name">atXEnd</span> <span class="operator">&amp;&amp;</span> !<span class="name">listView</span>.<span class="name">dragging</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">message</span>; <span class="name">text</span>: <span class="string">&quot;Updating&quot;</span> }
+                }
+            ]
+
+            <span class="name">onStateChanged</span>: {
+                <span class="keyword">if</span> (<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;release&quot;</span>)
+                    <span class="name">triggerUpdate</span> <span class="operator">=</span> <span class="number">true</span>
+                <span class="keyword">if</span> (<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;pull&quot;</span>)
+                    <span class="name">triggerUpdate</span> <span class="operator">=</span> <span class="number">false</span>
+            }
+
+            <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+                <span class="name">id</span>: <span class="name">icon</span>
+                <span class="name">width</span>: <span class="number">30</span>
+                <span class="name">color</span>: <span class="string">&quot;transparent&quot;</span>
+                <span class="type">anchors</span> {
+                    <span class="name">topMargin</span>: <span class="number">10</span>
+                    <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>
+                    <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>
+                    <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>
+                }
+                <span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> {
+                    <span class="name">source</span>: <span class="string">&quot;qrc:/shared/images/arrow.png&quot;</span>
+                    <span class="name">width</span>: <span class="number">30</span>
+                    <span class="name">height</span>: <span class="number">30</span>
+                    <span class="name">visible</span>: <span class="name">updateInfo</span>.<span class="name">state</span> <span class="operator">!=</span> <span class="string">&quot;update&quot;</span>
+                    <span class="name">rotation</span>: <span class="name">updateInfo</span>.<span class="name">state</span> <span class="operator">==</span> <span class="string">&quot;release&quot;</span> ? <span class="number">180</span> : <span class="number">0</span>
+                    Behavior on <span class="name">rotation</span> { <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">100</span>} }
+                    SequentialAnimation on <span class="name">x</span> {
+                        <span class="name">running</span>: <span class="name">listView</span>.<span class="name">atXEnd</span> <span class="operator">&amp;&amp;</span> !<span class="name">listView</span>.<span class="name">dragging</span>
+                        <span class="name">loops</span>: <span class="name">Animation</span>.<span class="name">Infinite</span>
+                        <span class="type"><a href="../qtquick/qml-qtquick2-propertyanimation.html">PropertyAnimation</a></span> { <span class="name">to</span>: <span class="number">5</span>; <span class="name">duration</span>: <span class="number">250</span> }
+                        <span class="type"><a href="../qtquick/qml-qtquick2-propertyanimation.html">PropertyAnimation</a></span> { <span class="name">to</span>: <span class="number">0</span>; <span class="name">duration</span>: <span class="number">250</span> }
+                    }
+                    <span class="type">anchors</span> {
+                        <span class="name">verticalCenter</span>: <span class="name">parent</span>.<span class="name">verticalCenter</span>
+                    }
+                }
+            }
+
+            <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+                <span class="name">id</span>: <span class="name">message</span>
+                <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignHCenter</span>
+                <span class="name">verticalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignVCenter</span>
+                <span class="name">font</span>.family: <span class="string">&quot;Monospace&quot;</span>
+                <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+                <span class="type">anchors</span> {
+                    <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>
+                    <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>
+                    <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>
+                    <span class="name">left</span>: <span class="name">icon</span>.<span class="name">right</span>
+                }
+            }
+        }
+
+        <span class="type">Shared</span>.LoadIndicator {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+            <span class="name">running</span>: !<span class="name">listView</span>.<span class="name">visible</span> <span class="operator">&amp;&amp;</span> <span class="name">model</span>.<span class="name">status</span> <span class="operator">!=</span> <span class="name">XmlListModel</span>.<span class="name">Error</span>
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">content</span>
+        <span class="name">width</span>: <span class="name">container</span>.<span class="name">width</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+        <span class="type">anchors</span> {
+            <span class="name">top</span>: <span class="name">container</span>.<span class="name">top</span>
+            <span class="name">bottom</span>: <span class="name">thumbnailContainer</span>.<span class="name">top</span>
+        }
+
+        <span class="type">WebView</span> {
+            <span class="name">id</span>: <span class="name">webView</span>
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">opacity</span>: <span class="number">0</span>
+
+            <span class="name">url</span>: <span class="name">container</span>.<span class="name">initialUrl</span>
+
+            Behavior on <span class="name">opacity</span> {
+                <span class="type"><a href="../qtquick/qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">duration</span>: <span class="number">200</span> }
+            }
+
+            <span class="name">onLoadingChanged</span>: {
+                <span class="keyword">switch</span> (<span class="name">loadRequest</span>.<span class="name">status</span>)
+                {
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">LoadSucceededStatus</span>:
+                    <span class="name">opacity</span> <span class="operator">=</span> <span class="number">1</span>
+                    <span class="keyword">break</span>
+                <span class="keyword">default</span>:
+                    <span class="name">opacity</span> <span class="operator">=</span> <span class="number">0</span>
+                    <span class="keyword">break</span>
+                }
+            }
+
+            <span class="name">onNavigationRequested</span>: {
+                <span class="keyword">switch</span> (<span class="name">request</span>.<span class="name">navigationType</span>)
+                {
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">LinkClickedNavigation</span>:
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">FormSubmittedNavigation</span>:
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">BackForwardNavigation</span>:
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">ReloadNavigation</span>:
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">FormResubmittedNavigation</span>:
+                <span class="keyword">case</span> <span class="name">WebView</span>.<span class="name">OtherNavigation</span>:
+                    <span class="keyword">if</span> (/^(https|http):\/\/(www\.flickr\.com|login\.yahoo\.com)/.<span class="name">test</span>(<span class="name">request</span>.<span class="name">url</span>)) {
+                        <span class="name">request</span>.<span class="name">action</span> <span class="operator">=</span> <span class="name">WebView</span>.<span class="name">AcceptRequest</span>
+                        <span class="keyword">return</span>
+                    }
+                }
+                <span class="comment">// Disallow navigating outside of flickr.com</span>
+                <span class="name">request</span>.<span class="name">action</span> <span class="operator">=</span> <span class="name">WebView</span>.<span class="name">IgnoreRequest</span>
+            }
+        }
+
+        <span class="type">Shared</span>.LoadIndicator {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">imageSource</span>: <span class="string">&quot;qrc:/images/flickr.png&quot;</span>
+            <span class="name">running</span>: <span class="name">webView</span>.<span class="name">loading</span>
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmllistmodel.html">XmlListModel</a></span> {
+        <span class="name">id</span>: <span class="name">model</span>
+        <span class="name">namespaceDeclarations</span>: <span class="string">&quot;declare namespace media=\&quot;http://search.yahoo.com/mrss/\&quot;;&quot;</span>
+        <span class="name">source</span>: <span class="string">&quot;http://api.flickr.com/services/feeds/photos_public.gne?format=rss2&quot;</span>
+        <span class="name">query</span>: <span class="string">&quot;/rss/channel/item&quot;</span>
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;thumbnail&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:thumbnail/@url/string()&quot;</span> }
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;thumbnailHeight&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:thumbnail/@height/number()&quot;</span> }
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;content&quot;</span>; <span class="name">query</span>: <span class="string">&quot;media:content/@url/string()&quot;</span> }
+        <span class="type"><a href="../qtquick/qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a></span> { <span class="name">name</span>: <span class="string">&quot;link&quot;</span>; <span class="name">query</span>: <span class="string">&quot;link/string()&quot;</span> }
+    }
+
+}</pre>
+</div>
+<!-- @@@webkitqml/flickrview/flickrview.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

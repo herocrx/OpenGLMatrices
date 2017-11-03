@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtHelp">
+    <examples>
+        <example name="Context-Sensitive Help Example" docUrl="qthelp://org.qt-project.qthelp.502/qthelp/contextsensitivehelp.html" projectPath="help/contextsensitivehelp/contextsensitivehelp.pro">
+            <description><![CDATA[Using the QHelpEngineCore class to implement context-sensitive help for applications.]]></description>
+            <tags>context-sensitive,help</tags>
+            <fileToOpen>help/contextsensitivehelp/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

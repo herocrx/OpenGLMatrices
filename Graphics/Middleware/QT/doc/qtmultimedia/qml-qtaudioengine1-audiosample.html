@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdeclarative_audiosample_p.cpp -->
+  <title>qtmultimedia 5.0: AudioSample</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">AudioSample</h1>
+<span class="subtitle"></span>
+<!-- $$$AudioSample-brief -->
+<p>Load audio samples, mostly .wav. <a href="#details">More...</a></p>
+<!-- @@@AudioSample -->
+<p>Inherits <a href="../qtquick/qml-qtquick2-item.html">Item</a></p>
+<p>This type was introduced in qtmultimedia 1.0.</p>
+<ul>
+<li><a href="qml-qtaudioengine1-audiosample-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audiosample.html#loaded-prop">loaded</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audiosample.html#name-prop">name</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audiosample.html#preloaded-prop">preloaded</a></b></b> : bool</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audiosample.html#onLoadedChanged-signal">onLoadedChanged</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">void <b><b><a href="qml-qtaudioengine1-audiosample.html#load-method">load</a></b></b>()</li>
+</ul>
+<!-- $$$AudioSample-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p><tt>AudioSample</tt> is part of the <b>QtAudioEngine 1.0</b> module.</p>
+<p>It can be accessed through <a href="qml-qtaudioengine1-audioengine.html#samples-prop">QtAudioEngine1::AudioEngine::samples</a> with its unique name and must be defined inside <a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a>.</p>
+<pre class="qml">import QtQuick 2.0
+import QtAudioEngine 1.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">color</span>:<span class="string">&quot;white&quot;</span>
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">500</span>
+
+    <span class="type"><a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a></span> {
+        <span class="name">id</span>:<span class="name">audioengine</span>
+
+        <span class="type">AudioSample</span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion&quot;</span>
+            <span class="name">source</span>: <span class="string">&quot;explosion-02.wav&quot;</span>
+        }
+    }
+}</pre>
+<!-- @@@AudioSample -->
+<h2>Property Documentation</h2>
+<!-- $$$loaded -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="loaded-prop"></a><span class="name">loaded</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates whether this sample has been loaded into memory or not.</p>
+</div></div><!-- @@@loaded -->
+<br/>
+<!-- $$$name -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="name-prop"></a><span class="name">name</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the name of <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a>, must be unique among all samples and only defined once.</p>
+</div></div><!-- @@@name -->
+<br/>
+<!-- $$$preloaded -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="preloaded-prop"></a><span class="name">preloaded</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates whether this sample needs to be preloaded or not. If true, the audio engine will start loading the sample file immediately when the app started, otherwise the sample will not be loaded until explicitly requested.</p>
+</div></div><!-- @@@preloaded -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$onLoadedChanged -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onLoadedChanged-signal"></a>AudioSample::<span class="name">onLoadedChanged</span>()</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when <a href="qml-qtaudioengine1-audiosample.html#loaded-prop">loaded</a> is changed</p>
+</div></div><!-- @@@onLoadedChanged -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$load -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="load-method"></a><span class="type">void</span> AudioSample::<span class="name">load</span>()</p></td></tr></table></div><div class="qmldoc"><p>Starts loading the sample into memory if not loaded.</p>
+</div></div><!-- @@@load -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

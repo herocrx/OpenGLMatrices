@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- basictypes.qdoc -->
+  <title>QtQml 5.0: QML Basic Type: list</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#using-the-list-type">Using the list Type</a></li>
+</ul>
+</div>
+<h1 class="title">QML Basic Type: list</h1>
+<span class="subtitle"></span>
+<!-- $$$list-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>list</tt> type refers to a list of QML objects.</p>
+<p>A list value can be accessed in a similar way to a JavaScript array:</p>
+<ul>
+<li>Values are assigned using the <tt>[]</tt> square bracket syntax with comma-separated values</li>
+<li>The <tt>length</tt> property provides the number of items in the list</li>
+<li>Values in the list are accessed using the <tt>[index]</tt> syntax</li>
+</ul>
+<p>A <tt>list</tt> can only store QML objects, and cannot contain any <a href="qtqml-typesystem-basictypes.html">basic type</a> values. (To store basic types within a list, use the <a href="qml-var.html">var</a> type instead.)</p>
+<p>When integrating with C++, note that any <a href="qqmllistproperty.html">QQmlListProperty</a> value <a href="qtqml-cppintegration-data.html">passed into QML from C++</a> is automatically converted into a <tt>list</tt> value, and vice-versa.</p>
+<a name="using-the-list-type"></a>
+<h2>Using the list Type</h2>
+<p>For example, the <a href="../qtquick/qml-qtquick2-item.html">Item</a> type has a <a href="../qtquick/qml-qtquick2-item.html#states-prop">states</a> list-type property that can be assigned to and used as follows:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-item.html">Item</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+
+    <span class="name">states</span>: [
+        <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> { <span class="name">name</span>: <span class="string">&quot;activated&quot;</span> },
+        <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> { <span class="name">name</span>: <span class="string">&quot;deactivated&quot;</span> }
+    ]
+
+    <span class="name">Component</span>.onCompleted: {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Name of first state:&quot;</span>, <span class="name">states</span>[<span class="number">0</span>].<span class="name">name</span>)
+        <span class="keyword">for</span> (<span class="keyword">var</span> <span class="name">i</span> = <span class="number">0</span>; <span class="name">i</span> <span class="operator">&lt;</span> <span class="name">states</span>.<span class="name">length</span>; i++)
+            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;state&quot;</span>, <span class="name">i</span>, <span class="name">states</span>[<span class="name">i</span>].<span class="name">name</span>)
+    }
+}</pre>
+<p>The defined <a href="../qtquick/qml-qtquick2-state.html">State</a> objects will be added to the <tt>states</tt> list in the order in which they are defined.</p>
+<p>If the list only contains one object, the square brackets may be omitted:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-item.html">Item</a></span> {
+    <span class="name">width</span>: <span class="number">100</span>; <span class="name">height</span>: <span class="number">100</span>
+    <span class="name">states</span>: <span class="name">State</span> { <span class="name">name</span>: <span class="string">&quot;activated&quot;</span> }
+}</pre>
+<p>Note that objects cannot be individually added to or removed from the list once created; to modify the contents of a list, it must be reassigned to a new list.</p>
+<p><b>Note: </b>The <tt>list</tt> type is not recommended as a type for custom properties. The <tt>var</tt> type should be used instead for this purpose as lists stored by the <tt>var</tt> type can be manipulated with greater flexibility from within QML.</p><p>This basic type is provided by the QML language.</p>
+</div>
+<p><b>See also </b><a href="qtqml-typesystem-basictypes.html">QML Basic Types</a>.</p>
+<!-- @@@list -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

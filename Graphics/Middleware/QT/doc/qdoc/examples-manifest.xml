@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QDoc">
+    <examples>
+        <example name="Configuration File Example" docUrl="qthelp://org.qt-project.qdoc.502/qdoc/config.html">
+            <description><![CDATA[configuration files for the QDoc Manual and QDoc Guide]]></description>
+            <tags>file,configuration</tags>
+        </example>
+        <example name="QML Documentation Example" docUrl="qthelp://org.qt-project.qdoc.502/qdoc/componentset.html" projectPath="componentset/componentset.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>documentation,qml</tags>
+        </example>
+    </examples>
+</instructionals>

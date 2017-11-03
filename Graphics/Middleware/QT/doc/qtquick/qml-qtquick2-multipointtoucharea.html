@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickmultipointtoucharea.cpp -->
+  <title>QtQuick 5.0: MultiPointTouchArea</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">MultiPointTouchArea</h1>
+<span class="subtitle"></span>
+<!-- $$$MultiPointTouchArea-brief -->
+<p>Enables handling of multiple touch points <a href="#details">More...</a></p>
+<!-- @@@MultiPointTouchArea -->
+<p>Inherits <a href="qml-qtquick2-item.html">Item</a></p>
+<ul>
+<li><a href="qml-qtquick2-multipointtoucharea-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#maximumTouchPoints-prop">maximumTouchPoints</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#minimumTouchPoints-prop">minimumTouchPoints</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#touchPoints-prop">touchPoints</a></b></b> : list&lt;TouchPoint&gt;</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#onCanceled-signal">onCanceled</a></b></b>(list&lt;TouchPoint&gt; <i>touchPoints</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#onGestureStarted-signal">onGestureStarted</a></b></b>(GestureEvent <i>gesture</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#onPressed-signal">onPressed</a></b></b>(list&lt;TouchPoint&gt; <i>touchPoints</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#onReleased-signal">onReleased</a></b></b>(list&lt;TouchPoint&gt; <i>touchPoints</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#onTouchUpdated-signal">onTouchUpdated</a></b></b>(list&lt;TouchPoint&gt; <i>touchPoints</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-multipointtoucharea.html#onUpdated-signal">onUpdated</a></b></b>(list&lt;TouchPoint&gt; <i>touchPoints</i>)</li>
+</ul>
+<!-- $$$MultiPointTouchArea-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>A MultiPointTouchArea is an invisible item that is used to track multiple touch points.</p>
+<p>The <a href="qml-qtquick2-item.html#enabled-prop">Item::enabled</a> property is used to enable and disable touch handling. When disabled, the touch area becomes transparent to mouse/touch events.</p>
+<p>MultiPointTouchArea can be used in two ways:</p>
+<ul>
+<li>setting <tt>touchPoints</tt> to provide touch point objects with properties that can be bound to</li>
+<li>using the <a href="qml-qtquick2-multipointtoucharea.html#onTouchUpdated-signal">onTouchUpdated</a> or <a href="qml-qtquick2-multipointtoucharea.html#onPressed-signal">onPressed</a>, <a href="qml-qtquick2-multipointtoucharea.html#onUpdated-signal">onUpdated</a> and <a href="qml-qtquick2-multipointtoucharea.html#onReleased-signal">onReleased</a> handlers</li>
+</ul>
+<p>While a MultiPointTouchArea <i>can</i> take exclusive ownership of certain touch points, it is also possible to have multiple MultiPointTouchAreas active at the same time, each operating on a different set of touch points.</p>
+<p><b>See also </b><a href="qml-qtquick2-touchpoint.html">TouchPoint</a>.</p>
+<!-- @@@MultiPointTouchArea -->
+<h2>Property Documentation</h2>
+<!-- $$$minimumTouchPoints -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="minimumTouchPoints-prop"></a><span class="name">minimumTouchPoints</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="maximumTouchPoints-prop"></a><span class="name">maximumTouchPoints</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr></table></div><div class="qmldoc"><p>These properties hold the range of touch points to be handled by the touch area.</p>
+<p>These are convenience that allow you to, for example, have nested MultiPointTouchAreas, one handling two finger touches, and another handling three finger touches.</p>
+<p>By default, all touch points within the touch area are handled.</p>
+</div></div><!-- @@@minimumTouchPoints -->
+<br/>
+<!-- $$$touchPoints -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="touchPoints-prop"></a><span class="name">touchPoints</span> : <span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property holds a set of user-defined touch point objects that can be bound to.</p>
+<p>In the following example, we have two small rectangles that follow our touch points.</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">width</span>: <span class="number">400</span>; <span class="name">height</span>: <span class="number">400</span>
+    <span class="type"><a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">touchPoints</span>: [
+            <span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span> { <span class="name">id</span>: <span class="name">point1</span> },
+            <span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span> { <span class="name">id</span>: <span class="name">point2</span> }
+        ]
+    }
+
+    <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">width</span>: <span class="number">30</span>; <span class="name">height</span>: <span class="number">30</span>
+        <span class="name">color</span>: <span class="string">&quot;green&quot;</span>
+        <span class="name">x</span>: <span class="name">point1</span>.<span class="name">x</span>
+        <span class="name">y</span>: <span class="name">point1</span>.<span class="name">y</span>
+    }
+
+    <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">width</span>: <span class="number">30</span>; <span class="name">height</span>: <span class="number">30</span>
+        <span class="name">color</span>: <span class="string">&quot;yellow&quot;</span>
+        <span class="name">x</span>: <span class="name">point2</span>.<span class="name">x</span>
+        <span class="name">y</span>: <span class="name">point2</span>.<span class="name">y</span>
+    }
+}</pre>
+<p>By default this property holds an empty list.</p>
+<p><b>See also </b><a href="qml-qtquick2-touchpoint.html">TouchPoint</a>.</p>
+</div></div><!-- @@@touchPoints -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$onCanceled -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onCanceled-signal"></a>MultiPointTouchArea::<span class="name">onCanceled</span>(<span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span>&gt;<i> touchPoints</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when new touch events have been canceled because another item stole the touch event handling.</p>
+<p>This signal is for advanced use: it is useful when there is more than one <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a> that is handling input, or when there is a <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a> inside a <a href="qml-qtquick2-flickable.html">Flickable</a>. In the latter case, if you execute some logic on the <a href="qml-qtquick2-multipointtoucharea.html#onPressed-signal">onPressed</a> signal and then start dragging, the <a href="qml-qtquick2-flickable.html">Flickable</a> may steal the touch handling from the <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a>. In these cases, to reset the logic when the <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a> has lost the touch handling to the <a href="qml-qtquick2-flickable.html">Flickable</a>, <tt>onCanceled</tt> should be used in addition to <a href="qml-qtquick2-multipointtoucharea.html#onReleased-signal">onReleased</a>.</p>
+<p><i>touchPoints</i> is the list of canceled points.</p>
+</div></div><!-- @@@onCanceled -->
+<br/>
+<!-- $$$onGestureStarted -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onGestureStarted-signal"></a>MultiPointTouchArea::<span class="name">onGestureStarted</span>(<span class="type">GestureEvent</span><i> gesture</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when the global drag threshold has been reached.</p>
+<p>This function is typically used when a MultiPointTouchAreas has been nested in a Flickable or another <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a>. When the threshold has been reached, and the handler called, you can determine whether or not the touch area should grab the current touch points. By default they will not be grabbed; to grab them call <tt>gesture.grab()</tt>. If the gesture is not grabbed, the nesting Flickable, for example, would also have an opportunity to grab.</p>
+<p>The gesture object also includes information on the current set of <tt>touchPoints</tt> and the <tt>dragThreshold</tt>.</p>
+</div></div><!-- @@@onGestureStarted -->
+<br/>
+<!-- $$$onPressed -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onPressed-signal"></a>MultiPointTouchArea::<span class="name">onPressed</span>(<span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span>&gt;<i> touchPoints</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when new touch points are added. <i>touchPoints</i> is a list of these new points.</p>
+<p>If <a href="qml-qtquick2-multipointtoucharea.html#minimumTouchPoints-prop">minimumTouchPoints</a> is set to a value greater than one, this handler will not be called until the minimum number of required touch points has been reached. At that point, onPressed will be called with all the current touch points.</p>
+</div></div><!-- @@@onPressed -->
+<br/>
+<!-- $$$onReleased -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onReleased-signal"></a>MultiPointTouchArea::<span class="name">onReleased</span>(<span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span>&gt;<i> touchPoints</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when existing touch points are removed. <i>touchPoints</i> is a list of these removed points.</p>
+</div></div><!-- @@@onReleased -->
+<br/>
+<!-- $$$onTouchUpdated -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onTouchUpdated-signal"></a>MultiPointTouchArea::<span class="name">onTouchUpdated</span>(<span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span>&gt;<i> touchPoints</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when the touch points handled by the <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a> change. This includes adding new touch points, removing or canceling previous touch points, as well as updating current touch point data. <i>touchPoints</i> is the list of all current touch points.</p>
+</div></div><!-- @@@onTouchUpdated -->
+<br/>
+<!-- $$$onUpdated -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onUpdated-signal"></a>MultiPointTouchArea::<span class="name">onUpdated</span>(<span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type"><a href="qml-qtquick2-touchpoint.html">TouchPoint</a></span>&gt;<i> touchPoints</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when existing touch points are updated. <i>touchPoints</i> is a list of these updated points.</p>
+</div></div><!-- @@@onUpdated -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

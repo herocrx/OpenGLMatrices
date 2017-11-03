@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmake-manual.qdoc -->
+  <title>QtDoc 5.0: Test Functions</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="qmake-function-reference.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="qmake-function-reference.html">Replace Functions</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#built-in-test-functions">Built-in Test Functions</a></li>
+<li class="level2"><a href="#cache-variablename-set-add-sub-transient-super-source-variablename">cache(variablename, [set|add|sub] [transient] [super], [source variablename])</a></li>
+<li class="level2"><a href="#config-config">CONFIG(config)</a></li>
+<li class="level2"><a href="#contains-variablename-value">contains(variablename, value)</a></li>
+<li class="level2"><a href="#count-variablename-number">count(variablename, number)</a></li>
+<li class="level2"><a href="#debug-level-message">debug(level, message)</a></li>
+<li class="level2"><a href="#defined-name-type">defined(name[, type])</a></li>
+<li class="level2"><a href="#equals-variablename-value">equals(variablename, value)</a></li>
+<li class="level2"><a href="#error-string">error(string)</a></li>
+<li class="level2"><a href="#eval-string">eval(string)</a></li>
+<li class="level2"><a href="#exists-filename">exists(filename)</a></li>
+<li class="level2"><a href="#export-variablename">export(variablename)</a></li>
+<li class="level2"><a href="#files-pattern-recursive-false">files(pattern[, recursive=false])</a></li>
+<li class="level2"><a href="#for-iterate-list">for(iterate, list)</a></li>
+<li class="level2"><a href="#greaterthan-variablename-value">greaterThan(variablename, value)</a></li>
+<li class="level2"><a href="#if-condition">if(condition)</a></li>
+<li class="level2"><a href="#include-filename">include(filename)</a></li>
+<li class="level2"><a href="#infile-filename-var-val">infile(filename, var, val)</a></li>
+<li class="level2"><a href="#isactiveconfig">isActiveConfig</a></li>
+<li class="level2"><a href="#isempty-variablename">isEmpty(variablename)</a></li>
+<li class="level2"><a href="#isequal">isEqual</a></li>
+<li class="level2"><a href="#lessthan-variablename-value">lessThan(variablename, value)</a></li>
+<li class="level2"><a href="#load-feature">load(feature)</a></li>
+<li class="level2"><a href="#log-message">log(message)</a></li>
+<li class="level2"><a href="#message-string">message(string)</a></li>
+<li class="level2"><a href="#mkpath-dirpath">mkpath(dirPath)</a></li>
+<li class="level2"><a href="#requires-condition">requires(condition)</a></li>
+<li class="level2"><a href="#system-command">system(command)</a></li>
+<li class="level2"><a href="#touch-filename-reference-filename">touch(filename, reference_filename)</a></li>
+<li class="level2"><a href="#unset-variablename">unset(variablename)</a></li>
+<li class="level2"><a href="#warning-string">warning(string)</a></li>
+<li class="level2"><a href="#write-file-filename-variablename-mode">write_file(filename, [variablename, [mode]])</a></li>
+<li class="level1"><a href="#test-function-library">Test Function Library</a></li>
+<li class="level2"><a href="#packagesexist-packages">packagesExist(packages)</a></li>
+</ul>
+</div>
+<h1 class="title">Test Functions</h1>
+<span class="subtitle"></span>
+<!-- $$$qmake-test-function-reference.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Test functions return a boolean value that you can test for in the conditional parts of scopes. Test functions can be divided into built-in functions and function libraries.</p>
+<p>See also <a href="qmake-function-reference.html">Replace Functions</a>.</p>
+<a name="built-in-test-functions"></a>
+<h2>Built-in Test Functions</h2>
+<p>Basic test functions are implemented as built-in functions.</p>
+<a name="cache-variablename-set-add-sub-transient-super-source-variablename"></a>
+<h3>cache(variablename, [set|add|sub] [transient] [super], [source variablename])</h3>
+<p>This is an internal function that you will typically not need.</p>
+<a name="config-config"></a>
+<h3>CONFIG(config)</h3>
+<p>This function can be used to test for variables placed into the <tt>CONFIG</tt> variable. This is the same as regular old style (tmake) scopes, but has the added advantage a second parameter can be passed to test for the active config. As the order of values is important in <tt>CONFIG</tt> variables (i.e&#x2e; the last one set will be considered the active config for mutually exclusive values) a second parameter can be used to specify a set of values to consider. For example:</p>
+<pre class="cpp">CONFIG = debug
+CONFIG += release
+CONFIG(release, debug|release):message(Release build!) #will print
+CONFIG(debug, debug|release):message(Debug build!) #no print</pre>
+<p>Because release is considered the active setting (for feature parsing) it will be the CONFIG used to generate the build file. In the common case a second parameter is not needed, but for specific mutual exclusive tests it is invaluable.</p>
+<a name="contains-variablename-value"></a>
+<h3>contains(variablename, value)</h3>
+<p>Succeeds if the variable <i>variablename</i> contains the value <i>value</i>; otherwise fails. You can check the return value of this function using a scope.</p>
+<p>For example:</p>
+<pre class="cpp">contains( drivers, network ) {
+    # drivers contains 'network'
+    message( &quot;Configuring for network build...&quot; )
+    HEADERS += network.h
+    SOURCES += network.cpp
+}</pre>
+<p>The contents of the scope are only processed if the <tt>drivers</tt> variable contains the value, <tt>network</tt>. If this is the case, the appropriate files are added to the <tt>SOURCES</tt> and <tt>HEADERS</tt> variables.</p>
+<a name="count-variablename-number"></a>
+<h3>count(variablename, number)</h3>
+<p>Succeeds if the variable <i>variablename</i> contains a list with the specified <i>number</i> of value; otherwise fails.</p>
+<p>This function is used to ensure that declarations inside a scope are only processed if the variable contains the correct number of values; for example:</p>
+<pre class="cpp">options = $$find(CONFIG, &quot;debug&quot;) $$find(CONFIG, &quot;release&quot;)
+count(options, 2) {
+    message(Both release and debug specified.)
+}</pre>
+<a name="debug-level-message"></a>
+<h3>debug(level, message)</h3>
+<p>Checks whether qmake runs at the specified debug level. If yes, it returns true and prints a debug message.</p>
+<a name="defined-name-type"></a>
+<h3>defined(name[, type])</h3>
+<p>Tests whether the function or variable <tt>name</tt> is defined. If <tt>type</tt> is omitted, checks all functions. To check only variables or particular type of functions, specify <tt>type</tt>. It can have the following values:</p>
+<ul>
+<li><tt>test</tt> only checks test functions</li>
+<li><tt>replace</tt> only checks replace functions</li>
+<li><tt>var</tt> only checks variables</li>
+</ul>
+<a name="equals-variablename-value"></a>
+<h3>equals(variablename, value)</h3>
+<p>Tests whether <tt>variablename</tt> equals the string <tt>value</tt>.</p>
+<p>For example:</p>
+<pre class="cpp">TARGET = helloworld
+equals(TARGET, &quot;helloworld&quot;) {
+    message(&quot;The target assignment was successful.&quot;)
+}</pre>
+<a name="error-string"></a>
+<h3>error(string)</h3>
+<p>This function never returns a value. <a href="qmake-manual.html#qmake"><tt>qmake</tt></a> displays the given <i>string</i> to the user, and exits. This function should only be used for unrecoverable errors.</p>
+<p>For example:</p>
+<pre class="cpp">error(An error has occurred in the configuration process.)</pre>
+<a name="eval-string"></a>
+<h3>eval(string)</h3>
+<p>Evaluates the contents of the string using <a href="qmake-manual.html#qmake"><tt>qmake</tt></a>'s syntax rules and returns true. Definitions and assignments can be used in the string to modify the values of existing variables or create new definitions.</p>
+<p>For example:</p>
+<pre class="cpp">eval(TARGET = myapp) {
+    message($$TARGET)
+}</pre>
+<p>Note that quotation marks can be used to delimit the string, and that the return value can be discarded if it is not needed.</p>
+<a name="exists-filename"></a>
+<h3>exists(filename)</h3>
+<p>Tests whether a file with the given <i>filename</i> exists. If the file exists, the function succeeds; otherwise it fails. If a regular expression is specified for the filename, this function succeeds if any file matches the regular expression specified.</p>
+<p>For example:</p>
+<pre class="cpp">exists( $(QTDIR)/lib/libqt-mt* ) {
+      message( &quot;Configuring for multi-threaded Qt...&quot; )
+      CONFIG += thread
+}</pre>
+<p>Note that &quot;/&quot; can be used as a directory separator, regardless of the platform in use.</p>
+<a name="export-variablename"></a>
+<h3>export(variablename)</h3>
+<p>Exports the current value of <tt>variablename</tt> from the local context of a function to the global context.</p>
+<a name="files-pattern-recursive-false"></a>
+<h3>files(pattern[, recursive=false])</h3>
+<p>Expands the specified wildcard pattern and returns a list of filenames. If <tt>recursive</tt> is true, this function descends into subdirectories.</p>
+<a name="for-iterate-list"></a>
+<h3>for(iterate, list)</h3>
+<p>This special test function will cause a loop to be started that iterates over all values in <i>list</i>, setting <i>iterate</i> to each value in turn. As a convenience, if <i>list</i> is 1..10 then iterate will iterate over the values 1 through 10.</p>
+<p>The use of an else scope afer a condition line with a for() loop is disallowed.</p>
+<p>For example:</p>
+<pre class="cpp">LIST = 1 2 3
+for(a, LIST):exists(file.$${a}):message(I see a file.$${a}!)</pre>
+<a name="greaterthan-variablename-value"></a>
+<h3>greaterThan(variablename, value)</h3>
+<p>Tests that the value of <tt>variablename</tt> is greater than <tt>value</tt>. First, this function attempts a numerical comparison. If at least one of the operands fails to convert, this function does a string comparison.</p>
+<p>For example:</p>
+<pre class="cpp">ANSWER = 42
+greaterThan(ANSWER, 1) {
+    message(&quot;The answer might be correct.&quot;)
+}</pre>
+<p>It is impossible to compare two numbers as strings directly. As a workaround, construct temporary values with a non-numeric prefix and compare these.</p>
+<p>For example:</p>
+<pre class="cpp">VALUE = 123
+TMP_VALUE = x$$VALUE
+greaterThan(TMP_VALUE, x456): message(&quot;Condition may be true.&quot;)</pre>
+<p>See also <a href="#lessthan-variablename-value">lessThan()</a>.</p>
+<a name="if-condition"></a>
+<h3>if(condition)</h3>
+<p>This test function evaluates <tt>condition</tt>. It is used to group boolean expressions.</p>
+<p>For example:</p>
+<pre class="cpp">if(linux-g++*|macx-g++*):CONFIG(debug, debug|release) {
+    message(&quot;We are on Linux or Mac OS, and we are in debug mode.&quot;)
+}</pre>
+<a name="include-filename"></a>
+<h3>include(filename)</h3>
+<p>Includes the contents of the file specified by <i>filename</i> into the current project at the point where it is included. This function succeeds if <i>filename</i> is included; otherwise it fails. The included file is processed immediately.</p>
+<p>You can check whether the file was included by using this function as the condition for a scope; for example:</p>
+<pre class="cpp">include( shared.pri )
+OPTIONS = standard custom
+!include( options.pri ) {
+    message( &quot;No custom build options specified&quot; )
+OPTIONS -= custom
+}</pre>
+<a name="infile-filename-var-val"></a>
+<h3>infile(filename, var, val)</h3>
+<p>Succeeds if the file <i>filename</i> (when parsed by <a href="qmake-manual.html#qmake"><tt>qmake</tt></a> itself) contains the variable <i>var</i> with a value of <i>val</i>; otherwise fails. If you do not specify a third argument (<i>val</i>), the function will only test whether <i>var</i> has been declared in the file.</p>
+<a name="isactiveconfig"></a>
+<h3>isActiveConfig</h3>
+<p>This is an alias for the <tt>CONFIG</tt> function.</p>
+<a name="isempty-variablename"></a>
+<h3>isEmpty(variablename)</h3>
+<p>Succeeds if the variable <i>variablename</i> is empty; otherwise fails. This is the equivalent of <tt>count( variablename, 0 )</tt>.</p>
+<p>For example:</p>
+<pre class="cpp">isEmpty( CONFIG ) {
+CONFIG += warn_on debug
+}</pre>
+<a name="isequal"></a>
+<h3>isEqual</h3>
+<p>This is an alias for the <tt>equals</tt> function.</p>
+<a name="lessthan-variablename-value"></a>
+<h3>lessThan(variablename, value)</h3>
+<p>Tests that the value of <tt>variablename</tt> is less than <tt>value</tt>. Works as <a href="#greaterthan-variablename-value">greaterThan()</a>.</p>
+<p>For example:</p>
+<pre class="cpp">ANSWER = 42
+lessThan(ANSWER, 1) {
+    message(&quot;The answer might be wrong.&quot;)
+}</pre>
+<a name="load-feature"></a>
+<h3>load(feature)</h3>
+<p>This function loads the feature file (<tt>.prf</tt>) specified by <tt>feature</tt>, unless the feature has already been loaded.</p>
+<a name="log-message"></a>
+<h3>log(message)</h3>
+<p>Prints a message on the console. Unlike the <tt>message</tt> function, neither prepends text nor appends a line break.</p>
+<p>See also <a href="#message-string">message()</a>.</p>
+<a name="message-string"></a>
+<h3>message(string)</h3>
+<p>This function simply writes a message to the console. Unlike the <tt>error()</tt> function, this function allows processing to continue.</p>
+<pre class="cpp">message( &quot;This is a message&quot; )</pre>
+<p>The above line causes &quot;This is a message&quot; to be written to the console. The use of quotation marks is optional.</p>
+<p><b>Note: </b>By default, messages are written out for each Makefile generated by qmake for a given project. If you want to ensure that messages only appear once for each project, test the <tt>build_pass</tt> variable <a href="qmake-advanced-usage.html">in conjunction with a scope</a> to filter out messages during builds; for example:</p><pre class="cpp">!build_pass:message( &quot;This is a message&quot; )</pre>
+<a name="mkpath-dirpath"></a>
+<h3>mkpath(dirPath)</h3>
+<p>Creates the directory path <tt>dirPath</tt>. This function is a wrapper around the QDir::makepath function.</p>
+<a name="requires-condition"></a>
+<h3>requires(condition)</h3>
+<p>Evaluates <tt>condition</tt>. If the condition is false, qmake skips this project (and its SUBDIRS) when building.</p>
+<p><b>Note: </b>You can also use the REQUIRES variable for this purpose. However, we recommend using this function, instead.</p><p>See also <a href="qmake-variable-reference.html#requires">REQUIRES</a>.</p>
+<a name="system-command"></a>
+<h3>system(command)</h3>
+<p>Executes the given <tt>command</tt> in a secondary shell. Succeeds if the command returns with a zero exit status; otherwise fails. You can check the return value of this function using a scope:</p>
+<p>For example:</p>
+<pre class="cpp">system(ls /bin):HAS_BIN=FALSE</pre>
+<p>See also the replace variant of <a href="qmake-function-reference.html#system-command-mode">system()</a>.</p>
+<a name="touch-filename-reference-filename"></a>
+<h3>touch(filename, reference_filename)</h3>
+<p>Updates the time stamp of <tt>filename</tt> to match the time stamp of <tt>reference_filename</tt>.</p>
+<a name="unset-variablename"></a>
+<h3>unset(variablename)</h3>
+<p>Removes <tt>variablename</tt> from the current context.</p>
+<p>For example:</p>
+<pre class="cpp">NARF = zort
+unset(NARF)
+!defined(NARF, var) {
+    message(&quot;NARF is not defined.&quot;)
+}</pre>
+<a name="warning-string"></a>
+<h3>warning(string)</h3>
+<p>This function will always succeed, and will display the given <tt>string</tt> to the user. message() is a synonym for warning().</p>
+<a name="write-file-filename-variablename-mode"></a>
+<h3>write_file(filename, [variablename, [mode]])</h3>
+<p>Writes the values of <tt>variablename</tt> to a file with the name <tt>filename</tt>, each value on a separate line. If <tt>variablename</tt> is not specified, creates an empty file. If <tt>mode</tt> is <tt>append</tt> and the file already exists, appends to it instead of replacing it.</p>
+<a name="test-function-library"></a>
+<h2>Test Function Library</h2>
+<p>Complex test functions are implemented in a library of .prf files.</p>
+<a name="packagesexist-packages"></a>
+<h3>packagesExist(packages)</h3>
+<p>Uses the PKGCONFIG mechanism to determine whether or not the given packages exist at the time of project parsing.</p>
+<p>This can be useful to optionally enable or disable features. For example:</p>
+<pre class="cpp">packagesExist(sqlite3 QtNetwork QtDeclarative) {
+    DEFINES += USE_FANCY_UI
+}</pre>
+<p>And then, in the code:</p>
+<pre class="cpp">#ifdef USE_FANCY_UI
+    // Use the fancy UI, as we have extra packages available
+#endif</pre>
+</div>
+<!-- @@@qmake-test-function-reference.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qmake-function-reference.html">Replace Functions</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

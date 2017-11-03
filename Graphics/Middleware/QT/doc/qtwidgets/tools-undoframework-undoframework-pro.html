@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWidgets 5.0: undoframework.pro Example File (tools/undoframework/undoframework.pro)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">undoframework.pro Example File</h1>
+<span class="small-subtitle">tools/undoframework/undoframework.pro</span>
+<!-- $$$tools/undoframework/undoframework.pro-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp">QT += widgets
+
+HEADERS     = commands.h \
+              diagramitem.h \
+              diagramscene.h \
+              mainwindow.h
+SOURCES     = commands.cpp \
+              diagramitem.cpp \
+              diagramscene.cpp \
+              main.cpp \
+              mainwindow.cpp
+RESOURCES   = undoframework.qrc
+
+# install
+target.path = $$[QT_INSTALL_EXAMPLES]/widgets/tools/undoframework
+INSTALLS += target
+
+simulator: warning(This example might not fully work on Simulator platform)</pre>
+</div>
+<!-- @@@tools/undoframework/undoframework.pro -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

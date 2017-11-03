@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtQml">
+    <examples>
+        <example name="Chapter 1: Creating a New Type" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/tutorials-extending-chapter1-basics.html" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/extending-tutorial-chapter1.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>new,a,creating,type</tags>
+        </example>
+        <example name="Chapter 2: Connecting to C++ Methods and Signals" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/tutorials-extending-chapter2-methods.html" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/extending-tutorial-chapter2.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>c++,to,and,connecting,signals,methods</tags>
+        </example>
+        <example name="Chapter 3: Adding Property Bindings" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/tutorials-extending-chapter3-bindings.html" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/extending-tutorial-chapter3.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>property,bindings,adding</tags>
+        </example>
+        <example name="Chapter 4: Using Custom Property Types" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/tutorials-extending-chapter4-custompropertytypes.html">
+            <description><![CDATA[No description available]]></description>
+            <tags>custom,types,property,using</tags>
+        </example>
+        <example name="Chapter 5: Using List Property Types" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/tutorials-extending-chapter5-listproperties.html" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/extending-tutorial-chapter5.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>types,property,using,list</tags>
+        </example>
+        <example name="Chapter 6: Writing an Extension Plugin" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/tutorials-extending-chapter6-plugins.html">
+            <description><![CDATA[No description available]]></description>
+            <tags>extension,plugin,an,writing</tags>
+        </example>
+        <example name="QML Example - Dynamic Scene" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/dynamicscene.html" projectPath="qml/dynamicscene/dynamicscene.qmlproject" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/qml-dynamicscene-example.png">
+            <description><![CDATA[This example demonstrates creating components dynamically.]]></description>
+            <tags>scene,qml,dynamic</tags>
+            <fileToOpen>qml/dynamicscene/dynamicscene.qml</fileToOpen>
+        </example>
+        <example name="QML Examples - Internationalization" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/i18n.html" projectPath="qml/i18n/i18n.qmlproject" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/qml-i18n-example.png">
+            <description><![CDATA[This is an internationalization example]]></description>
+            <tags>qml,internationalization</tags>
+            <fileToOpen>qml/i18n/i18n.qml</fileToOpen>
+        </example>
+        <example name="QML Plugin Example" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/plugins.html" projectPath="qml/plugins/plugins.pro" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/qml-plugins-example.png">
+            <description><![CDATA[This example creates a C++ plugin extension by subclassing QQmlExtensionPlugin.]]></description>
+            <tags>plugin,qml</tags>
+            <fileToOpen>qml/plugins/plugins.qml</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - XMLHttpRequst" docUrl="qthelp://org.qt-project.qtqml.502/qtqml/xmlhttprequest.html" projectPath="qml/xmlhttprequest/xmlhttprequest.pro" imageUrl="qthelp://org.qt-project.qtqml.502/qtqml/images/qml-xmlhttprequest-example.png">
+            <description><![CDATA[This is a collection of XMLHttpRequest examples]]></description>
+            <tags>qtquick,xmlhttprequst</tags>
+            <fileToOpen>qml/xmlhttprequest/xmlhttprequest.qml</fileToOpen>
+            <fileToOpen>qml/xmlhttprequest/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

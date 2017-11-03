@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- wheel.qdoc -->
+  <title>QtWebKitExamples 5.0: Wheel Scroller Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#basics">Basics</a></li>
+<li class="level1"><a href="#the-wheel-widget-class">The Wheel Widget class</a></li>
+</ul>
+</div>
+<h1 class="title">Wheel Scroller Example</h1>
+<span class="subtitle"></span>
+<!-- $$$webkitwidgets/scroller/wheel-description -->
+<div class="descr"> <a name="details"></a>
+<p>Demonstrates how scrolling is handled in Qt.<p>The Wheel Scroller Example shows how to use <a href="../qtwidgets/qscroller.html">QScroller</a>, <a href="../qtgui/qscrollevent.html">QScrollEvent</a> and <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a> to implement smooth scrolling for a custom Widget.</p>
+<p class="centerAlign"><img src="images/wheel-example.png" alt="" /></p><a name="basics"></a>
+<h2>Basics</h2>
+<p>The <a href="../qtwidgets/qscroller.html">QScroller</a> class is the main part of the smooth scrolling mechanism in Qt. It keeps track of the current scroll position and speed and updates the object through events. <a href="../qtwidgets/qscroller.html">QScroller</a> will get touch events via the QFlickGesture. It will query the target object through a <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a> for the scroll area and other information. <a href="../qtwidgets/qscroller.html">QScroller</a> will send QScrollEvents to inform the target object about the current scroll position. The target object (usually a <a href="../qtwidgets/qwidget.html">QWidget</a> or a <a href="../qtwidgets/qgraphicsobject.html">QGraphicsObject</a>) will then need to update it's graphical representation to reflect the new scroll position.</p>
+<a name="the-wheel-widget-class"></a>
+<h2>The Wheel Widget class</h2>
+<p>To demonstrate how to use the <a href="../qtwidgets/qscroller.html">QScroller</a> we implement a <a href="../qtwidgets/qwidget.html">QWidget</a> that looks and works like the wheel of a slot machine. The wheel can be started via touch events and will continue getting slower. Additionally the wheel should appear as if no border exists (which would seem unnatural) and the scrolling should snap to center one item.</p>
+<p>In the widget we need to grab the QFlickGesture. The gesture itself will setAcceptTouchEvents for us, so we don't need to do that here.</p>
+<pre class="cpp">    <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>grabGesture(<span class="keyword">this</span><span class="operator">,</span> touch <span class="operator">?</span> <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>TouchGesture : <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>LeftMouseButtonGesture);</pre>
+<p>The widget will get gesture events but in addition we also will get the events from <a href="../qtwidgets/qscroller.html">QScroller</a>. We will need to accept the <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a> to indicate that a scrolling should really be started from the given position.</p>
+<pre class="cpp">    <span class="keyword">case</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>ScrollPrepare:
+    {
+        <span class="comment">// We set the snap positions as late as possible so that we are sure</span>
+        <span class="comment">// we get the correct itemHeight</span>
+        <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span> <span class="operator">*</span>scroller <span class="operator">=</span> <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>scroller(<span class="keyword">this</span>);
+        scroller<span class="operator">-</span><span class="operator">&gt;</span>setSnapPositionsY( WHEEL_SCROLL_OFFSET<span class="operator">,</span> itemHeight() );
+
+        <span class="type"><a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a></span> <span class="operator">*</span>se <span class="operator">=</span> <span class="keyword">static_cast</span><span class="operator">&lt;</span><span class="type"><a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a></span> <span class="operator">*</span><span class="operator">&gt;</span>(e);
+        se<span class="operator">-</span><span class="operator">&gt;</span>setViewportSize(<span class="type"><a href="../qtcore/qsizef.html">QSizeF</a></span>(size()));
+        <span class="comment">// we claim a huge scrolling area and a huge content position and</span>
+        <span class="comment">// hope that the user doesn't notice that the scroll area is restricted</span>
+        se<span class="operator">-</span><span class="operator">&gt;</span>setContentPosRange(<span class="type"><a href="../qtcore/qrectf.html">QRectF</a></span>(<span class="number">0.0</span><span class="operator">,</span> <span class="number">0.0</span><span class="operator">,</span> <span class="number">0.0</span><span class="operator">,</span> WHEEL_SCROLL_OFFSET <span class="operator">*</span> <span class="number">2</span>));
+        se<span class="operator">-</span><span class="operator">&gt;</span>setContentPos(<span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span>(<span class="number">0.0</span><span class="operator">,</span> WHEEL_SCROLL_OFFSET <span class="operator">+</span> m_currentItem <span class="operator">*</span> itemHeight() <span class="operator">+</span> m_itemOffset));
+        se<span class="operator">-</span><span class="operator">&gt;</span>accept();
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }</pre>
+<p>We should call all three set functions form <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a>.</p>
+<ul>
+<li><tt>setViewportSize</tt> to indicate our viewport size. Actually the given code could be improved by giving our size minus the borders.</li>
+<li><tt>setMaxContentPos</tt> to indicate the maximum values for the scroll position. The minimum values are implicitely set to 0. In our example we give a very high number here and hope that the user is not patient enough to scroll until the very end.</li>
+<li><tt>setContentPos</tt> to indicate the current scroll position. We give a position in the middle of the huge scroll area. Actually we give this position every time a new scroll is started so the user will only reach the end if he continuously scrolls in one direction which is not very likely.</li>
+</ul>
+<p>The handling of the <a href="../qtgui/qscrollevent.html">QScrollEvent</a> is a lengthly code not fully shown here.</p>
+<pre class="cpp">    <span class="keyword">case</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>Scroll:
+    {
+        <span class="type"><a href="../qtgui/qscrollevent.html">QScrollEvent</a></span> <span class="operator">*</span>se <span class="operator">=</span> <span class="keyword">static_cast</span><span class="operator">&lt;</span><span class="type"><a href="../qtgui/qscrollevent.html">QScrollEvent</a></span> <span class="operator">*</span><span class="operator">&gt;</span>(e);
+
+        <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> y <span class="operator">=</span> se<span class="operator">-</span><span class="operator">&gt;</span>contentPos()<span class="operator">.</span>y();
+        <span class="type">int</span> iy <span class="operator">=</span> y <span class="operator">-</span> WHEEL_SCROLL_OFFSET;
+        <span class="type">int</span> ih <span class="operator">=</span> itemHeight();</pre>
+<p>In principle it does three steps.</p>
+<ul>
+<li>It calculates and updates the current scroll position as given by <a href="../qtwidgets/qscroller.html">QScroller</a>.</li>
+<li>It repaints the widget so that the new position is shown.</li>
+<li>It centers the item as soon as the scrolling stopps.</li>
+</ul>
+<p>The following code does the centering.</p>
+<pre class="cpp">        <span class="comment">// -- calculate the current item position and offset and redraw the widget</span>
+        <span class="type">int</span> ic <span class="operator">=</span> itemCount();
+        <span class="keyword">if</span> (ic<span class="operator">&gt;</span><span class="number">0</span>) {
+            m_currentItem <span class="operator">=</span> iy <span class="operator">/</span> ih <span class="operator">%</span> ic;
+            m_itemOffset <span class="operator">=</span> iy <span class="operator">%</span> ih;
+
+            <span class="comment">// take care when scrolling backwards. Modulo returns negative numbers</span>
+            <span class="keyword">if</span> (m_itemOffset <span class="operator">&lt;</span> <span class="number">0</span>) {
+                m_itemOffset <span class="operator">+</span><span class="operator">=</span> ih;
+                m_currentItem<span class="operator">-</span><span class="operator">-</span>;
+            }
+
+            <span class="keyword">if</span> (m_currentItem <span class="operator">&lt;</span> <span class="number">0</span>)
+                m_currentItem <span class="operator">+</span><span class="operator">=</span> ic;
+        }
+        <span class="comment">// -- repaint</span>
+        update();
+
+        se<span class="operator">-</span><span class="operator">&gt;</span>accept();
+        <span class="keyword">return</span> <span class="keyword">true</span>;</pre>
+<p>We check if the scrolling is finished which is indicated in the <a href="../qtgui/qscrollevent.html">QScrollEvent</a> by the <tt>isLast</tt> flag. We then check if the item is not already centered and if not start a new scroll by calling QScroller::scrollTo.</p>
+<p>As you can see the <a href="../qtwidgets/qscroller.html">QScroller</a> can be used for other things besides simple scroll areas.</p>
+<p>Files:</p>
+<ul>
+<li><a href="webkitwidgets-scroller-wheel-wheelwidget-cpp.html">webkitwidgets/scroller/wheel/wheelwidget.cpp</a></li>
+<li><a href="webkitwidgets-scroller-wheel-wheelwidget-h.html">webkitwidgets/scroller/wheel/wheelwidget.h</a></li>
+<li><a href="webkitwidgets-scroller-wheel-main-cpp.html">webkitwidgets/scroller/wheel/main.cpp</a></li>
+<li><a href="webkitwidgets-scroller-wheel-wheel-pro.html">webkitwidgets/scroller/wheel/wheel.pro</a></li>
+</ul>
+</div>
+<!-- @@@webkitwidgets/scroller/wheel -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

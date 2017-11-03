@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmltypereference.qdoc -->
+  <title>QtQuick 5.0: Qt Quick QML Types</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#importing-qtquick">Importing QtQuick</a></li>
+<li class="level2"><a href="#submodules">Submodules</a></li>
+<li class="level1"><a href="#basic-types">Basic Types</a></li>
+<li class="level1"><a href="#object-types">Object Types</a></li>
+<li class="level2"><a href="#visual-types">Visual Types</a></li>
+<li class="level2"><a href="#user-input">User Input</a></li>
+<li class="level2"><a href="#positioning">Positioning</a></li>
+<li class="level2"><a href="#states-transitions-and-animations">States, Transitions and Animations</a></li>
+<li class="level2"><a href="#model-view-types-and-data-storage-and-access">Model/View Types And Data Storage And Access</a></li>
+<li class="level2"><a href="#graphical-effects">Graphical Effects</a></li>
+<li class="level2"><a href="#convenience-types">Convenience Types</a></li>
+<li class="level2"><a href="#canvas-similar-to-html5-canvas">Canvas (similar to HTML5 canvas)</a></li>
+</ul>
+</div>
+<h1 class="title">Qt Quick QML Types</h1>
+<span class="subtitle"></span>
+<!-- $$$qtquick-qmltypereference.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>QtQuick</tt> QML module provides a variety of QML types for creating user interfaces and applications with QML. This page lists every QML type provided by this module, organized according to category and purpose.</p>
+<a name="importing-qtquick"></a>
+<h2>Importing QtQuick</h2>
+<p>The types provided by the <a href="qtquick-module.html">QtQuick</a> module are only available in a QML document if that document imports the <tt>QtQuick</tt> namespace.</p>
+<p>The current version of the <a href="qtquick-module.html">QtQuick</a> module is version 2.0, and thus it may be imported via the following statement:</p>
+<pre class="qml">import QtQuick 2.0</pre>
+<p>See the <a href="qtquick-module.html">QtQuick</a> module documentation for more information about the concepts which are central to <tt>QtQuick</tt>.</p>
+<a name="submodules"></a>
+<h3>Submodules</h3>
+<p>Qt Quick includes several submodules which contain additional types.</p>
+<ul>
+<li><a href="qmlmodule-qtquick-xmllistmodel2-qtquick-xmllistmodel-2.html">XML List Model</a> - contains types for creating models from XML data</li>
+<li><a href="qmlmodule-qtquick-localstorage2-qtquick-localstorage-2.html">Local Storage</a> - a submodule containing a JavaScript interface for an SQLite database</li>
+<li><a href="qmlmodule-qtquick-particles2-qtquick-particles-2.html">Particles</a> - provides a particle system for QML applications</li>
+<li><a href="qmlmodule-qtquick-window2-qtquick-window-2.html">Window</a> - contains types for creating top-level windows and accessing screen information</li>
+</ul>
+<a name="basic-types"></a>
+<h2>Basic Types</h2>
+<p>There are a number of basic types that are <a href="../qtqml/qtqml-typesystem-basictypes.html">supported by default in the QML language</a>.</p>
+<p>In addition, the <a href="qtquick-module.html">QtQuick</a> module provides the following basic types: <table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtqml/qml-date.html">date</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtqml/qml-point.html">point</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtqml/qml-rect.html">rect</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtqml/qml-size.html">size</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtqml/qml-time.html">time</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-color.html">color</a></p></td><td class="tblDescr"><p>an ARGB color value.  The color type refers to an ARGB color value. It can be specified in a number of ways:</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-font.html">font</a></p></td><td class="tblDescr"><p>a font value with the properties of QFont.  The font type refers to a font value with the properties of QFont.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-vector2d.html">vector2d</a></p></td><td class="tblDescr"><p>A vector2d type has x and y attributes.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-vector3d.html">vector3d</a></p></td><td class="tblDescr"><p>a value with x, y, and z attributes.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-vector4d.html">vector4d</a></p></td><td class="tblDescr"><p>A vector4d type has x, y, z and w attributes.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-quaternion.html">quaternion</a></p></td><td class="tblDescr"><p>A quaternion type has scalar, x, y, and z attributes.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-matrix4x4.html">matrix4x4</a></p></td><td class="tblDescr"><p>A matrix4x4 type is a 4-row and 4-column matrix</p></td></tr>
+</table>
+</p>
+<a name="object-types"></a>
+<h2>Object Types</h2>
+<p>All of the object types provided by <a href="qtquick-module.html">QtQuick</a> are based on the <a href="qml-qtquick2-item.html">Item</a> type, which itself derives from QML::QtObject. QML object types provided by the <a href="../qtqml/qtqml-typereference-topic.html">QtQml module</a> (such as QML::QtObject and QML::Component) are also available when you import <a href="qtquick-module.html">QtQuick</a>.</p>
+<a name="visual-types"></a>
+<h3>Visual Types</h3>
+<ul>
+<li><a href="qml-qtquick2-item.html">Item</a> - Basic visual object type inherited by visual object types (visual items)</li>
+<li><a href="qml-qtquick2-rectangle.html">Rectangle</a> - A rectangle type</li>
+<li><a href="qml-qtquick2-image.html">Image</a> - For incorporating bitmaps into a scene</li>
+<li><a href="qml-qtquick2-borderimage.html">BorderImage</a> - Allows the use of images as borders</li>
+<li><a href="qml-qtquick2-animatedimage.html">AnimatedImage</a> - For playing animations stored as an animated GIF</li>
+<li><a href="qml-qtquick2-animatedsprite.html">AnimatedSprite</a> - For playing animations stored as a series of frames</li>
+<li><a href="qml-qtquick2-spritesequence.html">SpriteSequence</a> - For playing and transitioning between multiple animations stored as a series of frames</li>
+<li><a href="qml-qtquick2-text.html">Text</a> - For inserting formatted text into a scene</li>
+<li><a href="qml-qtquick-window2-window.html">Window</a> - Provides a top-level window</li>
+</ul>
+<p>Visual Item Utility</p>
+<ul>
+<li><a href="qml-qtquick2-accessible.html">Accessible</a> - Attached property to make components accessible</li>
+<li><a href="qml-qtquick2-gradient.html">Gradient</a> - For defining a color gradient</li>
+<li><a href="qml-qtquick2-gradientstop.html">GradientStop</a> - Used to define a color within a <a href="qml-qtquick2-gradient.html">Gradient</a></li>
+<li><a href="qml-qtquick2-systempalette.html">SystemPalette</a> - Provides access to the Qt palettes</li>
+<li><a href="qml-qtquick-window2-screen.html">Screen</a> - Provides information about the screen on which an <a href="qml-qtquick2-item.html">Item</a> is displayed</li>
+<li><a href="qml-qtquick2-sprite.html">Sprite</a> - Specifies sprite animations for other Items to display</li>
+<li><a href="qml-qtquick2-fontloader.html">FontLoader</a> - Loads fonts by name or URL</li>
+</ul>
+<p>Visual Item Generation</p>
+<ul>
+<li><a href="qml-qtquick2-repeater.html">Repeater</a> - Uses a model to create multiple Item instances</li>
+<li><a href="qml-qtquick2-loader.html">Loader</a> - Eases on-demand loading of Items</li>
+</ul>
+<p>Visual Item Transformations</p>
+<ul>
+<li><a href="qml-qtquick2-transform.html">Transform</a> - Allows specification of advanced transformations on Items</li>
+<li><a href="qml-qtquick2-scale.html">Scale</a> - Assigns item scaling behaviors</li>
+<li><a href="qml-qtquick2-rotation.html">Rotation</a> - Assigns item rotation behaviors</li>
+<li><a href="qml-qtquick2-translate.html">Translate</a> - Assigns item translation behaviors</li>
+</ul>
+<a name="user-input"></a>
+<h3>User Input</h3>
+<ul>
+<li><a href="qml-qtquick2-mousearea.html">MouseArea</a> - Sets up an area for mouse interaction</li>
+<li><a href="qml-qtquick2-keys.html">Keys</a> - Provides components with attached properties to handle key input.</li>
+<li><a href="qml-qtquick2-keynavigation.html">KeyNavigation</a> - Supports key navigation by arrow keys</li>
+<li><a href="qml-qtquick2-focusscope.html">FocusScope</a> - Mediates keyboard focus changes</li>
+<li><a href="qml-qtquick2-flickable.html">Flickable</a> - Provides a surface that can be &quot;flicked&quot;</li>
+<li><a href="qml-qtquick2-pincharea.html">PinchArea</a> - Enables simple pinch gesture handling</li>
+<li><a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a> - Enables handling of multiple touch points</li>
+<li><a href="qml-qtquick2-drag.html">Drag</a> - For specifying drag and drop events for visual items</li>
+<li><a href="qml-qtquick2-droparea.html">DropArea</a> - For specifying drag and drop event handling in an area</li>
+<li><a href="qml-qtquick2-textinput.html">TextInput</a> - Captures user key input</li>
+<li><a href="qml-qtquick2-textedit.html">TextEdit</a> - Displays multiple lines of editable formatted text</li>
+</ul>
+<p>Text Input Utility</p>
+<ul>
+<li><a href="qml-qtquick2-intvalidator.html">IntValidator</a> - Validates values as integers</li>
+<li><a href="qml-qtquick2-doublevalidator.html">DoubleValidator</a> - Validates real values</li>
+<li><a href="qml-qtquick2-regexpvalidator.html">RegExpValidator</a> - Validator for string regular expressions</li>
+</ul>
+<p>User Input Events</p>
+<ul>
+<li><a href="qml-qtquick2-touchpoint.html">TouchPoint</a> - Describes a touch point in a <a href="qml-qtquick2-multipointtoucharea.html">MultiPointTouchArea</a></li>
+<li><a href="qml-qtquick2-pinchevent.html">PinchEvent</a> - Specifies information about a pinch event</li>
+<li><a href="qml-qtquick2-wheelevent.html">WheelEvent</a> - Provides information about a mouse wheel event</li>
+<li><a href="qml-qtquick2-mouseevent.html">MouseEvent</a> - Provides information about a mouse click event</li>
+<li><a href="qml-qtquick2-keyevent.html">KeyEvent</a> - Provides information about a key press event</li>
+<li><a href="qml-qtquick2-dragevent.html">DragEvent</a> -Provides information about a drag event</li>
+</ul>
+<a name="positioning"></a>
+<h3>Positioning</h3>
+<ul>
+<li><a href="qml-qtquick2-positioner.html">Positioner</a> - Attached property which provides information about where an Item has been positioned</li>
+<li><a href="qml-qtquick2-column.html">Column</a> - Arranges its children vertically</li>
+<li><a href="qml-qtquick2-row.html">Row</a> - Arranges its children horizontally</li>
+<li><a href="qml-qtquick2-grid.html">Grid</a> - Positions its children in a grid</li>
+<li><a href="qml-qtquick2-flow.html">Flow</a> - Positions its children with wrapping support</li>
+<li><a href="qml-qtquick2-layoutmirroring.html">LayoutMirroring</a> - Attached property used to mirror layout behavior</li>
+</ul>
+<a name="states-transitions-and-animations"></a>
+<h3>States, Transitions and Animations</h3>
+<p>States</p>
+<ul>
+<li><a href="qml-qtquick2-state.html">State</a> - Defines sets of configurations of objects and properties</li>
+<li><a href="qml-qtquick2-propertychanges.html">PropertyChanges</a> - Describes property changes within a state</li>
+<li><a href="qml-qtquick2-stategroup.html">StateGroup</a> - Contains a set of states and state transitions</li>
+<li><a href="qml-qtquick2-statechangescript.html">StateChangeScript</a> - Allows script binding in a state</li>
+<li><a href="qml-qtquick2-parentchange.html">ParentChange</a> - Re-parent an Item in a state change</li>
+<li><a href="qml-qtquick2-anchorchanges.html">AnchorChanges</a> - Change the anchors of an item in a state</li>
+</ul>
+<p>Transitions and Animations</p>
+<ul>
+<li><a href="qml-qtquick2-transition.html">Transition</a> - Animates transitions during state changes</li>
+<li><a href="qml-qtquick2-viewtransition.html">ViewTransition</a> - Specifies items under transition in a view</li>
+<li><a href="qml-qtquick2-sequentialanimation.html">SequentialAnimation</a> - Runs animations sequentially</li>
+<li><a href="qml-qtquick2-parallelanimation.html">ParallelAnimation</a> - Runs animations in parallel</li>
+<li><a href="qml-qtquick2-behavior.html">Behavior</a> - Specifies a default animation for property changes</li>
+<li><a href="qml-qtquick2-propertyaction.html">PropertyAction</a> - Sets immediate property changes during animation</li>
+<li><a href="qml-qtquick2-pauseanimation.html">PauseAnimation</a> - Introduces a pause in an animation</li>
+<li><a href="qml-qtquick2-smoothedanimation.html">SmoothedAnimation</a> - Allows a property to smoothly track a value</li>
+<li><a href="qml-qtquick2-springanimation.html">SpringAnimation</a> - Allows a property to track a value in a spring-like motion</li>
+<li><a href="qml-qtquick2-scriptaction.html">ScriptAction</a> - Runs scripts during an animation</li>
+</ul>
+<p>Type-specific Animations</p>
+<ul>
+<li><a href="qml-qtquick2-propertyanimation.html">PropertyAnimation</a> - Animates property changes</li>
+<li><a href="qml-qtquick2-numberanimation.html">NumberAnimation</a> - Animates properties of type qreal</li>
+<li><a href="qml-qtquick2-vector3danimation.html">Vector3dAnimation</a> - Animates properties of type QVector3d</li>
+<li><a href="qml-qtquick2-coloranimation.html">ColorAnimation</a> - Animates color changes</li>
+<li><a href="qml-qtquick2-rotationanimation.html">RotationAnimation</a> - Animates rotations</li>
+<li><a href="qml-qtquick2-parentanimation.html">ParentAnimation</a> - Animates parent changes</li>
+<li><a href="qml-qtquick2-anchoranimation.html">AnchorAnimation</a> - Animates anchor changes</li>
+<li><a href="qml-qtquick2-pathanimation.html">PathAnimation</a> - Animates position along a path</li>
+</ul>
+<p>Lower-level Animation Types</p>
+<ul>
+<li><a href="qml-qtquick2-pathinterpolator.html">PathInterpolator</a> - Allows manual animation along a path</li>
+<li><a href="qml-qtquick2-animationcontroller.html">AnimationController</a> - Allows manual control of animation progress</li>
+</ul>
+<p>Animation paths</p>
+<ul>
+<li><a href="qml-qtquick2-path.html">Path</a> - Defines a path used by <a href="qml-qtquick2-pathview.html">PathView</a></li>
+<li><a href="qml-qtquick2-pathline.html">PathLine</a> - Defines a line in <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-pathquad.html">PathQuad</a> - Defines a quadratic Bezier curve in a <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-pathcubic.html">PathCubic</a> - Defines a cubic Bezier curve in a <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-patharc.html">PathArc</a> - Defines an arc in a <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-pathcurve.html">PathCurve</a> - Defines a point on a Catmull-Rom curve in a <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-pathsvg.html">PathSvg</a> - Defines a sub-path specified as a SVG path data string in a <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-pathattribute.html">PathAttribute</a> - Allows the setting of attributes along a <a href="qml-qtquick2-path.html">Path</a></li>
+<li><a href="qml-qtquick2-pathpercent.html">PathPercent</a> - Modifies the item distribution along a <a href="qml-qtquick2-path.html">Path</a></li>
+</ul>
+<a name="model-view-types-and-data-storage-and-access"></a>
+<h3>Model/View Types And Data Storage And Access</h3>
+<p>Models And Model Data</p>
+<ul>
+<li>ListModel - Defines a list of data</li>
+<li>ListElement - Defines a data item in a ListModel</li>
+<li><a href="qml-qtquick2-visualitemmodel.html">VisualItemModel</a> - Contains items that already defines its own visual delegate</li>
+<li><a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> - Encapsulates a model and a delegate</li>
+<li><a href="qml-qtquick2-visualdatagroup.html">VisualDataGroup</a> -Encapsulates a filtered set of visual data items</li>
+<li><a href="qml-qtquick-xmllistmodel2-xmllistmodel.html">XmlListModel</a> - Specifies a model using XPath expressions</li>
+<li><a href="qml-qtquick-xmllistmodel2-xmlrole.html">XmlRole</a> - Specifies a role for an <a href="qml-qtquick-xmllistmodel2-xmllistmodel.html">XmlListModel</a></li>
+</ul>
+<p>Views</p>
+<ul>
+<li><a href="qml-qtquick2-listview.html">ListView</a> - Provides a list visualization of a model</li>
+<li><a href="qml-qtquick2-gridview.html">GridView</a> - Provides a grid visualization of a model</li>
+<li><a href="qml-qtquick2-pathview.html">PathView</a> - Visualizes a model's contents along a path. See Path Elements for more information.</li>
+<li><a href="qml-qtquick2-package.html">Package</a> - Collection that enables sharing of items within different views</li>
+</ul>
+<p>Data Storage</p>
+<ul>
+<li><a href="qmlmodule-qtquick-localstorage2-qtquick-localstorage-2.html">QtQuick.LocalStorage 2</a> - Singleton type providing simplified SQL access</li>
+</ul>
+<a name="graphical-effects"></a>
+<h3>Graphical Effects</h3>
+<ul>
+<li><a href="qml-qtquick2-flipable.html">Flipable</a> - Provides a surface that produces &quot;flipping&quot; effects</li>
+<li><a href="qml-qtquick2-shadereffect.html">ShaderEffect</a> - Allows GLSL shaders to be used as graphical effects</li>
+<li><a href="qml-qtquick2-shadereffectsource.html">ShaderEffectSource</a> - Usable as a texture in <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a></li>
+<li><a href="qml-qtquick2-gridmesh.html">GridMesh</a> - Generates a grid mesh of vertices for use by <a href="qml-qtquick2-shadereffect.html">ShaderEffect</a></li>
+<li>The <a href="qmlmodule-qtquick-particles2-qtquick-particles-2.html">QtQuick.Particles 2</a> module provides a set of Particle System types for <a href="qtquick-module.html">QtQuick</a> 2</li>
+</ul>
+<a name="convenience-types"></a>
+<h3>Convenience Types</h3>
+<ul>
+<li><a href="../qtqml/qml-qtquick2-connections.html">Connections</a> - Explicitly connects signals and signal handlers</li>
+<li><a href="../qtqml/qml-qtquick2-binding.html">Binding</a> - Binds any value to any property</li>
+<li><a href="../qtqml/qml-qtquick2-timer.html">Timer</a> - Provides timed triggers</li>
+<li><a href="../qtqml/qml-qtquick2-workerscript.html">WorkerScript</a> - Enables the use of threads in a Qt Quick application</li>
+</ul>
+<a name="canvas-similar-to-html5-canvas"></a>
+<h3>Canvas (similar to HTML5 canvas)</h3>
+<ul>
+<li><a href="qml-qtquick2-canvas.html">Canvas</a> - Provides a 2D canvas type similar to the HTML5 canvas</li>
+<li><a href="qml-qtquick2-context2d.html">Context2D</a> - Provides 2D context for shapes on a Canvas item</li>
+<li><a href="qml-qtquick2-canvasgradient.html">CanvasGradient</a> - Allows specification of a gradient on a Canvas</li>
+<li><a href="qml-qtquick2-canvaspixelarray.html">CanvasPixelArray</a> - Allows specification of a pixel array for use in a Canvas</li>
+<li><a href="qml-qtquick2-canvasimagedata.html">CanvasImageData</a> - Allows specification of image data for use in a Canvas</li>
+<li><a href="qml-qtquick2-textmetrics.html">TextMetrics</a> - Provides text and font measurement data for use in a Canvas</li>
+</ul>
+</div>
+<!-- @@@qtquick-qmltypereference.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- signalspy.qdoc -->
+  <title>QtQuick 5.0: SignalSpy</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">SignalSpy</h1>
+<span class="subtitle"></span>
+<!-- $$$SignalSpy-brief -->
+<p>Enables introspection of signal emission <a href="#details">More...</a></p>
+<!-- @@@SignalSpy -->
+<p>This type was introduced in QtQuick 4.8.</p>
+<!-- $$$SignalSpy-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>In the following example, a <a href="qml-signalspy.html">SignalSpy</a> is installed to watch the &quot;clicked&quot; signal on a user-defined Button element. When the signal is emitted, the <a href="qtquick-debugging.html#count">count</a> property on the spy will be increased.</p>
+<pre class="cpp">Button {
+    id: button
+    SignalSpy {
+        id: spy
+        target: button
+        signalName: <span class="string">&quot;clicked&quot;</span>
+    }
+    TestCase {
+        name: <span class="string">&quot;ButtonClick&quot;</span>
+        function test_click() {
+            compare(spy<span class="operator">.</span>count<span class="operator">,</span> <span class="number">0</span>)
+            button<span class="operator">.</span>clicked();
+            compare(spy<span class="operator">.</span>count<span class="operator">,</span> <span class="number">1</span>)
+        }
+    }
+}</pre>
+<p>The above style of test is suitable for signals that are emitted synchronously. For asynchronous signals, the wait() method can be used to block the test until the signal occurs (or a timeout expires).</p>
+<p><b>See also </b><a href="collision-testcase.html">TestCase</a>.</p>
+<!-- @@@SignalSpy -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

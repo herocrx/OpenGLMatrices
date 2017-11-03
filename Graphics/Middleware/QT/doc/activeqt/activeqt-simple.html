@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- simple.qdoc -->
+  <title>ActiveQt 5.0: Simple Example (ActiveQt)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Simple Example (ActiveQt)</h1>
+<span class="subtitle"></span>
+<!-- $$$activeqt/simple-description -->
+<div class="descr"> <a name="details"></a>
+<p>The Simple example demonstrates the use of <a href="qaxbindable.html#requestPropertyChange">QAxBindable::requestPropertyChange</a>() and <a href="qaxbindable.html#propertyChanged">QAxBindable::propertyChanged</a>(), and the use of the default <a href="qaxfactory.html">QAxFactory</a> through the <tt>QAXFACTORY_DEFAULT()</tt> macro.</p>
+<p>The ActiveX control in this example is a laid out QWidget with a QSlider, a QLCDNumber and a QLineEdit. It provides a signal/slot/property interface to change the values of the slider and the line edit, and to get notified of any property changes.</p>
+<p>The Qt implementation of the ActiveX for this example is</p>
+<pre class="cpp"><span class="keyword">class</span> <span class="type">QSimpleAX</span> : <span class="keyword">public</span> <span class="type">QWidget</span><span class="operator">,</span> <span class="keyword">public</span> <span class="type"><a href="qaxbindable.html">QAxBindable</a></span>
+{
+    Q_OBJECT
+    Q_PROPERTY( <span class="type"><a href="../qtcore/qstring.html">QString</a></span> text READ text WRITE setText )
+    Q_PROPERTY( <span class="type">int</span> value READ value WRITE setValue )
+<span class="keyword">public</span>:
+    <span class="type">QSimpleAX</span>(<span class="type">QWidget</span> <span class="operator">*</span>parent <span class="operator">=</span> <span class="number">0</span>)
+    : <span class="type">QWidget</span>(parent)
+    {
+        <span class="type">QVBoxLayout</span> <span class="operator">*</span>vbox <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QVBoxLayout</span>( <span class="keyword">this</span> );
+
+        slider <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QSlider</span>( <span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>Horizontal<span class="operator">,</span> <span class="keyword">this</span> );
+        LCD <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QLCDNumber</span>( <span class="number">3</span><span class="operator">,</span> <span class="keyword">this</span> );
+        edit <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QLineEdit</span>( <span class="keyword">this</span> );
+
+        connect( slider<span class="operator">,</span> SIGNAL(valueChanged(<span class="type">int</span>))<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(setValue(<span class="type">int</span>)) );
+        connect( edit<span class="operator">,</span> SIGNAL(textChanged(<span class="type"><a href="../qtcore/qstring.html">QString</a></span>))<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(setText(<span class="type"><a href="../qtcore/qstring.html">QString</a></span>)) );
+
+        vbox<span class="operator">-</span><span class="operator">&gt;</span>addWidget( slider );
+        vbox<span class="operator">-</span><span class="operator">&gt;</span>addWidget( LCD );
+        vbox<span class="operator">-</span><span class="operator">&gt;</span>addWidget( edit );
+    }
+
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> text() <span class="keyword">const</span>
+    {
+        <span class="keyword">return</span> edit<span class="operator">-</span><span class="operator">&gt;</span>text();
+    }
+    <span class="type">int</span> value() <span class="keyword">const</span>
+    {
+        <span class="keyword">return</span> slider<span class="operator">-</span><span class="operator">&gt;</span>value();
+    }
+
+<span class="keyword">signals</span>:
+    <span class="type">void</span> someSignal();
+    <span class="type">void</span> valueChanged(<span class="type">int</span>);
+    <span class="type">void</span> textChanged(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span><span class="operator">&amp;</span>);
+
+<span class="keyword">public</span> <span class="keyword">slots</span>:
+    <span class="type">void</span> setText( <span class="keyword">const</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="operator">&amp;</span>string )
+    {
+        <span class="keyword">if</span> ( <span class="operator">!</span>requestPropertyChange( <span class="string">&quot;text&quot;</span> ) )
+            <span class="keyword">return</span>;
+
+        edit<span class="operator">-</span><span class="operator">&gt;</span>blockSignals( <span class="keyword">true</span> );
+        edit<span class="operator">-</span><span class="operator">&gt;</span>setText( string );
+        edit<span class="operator">-</span><span class="operator">&gt;</span>blockSignals( <span class="keyword">false</span> );
+        <span class="keyword">emit</span> someSignal();
+        <span class="keyword">emit</span> textChanged( string );
+
+        propertyChanged( <span class="string">&quot;text&quot;</span> );
+    }
+    <span class="type">void</span> about()
+    {
+        <span class="type">QMessageBox</span><span class="operator">::</span>information( <span class="keyword">this</span><span class="operator">,</span> <span class="string">&quot;About QSimpleAX&quot;</span><span class="operator">,</span> <span class="string">&quot;This is a Qt widget, and this slot has been\n&quot;</span>
+                                                          <span class="string">&quot;called through ActiveX/OLE automation!&quot;</span> );
+    }
+    <span class="type">void</span> setValue( <span class="type">int</span> i )
+    {
+        <span class="keyword">if</span> ( <span class="operator">!</span>requestPropertyChange( <span class="string">&quot;value&quot;</span> ) )
+            <span class="keyword">return</span>;
+        slider<span class="operator">-</span><span class="operator">&gt;</span>blockSignals( <span class="keyword">true</span> );
+        slider<span class="operator">-</span><span class="operator">&gt;</span>setValue( i );
+        slider<span class="operator">-</span><span class="operator">&gt;</span>blockSignals( <span class="keyword">false</span> );
+        LCD<span class="operator">-</span><span class="operator">&gt;</span>display( i );
+        <span class="keyword">emit</span> valueChanged( i );
+
+        propertyChanged( <span class="string">&quot;value&quot;</span> );
+    }
+
+<span class="keyword">private</span>:
+    <span class="type">QSlider</span> <span class="operator">*</span>slider;
+    <span class="type">QLCDNumber</span> <span class="operator">*</span>LCD;
+    <span class="type">QLineEdit</span> <span class="operator">*</span>edit;
+};</pre>
+<p>The control is exported using the default <a href="qaxfactory.html">QAxFactory</a></p>
+<pre class="cpp"><a href="qaxfactory.html#QAXFACTORY_DEFAULT">QAXFACTORY_DEFAULT</a>(<span class="type">QSimpleAX</span><span class="operator">,</span>
+           <span class="string">&quot;{DF16845C-92CD-4AAB-A982-EB9840E74669}&quot;</span><span class="operator">,</span>
+           <span class="string">&quot;{616F620B-91C5-4410-A74E-6B81C76FFFE0}&quot;</span><span class="operator">,</span>
+           <span class="string">&quot;{E1816BBA-BF5D-4A31-9855-D6BA432055FF}&quot;</span><span class="operator">,</span>
+           <span class="string">&quot;{EC08F8FC-2754-47AB-8EFE-56A54057F34E}&quot;</span><span class="operator">,</span>
+           <span class="string">&quot;{A095BA0C-224F-4933-A458-2DD7F6B85D8F}&quot;</span>)</pre>
+<p>To build the example you must first build the <a href="qaxserver-module.html">QAxServer</a> library. Then run qmake and your make tool in <tt>examples/activeqt/simple</tt>.</p>
+<p>The <a href="qaxserver-demo-simple.html">demonstration</a> requires your WebBrowser to support ActiveX controls, and scripting to be enabled.</p>
+<p>The simple ActiveX control is embedded using the <tt>&lt;object&gt;</tt> tag.</p>
+<pre class="cpp"><span class="operator">&lt;</span>object ID<span class="operator">=</span><span class="string">&quot;QSimpleAX&quot;</span> CLASSID<span class="operator">=</span><span class="string">&quot;CLSID:DF16845C-92CD-4AAB-A982-EB9840E74669&quot;</span>
+CODEBASE<span class="operator">=</span><span class="string">&quot;http://qt.nokia.com/demos/simpleax.cab&quot;</span><span class="operator">&gt;</span>
+    <span class="operator">&lt;</span>PARAM NAME<span class="operator">=</span><span class="string">&quot;text&quot;</span> VALUE<span class="operator">=</span><span class="string">&quot;A simple control&quot;</span> <span class="operator">/</span><span class="operator">&gt;</span>
+    <span class="operator">&lt;</span>PARAM NAME<span class="operator">=</span><span class="string">&quot;value&quot;</span> VALUE<span class="operator">=</span><span class="string">&quot;1&quot;</span> <span class="operator">/</span><span class="operator">&gt;</span>
+<span class="operator">[</span>Object <span class="keyword">not</span> available<span class="operator">!</span> Did you forget to build <span class="keyword">and</span> <span class="keyword">register</span> the server<span class="operator">?</span><span class="operator">]</span>
+<span class="operator">&lt;</span><span class="operator">/</span>object<span class="operator">&gt;</span></pre>
+<p>A simple HTML button is connected to the <a href="activeqt-index.html#activeqt">ActiveQt</a>'s about() slot.</p>
+<pre class="cpp"><span class="operator">&lt;</span>FORM<span class="operator">&gt;</span>
+    <span class="operator">&lt;</span>INPUT TYPE<span class="operator">=</span><span class="string">&quot;BUTTON&quot;</span> VALUE<span class="operator">=</span><span class="string">&quot;About...&quot;</span> onClick<span class="operator">=</span><span class="string">&quot;QSimpleAX.about()&quot;</span> <span class="operator">/</span><span class="operator">&gt;</span>
+<span class="operator">&lt;</span><span class="operator">/</span>FORM<span class="operator">&gt;</span></pre>
+<p>A second ActiveX control - the standard Calendar Control - is instantiated</p>
+<pre class="cpp"><span class="operator">&lt;</span>object ID<span class="operator">=</span><span class="string">&quot;Calendar&quot;</span> CLASSID<span class="operator">=</span><span class="string">&quot;CLSID:8E27C92B-1264-101C-8A2F-040224009C02&quot;</span><span class="operator">&gt;</span>
+<span class="operator">[</span>Standard Calendar control <span class="keyword">not</span> available<span class="operator">!</span><span class="operator">]</span>
+    <span class="operator">&lt;</span>PARAM NAME<span class="operator">=</span><span class="string">&quot;day&quot;</span> VALUE<span class="operator">=</span><span class="string">&quot;1&quot;</span> <span class="operator">/</span><span class="operator">&gt;</span>
+<span class="operator">&lt;</span><span class="operator">/</span>object<span class="operator">&gt;</span></pre>
+<p>Events from the ActiveX controls are handled using both Visual Basic Script and JavaScript.</p>
+<pre class="cpp"><span class="operator">&lt;</span>SCRIPT LANGUAGE<span class="operator">=</span><span class="string">&quot;VBScript&quot;</span><span class="operator">&gt;</span>
+Sub Calendar_Click()
+    MsgBox( <span class="string">&quot;Calendar Clicked!&quot;</span> )
+End Sub
+
+Sub QSimpleAX_TextChanged( str )
+    document<span class="operator">.</span>title <span class="operator">=</span> str
+End Sub
+<span class="operator">&lt;</span><span class="operator">/</span>SCRIPT<span class="operator">&gt;</span>
+
+<span class="operator">&lt;</span>SCRIPT LANGUAGE<span class="operator">=</span><span class="string">&quot;JavaScript&quot;</span><span class="operator">&gt;</span>
+function <span class="type">QSimpleAX</span><span class="operator">::</span>ValueChanged( Newvalue )
+{
+    Calendar<span class="operator">.</span>Day <span class="operator">=</span> Newvalue;
+}
+<span class="operator">&lt;</span><span class="operator">/</span>SCRIPT<span class="operator">&gt;</span></pre>
+<p>Files:</p>
+<ul>
+<li><a href="activeqt-simple-main-cpp.html">activeqt/simple/main.cpp</a></li>
+<li><a href="activeqt-simple-simple-pro.html">activeqt/simple/simple.pro</a></li>
+</ul>
+</div>
+<!-- @@@activeqt/simple -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

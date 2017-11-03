@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- installation.qdoc -->
+  <title>QtDoc 5.0: Qt for X11 Requirements</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="requirements.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="requirements.html">General Qt Requirements</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#platform-plugin-dependencies">Platform plugin dependencies</a></li>
+<li class="level1"><a href="#opengl-dependencies">OpenGL Dependencies</a></li>
+<li class="level1"><a href="#multimedia-dependencies">Multimedia Dependencies</a></li>
+<li class="level1"><a href="#qtwebkit-dependencies">QtWebKit Dependencies</a></li>
+</ul>
+</div>
+<h1 class="title">Qt for X11 Requirements</h1>
+<span class="subtitle"></span>
+<!-- $$$requirements-x11.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="platform-plugin-dependencies"></a>
+<h2>Platform plugin dependencies</h2>
+<p>On X11 the &quot;xcb&quot; QPA (Qt Platform Abstraction) platform plugin is used. It provides the basic functionality needed by <a href="../qtgui/qtgui-module.html">QtGui</a> and <a href="../qtwidgets/qtwidgets-module.html">QtWidgets</a> to run against X11. Its library dependencies are described the following table. To build Qt from its source code, you will also need to install the development packages for these libraries for your system.</p>
+<p>It's possible to configure Qt with -qt-xcb, which compiles in a set of xcb helper libraries instead of trying to link against the system versions. This can help make Qt less dependent on some of the xcb helper libraries that might not be available on all distributions. The table specifies which dependencies are provided by -qt-xcb.</p>
+<table class="generic" width="100%">
+ <thead><tr class="qt-style"><th >Name</th><th >Library</th><th >Notes</th><th >Configuration options</th><th >Minimum working version</th></tr></thead>
+<tr id="OptionalColor"><td >XRender</td><td >libXrender</td><td >X Rendering Extension; used for anti-aliasing and alpha cursor support</td><td ><tt>-xrender</tt> or auto-detected</td><td >0.9&#x2e;0</td></tr>
+<tr id="OptionalColor"><td >xcb-render</td><td >libxcb-render</td><td >X C Bindings for Render extension</td><td >auto-detected or provided by -qt-xcb</td><td >1.8&#x2e;1</td></tr>
+<tr id="OptionalColor"><td >xcb-render-util</td><td >libxcb-render-util</td><td >Utility library for XCB for Render extension</td><td >auto-detected or provided by -qt-xcb</td><td >0.3&#x2e;8</td></tr>
+<tr id="OptionalColor"><td >xcb-shape</td><td >libxcb-shape</td><td >X C Bindings for Shape extension</td><td >auto-detected or provided by -qt-xcb</td><td >1.8&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >xcb-randr</td><td >libxcb-randr</td><td >X C Bindings for Resize and Rotate Extension</td><td >auto-detected or provided by -qt-xcb</td><td >1.8&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >xcb-xfixes</td><td >libxcb-xfixes</td><td >X C Bindings for Fixes Extension</td><td >auto-detected or provided by -qt-xcb</td><td >1.8&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >xcb-sync</td><td >libxcb-sync</td><td >X C Bindings for Sync Extension</td><td >auto-detected or provided by -qt-xcb</td><td >1.8&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >xcb-shm</td><td >libxcb-shm</td><td >X C Bindings for Shared Memory Extension</td><td >auto-detected or provided by -qt-xcb</td><td >1.8&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >xcb-icccm</td><td >libxcb-icccm</td><td >X C Bindings for ICCCM Protocol</td><td >auto-detected or provided by -qt-xcb</td><td >0.3&#x2e;9</td></tr>
+<tr id="DefaultColor"><td >xcb-keysyms</td><td >libxcb-keysyms</td><td >Utility library for XCB for keycode conversion</td><td >auto-detected or provided by -qt-xcb</td><td >0.3&#x2e;9</td></tr>
+<tr id="DefaultColor"><td >xcb-image</td><td >libxcb-image</td><td >Utility library for XCB for XImage and XShmImage, used for <a href="../qtgui/qbackingstore.html">QBackingStore</a> and cursor support</td><td >auto-detected or provided by -qt-xcb</td><td >0.3&#x2e;9</td></tr>
+<tr id="OptionalColor"><td >Fontconfig</td><td >libfontconfig</td><td >Font customization and configuration</td><td ><tt>-fontconfig</tt> or auto-detected</td><td >2.1</td></tr>
+<tr id="OptionalColor"><td ><a href="qt-embedded-fonts.html#freetype">FreeType</a></td><td >libfreetype</td><td >Font engine</td><td ></td><td >2.1&#x2e;3</td></tr>
+<tr id="DefaultColor"><td >Xi</td><td >libXi</td><td >X11 Input Extensions</td><td ><tt>-xinput</tt> or auto-detected</td><td >1.3&#x2e;0</td></tr>
+<tr id="DefaultColor"><td >Xext</td><td >libXext</td><td >X Extensions</td><td ></td><td >6.4&#x2e;3</td></tr>
+<tr id="DefaultColor"><td >X11</td><td >libX11</td><td >X11 client-side library</td><td ></td><td >6.2&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >xcb</td><td >libxcb</td><td >X C Binding library</td><td ></td><td >1.8&#x2e;1</td></tr>
+<tr id="DefaultColor"><td >X11-xcb</td><td >libX11-xcb</td><td >Xlib/XCB interface library</td><td ></td><td >1.3&#x2e;2</td></tr>
+<tr id="SMColor"><td >SM</td><td >libSM</td><td >X Session Management</td><td ><tt>-sm</tt> or auto-detected</td><td >6.0&#x2e;4</td></tr>
+<tr id="SMColor"><td >ICE</td><td >libICE</td><td >Inter-Client Exchange</td><td ><tt>-sm</tt> or auto-detected</td><td >6.3&#x2e;5</td></tr>
+<tr id="GlibColor"><td >glib</td><td >libglib-2.0</td><td >Common event loop handling</td><td ><tt>-glib</tt> or auto-detected</td><td >2.8&#x2e;3</td></tr>
+<tr id="PthreadColor"><td >pthread</td><td >libpthread</td><td >Multithreading</td><td ></td><td >2.3&#x2e;5</td></tr>
+</table>
+<p>Development packages for these libraries contain header files that are used when building Qt from its source code. On Debian-based GNU/Linux systems, for example, we recommend that you install the following development packages:</p>
+<ul>
+<li>libfontconfig1-dev</li>
+<li>libfreetype6-dev</li>
+<li>libx11-dev</li>
+<li>libxext-dev</li>
+<li>libxfixes-dev</li>
+<li>libxi-dev</li>
+<li>libxrender-dev</li>
+<li>libxcb1-dev</li>
+<li>libx11-xcb-dev</li>
+<li>libxcb-glx0-dev</li>
+</ul>
+<p>Additionally, if you do not configure with -qt-xcb, you should also install these development packages:</p>
+<ul>
+<li>libxcb-keysyms1-dev</li>
+<li>libxcb-image0-dev</li>
+<li>libxcb-shm0-dev</li>
+<li>libxcb-icccm4-dev</li>
+<li>libxcb-sync0-dev</li>
+<li>libxcb-xfixes0-dev</li>
+<li>libxcb-shape0-dev</li>
+<li>libxcb-randr0-dev</li>
+<li>libxcb-render-util0-dev</li>
+</ul>
+<p>Some of these packages depend on others in this list, so installing one may cause others to be automatically installed. Other distributions may provide system packages with similar names.</p>
+<a name="opengl-dependencies"></a>
+<h2>OpenGL Dependencies</h2>
+<p>The configure script will autodetect if OpenGL headers and libraries are installed on your system, and if so, it will include the <a href="../qtopengl/qtopengl-module.html">QtOpenGL</a> module in the Qt library.</p>
+<p>If your OpenGL headers or libraries are placed in a non-standard directory, you may need to change the <tt>QMAKE_INCDIR_OPENGL</tt> and/or <tt>QMAKE_LIBDIR_OPENGL</tt> in the config file for your system.</p>
+<p>The QGL documentation assumes that you are familiar with OpenGL programming. If you're new to the subject a good starting point is <a href="http://www.opengl.org/">http://www.opengl.org/</a>.</p>
+<a name="multimedia-dependencies"></a>
+<h2>Multimedia Dependencies</h2>
+<p>As described in the Multimedia Overview, Qt Multimedia uses the GStreamer multimedia framework as the backend for audio and video playback on Linux. The minimum required version of GStreamer is 0.10.</p>
+<p>To build Qt Multimedia, you need the GStreamer library, base plugins, and development files for your system. The package names for GStreamer vary between Linux distributions; try searching for <tt>gstreamer</tt> or <tt>libgstreamer</tt> in your distribution's package repository to find suitable packages.</p>
+<a name="qtwebkit-dependencies"></a>
+<h2>QtWebKit Dependencies</h2>
+<p>QtWebKit depends on some extra development tools in addition to those required for the rest of Qt.</p>
+<p><b>Note: </b>These dependencies are only needed if you use a source version of Qt. They are not required when using a prebuilt library.</p><ul>
+<li>gperf</li>
+<li>bison</li>
+<li>flex (v2.5&#x2e;33 or later)</li>
+<li>sqlite (development version)</li>
+<li>fontconfig (development version)</li>
+<li>xrender (development version)</li>
+<li>gstreamer (development version)</li>
+</ul>
+<p>These should be available in most major Linux distributions, but the exact install instructions will vary.</p>
+<p>For the most up to date information about QtWebKit dependencies, please refer to the <a href="http://trac.webkit.org/wiki/BuildingQtOnLinux">QtWebKit wiki for Linux</a></p>
+</div>
+<p><b>See also </b><a href="known-issues.html">Known Issues</a>.</p>
+<!-- @@@requirements-x11.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="requirements.html">General Qt Requirements</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

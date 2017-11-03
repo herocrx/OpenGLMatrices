@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdeclarativecameraflash.cpp -->
+  <title>qtmultimedia 5.0: CameraFlash</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">CameraFlash</h1>
+<span class="subtitle"></span>
+<!-- $$$CameraFlash-brief -->
+<p>An interface for flash related camera settings. <a href="#details">More...</a></p>
+<!-- @@@CameraFlash -->
+<ul>
+<li><a href="qml-qtmultimedia5-cameraflash-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtmultimedia5-cameraflash.html#mode-prop">mode</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtmultimedia5-cameraflash.html#ready-prop">ready</a></b></b> : bool</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtmultimedia5-cameraflash.html#flashModeChanged-signal">flashModeChanged</a></b></b>(int)</li>
+<li class="fn"><b><b><a href="qml-qtmultimedia5-cameraflash.html#flashReady-signal">flashReady</a></b></b>(bool)</li>
+</ul>
+<!-- $$$CameraFlash-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>CameraFlash is part of the <b><a href="qtmultimedia-module.html">QtMultimedia</a> 5.0</b> module.</p>
+<p>This type allows you to operate the camera flash hardware and control the flash mode used. Not all cameras have flash hardware (and in some cases it is shared with the <a href="qml-qtmultimedia5-torch.html">torch</a> hardware).</p>
+<p>It should not be constructed separately, instead the <tt>flash</tt> property of a <a href="qml-qtmultimedia5-camera.html">Camera</a> should be used.</p>
+<pre class="qml">import QtQuick 2.0
+import QtMultimedia 5.0
+
+<span class="type"><a href="qml-qtmultimedia5-camera.html">Camera</a></span> {
+    <span class="name">id</span>: <span class="name">camera</span>
+
+    <span class="name">exposure</span>.exposureCompensation: -<span class="number">1.0</span>
+    <span class="name">flash</span>.mode: <span class="name">Camera</span>.<span class="name">FlashRedEyeReduction</span>
+}</pre>
+<!-- @@@CameraFlash -->
+<h2>Property Documentation</h2>
+<!-- $$$mode -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="mode-prop"></a><span class="name">mode</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the camera flash mode.</p>
+<p>The mode can be one of the following:</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Value</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td >Camera.FlashOff</td><td >Flash is Off.</td></tr>
+<tr valign="top" class="even"><td >Camera.FlashOn</td><td >Flash is On.</td></tr>
+<tr valign="top" class="odd"><td >Camera.FlashAuto</td><td >Automatic flash.</td></tr>
+<tr valign="top" class="even"><td >Camera.FlashRedEyeReduction</td><td >Red eye reduction flash.</td></tr>
+<tr valign="top" class="odd"><td >Camera.FlashFill</td><td >Use flash to fillin shadows.</td></tr>
+<tr valign="top" class="even"><td >Camera.FlashTorch</td><td >Constant light source, useful for focusing and video capture.</td></tr>
+<tr valign="top" class="odd"><td >Camera.FlashSlowSyncFrontCurtain</td><td >Use the flash in conjunction with a slow shutter speed. This mode allows better exposure of distant objects and/or motion blur effect.</td></tr>
+<tr valign="top" class="even"><td >Camera.FlashSlowSyncRearCurtain</td><td >The similar mode to FlashSlowSyncFrontCurtain but flash is fired at the end of exposure.</td></tr>
+<tr valign="top" class="odd"><td >Camera.FlashManual</td><td >Flash power is manually set.</td></tr>
+</table>
+</div></div><!-- @@@mode -->
+<br/>
+<!-- $$$ready -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="ready-prop"></a><span class="name">ready</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates whether the flash is charged.</p>
+</div></div><!-- @@@ready -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$flashModeChanged -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="flashModeChanged-signal"></a>CameraFlash::<span class="name">flashModeChanged</span>(<span class="type"><a href="../qtqml/qml-int.html">int</a></span>)</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when the <tt>flashMode</tt> property is changed. The corresponding handler is <tt>onFlashModeChanged</tt>.</p>
+</div></div><!-- @@@flashModeChanged -->
+<br/>
+<!-- $$$flashReady -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="flashReady-signal"></a>CameraFlash::<span class="name">flashReady</span>(<span class="type"><a href="../qtqml/qml-bool.html">bool</a></span>)</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when <a href="qcameraexposure.html">QCameraExposure</a> indicates that the flash is ready to use. The corresponsing handler is <tt>onFlashReadyChanged</tt>.</p>
+</div></div><!-- @@@flashReady -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

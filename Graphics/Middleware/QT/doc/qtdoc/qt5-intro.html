@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qt5-intro.qdoc -->
+  <title>QtDoc 5.0: What's New in Qt 5</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#amazing-graphics-capability-and-performance">Amazing Graphics Capability and Performance</a></li>
+<li class="level1"><a href="#qt-quick-in-qt-5">Qt Quick in Qt 5</a></li>
+<li class="level1"><a href="#webkit-and-html5">WebKit and HTML5</a></li>
+<li class="level1"><a href="#multimedia">Multimedia</a></li>
+<li class="level1"><a href="#modularized-qt-libraries">Modularized Qt Libraries</a></li>
+<li class="level2"><a href="#widgets-in-qt-5">Widgets in Qt 5</a></li>
+<li class="level1"><a href="#qt-platform-abstraction">Qt Platform Abstraction</a></li>
+<li class="level1"><a href="#new-connection-syntax">New Connection Syntax</a></li>
+<li class="level1"><a href="#connectivity-and-networking">Connectivity and Networking</a></li>
+<li class="level1"><a href="#json-support">JSON Support</a></li>
+<li class="level1"><a href="#user-input">User Input</a></li>
+<li class="level1"><a href="#related-topics">Related Topics</a></li>
+</ul>
+</div>
+<h1 class="title">What's New in Qt 5</h1>
+<span class="subtitle"></span>
+<!-- $$$qt5-intro.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Qt 5 is the latest version of Qt. It enables developers to develop applications with intuitive user interfaces for multiple targets, faster than ever before. Qt 5 makes it easier to address the latest UI paradigm shifts that touch screens and tablets require.</p>
+<p>Developers can be more productive and flexible with the improved support for JavaScript and QML in Qt 5, while still having the C++ foundation and Qt Widget support. The JavaScript backend powered by V8 and Qt WebKit 2 will make HTML5 developers feel at home.</p>
+<p>Qt 5 is highly compatible with Qt 4. It is possible for developers of Qt 4 applications to seamlessly move on to Qt 5 with their current functionality and gradually develop new things leveraging all the great items Qt 5 makes possible.</p>
+<p>Cross-platform portability is made simpler in Qt 5, thanks to the new modularized codebase consisting of the <a href="modules.html">essential and add-on</a> modules, and the consolidation of the <a href="qpa.html">Qt Platform Abstraction</a>.</p>
+<p>The following sections summarize some of the key features that Qt 5 brings to the table.</p>
+<a name="amazing-graphics-capability-and-performance"></a>
+<h2>Amazing Graphics Capability and Performance</h2>
+<p>Qt 5 uses an OpenGL based scene graph to accelerate the graphics of Qt Quick, making it possible to do visually appealing user interfaces with animations, impressive graphical effects and particle systems, even on the constrained hardware environments of mobile and embedded devices.</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th ><a href="../qtquick/qml-qtquick2-shadereffect.html">ShaderEffect</a> on an <a href="../qtquick/qml-qtquick2-image.html">Image</a></th></tr></thead>
+<tr valign="top" class="odd"><td ><p class="centerAlign"><img src="images/qt5_shadereffect.jpg" alt="" /></p></td></tr>
+<tr valign="top" class="even"></tr>
+</table>
+<p>The benefits of this architectural change in the rendering engine is well demonstrated by the following projects:</p>
+<ul>
+<li><a href="http://qt-project.org/videos/watch/livecoding-video-effects-with-qt5">Livecoding video effects with Qt5</a> - The Big Buck Bunny you never saw before. Video effects created using Qt Quick.</li>
+<li><a href="http://blog.qt.digia.com/2012/02/29/pimp-my-video-shader-effects-and-multimedia/">Pimp my video</a> - Video effects implemented using the shader language with QML.</li>
+<li><a href="http://qt-project.org/wiki/QtMediaHub">QtMediaHub</a> - The power and convenience of Qt Quick.</li>
+<li><a href="http://qt-project.org/wiki/Qt-RaspberryPi">QtonPi</a> - Good example of Qt 5 running on the low cost hardware, Raspberry PI.</li>
+</ul>
+<a name="qt-quick-in-qt-5"></a>
+<h2>Qt Quick in Qt 5</h2>
+<p><a href="../qtquick/qtquick-index.html">Qt Quick</a> provides the necessary infrastructure to develop QML applications. The latest version (v2.0) of this technology also introduces a set of new C++ classes as a replacement for the QDeclarative* equivalents in Qt Quick 1. New features in Qt Quick include:</p>
+<ul>
+<li><a href="../qtquick/qml-qtquick2-canvas.html">Canvas</a> for drawing. Canvas provides an API that is similar to the HTML5 Canvas API, along with some additional features.</li>
+<li><a href="../qtquick/qml-qtquick2-shadereffect.html">Shader Effects</a> which enable GLSL shader programs to be integrated directly into QML code and applied to items and images.</li>
+<li><a href="../qtquick/qtquick-particles2-qtquick-effects-particles.html">Particle Effects</a> for creating a variety of 2D particle systems.</li>
+<li><a href="../qtquick/qtquick-effects-sprites.html">Sprites</a> can be used in animating 2D graphical objects and as a source for particle systems.</li>
+<li><a href="../qtquick/qmlmodule-qtquick-localstorage2-qtquick-localstorage-2.html">Offline storage</a> is a HTML5 Web Database API conformant JavaScript API for storing data in Qt Quick applications.</li>
+<li><a href="../qtquick/qmlmodule-qtquick-window2-qtquick-window-2.html">Window</a> provides a top-level window and the Screen type for accessing a screen's resolution and other details. This is useful for desktop applications developed using Qt Quick.</li>
+<li><a href="../qtquick/qtquick-visualcanvas-scenegraph.html">New rendering architecture</a> based on OpenGL for optimal performance.</li>
+</ul>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Qt Quick's <a href="../qtquick/qtquick-particles2-qtquick-effects-particles.html">Particle System</a></th></tr></thead>
+<tr valign="top" class="odd"><td ><p class="centerAlign"><img src="images/qt5_particles.jpg" alt="" /></p></td></tr>
+<tr valign="top" class="even"></tr>
+</table>
+<p>The <a href="../qtgraphicaleffects/qtgraphicaleffects-index.html">Qt Graphical Effects</a> module provides a number of ready-made effects for use in Qt Quick applications, including soft drop shadow, blur, glow and colorize.</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Excerpts from the Qt Graphical Effects module.</th></tr></thead>
+<tr valign="top" class="odd"><td ><p class="centerAlign"><img src="images/qt5_graphicaleffects.jpg" alt="" /></p></td></tr>
+<tr valign="top" class="even"></tr>
+</table>
+<a name="webkit-and-html5"></a>
+<h2>WebKit and HTML5</h2>
+<p><a href="topics-ui.html#qt-webkit">Qt WebKit</a> is a web content rendering engine based on the open source WebKit project featuring broad support for standard web technologies. The Qt WebKit module provides integration with both Qt Quick and traditional widgets. The module brings the latest in HTML5 advancements to Qt 5, including CSS filters and animations and Video, Canvas and WebGL, Canvas support and HTML video.</p>
+<a name="multimedia"></a>
+<h2>Multimedia</h2>
+<p><a href="../qtmultimedia/qtmultimedia-index.html">Qt Multimedia</a> provides a rich set of QML types and C++ classes to handle multimedia content. It also provides necessary APIs to access the camera and radio functionality. Qt 5 brings the Qt Multimedia module into the set of essential modules with support on all major platforms.</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th ><a href="../qtmultimedia/qml-qtmultimedia5-video.html">Video</a> embedded into a Qt Quick application with a displacement effect</th></tr></thead>
+<tr valign="top" class="odd"><td ><p class="centerAlign"><img src="images/qt5_video.jpg" alt="" /></p></td></tr>
+</table>
+<a name="modularized-qt-libraries"></a>
+<h2>Modularized Qt Libraries</h2>
+<p>Qt 5 splits the Qt libraries into domain specific libraries and modules. This means that an application can choose which libraries it requires and only compile, use and deploy those.</p>
+<p>For a complete list of modules and libraries, see <a href="modules.html">all Qt modules</a>.</p>
+<a name="widgets-in-qt-5"></a>
+<h3>Widgets in Qt 5</h3>
+<p>The <a href="../qtwidgets/qtwidgets-index.html">Qt Widgets</a> have been separated into their own module in Qt 5, the Qt Widgets module. It is part of the essential modules.</p>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Screenshots of widget based applications running Qt 5.</th></tr></thead>
+<tr valign="top" class="odd"><td ><p class="centerAlign"><img src="images/qt5_widgets.jpg" alt="" /></p></td></tr>
+</table>
+<a name="qt-platform-abstraction"></a>
+<h2>Qt Platform Abstraction</h2>
+<p>The windowing system dependent parts of Qt have been completely rewritten for Qt 5, based on the Qt Platform Abstraction, a plugin architecture which allows Qt to dynamically load a windowing system integration based on what system it is running on. This gives several benefits:</p>
+<ul>
+<li>Centralize the windowing system integration codebase into classes shared for all platforms.</li>
+<li>Simplify the work required when porting Qt to new platforms.</li>
+<li>Remove the windowing system dependency from Qt, making it possible to have the same Qt binaries run against multiple windowing systems. For instance, the Qt Linux binaries can run against both X11 and Wayland.</li>
+</ul>
+<a name="new-connection-syntax"></a>
+<h2>New Connection Syntax</h2>
+<p>In addition to the still available well known way to connect signals and slots, new overloads of QObject::connect have been added allowing you to connect signals and slot using pointer to member functions:</p>
+<pre class="cpp"><span class="type"><a href="../qtcore/qobject.html">QObject</a></span><span class="operator">::</span>connect(sender<span class="operator">,</span> <span class="operator">&amp;</span>Sender<span class="operator">::</span>valueChanged<span class="operator">,</span> receiver<span class="operator">,</span> <span class="operator">&amp;</span>Receiver<span class="operator">::</span>updateValue);</pre>
+<p>The new syntax provides compile time checking of the compatibility between signals and slots, automatic conversion of the arguments if there is an implicit cast between the types, and solve many problems occurring because of typedef or namespaces.</p>
+<p>Additionally, if your compiler supports C++11 lambdas, you can even connect directly to a lambda function.</p>
+<pre class="cpp">connect(sender<span class="operator">,</span> <span class="operator">&amp;</span><span class="type"><a href="../qtcore/qobject.html">QObject</a></span><span class="operator">::</span>destroyed<span class="operator">,</span> <span class="operator">[</span><span class="operator">=</span><span class="operator">]</span>(){ <span class="keyword">this</span><span class="operator">-</span><span class="operator">&gt;</span>m_objects<span class="operator">.</span>remove(sender); });</pre>
+<a name="connectivity-and-networking"></a>
+<h2>Connectivity and Networking</h2>
+<p>Qt 5 provides better support for IPv6 and dual mode networks. Most applications using host names and network layer transparent protocols can now gain IPv6 support transparently. Such applications can also choose to receive both IPv4 and IPv6 connections or bind to only one of the two connection types. In the case of outgoing HTTP connections using <tt>QNetworkAccessManager</tt>, both IPv4 and IPv6 connections are attempted in parallel, and the one that succeeds first is used. This is useful in environments where one of the two types has limited connectivity.</p>
+<p>Qt 5 also provides better ways to handle TCP socket-based connections and SSL certificates. This means developers can now:</p>
+<ul>
+<li>bind a TCP socket to an IP address before connecting,</li>
+<li>verify an SSL certificate chain,</li>
+<li>and access legacy systems.</li>
+</ul>
+<p>Stricter client authentication is one of the primary concerns for many applications handling confidential/critical data. The opaque Private Keys support in Qt 5 enables applications to read private keys from devices such as PKCS#11 dongles for stricter client authentication. The <a href="http://git.iksaif.net/?p=qsslkey-p11.git">qsslkey example</a> illustrates reading private keys from a device.</p>
+<a name="json-support"></a>
+<h2>JSON Support</h2>
+<p>Qt applications that use simple data structures to store small amount of data, can now choose to use JSON documents over the complex database backends that need necessary drivers or plugins to access data. The fact that JSON is a text-based open standard derived from JavaScript, makes it the obvious choice for QML applications as well.</p>
+<p>The Qt Core provides a set of classes to enable parsing and generating JSON documents. These classes also allow you to convert between an in-memory binary representation of JSON to a standard textual JSON format. The goal is to make common operations on JSON faster.</p>
+<a name="user-input"></a>
+<h2>User Input</h2>
+<p>Qt 4 already had support for handling multi-point touch input in C++. Qt 5 extends this support to include Qt Quick, covering all the information about the touch points, including the touch position, pressure, and velocity.</p>
+<p>The mouse event handling in Qt 5 has been improved from its predecessor. Applications have more control to handle mouse events in Qt Quick. The mouse area in a QML document can propagate the mouse wheel and click events and also ignore propagated events.</p>
+<p>Besides this, Qt 5 adds support for more mouse buttons on platforms where this is supported. This comes in handy for gaming applications developed using Qt.</p>
+<a name="related-topics"></a>
+<h2>Related Topics</h2>
+<ul>
+<li><a href="whatsnew.html">New Classes and Functions in Qt 5</a></li>
+<li><a href="portingguide.html">Porting Guide</a></li>
+</ul>
+</div>
+<!-- @@@qt5-intro.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

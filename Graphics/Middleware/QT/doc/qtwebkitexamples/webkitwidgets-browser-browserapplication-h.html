@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: browserapplication.h Example File (webkitwidgets/browser/browserapplication.h)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">browserapplication.h Example File</h1>
+<span class="small-subtitle">webkitwidgets/browser/browserapplication.h</span>
+<!-- $$$webkitwidgets/browser/browserapplication.h-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the demonstration applications of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+<span class="preprocessor">#ifndef BROWSERAPPLICATION_H</span>
+<span class="preprocessor">#define BROWSERAPPLICATION_H</span>
+
+<span class="preprocessor">#include &lt;QtWidgets/QApplication&gt;</span>
+
+<span class="preprocessor">#include &lt;QtCore/QUrl&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QPointer&gt;</span>
+
+<span class="preprocessor">#include &lt;QtGui/QIcon&gt;</span>
+
+<span class="keyword">class</span> <span class="type">QLocalServer</span>;
+
+<span class="keyword">class</span> BookmarksManager;
+<span class="keyword">class</span> BrowserMainWindow;
+<span class="keyword">class</span> CookieJar;
+<span class="keyword">class</span> DownloadManager;
+<span class="keyword">class</span> HistoryManager;
+<span class="keyword">class</span> NetworkAccessManager;
+<span class="keyword">class</span> BrowserApplication : <span class="keyword">public</span> <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span>
+{
+    Q_OBJECT
+
+<span class="keyword">public</span>:
+    BrowserApplication(<span class="type">int</span> <span class="operator">&amp;</span>argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span>argv);
+    <span class="operator">~</span>BrowserApplication();
+    <span class="keyword">static</span> BrowserApplication <span class="operator">*</span>instance();
+    <span class="type">void</span> loadSettings();
+
+    <span class="type">bool</span> isTheOnlyBrowser() <span class="keyword">const</span>;
+    BrowserMainWindow <span class="operator">*</span>mainWindow();
+    <span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span>BrowserMainWindow<span class="operator">*</span><span class="operator">&gt;</span> mainWindows();
+    <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> icon(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> <span class="operator">&amp;</span>url) <span class="keyword">const</span>;
+
+    <span class="type">void</span> saveSession();
+    <span class="type">bool</span> canRestoreSession() <span class="keyword">const</span>;
+
+    <span class="keyword">static</span> HistoryManager <span class="operator">*</span>historyManager();
+    <span class="keyword">static</span> CookieJar <span class="operator">*</span>cookieJar();
+    <span class="keyword">static</span> DownloadManager <span class="operator">*</span>downloadManager();
+    <span class="keyword">static</span> NetworkAccessManager <span class="operator">*</span>networkAccessManager();
+    <span class="keyword">static</span> BookmarksManager <span class="operator">*</span>bookmarksManager();
+
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+    <span class="type">bool</span> event(<span class="type"><a href="../qtcore/qevent.html">QEvent</a></span> <span class="operator">*</span>event);
+<span class="preprocessor">#endif</span>
+
+<span class="keyword">public</span> <span class="keyword">slots</span>:
+    BrowserMainWindow <span class="operator">*</span>newMainWindow();
+    <span class="type">void</span> restoreLastSession();
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+    <span class="type">void</span> lastWindowClosed();
+    <span class="type">void</span> quitBrowser();
+<span class="preprocessor">#endif</span>
+
+<span class="keyword">private</span> <span class="keyword">slots</span>:
+    <span class="type">void</span> postLaunch();
+    <span class="type">void</span> openUrl(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> <span class="operator">&amp;</span>url);
+    <span class="type">void</span> newLocalSocketConnection();
+
+<span class="keyword">private</span>:
+    <span class="type">void</span> clean();
+    <span class="type">void</span> installTranslator(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="operator">&amp;</span>name);
+
+    <span class="keyword">static</span> HistoryManager <span class="operator">*</span>s_historyManager;
+    <span class="keyword">static</span> DownloadManager <span class="operator">*</span>s_downloadManager;
+    <span class="keyword">static</span> NetworkAccessManager <span class="operator">*</span>s_networkAccessManager;
+    <span class="keyword">static</span> BookmarksManager <span class="operator">*</span>s_bookmarksManager;
+
+    <span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="../qtcore/qpointer.html">QPointer</a></span><span class="operator">&lt;</span>BrowserMainWindow<span class="operator">&gt;</span> <span class="operator">&gt;</span> m_mainWindows;
+    <span class="type">QLocalServer</span> <span class="operator">*</span>m_localServer;
+    <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> m_lastSession;
+    <span class="keyword">mutable</span> <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> m_defaultIcon;
+};
+
+<span class="preprocessor">#endif // BROWSERAPPLICATION_H</span></pre>
+</div>
+<!-- @@@webkitwidgets/browser/browserapplication.h -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

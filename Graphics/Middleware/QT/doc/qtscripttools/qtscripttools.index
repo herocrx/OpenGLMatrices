@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="" title="qtscripttools Reference Documentation" version="">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qscriptbreakpointdata.html#operator&lt;&lt;-37" location="qscriptbreakpointdata.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="37" relates="QScriptBreakpointData" type="QDataStream &amp;" signature="operator&lt;&lt;(QDataStream &amp; stream, const QScriptBreakpointData &amp; data)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="const QScriptBreakpointData &amp;" right="" name="data" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" href="qscriptbreakpointdata.html#operator&gt;&gt;-33" location="qscriptbreakpointdata.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="33" relates="QScriptBreakpointData" type="QDataStream &amp;" signature="operator&gt;&gt;(QDataStream &amp; stream, QScriptBreakpointData &amp; data)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="QScriptBreakpointData &amp;" right="" name="data" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qscriptdebuggercommand.html#operator&lt;&lt;-38" location="qscriptdebuggercommand.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="38" relates="QScriptDebuggerCommand" type="QDataStream &amp;" signature="operator&lt;&lt;(QDataStream &amp; stream, const QScriptDebuggerCommand &amp; command)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="const QScriptDebuggerCommand &amp;" right="" name="command" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" href="qscriptdebuggercommand.html#operator&gt;&gt;-34" location="qscriptdebuggercommand.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="34" relates="QScriptDebuggerCommand" type="QDataStream &amp;" signature="operator&gt;&gt;(QDataStream &amp; stream, QScriptDebuggerCommand &amp; command)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="QScriptDebuggerCommand &amp;" right="" name="command" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qscriptdebuggerevent.html#operator&lt;&lt;-39" location="qscriptdebuggerevent.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="39" relates="QScriptDebuggerEvent" type="QDataStream &amp;" signature="operator&lt;&lt;(QDataStream &amp; stream, const QScriptDebuggerEvent &amp; event)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="const QScriptDebuggerEvent &amp;" right="" name="event" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" href="qscriptdebuggerevent.html#operator&gt;&gt;-35" location="qscriptdebuggerevent.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="35" relates="QScriptDebuggerEvent" type="QDataStream &amp;" signature="operator&gt;&gt;(QDataStream &amp; stream, QScriptDebuggerEvent &amp; event)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="QScriptDebuggerEvent &amp;" right="" name="event" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qscriptdebuggerresponse.html#operator&lt;&lt;-41" location="qscriptdebuggerresponse.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="41" relates="QScriptDebuggerResponse" type="QDataStream &amp;" signature="operator&lt;&lt;(QDataStream &amp; stream, const QScriptDebuggerResponse &amp; response)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="const QScriptDebuggerResponse &amp;" right="" name="response" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" href="qscriptdebuggerresponse.html#operator&gt;&gt;-37" location="qscriptdebuggerresponse.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="37" relates="QScriptDebuggerResponse" type="QDataStream &amp;" signature="operator&gt;&gt;(QDataStream &amp; stream, QScriptDebuggerResponse &amp; response)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="QScriptDebuggerResponse &amp;" right="" name="response" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qscriptdebuggervalue.html#operator&lt;&lt;-42" location="qscriptdebuggervalue.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="42" relates="QScriptDebuggerValue" type="QDataStream &amp;" signature="operator&lt;&lt;(QDataStream &amp; stream, const QScriptDebuggerValue &amp; value)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="const QScriptDebuggerValue &amp;" right="" name="value" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" href="qscriptdebuggervalue.html#operator&gt;&gt;-38" location="qscriptdebuggervalue.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="38" relates="QScriptDebuggerValue" type="QDataStream &amp;" signature="operator&gt;&gt;(QDataStream &amp; stream, QScriptDebuggerValue &amp; value)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="QScriptDebuggerValue &amp;" right="" name="value" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" href="qscriptdebuggervalueproperty.html#operator&lt;&lt;-43" location="qscriptdebuggervalueproperty.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="43" relates="QScriptDebuggerValueProperty" type="QDataStream &amp;" signature="operator&lt;&lt;(QDataStream &amp; stream, const QScriptDebuggerValueProperty &amp; property)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="const QScriptDebuggerValueProperty &amp;" right="" name="property" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" href="qscriptdebuggervalueproperty.html#operator&gt;&gt;-39" location="qscriptdebuggervalueproperty.cpp" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="39" relates="QScriptDebuggerValueProperty" type="QDataStream &amp;" signature="operator&gt;&gt;(QDataStream &amp; stream, QScriptDebuggerValueProperty &amp; property)">
+            <parameter left="QDataStream &amp;" right="" name="stream" default=""/>
+            <parameter left="QScriptDebuggerValueProperty &amp;" right="" name="property" default=""/>
+        </function>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QScriptEngineDebugger" href="qscriptenginedebugger.html" location="qscriptenginedebugger.h" since="4.5" bases="QObject" module="QtScriptTools" groups="script">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="DebuggerAction" fullname="QScriptEngineDebugger::DebuggerAction" href="qscriptenginedebugger.html#DebuggerAction-enum" location="qscriptenginedebugger.h">
+                <value name="InterruptAction" value="0"/>
+                <value name="ContinueAction" value="1"/>
+                <value name="StepIntoAction" value="2"/>
+                <value name="StepOverAction" value="3"/>
+                <value name="StepOutAction" value="4"/>
+                <value name="RunToCursorAction" value="5"/>
+                <value name="RunToNewScriptAction" value="6"/>
+                <value name="ToggleBreakpointAction" value="7"/>
+                <value name="ClearDebugOutputAction" value="8"/>
+                <value name="ClearErrorLogAction" value="9"/>
+                <value name="ClearConsoleAction" value="10"/>
+                <value name="FindInScriptAction" value="11"/>
+                <value name="FindNextInScriptAction" value="12"/>
+                <value name="FindPreviousInScriptAction" value="13"/>
+                <value name="GoToLineAction" value="14"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="DebuggerState" fullname="QScriptEngineDebugger::DebuggerState" href="qscriptenginedebugger.html#DebuggerState-enum" location="qscriptenginedebugger.h" since="4.6">
+                <value name="RunningState" value="0"/>
+                <value name="SuspendedState" value="1"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="DebuggerWidget" fullname="QScriptEngineDebugger::DebuggerWidget" href="qscriptenginedebugger.html#DebuggerWidget-enum" location="qscriptenginedebugger.h">
+                <value name="ConsoleWidget" value="0"/>
+                <value name="StackWidget" value="1"/>
+                <value name="ScriptsWidget" value="2"/>
+                <value name="LocalsWidget" value="3"/>
+                <value name="CodeWidget" value="4"/>
+                <value name="CodeFinderWidget" value="5"/>
+                <value name="BreakpointsWidget" value="6"/>
+                <value name="DebugOutputWidget" value="7"/>
+                <value name="ErrorLogWidget" value="8"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QScriptEngineDebugger" fullname="QScriptEngineDebugger::QScriptEngineDebugger" href="qscriptenginedebugger.html#QScriptEngineDebugger" location="qscriptenginedebugger.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QScriptEngineDebugger(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="action" fullname="QScriptEngineDebugger::action" href="qscriptenginedebugger.html#action" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="action(DebuggerAction action) const">
+                <parameter left="DebuggerAction" right="" name="action" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="attachTo" fullname="QScriptEngineDebugger::attachTo" href="qscriptenginedebugger.html#attachTo" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="attachTo(QScriptEngine * engine)">
+                <parameter left="QScriptEngine *" right="" name="engine" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="autoShowStandardWindow" fullname="QScriptEngineDebugger::autoShowStandardWindow" href="qscriptenginedebugger.html#autoShowStandardWindow" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="autoShowStandardWindow() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createStandardMenu" fullname="QScriptEngineDebugger::createStandardMenu" href="qscriptenginedebugger.html#createStandardMenu" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QMenu *" signature="createStandardMenu(QWidget * parent)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createStandardToolBar" fullname="QScriptEngineDebugger::createStandardToolBar" href="qscriptenginedebugger.html#createStandardToolBar" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QToolBar *" signature="createStandardToolBar(QWidget * parent)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="detach" fullname="QScriptEngineDebugger::detach" href="qscriptenginedebugger.html#detach" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="detach()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluationResumed" fullname="QScriptEngineDebugger::evaluationResumed" href="qscriptenginedebugger.html#evaluationResumed" location="qscriptenginedebugger.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="evaluationResumed()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="evaluationSuspended" fullname="QScriptEngineDebugger::evaluationSuspended" href="qscriptenginedebugger.html#evaluationSuspended" location="qscriptenginedebugger.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="evaluationSuspended()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setAutoShowStandardWindow" fullname="QScriptEngineDebugger::setAutoShowStandardWindow" href="qscriptenginedebugger.html#setAutoShowStandardWindow" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setAutoShowStandardWindow(bool autoShow)">
+                <parameter left="bool" right="" name="autoShow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="standardWindow" fullname="QScriptEngineDebugger::standardWindow" href="qscriptenginedebugger.html#standardWindow" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QMainWindow *" signature="standardWindow() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="state" fullname="QScriptEngineDebugger::state" href="qscriptenginedebugger.html#state" location="qscriptenginedebugger.h" since="4.6" virtual="non" meta="plain" const="true" static="false" overload="false" type="DebuggerState" signature="state() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widget" fullname="QScriptEngineDebugger::widget" href="qscriptenginedebugger.html#widget" location="qscriptenginedebugger.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="widget(DebuggerWidget widget) const">
+                <parameter left="DebuggerWidget" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QScriptEngineDebugger" fullname="QScriptEngineDebugger::~QScriptEngineDebugger" href="qscriptenginedebugger.html#dtor.QScriptEngineDebugger" location="qscriptenginedebugger.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QScriptEngineDebugger()"/>
+        </class>
+        <page access="public" status="commendable" name="qtscripttools-index.html" href="qtscripttools-index.html" subtype="page" title="Qt Script Tools" fulltitle="Qt Script Tools" subtitle="" location="qtscripttools-index.qdoc" module="qtscripttools">
+            <contents name="configuring-the-build-process" title="Configuring the Build Process" level="1"/>
+            <contents name="related-information" title="Related Information" level="1"/>
+            <contents name="guides" title="Guides" level="2"/>
+            <contents name="reference" title="Reference" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="QtScriptTools" href="qtscripttools-module.html" since="4.5" subtype="module" title="Qt Script Tools C++ Classes" fulltitle="Qt Script Tools C++ Classes" subtitle="" location="qtscripttools-module.qdoc" groups="modules">
+            <contents name="configuring-the-build-process" title="Configuring the Build Process" level="1"/>
+        </page>
+    </namespace>
+</INDEX>

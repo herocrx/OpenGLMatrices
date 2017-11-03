@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtXml">
+    <examples>
+        <example name="QXmlStream Bookmarks Example" docUrl="qthelp://org.qt-project.qtxml.502/qtxml/xml-streambookmarks.html" imageUrl="qthelp://org.qt-project.qtxml.502/qtxml/images/xmlstreamexample-screenshot.png">
+            <description><![CDATA[Demonstrates how to read and write to XBEL files]]></description>
+            <tags>qxmlstream,bookmarks</tags>
+        </example>
+        <example name="SAX Bookmarks Example" docUrl="qthelp://org.qt-project.qtxml.502/qtxml/saxbookmarks.html" projectPath="xml/saxbookmarks/saxbookmarks.pro" imageUrl="qthelp://org.qt-project.qtxml.502/qtxml/images/saxbookmarks-example.png">
+            <description><![CDATA[Demonstrates how to read XBEL files]]></description>
+            <tags>sax,bookmarks</tags>
+            <fileToOpen>xml/saxbookmarks/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

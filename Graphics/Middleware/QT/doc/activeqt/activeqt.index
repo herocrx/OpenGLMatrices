@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/activeqt" title="ActiveQt" version="5.0.2">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <function access="public" threadsafety="unspecified" status="commendable" name="QAXCLASS" href="qaxfactory.html#QAXCLASS" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QAxFactory" type="" signature="QAXCLASS( Class)">
+            <parameter left="" right="" name="Class" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QAXFACTORY_BEGIN" href="qaxfactory.html#QAXFACTORY_BEGIN" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QAxFactory" type="" signature="QAXFACTORY_BEGIN( IDTypeLib,  IDApp)">
+            <parameter left="" right="" name="IDTypeLib" default=""/>
+            <parameter left="" right="" name="IDApp" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QAXFACTORY_DEFAULT" href="qaxfactory.html#QAXFACTORY_DEFAULT" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QAxFactory" type="" signature="QAXFACTORY_DEFAULT( Class,  ClassID,  InterfaceID,  EventID,  LibID,  AppID)">
+            <parameter left="" right="" name="Class" default=""/>
+            <parameter left="" right="" name="ClassID" default=""/>
+            <parameter left="" right="" name="InterfaceID" default=""/>
+            <parameter left="" right="" name="EventID" default=""/>
+            <parameter left="" right="" name="LibID" default=""/>
+            <parameter left="" right="" name="AppID" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QAXFACTORY_EXPORT" href="qaxfactory.html#QAXFACTORY_EXPORT" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QAxFactory" type="" signature="QAXFACTORY_EXPORT( Class,  LibID,  AppID)">
+            <parameter left="" right="" name="Class" default=""/>
+            <parameter left="" right="" name="LibID" default=""/>
+            <parameter left="" right="" name="AppID" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QAXTYPE" href="qaxfactory.html#QAXTYPE" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QAxFactory" type="" signature="QAXTYPE( Class)">
+            <parameter left="" right="" name="Class" default=""/>
+        </function>
+        <page access="public" status="commendable" name="activeqt/comapp" href="activeqt-comapp.html" subtype="example" title="COM App Example (ActiveQt)" fulltitle="COM App Example (ActiveQt)" subtitle="" location="comapp.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/comapp/comapp.pro" href="activeqt-comapp-comapp-pro.html" subtype="file" title="" fulltitle="comapp.pro Example File" subtitle="activeqt/comapp/comapp.pro" location=""/>
+            <page access="public" status="commendable" name="activeqt/comapp/main.cpp" href="activeqt-comapp-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/comapp/main.cpp" location=""/>
+        </page>
+        <page access="public" status="commendable" name="activeqt/hierarchy" href="activeqt-hierarchy.html" subtype="example" title="Hierarchy Example (ActiveQt)" fulltitle="Hierarchy Example (ActiveQt)" subtitle="" location="hierarchy.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/hierarchy/hierarchy.pro" href="activeqt-hierarchy-hierarchy-pro.html" subtype="file" title="" fulltitle="hierarchy.pro Example File" subtitle="activeqt/hierarchy/hierarchy.pro" location=""/>
+            <page access="public" status="commendable" name="activeqt/hierarchy/main.cpp" href="activeqt-hierarchy-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/hierarchy/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/hierarchy/objects.cpp" href="activeqt-hierarchy-objects-cpp.html" subtype="file" title="" fulltitle="objects.cpp Example File" subtitle="activeqt/hierarchy/objects.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/hierarchy/objects.h" href="activeqt-hierarchy-objects-h.html" subtype="file" title="" fulltitle="objects.h Example File" subtitle="activeqt/hierarchy/objects.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="qaxserver-demo-hierarchy.html" href="qaxserver-demo-hierarchy.html" subtype="page" title="Qt Widget Hierarchy" fulltitle="Qt Widget Hierarchy" subtitle="" location="hierarchy.qdoc" module="ActiveQt"/>
+        <page access="public" status="commendable" name="activeqt/menus" href="activeqt-menus.html" subtype="example" title="Menus Example (ActiveQt)" fulltitle="Menus Example (ActiveQt)" subtitle="" location="menus.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/menus/main.cpp" href="activeqt-menus-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/menus/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/menus/menus.cpp" href="activeqt-menus-menus-cpp.html" subtype="file" title="" fulltitle="menus.cpp Example File" subtitle="activeqt/menus/menus.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/menus/menus.h" href="activeqt-menus-menus-h.html" subtype="file" title="" fulltitle="menus.h Example File" subtitle="activeqt/menus/menus.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/menus/menus.pro" href="activeqt-menus-menus-pro.html" subtype="file" title="" fulltitle="menus.pro Example File" subtitle="activeqt/menus/menus.pro" location=""/>
+        </page>
+        <page access="public" status="preliminary" name="qaxserver-demo-menus.html" href="qaxserver-demo-menus.html" subtype="page" title="Menubar Merging" fulltitle="Menubar Merging" subtitle="" location="menus.qdoc" module="ActiveQt"/>
+        <page access="public" status="commendable" name="activeqt/multiple" href="activeqt-multiple.html" subtype="example" title="Multiple Example (ActiveQt)" fulltitle="Multiple Example (ActiveQt)" subtitle="" location="multiple.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/multiple/ax1.h" href="activeqt-multiple-ax1-h.html" subtype="file" title="" fulltitle="ax1.h Example File" subtitle="activeqt/multiple/ax1.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/multiple/ax2.h" href="activeqt-multiple-ax2-h.html" subtype="file" title="" fulltitle="ax2.h Example File" subtitle="activeqt/multiple/ax2.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/multiple/main.cpp" href="activeqt-multiple-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/multiple/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/multiple/multiple.pro" href="activeqt-multiple-multiple-pro.html" subtype="file" title="" fulltitle="multiple.pro Example File" subtitle="activeqt/multiple/multiple.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="qaxserver-demo-multiple.html" href="qaxserver-demo-multiple.html" subtype="page" title="Two Simple Qt Widgets" fulltitle="Two Simple Qt Widgets" subtitle="" location="multiple.qdoc" module="ActiveQt"/>
+        <page access="public" status="commendable" name="activeqt/opengl" href="activeqt-opengl.html" subtype="example" title="OpenGL Example (ActiveQt)" fulltitle="OpenGL Example (ActiveQt)" subtitle="" location="opengl.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/opengl/glbox.cpp" href="activeqt-opengl-glbox-cpp.html" subtype="file" title="" fulltitle="glbox.cpp Example File" subtitle="activeqt/opengl/glbox.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/opengl/glbox.h" href="activeqt-opengl-glbox-h.html" subtype="file" title="" fulltitle="glbox.h Example File" subtitle="activeqt/opengl/glbox.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/opengl/globjwin.cpp" href="activeqt-opengl-globjwin-cpp.html" subtype="file" title="" fulltitle="globjwin.cpp Example File" subtitle="activeqt/opengl/globjwin.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/opengl/globjwin.h" href="activeqt-opengl-globjwin-h.html" subtype="file" title="" fulltitle="globjwin.h Example File" subtitle="activeqt/opengl/globjwin.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/opengl/main.cpp" href="activeqt-opengl-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/opengl/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/opengl/opengl.pro" href="activeqt-opengl-opengl-pro.html" subtype="file" title="" fulltitle="opengl.pro Example File" subtitle="activeqt/opengl/opengl.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="qaxserver-demo-opengl.html" href="qaxserver-demo-opengl.html" subtype="page" title="OpenGL in an HTML page" fulltitle="OpenGL in an HTML page" subtitle="" location="opengl.qdoc" module="ActiveQt"/>
+        <page access="public" status="commendable" name="activeqt/qutlook" href="activeqt-qutlook.html" subtype="example" title="Qutlook Example (ActiveQt)" fulltitle="Qutlook Example (ActiveQt)" subtitle="" location="qutlook.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/qutlook/addressview.cpp" href="activeqt-qutlook-addressview-cpp.html" subtype="file" title="" fulltitle="addressview.cpp Example File" subtitle="activeqt/qutlook/addressview.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/qutlook/addressview.h" href="activeqt-qutlook-addressview-h.html" subtype="file" title="" fulltitle="addressview.h Example File" subtitle="activeqt/qutlook/addressview.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/qutlook/main.cpp" href="activeqt-qutlook-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/qutlook/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/qutlook/qutlook.pro" href="activeqt-qutlook-qutlook-pro.html" subtype="file" title="" fulltitle="qutlook.pro Example File" subtitle="activeqt/qutlook/qutlook.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="activeqt/simple" href="activeqt-simple.html" subtype="example" title="Simple Example (ActiveQt)" fulltitle="Simple Example (ActiveQt)" subtitle="" location="simple.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/simple/main.cpp" href="activeqt-simple-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/simple/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/simple/simple.pro" href="activeqt-simple-simple-pro.html" subtype="file" title="" fulltitle="simple.pro Example File" subtitle="activeqt/simple/simple.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="qaxserver-demo-simple.html" href="qaxserver-demo-simple.html" subtype="page" title="A standard ActiveX and the &quot;simple&quot; ActiveQt widget" fulltitle="A standard ActiveX and the &quot;simple&quot; ActiveQt widget" subtitle="" location="simple.qdoc" module="ActiveQt"/>
+        <page access="public" status="commendable" name="activeqt/webbrowser" href="activeqt-webbrowser.html" subtype="example" title="Web Browser Example (ActiveQt)" fulltitle="Web Browser Example (ActiveQt)" subtitle="" location="webbrowser.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/webbrowser/main.cpp" href="activeqt-webbrowser-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/webbrowser/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/webbrowser/mainwindow.ui" href="activeqt-webbrowser-mainwindow-ui.html" subtype="file" title="" fulltitle="mainwindow.ui Example File" subtitle="activeqt/webbrowser/mainwindow.ui" location=""/>
+            <page access="public" status="commendable" name="activeqt/webbrowser/mainwindow_windowsmobile.ui" href="activeqt-webbrowser-mainwindow-windowsmobile-ui.html" subtype="file" title="" fulltitle="mainwindow_windowsmobile.ui Example File" subtitle="activeqt/webbrowser/mainwindow_windowsmobile.ui" location=""/>
+            <page access="public" status="commendable" name="activeqt/webbrowser/webaxwidget.h" href="activeqt-webbrowser-webaxwidget-h.html" subtype="file" title="" fulltitle="webaxwidget.h Example File" subtitle="activeqt/webbrowser/webaxwidget.h" location=""/>
+            <page access="public" status="commendable" name="activeqt/webbrowser/webbrowser.pro" href="activeqt-webbrowser-webbrowser-pro.html" subtype="file" title="" fulltitle="webbrowser.pro Example File" subtitle="activeqt/webbrowser/webbrowser.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="activeqt/wrapper" href="activeqt-wrapper.html" subtype="example" title="Wrapper Example (ActiveQt)" fulltitle="Wrapper Example (ActiveQt)" subtitle="" location="wrapper.qdoc" module="ActiveQt">
+            <page access="public" status="commendable" name="activeqt/wrapper/main.cpp" href="activeqt-wrapper-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="activeqt/wrapper/main.cpp" location=""/>
+            <page access="public" status="commendable" name="activeqt/wrapper/wrapper.pro" href="activeqt-wrapper-wrapper-pro.html" subtype="file" title="" fulltitle="wrapper.pro Example File" subtitle="activeqt/wrapper/wrapper.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="qaxserver-demo-wrapper.html" href="qaxserver-demo-wrapper.html" subtype="page" title="Standard Qt widgets in an HTML page" fulltitle="Standard Qt widgets in an HTML page" subtitle="" location="wrapper.qdoc" module="ActiveQt"/>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxBase" href="qaxbase.html" location="qaxbase.h" bases="" module="QAxContainer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="control" fullname="QAxBase::control" href="qaxbase.html#control-prop" location="qaxbase.cpp" virtual="non" meta="plain" const="true" static="false" overload="false" associated-property="control" type="QString" signature="control() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setControl" fullname="QAxBase::setControl" href="qaxbase.html#control-prop" location="qaxbase.cpp" virtual="non" meta="plain" const="false" static="false" overload="false" associated-property="control" type="bool" signature="setControl(const QString &amp; )">
+                <parameter left="const QString &amp;" right="" name="" default=""/>
+            </function>
+            <class access="protected" threadsafety="unspecified" status="commendable" name="qt_meta_stringdata_QAxBase_t" fullname="QAxBase::qt_meta_stringdata_QAxBase_t" href="qaxbase-qt-meta-stringdata-qaxbase-t.html" location="qaxbase.h" bases="">
+                <variable access="public" threadsafety="unspecified" status="commendable" name="data" fullname="QAxBase::qt_meta_stringdata_QAxBase_t::data" href="qaxbase-qt-meta-stringdata-qaxbase-t.html#data-var" location="qaxbase.h" type="QByteArrayData[13]" static="false"/>
+                <variable access="public" threadsafety="unspecified" status="commendable" name="stringdata" fullname="QAxBase::qt_meta_stringdata_QAxBase_t::stringdata" href="qaxbase-qt-meta-stringdata-qaxbase-t.html#stringdata-var" location="qaxbase.h" type="char[88]" static="false"/>
+            </class>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="PropertyBag" fullname="QAxBase::PropertyBag" href="qaxbase.html#PropertyBag-typedef" location="qaxbase.h"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxBase" fullname="QAxBase::QAxBase" href="qaxbase.html#QAxBase" location="qaxbase.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxBase(IUnknown * iface)">
+                <parameter left="IUnknown *" right="" name="iface" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="asVariant" fullname="QAxBase::asVariant" href="qaxbase.html#asVariant" location="qaxbase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="asVariant() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QAxBase::clear" href="qaxbase.html#clear" location="qaxbase.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disableClassInfo" fullname="QAxBase::disableClassInfo" href="qaxbase.html#disableClassInfo" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="disableClassInfo()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disableEventSink" fullname="QAxBase::disableEventSink" href="qaxbase.html#disableEventSink" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="disableEventSink()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disableMetaObject" fullname="QAxBase::disableMetaObject" href="qaxbase.html#disableMetaObject" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="disableMetaObject()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="dynamicCall" fullname="QAxBase::dynamicCall" href="qaxbase.html#dynamicCall-2" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QVariant" signature="dynamicCall(const char * function, QList&lt;QVariant&gt; &amp; vars)">
+                <parameter left="const char *" right="" name="function" default=""/>
+                <parameter left="QList&lt;QVariant&gt; &amp;" right="" name="vars" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="dynamicCall" fullname="QAxBase::dynamicCall" href="qaxbase.html#dynamicCall" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QVariant" signature="dynamicCall(const char * function, const QVariant &amp; var1, const QVariant &amp; var2, const QVariant &amp; var3, const QVariant &amp; var4, const QVariant &amp; var5, const QVariant &amp; var6, const QVariant &amp; var7, const QVariant &amp; var8)">
+                <parameter left="const char *" right="" name="function" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="var1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="exception" fullname="QAxBase::exception" href="qaxbase.html#exception" location="qaxbase.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="exception(int code, const QString &amp; source, const QString &amp; desc, const QString &amp; help)">
+                <parameter left="int" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="source" default=""/>
+                <parameter left="const QString &amp;" right="" name="desc" default=""/>
+                <parameter left="const QString &amp;" right="" name="help" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="fallbackMetaObject" fullname="QAxBase::fallbackMetaObject" href="qaxbase.html#fallbackMetaObject" location="qaxbase.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="const QMetaObject *" signature="fallbackMetaObject() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="generateDocumentation" fullname="QAxBase::generateDocumentation" href="qaxbase.html#generateDocumentation" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QString" signature="generateDocumentation()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initialize" fullname="QAxBase::initialize" href="qaxbase.html#initialize" location="qaxbase.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="initialize(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initializeActive" fullname="QAxBase::initializeActive" href="qaxbase.html#initializeActive" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="initializeActive(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initializeFromFile" fullname="QAxBase::initializeFromFile" href="qaxbase.html#initializeFromFile" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="initializeFromFile(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initializeLicensed" fullname="QAxBase::initializeLicensed" href="qaxbase.html#initializeLicensed" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="initializeLicensed(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initializeRemote" fullname="QAxBase::initializeRemote" href="qaxbase.html#initializeRemote" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="initializeRemote(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QAxBase::isNull" href="qaxbase.html#isNull" location="qaxbase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyBag" fullname="QAxBase::propertyBag" href="qaxbase.html#propertyBag" location="qaxbase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="PropertyBag" signature="propertyBag() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyChanged" fullname="QAxBase::propertyChanged" href="qaxbase.html#propertyChanged" location="qaxbase.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="propertyChanged(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyWritable" fullname="QAxBase::propertyWritable" href="qaxbase.html#propertyWritable" location="qaxbase.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="propertyWritable(const char * prop) const">
+                <parameter left="const char *" right="" name="prop" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="queryInterface" fullname="QAxBase::queryInterface" href="qaxbase.html#queryInterface" location="qaxbase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="long" signature="queryInterface(const QUuid &amp; uuid, void ** iface) const">
+                <parameter left="const QUuid &amp;" right="" name="uuid" default=""/>
+                <parameter left="void **" right="" name="iface" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="querySubObject" fullname="QAxBase::querySubObject" href="qaxbase.html#querySubObject-2" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QAxObject *" signature="querySubObject(const char * name, QList&lt;QVariant&gt; &amp; vars)">
+                <parameter left="const char *" right="" name="name" default=""/>
+                <parameter left="QList&lt;QVariant&gt; &amp;" right="" name="vars" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="querySubObject" fullname="QAxBase::querySubObject" href="qaxbase.html#querySubObject" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QAxObject *" signature="querySubObject(const char * name, const QVariant &amp; var1, const QVariant &amp; var2, const QVariant &amp; var3, const QVariant &amp; var4, const QVariant &amp; var5, const QVariant &amp; var6, const QVariant &amp; var7, const QVariant &amp; var8)">
+                <parameter left="const char *" right="" name="name" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="var1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPropertyBag" fullname="QAxBase::setPropertyBag" href="qaxbase.html#setPropertyBag" location="qaxbase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPropertyBag(const PropertyBag &amp; bag)">
+                <parameter left="const PropertyBag &amp;" right="" name="bag" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPropertyWritable" fullname="QAxBase::setPropertyWritable" href="qaxbase.html#setPropertyWritable" location="qaxbase.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setPropertyWritable(const char * prop, bool ok)">
+                <parameter left="const char *" right="" name="prop" default=""/>
+                <parameter left="bool" right="" name="ok" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="signal" fullname="QAxBase::signal" href="qaxbase.html#signal" location="qaxbase.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="signal(const QString &amp; name, int argc, void * argv)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="int" right="" name="argc" default=""/>
+                <parameter left="void *" right="" name="argv" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="verbs" fullname="QAxBase::verbs" href="qaxbase.html#verbs" location="qaxbase.h" since="4.1" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="verbs() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxBase" fullname="QAxBase::~QAxBase" href="qaxbase.html#dtor.QAxBase" location="qaxbase.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxBase()"/>
+            <property access="public" threadsafety="unspecified" status="commendable" name="control" fullname="QAxBase::control" href="qaxbase.html#control-prop" location="qaxbase.h" type="QString">
+                <getter name="control"/>
+                <setter name="setControl"/>
+            </property>
+            <variable access="protected" threadsafety="unspecified" status="commendable" name="qt_meta_data_QAxBase" fullname="QAxBase::qt_meta_data_QAxBase" href="qaxbase.html#qt_meta_data_QAxBase-var" location="qaxbase.h" type="const uint[]" static="true"/>
+            <variable access="protected" threadsafety="unspecified" status="commendable" name="qt_meta_stringdata_QAxBase" fullname="QAxBase::qt_meta_stringdata_QAxBase" href="qaxbase.html#qt_meta_stringdata_QAxBase-var" location="qaxbase.h" type="const qt_meta_stringdata_QAxBase_t" static="true"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxObject" href="qaxobject.html" location="qaxobject.h" bases="QAxBase,QObject" module="QAxContainer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxObject" fullname="QAxObject::QAxObject" href="qaxobject.html#QAxObject-3" location="qaxobject.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QAxObject(IUnknown * iface, QObject * parent)">
+                <parameter left="IUnknown *" right="" name="iface" default=""/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxObject" fullname="QAxObject::QAxObject" href="qaxobject.html#QAxObject" location="qaxobject.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxObject(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxObject" fullname="QAxObject::QAxObject" href="qaxobject.html#QAxObject-2" location="qaxobject.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QAxObject(const QString &amp; c, QObject * parent)">
+                <parameter left="const QString &amp;" right="" name="c" default=""/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="connectNotify" fullname="QAxObject::connectNotify" href="qaxobject.html#connectNotify" location="qaxobject.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="connectNotify(const QMetaMethod &amp; signal)">
+                <parameter left="const QMetaMethod &amp;" right="" name="signal" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="doVerb" fullname="QAxObject::doVerb" href="qaxobject.html#doVerb" location="qaxobject.h" since="4.1" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="doVerb(const QString &amp; verb)">
+                <parameter left="const QString &amp;" right="" name="verb" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxObject" fullname="QAxObject::~QAxObject" href="qaxobject.html#dtor.QAxObject" location="qaxobject.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxObject()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxScript" href="qaxscript.html" location="qaxscript.h" bases="QObject" module="QAxContainer">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="FunctionFlags" fullname="QAxScript::FunctionFlags" href="qaxscript.html#FunctionFlags-enum" location="qaxscript.h">
+                <value name="FunctionNames" value="0"/>
+                <value name="FunctionSignatures" value="1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxScript" fullname="QAxScript::QAxScript" href="qaxscript.html#QAxScript" location="qaxscript.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxScript(const QString &amp; name, QAxScriptManager * manager)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="QAxScriptManager *" right="" name="manager" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QAxScript::call" href="qaxscript.html#call-2" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QVariant" signature="call(const QString &amp; function, QList&lt;QVariant&gt; &amp; arguments)">
+                <parameter left="const QString &amp;" right="" name="function" default=""/>
+                <parameter left="QList&lt;QVariant&gt; &amp;" right="" name="arguments" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QAxScript::call" href="qaxscript.html#call" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QVariant" signature="call(const QString &amp; function, const QVariant &amp; var1, const QVariant &amp; var2, const QVariant &amp; var3, const QVariant &amp; var4, const QVariant &amp; var5, const QVariant &amp; var6, const QVariant &amp; var7, const QVariant &amp; var8)">
+                <parameter left="const QString &amp;" right="" name="function" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="var1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="entered" fullname="QAxScript::entered" href="qaxscript.html#entered" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="entered()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="error" fullname="QAxScript::error" href="qaxscript.html#error" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="error(int code, const QString &amp; description, int sourcePosition, const QString &amp; sourceText)">
+                <parameter left="int" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="description" default=""/>
+                <parameter left="int" right="" name="sourcePosition" default=""/>
+                <parameter left="const QString &amp;" right="" name="sourceText" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="finished" fullname="QAxScript::finished" href="qaxscript.html#finished" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="finished()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="finished" fullname="QAxScript::finished" href="qaxscript.html#finished-2" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="true" overload-number="2" type="void" signature="finished(const QVariant &amp; result)">
+                <parameter left="const QVariant &amp;" right="" name="result" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="finished" fullname="QAxScript::finished" href="qaxscript.html#finished-3" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="true" overload-number="3" type="void" signature="finished(int code, const QString &amp; source, const QString &amp; description, const QString &amp; help)">
+                <parameter left="int" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="source" default=""/>
+                <parameter left="const QString &amp;" right="" name="description" default=""/>
+                <parameter left="const QString &amp;" right="" name="help" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="functions" fullname="QAxScript::functions" href="qaxscript.html#functions" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="functions(FunctionFlags flags) const">
+                <parameter left="FunctionFlags" right="" name="flags" default="FunctionNames"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QAxScript::load" href="qaxscript.html#load" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="load(const QString &amp; code, const QString &amp; language)">
+                <parameter left="const QString &amp;" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="language" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="scriptCode" fullname="QAxScript::scriptCode" href="qaxscript.html#scriptCode" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="scriptCode() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="scriptEngine" fullname="QAxScript::scriptEngine" href="qaxscript.html#scriptEngine" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAxScriptEngine *" signature="scriptEngine() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="scriptName" fullname="QAxScript::scriptName" href="qaxscript.html#scriptName" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="scriptName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="stateChanged" fullname="QAxScript::stateChanged" href="qaxscript.html#stateChanged" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="stateChanged(int state)">
+                <parameter left="int" right="" name="state" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxScript" fullname="QAxScript::~QAxScript" href="qaxscript.html#dtor.QAxScript" location="qaxscript.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxScript()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxScriptEngine" href="qaxscriptengine.html" location="qaxscript.h" bases="QAxObject" module="QAxContainer">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="State" fullname="QAxScriptEngine::State" href="qaxscriptengine.html#State-enum" location="qaxscript.h">
+                <value name="Uninitialized" value="0"/>
+                <value name="Initialized" value="5"/>
+                <value name="Started" value="1"/>
+                <value name="Connected" value="2"/>
+                <value name="Disconnected" value="3"/>
+                <value name="Closed" value="4"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxScriptEngine" fullname="QAxScriptEngine::QAxScriptEngine" href="qaxscriptengine.html#QAxScriptEngine" location="qaxscript.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxScriptEngine(const QString &amp; language, QAxScript * script)">
+                <parameter left="const QString &amp;" right="" name="language" default=""/>
+                <parameter left="QAxScript *" right="" name="script" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addItem" fullname="QAxScriptEngine::addItem" href="qaxscriptengine.html#addItem" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addItem(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasIntrospection" fullname="QAxScriptEngine::hasIntrospection" href="qaxscriptengine.html#hasIntrospection" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasIntrospection() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initialize" fullname="QAxScriptEngine::initialize" href="qaxscriptengine.html#initialize" location="qaxscript.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="initialize(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QAxScriptEngine::isValid" href="qaxscriptengine.html#isValid" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="queryInterface" fullname="QAxScriptEngine::queryInterface" href="qaxscriptengine.html#queryInterface" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="long" signature="queryInterface(const QUuid &amp; uuid, void ** iface) const">
+                <parameter left="const QUuid &amp;" right="" name="uuid" default=""/>
+                <parameter left="void **" right="" name="iface" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="scriptLanguage" fullname="QAxScriptEngine::scriptLanguage" href="qaxscriptengine.html#scriptLanguage" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="scriptLanguage() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setState" fullname="QAxScriptEngine::setState" href="qaxscriptengine.html#setState" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setState(State st)">
+                <parameter left="State" right="" name="st" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="state" fullname="QAxScriptEngine::state" href="qaxscriptengine.html#state" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="State" signature="state() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxScriptEngine" fullname="QAxScriptEngine::~QAxScriptEngine" href="qaxscriptengine.html#dtor.QAxScriptEngine" location="qaxscript.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxScriptEngine()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxScriptManager" href="qaxscriptmanager.html" location="qaxscript.h" bases="QObject" module="QAxContainer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxScriptManager" fullname="QAxScriptManager::QAxScriptManager" href="qaxscriptmanager.html#QAxScriptManager" location="qaxscript.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxScriptManager(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addObject" fullname="QAxScriptManager::addObject" href="qaxscriptmanager.html#addObject" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addObject(QAxBase * object)">
+                <parameter left="QAxBase *" right="" name="object" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addObject" fullname="QAxScriptManager::addObject" href="qaxscriptmanager.html#addObject-2" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="addObject(QObject * object)">
+                <parameter left="QObject *" right="" name="object" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QAxScriptManager::call" href="qaxscriptmanager.html#call-2" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QVariant" signature="call(const QString &amp; function, QList&lt;QVariant&gt; &amp; arguments)">
+                <parameter left="const QString &amp;" right="" name="function" default=""/>
+                <parameter left="QList&lt;QVariant&gt; &amp;" right="" name="arguments" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QAxScriptManager::call" href="qaxscriptmanager.html#call" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QVariant" signature="call(const QString &amp; function, const QVariant &amp; var1, const QVariant &amp; var2, const QVariant &amp; var3, const QVariant &amp; var4, const QVariant &amp; var5, const QVariant &amp; var6, const QVariant &amp; var7, const QVariant &amp; var8)">
+                <parameter left="const QString &amp;" right="" name="function" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="var1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="var8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="error" fullname="QAxScriptManager::error" href="qaxscriptmanager.html#error" location="qaxscript.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="error(QAxScript * script, int code, const QString &amp; description, int sourcePosition, const QString &amp; sourceText)">
+                <parameter left="QAxScript *" right="" name="script" default=""/>
+                <parameter left="int" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="description" default=""/>
+                <parameter left="int" right="" name="sourcePosition" default=""/>
+                <parameter left="const QString &amp;" right="" name="sourceText" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="functions" fullname="QAxScriptManager::functions" href="qaxscriptmanager.html#functions" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="functions(QAxScript::FunctionFlags flags) const">
+                <parameter left="QAxScript::FunctionFlags" right="" name="flags" default="QAxScript::FunctionNames"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QAxScriptManager::load" href="qaxscriptmanager.html#load" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QAxScript *" signature="load(const QString &amp; code, const QString &amp; name, const QString &amp; language)">
+                <parameter left="const QString &amp;" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="language" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QAxScriptManager::load" href="qaxscriptmanager.html#load-2" location="qaxscript.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QAxScript *" signature="load(const QString &amp; file, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="file" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerEngine" fullname="QAxScriptManager::registerEngine" href="qaxscriptmanager.html#registerEngine" location="qaxscript.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="registerEngine(const QString &amp; name, const QString &amp; extension, const QString &amp; code)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="extension" default=""/>
+                <parameter left="const QString &amp;" right="" name="code" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="script" fullname="QAxScriptManager::script" href="qaxscriptmanager.html#script" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAxScript *" signature="script(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="scriptFileFilter" fullname="QAxScriptManager::scriptFileFilter" href="qaxscriptmanager.html#scriptFileFilter" location="qaxscript.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QString" signature="scriptFileFilter()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="scriptNames" fullname="QAxScriptManager::scriptNames" href="qaxscriptmanager.html#scriptNames" location="qaxscript.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="scriptNames() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxScriptManager" fullname="QAxScriptManager::~QAxScriptManager" href="qaxscriptmanager.html#dtor.QAxScriptManager" location="qaxscript.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxScriptManager()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxSelect" href="qaxselect.html" location="qaxselect.h" bases="" module="QAxContainer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="clsid" fullname="QAxSelect::clsid" href="qaxselect.html#clsid" location="qaxselect.cpp" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="clsid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxSelect" fullname="QAxSelect::QAxSelect" href="qaxselect.html#QAxSelect" location="qaxselect.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxSelect(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxSelect" fullname="QAxSelect::~QAxSelect" href="qaxselect.html#dtor.QAxSelect" location="qaxselect.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxSelect()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxWidget" href="qaxwidget.html" location="qaxwidget.h" bases="QAxBase" module="QAxContainer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxWidget" fullname="QAxWidget::QAxWidget" href="qaxwidget.html#QAxWidget-3" location="qaxwidget.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QAxWidget(IUnknown * iface, QWidget * parent, Qt::WindowFlags f)">
+                <parameter left="IUnknown *" right="" name="iface" default=""/>
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="f" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxWidget" fullname="QAxWidget::QAxWidget" href="qaxwidget.html#QAxWidget" location="qaxwidget.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxWidget(QWidget * parent, Qt::WindowFlags f)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="f" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxWidget" fullname="QAxWidget::QAxWidget" href="qaxwidget.html#QAxWidget-2" location="qaxwidget.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QAxWidget(const QString &amp; c, QWidget * parent, Qt::WindowFlags f)">
+                <parameter left="const QString &amp;" right="" name="c" default=""/>
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="f" default="0"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="changeEvent" fullname="QAxWidget::changeEvent" href="qaxwidget.html#changeEvent" location="qaxwidget.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="changeEvent(QEvent * e)">
+                <parameter left="QEvent *" right="" name="e" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QAxWidget::clear" href="qaxwidget.html#clear" location="qaxwidget.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="connectNotify" fullname="QAxWidget::connectNotify" href="qaxwidget.html#connectNotify" location="qaxwidget.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="connectNotify(const QMetaMethod &amp; signal)">
+                <parameter left="const QMetaMethod &amp;" right="" name="signal" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createAggregate" fullname="QAxWidget::createAggregate" href="qaxwidget.html#createAggregate" location="qaxwidget.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QAxAggregated *" signature="createAggregate()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="createHostWindow" fullname="QAxWidget::createHostWindow" href="qaxwidget.html#createHostWindow" location="qaxwidget.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="createHostWindow(bool initialized)">
+                <parameter left="bool" right="" name="initialized" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="createHostWindow" fullname="QAxWidget::createHostWindow" href="qaxwidget.html#createHostWindow-2" location="qaxwidget.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="createHostWindow(bool initialized, const QByteArray &amp; data)">
+                <parameter left="bool" right="" name="initialized" default=""/>
+                <parameter left="const QByteArray &amp;" right="" name="data" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="doVerb" fullname="QAxWidget::doVerb" href="qaxwidget.html#doVerb" location="qaxwidget.h" since="4.1" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="doVerb(const QString &amp; verb)">
+                <parameter left="const QString &amp;" right="" name="verb" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="initialize" fullname="QAxWidget::initialize" href="qaxwidget.html#initialize" location="qaxwidget.h" since="4.2" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="initialize(IUnknown ** ptr)">
+                <parameter left="IUnknown **" right="" name="ptr" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="minimumSizeHint" fullname="QAxWidget::minimumSizeHint" href="qaxwidget.html#minimumSizeHint" location="qaxwidget.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSize" signature="minimumSizeHint() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="resizeEvent" fullname="QAxWidget::resizeEvent" href="qaxwidget.html#resizeEvent" location="qaxwidget.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="resizeEvent(QResizeEvent * )">
+                <parameter left="QResizeEvent *" right="" name="" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sizeHint" fullname="QAxWidget::sizeHint" href="qaxwidget.html#sizeHint" location="qaxwidget.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSize" signature="sizeHint() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="translateKeyEvent" fullname="QAxWidget::translateKeyEvent" href="qaxwidget.html#translateKeyEvent" location="qaxwidget.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="translateKeyEvent(int message, int keycode) const">
+                <parameter left="int" right="" name="message" default=""/>
+                <parameter left="int" right="" name="keycode" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxWidget" fullname="QAxWidget::~QAxWidget" href="qaxwidget.html#dtor.QAxWidget" location="qaxwidget.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxWidget()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxAggregated" href="qaxaggregated.html" location="qaxaggregated.h" bases="" module="QAxServer">
+            <function access="protected" threadsafety="unspecified" status="commendable" name="controllingUnknown" fullname="QAxAggregated::controllingUnknown" href="qaxaggregated.html#controllingUnknown" location="qaxaggregated.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="IUnknown *" signature="controllingUnknown() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="object" fullname="QAxAggregated::object" href="qaxaggregated.html#object" location="qaxaggregated.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="object() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="queryInterface" fullname="QAxAggregated::queryInterface" href="qaxaggregated.html#queryInterface" location="qaxaggregated.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="long" signature="queryInterface(const QUuid &amp; iid, void ** iface)">
+                <parameter left="const QUuid &amp;" right="" name="iid" default=""/>
+                <parameter left="void **" right="" name="iface" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="widget" fullname="QAxAggregated::widget" href="qaxaggregated.html#widget" location="qaxaggregated.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="widget() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="~QAxAggregated" fullname="QAxAggregated::~QAxAggregated" href="qaxaggregated.html#dtor.QAxAggregated" location="qaxaggregated.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxAggregated()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxBindable" href="qaxbindable.html" location="qaxbindable.h" bases="" module="QAxServer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxBindable" fullname="QAxBindable::QAxBindable" href="qaxbindable.html#QAxBindable" location="qaxbindable.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxBindable()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="clientSite" fullname="QAxBindable::clientSite" href="qaxbindable.html#clientSite" location="qaxbindable.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="IUnknown *" signature="clientSite() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createAggregate" fullname="QAxBindable::createAggregate" href="qaxbindable.html#createAggregate" location="qaxbindable.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QAxAggregated *" signature="createAggregate()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="propertyChanged" fullname="QAxBindable::propertyChanged" href="qaxbindable.html#propertyChanged" location="qaxbindable.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="propertyChanged(const char * property)">
+                <parameter left="const char *" right="" name="property" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="readData" fullname="QAxBindable::readData" href="qaxbindable.html#readData" location="qaxbindable.h" since="4.1" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="readData(QIODevice * source, const QString &amp; format)">
+                <parameter left="QIODevice *" right="" name="source" default=""/>
+                <parameter left="const QString &amp;" right="" name="format" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="reportError" fullname="QAxBindable::reportError" href="qaxbindable.html#reportError" location="qaxbindable.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="reportError(int code, const QString &amp; src, const QString &amp; desc, const QString &amp; context)">
+                <parameter left="int" right="" name="code" default=""/>
+                <parameter left="const QString &amp;" right="" name="src" default=""/>
+                <parameter left="const QString &amp;" right="" name="desc" default=""/>
+                <parameter left="const QString &amp;" right="" name="context" default="QString()"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="requestPropertyChange" fullname="QAxBindable::requestPropertyChange" href="qaxbindable.html#requestPropertyChange" location="qaxbindable.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="requestPropertyChange(const char * property)">
+                <parameter left="const char *" right="" name="property" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="writeData" fullname="QAxBindable::writeData" href="qaxbindable.html#writeData" location="qaxbindable.h" since="4.1" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="writeData(QIODevice * sink)">
+                <parameter left="QIODevice *" right="" name="sink" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxBindable" fullname="QAxBindable::~QAxBindable" href="qaxbindable.html#dtor.QAxBindable" location="qaxbindable.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxBindable()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAxFactory" href="qaxfactory.html" location="qaxfactory.h" bases="QObject" module="QAxServer">
+            <function access="public" threadsafety="unspecified" status="commendable" name="appID" fullname="QAxFactory::appID" href="qaxfactory.html#appID" location="qaxfactory.cpp" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QUuid" signature="appID() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="typeLibID" fullname="QAxFactory::typeLibID" href="qaxfactory.html#typeLibID" location="qaxfactory.cpp" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QUuid" signature="typeLibID() const"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ServerType" fullname="QAxFactory::ServerType" href="qaxfactory.html#ServerType-enum" location="qaxfactory.h">
+                <value name="SingleInstance" value="0"/>
+                <value name="MultipleInstances" value="1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAxFactory" fullname="QAxFactory::QAxFactory" href="qaxfactory.html#QAxFactory" location="qaxfactory.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAxFactory(const QUuid &amp; libid, const QUuid &amp; appid)">
+                <parameter left="const QUuid &amp;" right="" name="libid" default=""/>
+                <parameter left="const QUuid &amp;" right="" name="appid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="classID" fullname="QAxFactory::classID" href="qaxfactory.html#classID" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QUuid" signature="classID(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createObject" fullname="QAxFactory::createObject" href="qaxfactory.html#createObject" location="qaxfactory.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="QObject *" signature="createObject(const QString &amp; key)">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="eventsID" fullname="QAxFactory::eventsID" href="qaxfactory.html#eventsID" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QUuid" signature="eventsID(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="exposeToSuperClass" fullname="QAxFactory::exposeToSuperClass" href="qaxfactory.html#exposeToSuperClass" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="exposeToSuperClass(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="featureList" fullname="QAxFactory::featureList" href="qaxfactory.html#featureList" location="qaxfactory.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="featureList() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasStockEvents" fullname="QAxFactory::hasStockEvents" href="qaxfactory.html#hasStockEvents" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasStockEvents(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="interfaceID" fullname="QAxFactory::interfaceID" href="qaxfactory.html#interfaceID" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QUuid" signature="interfaceID(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isServer" fullname="QAxFactory::isServer" href="qaxfactory.html#isServer" location="qaxfactory.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="isServer()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isService" fullname="QAxFactory::isService" href="qaxfactory.html#isService" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isService() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="metaObject" fullname="QAxFactory::metaObject" href="qaxfactory.html#metaObject" location="qaxfactory.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="const QMetaObject *" signature="metaObject(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerActiveObject" fullname="QAxFactory::registerActiveObject" href="qaxfactory.html#registerActiveObject" location="qaxfactory.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="registerActiveObject(QObject * object)">
+                <parameter left="QObject *" right="" name="object" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerClass" fullname="QAxFactory::registerClass" href="qaxfactory.html#registerClass" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="void" signature="registerClass(const QString &amp; key, QSettings * settings) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+                <parameter left="QSettings *" right="" name="settings" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serverDirPath" fullname="QAxFactory::serverDirPath" href="qaxfactory.html#serverDirPath" location="qaxfactory.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QString" signature="serverDirPath()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serverFilePath" fullname="QAxFactory::serverFilePath" href="qaxfactory.html#serverFilePath" location="qaxfactory.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QString" signature="serverFilePath()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startServer" fullname="QAxFactory::startServer" href="qaxfactory.html#startServer" location="qaxfactory.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="startServer(ServerType type)">
+                <parameter left="ServerType" right="" name="type" default="MultipleInstances"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="stayTopLevel" fullname="QAxFactory::stayTopLevel" href="qaxfactory.html#stayTopLevel" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="stayTopLevel(const QString &amp; key) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unregisterClass" fullname="QAxFactory::unregisterClass" href="qaxfactory.html#unregisterClass" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="void" signature="unregisterClass(const QString &amp; key, QSettings * settings) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+                <parameter left="QSettings *" right="" name="settings" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="validateLicenseKey" fullname="QAxFactory::validateLicenseKey" href="qaxfactory.html#validateLicenseKey" location="qaxfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="validateLicenseKey(const QString &amp; key, const QString &amp; licenseKey) const">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+                <parameter left="const QString &amp;" right="" name="licenseKey" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAxFactory" fullname="QAxFactory::~QAxFactory" href="qaxfactory.html#dtor.QAxFactory" location="qaxfactory.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAxFactory()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createObjectWrapper" fullname="QAxFactory::createObjectWrapper" href="qaxfactory.html#createObjectWrapper" location="qaxserverbase.cpp" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="createObjectWrapper(QObject * object, IDispatch ** wrapper)">
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="IDispatch **" right="" name="wrapper" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="stopServer" fullname="QAxFactory::stopServer" href="qaxfactory.html#stopServer" location="src_activeqt_control_qaxfactory.cpp" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="stopServer()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="VARIANTToQVariant" href="" location="qaxtypes.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QVariant" signature="VARIANTToQVariant(const VARIANT &amp; arg, const QByteArray &amp; typeName, uint type)">
+            <parameter left="const VARIANT &amp;" right="" name="arg" default=""/>
+            <parameter left="const QByteArray &amp;" right="" name="typeName" default=""/>
+            <parameter left="uint" right="" name="type" default="0"/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QAXFACTORY_END" href="qaxfactory.html#QAXFACTORY_END" location="src_activeqt_control_qaxfactory.cpp" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QAxFactory" type="" signature="QAXFACTORY_END()"/>
+        <page access="public" status="commendable" name="activeqt-dumpcpp.html" href="activeqt-dumpcpp.html" subtype="page" title="The dumpcpp Tool (ActiveQt)" fulltitle="The dumpcpp Tool (ActiveQt)" subtitle="" location="activeqt-dumpcpp.qdoc" module="ActiveQt" groups="activeqt-tools">
+            <keyword name="dumpcpp"/>
+        </page>
+        <page access="public" status="commendable" name="activeqt-dumpdoc.html" href="activeqt-dumpdoc.html" subtype="page" title="The dumpdoc Tool (ActiveQt)" fulltitle="The dumpdoc Tool (ActiveQt)" subtitle="" location="activeqt-dumpdoc.qdoc" module="ActiveQt" groups="activeqt-tools">
+            <keyword name="dumpdoc"/>
+        </page>
+        <page access="public" status="commendable" name="activeqt-index.html" href="activeqt-index.html" subtype="page" title="Active Qt" fulltitle="Active Qt" subtitle="" location="activeqt-index.qdoc" module="ActiveQt" groups="qt-activex">
+            <target name="activeqt-framework"/>
+            <keyword name="activeqt"/>
+            <contents name="articles-and-guides" title="Articles and Guides" level="1"/>
+            <contents name="reference" title="Reference" level="1"/>
+            <contents name="examples" title="Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="activeqt-dotnet.html" href="activeqt-dotnet.html" subtype="page" title="Dot Net Example (ActiveQt)" fulltitle="Dot Net Example (ActiveQt)" subtitle="" location="dotnet.qdoc" module="ActiveQt">
+            <contents name="qt-vs-net" title="Qt vs. .NET" level="1"/>
+            <contents name="walkthrough-net-interop-with-mc-and-ijw" title="Walkthrough: .NET interop with MC++ and IJW" level="1"/>
+            <contents name="walkthrough-net-com-interop-with-activeqt" title="Walkthrough: .NET/COM Interop with ActiveQt" level="1"/>
+            <contents name="starting-a-project" title="Starting a Project" level="2"/>
+            <contents name="importing-qt-widgets" title="Importing Qt Widgets" level="2"/>
+            <contents name="using-qt-widgets" title="Using Qt Widgets" level="2"/>
+            <contents name="handling-qt-signals" title="Handling Qt Signals" level="2"/>
+            <contents name="summary" title="Summary" level="1"/>
+            <contents name="limitations" title="Limitations" level="2"/>
+            <contents name="performance-considerations" title="Performance Considerations" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="QAxContainer" href="qaxcontainer-module.html" subtype="module" title="QAxContainer C++ Classes" fulltitle="QAxContainer C++ Classes" subtitle="" location="qtaxcontainer.qdoc" groups="modules">
+            <contents name="license-information" title="License Information" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="activeqt-container.html" href="activeqt-container.html" subtype="page" title="Using ActiveX controls and COM in Qt" fulltitle="Using ActiveX controls and COM in Qt" subtitle="" location="qtaxcontainer.qdoc" module="ActiveQt" groups="qt-activex">
+            <contents name="using-the-library" title="Using the Library" level="1"/>
+            <contents name="distributing-qaxcontainer-applications" title="Distributing QAxContainer Applications" level="2"/>
+            <contents name="instantiating-com-objects" title="Instantiating COM Objects" level="1"/>
+            <contents name="typical-error-messages" title="Typical Error Messages" level="2"/>
+            <contents name="requested-control-could-not-be-instantiated" title="Requested control could not be instantiated" level="3"/>
+            <contents name="accessing-the-object-api" title="Accessing the Object API" level="1"/>
+            <contents name="generating-a-c-namespace" title="Generating a C++ Namespace" level="2"/>
+            <contents name="call-by-name" title="Call-by-Name" level="2"/>
+            <contents name="calling-function-through-a-script-engine" title="Calling Function Through a Script Engine" level="2"/>
+            <contents name="calling-a-function-using-the-native-com-interfaces" title="Calling a Function Using the Native COM Interfaces" level="2"/>
+            <contents name="typical-error-messages" title="Typical Error Messages" level="2"/>
+            <contents name="qaxbase-internalinvoke-no-such-method" title="QAxBase::internalInvoke: No such method" level="3"/>
+            <contents name="error-calling-idispatch-member-non-optional-parameter-missing" title="Error calling IDispatch member: Non-optional parameter missing" level="3"/>
+            <contents name="error-calling-idispatch-member-type-mismatch-in-parameter-n" title="Error calling IDispatch member: Type mismatch in parameter n" level="3"/>
+            <contents name="qaxscriptmanager-call-no-script-provides-this-function" title="QAxScriptManager::call(): No script provides this function" level="3"/>
+        </page>
+        <page access="public" status="commendable" name="QAxServer" href="qaxserver-module.html" subtype="module" title="QAxServer C++ Classes" fulltitle="QAxServer C++ Classes" subtitle="" location="qtaxserver.qdoc" groups="modules">
+            <contents name="license-information" title="License Information" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="activeqt-server.html" href="activeqt-server.html" subtype="page" title="Building ActiveX servers in Qt" fulltitle="Building ActiveX servers in Qt" subtitle="" location="qtaxserver.qdoc" module="ActiveQt" groups="qt-activex">
+            <contents name="using-the-library" title="Using the Library" level="1"/>
+            <contents name="out-of-process-vs-in-process" title="Out-of-Process vs. In-Process" level="2"/>
+            <contents name="typical-errors-during-the-post-build-steps" title="Typical Errors During the Post-Build Steps" level="2"/>
+            <contents name="the-server-executable-crashes" title="The Server Executable Crashes" level="3"/>
+            <contents name="the-server-executable-is-not-a-valid-win32-application" title="The Server Executable Is Not a Valid Win32 Application" level="3"/>
+            <contents name="unable-to-locate-dll" title="&quot;Unable to locate DLL&quot;" level="3"/>
+            <contents name="cannot-open-file" title="&quot;Cannot open file ...&quot;" level="3"/>
+            <contents name="implementing-controls" title="Implementing Controls" level="1"/>
+            <contents name="data-types" title="Data Types" level="2"/>
+            <contents name="sub-objects" title="Sub-Objects" level="2"/>
+            <contents name="property-notification" title="Property Notification" level="2"/>
+            <contents name="serving-controls" title="Serving Controls" level="1"/>
+            <contents name="typical-compile-time-problems" title="Typical Compile-Time Problems" level="2"/>
+            <contents name="no-overloaded-function-takes-2-parameters" title="&quot;No overloaded function takes 2 parameters&quot;" level="3"/>
+            <contents name="syntax-error-bad-suffix-on-number" title="&quot;Syntax error: bad suffix on number&quot;" level="3"/>
+            <contents name="unresolved-external-symbol-ucm-instantiate" title="&quot;Unresolved external symbol _ucm_instantiate&quot;" level="3"/>
+            <contents name="ucm-initialize-already-defined-in" title="&quot;_ucm_initialize already defined in ...&quot;" level="3"/>
+            <contents name="distributing-qaxserver-binaries" title="Distributing QAxServer Binaries" level="2"/>
+            <contents name="installing-stand-alone-servers" title="Installing Stand-Alone Servers" level="3"/>
+            <contents name="installing-in-process-servers" title="Installing In-Process Servers" level="3"/>
+            <contents name="distributing-servers-over-the-internet" title="Distributing Servers over the Internet" level="3"/>
+            <contents name="using-the-controls" title="Using the Controls" level="1"/>
+            <contents name="supported-and-unsupported-activex-clients" title="Supported and Unsupported ActiveX Clients" level="2"/>
+            <contents name="supported-clients" title="Supported Clients" level="3"/>
+            <contents name="unsupported-clients" title="Unsupported Clients" level="3"/>
+            <contents name="typical-runtime-errors" title="Typical Runtime Errors" level="2"/>
+            <contents name="the-server-does-not-respond" title="The Server Does Not Respond" level="3"/>
+            <contents name="the-object-cannot-be-created" title="The Object Cannot Be Created" level="3"/>
+            <contents name="debugging-runtime-errors" title="Debugging Runtime Errors" level="2"/>
+            <contents name="class-information-and-tuning" title="Class Information and Tuning" level="1"/>
+            <contents name="developing-licensed-components" title="Developing Licensed Components" level="2"/>
+            <contents name="more-interfaces" title="More Interfaces" level="2"/>
+        </page>
+    </namespace>
+    <page access="public" status="commendable" name="activeqt-tools" href="activeqt-tools.html" subtype="group" seen="true" members="activeqt-dumpcpp.html,activeqt-dumpdoc.html" title="Tools for ActiveQt" fulltitle="Tools for ActiveQt" subtitle="" location="activeqt-index.qdoc"/>
+</INDEX>

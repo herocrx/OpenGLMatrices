@@ -1,0 +1,14 @@
+prefix=/home/heroadm/Qt//5.0.2/gcc_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 Script
+Description: Qt Script module
+Version: 5.0.2
+Libs: -L${libdir} -lQt5Script 
+Libs.private: 
+Cflags: -I${includedir}/QtScript -I${includedir}
+Requires: Qt5Core
+

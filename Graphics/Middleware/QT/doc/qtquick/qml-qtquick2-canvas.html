@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickcanvasitem.cpp -->
+  <title>QtQuick 5.0: Canvas</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#threaded-rendering-and-render-target">Threaded Rendering and Render Target</a></li>
+<li class="level2"><a href="#tiled-canvas">Tiled Canvas</a></li>
+<li class="level2"><a href="#pixel-operations">Pixel Operations</a></li>
+<li class="level2"><a href="#tips-for-porting-existing-html5-canvas-applications">Tips for Porting Existing HTML5 Canvas applications</a></li>
+</ul>
+</div>
+<h1 class="title">Canvas</h1>
+<span class="subtitle"></span>
+<!-- $$$Canvas-brief -->
+<p>Provides a 2D canvas item enabling drawing via JavaScript <a href="#details">More...</a></p>
+<!-- @@@Canvas -->
+<p>Inherits <a href="qml-qtquick2-item.html">Item</a></p>
+<p>This type was introduced in  QtQuick 2.0.</p>
+<ul>
+<li><a href="qml-qtquick2-canvas-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#available-prop">available</a></b></b> : size</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a></b></b> : size</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a></b></b> : rect</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#context-prop">context</a></b></b> : object</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#contextType-prop">contextType</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#renderStrategy-prop">renderStrategy</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#renderTarget-prop">renderTarget</a></b></b> : enumeration</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#tileSize-prop">tileSize</a></b></b> : size</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#onImageLoaded-signal">onImageLoaded</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#onPaint-signal">onPaint</a></b></b>(rect <i>region</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#onPainted-signal">onPainted</a></b></b>()</li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">CanvasImageData <b><b><a href="qml-qtquick2-canvas.html#getImageData-method">getImageData</a></b></b>(real <i>sx</i>, real <i>sy</i>, real <i>sw</i>, real <i>sh</i>)</li>
+<li class="fn">bool <b><b><a href="qml-qtquick2-canvas.html#save-method">save</a></b></b>(string <i>filename</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#cancelRequestAnimationFrame-method">cancelRequestAnimationFrame</a></b></b>(long <i>handle</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#isImageError-method">isImageError</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#isImageLoaded-method">isImageLoaded</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#isImageLoading-method">isImageLoading</a></b></b>(url <i>image</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#loadImage-method">loadImage</a></b></b>(url <i>image</i>)</li>
+<li class="fn">long <b><b><a href="qml-qtquick2-canvas.html#requestAnimationFrame-method">requestAnimationFrame</a></b></b>(callback)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#markDirty-method">markDirty</a></b></b>(rect <i>area</i>)</li>
+<li class="fn">object <b><b><a href="qml-qtquick2-canvas.html#getContext-method">getContext</a></b></b>(string <i>contextId</i>, any)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#requestPaint-method">requestPaint</a></b></b>()</li>
+<li class="fn">string <b><b><a href="qml-qtquick2-canvas.html#toDataURL-method">toDataURL</a></b></b>(string <i>mimeType</i>)</li>
+<li class="fn"><b><b><a href="qml-qtquick2-canvas.html#unloadImage-method">unloadImage</a></b></b>(url <i>image</i>)</li>
+</ul>
+<!-- $$$Canvas-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Canvas item allows drawing of straight and curved lines, simple and complex shapes, graphs, and referenced graphic images. It can also add text, colors, shadows, gradients, and patterns, and do low level pixel operations. The Canvas output may be saved as an image file or serialized to a URL.</p>
+<p>To define a drawing area in the Canvas item set the <tt>width</tt> and <tt>height</tt> properties. For example, the following code creates a Canvas item which has a drawing area with a height of 100 pixels and width of 200 pixels:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type">Canvas</span> {
+    <span class="name">id</span>: <span class="name">mycanvas</span>
+    <span class="name">width</span>: <span class="number">100</span>
+    <span class="name">height</span>: <span class="number">200</span>
+}</pre>
+<p>Currently the Canvas item only supports the two-dimensional rendering context.</p>
+<a name="threaded-rendering-and-render-target"></a>
+<h2>Threaded Rendering and Render Target</h2>
+<p>The Canvas item supports two render targets: <tt>Canvas.Image</tt> and <tt>Canvas.FramebufferObject</tt>.</p>
+<p>The <tt>Canvas.Image</tt> render target is a <i>QImage</i> object. This render target supports background thread rendering, allowing complex or long running painting to be executed without blocking the UI.</p>
+<p>The Canvas.FramebufferObject render target utilizes OpenGL hardware acceleration rather than rendering into system memory, which in many cases results in faster rendering.</p>
+<p>The default render target is Canvas.Image and the default <a href="qml-qtquick2-canvas.html#renderStrategy-prop">renderStrategy</a> is Canvas.Threaded.</p>
+<a name="tiled-canvas"></a>
+<h2>Tiled Canvas</h2>
+<p>The Canvas item supports tiled rendering by setting <a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a>, <a href="qml-qtquick2-canvas.html#tileSize-prop">tileSize</a> and <a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a> properties.</p>
+<p>Tiling allows efficient display of a very large virtual canvas via a smaller canvas window. The actual memory consumption is in relation to the canvas window size. The painting code can draw within the virtual canvas without handling coordinate system transformations.</p>
+<p>The tiles overlapping with the canvas window may be cached eliminating the need to redraw, which can lead to significantly improved performance in some situations.</p>
+<a name="pixel-operations"></a>
+<h2>Pixel Operations</h2>
+<p>All HTML5 2D context pixel operations are supported. In order to ensure improved pixel reading/writing performance the <i>Canvas.Image</i> render target should be chosen. The <i>Canvas.FramebufferObject</i> render target requires the pixel data to be exchanged between the system memory and the graphic card, which is significantly more expensive. Rendering may also be synchronized with the V-sync signal (to avoid screen tearing) which will further impact pixel operations with <tt>Canvas.FrambufferObject</tt> render target.</p>
+<a name="tips-for-porting-existing-html5-canvas-applications"></a>
+<h2>Tips for Porting Existing HTML5 Canvas applications</h2>
+<p>Although the Canvas item is provides a HTML5 like API, HTML5 canvas applications need to be modified to run in the Canvas item:</p>
+<ul>
+<li>Replace all DOM API calls with QML property bindings or Canvas item methods.</li>
+<li>Replace all HTML event handlers with the <a href="qml-qtquick2-mousearea.html">MouseArea</a> item.</li>
+<li>Change setInterval/setTimeout function calls with the <a href="../qtqml/qml-qtquick2-timer.html">Timer</a> item or the use of <a href="qml-qtquick2-canvas.html#requestAnimationFrame-method">requestAnimationFrame()</a>.</li>
+<li>Place painting code into the <a href="qml-qtquick2-canvas.html#onPaint-signal">onPaint</a> handler and trigger painting by calling the <a href="qml-qtquick2-canvas.html#markDirty-method">markDirty()</a> or <a href="qml-qtquick2-canvas.html#requestPaint-method">requestPaint()</a> methods.</li>
+<li>To draw images, load them by calling the Canvas's <a href="qml-qtquick2-canvas.html#loadImage-method">loadImage()</a> method and then request to paint them in the <a href="qml-qtquick2-canvas.html#onImageLoaded-signal">onImageLoaded</a> handler.</li>
+</ul>
+<p><b>See also </b><a href="qml-qtquick2-context2d.html">Context2D</a>.</p>
+<!-- @@@Canvas -->
+<h2>Property Documentation</h2>
+<!-- $$$available -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="available-prop"></a><span class="name">available</span> : <span class="type"><a href="../qtqml/qml-size.html">size</a></span></p></td></tr></table></div><div class="qmldoc"><p>Indicates when Canvas is able to provide a drawing context to operate on.</p>
+</div></div><!-- @@@available -->
+<br/>
+<!-- $$$canvasSize -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="canvasSize-prop"></a><span class="name">canvasSize</span> : <span class="type"><a href="../qtqml/qml-size.html">size</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the logical canvas size that the context paints on.</p>
+<p>By default, the canvas size is the same size as the current canvas item size.</p>
+<p>By setting the canvasSize, <a href="qml-qtquick2-canvas.html#tileSize-prop">tileSize</a> and <a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a>, the Canvas item can act as a large virtual canvas with many separately rendered tile rectangles. Only those tiles within the current canvas window are painted by the Canvas render engine.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#tileSize-prop">tileSize</a> and <a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a>.</p>
+</div></div><!-- @@@canvasSize -->
+<br/>
+<!-- $$$canvasWindow -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="canvasWindow-prop"></a><span class="name">canvasWindow</span> : <span class="type"><a href="../qtqml/qml-rect.html">rect</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current canvas visible window.</p>
+<p>By default the canvasWindow size is the same as the Canvas item size with the top-left point as (0, 0).</p>
+<p>If the <a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a> is different to the Canvas item size, the Canvas item can display different visible areas by changing the canvas windowSize and/or position.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a> and <a href="qml-qtquick2-canvas.html#tileSize-prop">tileSize</a>.</p>
+</div></div><!-- @@@canvasWindow -->
+<br/>
+<!-- $$$context -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="context-prop"></a><span class="name">context</span> : <span class="type">object</span></p></td></tr></table></div><div class="qmldoc"><p>Holds the active drawing context.</p>
+<p>If the canvas is ready and there has been a successful call to <a href="qml-qtquick2-canvas.html#getContext-method">getContext()</a> or the <a href="qml-qtquick2-canvas.html#contextType-prop">contextType</a> property has been set with a supported context type, this property will contain the current drawing context, otherwise null.</p>
+</div></div><!-- @@@context -->
+<br/>
+<!-- $$$contextType -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="contextType-prop"></a><span class="name">contextType</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>The type of drawing context to use.</p>
+<p>This property is set to the name of the active context type.</p>
+<p>If set explicitly the canvas will attempt to create a context of the named type after becoming available.</p>
+<p>The type name is the same as used in the <a href="qml-qtquick2-canvas.html#getContext-method">getContext()</a> call, for the 2d canvas the value will be &quot;2d&quot;.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#getContext-method">getContext()</a> and <a href="qml-qtquick2-canvas.html#available-prop">available</a>.</p>
+</div></div><!-- @@@contextType -->
+<br/>
+<!-- $$$renderStrategy -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="renderStrategy-prop"></a><span class="name">renderStrategy</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current canvas rendering strategy.</p>
+<ul>
+<li>Canvas.Immediate - context will perform graphics commands immediately in the main UI thread.</li>
+<li>Canvas.Threaded - context will defer graphics commands to a private rendering thread.</li>
+<li>Canvas.Cooperative - context will defer graphics commands to the applications global render thread.</li>
+</ul>
+<p>This hint is supplied along with <a href="qml-qtquick2-canvas.html#renderTarget-prop">renderTarget</a> to the graphics context to determine the method of rendering. A renderStrategy, <a href="qml-qtquick2-canvas.html#renderTarget-prop">renderTarget</a> or a combination may not be supported by a graphics context, in which case the context will choose appropriate options and Canvas will signal the change to the properties.</p>
+<p>Configuration or runtime tests may cause the QML Scene Graph to render in the GUI thread. Selecting <tt>Canvas.Cooperative</tt>, does not guarantee rendering will occur on a thread separate from the GUI thread.</p>
+<p>The default value is <tt>Canvas.Cooperative</tt>.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#renderTarget-prop">renderTarget</a>.</p>
+</div></div><!-- @@@renderStrategy -->
+<br/>
+<!-- $$$renderTarget -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="renderTarget-prop"></a><span class="name">renderTarget</span> : <span class="type"><a href="../qtqml/qml-enumeration.html">enumeration</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the current canvas render target.</p>
+<ul>
+<li>Canvas.Image - render to an in memory image buffer.</li>
+<li>Canvas.FramebufferObject - render to an OpenGL frame buffer</li>
+</ul>
+<p>This hint is supplied along with <a href="qml-qtquick2-canvas.html#renderStrategy-prop">renderStrategy</a> to the graphics context to determine the method of rendering. A <a href="qml-qtquick2-canvas.html#renderStrategy-prop">renderStrategy</a>, renderTarget or a combination may not be supported by a graphics context, in which case the context will choose appropriate options and Canvas will signal the change to the properties.</p>
+<p>The default render target is <tt>Canvas.FramebufferObject</tt>.</p>
+</div></div><!-- @@@renderTarget -->
+<br/>
+<!-- $$$tileSize -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="tileSize-prop"></a><span class="name">tileSize</span> : <span class="type"><a href="../qtqml/qml-size.html">size</a></span></p></td></tr></table></div><div class="qmldoc"><p>Holds the canvas rendering tile size.</p>
+<p>The Canvas item enters tiled mode by setting <a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a>, tileSize and the <a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a>. This can improve rendering performance by rendering and caching tiles instead of rendering the whole canvas every time.</p>
+<p>Memory will be consumed only by those tiles within the current visible region.</p>
+<p>By default the tileSize is the same as the <a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a>.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a> and <a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a>.</p>
+</div></div><!-- @@@tileSize -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$onImageLoaded -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onImageLoaded-signal"></a>Canvas::<span class="name">onImageLoaded</span>()</p></td></tr></table></div><div class="qmldoc"><p>This handler is called when an image has been loaded.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@onImageLoaded -->
+<br/>
+<!-- $$$onPaint -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onPaint-signal"></a>Canvas::<span class="name">onPaint</span>(<span class="type"><a href="../qtqml/qml-rect.html">rect</a></span><i> region</i>)</p></td></tr></table></div><div class="qmldoc"><p>This handler is called to render the <i>region</i>. If a context is active it can be referenced from the context property.</p>
+<p>This signal can be triggered markdirty(), <a href="qml-qtquick2-canvas.html#requestPaint-method">requestPaint()</a> or by changing the current canvas window.</p>
+</div></div><!-- @@@onPaint -->
+<br/>
+<!-- $$$onPainted -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="onPainted-signal"></a>Canvas::<span class="name">onPainted</span>()</p></td></tr></table></div><div class="qmldoc"><p>This handler is called after all context painting commands are executed and the Canvas has been rendered.</p>
+</div></div><!-- @@@onPainted -->
+<br/>
+<h2>Method Documentation</h2>
+<!-- $$$getImageData -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getImageData-method"></a><span class="type"><a href="qml-qtquick2-canvasimagedata.html">CanvasImageData</a></span> Canvas::<span class="name">getImageData</span>(<span class="type"><a href="../qtqml/qml-real.html">real</a></span><i> sx</i>, <span class="type"><a href="../qtqml/qml-real.html">real</a></span><i> sy</i>, <span class="type"><a href="../qtqml/qml-real.html">real</a></span><i> sw</i>, <span class="type"><a href="../qtqml/qml-real.html">real</a></span><i> sh</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns an <a href="qml-qtquick2-canvasimagedata.html">CanvasImageData</a> object containing the image data for the given rectangle of the canvas.</p>
+</div></div><!-- @@@getImageData -->
+<br/>
+<!-- $$$save -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="save-method"></a><span class="type"><a href="../qtqml/qml-bool.html">bool</a></span> Canvas::<span class="name">save</span>(<span class="type"><a href="../qtqml/qml-string.html">string</a></span><i> filename</i>)</p></td></tr></table></div><div class="qmldoc"><p>Save the current canvas content into an image file <i>filename</i>. The saved image format is automatically decided by the <i>filename</i>'s suffix.</p>
+<p>Note: calling this method will force painting the whole canvas, not just the current canvas visible window.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#canvasWindow-prop">canvasWindow</a>, <a href="qml-qtquick2-canvas.html#canvasSize-prop">canvasSize</a>, and <a href="qml-qtquick2-canvas.html#toDataURL-method">toDataURL()</a>.</p>
+</div></div><!-- @@@save -->
+<br/>
+<!-- $$$cancelRequestAnimationFrame -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="cancelRequestAnimationFrame-method"></a>Canvas::<span class="name">cancelRequestAnimationFrame</span>(<span class="type">long</span><i> handle</i>)</p></td></tr></table></div><div class="qmldoc"><p>This function will cancel the animation callback referenced by <i>handle</i>.</p>
+</div></div><!-- @@@cancelRequestAnimationFrame -->
+<br/>
+<!-- $$$isImageError -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="isImageError-method"></a>Canvas::<span class="name">isImageError</span>(<span class="type"><a href="../qtqml/qml-url.html">url</a></span><i> image</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns true if the <i>image</i> failed to load.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@isImageError -->
+<br/>
+<!-- $$$isImageLoaded -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="isImageLoaded-method"></a>Canvas::<span class="name">isImageLoaded</span>(<span class="type"><a href="../qtqml/qml-url.html">url</a></span><i> image</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns true if the <i>image</i> is successfully loaded and ready to use.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@isImageLoaded -->
+<br/>
+<!-- $$$isImageLoading -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="isImageLoading-method"></a>Canvas::<span class="name">isImageLoading</span>(<span class="type"><a href="../qtqml/qml-url.html">url</a></span><i> image</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns true if the <i>image</i> is currently loading.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#loadImage-method">loadImage()</a>.</p>
+</div></div><!-- @@@isImageLoading -->
+<br/>
+<!-- $$$loadImage -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="loadImage-method"></a>Canvas::<span class="name">loadImage</span>(<span class="type"><a href="../qtqml/qml-url.html">url</a></span><i> image</i>)</p></td></tr></table></div><div class="qmldoc"><p>Loads the given <tt>image</tt> asynchronously.</p>
+<p>When the image is ready, <a href="qml-qtquick2-canvas.html#onImageLoaded-signal">onImageLoaded</a> will be emitted. The loaded image can be unloaded by the <a href="qml-qtquick2-canvas.html#unloadImage-method">unloadImage()</a> method.</p>
+<p>Note: Only loaded images can be painted on the Canvas item.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#unloadImage-method">unloadImage</a>, <a href="qml-qtquick2-canvas.html#onImageLoaded-signal">onImageLoaded</a>, <a href="qml-qtquick2-canvas.html#isImageLoaded-method">isImageLoaded()</a>, <a href="qml-qtquick2-context2d.html#createImageData-method">Context2D::createImageData()</a>, and <a href="qml-qtquick2-context2d.html#drawImage-method">Context2D::drawImage()</a>.</p>
+</div></div><!-- @@@loadImage -->
+<br/>
+<!-- $$$requestAnimationFrame -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="requestAnimationFrame-method"></a><span class="type">long</span> Canvas::<span class="name">requestAnimationFrame</span>(<span class="type">callback</span>)</p></td></tr></table></div><div class="qmldoc"><p>This function schedules callback to be invoked before composing the <a href="qtquick-module.html">QtQuick</a> scene.</p>
+</div></div><!-- @@@requestAnimationFrame -->
+<br/>
+<!-- $$$markDirty -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="markDirty-method"></a>Canvas::<span class="name">markDirty</span>(<span class="type"><a href="../qtqml/qml-rect.html">rect</a></span><i> area</i>)</p></td></tr></table></div><div class="qmldoc"><p>Mark the given <i>area</i> as dirty, so that when this area is visible the canvas renderer will redraw it. This will trigger the <a href="qml-qtquick2-canvas.html#onPaint-signal">onPaint</a> signal handler function.</p>
+<p><b>See also </b>paint and <a href="qml-qtquick2-canvas.html#requestPaint-method">requestPaint()</a>.</p>
+</div></div><!-- @@@markDirty -->
+<br/>
+<!-- $$$getContext -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="getContext-method"></a><span class="type">object</span> Canvas::<span class="name">getContext</span>(<span class="type"><a href="../qtqml/qml-string.html">string</a></span><i> contextId</i>, <span class="type">any</span>)</p></td></tr></table></div><div class="qmldoc"></div></div><!-- @@@getContext -->
+<br/>
+<!-- $$$requestPaint -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="requestPaint-method"></a>Canvas::<span class="name">requestPaint</span>()</p></td></tr></table></div><div class="qmldoc"><p>Request the entire visible region be re-drawn.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#markDirty-method">markDirty()</a>.</p>
+</div></div><!-- @@@requestPaint -->
+<br/>
+<!-- $$$toDataURL -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toDataURL-method"></a><span class="type"><a href="../qtqml/qml-string.html">string</a></span> Canvas::<span class="name">toDataURL</span>(<span class="type"><a href="../qtqml/qml-string.html">string</a></span><i> mimeType</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a data URL for the image in the canvas.</p>
+<p>The default <i>mimeType</i> is &quot;image/png&quot;.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#save-method">save()</a>.</p>
+</div></div><!-- @@@toDataURL -->
+<br/>
+<!-- $$$unloadImage -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="unloadImage-method"></a>Canvas::<span class="name">unloadImage</span>(<span class="type"><a href="../qtqml/qml-url.html">url</a></span><i> image</i>)</p></td></tr></table></div><div class="qmldoc"><p>Unloads the <tt>image</tt>.</p>
+<p>Once an image is unloaded it cannot be painted by the canvas context unless it is loaded again.</p>
+<p><b>See also </b><a href="qml-qtquick2-canvas.html#loadImage-method">loadImage()</a>, <a href="qml-qtquick2-canvas.html#onImageLoaded-signal">onImageLoaded</a>, <a href="qml-qtquick2-canvas.html#isImageLoaded-method">isImageLoaded()</a>, <a href="qml-qtquick2-context2d.html#createImageData-method">Context2D::createImageData()</a>, and <a href="qml-qtquick2-context2d.html#drawImage-method">Context2D::drawImage</a>.</p>
+</div></div><!-- @@@unloadImage -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- portingcppapps_toqt5.qdoc -->
+  <title>QtDoc 5.0: Porting C++ Applications to Qt 5</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#related-topics">Related topics</a></li>
+</ul>
+</div>
+<h1 class="title">Porting C++ Applications to Qt 5</h1>
+<span class="subtitle"></span>
+<!-- $$$portingcppapp.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>This topic talks about the Qt Widgets change and provides guidance to handle it. The following step-by-step instructions takes you through the changes required to port the <a href="../qtwidgets/animation-animatedtiles.html">Animated Tiles</a> C++ application to Qt 5:</p>
+<ol class="1">
+<li>Edit <tt>main.cpp</tt> and change the <tt>#include &lt;QtGui&gt;</tt> to <tt>#include &lt;QtWidgets&gt;</tt>.<p><b>Note: </b>You can find a perl script called fixqt4headers in the bin directory of your Qt package that will automate many of the required header file changes.</p></li>
+<li>Edit the <tt>animatedtiles.pro</tt> and add <tt>QT += widgets</tt> towards the end of the file.<p><b>Note: </b><a href="../qtgui/qtgui-module.html">QtGui</a> is included by default in all Qt applications unless excluded using the <tt>QT -= gui</tt> directive in the <tt>qmake</tt> project file.</p></li>
+<li>Run qmake and make utilities to build the binary.</li>
+</ol>
+<p>This creates the <tt>animatedtiles</tt> executable. Try running the executable to see if the application behaves as expected.</p>
+<p class="centerAlign"><img src="images/animatedtiles_snapshot.png" alt="&quot;A snapshot of the \c animatedtiles application running on Ubuntu v12.04&quot;" /></p><p>A similar change is needed for porting Qt 4 applications using Qt WebKit to Qt 5. The following step-by-step instructions take you through the changes required to achieve this:</p>
+<ol class="1">
+<li>If using <tt>#include &lt;QtWebKit&gt;</tt>, add <tt>#include &lt;QtWebKitWidgets</tt> in your source code.</li>
+<li>Edit the pro file and add <tt>QT += webkitwidgets</tt> towards the end of the file.</li>
+<li>Run qmake and make utilities to build the binary.</li>
+</ol>
+<a name="related-topics"></a>
+<h2>Related topics</h2>
+<ul>
+<li>API Changes</li>
+<li><a href="portingqmlapp.html">Porting QML Applications to Qt 5 Example</a></li>
+<li>QML Examples and Demos</li>
+</ul>
+</div>
+<!-- @@@portingcppapp.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

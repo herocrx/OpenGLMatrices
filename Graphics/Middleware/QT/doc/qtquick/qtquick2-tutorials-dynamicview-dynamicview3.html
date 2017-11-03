@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- dynamicview-tutorial.qdoc -->
+  <title>QtQuick 5.0: QML Dynamic View Ordering Tutorial 3 - Moving Dragged Items</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="qtquick2-tutorials-dynamicview-dynamicview2.html" />
+  <link rel="next" href="qtquick2-tutorials-dynamicview-dynamicview4.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="qtquick2-tutorials-dynamicview-dynamicview2.html">QML Dynamic View Ordering Tutorial 2 - Dragging View Items</a>
+<a class="nextPage" href="qtquick2-tutorials-dynamicview-dynamicview4.html">QML Dynamic View Ordering Tutorial 4 - Sorting Items</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level2"><a href="#walkthrough">Walkthrough</a></li>
+</ul>
+</div>
+<h1 class="title">QML Dynamic View Ordering Tutorial 3 - Moving Dragged Items</h1>
+<span class="subtitle"></span>
+<!-- $$$tutorials/dynamicview/dynamicview3-description -->
+<div class="descr"> <a name="details"></a>
+<p>The next step in our application to move items within the list as they're dragged so that we can re-order the list. To achieve this we introduce three new elements to our application; <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a>, <a href="qml-qtquick2-drag.html">Drag</a> and <a href="qml-qtquick2-droparea.html">DropArea</a>.</p>
+<pre class="qml"></pre>
+<a name="walkthrough"></a>
+<h3>Walkthrough</h3>
+<p>In order to re-order the view we need to determine when one item has been dragged over another. With the Drag attached property we can generate events that are sent to the scene graph whenever the item it is attached to moves.</p>
+<pre class="qml"></pre>
+<p>Drag events are only sent while the active property is true, so in this example the first event would be sent when the delegate was held with additional event sents when dragging. The <a href="qml-qtquick2-drag.html#hotSpot-prop">hotSpot</a> property specifies the relative position of the drag events within the dragged item, the center of the item in this instance.</p>
+<p>Then we use a <a href="qml-qtquick2-droparea.html">DropArea</a> in each view item to determine when the hot spot of the dragged item intersects another item, when a drag enters one of these DropAreas we can move the dragged item to the index of the item it was dragged over.</p>
+<pre class="qml"></pre>
+<p>To move the items within the view we use a <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a>. The <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> element is used by the view elements to instantiate delegate items from model data and when constructed explicitly can be used to filter and re-order the model items provided to <a href="qml-qtquick2-listview.html">ListView</a>. The <a href="qml-qtquick2-visualdatamodel.html#items-prop">items</a> property of <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> provides access to the view's items and allows us to change the visible order without modifying the source model. To determine the current visible index of the items we use <a href="qml-qtquick2-visualdatamodel.html#itemsIndex-prop">itemsIndex</a> property on the <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> attached property of the delegate item.</p>
+<p>To utilize a <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> with a <a href="qml-qtquick2-listview.html">ListView</a> we bind it to the <a href="qml-qtquick2-listview.html#model-prop">model</a> property of the view and bind the <a href="qml-qtquick2-visualdatamodel.html#model-prop">model</a> and <a href="qml-qtquick2-visualdatamodel.html#delegate-prop">delegate</a> to the <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a>.</p>
+<pre class="qml"></pre>
+<p>Files:</p>
+<ul>
+<li><a href="tutorials-dynamicview-dynamicview3-petsmodel-qml.html">tutorials/dynamicview/dynamicview3/PetsModel.qml</a></li>
+<li><a href="tutorials-dynamicview-dynamicview3-dynamicview-qml.html">tutorials/dynamicview/dynamicview3/dynamicview.qml</a></li>
+<li><a href="tutorials-dynamicview-dynamicview3-dynamicview3-qmlproject.html">tutorials/dynamicview/dynamicview3/dynamicview3.qmlproject</a></li>
+</ul>
+</div>
+<!-- @@@tutorials/dynamicview/dynamicview3 -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qtquick2-tutorials-dynamicview-dynamicview2.html">QML Dynamic View Ordering Tutorial 2 - Dragging View Items</a>
+<a class="nextPage" href="qtquick2-tutorials-dynamicview-dynamicview4.html">QML Dynamic View Ordering Tutorial 4 - Sorting Items</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qstylehints.cpp -->
+  <title>QtGui 5.0: QStyleHints Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QStyleHints Class</h1>
+<!-- $$$QStyleHints-brief -->
+<p>The QStyleHints class contains platform specific hints and settings. <a href="#details">More...</a></p>
+<!-- @@@QStyleHints -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QStyleHints&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<p>This class was introduced in QtGui 5.0.</p>
+<ul>
+<li><a href="qstylehints-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#cursorFlashTime">cursorFlashTime</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> qreal </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#fontSmoothingGamma">fontSmoothingGamma</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#keyboardAutoRepeatRate">keyboardAutoRepeatRate</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#keyboardInputInterval">keyboardInputInterval</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#mouseDoubleClickInterval">mouseDoubleClickInterval</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#passwordMaskDelay">passwordMaskDelay</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#showIsFullScreen">showIsFullScreen</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#startDragDistance">startDragDistance</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#startDragTime">startDragTime</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#startDragVelocity">startDragVelocity</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qstylehints.html#useRtlExtensions">useRtlExtensions</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QStyleHints-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QStyleHints class contains platform specific hints and settings.</p>
+<p>An object of this class, obtained from <a href="qguiapplication.html">QGuiApplication</a>, provides access to certain global user interface parameters of the current platform.</p>
+<p>Access is read only; typically the platform itself provides the user a way to tune these parameters.</p>
+<p>Access to these parameters are useful when implementing custom user interface components, in that they allow the components to exhibit the same behaviour and feel as other components.</p>
+</div>
+<p><b>See also </b><a href="qguiapplication.html#styleHints">QGuiApplication::styleHints</a>() and QPlatformTheme.</p>
+<!-- @@@QStyleHints -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$cursorFlashTime[overload1]$$$cursorFlashTime -->
+<h3 class="fn"><a name="cursorFlashTime"></a><span class="type">int</span> QStyleHints::<span class="name">cursorFlashTime</span>() const</h3>
+<p>Returns the text cursor's flash (blink) time in milliseconds.</p>
+<p>The flash time is the time used to display, invert and restore the caret display. Usually the text cursor is displayed for half the cursor flash time, then hidden for the same amount of time.</p>
+<!-- @@@cursorFlashTime -->
+<!-- $$$fontSmoothingGamma[overload1]$$$fontSmoothingGamma -->
+<h3 class="fn"><a name="fontSmoothingGamma"></a><span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> QStyleHints::<span class="name">fontSmoothingGamma</span>() const</h3>
+<p>Returns the gamma value used in font smoothing.</p>
+<!-- @@@fontSmoothingGamma -->
+<!-- $$$keyboardAutoRepeatRate[overload1]$$$keyboardAutoRepeatRate -->
+<h3 class="fn"><a name="keyboardAutoRepeatRate"></a><span class="type">int</span> QStyleHints::<span class="name">keyboardAutoRepeatRate</span>() const</h3>
+<p>Returns the rate, in events per second, in which additional repeated key presses will automatically be generated if a key is being held down.</p>
+<!-- @@@keyboardAutoRepeatRate -->
+<!-- $$$keyboardInputInterval[overload1]$$$keyboardInputInterval -->
+<h3 class="fn"><a name="keyboardInputInterval"></a><span class="type">int</span> QStyleHints::<span class="name">keyboardInputInterval</span>() const</h3>
+<p>Returns the time limit, in milliseconds, that distinguishes a key press from two consecutive key presses.</p>
+<!-- @@@keyboardInputInterval -->
+<!-- $$$mouseDoubleClickInterval[overload1]$$$mouseDoubleClickInterval -->
+<h3 class="fn"><a name="mouseDoubleClickInterval"></a><span class="type">int</span> QStyleHints::<span class="name">mouseDoubleClickInterval</span>() const</h3>
+<p>Returns the time limit in milliseconds that distinguishes a double click from two consecutive mouse clicks.</p>
+<!-- @@@mouseDoubleClickInterval -->
+<!-- $$$passwordMaskDelay[overload1]$$$passwordMaskDelay -->
+<h3 class="fn"><a name="passwordMaskDelay"></a><span class="type">int</span> QStyleHints::<span class="name">passwordMaskDelay</span>() const</h3>
+<p>Returns the time, in milliseconds, a typed letter is displayed unshrouded in a text input field in password mode.</p>
+<!-- @@@passwordMaskDelay -->
+<!-- $$$showIsFullScreen[overload1]$$$showIsFullScreen -->
+<h3 class="fn"><a name="showIsFullScreen"></a><span class="type">bool</span> QStyleHints::<span class="name">showIsFullScreen</span>() const</h3>
+<p>Returns <tt>true</tt> if the platform defaults to windows being fullscreen, otherwise <tt>false</tt>.</p>
+<p><b>See also </b><a href="qwindow.html#show">QWindow::show</a>().</p>
+<!-- @@@showIsFullScreen -->
+<!-- $$$startDragDistance[overload1]$$$startDragDistance -->
+<h3 class="fn"><a name="startDragDistance"></a><span class="type">int</span> QStyleHints::<span class="name">startDragDistance</span>() const</h3>
+<p>Returns the distance, in pixels, that the mouse must be moved with a button held down before a drag and drop operation will begin.</p>
+<p>If you support drag and drop in your application, and want to start a drag and drop operation after the user has moved the cursor a certain distance with a button held down, you should use this property's value as the minimum distance required.</p>
+<p>For example, if the mouse position of the click is stored in <tt>startPos</tt> and the current position (e.g&#x2e; in the mouse move event) is <tt>currentPos</tt>, you can find out if a drag should be started with code like this:</p>
+<pre class="cpp"><span class="keyword">if</span> ((startPos <span class="operator">-</span> currentPos)<span class="operator">.</span>manhattanLength() <span class="operator">&gt;</span><span class="operator">=</span>
+        <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span><span class="operator">::</span>startDragDistance())
+    startTheDrag();</pre>
+<p><b>See also </b><a href="qstylehints.html#startDragTime">startDragTime</a>(), <a href="../qtcore/qpoint.html#manhattanLength">QPoint::manhattanLength</a>(), and <a href="dnd.html">Drag and Drop</a>.</p>
+<!-- @@@startDragDistance -->
+<!-- $$$startDragTime[overload1]$$$startDragTime -->
+<h3 class="fn"><a name="startDragTime"></a><span class="type">int</span> QStyleHints::<span class="name">startDragTime</span>() const</h3>
+<p>Returns the time, in milliseconds, that a mouse button must be held down before a drag and drop operation will begin.</p>
+<p>If you support drag and drop in your application, and want to start a drag and drop operation after the user has held down a mouse button for a certain amount of time, you should use this property's value as the delay.</p>
+<p><b>See also </b><a href="qstylehints.html#startDragDistance">startDragDistance</a>() and <a href="dnd.html">Drag and Drop</a>.</p>
+<!-- @@@startDragTime -->
+<!-- $$$startDragVelocity[overload1]$$$startDragVelocity -->
+<h3 class="fn"><a name="startDragVelocity"></a><span class="type">int</span> QStyleHints::<span class="name">startDragVelocity</span>() const</h3>
+<p>Returns the limit for the velocity, in pixels per second, that the mouse may be moved, with a button held down, for a drag and drop operation to begin. A value of 0 means there is no such limit.</p>
+<p><b>See also </b><a href="qstylehints.html#startDragDistance">startDragDistance</a>() and <a href="dnd.html">Drag and Drop</a>.</p>
+<!-- @@@startDragVelocity -->
+<!-- $$$useRtlExtensions[overload1]$$$useRtlExtensions -->
+<h3 class="fn"><a name="useRtlExtensions"></a><span class="type">bool</span> QStyleHints::<span class="name">useRtlExtensions</span>() const</h3>
+<p>Returns <tt>true</tt> if right-to-left writing direction is enabled, otherwise <tt>false</tt>.</p>
+<!-- @@@useRtlExtensions -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

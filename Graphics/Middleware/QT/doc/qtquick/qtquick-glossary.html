@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- glossary.qdoc -->
+  <title>QtQuick 5.0: Qt Quick Glossary Of Terms</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#common-terms">Common Terms</a></li>
+<li class="level1"><a href="#indexed-alphabetically">Indexed Alphabetically</a></li>
+</ul>
+</div>
+<h1 class="title">Qt Quick Glossary Of Terms</h1>
+<span class="subtitle"></span>
+<!-- $$$qtquick-glossary.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="common-terms"></a>
+<h2>Common Terms</h2>
+<table class="generic">
+ <thead><tr class="qt-style"><th >Term</th><th >Definition</th></tr></thead>
+<tr valign="top" class="odd"><td >QML</td><td >The language in which QML applications are written. The language architecture and engine are implemented by the Qt QML module.</td></tr>
+<tr valign="top" class="even"><td >Qt Quick</td><td >The standard library of types and functionality for the QML language, which is provided by the Qt Quick module, and may be accessed with &quot;import <a href="qtquick-module.html">QtQuick</a> 2.0&quot;</td></tr>
+<tr valign="top" class="odd"><td >Type</td><td >In QML, a <i>type</i> may refer to either a <a href="../qtqml/qtqml-typesystem-topic.html">Basic Type</a> or a <a href="../qtqml/qtqml-typesystem-topic.html">QML Object Type</a>.<p>The QML language provides a number of built in (<a href="../qtqml/qtqml-typesystem-basictypes.html">basic types</a>), and the <a href="qtquick-module.html">QtQuick</a> module provides various <a href="qtquick-qmltypereference.html">Qt Quick types</a> for building QML applications. Types can also be provided by third-party developers through (<a href="../qtqml/qtqml-modules-topic.html">modules</a>) or by the application developer in the application itself through <a href="../qtqml/qtqml-documents-definetypes.html">QML Documents</a>.</p>
+<p>See <a href="../qtqml/qtqml-typesystem-topic.html">The QML Type System</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="even"><td >Basic Type</td><td >A <a href="../qtqml/qtqml-typesystem-topic.html">basic type</a> is a simple type such as <tt>int</tt>, <tt>string</tt> and <tt>bool</tt>. Unlike <a href="../qtqml/qtqml-typesystem-topic.html">object types</a>, an object cannot be instantiated from a basic type; for example, it is not possible to create an <tt>int</tt> object with properties, methods, signals and so on.<p>Basic types are built into the QML language, whereas object types cannot be used unless the appropriate <a href="../qtqml/qtqml-modules-topic.html">module</a> is imported.</p>
+<p>See <a href="../qtqml/qtqml-typesystem-topic.html">The QML Type System</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="odd"><td >Object Type</td><td >A <a href="../qtqml/qtqml-typesystem-topic.html">QML Object Type</a> is a type that can be instantiated by the QML engine.<p>A QML type can be defined either by a document in a .qml file beginning with a capital letter, or by a <a href="../qtcore/qobject.html">QObject</a>-based C++ class.</p>
+<p>See <a href="../qtqml/qtqml-typesystem-topic.html">The QML Type System</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="even"><td >Object</td><td >A QML object is an instance of a <a href="../qtqml/qtqml-typesystem-topic.html">QML Object Type</a>.<p>Such objects are created by the engine when it processes <a href="../qtqml/qtqml-syntax-basics.html">object declarations</a>, which specify the objects to be created and the attributes that are to be defined for each object.</p>
+<p>Additionally, objects can be dynamically created at runtime through Component.createObject() and Qt.createQmlObject().</p>
+<p>See also <a href="#lazy-instantiation">Lazy Instantiation</a>.</p>
+</td></tr>
+<tr valign="top" class="odd"><td >Component</td><td >A component is a template from which a QML object or object tree is created. It is produced when a document is loaded by the QML engine. Once it has been loaded, it can be used to instantiate the object or object tree that it represents.<p>Additionally, the <a href="../qtqml/qml-qtquick2-component.html">Component</a> type is a special type that can can be used to declare a component inline within a document. Component objects can also be dynamically created through Qt.createComponent() to dynamically create QML objects.</p>
+</td></tr>
+<tr valign="top" class="even"><td >Document</td><td >A <a href="../qtqml/qtqml-documents-topic.html">QML Document</a> is a self contained piece of QML source code that begins with one or more import statements and contains a single top-level object declaration. A document may reside in a .qml file or a text string.<p>If it is placed in a .qml file whose name begins with a capital letter, the file is recognized by the engine as a definition of a QML type. The top-level object declaration encapsulates the object tree that will be instantiated by the type.</p>
+</td></tr>
+<tr valign="top" class="odd"><td >Property</td><td >A property is an attribute of an object type that has a name and an associated value; this value can be read (and in most cases, also written to) externally.<p>An object can have one or more properties. Some properties are associated with the canvas (e.g&#x2e;, x, y, width, height, and opacity) while others may be data specific to that type (e.g&#x2e;, the &quot;text&quot; property of the <a href="qml-qtquick2-text.html">Text</a> type).</p>
+<p>See <a href="../qtqml/qtqml-syntax-objectattributes.html">QML Object Attributes</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="even"><td >Binding</td><td >A binding is a JavaScript expression which is &quot;bound&quot; to a property. The value of the property at any point in time will be the value returned by evaluating that expression.<p>See <a href="../qtqml/qtqml-syntax-propertybinding.html">Property Binding</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="odd"><td >Signal</td><td >A signal is a notification from a QML object. When an object emits a signal, other objects can receive and process this signal through a <a href="../qtqml/qtqml-syntax-objectattributes.html#signal-attributes">signal handler</a>.<p>Most properties of QML objects have a change signal, and also an associated change signal handler which may be defined by clients to implement functionality. For example, the &quot;onClicked()&quot; handler of an instance of the <a href="qml-qtquick2-mousearea.html">MouseArea</a> type might be defined in an application to cause a sound to be played.</p>
+<p>See <a href="../qtqml/qtqml-syntax-signals.html">Signal and Handler Event System</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="even"><td >Signal Handler</td><td >A signal handler is the expression (or function) which is triggered by a signal. It is also known as a &quot;slot&quot; in C++.<p>See <a href="../qtqml/qtqml-syntax-signals.html">Signal and Handler Event System</a> for more details.</p>
+</td></tr>
+<tr valign="top" class="odd"><a name="lazy-instantiation"></a><td >Lazy Instantiation</td><td >Object instances can be instantiated &quot;lazily&quot; at run-time, to avoid performing unnecessary work until needed. Qt Quick provides the <a href="qml-qtquick2-loader.html">Loader</a> element to make lazy instantiation more convenient.</td></tr>
+</table>
+<a name="indexed-alphabetically"></a>
+<h2>Indexed Alphabetically</h2>
+</div>
+<!-- @@@qtquick-glossary.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

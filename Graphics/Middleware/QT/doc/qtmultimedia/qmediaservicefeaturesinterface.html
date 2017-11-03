@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmediaserviceprovider.cpp -->
+  <title>qtmultimedia 5.0: QMediaServiceFeaturesInterface Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QMediaServiceFeaturesInterface Class</h1>
+<!-- $$$QMediaServiceFeaturesInterface-brief -->
+<p>The QMediaServiceFeaturesInterface class interface identifies features supported by a media service plug-in. <a href="#details">More...</a></p>
+<!-- @@@QMediaServiceFeaturesInterface -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QMediaServiceFeaturesInterface&gt;</span></pre><ul>
+<li><a href="qmediaservicefeaturesinterface-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qmediaservicefeaturesinterface.html#dtor.QMediaServiceFeaturesInterface">~QMediaServiceFeaturesInterface</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QMediaServiceProviderHint::Features </td><td class="memItemRight bottomAlign"><b><a href="qmediaservicefeaturesinterface.html#supportedFeatures">supportedFeatures</a></b>(const QByteArray &amp;<i> service</i>) const = 0</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QMediaServiceFeaturesInterface-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QMediaServiceFeaturesInterface class interface identifies features supported by a media service plug-in.</p>
+<p>A <a href="qmediaserviceproviderplugin.html">QMediaServiceProviderPlugin</a> may implement this interface.</p>
+</div>
+<!-- @@@QMediaServiceFeaturesInterface -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$~QMediaServiceFeaturesInterface[overload1]$$$~QMediaServiceFeaturesInterface -->
+<h3 class="fn"><a name="dtor.QMediaServiceFeaturesInterface"></a>QMediaServiceFeaturesInterface::<span class="name">~QMediaServiceFeaturesInterface</span>()<tt> [virtual]</tt></h3>
+<p>Destroys a media service features interface.</p>
+<!-- @@@~QMediaServiceFeaturesInterface -->
+<!-- $$$supportedFeatures[overload1]$$$supportedFeaturesconstQByteArray& -->
+<h3 class="fn"><a name="supportedFeatures"></a><span class="type"><a href="qmediaserviceproviderhint.html#Feature-enum">QMediaServiceProviderHint::Features</a></span> QMediaServiceFeaturesInterface::<span class="name">supportedFeatures</span>(const <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> &amp;<i> service</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns a set of features supported by a plug-in <i>service</i>.</p>
+<!-- @@@supportedFeatures -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

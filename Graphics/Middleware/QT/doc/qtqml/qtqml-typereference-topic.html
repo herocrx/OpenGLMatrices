@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmltypereference.qdoc -->
+  <title>QtQml 5.0: QML Types Provided By The QtQml Module</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#importing-qtqml">Importing QtQml</a></li>
+<li class="level1"><a href="#basic-types">Basic Types</a></li>
+<li class="level1"><a href="#object-types">Object Types</a></li>
+<li class="level2"><a href="#qtobject">QtObject</a></li>
+<li class="level2"><a href="#component">Component</a></li>
+</ul>
+</div>
+<h1 class="title">QML Types Provided By The QtQml Module</h1>
+<span class="subtitle"></span>
+<!-- $$$qtqml-typereference-topic.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>QtQml</tt> module provides the definition and implementation of various convenience types which can be used with the QML language, including some elementary QML types which can provide the basis for further extensions to the QML language.</p>
+<p>The <tt>QtQml</tt> module provides the <tt>QtObject</tt> and <tt>Component</tt> object types which may be used in QML documents. These types are non-visual and provide building-blocks for extensions to QML.</p>
+<a name="importing-qtqml"></a>
+<h2>Importing QtQml</h2>
+<p>The types provided by the <tt>QtQml</tt> module are only available in a QML document if that document imports the <tt>QtQml</tt> namespace (or if the document imports the <tt>QtQuick</tt> namespace, as noted below).</p>
+<p>The current version of the <tt>QtQml</tt> module is version 2.0, and thus it may be imported via the following statement:</p>
+<pre class="qml">import QtQml 2.0</pre>
+<p>Most clients will never need to use the <tt>QtQml</tt> import, as all of the types and functionality provided by the <tt>QtQml</tt> namespace are also provided by the <tt>QtQuick</tt> namespace which may be imported as follows:</p>
+<pre class="qml">import QtQuick 2.0</pre>
+<p>See the <a href="../qtquick/qtquick-module.html">QtQuick</a> module documentation for more information about the <tt>QtQuick</tt> namespace and what it provides to QML application developers.</p>
+<p>The documentation for the types below applies equally to the types of the same name provided by the <a href="../qtquick/qtquick-module.html">QtQuick</a> module, as they are in fact identical.</p>
+<a name="basic-types"></a>
+<h2>Basic Types</h2>
+<p>The following <a href="qtqml-typesystem-basictypes.html">QML basic types</a> are provided:</p>
+<table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-date.html">date</a></p></td><td class="tblDescr"><p>a date value.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-time.html">time</a></p></td><td class="tblDescr"><p>a time value.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-point.html">point</a></p></td><td class="tblDescr"><p>a value with x and y attributes.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-size.html">size</a></p></td><td class="tblDescr"><p>a value with width and height attributes</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-rect.html">rect</a></p></td><td class="tblDescr"><p>a value with x, y, width and height attributes.</p></td></tr>
+</table>
+<a name="object-types"></a>
+<h2>Object Types</h2>
+<p>The following <a href="qtqml-typesystem-objecttypes.html">QML object types</a> are provided:</p>
+<a name="qtobject"></a>
+<h3>QtObject</h3>
+<p>The <tt>QtObject</tt> type provides a basic instantiable object which can be used in QML applications. It is non-visual, but may have properties, methods, signals and signal handlers.</p>
+<p>For example, the following <a href="qml-qtquick2-qtobject.html">QtObject</a> has several properties, one of which has been assigned a <a href="qtqml-syntax-propertybinding.html">binding</a>, and a <a href="qtqml-syntax-signals.html">signal handler</a> for the default change signal which exists for one of its properties:</p>
+<pre class="cpp">    import <span class="type"><a href="../qtquick/qtquick-module.html">QtQuick</a></span> <span class="number">2.0</span>
+
+    <span class="type"><a href="qml-qtquick2-qtobject.html">QtObject</a></span> {
+        property <span class="type">int</span> a: <span class="number">15</span>
+        property <span class="type">int</span> b: a <span class="operator">+</span> <span class="number">22</span>
+        property <span class="type">int</span> changeCount: <span class="number">0</span>
+
+        onAChanged: {
+            changeCount <span class="operator">+</span><span class="operator">=</span> <span class="number">1</span>;
+        }
+    }</pre>
+<a name="component"></a>
+<h3>Component</h3>
+<p>The <tt>Component</tt> type provides a basic re-usable component which allows instances of another type to be instantiated on-demand. It may be given an <tt>id</tt> and it has a default property which is the object type to instantiate, but no other properties may be added to it.</p>
+<p>For example, the following <a href="qml-qtquick2-qtobject.html">QtObject</a> has two different <a href="qml-qtquick2-component.html">Component</a> properties, and it uses those components to dynamically construct objects at run-time:</p>
+<pre class="cpp">    import <span class="type"><a href="../qtquick/qtquick-module.html">QtQuick</a></span> <span class="number">2.0</span>
+
+    <span class="type"><a href="qml-qtquick2-qtobject.html">QtObject</a></span> {
+        id: root
+        property <span class="type">bool</span> which: <span class="keyword">true</span>
+
+        property Component a: Component {
+            id: firstComponent
+            <span class="type"><a href="qml-qtquick2-qtobject.html">QtObject</a></span> {
+                property <span class="type">int</span> answer: <span class="number">42</span>
+                function activate() {
+                    console<span class="operator">.</span>log(<span class="string">&quot;The answer is: &quot;</span> <span class="operator">+</span> answer);
+                }
+            }
+        }
+
+        property Component b: Component {
+            id: secondComponent
+            <span class="type"><a href="qml-qtquick2-qtobject.html">QtObject</a></span> {
+                property string message: <span class="string">&quot;Hello, World!&quot;</span>
+                function activate() {
+                    console<span class="operator">.</span>log(message);
+                }
+            }
+        }
+
+        function activateDynamicObject() {
+            var o <span class="operator">=</span> {};
+            <span class="keyword">if</span> (which) {
+                which <span class="operator">=</span> <span class="keyword">false</span>;
+                o <span class="operator">=</span> a<span class="operator">.</span>createObject(null); <span class="comment">// no parent</span>
+            } <span class="keyword">else</span> {
+                which <span class="operator">=</span> <span class="keyword">true</span>;
+                o <span class="operator">=</span> b<span class="operator">.</span>createObject(null); <span class="comment">// no parent</span>
+            }
+            o<span class="operator">.</span>activate();
+        }
+    }</pre>
+</div>
+<!-- @@@qtqml-typereference-topic.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

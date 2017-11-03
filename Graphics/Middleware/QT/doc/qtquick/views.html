@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- views.qdoc -->
+  <title>QtQuick 5.0: QtQuick Examples - Views</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level2"><a href="#gridview-and-pathview-demonstrate-usage-of-these-elements-to-display-views">GridView and PathView demonstrate usage of these elements to display views.</a></li>
+<li class="level2"><a href="#dynamic-list-demonstrates-animation-of-runtime-additions-and-removals-to-a-listview">Dynamic List demonstrates animation of runtime additions and removals to a ListView.</a></li>
+<li class="level2"><a href="#expanding-delegates-demonstrates-delegates-that-expand-when-activated">Expanding Delegates demonstrates delegates that expand when activated.</a></li>
+<li class="level2"><a href="#highlight-demonstrates-adding-a-custom-highlight-to-a-listview">Highlight demonstrates adding a custom highlight to a ListView.</a></li>
+<li class="level2"><a href="#highlight-ranges-shows-the-three-different-highlight-range-modes-of-listview">Highlight Ranges shows the three different highlight range modes of ListView.</a></li>
+<li class="level2"><a href="#sections-demonstrates-the-various-section-headers-and-footers-available-to-listview">Sections demonstrates the various section headers and footers available to ListView.</a></li>
+<li class="level2"><a href="#packages-demonstrates-using-packages-to-transition-delegates-between-two-views">Packages demonstrates using Packages to transition delegates between two views.</a></li>
+<li class="level2"><a href="#visualitemmodel-uses-a-visualitemmodel-for-the-model-instead-of-a-listmodel">VisualItemModel uses a VisualItemModel for the model instead of a ListModel.</a></li>
+</ul>
+</div>
+<h1 class="title">QtQuick Examples - Views</h1>
+<span class="subtitle"></span>
+<!-- $$$views-description -->
+<div class="descr"> <a name="details"></a>
+<p>This is a collection of QML model/view examples<p class="centerAlign"><img src="images/qml-modelviews-example.png" alt="" /></p><p>This is a collection of small QML examples relating to model and view functionality. They demonstrate how to show data from a model using the <a href="qtquick-module.html">QtQuick</a> view types.</p>
+<a name="gridview-and-pathview-demonstrate-usage-of-these-elements-to-display-views"></a>
+<h3>GridView and PathView demonstrate usage of these elements to display views.</h3>
+<pre class="qml"></pre>
+<a name="dynamic-list-demonstrates-animation-of-runtime-additions-and-removals-to-a-listview"></a>
+<h3>Dynamic List demonstrates animation of runtime additions and removals to a ListView.</h3>
+<p>The <a href="qml-qtquick2-listview.html">ListView</a>.onAdd signal handler runs an animation when new items are added to the view, and the <a href="qml-qtquick2-listview.html">ListView</a>.onRemove another when they are removed.</p>
+<pre class="qml"></pre>
+<a name="expanding-delegates-demonstrates-delegates-that-expand-when-activated"></a>
+<h3>Expanding Delegates demonstrates delegates that expand when activated.</h3>
+<p>It has a complex delegate the size and appearance of which can change, displacing other items in the view.</p>
+<pre class="qml"></pre>
+<a name="highlight-demonstrates-adding-a-custom-highlight-to-a-listview"></a>
+<h3>Highlight demonstrates adding a custom highlight to a ListView.</h3>
+<pre class="qml"></pre>
+<a name="highlight-ranges-shows-the-three-different-highlight-range-modes-of-listview"></a>
+<h3>Highlight Ranges shows the three different highlight range modes of ListView.</h3>
+<pre class="qml"></pre>
+<a name="sections-demonstrates-the-various-section-headers-and-footers-available-to-listview"></a>
+<h3>Sections demonstrates the various section headers and footers available to ListView.</h3>
+<pre class="qml"></pre>
+<a name="packages-demonstrates-using-packages-to-transition-delegates-between-two-views"></a>
+<h3>Packages demonstrates using Packages to transition delegates between two views.</h3>
+<p>It has a Package which defines delegate items for each view and an item that can be transferred between delegates.</p>
+<pre class="qml"></pre>
+<p>A <a href="qml-qtquick2-visualdatamodel.html">VisualDataModel</a> allows the individual views to access their specific items from the shared package delegate.</p>
+<pre class="qml"></pre>
+<a name="visualitemmodel-uses-a-visualitemmodel-for-the-model-instead-of-a-listmodel"></a>
+<h3>VisualItemModel uses a VisualItemModel for the model instead of a ListModel.</h3>
+<pre class="qml"></pre>
+<p>Files:</p>
+<ul>
+<li><a href="views-views-qml.html">views/views.qml</a></li>
+<li><a href="views-gridview-gridview-example-qml.html">views/gridview/gridview-example.qml</a></li>
+<li><a href="views-listview-dynamiclist-qml.html">views/listview/dynamiclist.qml</a></li>
+<li><a href="views-listview-expandingdelegates-qml.html">views/listview/expandingdelegates.qml</a></li>
+<li><a href="views-listview-highlight-qml.html">views/listview/highlight.qml</a></li>
+<li><a href="views-listview-highlightranges-qml.html">views/listview/highlightranges.qml</a></li>
+<li><a href="views-listview-sections-qml.html">views/listview/sections.qml</a></li>
+<li><a href="views-listview-content-petsmodel-qml.html">views/listview/content/PetsModel.qml</a></li>
+<li><a href="views-listview-content-pressandholdbutton-qml.html">views/listview/content/PressAndHoldButton.qml</a></li>
+<li><a href="views-listview-content-recipesmodel-qml.html">views/listview/content/RecipesModel.qml</a></li>
+<li><a href="views-listview-content-smalltext-qml.html">views/listview/content/SmallText.qml</a></li>
+<li><a href="views-listview-content-textbutton-qml.html">views/listview/content/TextButton.qml</a></li>
+<li><a href="views-listview-content-togglebutton-qml.html">views/listview/content/ToggleButton.qml</a></li>
+<li><a href="views-package-delegate-qml.html">views/package/Delegate.qml</a></li>
+<li><a href="views-package-view-qml.html">views/package/view.qml</a></li>
+<li><a href="views-parallax-parallax-qml.html">views/parallax/parallax.qml</a></li>
+<li><a href="views-parallax-content-clock-qml.html">views/parallax/content/Clock.qml</a></li>
+<li><a href="views-parallax-content-parallaxview-qml.html">views/parallax/content/ParallaxView.qml</a></li>
+<li><a href="views-parallax-content-quitbutton-qml.html">views/parallax/content/QuitButton.qml</a></li>
+<li><a href="views-parallax-content-smiley-qml.html">views/parallax/content/Smiley.qml</a></li>
+<li><a href="views-parallax-content-pics-home-page-svg.html">views/parallax/content/pics/home-page.svg</a></li>
+<li><a href="views-pathview-pathview-example-qml.html">views/pathview/pathview-example.qml</a></li>
+<li><a href="views-visualdatamodel-dragselection-qml.html">views/visualdatamodel/dragselection.qml</a></li>
+<li><a href="views-visualdatamodel-slideshow-qml.html">views/visualdatamodel/slideshow.qml</a></li>
+<li><a href="views-visualitemmodel-visualitemmodel-qml.html">views/visualitemmodel/visualitemmodel.qml</a></li>
+<li><a href="views-main-cpp.html">views/main.cpp</a></li>
+<li><a href="views-views-pro.html">views/views.pro</a></li>
+<li><a href="views-views-qmlproject.html">views/views.qmlproject</a></li>
+<li><a href="views-views-qrc.html">views/views.qrc</a></li>
+<li><a href="views-visualdatamodel-visualdatamodel-qmlproject.html">views/visualdatamodel/visualdatamodel.qmlproject</a></li>
+</ul>
+</div>
+<!-- @@@views -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>qtmultimedia 5.0: Content.qml Example File (multimedia/video/qmlvideo/qml/qmlvideo/Content.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Content.qml Example File</h1>
+<span class="small-subtitle">multimedia/video/qmlvideo/qml/qmlvideo/Content.qml</span>
+<!-- $$$multimedia/video/qmlvideo/qml/qmlvideo/Content.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the Qt Mobility Components.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    <span class="name">border</span>.color: <span class="string">&quot;white&quot;</span>
+    <span class="name">border</span>.width: <span class="name">showBorder</span> ? <span class="number">1</span> : <span class="number">0</span>
+    <span class="name">color</span>: <span class="string">&quot;transparent&quot;</span>
+    property <span class="type">string</span> <span class="name">contentType</span> <span class="comment">// &quot;camera&quot; or &quot;video&quot;</span>
+    property <span class="type">string</span> <span class="name">source</span>
+    property <span class="type">real</span> <span class="name">volume</span>
+    property <span class="type">bool</span> <span class="name">dummy</span>: <span class="number">false</span>
+    property <span class="type">bool</span> <span class="name">autoStart</span>: <span class="number">true</span>
+    property <span class="type">bool</span> <span class="name">started</span>: <span class="number">false</span>
+    property <span class="type">bool</span> <span class="name">showFrameRate</span>: <span class="number">false</span>
+    property <span class="type">bool</span> <span class="name">showBorder</span>: <span class="number">false</span>
+
+    signal <span class="type">initialized</span>
+    signal <span class="type">error</span>
+    signal <span class="type">videoFramePainted</span>
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-loader.html">Loader</a></span> {
+        <span class="name">id</span>: <span class="name">contentLoader</span>
+    }
+
+    <span class="type"><a href="../qtqml/qml-qtquick2-connections.html">Connections</a></span> {
+        <span class="name">id</span>: <span class="name">framePaintedConnection</span>
+        <span class="name">onFramePainted</span>: {
+            <span class="keyword">if</span> (<span class="name">frameRateLoader</span>.<span class="name">item</span>)
+                <span class="name">frameRateLoader</span>.<span class="name">item</span>.<span class="name">notify</span>()
+            <span class="name">root</span>.<span class="name">videoFramePainted</span>()
+        }
+        <span class="name">ignoreUnknownSignals</span>: <span class="number">true</span>
+    }
+
+    <span class="type"><a href="../qtqml/qml-qtquick2-connections.html">Connections</a></span> {
+        <span class="name">id</span>: <span class="name">errorConnection</span>
+        <span class="name">onFatalError</span>: {
+            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.onFatalError&quot;</span>)
+            <span class="name">stop</span>()
+            <span class="name">root</span>.<span class="name">error</span>()
+        }
+        <span class="name">ignoreUnknownSignals</span>: <span class="number">true</span>
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-loader.html">Loader</a></span> {
+        <span class="name">id</span>: <span class="name">frameRateLoader</span>
+        <span class="name">source</span>: <span class="name">root</span>.<span class="name">showFrameRate</span> ? <span class="string">&quot;../frequencymonitor/FrequencyItem.qml&quot;</span> : <span class="string">&quot;&quot;</span>
+        <span class="name">onLoaded</span>: {
+            <span class="name">item</span>.<span class="name">parent</span> <span class="operator">=</span> <span class="name">root</span>
+            <span class="name">item</span>.<span class="name">anchors</span>.<span class="name">top</span> <span class="operator">=</span> <span class="name">root</span>.<span class="name">top</span>
+            <span class="name">item</span>.<span class="name">anchors</span>.<span class="name">right</span> <span class="operator">=</span> <span class="name">root</span>.<span class="name">right</span>
+            <span class="name">item</span>.<span class="name">anchors</span>.<span class="name">margins</span> <span class="operator">=</span> <span class="number">10</span>
+        }
+    }
+
+    <span class="name">onWidthChanged</span>: {
+        <span class="keyword">if</span> (<span class="name">contentItem</span>())
+            <span class="name">contentItem</span>().<span class="name">width</span> <span class="operator">=</span> <span class="name">width</span>
+    }
+
+    <span class="name">onHeightChanged</span>: {
+        <span class="keyword">if</span> (<span class="name">contentItem</span>())
+            <span class="name">contentItem</span>().<span class="name">height</span> <span class="operator">=</span> <span class="name">height</span>
+    }
+
+    <span class="keyword">function</span> <span class="name">initialize</span>() {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: contentType &quot;</span> <span class="operator">+</span> <span class="name">contentType</span>)
+        <span class="keyword">if</span> (<span class="string">&quot;video&quot;</span> <span class="operator">==</span> <span class="name">contentType</span>) {
+            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: loading VideoItem.qml&quot;</span>)
+            <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;VideoItem.qml&quot;</span>
+            <span class="keyword">if</span> (<span class="name">Loader</span>.<span class="name">Error</span> <span class="operator">==</span> <span class="name">contentLoader</span>.<span class="name">status</span>) {
+                <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: loading VideoDummy.qml&quot;</span>)
+                <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;VideoDummy.qml&quot;</span>
+                <span class="name">dummy</span> <span class="operator">=</span> <span class="number">true</span>
+            }
+            <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">volume</span> <span class="operator">=</span> <span class="name">volume</span>
+        } <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">&quot;camera&quot;</span> <span class="operator">==</span> <span class="name">contentType</span>) {
+            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: loading CameraItem.qml&quot;</span>)
+            <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;CameraItem.qml&quot;</span>
+            <span class="keyword">if</span> (<span class="name">Loader</span>.<span class="name">Error</span> <span class="operator">==</span> <span class="name">contentLoader</span>.<span class="name">status</span>) {
+                <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: loading CameraDummy.qml&quot;</span>)
+                <span class="name">contentLoader</span>.<span class="name">source</span> <span class="operator">=</span> <span class="string">&quot;CameraDummy.qml&quot;</span>
+                <span class="name">dummy</span> <span class="operator">=</span> <span class="number">true</span>
+            }
+        } <span class="keyword">else</span> {
+            <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: error: invalid contentType&quot;</span>)
+        }
+        <span class="keyword">if</span> (<span class="name">contentLoader</span>.<span class="name">item</span>) {
+            <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">sizeChanged</span>.<span class="name">connect</span>(<span class="name">updateRootSize</span>)
+            <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">parent</span> <span class="operator">=</span> <span class="name">root</span>
+            <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">width</span> <span class="operator">=</span> <span class="name">root</span>.<span class="name">width</span>
+            <span class="name">framePaintedConnection</span>.<span class="name">target</span> <span class="operator">=</span> <span class="name">contentLoader</span>.<span class="name">item</span>
+            <span class="name">errorConnection</span>.<span class="name">target</span> <span class="operator">=</span> <span class="name">contentLoader</span>.<span class="name">item</span>
+            <span class="keyword">if</span> (<span class="name">root</span>.<span class="name">autoStart</span>)
+                <span class="name">root</span>.<span class="name">start</span>()
+        }
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.initialize: complete&quot;</span>)
+        <span class="name">root</span>.<span class="name">initialized</span>()
+    }
+
+    <span class="keyword">function</span> <span class="name">start</span>() {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.start&quot;</span>)
+        <span class="keyword">if</span> (<span class="name">contentLoader</span>.<span class="name">item</span>) {
+            <span class="keyword">if</span> (<span class="name">root</span>.<span class="name">contentType</span> <span class="operator">==</span> <span class="string">&quot;video&quot;</span>)
+                <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">mediaSource</span> <span class="operator">=</span> <span class="name">root</span>.<span class="name">source</span>
+            <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">start</span>()
+            <span class="name">root</span>.<span class="name">started</span> <span class="operator">=</span> <span class="number">true</span>
+        }
+    }
+
+    <span class="keyword">function</span> <span class="name">stop</span>() {
+        <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;[qmlvideo] Content.stop&quot;</span>)
+        <span class="keyword">if</span> (<span class="name">contentLoader</span>.<span class="name">item</span>) {
+            <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">stop</span>()
+            <span class="keyword">if</span> (<span class="name">root</span>.<span class="name">contentType</span> <span class="operator">==</span> <span class="string">&quot;video&quot;</span>)
+                <span class="name">contentLoader</span>.<span class="name">item</span>.<span class="name">mediaSource</span> <span class="operator">=</span> <span class="string">&quot;&quot;</span>
+            <span class="name">root</span>.<span class="name">started</span> <span class="operator">=</span> <span class="number">false</span>
+        }
+    }
+
+    <span class="keyword">function</span> <span class="name">contentItem</span>() { <span class="keyword">return</span> <span class="name">contentLoader</span>.<span class="name">item</span> }
+    <span class="keyword">function</span> <span class="name">updateRootSize</span>() { <span class="name">root</span>.<span class="name">height</span> <span class="operator">=</span> <span class="name">contentItem</span>().<span class="name">height</span> }
+}</pre>
+</div>
+<!-- @@@multimedia/video/qmlvideo/qml/qmlvideo/Content.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

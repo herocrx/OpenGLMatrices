@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0" title="QDoc Manual" version="5.0.2">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <qmlclass access="public" status="commendable" name="ProgressBar" qml-module-name="UIComponents" qml-module-version="1.0" fullname="UIComponents1::ProgressBar" href="qml-uicomponents1-progressbar.html" title="ProgressBar" fulltitle="ProgressBar" subtitle="" location="ProgressBar.qml">
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="color" fullname="UIComponents1::ProgressBar::color" href="qml-uicomponents1-progressbar.html#color-prop" type="color" attached="false" writable="true"/>
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="maximum" fullname="UIComponents1::ProgressBar::maximum" href="qml-uicomponents1-progressbar.html#maximum-prop" type="int" attached="false" writable="true"/>
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="minimum" fullname="UIComponents1::ProgressBar::minimum" href="qml-uicomponents1-progressbar.html#minimum-prop" type="int" attached="false" writable="true"/>
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="secondColor" fullname="UIComponents1::ProgressBar::secondColor" href="qml-uicomponents1-progressbar.html#secondColor-prop" type="color" attached="false" writable="true"/>
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="value" fullname="UIComponents1::ProgressBar::value" href="qml-uicomponents1-progressbar.html#value-prop" type="int" attached="false" writable="true"/>
+        </qmlclass>
+        <qmlclass access="public" status="commendable" name="Switch" qml-module-name="UIComponents" qml-module-version="1.0" fullname="UIComponents1::Switch" href="qml-uicomponents1-switch.html" title="Switch" fulltitle="Switch" subtitle="" location="Switch.qml">
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="on" fullname="UIComponents1::Switch::on" href="qml-uicomponents1-switch.html#on-prop" type="bool" attached="false" writable="true"/>
+            <qmlmethod access="public" threadsafety="unspecified" status="commendable" name="toggle" fullname="UIComponents1::Switch::toggle" href="qml-uicomponents1-switch.html#toggle-method"/>
+        </qmlclass>
+        <qmlclass access="public" status="commendable" name="TabWidget" qml-module-name="UIComponents" qml-module-version="1.0" fullname="UIComponents1::TabWidget" href="qml-uicomponents1-tabwidget.html" title="TabWidget" fulltitle="TabWidget" subtitle="" location="TabWidget.qml">
+            <contents name="adding-tabs" title="Adding Tabs" level="1"/>
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="current" fullname="UIComponents1::TabWidget::current" href="qml-uicomponents1-tabwidget.html#current-prop" type="int" attached="false" writable="true"/>
+            <qmlproperty access="public" threadsafety="unspecified" status="commendable" name="sampleReadOnlyProperty" fullname="UIComponents1::TabWidget::sampleReadOnlyProperty" href="qml-uicomponents1-tabwidget.html#sampleReadOnlyProperty-prop" type="int" attached="false" writable="false"/>
+        </qmlclass>
+        <page access="public" status="commendable" name="corefeatures.html" href="corefeatures.html" subtype="page" title="Core Features" fulltitle="Core Features" subtitle="" location="corefeatures.qdoc" module="QDoc">
+            <contents name="signals-and-slots" title="Signals and Slots" level="1"/>
+            <contents name="introduction" title="Introduction" level="2"/>
+            <contents name="qt-object-model" title="Qt Object Model" level="1"/>
+            <contents name="layout-classes" title="Layout Classes" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="UIComponents 1.0" href="qmlmodule-uicomponents1-uicomponents-1-0.html" subtype="qmlmodule" title="UI Components" fulltitle="UI Components" subtitle="" location="uicomponents.qdoc"/>
+        <page access="public" status="commendable" name="componentset" href="componentset.html" subtype="example" title="QML Documentation Example" fulltitle="QML Documentation Example" subtitle="" location="examples.qdoc" module="QDoc">
+            <contents name="qml-class" title="QML Class" level="1"/>
+            <contents name="properties-signals-handlers-and-methods" title="Properties, Signals, Handlers, and Methods" level="1"/>
+            <contents name="internal-documentation" title="Internal Documentation" level="2"/>
+            <contents name="qml-types-with-c-implementation" title="QML Types with C++ Implementation" level="1"/>
+            <page access="public" status="commendable" name="componentset/ProgressBar.qml" href="componentset-progressbar-qml.html" subtype="file" title="" fulltitle="ProgressBar.qml Example File" subtitle="componentset/ProgressBar.qml" location=""/>
+            <page access="public" status="commendable" name="componentset/Switch.qml" href="componentset-switch-qml.html" subtype="file" title="" fulltitle="Switch.qml Example File" subtitle="componentset/Switch.qml" location=""/>
+            <page access="public" status="commendable" name="componentset/TabWidget.qml" href="componentset-tabwidget-qml.html" subtype="file" title="" fulltitle="TabWidget.qml Example File" subtitle="componentset/TabWidget.qml" location=""/>
+            <page access="public" status="commendable" name="componentset/componentset.pro" href="componentset-componentset-pro.html" subtype="file" title="" fulltitle="componentset.pro Example File" subtitle="componentset/componentset.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="config" href="config.html" subtype="example" title="Configuration File Example" fulltitle="Configuration File Example" subtitle="" location="qdoc-guide.qdoc" module="QDoc">
+            <contents name="macros-and-other-definitions" title="Macros and other Definitions" level="1"/>
+            <contents name="project-information" title="Project Information" level="1"/>
+            <contents name="html-styles" title="HTML Styles" level="1"/>
+            <contents name="project-file" title="Project File" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qdoc-categories.html" href="qdoc-categories.html" subtype="page" title="Categories of Documentation" fulltitle="Categories of Documentation" subtitle="" location="qdoc-guide.qdoc" module="QDoc">
+            <keyword name="qml-documentation"/>
+            <contents name="api-documentation" title="API Documentation" level="1"/>
+            <contents name="language-styles" title="Language Styles" level="2"/>
+            <contents name="documenting-qml-types" title="Documenting QML Types" level="2"/>
+            <contents name="qml-parser" title="QML Parser" level="3"/>
+            <contents name="qml-modules" title="QML Modules" level="3"/>
+            <contents name="read-only-and-internal-qml-properties" title="Read-only and Internal QML Properties" level="3"/>
+            <contents name="articles-overviews" title="Articles &amp; Overviews" level="1"/>
+            <contents name="tutorials-how-to-s-faq-s" title="Tutorials, How-To's, FAQ's" level="1"/>
+            <contents name="code-examples" title="Code Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qdoc-guide-conf.html" href="qdoc-guide-conf.html" subtype="page" title="Creating QDoc Configuration Files" fulltitle="Creating QDoc Configuration Files" subtitle="" location="qdoc-guide.qdoc" module="QDoc">
+            <target name="qdoc-input-output-dir"/>
+            <contents name="qdoc-configuration-files" title="QDoc Configuration Files" level="1"/>
+            <contents name="project-information" title="Project Information" level="2"/>
+            <contents name="input-and-output-directories" title="Input and Output Directories" level="2"/>
+            <contents name="extra-files" title="Extra Files" level="2"/>
+            <contents name="qt-help-framework-configuration" title="Qt Help Framework Configuration" level="2"/>
+            <contents name="html-configuration" title="HTML Configuration" level="2"/>
+            <contents name="dita-xml-configuration" title="DITA XML Configuration" level="2"/>
+            <contents name="qt-index-reference" title="Qt Index Reference" level="2"/>
+            <contents name="macros-and-other-configurations" title="Macros and Other Configurations" level="1"/>
+            <contents name="qml-additions" title="QML Additions" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qdoc-guide-writing.html" href="qdoc-guide-writing.html" subtype="page" title="Writing Documentation" fulltitle="Writing Documentation" subtitle="" location="qdoc-guide.qdoc" module="QDoc">
+            <target name="writing-topic-commands"/>
+            <target name="writing-context"/>
+            <target name="writing-markup"/>
+            <contents name="qdoc-comments" title="QDoc Comments" level="1"/>
+            <contents name="qdoc-commands" title="QDoc Commands" level="1"/>
+            <contents name="qdoc-topics" title="QDoc Topics" level="2"/>
+            <contents name="topic-contexts" title="Topic Contexts" level="2"/>
+            <contents name="documentation-markup" title="Documentation Markup" level="2"/>
+            <contents name="anatomy-of-documentation" title="Anatomy of Documentation" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qdoc-guide.html" href="qdoc-guide.html" subtype="page" title="Getting Started with QDoc" fulltitle="Getting Started with QDoc" subtitle="" location="qdoc-guide.qdoc" module="QDoc">
+            <contents name="chapters" title="Chapters" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qtwritingstyle-cpp.html" href="qtwritingstyle-cpp.html" subtype="page" title="C++ Documentation Style" fulltitle="C++ Documentation Style" subtitle="" location="qtwritingstyle-cpp.qdoc" module="QDoc">
+            <contents name="class-documentation" title="Class Documentation" level="1"/>
+            <contents name="the-brief-and-detailed-description" title="The Brief and Detailed Description" level="2"/>
+            <contents name="member-functions" title="Member Functions" level="1"/>
+            <contents name="properties" title="Properties" level="1"/>
+            <contents name="signals-notifiers-and-slots" title="Signals, Notifiers, and Slots" level="1"/>
+            <contents name="enums-namespaces-and-other-types" title="Enums, Namespaces, and other Types" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qtwritingstyle-qml.html" href="qtwritingstyle-qml.html" subtype="page" title="QML Documentation Style" fulltitle="QML Documentation Style" subtitle="" location="qtwritingstyle-qml.qdoc" module="QDoc">
+            <contents name="qml-types" title="QML Types" level="1"/>
+            <contents name="properties" title="Properties" level="1"/>
+            <contents name="signals-and-handlers-documentation" title="Signals and Handlers Documentation" level="1"/>
+            <contents name="methods-and-javascript-functions" title="Methods and JavaScript Functions" level="1"/>
+            <contents name="enumerations" title="Enumerations" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="01-qdoc-manual.html" href="01-qdoc-manual.html" subtype="page" title="Introduction to QDoc" fulltitle="Introduction to QDoc" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <contents name="running-qdoc" title="Running QDoc" level="1"/>
+            <contents name="how-qdoc-works" title="How QDoc Works" level="1"/>
+            <contents name="command-types" title="Command Types" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="03-qdoc-commands-markup.html" href="03-qdoc-commands-markup.html" subtype="page" title="Markup Commands" fulltitle="Markup Commands" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="04-qdoc-commands-textmarkup.html" href="04-qdoc-commands-textmarkup.html" subtype="page" title="Text Markup" fulltitle="Text Markup" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="a-command"/>
+            <target name="c-command"/>
+            <target name="div-command"/>
+            <target name="span-command"/>
+            <target name="tt-command"/>
+            <target name="b-command"/>
+            <target name="e-command"/>
+            <target name="sub-command"/>
+            <target name="sup-command"/>
+            <target name="uicontrol-command"/>
+            <target name="underline-command"/>
+            <target name="backslash-command"/>
+            <contents name="a-parameter-marker" title="\a (parameter marker)" level="1"/>
+            <contents name="c-code-font" title="\c (code font)" level="1"/>
+            <contents name="div" title="\div" level="1"/>
+            <contents name="span" title="\span" level="1"/>
+            <contents name="tt-teletype-font" title="\tt (teletype font)" level="1"/>
+            <contents name="b" title="\b" level="1"/>
+            <contents name="e-emphasis-italics-new-5-3-2012" title="\e (emphasis, italics) (new 5/3/2012)" level="1"/>
+            <contents name="sub" title="\sub" level="1"/>
+            <contents name="sup" title="\sup" level="1"/>
+            <contents name="uicontrol" title="\uicontrol" level="1"/>
+            <contents name="underline" title="\underline" level="1"/>
+            <contents name="double-backslash" title="\\ (double backslash)" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="05-qdoc-commands-documentstructure.html" href="05-qdoc-commands-documentstructure.html" subtype="page" title="Document Structure" fulltitle="Document Structure" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="part-command"/>
+            <target name="chapter-command"/>
+            <target name="sectionone-command"/>
+            <target name="sectiontwo-command"/>
+            <target name="sectionthree-command"/>
+            <target name="sectionfour-command"/>
+            <contents name="part" title="\part" level="1"/>
+            <contents name="chapter" title="\chapter" level="1"/>
+            <contents name="section1" title="\section1" level="1"/>
+            <contents name="section2" title="\section2" level="1"/>
+            <contents name="section3" title="\section3" level="1"/>
+            <contents name="section4" title="\section4" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="06-qdoc-commands-includecodeinline.html" href="06-qdoc-commands-includecodeinline.html" subtype="page" title="Including Code Inline" fulltitle="Including Code Inline" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="code-command"/>
+            <target name="newcode-command"/>
+            <target name="oldcode-command"/>
+            <target name="qml-command"/>
+            <contents name="code" title="\code" level="1"/>
+            <contents name="newcode" title="\newcode" level="1"/>
+            <contents name="oldcode" title="\oldcode" level="1"/>
+            <contents name="qml" title="\qml" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="07-0-qdoc-commands-includingexternalcode.html" href="07-0-qdoc-commands-includingexternalcode.html" subtype="page" title="Including External Code" fulltitle="Including External Code" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="quotefile-command"/>
+            <target name="quotefromfile-command"/>
+            <target name="printline-command"/>
+            <target name="file"/>
+            <target name="substring"/>
+            <target name="printto-command"/>
+            <target name="printuntil-command"/>
+            <target name="skipline-command"/>
+            <target name="skipto-command"/>
+            <target name="skipuntil-command"/>
+            <target name="dots-command"/>
+            <target name="snippet-command"/>
+            <target name="codeline-command"/>
+            <contents name="quotefile" title="\quotefile" level="1"/>
+            <contents name="quotefromfile" title="\quotefromfile" level="1"/>
+            <contents name="printline" title="\printline" level="1"/>
+            <contents name="printto" title="\printto" level="1"/>
+            <contents name="printuntil" title="\printuntil" level="1"/>
+            <contents name="skipline" title="\skipline" level="1"/>
+            <contents name="skipto" title="\skipto" level="1"/>
+            <contents name="skipuntil" title="\skipuntil" level="1"/>
+            <contents name="dots" title="\dots" level="1"/>
+            <contents name="snippet" title="\snippet" level="1"/>
+            <contents name="codeline" title="\codeline" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="07-1-example.html" href="07-1-example.html" subtype="page" title="Example File" fulltitle="Example File" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="08-qdoc-commands-creatinglinks.html" href="08-qdoc-commands-creatinglinks.html" subtype="page" title="Creating Links" fulltitle="Creating Links" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="l-command"/>
+            <target name="sa-command"/>
+            <target name="target-command"/>
+            <target name="keyword-command"/>
+            <contents name="l-link" title="\l (link)" level="1"/>
+            <contents name="sa-see-also" title="\sa (see also)" level="1"/>
+            <contents name="target" title="\target" level="1"/>
+            <contents name="keyword" title="\keyword" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="09-qdoc-commands-includingimages.html" href="09-qdoc-commands-includingimages.html" subtype="page" title="Including Images" fulltitle="Including Images" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="image-command"/>
+            <target name="inlineimage-command"/>
+            <target name="caption-command"/>
+            <contents name="image" title="\image" level="1"/>
+            <contents name="inlineimage" title="\inlineimage" level="1"/>
+            <contents name="caption" title="\caption" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="10-qdoc-commands-tablesandlists.html" href="10-qdoc-commands-tablesandlists.html" subtype="page" title="Tables and Lists" fulltitle="Tables and Lists" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="table-command"/>
+            <target name="header-command"/>
+            <target name="row-command"/>
+            <target name="value-command"/>
+            <target name="omitvalue-command"/>
+            <target name="list-command"/>
+            <target name="li-command"/>
+            <contents name="table" title="\table" level="1"/>
+            <contents name="header" title="\header" level="1"/>
+            <contents name="row" title="\row" level="1"/>
+            <contents name="value" title="\value" level="1"/>
+            <contents name="omitvalue" title="\omitvalue" level="1"/>
+            <contents name="list" title="\list" level="1"/>
+            <contents name="li-table-cell-list-item" title="\li (table cell, list item)" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="11-qdoc-commands-specialcontent.html" href="11-qdoc-commands-specialcontent.html" subtype="page" title="Special Content" fulltitle="Special Content" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="abstract-command"/>
+            <target name="quotation-command"/>
+            <target name="footnote-command"/>
+            <target name="tableofcontents-command"/>
+            <target name="brief-command"/>
+            <target name="brief-property"/>
+            <target name="brief-class"/>
+            <target name="preview-window"/>
+            <target name="constructor"/>
+            <target name="function"/>
+            <target name="legalese-command"/>
+            <target name="warning-command"/>
+            <contents name="abstract" title="\abstract" level="1"/>
+            <contents name="quotation" title="\quotation" level="1"/>
+            <contents name="footnote" title="\footnote" level="1"/>
+            <contents name="tableofcontents" title="\tableofcontents" level="1"/>
+            <contents name="brief" title="\brief" level="1"/>
+            <contents name="legalese" title="\legalese" level="1"/>
+            <contents name="warning" title="\warning" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="12-0-qdoc-commands-miscellaneous.html" href="12-0-qdoc-commands-miscellaneous.html" subtype="page" title="Miscellaneous" fulltitle="Miscellaneous" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="annotatedlist-command"/>
+            <target name="generatelist-command"/>
+            <target name="table-example"/>
+            <target name="list-example"/>
+            <target name="if-command"/>
+            <target name="endif-command"/>
+            <target name="else-command"/>
+            <target name="include-command"/>
+            <target name="2-argument-form"/>
+            <target name="meta-command"/>
+            <target name="omit-command"/>
+            <target name="raw-command"/>
+            <target name="unicode-command"/>
+            <contents name="annotatedlist" title="\annotatedlist" level="1"/>
+            <contents name="generatelist" title="\generatelist" level="1"/>
+            <contents name="annotatedclasses" title="annotatedclasses" level="2"/>
+            <contents name="classes" title="classes" level="2"/>
+            <contents name="classesbymodule" title="classesbymodule" level="2"/>
+            <contents name="compatclasses" title="compatclasses" level="2"/>
+            <contents name="functionindex" title="functionindex" level="2"/>
+            <contents name="legalese" title="legalese" level="2"/>
+            <contents name="mainclasses" title="mainclasses" level="2"/>
+            <contents name="overviews" title="overviews" level="2"/>
+            <contents name="related" title="related" level="2"/>
+            <contents name="service" title="service" level="2"/>
+            <contents name="if" title="\if" level="1"/>
+            <contents name="endif" title="\endif" level="1"/>
+            <contents name="else" title="\else" level="1"/>
+            <contents name="include" title="\include" level="1"/>
+            <contents name="include-filename-snippet-identifier" title="\include filename snippet-identifier" level="2"/>
+            <contents name="meta" title="\meta" level="1"/>
+            <contents name="omit" title="\omit" level="1"/>
+            <contents name="raw-avoid" title="\raw (avoid)" level="1"/>
+            <contents name="unicode" title="\unicode" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="12-1-signalandslots.html" href="12-1-signalandslots.html" subtype="page" title="signalandslots.qdocinc" fulltitle="signalandslots.qdocinc" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="12-2-objectmodel.html" href="12-2-objectmodel.html" subtype="page" title="objectmodel.qdocinc" fulltitle="objectmodel.qdocinc" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="12-3-layoutmanagement.html" href="12-3-layoutmanagement.html" subtype="page" title="layoutmanagement.qdocinc" fulltitle="layoutmanagement.qdocinc" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="13-qdoc-commands-topics.html" href="13-qdoc-commands-topics.html" subtype="page" title="Topic Commands" fulltitle="Topic Commands" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="topic-argument"/>
+            <target name="class-command"/>
+            <target name="framework"/>
+            <target name="preview-window"/>
+            <target name="constructor"/>
+            <target name="function"/>
+            <target name="enum-command"/>
+            <target name="example-command"/>
+            <target name="externalpage-command"/>
+            <target name="fn-command"/>
+            <target name="group-command"/>
+            <target name="headerfile-command"/>
+            <target name="header"/>
+            <target name="macro-command"/>
+            <target name="module-command"/>
+            <target name="module-details"/>
+            <target name="namespace-command"/>
+            <target name="name"/>
+            <target name="page-command"/>
+            <target name="property-command"/>
+            <target name="service-command"/>
+            <target name="qmlattachedproperty-command"/>
+            <target name="qmlattachedsignal-command"/>
+            <target name="qmlbasictype-command"/>
+            <target name="qmlclass-command"/>
+            <target name="qmlmethod-command"/>
+            <target name="qmltype-command"/>
+            <target name="qmlproperty-command"/>
+            <target name="qmlsignal-command"/>
+            <target name="qmlmodule-command"/>
+            <target name="inqmlmodule-command"/>
+            <target name="instantiates-command"/>
+            <target name="typedef-command"/>
+            <target name="variable-command"/>
+            <contents name="class" title="\class" level="1"/>
+            <contents name="enum" title="\enum" level="1"/>
+            <contents name="example" title="\example" level="1"/>
+            <contents name="externalpage" title="\externalpage" level="1"/>
+            <contents name="fn-function" title="\fn (function)" level="1"/>
+            <contents name="group" title="\group" level="1"/>
+            <contents name="headerfile" title="\headerfile" level="1"/>
+            <contents name="macro" title="\macro" level="1"/>
+            <contents name="module" title="\module" level="1"/>
+            <contents name="namespace" title="\namespace" level="1"/>
+            <contents name="page" title="\page" level="1"/>
+            <contents name="property" title="\property" level="1"/>
+            <contents name="service" title="\service" level="1"/>
+            <contents name="qmlattachedproperty" title="\qmlattachedproperty" level="1"/>
+            <contents name="qmlattachedsignal" title="\qmlattachedsignal" level="1"/>
+            <contents name="qmlbasictype" title="\qmlbasictype" level="1"/>
+            <contents name="qmlclass" title="\qmlclass" level="1"/>
+            <contents name="qmlmethod" title="\qmlmethod" level="1"/>
+            <contents name="qmltype" title="\qmltype" level="1"/>
+            <contents name="qmlmethod" title="\qmlmethod" level="1"/>
+            <contents name="qmlproperty" title="\qmlproperty" level="1"/>
+            <contents name="qmlsignal" title="\qmlsignal" level="1"/>
+            <contents name="qmlmodule" title="\qmlmodule" level="1"/>
+            <contents name="inqmlmodule" title="\inqmlmodule" level="1"/>
+            <contents name="instantiates" title="\instantiates" level="1"/>
+            <contents name="typedef" title="\typedef" level="1"/>
+            <contents name="variable" title="\variable" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="14-qdoc-commands-contextcommands.html" href="14-qdoc-commands-contextcommands.html" subtype="page" title="Context Commands" fulltitle="Context Commands" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="15-qdoc-commands-navigation.html" href="15-qdoc-commands-navigation.html" subtype="page" title="Document Navigation" fulltitle="Document Navigation" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="previouspage-command"/>
+            <target name="nextpage-command"/>
+            <target name="startpage-command"/>
+            <target name="contentspage-command"/>
+            <target name="indexpage-command"/>
+            <contents name="example" title="Example" level="1"/>
+            <contents name="commands" title="Commands" level="1"/>
+            <contents name="previouspage" title="\previouspage" level="2"/>
+            <contents name="nextpage" title="\nextpage" level="2"/>
+            <contents name="startpage" title="\startpage" level="2"/>
+            <contents name="contentspage" title="\contentspage" level="2"/>
+            <contents name="indexpage" title="\indexpage" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="16-qdoc-commands-status.html" href="16-qdoc-commands-status.html" subtype="page" title="Reporting Status" fulltitle="Reporting Status" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="compat-command"/>
+            <target name="default-command"/>
+            <target name="obsolete-command"/>
+            <target name="internal-command"/>
+            <target name="preliminary-command"/>
+            <target name="since-command"/>
+            <contents name="compat" title="\compat" level="1"/>
+            <contents name="default" title="\default" level="1"/>
+            <contents name="obsolete" title="\obsolete" level="1"/>
+            <contents name="internal" title="\internal" level="1"/>
+            <contents name="preliminary" title="\preliminary" level="1"/>
+            <contents name="since" title="\since" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="17-qdoc-commands-thread.html" href="17-qdoc-commands-thread.html" subtype="page" title="Thread Support" fulltitle="Thread Support" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="reentrant-example"/>
+            <target name="threadsafe-command"/>
+            <target name="reentrant-command"/>
+            <target name="nonreentrant-command"/>
+            <contents name="example" title="Example" level="1"/>
+            <contents name="commands" title="Commands" level="1"/>
+            <contents name="threadsafe" title="\threadsafe" level="2"/>
+            <contents name="reentrant" title="\reentrant" level="2"/>
+            <contents name="nonreentrant" title="\nonreentrant" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="18-qdoc-commands-relating.html" href="18-qdoc-commands-relating.html" subtype="page" title="Relating Things" fulltitle="Relating Things" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="inherits-command"/>
+            <target name="overload-command"/>
+            <target name="reimp-command"/>
+            <target name="relates-command"/>
+            <contents name="commands" title="Commands" level="1"/>
+            <contents name="inherits" title="\inherits" level="2"/>
+            <contents name="overload" title="\overload" level="2"/>
+            <contents name="reimp" title="\reimp" level="2"/>
+            <contents name="relates" title="\relates" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="19-qdoc-commands-grouping.html" href="19-qdoc-commands-grouping.html" subtype="page" title="Grouping Things" fulltitle="Grouping Things" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="mainclass-command"/>
+            <target name="ingroup-command"/>
+            <target name="inmodule-command"/>
+            <contents name="commands" title="Commands" level="1"/>
+            <contents name="mainclass" title="\mainclass" level="2"/>
+            <contents name="ingroup" title="\ingroup" level="2"/>
+            <contents name="inmodule" title="\inmodule" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="20-qdoc-commands-namingthings.html" href="20-qdoc-commands-namingthings.html" subtype="page" title="Naming Things" fulltitle="Naming Things" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="title-command"/>
+            <target name="subtitle-command"/>
+            <contents name="commands" title="Commands" level="1"/>
+            <contents name="title" title="\title" level="2"/>
+            <contents name="subtitle" title="\subtitle" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="21-0-qdoc-configuration.html" href="21-0-qdoc-configuration.html" subtype="page" title="The QDoc Configuration File" fulltitle="The QDoc Configuration File" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <contents name="general-description" title="General Description" level="1"/>
+            <contents name="configuration-variables" title="Configuration Variables" level="1"/>
+            <contents name="variable-list" title="Variable List" level="1"/>
+            <contents name="categories" title="Categories" level="1"/>
+            <contents name="configuration-file-examples" title="Configuration File Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="21-0-qdoc-creating-dita-maps.html" href="21-0-qdoc-creating-dita-maps.html" subtype="page" title="Creating DITA Maps" fulltitle="Creating DITA Maps" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="ditamap-command"/>
+            <target name="topicref-command"/>
+            <target name="mapref-command"/>
+            <contents name="what-is-a-dita-map" title="What is a DITA map?" level="1"/>
+            <contents name="ditamap" title="\ditamap" level="1"/>
+            <contents name="topicref-endtopicref" title="\topicref \endtopicref" level="1"/>
+            <contents name="mapref" title="\mapref" level="1"/>
+            <contents name="an-example-ditamap-page" title="An example ditamap page" level="1"/>
+            <contents name="the-resulting-ditamap-file" title="The resulting ditamap file" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="21-1-minimum-qdocconf.html" href="21-1-minimum-qdocconf.html" subtype="page" title="minimum.qdocconf" fulltitle="minimum.qdocconf" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="21-2-qt-qdocconf.html" href="21-2-qt-qdocconf.html" subtype="page" title="qt.qdocconf" fulltitle="qt.qdocconf" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="21-3-qt-dita-xml-output.html" href="21-3-qt-dita-xml-output.html" subtype="page" title="Generating DITA XML Output" fulltitle="Generating DITA XML Output" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="22-creating-help-project-files.html" href="22-creating-help-project-files.html" subtype="page" title="Creating Help Project Files" fulltitle="Creating Help Project Files" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <contents name="overview" title="Overview" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="22-qdoc-configuration-generalvariables.html" href="22-qdoc-configuration-generalvariables.html" subtype="page" title="Generic Configuration Variables" fulltitle="Generic Configuration Variables" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="alias-variable"/>
+            <target name="codeindent-variable"/>
+            <target name="defines-variable"/>
+            <target name="edition-variable"/>
+            <target name="exampledirs-variable"/>
+            <target name="examples-variable"/>
+            <target name="examples-fileextensions-variable"/>
+            <target name="excludedirs-variable"/>
+            <target name="excludefiles-variable"/>
+            <target name="extraimages-variable"/>
+            <target name="falsehoods-variable"/>
+            <target name="generateindex-variable"/>
+            <target name="headerdirs-variable"/>
+            <target name="headers-variable"/>
+            <target name="headers-fileextensions-variable"/>
+            <target name="imagedirs-variable"/>
+            <target name="images-variable"/>
+            <target name="images-fileextensions-variable"/>
+            <target name="language-variable"/>
+            <target name="macro-variable"/>
+            <target name="manifestmeta-variable"/>
+            <target name="naturallanguage-variable"/>
+            <target name="outputdir-variable"/>
+            <target name="outputencoding-variable"/>
+            <target name="outputformats-variable"/>
+            <target name="outputprefixes"/>
+            <target name="qhp-variable"/>
+            <target name="sourcedirs-variable"/>
+            <target name="sourceencoding-variable"/>
+            <target name="sources-variable"/>
+            <target name="sources-fileextensions-variable"/>
+            <target name="spurious-variable"/>
+            <target name="syntaxhighlighting"/>
+            <target name="tabsize-variable"/>
+            <target name="tagfile-variable"/>
+            <target name="version-variable"/>
+            <target name="versionsym-variable"/>
+            <contents name="alias" title="alias" level="1"/>
+            <contents name="codeindent" title="codeindent" level="1"/>
+            <contents name="defines" title="defines" level="1"/>
+            <contents name="edition" title="edition" level="1"/>
+            <contents name="exampledirs" title="exampledirs" level="1"/>
+            <contents name="examples" title="examples" level="1"/>
+            <contents name="examples-fileextensions" title="examples.fileextensions" level="1"/>
+            <contents name="excludedirs" title="excludedirs" level="1"/>
+            <contents name="excludefiles" title="excludefiles" level="1"/>
+            <contents name="extraimages" title="extraimages" level="1"/>
+            <contents name="falsehoods" title="falsehoods" level="1"/>
+            <contents name="generateindex" title="generateindex" level="1"/>
+            <contents name="headerdirs" title="headerdirs" level="1"/>
+            <contents name="headers" title="headers" level="1"/>
+            <contents name="headers-fileextensions" title="headers.fileextensions" level="1"/>
+            <contents name="imagedirs" title="imagedirs" level="1"/>
+            <contents name="images" title="images" level="1"/>
+            <contents name="images-fileextensions" title="images.fileextensions" level="1"/>
+            <contents name="language" title="language" level="1"/>
+            <contents name="macro" title="macro" level="1"/>
+            <contents name="manifestmeta" title="manifestmeta" level="1"/>
+            <contents name="naturallanguage" title="naturallanguage" level="1"/>
+            <contents name="outputdir" title="outputdir" level="1"/>
+            <contents name="outputencoding" title="outputencoding" level="1"/>
+            <contents name="outputformats" title="outputformats" level="1"/>
+            <contents name="outputprefixes" title="outputprefixes" level="1"/>
+            <contents name="qhp" title="qhp" level="1"/>
+            <contents name="sourcedirs" title="sourcedirs" level="1"/>
+            <contents name="sourceencoding" title="sourceencoding" level="1"/>
+            <contents name="sources" title="sources" level="1"/>
+            <contents name="sources-fileextensions" title="sources.fileextensions" level="1"/>
+            <contents name="spurious" title="spurious" level="1"/>
+            <contents name="syntaxhighlighting" title="syntaxhighlighting" level="1"/>
+            <contents name="tabsize" title="tabsize" level="1"/>
+            <contents name="tagfile" title="tagfile" level="1"/>
+            <contents name="version" title="version" level="1"/>
+            <contents name="versionsym" title="versionsym" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="23-qdoc-configuration-cppvariables.html" href="23-qdoc-configuration-cppvariables.html" subtype="page" title="C++ Specific Configuration Variables" fulltitle="C++ Specific Configuration Variables" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="cpp-ignoredirectives-variable"/>
+            <target name="cpp-ignoretokens-variable"/>
+            <contents name="cpp-ignoredirectives" title="Cpp.ignoredirectives" level="1"/>
+            <contents name="cpp-ignoretokens" title="Cpp.ignoretokens" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="24-qdoc-configuration-htmlvariables.html" href="24-qdoc-configuration-htmlvariables.html" subtype="page" title="HTML Specific Configuration Variables" fulltitle="HTML Specific Configuration Variables" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="html-footer-variable"/>
+            <target name="html-postheader-variable"/>
+            <target name="html-style-variable"/>
+            <target name="html-stylesheets-variable"/>
+            <contents name="html-footer" title="HTML.footer" level="1"/>
+            <contents name="html-postheader" title="HTML.postheader" level="1"/>
+            <contents name="html-style" title="HTML.style" level="1"/>
+            <contents name="html-stylesheets" title="HTML.stylesheets" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="25-qdoc-configuration-derivedprojects.html" href="25-qdoc-configuration-derivedprojects.html" subtype="page" title="Supporting Derived Projects" fulltitle="Supporting Derived Projects" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="description-variable"/>
+            <target name="indexes-variable"/>
+            <target name="project-variable"/>
+            <target name="url-variable"/>
+            <target name="howto"/>
+            <contents name="description" title="description" level="1"/>
+            <contents name="indexes" title="indexes" level="1"/>
+            <contents name="project" title="project" level="1"/>
+            <contents name="url" title="url" level="1"/>
+            <contents name="how-to-support-derived-projects" title="How to Support Derived Projects" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="26-qdoc-configuration-example-manifest-files.html" href="26-qdoc-configuration-example-manifest-files.html" subtype="page" title="Example Manifest Files" fulltitle="Example Manifest Files" subtitle="" location="qdoc-manual.qdoc" module="QDoc">
+            <target name="metacontent"/>
+            <contents name="manifest-xml-structure" title="Manifest XML Structure" level="1"/>
+            <contents name="manifest-meta-content" title="Manifest Meta Content" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="27-qdoc-commands-alphabetical.html" href="27-qdoc-commands-alphabetical.html" subtype="page" title="Command Index" fulltitle="Command Index" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/about" href="http-qt-project-org-about.html" subtype="externalpage" title="About Qt" fulltitle="About Qt" subtitle="" location="qdoc-manual.qdoc"/>
+        <page access="public" status="commendable" name="qdoc-index.html" href="qdoc-index.html" subtype="page" title="QDoc Manual" fulltitle="QDoc Manual" subtitle="" location="qdoc-manual.qdoc" module="QDoc"/>
+    </namespace>
+</INDEX>

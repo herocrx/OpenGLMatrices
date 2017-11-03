@@ -1,0 +1,913 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="" title="qtdbus Reference Documentation" version="">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <page access="public" status="commendable" name="chat" href="chat.html" subtype="example" title="D-Bus Chat Example" fulltitle="D-Bus Chat Example" subtitle="" location="chat.qdoc" module="qtdbus">
+            <page access="public" status="commendable" name="chat/chat.cpp" href="chat-chat-cpp.html" subtype="file" title="" fulltitle="chat.cpp Example File" subtitle="chat/chat.cpp" location=""/>
+            <page access="public" status="commendable" name="chat/chat.h" href="chat-chat-h.html" subtype="file" title="" fulltitle="chat.h Example File" subtitle="chat/chat.h" location=""/>
+            <page access="public" status="commendable" name="chat/chat.pro" href="chat-chat-pro.html" subtype="file" title="" fulltitle="chat.pro Example File" subtitle="chat/chat.pro" location=""/>
+            <page access="public" status="commendable" name="chat/chatmainwindow.ui" href="chat-chatmainwindow-ui.html" subtype="file" title="" fulltitle="chatmainwindow.ui Example File" subtitle="chat/chatmainwindow.ui" location=""/>
+            <page access="public" status="commendable" name="chat/chatsetnickname.ui" href="chat-chatsetnickname-ui.html" subtype="file" title="" fulltitle="chatsetnickname.ui Example File" subtitle="chat/chatsetnickname.ui" location=""/>
+            <page access="public" status="commendable" name="chat/org.example.chat.xml" href="chat-org-example-chat-xml.html" subtype="file" title="" fulltitle="org.example.chat.xml Example File" subtitle="chat/org.example.chat.xml" location=""/>
+        </page>
+        <page access="public" status="commendable" name="complexpingpong" href="complexpingpong.html" subtype="example" title="D-Bus Complex Ping Pong Example" fulltitle="D-Bus Complex Ping Pong Example" subtitle="" location="complexpingpong.qdoc" module="qtdbus">
+            <page access="public" status="commendable" name="complexpingpong/complexping.cpp" href="complexpingpong-complexping-cpp.html" subtype="file" title="" fulltitle="complexping.cpp Example File" subtitle="complexpingpong/complexping.cpp" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/complexping.h" href="complexpingpong-complexping-h.html" subtype="file" title="" fulltitle="complexping.h Example File" subtitle="complexpingpong/complexping.h" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/complexping.pro" href="complexpingpong-complexping-pro.html" subtype="file" title="" fulltitle="complexping.pro Example File" subtitle="complexpingpong/complexping.pro" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/complexpingpong.pro" href="complexpingpong-complexpingpong-pro.html" subtype="file" title="" fulltitle="complexpingpong.pro Example File" subtitle="complexpingpong/complexpingpong.pro" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/complexpong.cpp" href="complexpingpong-complexpong-cpp.html" subtype="file" title="" fulltitle="complexpong.cpp Example File" subtitle="complexpingpong/complexpong.cpp" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/complexpong.h" href="complexpingpong-complexpong-h.html" subtype="file" title="" fulltitle="complexpong.h Example File" subtitle="complexpingpong/complexpong.h" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/complexpong.pro" href="complexpingpong-complexpong-pro.html" subtype="file" title="" fulltitle="complexpong.pro Example File" subtitle="complexpingpong/complexpong.pro" location=""/>
+            <page access="public" status="commendable" name="complexpingpong/ping-common.h" href="complexpingpong-ping-common-h.html" subtype="file" title="" fulltitle="ping-common.h Example File" subtitle="complexpingpong/ping-common.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="listnames" href="listnames.html" subtype="example" title="D-Bus List Names Example" fulltitle="D-Bus List Names Example" subtitle="" location="listnames.qdoc" module="qtdbus">
+            <page access="public" status="commendable" name="listnames/listnames.cpp" href="listnames-listnames-cpp.html" subtype="file" title="" fulltitle="listnames.cpp Example File" subtitle="listnames/listnames.cpp" location=""/>
+            <page access="public" status="commendable" name="listnames/listnames.pro" href="listnames-listnames-pro.html" subtype="file" title="" fulltitle="listnames.pro Example File" subtitle="listnames/listnames.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="pingpong" href="pingpong.html" subtype="example" title="D-Bus Ping Pong Example" fulltitle="D-Bus Ping Pong Example" subtitle="" location="pingpong.qdoc" module="qtdbus">
+            <page access="public" status="commendable" name="pingpong/ping-common.h" href="pingpong-ping-common-h.html" subtype="file" title="" fulltitle="ping-common.h Example File" subtitle="pingpong/ping-common.h" location=""/>
+            <page access="public" status="commendable" name="pingpong/ping.cpp" href="pingpong-ping-cpp.html" subtype="file" title="" fulltitle="ping.cpp Example File" subtitle="pingpong/ping.cpp" location=""/>
+            <page access="public" status="commendable" name="pingpong/ping.pro" href="pingpong-ping-pro.html" subtype="file" title="" fulltitle="ping.pro Example File" subtitle="pingpong/ping.pro" location=""/>
+            <page access="public" status="commendable" name="pingpong/pingpong.pro" href="pingpong-pingpong-pro.html" subtype="file" title="" fulltitle="pingpong.pro Example File" subtitle="pingpong/pingpong.pro" location=""/>
+            <page access="public" status="commendable" name="pingpong/pong.cpp" href="pingpong-pong-cpp.html" subtype="file" title="" fulltitle="pong.cpp Example File" subtitle="pingpong/pong.cpp" location=""/>
+            <page access="public" status="commendable" name="pingpong/pong.h" href="pingpong-pong-h.html" subtype="file" title="" fulltitle="pong.h Example File" subtitle="pingpong/pong.h" location=""/>
+            <page access="public" status="commendable" name="pingpong/pong.pro" href="pingpong-pong-pro.html" subtype="file" title="" fulltitle="pong.pro Example File" subtitle="pingpong/pong.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="remotecontrolledcar" href="remotecontrolledcar.html" subtype="example" title="D-Bus Remote Controlled Car Example" fulltitle="D-Bus Remote Controlled Car Example" subtitle="" location="remotecontrolledcar.qdoc" module="qtdbus">
+            <page access="public" status="commendable" name="remotecontrolledcar/car/car.cpp" href="remotecontrolledcar-car-car-cpp.html" subtype="file" title="" fulltitle="car.cpp Example File" subtitle="remotecontrolledcar/car/car.cpp" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/car/car.h" href="remotecontrolledcar-car-car-h.html" subtype="file" title="" fulltitle="car.h Example File" subtitle="remotecontrolledcar/car/car.h" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/car/car.pro" href="remotecontrolledcar-car-car-pro.html" subtype="file" title="" fulltitle="car.pro Example File" subtitle="remotecontrolledcar/car/car.pro" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/car/car.xml" href="remotecontrolledcar-car-car-xml.html" subtype="file" title="" fulltitle="car.xml Example File" subtitle="remotecontrolledcar/car/car.xml" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/car/main.cpp" href="remotecontrolledcar-car-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="remotecontrolledcar/car/main.cpp" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/controller/car.xml" href="remotecontrolledcar-controller-car-xml.html" subtype="file" title="" fulltitle="car.xml Example File" subtitle="remotecontrolledcar/controller/car.xml" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/controller/controller.cpp" href="remotecontrolledcar-controller-controller-cpp.html" subtype="file" title="" fulltitle="controller.cpp Example File" subtitle="remotecontrolledcar/controller/controller.cpp" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/controller/controller.h" href="remotecontrolledcar-controller-controller-h.html" subtype="file" title="" fulltitle="controller.h Example File" subtitle="remotecontrolledcar/controller/controller.h" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/controller/controller.pro" href="remotecontrolledcar-controller-controller-pro.html" subtype="file" title="" fulltitle="controller.pro Example File" subtitle="remotecontrolledcar/controller/controller.pro" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/controller/controller.ui" href="remotecontrolledcar-controller-controller-ui.html" subtype="file" title="" fulltitle="controller.ui Example File" subtitle="remotecontrolledcar/controller/controller.ui" location=""/>
+            <page access="public" status="commendable" name="remotecontrolledcar/remotecontrolledcar.pro" href="remotecontrolledcar-remotecontrolledcar-pro.html" subtype="file" title="" fulltitle="remotecontrolledcar.pro Example File" subtitle="remotecontrolledcar/remotecontrolledcar.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="dbus/remotecontrolledcar" href="dbus-remotecontrolledcar.html" subtype="example" title="D-Bus Remote Controlled Car Example" fulltitle="D-Bus Remote Controlled Car Example" subtitle="" location="dbus-remotecontrolledcar.qdoc" module="qtdbus"/>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusAbstractAdaptor" href="qdbusabstractadaptor.html" location="qdbusabstractadaptor.h" since="4.2" bases="QObject" module="QtDBus">
+            <function access="protected" threadsafety="unspecified" status="commendable" name="QDBusAbstractAdaptor" fullname="QDBusAbstractAdaptor::QDBusAbstractAdaptor" href="qdbusabstractadaptor.html#QDBusAbstractAdaptor" location="qdbusabstractadaptor.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusAbstractAdaptor(QObject * obj)">
+                <parameter left="QObject *" right="" name="obj" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="autoRelaySignals" fullname="QDBusAbstractAdaptor::autoRelaySignals" href="qdbusabstractadaptor.html#autoRelaySignals" location="qdbusabstractadaptor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="autoRelaySignals() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setAutoRelaySignals" fullname="QDBusAbstractAdaptor::setAutoRelaySignals" href="qdbusabstractadaptor.html#setAutoRelaySignals" location="qdbusabstractadaptor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setAutoRelaySignals(bool enable)">
+                <parameter left="bool" right="" name="enable" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusAbstractAdaptor" fullname="QDBusAbstractAdaptor::~QDBusAbstractAdaptor" href="qdbusabstractadaptor.html#dtor.QDBusAbstractAdaptor" location="qdbusabstractadaptor.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusAbstractAdaptor()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusAbstractInterface" href="qdbusabstractinterface.html" location="qdbusabstractinterface.h" since="4.2" bases="QObject" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="asyncCall" fullname="QDBusAbstractInterface::asyncCall" href="qdbusabstractinterface.html#asyncCall" location="qdbusabstractinterface.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusPendingCall" signature="asyncCall(const QString &amp; method, const QVariant &amp; arg1, const QVariant &amp; arg2, const QVariant &amp; arg3, const QVariant &amp; arg4, const QVariant &amp; arg5, const QVariant &amp; arg6, const QVariant &amp; arg7, const QVariant &amp; arg8)">
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="arg1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="thread safe" status="commendable" name="asyncCallWithArgumentList" fullname="QDBusAbstractInterface::asyncCallWithArgumentList" href="qdbusabstractinterface.html#asyncCallWithArgumentList" location="qdbusabstractinterface.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusPendingCall" signature="asyncCallWithArgumentList(const QString &amp; method, const QList&lt;QVariant&gt; &amp; args)">
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QList&lt;QVariant&gt; &amp;" right="" name="args" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QDBusAbstractInterface::call" href="qdbusabstractinterface.html#call-2" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QDBusMessage" signature="call(QDBus::CallMode mode, const QString &amp; method, const QVariant &amp; arg1, const QVariant &amp; arg2, const QVariant &amp; arg3, const QVariant &amp; arg4, const QVariant &amp; arg5, const QVariant &amp; arg6, const QVariant &amp; arg7, const QVariant &amp; arg8)">
+                <parameter left="QDBus::CallMode" right="" name="mode" default=""/>
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="arg1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QDBusAbstractInterface::call" href="qdbusabstractinterface.html#call" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusMessage" signature="call(const QString &amp; method, const QVariant &amp; arg1, const QVariant &amp; arg2, const QVariant &amp; arg3, const QVariant &amp; arg4, const QVariant &amp; arg5, const QVariant &amp; arg6, const QVariant &amp; arg7, const QVariant &amp; arg8)">
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="arg1" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg2" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg3" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg4" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg5" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg6" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg7" default="QVariant()"/>
+                <parameter left="const QVariant &amp;" right="" name="arg8" default="QVariant()"/>
+            </function>
+            <function access="public" threadsafety="thread safe" status="commendable" name="callWithArgumentList" fullname="QDBusAbstractInterface::callWithArgumentList" href="qdbusabstractinterface.html#callWithArgumentList" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusMessage" signature="callWithArgumentList(QDBus::CallMode mode, const QString &amp; method, const QList&lt;QVariant&gt; &amp; args)">
+                <parameter left="QDBus::CallMode" right="" name="mode" default=""/>
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QList&lt;QVariant&gt; &amp;" right="" name="args" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="callWithCallback" fullname="QDBusAbstractInterface::callWithCallback" href="qdbusabstractinterface.html#callWithCallback" location="qdbusabstractinterface.h" since="4.3" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="callWithCallback(const QString &amp; method, const QList&lt;QVariant&gt; &amp; args, QObject * receiver, const char * returnMethod, const char * errorMethod)">
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QList&lt;QVariant&gt; &amp;" right="" name="args" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="returnMethod" default=""/>
+                <parameter left="const char *" right="" name="errorMethod" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="callWithCallback" fullname="QDBusAbstractInterface::callWithCallback" href="qdbusabstractinterface.html#callWithCallback-2" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="callWithCallback(const QString &amp; method, const QList&lt;QVariant&gt; &amp; args, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+                <parameter left="const QList&lt;QVariant&gt; &amp;" right="" name="args" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connection" fullname="QDBusAbstractInterface::connection" href="qdbusabstractinterface.html#connection" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusConnection" signature="connection() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="interface" fullname="QDBusAbstractInterface::interface" href="qdbusabstractinterface.html#interface" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="interface() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QDBusAbstractInterface::isValid" href="qdbusabstractinterface.html#isValid" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QDBusAbstractInterface::lastError" href="qdbusabstractinterface.html#lastError" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="path" fullname="QDBusAbstractInterface::path" href="qdbusabstractinterface.html#path" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="path() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="service" fullname="QDBusAbstractInterface::service" href="qdbusabstractinterface.html#service" location="qdbusabstractinterface.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="service() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setTimeout" fullname="QDBusAbstractInterface::setTimeout" href="qdbusabstractinterface.html#setTimeout" location="qdbusabstractinterface.h" since="4.8" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setTimeout(int timeout)">
+                <parameter left="int" right="" name="timeout" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="timeout" fullname="QDBusAbstractInterface::timeout" href="qdbusabstractinterface.html#timeout" location="qdbusabstractinterface.h" since="4.8" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="timeout() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusAbstractInterface" fullname="QDBusAbstractInterface::~QDBusAbstractInterface" href="qdbusabstractinterface.html#dtor.QDBusAbstractInterface" location="qdbusabstractinterface.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusAbstractInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusArgument" href="qdbusargument.html" location="qdbusargument.h" since="4.2" bases="" module="QtDBus">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ElementType" fullname="QDBusArgument::ElementType" href="qdbusargument.html#ElementType-enum" location="qdbusargument.h" since="4.5">
+                <value name="BasicType" value="0"/>
+                <value name="VariantType" value="1"/>
+                <value name="ArrayType" value="2"/>
+                <value name="StructureType" value="3"/>
+                <value name="MapType" value="4"/>
+                <value name="MapEntryType" value="5"/>
+                <value name="UnknownType" value="-1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusArgument" fullname="QDBusArgument::QDBusArgument" href="qdbusargument.html#QDBusArgument" location="qdbusargument.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusArgument()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusArgument" fullname="QDBusArgument::QDBusArgument" href="qdbusargument.html#QDBusArgument-2" location="qdbusargument.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusArgument(const QDBusArgument &amp; other)">
+                <parameter left="const QDBusArgument &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="asVariant" fullname="QDBusArgument::asVariant" href="qdbusargument.html#asVariant" location="qdbusargument.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="asVariant() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="atEnd" fullname="QDBusArgument::atEnd" href="qdbusargument.html#atEnd" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="atEnd() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginArray" fullname="QDBusArgument::beginArray" href="qdbusargument.html#beginArray" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="beginArray(int id)">
+                <parameter left="int" right="" name="id" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginArray" fullname="QDBusArgument::beginArray" href="qdbusargument.html#beginArray-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="beginArray() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginMap" fullname="QDBusArgument::beginMap" href="qdbusargument.html#beginMap" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="beginMap(int kid, int vid)">
+                <parameter left="int" right="" name="kid" default=""/>
+                <parameter left="int" right="" name="vid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginMap" fullname="QDBusArgument::beginMap" href="qdbusargument.html#beginMap-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="beginMap() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginMapEntry" fullname="QDBusArgument::beginMapEntry" href="qdbusargument.html#beginMapEntry" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="beginMapEntry()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginMapEntry" fullname="QDBusArgument::beginMapEntry" href="qdbusargument.html#beginMapEntry-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="beginMapEntry() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginStructure" fullname="QDBusArgument::beginStructure" href="qdbusargument.html#beginStructure" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="beginStructure()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginStructure" fullname="QDBusArgument::beginStructure" href="qdbusargument.html#beginStructure-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="beginStructure() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="currentType" fullname="QDBusArgument::currentType" href="qdbusargument.html#currentType" location="qdbusargument.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="ElementType" signature="currentType() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endArray" fullname="QDBusArgument::endArray" href="qdbusargument.html#endArray" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="endArray()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endArray" fullname="QDBusArgument::endArray" href="qdbusargument.html#endArray-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="endArray() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endMap" fullname="QDBusArgument::endMap" href="qdbusargument.html#endMap" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="endMap()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endMap" fullname="QDBusArgument::endMap" href="qdbusargument.html#endMap-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="endMap() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endMapEntry" fullname="QDBusArgument::endMapEntry" href="qdbusargument.html#endMapEntry" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="endMapEntry()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endMapEntry" fullname="QDBusArgument::endMapEntry" href="qdbusargument.html#endMapEntry-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="endMapEntry() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endStructure" fullname="QDBusArgument::endStructure" href="qdbusargument.html#endStructure" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="endStructure()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="endStructure" fullname="QDBusArgument::endStructure" href="qdbusargument.html#endStructure-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="endStructure() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-2" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QDBusArgument &amp;" signature="operator&lt;&lt;(bool arg)">
+                <parameter left="bool" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-16" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="16" type="QDBusArgument &amp;" signature="operator&lt;&lt;(const QByteArray &amp; arg)">
+                <parameter left="const QByteArray &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-14" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="14" type="QDBusArgument &amp;" signature="operator&lt;&lt;(const QDBusVariant &amp; arg)">
+                <parameter left="const QDBusVariant &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-10" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="10" type="QDBusArgument &amp;" signature="operator&lt;&lt;(const QString &amp; arg)">
+                <parameter left="const QString &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-15" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="15" type="QDBusArgument &amp;" signature="operator&lt;&lt;(const QStringList &amp; arg)">
+                <parameter left="const QStringList &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-9" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="9" type="QDBusArgument &amp;" signature="operator&lt;&lt;(double arg)">
+                <parameter left="double" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-5" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="5" type="QDBusArgument &amp;" signature="operator&lt;&lt;(int arg)">
+                <parameter left="int" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-7" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="7" type="QDBusArgument &amp;" signature="operator&lt;&lt;(qlonglong arg)">
+                <parameter left="qlonglong" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-8" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="8" type="QDBusArgument &amp;" signature="operator&lt;&lt;(qulonglong arg)">
+                <parameter left="qulonglong" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-3" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="QDBusArgument &amp;" signature="operator&lt;&lt;(short arg)">
+                <parameter left="short" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusArgument &amp;" signature="operator&lt;&lt;(uchar arg)">
+                <parameter left="uchar" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-6" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="6" type="QDBusArgument &amp;" signature="operator&lt;&lt;(uint arg)">
+                <parameter left="uint" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusArgument::operator&lt;&lt;" href="qdbusargument.html#operator&lt;&lt;-4" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="4" type="QDBusArgument &amp;" signature="operator&lt;&lt;(ushort arg)">
+                <parameter left="ushort" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusArgument::operator=" href="qdbusargument.html#operator=" location="qdbusargument.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusArgument &amp;" signature="operator=(const QDBusArgument &amp; other)">
+                <parameter left="const QDBusArgument &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-16" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="16" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(QByteArray &amp; arg) const">
+                <parameter left="QByteArray &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-14" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="14" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(QDBusVariant &amp; arg) const">
+                <parameter left="QDBusVariant &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-10" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="10" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(QString &amp; arg) const">
+                <parameter left="QString &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-15" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="15" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(QStringList &amp; arg) const">
+                <parameter left="QStringList &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-2" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(bool &amp; arg) const">
+                <parameter left="bool &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-9" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="9" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(double &amp; arg) const">
+                <parameter left="double &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-5" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="5" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(int &amp; arg) const">
+                <parameter left="int &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-7" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="7" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(qlonglong &amp; arg) const">
+                <parameter left="qlonglong &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-8" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="8" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(qulonglong &amp; arg) const">
+                <parameter left="qulonglong &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-4" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="4" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(short &amp; arg) const">
+                <parameter left="short &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(uchar &amp; arg) const">
+                <parameter left="uchar &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-6" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="6" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(uint &amp; arg) const">
+                <parameter left="uint &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&gt;&gt;" fullname="QDBusArgument::operator&gt;&gt;" href="qdbusargument.html#operator&gt;&gt;-3" location="qdbusargument.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="3" type="const QDBusArgument &amp;" signature="operator&gt;&gt;(ushort &amp; arg) const">
+                <parameter left="ushort &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusArgument" fullname="QDBusArgument::~QDBusArgument" href="qdbusargument.html#dtor.QDBusArgument" location="qdbusargument.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusArgument()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="qdbus_cast" href="qdbusargument.html#qdbus_cast" location="qdbusargument.h" since="4.2" virtual="non" meta="plain" const="false" static="false" overload="false" relates="QDBusArgument" type="T" signature="qdbus_cast(const QDBusArgument &amp; argument)">
+            <parameter left="const QDBusArgument &amp;" right="" name="argument" default=""/>
+        </function>
+        <namespace access="public" threadsafety="unspecified" status="commendable" name="QDBus" href="qdbus.html" location="qdbusconnection.h" module="QtDBus">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="CallMode" fullname="QDBus::CallMode" href="qdbus.html#CallMode-enum" location="qdbusconnection.h">
+                <value name="NoBlock" value="0"/>
+                <value name="Block" value="1"/>
+                <value name="BlockWithGui" value="2"/>
+                <value name="AutoDetect" value="3"/>
+            </enum>
+        </namespace>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusConnection" href="qdbusconnection.html" location="qdbusconnection.h" since="4.2" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="sessionBus" fullname="QDBusConnection::sessionBus" href="qdbusconnection.html#sessionBus" location="qdbusconnection.cpp" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusConnection" signature="sessionBus()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="systemBus" fullname="QDBusConnection::systemBus" href="qdbusconnection.html#systemBus" location="qdbusconnection.cpp" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusConnection" signature="systemBus()"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="BusType" fullname="QDBusConnection::BusType" href="qdbusconnection.html#BusType-enum" location="qdbusconnection.h">
+                <value name="SessionBus" value="0"/>
+                <value name="SystemBus" value="1"/>
+                <value name="ActivationBus" value="2"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ConnectionCapability" fullname="QDBusConnection::ConnectionCapability" href="qdbusconnection.html#ConnectionCapability-enum" location="qdbusconnection.h" since="4.8" typedef="QDBusConnection::ConnectionCapabilities">
+                <value name="UnixFileDescriptorPassing" value="0x0001"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="RegisterOption" fullname="QDBusConnection::RegisterOption" href="qdbusconnection.html#RegisterOption-enum" location="qdbusconnection.h" typedef="QDBusConnection::RegisterOptions">
+                <value name="ExportAdaptors" value="0x01"/>
+                <value name="ExportScriptableSlots" value="0x10"/>
+                <value name="ExportScriptableSignals" value="0x20"/>
+                <value name="ExportScriptableProperties" value="0x40"/>
+                <value name="ExportScriptableInvokables" value="0x80"/>
+                <value name="ExportScriptableContents" value="0xf0"/>
+                <value name="ExportNonScriptableSlots" value="0x100"/>
+                <value name="ExportNonScriptableSignals" value="0x200"/>
+                <value name="ExportNonScriptableProperties" value="0x400"/>
+                <value name="ExportNonScriptableInvokables" value="0x800"/>
+                <value name="ExportNonScriptableContents" value="0xf00"/>
+                <value name="ExportAllSlots" value="ExportScriptableSlots | ExportNonScriptableSlots"/>
+                <value name="ExportAllSignals" value="ExportScriptableSignals | ExportNonScriptableSignals"/>
+                <value name="ExportAllProperties" value="ExportScriptableProperties | ExportNonScriptableProperties"/>
+                <value name="ExportAllInvokables" value="ExportScriptableInvokables | ExportNonScriptableInvokables"/>
+                <value name="ExportAllContents" value="ExportScriptableContents | ExportNonScriptableContents"/>
+                <value name="ExportChildObjects" value="0x1000"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="UnregisterMode" fullname="QDBusConnection::UnregisterMode" href="qdbusconnection.html#UnregisterMode-enum" location="qdbusconnection.h">
+                <value name="UnregisterNode" value="0"/>
+                <value name="UnregisterTree" value="1"/>
+            </enum>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="ConnectionCapabilities" fullname="QDBusConnection::ConnectionCapabilities" href="qdbusconnection.html#ConnectionCapabilities-typedef" location="qdbusconnection.h" enum="QDBusConnection::ConnectionCapability"/>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="RegisterOptions" fullname="QDBusConnection::RegisterOptions" href="qdbusconnection.html#RegisterOptions-typedef" location="qdbusconnection.h" enum="QDBusConnection::RegisterOption"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusConnection" fullname="QDBusConnection::QDBusConnection" href="qdbusconnection.html#QDBusConnection-2" location="qdbusconnection.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusConnection(const QDBusConnection &amp; other)">
+                <parameter left="const QDBusConnection &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusConnection" fullname="QDBusConnection::QDBusConnection" href="qdbusconnection.html#QDBusConnection" location="qdbusconnection.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusConnection(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="asyncCall" fullname="QDBusConnection::asyncCall" href="qdbusconnection.html#asyncCall" location="qdbusconnection.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusPendingCall" signature="asyncCall(const QDBusMessage &amp; message, int timeout) const">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+                <parameter left="int" right="" name="timeout" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="baseService" fullname="QDBusConnection::baseService" href="qdbusconnection.html#baseService" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="baseService() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="call" fullname="QDBusConnection::call" href="qdbusconnection.html#call" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusMessage" signature="call(const QDBusMessage &amp; message, QDBus::CallMode mode, int timeout) const">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+                <parameter left="QDBus::CallMode" right="" name="mode" default="QDBus::Block"/>
+                <parameter left="int" right="" name="timeout" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="callWithCallback" fullname="QDBusConnection::callWithCallback" href="qdbusconnection.html#callWithCallback" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="callWithCallback(const QDBusMessage &amp; message, QObject * receiver, const char * returnMethod, const char * errorMethod, int timeout) const">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="returnMethod" default=""/>
+                <parameter left="const char *" right="" name="errorMethod" default=""/>
+                <parameter left="int" right="" name="timeout" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="deprecated" name="callWithCallback" fullname="QDBusConnection::callWithCallback" href="qdbusconnection.html#callWithCallback-2" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="bool" signature="callWithCallback(const QDBusMessage &amp; message, QObject * receiver, const char * returnMethod, int timeout) const">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="returnMethod" default=""/>
+                <parameter left="int" right="" name="timeout" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connect" fullname="QDBusConnection::connect" href="qdbusconnection.html#connect" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="connect(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; name, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connect" fullname="QDBusConnection::connect" href="qdbusconnection.html#connect-2" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="connect(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; name, const QString &amp; signature, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="signature" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connect" fullname="QDBusConnection::connect" href="qdbusconnection.html#connect-3" location="qdbusconnection.h" since="4.6" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="bool" signature="connect(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; name, const QStringList &amp; argumentMatch, const QString &amp; signature, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QStringList &amp;" right="" name="argumentMatch" default=""/>
+                <parameter left="const QString &amp;" right="" name="signature" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connectToBus" fullname="QDBusConnection::connectToBus" href="qdbusconnection.html#connectToBus" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusConnection" signature="connectToBus(BusType type, const QString &amp; name)">
+                <parameter left="BusType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connectToBus" fullname="QDBusConnection::connectToBus" href="qdbusconnection.html#connectToBus-2" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="QDBusConnection" signature="connectToBus(const QString &amp; address, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="address" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connectToPeer" fullname="QDBusConnection::connectToPeer" href="qdbusconnection.html#connectToPeer" location="qdbusconnection.h" since="4.8" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusConnection" signature="connectToPeer(const QString &amp; address, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="address" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connectionCapabilities" fullname="QDBusConnection::connectionCapabilities" href="qdbusconnection.html#connectionCapabilities" location="qdbusconnection.h" since="4.8" virtual="non" meta="plain" const="true" static="false" overload="false" type="ConnectionCapabilities" signature="connectionCapabilities() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disconnect" fullname="QDBusConnection::disconnect" href="qdbusconnection.html#disconnect" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="disconnect(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; name, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disconnect" fullname="QDBusConnection::disconnect" href="qdbusconnection.html#disconnect-2" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="disconnect(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; name, const QString &amp; signature, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="signature" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disconnect" fullname="QDBusConnection::disconnect" href="qdbusconnection.html#disconnect-3" location="qdbusconnection.h" since="4.6" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="bool" signature="disconnect(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; name, const QStringList &amp; argumentMatch, const QString &amp; signature, QObject * receiver, const char * slot)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QStringList &amp;" right="" name="argumentMatch" default=""/>
+                <parameter left="const QString &amp;" right="" name="signature" default=""/>
+                <parameter left="QObject *" right="" name="receiver" default=""/>
+                <parameter left="const char *" right="" name="slot" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disconnectFromBus" fullname="QDBusConnection::disconnectFromBus" href="qdbusconnection.html#disconnectFromBus" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="disconnectFromBus(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="disconnectFromPeer" fullname="QDBusConnection::disconnectFromPeer" href="qdbusconnection.html#disconnectFromPeer" location="qdbusconnection.h" since="4.8" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="disconnectFromPeer(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="interface" fullname="QDBusConnection::interface" href="qdbusconnection.html#interface" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusConnectionInterface *" signature="interface() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isConnected" fullname="QDBusConnection::isConnected" href="qdbusconnection.html#isConnected" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isConnected() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QDBusConnection::lastError" href="qdbusconnection.html#lastError" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="localMachineId" fullname="QDBusConnection::localMachineId" href="qdbusconnection.html#localMachineId" location="qdbusconnection.h" since="4.8" virtual="non" meta="plain" const="false" static="true" overload="false" type="QByteArray" signature="localMachineId()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="name" fullname="QDBusConnection::name" href="qdbusconnection.html#name" location="qdbusconnection.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="name() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="objectRegisteredAt" fullname="QDBusConnection::objectRegisteredAt" href="qdbusconnection.html#objectRegisteredAt" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="objectRegisteredAt(const QString &amp; path) const">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusConnection::operator=" href="qdbusconnection.html#operator=" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusConnection &amp;" signature="operator=(const QDBusConnection &amp; other)">
+                <parameter left="const QDBusConnection &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerObject" fullname="QDBusConnection::registerObject" href="qdbusconnection.html#registerObject" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="registerObject(const QString &amp; path, QObject * object, QFlags&lt;QDBusConnection::RegisterOption&gt; options)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="QFlags&lt;QDBusConnection::RegisterOption&gt;" right="" name="options" default="ExportAdaptors"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerService" fullname="QDBusConnection::registerService" href="qdbusconnection.html#registerService" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="registerService(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="send" fullname="QDBusConnection::send" href="qdbusconnection.html#send" location="qdbusconnection.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="send(const QDBusMessage &amp; message) const">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+            </function>
+            <function access="public" threadsafety="non-reentrant" status="commendable" name="sender" fullname="QDBusConnection::sender" href="qdbusconnection.html#sender" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusConnection" signature="sender()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unregisterObject" fullname="QDBusConnection::unregisterObject" href="qdbusconnection.html#unregisterObject" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="unregisterObject(const QString &amp; path, UnregisterMode mode)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="UnregisterMode" right="" name="mode" default="UnregisterNode"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unregisterService" fullname="QDBusConnection::unregisterService" href="qdbusconnection.html#unregisterService" location="qdbusconnection.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="unregisterService(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusConnection" fullname="QDBusConnection::~QDBusConnection" href="qdbusconnection.html#dtor.QDBusConnection" location="qdbusconnection.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusConnection()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusConnectionInterface" href="qdbusconnectioninterface.html" location="qdbusconnectioninterface.h" since="4.2" bases="QDBusAbstractInterface" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="registeredServiceNames" fullname="QDBusConnectionInterface::registeredServiceNames" href="qdbusconnectioninterface.html#registeredServiceNames-prop" location="qdbusconnectioninterface.cpp" virtual="non" meta="slot" const="true" static="false" overload="false" associated-property="registeredServiceNames" type="QDBusReply&lt;QStringList&gt;" signature="registeredServiceNames() const"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="RegisterServiceReply" fullname="QDBusConnectionInterface::RegisterServiceReply" href="qdbusconnectioninterface.html#RegisterServiceReply-enum" location="qdbusconnectioninterface.h">
+                <value name="ServiceNotRegistered" value="0"/>
+                <value name="ServiceRegistered" value="1"/>
+                <value name="ServiceQueued" value="2"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ServiceQueueOptions" fullname="QDBusConnectionInterface::ServiceQueueOptions" href="qdbusconnectioninterface.html#ServiceQueueOptions-enum" location="qdbusconnectioninterface.h">
+                <value name="DontQueueService" value="0"/>
+                <value name="QueueService" value="1"/>
+                <value name="ReplaceExistingService" value="2"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ServiceReplacementOptions" fullname="QDBusConnectionInterface::ServiceReplacementOptions" href="qdbusconnectioninterface.html#ServiceReplacementOptions-enum" location="qdbusconnectioninterface.h">
+                <value name="DontAllowReplacement" value="0"/>
+                <value name="AllowReplacement" value="1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="callWithCallbackFailed" fullname="QDBusConnectionInterface::callWithCallbackFailed" href="qdbusconnectioninterface.html#callWithCallbackFailed" location="qdbusconnectioninterface.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="callWithCallbackFailed(const QDBusError &amp; error, const QDBusMessage &amp; call)">
+                <parameter left="const QDBusError &amp;" right="" name="error" default=""/>
+                <parameter left="const QDBusMessage &amp;" right="" name="call" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isServiceRegistered" fullname="QDBusConnectionInterface::isServiceRegistered" href="qdbusconnectioninterface.html#isServiceRegistered" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="true" static="false" overload="false" type="QDBusReply&lt;bool&gt;" signature="isServiceRegistered(const QString &amp; serviceName) const">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerService" fullname="QDBusConnectionInterface::registerService" href="qdbusconnectioninterface.html#registerService" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="false" static="false" overload="false" type="QDBusReply&lt;QDBusConnectionInterface::RegisterServiceReply&gt;" signature="registerService(const QString &amp; serviceName, ServiceQueueOptions qoption, ServiceReplacementOptions roption)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+                <parameter left="ServiceQueueOptions" right="" name="qoption" default="DontQueueService"/>
+                <parameter left="ServiceReplacementOptions" right="" name="roption" default="DontAllowReplacement"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceOwner" fullname="QDBusConnectionInterface::serviceOwner" href="qdbusconnectioninterface.html#serviceOwner" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="true" static="false" overload="false" type="QDBusReply&lt;QString&gt;" signature="serviceOwner(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="deprecated" name="serviceOwnerChanged" fullname="QDBusConnectionInterface::serviceOwnerChanged" href="qdbusconnectioninterface.html#serviceOwnerChanged" location="qdbusconnectioninterface.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="serviceOwnerChanged(const QString &amp; name, const QString &amp; oldOwner, const QString &amp; newOwner)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="oldOwner" default=""/>
+                <parameter left="const QString &amp;" right="" name="newOwner" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="servicePid" fullname="QDBusConnectionInterface::servicePid" href="qdbusconnectioninterface.html#servicePid" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="true" static="false" overload="false" type="QDBusReply&lt;uint&gt;" signature="servicePid(const QString &amp; serviceName) const">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceRegistered" fullname="QDBusConnectionInterface::serviceRegistered" href="qdbusconnectioninterface.html#serviceRegistered" location="qdbusconnectioninterface.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="serviceRegistered(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceUid" fullname="QDBusConnectionInterface::serviceUid" href="qdbusconnectioninterface.html#serviceUid" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="true" static="false" overload="false" type="QDBusReply&lt;uint&gt;" signature="serviceUid(const QString &amp; serviceName) const">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceUnregistered" fullname="QDBusConnectionInterface::serviceUnregistered" href="qdbusconnectioninterface.html#serviceUnregistered" location="qdbusconnectioninterface.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="serviceUnregistered(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="startService" fullname="QDBusConnectionInterface::startService" href="qdbusconnectioninterface.html#startService" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="false" static="false" overload="false" type="QDBusReply&lt;void&gt;" signature="startService(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unregisterService" fullname="QDBusConnectionInterface::unregisterService" href="qdbusconnectioninterface.html#unregisterService" location="qdbusconnectioninterface.h" virtual="non" meta="slot" const="false" static="false" overload="false" type="QDBusReply&lt;bool&gt;" signature="unregisterService(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <property access="public" threadsafety="unspecified" status="commendable" name="registeredServiceNames" fullname="QDBusConnectionInterface::registeredServiceNames" href="qdbusconnectioninterface.html#registeredServiceNames-prop" location="qdbusconnectioninterface.h" type="QDBusReply&lt;QStringList&gt;">
+                <getter name="registeredServiceNames"/>
+            </property>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusContext" href="qdbuscontext.html" location="qdbuscontext.h" since="4.3" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusContext" fullname="QDBusContext::QDBusContext" href="qdbuscontext.html#QDBusContext" location="qdbuscontext.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusContext()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="calledFromDBus" fullname="QDBusContext::calledFromDBus" href="qdbuscontext.html#calledFromDBus" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="calledFromDBus() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connection" fullname="QDBusContext::connection" href="qdbuscontext.html#connection" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusConnection" signature="connection() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDelayedReply" fullname="QDBusContext::isDelayedReply" href="qdbuscontext.html#isDelayedReply" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isDelayedReply() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="message" fullname="QDBusContext::message" href="qdbuscontext.html#message" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QDBusMessage &amp;" signature="message() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sendErrorReply" fullname="QDBusContext::sendErrorReply" href="qdbuscontext.html#sendErrorReply-2" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="void" signature="sendErrorReply(QDBusError::ErrorType type, const QString &amp; msg) const">
+                <parameter left="QDBusError::ErrorType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="msg" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sendErrorReply" fullname="QDBusContext::sendErrorReply" href="qdbuscontext.html#sendErrorReply" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="void" signature="sendErrorReply(const QString &amp; name, const QString &amp; msg) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="msg" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDelayedReply" fullname="QDBusContext::setDelayedReply" href="qdbuscontext.html#setDelayedReply" location="qdbuscontext.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="void" signature="setDelayedReply(bool enable) const">
+                <parameter left="bool" right="" name="enable" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusContext" fullname="QDBusContext::~QDBusContext" href="qdbuscontext.html#dtor.QDBusContext" location="qdbuscontext.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusContext()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusError" href="qdbuserror.html" location="qdbuserror.h" since="4.2" bases="" module="QtDBus">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ErrorType" fullname="QDBusError::ErrorType" href="qdbuserror.html#ErrorType-enum" location="qdbuserror.h">
+                <value name="NoError" value="0"/>
+                <value name="Other" value="1"/>
+                <value name="Failed" value="2"/>
+                <value name="NoMemory" value="3"/>
+                <value name="ServiceUnknown" value="4"/>
+                <value name="NoReply" value="5"/>
+                <value name="BadAddress" value="6"/>
+                <value name="NotSupported" value="7"/>
+                <value name="LimitsExceeded" value="8"/>
+                <value name="AccessDenied" value="9"/>
+                <value name="NoServer" value="10"/>
+                <value name="Timeout" value="11"/>
+                <value name="NoNetwork" value="12"/>
+                <value name="AddressInUse" value="13"/>
+                <value name="Disconnected" value="14"/>
+                <value name="InvalidArgs" value="15"/>
+                <value name="UnknownMethod" value="16"/>
+                <value name="TimedOut" value="17"/>
+                <value name="InvalidSignature" value="18"/>
+                <value name="UnknownInterface" value="19"/>
+                <value name="UnknownObject" value="20"/>
+                <value name="UnknownProperty" value="21"/>
+                <value name="PropertyReadOnly" value="22"/>
+                <value name="InternalError" value="23"/>
+                <value name="InvalidService" value="24"/>
+                <value name="InvalidObjectPath" value="25"/>
+                <value name="InvalidInterface" value="26"/>
+                <value name="InvalidMember" value="27"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="errorString" fullname="QDBusError::errorString" href="qdbuserror.html#errorString" location="qdbuserror.h" since="4.3" virtual="non" meta="plain" const="false" static="true" overload="false" type="QString" signature="errorString(ErrorType error)">
+                <parameter left="ErrorType" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QDBusError::isValid" href="qdbuserror.html#isValid" location="qdbuserror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="message" fullname="QDBusError::message" href="qdbuserror.html#message" location="qdbuserror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="message() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="name" fullname="QDBusError::name" href="qdbuserror.html#name" location="qdbuserror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="name() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="type" fullname="QDBusError::type" href="qdbuserror.html#type" location="qdbuserror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="ErrorType" signature="type() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusObjectPath" href="qdbusobjectpath.html" location="qdbusextratypes.h" since="4.2" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusObjectPath" fullname="QDBusObjectPath::QDBusObjectPath" href="qdbusobjectpath.html#QDBusObjectPath" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusObjectPath()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusObjectPath" fullname="QDBusObjectPath::QDBusObjectPath" href="qdbusobjectpath.html#QDBusObjectPath-3" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QDBusObjectPath(QLatin1String path)">
+                <parameter left="QLatin1String" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusObjectPath" fullname="QDBusObjectPath::QDBusObjectPath" href="qdbusobjectpath.html#QDBusObjectPath-4" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QDBusObjectPath(const QString &amp; path)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusObjectPath" fullname="QDBusObjectPath::QDBusObjectPath" href="qdbusobjectpath.html#QDBusObjectPath-2" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusObjectPath(const char * path)">
+                <parameter left="const char *" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="path" fullname="QDBusObjectPath::path" href="qdbusobjectpath.html#path" location="qdbusextratypes.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="path() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPath" fullname="QDBusObjectPath::setPath" href="qdbusobjectpath.html#setPath" location="qdbusextratypes.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPath(const QString &amp; path)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+            </function>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusSignature" href="qdbussignature.html" location="qdbusextratypes.h" since="4.2" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusSignature" fullname="QDBusSignature::QDBusSignature" href="qdbussignature.html#QDBusSignature" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusSignature()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusSignature" fullname="QDBusSignature::QDBusSignature" href="qdbussignature.html#QDBusSignature-3" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QDBusSignature(QLatin1String signature)">
+                <parameter left="QLatin1String" right="" name="signature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusSignature" fullname="QDBusSignature::QDBusSignature" href="qdbussignature.html#QDBusSignature-4" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QDBusSignature(const QString &amp; signature)">
+                <parameter left="const QString &amp;" right="" name="signature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusSignature" fullname="QDBusSignature::QDBusSignature" href="qdbussignature.html#QDBusSignature-2" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusSignature(const char * signature)">
+                <parameter left="const char *" right="" name="signature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setSignature" fullname="QDBusSignature::setSignature" href="qdbussignature.html#setSignature" location="qdbusextratypes.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setSignature(const QString &amp; signature)">
+                <parameter left="const QString &amp;" right="" name="signature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="signature" fullname="QDBusSignature::signature" href="qdbussignature.html#signature" location="qdbusextratypes.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="signature() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusVariant" href="qdbusvariant.html" location="qdbusextratypes.h" since="4.2" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusVariant" fullname="QDBusVariant::QDBusVariant" href="qdbusvariant.html#QDBusVariant" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusVariant()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusVariant" fullname="QDBusVariant::QDBusVariant" href="qdbusvariant.html#QDBusVariant-2" location="qdbusextratypes.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusVariant(const QVariant &amp; variant)">
+                <parameter left="const QVariant &amp;" right="" name="variant" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setVariant" fullname="QDBusVariant::setVariant" href="qdbusvariant.html#setVariant" location="qdbusextratypes.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setVariant(const QVariant &amp; variant)">
+                <parameter left="const QVariant &amp;" right="" name="variant" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="variant" fullname="QDBusVariant::variant" href="qdbusvariant.html#variant" location="qdbusextratypes.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="variant() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusInterface" href="qdbusinterface.html" location="qdbusinterface.h" since="4.2" bases="QDBusAbstractInterface" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusInterface" fullname="QDBusInterface::QDBusInterface" href="qdbusinterface.html#QDBusInterface" location="qdbusinterface.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusInterface(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QDBusConnection &amp; connection, QObject * parent)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default="QString()"/>
+                <parameter left="const QDBusConnection &amp;" right="" name="connection" default="QDBusConnection::sessionBus()"/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusInterface" fullname="QDBusInterface::~QDBusInterface" href="qdbusinterface.html#dtor.QDBusInterface" location="qdbusinterface.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusMessage" href="qdbusmessage.html" location="qdbusmessage.h" since="4.2" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="createErrorReply" fullname="QDBusMessage::createErrorReply" href="qdbusmessage.html#createErrorReply-3" location="qdbusmessage.cpp" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="3" type="QDBusMessage" signature="createErrorReply(QDBusError::ErrorType type, const QString &amp; msg) const">
+                <parameter left="QDBusError::ErrorType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="msg" default=""/>
+            </function>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="MessageType" fullname="QDBusMessage::MessageType" href="qdbusmessage.html#MessageType-enum" location="qdbusmessage.h">
+                <value name="InvalidMessage" value="0"/>
+                <value name="MethodCallMessage" value="1"/>
+                <value name="ReplyMessage" value="2"/>
+                <value name="ErrorMessage" value="3"/>
+                <value name="SignalMessage" value="4"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusMessage" fullname="QDBusMessage::QDBusMessage" href="qdbusmessage.html#QDBusMessage" location="qdbusmessage.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusMessage()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusMessage" fullname="QDBusMessage::QDBusMessage" href="qdbusmessage.html#QDBusMessage-2" location="qdbusmessage.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusMessage(const QDBusMessage &amp; other)">
+                <parameter left="const QDBusMessage &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="arguments" fullname="QDBusMessage::arguments" href="qdbusmessage.html#arguments" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QList&lt;QVariant&gt;" signature="arguments() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="autoStartService" fullname="QDBusMessage::autoStartService" href="qdbusmessage.html#autoStartService" location="qdbusmessage.h" since="4.7" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="autoStartService() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createError" fullname="QDBusMessage::createError" href="qdbusmessage.html#createError-3" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="3" type="QDBusMessage" signature="createError(QDBusError::ErrorType type, const QString &amp; msg)">
+                <parameter left="QDBusError::ErrorType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="msg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createError" fullname="QDBusMessage::createError" href="qdbusmessage.html#createError-2" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="QDBusMessage" signature="createError(const QDBusError &amp; error)">
+                <parameter left="const QDBusError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createError" fullname="QDBusMessage::createError" href="qdbusmessage.html#createError" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusMessage" signature="createError(const QString &amp; name, const QString &amp; msg)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="msg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createErrorReply" fullname="QDBusMessage::createErrorReply" href="qdbusmessage.html#createErrorReply-2" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QDBusMessage" signature="createErrorReply(const QDBusError &amp; error) const">
+                <parameter left="const QDBusError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createErrorReply" fullname="QDBusMessage::createErrorReply" href="qdbusmessage.html#createErrorReply" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusMessage" signature="createErrorReply(const QString name, const QString &amp; msg) const">
+                <parameter left="const QString" right="" name="name" default=""/>
+                <parameter left="const QString &amp;" right="" name="msg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createMethodCall" fullname="QDBusMessage::createMethodCall" href="qdbusmessage.html#createMethodCall" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusMessage" signature="createMethodCall(const QString &amp; service, const QString &amp; path, const QString &amp; interface, const QString &amp; method)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="method" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createReply" fullname="QDBusMessage::createReply" href="qdbusmessage.html#createReply" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusMessage" signature="createReply(const QList&lt;QVariant&gt; &amp; arguments) const">
+                <parameter left="const QList&lt;QVariant&gt; &amp;" right="" name="arguments" default="QList&lt;QVariant&gt; ()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createReply" fullname="QDBusMessage::createReply" href="qdbusmessage.html#createReply-2" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QDBusMessage" signature="createReply(const QVariant &amp; argument) const">
+                <parameter left="const QVariant &amp;" right="" name="argument" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createSignal" fullname="QDBusMessage::createSignal" href="qdbusmessage.html#createSignal" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusMessage" signature="createSignal(const QString &amp; path, const QString &amp; interface, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+                <parameter left="const QString &amp;" right="" name="interface" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="errorMessage" fullname="QDBusMessage::errorMessage" href="qdbusmessage.html#errorMessage" location="qdbusmessage.h" since="4.3" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="errorMessage() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="errorName" fullname="QDBusMessage::errorName" href="qdbusmessage.html#errorName" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="errorName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="interface" fullname="QDBusMessage::interface" href="qdbusmessage.html#interface" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="interface() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDelayedReply" fullname="QDBusMessage::isDelayedReply" href="qdbusmessage.html#isDelayedReply" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isDelayedReply() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isReplyRequired" fullname="QDBusMessage::isReplyRequired" href="qdbusmessage.html#isReplyRequired" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isReplyRequired() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="member" fullname="QDBusMessage::member" href="qdbusmessage.html#member" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="member() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator&lt;&lt;" fullname="QDBusMessage::operator&lt;&lt;" href="qdbusmessage.html#operator&lt;&lt;" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusMessage &amp;" signature="operator&lt;&lt;(const QVariant &amp; arg)">
+                <parameter left="const QVariant &amp;" right="" name="arg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusMessage::operator=" href="qdbusmessage.html#operator=" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusMessage &amp;" signature="operator=(const QDBusMessage &amp; other)">
+                <parameter left="const QDBusMessage &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="path" fullname="QDBusMessage::path" href="qdbusmessage.html#path" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="path() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="service" fullname="QDBusMessage::service" href="qdbusmessage.html#service" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="service() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setArguments" fullname="QDBusMessage::setArguments" href="qdbusmessage.html#setArguments" location="qdbusmessage.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setArguments(const QList&lt;QVariant&gt; &amp; arguments)">
+                <parameter left="const QList&lt;QVariant&gt; &amp;" right="" name="arguments" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setAutoStartService" fullname="QDBusMessage::setAutoStartService" href="qdbusmessage.html#setAutoStartService" location="qdbusmessage.h" since="4.7" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setAutoStartService(bool enable)">
+                <parameter left="bool" right="" name="enable" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDelayedReply" fullname="QDBusMessage::setDelayedReply" href="qdbusmessage.html#setDelayedReply" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="void" signature="setDelayedReply(bool enable) const">
+                <parameter left="bool" right="" name="enable" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="signature" fullname="QDBusMessage::signature" href="qdbusmessage.html#signature" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="signature() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="type" fullname="QDBusMessage::type" href="qdbusmessage.html#type" location="qdbusmessage.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="MessageType" signature="type() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusMessage" fullname="QDBusMessage::~QDBusMessage" href="qdbusmessage.html#dtor.QDBusMessage" location="qdbusmessage.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusMessage()"/>
+        </class>
+        <function access="public" threadsafety="thread safe" status="commendable" name="qDBusRegisterMetaType" href="qdbusargument.html#qDBusRegisterMetaType" location="qdbusmetatype.h" since="4.2" virtual="non" meta="plain" const="false" static="false" overload="false" relates="QDBusArgument" type="int" signature="qDBusRegisterMetaType()"/>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingCall" href="qdbuspendingcall.html" location="qdbuspendingcall.h" since="4.5" bases="" module="QtDBus" groups="shared">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingCall" fullname="QDBusPendingCall::QDBusPendingCall" href="qdbuspendingcall.html#QDBusPendingCall" location="qdbuspendingcall.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusPendingCall(const QDBusPendingCall &amp; other)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fromCompletedCall" fullname="QDBusPendingCall::fromCompletedCall" href="qdbuspendingcall.html#fromCompletedCall" location="qdbuspendingcall.h" since="4.6" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusPendingCall" signature="fromCompletedCall(const QDBusMessage &amp; msg)">
+                <parameter left="const QDBusMessage &amp;" right="" name="msg" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fromError" fullname="QDBusPendingCall::fromError" href="qdbuspendingcall.html#fromError" location="qdbuspendingcall.h" since="4.6" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDBusPendingCall" signature="fromError(const QDBusError &amp; error)">
+                <parameter left="const QDBusError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusPendingCall::operator=" href="qdbuspendingcall.html#operator=" location="qdbuspendingcall.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusPendingCall &amp;" signature="operator=(const QDBusPendingCall &amp; other)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="swap" fullname="QDBusPendingCall::swap" href="qdbuspendingcall.html#swap" location="qdbuspendingcall.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="swap(QDBusPendingCall &amp; other)">
+                <parameter left="QDBusPendingCall &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusPendingCall" fullname="QDBusPendingCall::~QDBusPendingCall" href="qdbuspendingcall.html#dtor.QDBusPendingCall" location="qdbuspendingcall.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusPendingCall()"/>
+            <variable access="protected" threadsafety="unspecified" status="commendable" name="d" fullname="QDBusPendingCall::d" href="qdbuspendingcall.html#d-var" location="qdbuspendingcall.h" type="QExplicitlySharedDataPointer&lt;QDBusPendingCallPrivate&gt;" static="false"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingCallWatcher" href="qdbuspendingcallwatcher.html" location="qdbuspendingcall.h" since="4.5" bases="QObject,QDBusPendingCall" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="waitForFinished" fullname="QDBusPendingCallWatcher::waitForFinished" href="qdbuspendingcallwatcher.html#waitForFinished" location="qdbuspendingcall.cpp" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="waitForFinished()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingCallWatcher" fullname="QDBusPendingCallWatcher::QDBusPendingCallWatcher" href="qdbuspendingcallwatcher.html#QDBusPendingCallWatcher" location="qdbuspendingcall.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusPendingCallWatcher(const QDBusPendingCall &amp; call, QObject * parent)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="call" default=""/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="finished" fullname="QDBusPendingCallWatcher::finished" href="qdbuspendingcallwatcher.html#finished" location="qdbuspendingcall.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="finished(QDBusPendingCallWatcher * self)">
+                <parameter left="QDBusPendingCallWatcher *" right="" name="self" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isFinished" fullname="QDBusPendingCallWatcher::isFinished" href="qdbuspendingcallwatcher.html#isFinished" location="qdbuspendingcall.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isFinished() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusPendingCallWatcher" fullname="QDBusPendingCallWatcher::~QDBusPendingCallWatcher" href="qdbuspendingcallwatcher.html#dtor.QDBusPendingCallWatcher" location="qdbuspendingcall.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusPendingCallWatcher()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingReply" href="qdbuspendingreply.html" location="qdbuspendingreply.h" since="4.5" bases="QDBusPendingCall" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingReply" fullname="QDBusPendingReply::QDBusPendingReply" href="qdbuspendingreply.html#QDBusPendingReply" location="qdbuspendingreply.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusPendingReply()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingReply" fullname="QDBusPendingReply::QDBusPendingReply" href="qdbuspendingreply.html#QDBusPendingReply-4" location="qdbuspendingreply.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QDBusPendingReply(const QDBusMessage &amp; message)">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingReply" fullname="QDBusPendingReply::QDBusPendingReply" href="qdbuspendingreply.html#QDBusPendingReply-3" location="qdbuspendingreply.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QDBusPendingReply(const QDBusPendingCall &amp; call)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="call" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusPendingReply" fullname="QDBusPendingReply::QDBusPendingReply" href="qdbuspendingreply.html#QDBusPendingReply-2" location="qdbuspendingreply.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusPendingReply(const QDBusPendingReply &amp; other)">
+                <parameter left="const QDBusPendingReply &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="argumentAt" fullname="QDBusPendingReply::argumentAt" href="qdbuspendingreply.html#argumentAt" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="argumentAt(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="argumentAt" fullname="QDBusPendingReply::argumentAt" href="qdbuspendingreply.html#argumentAt-2" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="Type" signature="argumentAt() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="count" fullname="QDBusPendingReply::count" href="qdbuspendingreply.html#count" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="count() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="error" fullname="QDBusPendingReply::error" href="qdbuspendingreply.html#error" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusError" signature="error() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isError" fullname="QDBusPendingReply::isError" href="qdbuspendingreply.html#isError" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isFinished" fullname="QDBusPendingReply::isFinished" href="qdbuspendingreply.html#isFinished" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isFinished() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QDBusPendingReply::isValid" href="qdbuspendingreply.html#isValid" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator T1" fullname="QDBusPendingReply::operator T1" href="qdbuspendingreply.html#operator T1" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="" signature="operator T1() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusPendingReply::operator=" href="qdbuspendingreply.html#operator=-3" location="qdbuspendingreply.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="QDBusPendingReply &amp;" signature="operator=(const QDBusMessage &amp; message)">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusPendingReply::operator=" href="qdbuspendingreply.html#operator=-2" location="qdbuspendingreply.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QDBusPendingReply &amp;" signature="operator=(const QDBusPendingCall &amp; call)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="call" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusPendingReply::operator=" href="qdbuspendingreply.html#operator=" location="qdbuspendingreply.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusPendingReply &amp;" signature="operator=(const QDBusPendingReply &amp; other)">
+                <parameter left="const QDBusPendingReply &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="reply" fullname="QDBusPendingReply::reply" href="qdbuspendingreply.html#reply" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusMessage" signature="reply() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QDBusPendingReply::value" href="qdbuspendingreply.html#value" location="qdbuspendingreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="T1" signature="value() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="waitForFinished" fullname="QDBusPendingReply::waitForFinished" href="qdbuspendingreply.html#waitForFinished" location="qdbuspendingreply.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="waitForFinished()"/>
+            <variable access="public" threadsafety="unspecified" status="commendable" name="Count" fullname="QDBusPendingReply::Count" href="qdbuspendingreply.html#Count-var" location="qdbuspendingreply.h" type="const int" static="true"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusReply" href="qdbusreply.html" location="qdbusreply.h" since="4.2" bases="" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusReply" fullname="QDBusReply::QDBusReply" href="qdbusreply.html#QDBusReply-4" location="qdbusreply.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QDBusReply(const QDBusError &amp; error)">
+                <parameter left="const QDBusError &amp;" right="" name="error" default="QDBusError()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusReply" fullname="QDBusReply::QDBusReply" href="qdbusreply.html#QDBusReply" location="qdbusreply.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusReply(const QDBusMessage &amp; reply)">
+                <parameter left="const QDBusMessage &amp;" right="" name="reply" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusReply" fullname="QDBusReply::QDBusReply" href="qdbusreply.html#QDBusReply-2" location="qdbusreply.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusReply(const QDBusPendingCall &amp; pcall)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="pcall" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusReply" fullname="QDBusReply::QDBusReply" href="qdbusreply.html#QDBusReply-3" location="qdbusreply.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QDBusReply(const QDBusPendingReply&lt;T&gt; &amp; reply)">
+                <parameter left="const QDBusPendingReply&lt;T&gt; &amp;" right="" name="reply" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="error" fullname="QDBusReply::error" href="qdbusreply.html#error" location="qdbusreply.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="const QDBusError &amp;" signature="error()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QDBusReply::isValid" href="qdbusreply.html#isValid" location="qdbusreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator Type" fullname="QDBusReply::operator Type" href="qdbusreply.html#operator Type" location="qdbusreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="" signature="operator Type() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusReply::operator=" href="qdbusreply.html#operator=-3" location="qdbusreply.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="3" type="QDBusReply &amp;" signature="operator=(const QDBusError &amp; error)">
+                <parameter left="const QDBusError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusReply::operator=" href="qdbusreply.html#operator=" location="qdbusreply.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusReply &amp;" signature="operator=(const QDBusMessage &amp; message)">
+                <parameter left="const QDBusMessage &amp;" right="" name="message" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusReply::operator=" href="qdbusreply.html#operator=-2" location="qdbusreply.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QDBusReply &amp;" signature="operator=(const QDBusPendingCall &amp; pcall)">
+                <parameter left="const QDBusPendingCall &amp;" right="" name="pcall" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusReply::operator=" href="qdbusreply.html#operator=-4" location="qdbusreply.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="4" type="QDBusReply &amp;" signature="operator=(const QDBusReply &amp; other)">
+                <parameter left="const QDBusReply &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QDBusReply::value" href="qdbusreply.html#value" location="qdbusreply.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="Type" signature="value() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusServer" href="qdbusserver.html" location="qdbusserver.h" bases="QObject" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusServer" fullname="QDBusServer::QDBusServer" href="qdbusserver.html#QDBusServer-2" location="qdbusserver.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusServer(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusServer" fullname="QDBusServer::QDBusServer" href="qdbusserver.html#QDBusServer" location="qdbusserver.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusServer(const QString &amp; address, QObject * parent)">
+                <parameter left="const QString &amp;" right="" name="address" default=""/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="address" fullname="QDBusServer::address" href="qdbusserver.html#address" location="qdbusserver.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="address() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isConnected" fullname="QDBusServer::isConnected" href="qdbusserver.html#isConnected" location="qdbusserver.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isConnected() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QDBusServer::lastError" href="qdbusserver.html#lastError" location="qdbusserver.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="newConnection" fullname="QDBusServer::newConnection" href="qdbusserver.html#newConnection" location="qdbusserver.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="newConnection(const QDBusConnection &amp; connection)">
+                <parameter left="const QDBusConnection &amp;" right="" name="connection" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusServer" fullname="QDBusServer::~QDBusServer" href="qdbusserver.html#dtor.QDBusServer" location="qdbusserver.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusServer()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusServiceWatcher" href="qdbusservicewatcher.html" location="qdbusservicewatcher.h" since="4.6" bases="QObject" module="QtDBus">
+            <function access="public" threadsafety="unspecified" status="commendable" name="setWatchMode" fullname="QDBusServiceWatcher::setWatchMode" href="qdbusservicewatcher.html#watchMode-prop" location="qdbusservicewatcher.cpp" virtual="non" meta="plain" const="false" static="false" overload="false" associated-property="watchMode" type="void" signature="setWatchMode(QFlags&lt;QDBusServiceWatcher::WatchModeFlag&gt; mode)">
+                <parameter left="QFlags&lt;QDBusServiceWatcher::WatchModeFlag&gt;" right="" name="mode" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="watchMode" fullname="QDBusServiceWatcher::watchMode" href="qdbusservicewatcher.html#watchMode-prop" location="qdbusservicewatcher.cpp" virtual="non" meta="plain" const="true" static="false" overload="false" associated-property="watchMode" type="WatchMode" signature="watchMode() const"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="WatchModeFlag" fullname="QDBusServiceWatcher::WatchModeFlag" href="qdbusservicewatcher.html#WatchModeFlag-enum" location="qdbusservicewatcher.h" typedef="QDBusServiceWatcher::WatchMode">
+                <value name="WatchForRegistration" value="0x01"/>
+                <value name="WatchForUnregistration" value="0x02"/>
+                <value name="WatchForOwnerChange" value="0x03"/>
+            </enum>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="WatchMode" fullname="QDBusServiceWatcher::WatchMode" href="qdbusservicewatcher.html#WatchMode-typedef" location="qdbusservicewatcher.h" enum="QDBusServiceWatcher::WatchModeFlag"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusServiceWatcher" fullname="QDBusServiceWatcher::QDBusServiceWatcher" href="qdbusservicewatcher.html#QDBusServiceWatcher" location="qdbusservicewatcher.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusServiceWatcher(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusServiceWatcher" fullname="QDBusServiceWatcher::QDBusServiceWatcher" href="qdbusservicewatcher.html#QDBusServiceWatcher-2" location="qdbusservicewatcher.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusServiceWatcher(const QString &amp; service, const QDBusConnection &amp; connection, QFlags&lt;QDBusServiceWatcher::WatchModeFlag&gt; watchMode, QObject * parent)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+                <parameter left="const QDBusConnection &amp;" right="" name="connection" default=""/>
+                <parameter left="QFlags&lt;QDBusServiceWatcher::WatchModeFlag&gt;" right="" name="watchMode" default="WatchForOwnerChange"/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addWatchedService" fullname="QDBusServiceWatcher::addWatchedService" href="qdbusservicewatcher.html#addWatchedService" location="qdbusservicewatcher.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addWatchedService(const QString &amp; newService)">
+                <parameter left="const QString &amp;" right="" name="newService" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connection" fullname="QDBusServiceWatcher::connection" href="qdbusservicewatcher.html#connection" location="qdbusservicewatcher.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDBusConnection" signature="connection() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeWatchedService" fullname="QDBusServiceWatcher::removeWatchedService" href="qdbusservicewatcher.html#removeWatchedService" location="qdbusservicewatcher.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="removeWatchedService(const QString &amp; service)">
+                <parameter left="const QString &amp;" right="" name="service" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceOwnerChanged" fullname="QDBusServiceWatcher::serviceOwnerChanged" href="qdbusservicewatcher.html#serviceOwnerChanged" location="qdbusservicewatcher.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="serviceOwnerChanged(const QString &amp; serviceName, const QString &amp; oldOwner, const QString &amp; newOwner)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+                <parameter left="const QString &amp;" right="" name="oldOwner" default=""/>
+                <parameter left="const QString &amp;" right="" name="newOwner" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceRegistered" fullname="QDBusServiceWatcher::serviceRegistered" href="qdbusservicewatcher.html#serviceRegistered" location="qdbusservicewatcher.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="serviceRegistered(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="serviceUnregistered" fullname="QDBusServiceWatcher::serviceUnregistered" href="qdbusservicewatcher.html#serviceUnregistered" location="qdbusservicewatcher.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="serviceUnregistered(const QString &amp; serviceName)">
+                <parameter left="const QString &amp;" right="" name="serviceName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setConnection" fullname="QDBusServiceWatcher::setConnection" href="qdbusservicewatcher.html#setConnection" location="qdbusservicewatcher.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setConnection(const QDBusConnection &amp; connection)">
+                <parameter left="const QDBusConnection &amp;" right="" name="connection" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setWatchedServices" fullname="QDBusServiceWatcher::setWatchedServices" href="qdbusservicewatcher.html#watchedServices-prop" location="qdbusservicewatcher.h" virtual="non" meta="plain" const="false" static="false" overload="false" associated-property="watchedServices" type="void" signature="setWatchedServices(const QStringList &amp; services)">
+                <parameter left="const QStringList &amp;" right="" name="services" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="watchedServices" fullname="QDBusServiceWatcher::watchedServices" href="qdbusservicewatcher.html#watchedServices-prop" location="qdbusservicewatcher.h" virtual="non" meta="plain" const="true" static="false" overload="false" associated-property="watchedServices" type="QStringList" signature="watchedServices() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusServiceWatcher" fullname="QDBusServiceWatcher::~QDBusServiceWatcher" href="qdbusservicewatcher.html#dtor.QDBusServiceWatcher" location="qdbusservicewatcher.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusServiceWatcher()"/>
+            <property access="public" threadsafety="unspecified" status="commendable" name="watchMode" fullname="QDBusServiceWatcher::watchMode" href="qdbusservicewatcher.html#watchMode-prop" location="qdbusservicewatcher.h" type="WatchMode">
+                <getter name="watchMode"/>
+                <setter name="setWatchMode"/>
+            </property>
+            <property access="public" threadsafety="unspecified" status="commendable" name="watchedServices" fullname="QDBusServiceWatcher::watchedServices" href="qdbusservicewatcher.html#watchedServices-prop" location="qdbusservicewatcher.h" type="QStringList">
+                <getter name="watchedServices"/>
+                <setter name="setWatchedServices"/>
+            </property>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDBusUnixFileDescriptor" href="qdbusunixfiledescriptor.html" location="qdbusunixfiledescriptor.h" since="4.8" bases="" module="QtDBus" groups="shared">
+            <contents name="availability" title="Availability" level="2"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusUnixFileDescriptor" fullname="QDBusUnixFileDescriptor::QDBusUnixFileDescriptor" href="qdbusunixfiledescriptor.html#QDBusUnixFileDescriptor" location="qdbusunixfiledescriptor.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDBusUnixFileDescriptor()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusUnixFileDescriptor" fullname="QDBusUnixFileDescriptor::QDBusUnixFileDescriptor" href="qdbusunixfiledescriptor.html#QDBusUnixFileDescriptor-3" location="qdbusunixfiledescriptor.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QDBusUnixFileDescriptor(const QDBusUnixFileDescriptor &amp; other)">
+                <parameter left="const QDBusUnixFileDescriptor &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDBusUnixFileDescriptor" fullname="QDBusUnixFileDescriptor::QDBusUnixFileDescriptor" href="qdbusunixfiledescriptor.html#QDBusUnixFileDescriptor-2" location="qdbusunixfiledescriptor.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QDBusUnixFileDescriptor(int fileDescriptor)">
+                <parameter left="int" right="" name="fileDescriptor" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fileDescriptor" fullname="QDBusUnixFileDescriptor::fileDescriptor" href="qdbusunixfiledescriptor.html#fileDescriptor" location="qdbusunixfiledescriptor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="fileDescriptor() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isSupported" fullname="QDBusUnixFileDescriptor::isSupported" href="qdbusunixfiledescriptor.html#isSupported" location="qdbusunixfiledescriptor.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="isSupported()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QDBusUnixFileDescriptor::isValid" href="qdbusunixfiledescriptor.html#isValid" location="qdbusunixfiledescriptor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QDBusUnixFileDescriptor::operator=" href="qdbusunixfiledescriptor.html#operator=" location="qdbusunixfiledescriptor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QDBusUnixFileDescriptor &amp;" signature="operator=(const QDBusUnixFileDescriptor &amp; other)">
+                <parameter left="const QDBusUnixFileDescriptor &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFileDescriptor" fullname="QDBusUnixFileDescriptor::setFileDescriptor" href="qdbusunixfiledescriptor.html#setFileDescriptor" location="qdbusunixfiledescriptor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setFileDescriptor(int fileDescriptor)">
+                <parameter left="int" right="" name="fileDescriptor" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="swap" fullname="QDBusUnixFileDescriptor::swap" href="qdbusunixfiledescriptor.html#swap" location="qdbusunixfiledescriptor.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="swap(QDBusUnixFileDescriptor &amp; other)">
+                <parameter left="QDBusUnixFileDescriptor &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDBusUnixFileDescriptor" fullname="QDBusUnixFileDescriptor::~QDBusUnixFileDescriptor" href="qdbusunixfiledescriptor.html#dtor.QDBusUnixFileDescriptor" location="qdbusunixfiledescriptor.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDBusUnixFileDescriptor()"/>
+        </class>
+        <page access="public" status="commendable" name="qdbusadaptorexample.html" href="qdbusadaptorexample.html" subtype="page" title="D-Bus Adaptor Example" fulltitle="D-Bus Adaptor Example" subtitle="" location="dbus-adaptors.qdoc" module="qtdbus">
+            <contents name="the-header" title="The header" level="1"/>
+            <contents name="the-properties" title="The properties" level="1"/>
+            <contents name="the-constructor" title="The constructor" level="1"/>
+            <contents name="slots-methods" title="Slots/methods" level="1"/>
+            <contents name="signals" title="Signals" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qdbusdeclaringsignals.html" href="qdbusdeclaringsignals.html" subtype="page" title="Declaring Signals in D-Bus Adaptors" fulltitle="Declaring Signals in D-Bus Adaptors" subtitle="" location="dbus-adaptors.qdoc" module="qtdbus"/>
+        <page access="public" status="commendable" name="qdbusdeclaringslots.html" href="qdbusdeclaringslots.html" subtype="page" title="Declaring Slots in D-Bus Adaptors" fulltitle="Declaring Slots in D-Bus Adaptors" subtitle="" location="dbus-adaptors.qdoc" module="qtdbus">
+            <contents name="asynchronous-slots" title="Asynchronous Slots" level="1"/>
+            <contents name="input-only-slots" title="Input-Only Slots" level="1"/>
+            <contents name="input-and-output-slots" title="Input and Output Slots" level="1"/>
+            <contents name="automatic-replies" title="Automatic Replies" level="1"/>
+            <contents name="delayed-replies" title="Delayed Replies" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qdbustypesystem.html" href="qdbustypesystem.html" subtype="page" title="The Qt D-Bus Type System" fulltitle="The Qt D-Bus Type System" subtitle="" location="dbus-adaptors.qdoc" module="qtdbus">
+            <contents name="primitive-types" title="Primitive Types" level="1"/>
+            <contents name="compound-types" title="Compound Types" level="1"/>
+            <contents name="extending-the-type-system" title="Extending the Type System" level="1"/>
+            <contents name="the-type-system-in-use" title="The Type System in Use" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="usingadaptors.html" href="usingadaptors.html" subtype="page" title="Using Qt D-Bus Adaptors" fulltitle="Using Qt D-Bus Adaptors" subtitle="" location="dbus-adaptors.qdoc" module="qtdbus" groups="best-practices"/>
+        <function access="public" threadsafety="unspecified" status="commendable" name="Q_NOREPLY" href="qdbusabstractadaptor.html#Q_NOREPLY" location="dbus-adaptors.qdoc" since="4.2" virtual="non" meta="macrowithoutparams" const="false" static="false" overload="false" relates="QDBusAbstractAdaptor" type="" signature="Q_NOREPLY()"/>
+        <page access="public" status="commendable" name="qdbusxml2cpp.html" href="qdbusxml2cpp.html" subtype="page" title="Qt D-Bus XML compiler (qdbusxml2cpp)" fulltitle="Qt D-Bus XML compiler (qdbusxml2cpp)" subtitle="" location="qdbusxml2cpp.qdoc" module="qtdbus">
+            <keyword name="qdbusxml2cpp"/>
+        </page>
+        <page access="public" status="commendable" name="qtdbus-index.html" href="qtdbus-index.html" subtype="page" title="Qt D-Bus" fulltitle="Qt D-Bus" subtitle="" location="qtdbus-index.qdoc" module="qtdbus" groups="technology-apis">
+            <keyword name="qtdbus"/>
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="the-buses" title="The Buses" level="1"/>
+            <contents name="concepts" title="Concepts" level="1"/>
+            <contents name="messages" title="Messages" level="2"/>
+            <contents name="service-names" title="Service Names" level="2"/>
+            <contents name="object-paths" title="Object Paths" level="2"/>
+            <contents name="interfaces" title="Interfaces" level="2"/>
+            <contents name="cheat-sheet" title="Cheat Sheet" level="2"/>
+            <contents name="debugging" title="Debugging" level="1"/>
+            <contents name="further-reading" title="Further Reading" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="QtDBus" href="qtdbus-module.html" subtype="module" title="Qt D-Bus C++ Classes" fulltitle="Qt D-Bus C++ Classes" subtitle="" location="qtdbus-module.qdoc" groups="modules,technology-apis">
+            <target name="the-qdbus-compiler"/>
+        </page>
+    </namespace>
+</INDEX>

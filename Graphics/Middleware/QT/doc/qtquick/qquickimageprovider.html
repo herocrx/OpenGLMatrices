@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickimageprovider.cpp -->
+  <title>QtQuick 5.0: QQuickImageProvider Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#an-example">An example</a></li>
+<li class="level2"><a href="#asynchronous-image-loading">Asynchronous image loading</a></li>
+<li class="level2"><a href="#image-caching">Image caching</a></li>
+</ul>
+</div>
+<h1 class="title">QQuickImageProvider Class</h1>
+<!-- $$$QQuickImageProvider-brief -->
+<p>The QQuickImageProvider class provides an interface for supporting pixmaps and threaded image requests in QML. <a href="#details">More...</a></p>
+<!-- @@@QQuickImageProvider -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QQuickImageProvider&gt;</span></pre><p><b>Inherits: </b><a href="../qtqml/qqmlimageproviderbase.html">QQmlImageProviderBase</a>.</p>
+<p>This class was introduced in  QtQuick 2.0.</p>
+<ul>
+<li><a href="qquickimageprovider-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#QQuickImageProvider">QQuickImageProvider</a></b>(ImageType<i> type</i>, Flags<i> flags</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#dtor.QQuickImageProvider">~QQuickImageProvider</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QImage </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#requestImage">requestImage</a></b>(const QString &amp;<i> id</i>, QSize *<i> size</i>, const QSize &amp;<i> requestedSize</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QPixmap </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#requestPixmap">requestPixmap</a></b>(const QString &amp;<i> id</i>, QSize *<i> size</i>, const QSize &amp;<i> requestedSize</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QQuickTextureFactory * </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#requestTexture">requestTexture</a></b>(const QString &amp;<i> id</i>, QSize *<i> size</i>, const QSize &amp;<i> requestedSize</i>)</td></tr>
+</table>
+<a name="reimplemented-public-functions"></a>
+<h2>Reimplemented Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual Flags </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#flags">flags</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual ImageType </td><td class="memItemRight bottomAlign"><b><a href="qquickimageprovider.html#imageType">imageType</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">2 public functions inherited from <a href="../qtqml/qqmlimageproviderbase.html#public-functions">QQmlImageProviderBase</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QQuickImageProvider-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QQuickImageProvider class provides an interface for supporting pixmaps and threaded image requests in QML.</p>
+<p>QQuickImageProvider is used to provide advanced image loading features in QML applications. It allows images in QML to be:</p>
+<ul>
+<li>Loaded using QPixmaps rather than actual image files</li>
+<li>Loaded asynchronously in a separate thread</li>
+</ul>
+<p>To specify that an image should be loaded by an image provider, use the <b>&quot;image:&quot;</b> scheme for the URL source of the image, followed by the identifiers of the image provider and the requested image. For example:</p>
+<pre class="qml"><span class="type"><a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a></span> { <span class="name">source</span>: <span class="string">&quot;image://myimageprovider/image.png&quot;</span> }</pre>
+<p>This specifies that the image should be loaded by the image provider named &quot;myimageprovider&quot;, and the image to be loaded is named &quot;image.png&quot;. The QML engine invokes the appropriate image provider according to the providers that have been registered through <a href="../qtqml/qqmlengine.html#addImageProvider">QQmlEngine::addImageProvider</a>().</p>
+<p>Note that the identifiers are case-insensitive, but the rest of the URL will be passed on with preserved case. For example, the below snippet would still specify that the image is loaded by the image provider named &quot;myimageprovider&quot;, but it would request a different image than the above snippet (&quot;Image.png&quot; instead of &quot;image.png&quot;).</p>
+<pre class="qml"><span class="type"><a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a></span> { <span class="name">source</span>: <span class="string">&quot;image://MyImageProvider/Image.png&quot;</span> }</pre>
+<p>If you want the rest of the URL to be case insensitive, you will have to take care of that yourself inside your image provider.</p>
+<a name="an-example"></a>
+<h4>An example</h4>
+<p>Here are two images. Their <tt>source</tt> values indicate they should be loaded by an image provider named &quot;colors&quot;, and the images to be loaded are &quot;yellow&quot; and &quot;red&quot;, respectively:</p>
+<pre class="qml"></pre>
+<p>When these images are loaded by QML, it looks for a matching image provider and calls its <a href="qquickimageprovider.html#requestImage">requestImage</a>() or <a href="qquickimageprovider.html#requestPixmap">requestPixmap</a>() method (depending on its <a href="qquickimageprovider.html#imageType">imageType</a>()) to load the image. The method is called with the <tt>id</tt> parameter set to &quot;yellow&quot; for the first image, and &quot;red&quot; for the second.</p>
+<p>Here is an image provider implementation that can load the images requested by the above QML. This implementation dynamically generates <a href="../qtgui/qpixmap.html">QPixmap</a> images that are filled with the requested color:</p>
+<pre class="cpp"></pre>
+<p>To make this provider accessible to QML, it is registered with the QML engine with a &quot;colors&quot; identifier:</p>
+<pre class="cpp"><span class="type">int</span> main(<span class="type">int</span> argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span>argv<span class="operator">[</span><span class="operator">]</span>)
+{
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+
+    <span class="type"><a href="../qtqml/qqmlengine.html">QQmlEngine</a></span> engine;
+    engine<span class="operator">-</span><span class="operator">&gt;</span>addImageProvider(QLatin1String(<span class="string">&quot;colors&quot;</span>)<span class="operator">,</span> <span class="keyword">new</span> ColorPixmapProvider);
+
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+}</pre>
+<p>Now the images can be successfully loaded in QML:</p>
+<p class="centerAlign"><img src="images/imageprovider.png" alt="" /></p><p>A complete example is available in Qt's examples/qml/imageprovider directory. Note the example registers the provider via a <a href="../qtqml/qqmlextensionplugin.html">plugin</a> instead of registering it in the application <tt>main()</tt> function as shown above.</p>
+<a name="asynchronous-image-loading"></a>
+<h4>Asynchronous image loading</h4>
+<p>Image providers that support <a href="../qtgui/qimage.html">QImage</a> or Texture loading automatically include support for asychronous loading of images. To enable asynchronous loading for an image source, set the <tt>asynchronous</tt> property to <tt>true</tt> for the relevant <a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a>, <a href="qml-qtquick2-borderimage.html">BorderImage</a> or <a href="qml-qtquick2-animatedimage.html">AnimatedImage</a> object. When this is enabled, the image request to the provider is run in a low priority thread, allowing image loading to be executed in the background, and reducing the performance impact on the user interface.</p>
+<p>To force asynchronous image loading, even for image sources that do not have the <tt>asynchronous</tt> property set to <tt>true</tt>, you may pass the <tt>QQuickImageProvider::ForceAsynchronousImageLoading</tt> flag to the image provider constructor. This ensures that all image requests for the provider are handled in a separate thread.</p>
+<p>Asynchronous loading for image providers that provide <a href="../qtgui/qpixmap.html">QPixmap</a> is only supported in platforms that have the ThreadedPixmaps feature, in platforms where pixmaps can only be created in the main thread (i.e&#x2e; ThreadedPixmaps is not supported) if <a href="qml-qtquick2-image.html#asynchronous-prop">asynchronous</a> is set to <tt>true</tt>, the value is ignored and the image is loaded synchronously.</p>
+<a name="image-caching"></a>
+<h4>Image caching</h4>
+<p>Images returned by a QQuickImageProvider are automatically cached, similar to any image loaded by the QML engine. When an image with a &quot;image://&quot; prefix is loaded from cache, <a href="qquickimageprovider.html#requestImage">requestImage</a>() and <a href="qquickimageprovider.html#requestPixmap">requestPixmap</a>() will not be called for the relevant image provider. If an image should always be fetched from the image provider, and should not be cached at all, set the <tt>cache</tt> property to <tt>false</tt> for the relevant <a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a>, <a href="qml-qtquick2-borderimage.html">BorderImage</a> or <a href="qml-qtquick2-animatedimage.html">AnimatedImage</a> object.</p>
+<p>The <a href="qtquick-module.html">QtQuick</a> 1 version of this class is named QDeclarativeImageProvider.</p>
+</div>
+<p><b>See also </b><a href="../qtqml/qqmlengine.html#addImageProvider">QQmlEngine::addImageProvider</a>().</p>
+<!-- @@@QQuickImageProvider -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QQuickImageProvider[overload1]$$$QQuickImageProviderImageTypeFlags -->
+<h3 class="fn"><a name="QQuickImageProvider"></a>QQuickImageProvider::<span class="name">QQuickImageProvider</span>(<span class="type"><a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">ImageType</a></span><i> type</i>, <span class="type"><a href="../qtqml/qqmlimageproviderbase.html#Flags-typedef">Flags</a></span><i> flags</i> = 0)</h3>
+<p>Creates an image provider that will provide images of the given <i>type</i> and behave according to the given <i>flags</i>.</p>
+<!-- @@@QQuickImageProvider -->
+<!-- $$$~QQuickImageProvider[overload1]$$$~QQuickImageProvider -->
+<h3 class="fn"><a name="dtor.QQuickImageProvider"></a>QQuickImageProvider::<span class="name">~QQuickImageProvider</span>()<tt> [virtual]</tt></h3>
+<p>Destroys the <a href="qquickimageprovider.html">QQuickImageProvider</a></p>
+<p><b>Note: </b>The destructor of your derived class need to be thread safe.</p><!-- @@@~QQuickImageProvider -->
+<!-- $$$flags[overload1]$$$flags -->
+<h3 class="fn"><a name="flags"></a><span class="type"><a href="../qtqml/qqmlimageproviderbase.html#Flags-typedef">Flags</a></span> QQuickImageProvider::<span class="name">flags</span>() const<tt> [virtual]</tt></h3>
+<p>Reimplemented from <a href="../qtqml/qqmlimageproviderbase.html#flags">QQmlImageProviderBase::flags</a>().</p>
+<p>Returns the flags set for this provider.</p>
+<!-- @@@flags -->
+<!-- $$$imageType[overload1]$$$imageType -->
+<h3 class="fn"><a name="imageType"></a><span class="type"><a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">ImageType</a></span> QQuickImageProvider::<span class="name">imageType</span>() const<tt> [virtual]</tt></h3>
+<p>Reimplemented from <a href="../qtqml/qqmlimageproviderbase.html#imageType">QQmlImageProviderBase::imageType</a>().</p>
+<p>Returns the image type supported by this provider.</p>
+<!-- @@@imageType -->
+<!-- $$$requestImage[overload1]$$$requestImageconstQString&QSize*constQSize& -->
+<h3 class="fn"><a name="requestImage"></a><span class="type"><a href="../qtgui/qimage.html">QImage</a></span> QQuickImageProvider::<span class="name">requestImage</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> id</i>, <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> *<i> size</i>, const <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> &amp;<i> requestedSize</i>)<tt> [virtual]</tt></h3>
+<p>Implement this method to return the image with <i>id</i>. The default implementation returns an empty image.</p>
+<p>The <i>id</i> is the requested image source, with the &quot;image:&quot; scheme and provider identifier removed. For example, if the image <a href="qml-qtquick2-image.html#source-prop">source</a> was &quot;image://myprovider/icons/home&quot;, the given <i>id</i> would be &quot;icons/home&quot;.</p>
+<p>The <i>requestedSize</i> corresponds to the <a href="qml-qtquick2-image.html#sourceSize-prop">Image::sourceSize</a> requested by an Image item. If <i>requestedSize</i> is a valid size, the image returned should be of that size.</p>
+<p>In all cases, <i>size</i> must be set to the original size of the image. This is used to set the <a href="qml-qtquick2-item.html#width-prop">width</a> and <a href="qml-qtquick2-item.html#height-prop">height</a> of the relevant <a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a> if these values have not been set explicitly.</p>
+<p><b>Note: </b>this method may be called by multiple threads, so ensure the implementation of this method is reentrant.</p><!-- @@@requestImage -->
+<!-- $$$requestPixmap[overload1]$$$requestPixmapconstQString&QSize*constQSize& -->
+<h3 class="fn"><a name="requestPixmap"></a><span class="type"><a href="../qtgui/qpixmap.html">QPixmap</a></span> QQuickImageProvider::<span class="name">requestPixmap</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> id</i>, <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> *<i> size</i>, const <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> &amp;<i> requestedSize</i>)<tt> [virtual]</tt></h3>
+<p>Implement this method to return the pixmap with <i>id</i>. The default implementation returns an empty pixmap.</p>
+<p>The <i>id</i> is the requested image source, with the &quot;image:&quot; scheme and provider identifier removed. For example, if the image <a href="qml-qtquick2-image.html#source-prop">source</a> was &quot;image://myprovider/icons/home&quot;, the given <i>id</i> would be &quot;icons/home&quot;.</p>
+<p>The <i>requestedSize</i> corresponds to the <a href="qml-qtquick2-image.html#sourceSize-prop">Image::sourceSize</a> requested by an Image item. If <i>requestedSize</i> is a valid size, the image returned should be of that size.</p>
+<p>In all cases, <i>size</i> must be set to the original size of the image. This is used to set the <a href="qml-qtquick2-item.html#width-prop">width</a> and <a href="qml-qtquick2-item.html#height-prop">height</a> of the relevant <a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a> if these values have not been set explicitly.</p>
+<p><b>Note: </b>this method may be called by multiple threads, so ensure the implementation of this method is reentrant.</p><!-- @@@requestPixmap -->
+<!-- $$$requestTexture[overload1]$$$requestTextureconstQString&QSize*constQSize& -->
+<h3 class="fn"><a name="requestTexture"></a><span class="type"><a href="qquicktexturefactory.html">QQuickTextureFactory</a></span> * QQuickImageProvider::<span class="name">requestTexture</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> id</i>, <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> *<i> size</i>, const <span class="type"><a href="../qtcore/qsize.html">QSize</a></span> &amp;<i> requestedSize</i>)<tt> [virtual]</tt></h3>
+<p>Implement this method to return the texture with <i>id</i>. The default implementation returns 0.</p>
+<p>The <i>id</i> is the requested image source, with the &quot;image:&quot; scheme and provider identifier removed. For example, if the image <a href="qml-qtquick2-image.html#source-prop">source</a> was &quot;image://myprovider/icons/home&quot;, the given <i>id</i> would be &quot;icons/home&quot;.</p>
+<p>The <i>requestedSize</i> corresponds to the <a href="qml-qtquick2-image.html#sourceSize-prop">Image::sourceSize</a> requested by an Image item. If <i>requestedSize</i> is a valid size, the image returned should be of that size.</p>
+<p>In all cases, <i>size</i> must be set to the original size of the image. This is used to set the <a href="qml-qtquick2-item.html#width-prop">width</a> and <a href="qml-qtquick2-item.html#height-prop">height</a> of the relevant <a href="../qtqml/qqmlimageproviderbase.html#ImageType-enum">Image</a> if these values have not been set explicitly.</p>
+<p><b>Note: </b>this method may be called by multiple threads, so ensure the implementation of this method is reentrant.</p><!-- @@@requestTexture -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

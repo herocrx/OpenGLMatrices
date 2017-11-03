@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtAssistant">
+    <examples>
+        <example name="Remote Control Example" docUrl="qthelp://org.qt-project.assistant.502/assistant/remotecontrol.html" projectPath="remotecontrol/remotecontrol.pro">
+            <description><![CDATA[Using and controlling Qt Assistant as a help viewer.]]></description>
+            <tags>control,remote</tags>
+            <fileToOpen>remotecontrol/remotecontrol.cpp</fileToOpen>
+            <fileToOpen>remotecontrol/remotecontrol.h</fileToOpen>
+            <fileToOpen>remotecontrol/main.cpp</fileToOpen>
+        </example>
+        <example name="Simple Text Viewer Example" docUrl="qthelp://org.qt-project.assistant.502/assistant/simpletextviewer.html" projectPath="simpletextviewer/simpletextviewer.pro" imageUrl="qthelp://org.qt-project.assistant.502/assistant/images/simpletextviewer-example.png">
+            <description><![CDATA[Using Qt Assistant as a customized help viewer for your application.]]></description>
+            <tags>simple,viewer,text</tags>
+            <fileToOpen>simpletextviewer/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

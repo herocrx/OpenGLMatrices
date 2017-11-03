@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qsgnode.cpp -->
+  <title>QtQuick 5.0: QSGBasicGeometryNode Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QSGBasicGeometryNode Class</h1>
+<!-- $$$QSGBasicGeometryNode-brief -->
+<p>The QSGBasicGeometryNode class serves as a baseclass for geometry based nodes. <a href="#details">More...</a></p>
+<!-- @@@QSGBasicGeometryNode -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QSGBasicGeometryNode&gt;</span></pre><p><b>Inherits: </b><a href="qsgnode.html">QSGNode</a>.</p>
+<p><b>Inherited by: </b><a href="qsgclipnode.html">QSGClipNode</a> and <a href="qsggeometrynode.html">QSGGeometryNode</a>.</p>
+<ul>
+<li><a href="qsgbasicgeometrynode-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsgbasicgeometrynode.html#dtor.QSGBasicGeometryNode">~QSGBasicGeometryNode</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QSGGeometry * </td><td class="memItemRight bottomAlign"><b><a href="qsgbasicgeometrynode.html#geometry">geometry</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSGGeometry * </td><td class="memItemRight bottomAlign"><b><a href="qsgbasicgeometrynode.html#geometry-2">geometry</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsgbasicgeometrynode.html#setGeometry">setGeometry</a></b>(QSGGeometry *<i> geometry</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">20 public functions inherited from <a href="qsgnode.html#public-functions">QSGNode</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QSGBasicGeometryNode-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QSGBasicGeometryNode class serves as a baseclass for geometry based nodes.</p>
+<p>The QSGBasicGeometryNode class should not be used by itself. It is only encapsulates shared functionality between the <a href="qsggeometrynode.html">QSGGeometryNode</a> and <a href="qsgclipnode.html">QSGClipNode</a> classes.</p>
+</div>
+<!-- @@@QSGBasicGeometryNode -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$~QSGBasicGeometryNode[overload1]$$$~QSGBasicGeometryNode -->
+<h3 class="fn"><a name="dtor.QSGBasicGeometryNode"></a>QSGBasicGeometryNode::<span class="name">~QSGBasicGeometryNode</span>()</h3>
+<p>Deletes this <a href="qsgbasicgeometrynode.html">QSGBasicGeometryNode</a>.</p>
+<p>If the node has the flag <a href="qsgnode.html#Flag-enum">QSGNode::OwnsGeometry</a> set, it will also delete the geometry object it is pointing to. This flag is not set by default.</p>
+<!-- @@@~QSGBasicGeometryNode -->
+<!-- $$$geometry[overload1]$$$geometry -->
+<h3 class="fn"><a name="geometry"></a>const <span class="type"><a href="qsggeometry.html">QSGGeometry</a></span> * QSGBasicGeometryNode::<span class="name">geometry</span>() const</h3>
+<p>Returns this node's geometry.</p>
+<p>The geometry is null by default.</p>
+<p><b>See also </b><a href="qsgbasicgeometrynode.html#setGeometry">setGeometry</a>().</p>
+<!-- @@@geometry -->
+<!-- $$$geometry$$$geometry -->
+<h3 class="fn"><a name="geometry-2"></a><span class="type"><a href="qsggeometry.html">QSGGeometry</a></span> * QSGBasicGeometryNode::<span class="name">geometry</span>()</h3>
+<p>Returns this node's geometry.</p>
+<p>The geometry is null by default.</p>
+<!-- @@@geometry -->
+<!-- $$$setGeometry[overload1]$$$setGeometryQSGGeometry* -->
+<h3 class="fn"><a name="setGeometry"></a><span class="type">void</span> QSGBasicGeometryNode::<span class="name">setGeometry</span>(<span class="type"><a href="qsggeometry.html">QSGGeometry</a></span> *<i> geometry</i>)</h3>
+<p>Sets the geometry of this node to <i>geometry</i>.</p>
+<p>If the node has the flag <a href="qsgnode.html#Flag-enum">QSGNode::OwnsGeometry</a> set, it will also delete the geometry object it is pointing to. This flag is not set by default.</p>
+<p>If the geometry is changed whitout calling setGeometry() again, the user must also mark the geometry as dirty using <a href="qsgnode.html#markDirty">QSGNode::markDirty</a>().</p>
+<p><b>See also </b><a href="qsgbasicgeometrynode.html#geometry">geometry</a>() and <a href="qsgnode.html#markDirty">markDirty</a>().</p>
+<!-- @@@setGeometry -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

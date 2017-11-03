@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qsgflatcolormaterial.cpp -->
+  <title>QtQuick 5.0: QSGFlatColorMaterial Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QSGFlatColorMaterial Class</h1>
+<!-- $$$QSGFlatColorMaterial-brief -->
+<p>The QSGFlatColorMaterial class provides a convenient way of rendering solid colored geometry in the scene graph. <a href="#details">More...</a></p>
+<!-- @@@QSGFlatColorMaterial -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QSGFlatColorMaterial&gt;</span></pre><p><b>Inherits: </b><a href="qsgmaterial.html">QSGMaterial</a>.</p>
+<ul>
+<li><a href="qsgflatcolormaterial-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsgflatcolormaterial.html#QSGFlatColorMaterial">QSGFlatColorMaterial</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QColor &amp; </td><td class="memItemRight bottomAlign"><b><a href="qsgflatcolormaterial.html#color">color</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsgflatcolormaterial.html#setColor">setColor</a></b>(const QColor &amp;<i> color</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">5 public functions inherited from <a href="qsgmaterial.html#public-functions">QSGMaterial</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QSGFlatColorMaterial-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QSGFlatColorMaterial class provides a convenient way of rendering solid colored geometry in the scene graph.</p>
+<p>The flat color material will fill every pixel in a geometry using a solid color. The color can contain transparency.</p>
+<p>The geometry to be rendered with a flat color material requires vertices in attribute location 0 in the <a href="qsggeometry.html">QSGGeometry</a> object to render correctly. The <a href="qsggeometry.html#defaultAttributes_Point2D">QSGGeometry::defaultAttributes_Point2D</a>() returns an attribute set compatible with this material.</p>
+<p>The flat color material respects both current opacity and current matrix when updating its rendering state.</p>
+</div>
+<!-- @@@QSGFlatColorMaterial -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QSGFlatColorMaterial[overload1]$$$QSGFlatColorMaterial -->
+<h3 class="fn"><a name="QSGFlatColorMaterial"></a>QSGFlatColorMaterial::<span class="name">QSGFlatColorMaterial</span>()</h3>
+<p>Constructs a new flat color material.</p>
+<p>The default color is white.</p>
+<!-- @@@QSGFlatColorMaterial -->
+<!-- $$$color[overload1]$$$color -->
+<h3 class="fn"><a name="color"></a>const <span class="type"><a href="../qtgui/qcolor.html">QColor</a></span> &amp; QSGFlatColorMaterial::<span class="name">color</span>() const</h3>
+<p>Returns this flat color material's color.</p>
+<p>The default color is white.</p>
+<p><b>See also </b><a href="qsgflatcolormaterial.html#setColor">setColor</a>().</p>
+<!-- @@@color -->
+<!-- $$$setColor[overload1]$$$setColorconstQColor& -->
+<h3 class="fn"><a name="setColor"></a><span class="type">void</span> QSGFlatColorMaterial::<span class="name">setColor</span>(const <span class="type"><a href="../qtgui/qcolor.html">QColor</a></span> &amp;<i> color</i>)</h3>
+<p>Sets this flat color material's color to <i>color</i>.</p>
+<p><b>See also </b><a href="qsgflatcolormaterial.html#color">color</a>().</p>
+<!-- @@@setColor -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

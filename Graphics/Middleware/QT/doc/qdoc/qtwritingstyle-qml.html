@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qtwritingstyle-qml.qdoc -->
+  <title>QDoc 5.0: QML Documentation Style</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#qml-types">QML Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals-and-handlers-documentation">Signals and Handlers Documentation</a></li>
+<li class="level1"><a href="#methods-and-javascript-functions">Methods and JavaScript Functions</a></li>
+<li class="level1"><a href="#enumerations">Enumerations</a></li>
+</ul>
+</div>
+<h1 class="title">QML Documentation Style</h1>
+<span class="subtitle"></span>
+<!-- $$$qtwritingstyle-qml.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>QDoc can process QML types defined as C++ classes and QML types defined in <tt>.qml</tt> files. For C++ classes documented as QML types, the QDoc comments are in the <tt>.cpp</tt> file while QML types defined in QML are in the <tt>.qml</tt> file. The C++ classes must also be documented documented with the QML <a href="13-qdoc-commands-topics.html">topic commands</a>:</p>
+<ul>
+<li><a href="13-qdoc-commands-topics.html#qmlattachedproperty-command">\qmlattachedproperty</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmlattachedsignal-command">\qmlattachedsignal</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmlbasictype-command">\qmlbasictype</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmltype-command">\qmltype</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmlmethod-command">\qmlmethod</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmlproperty-command">\qmlproperty</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmlsignal-command">\qmlsignal</a></li>
+<li><a href="13-qdoc-commands-topics.html#qmlmodule-command">\qmlmodule</a></li>
+<li><a href="13-qdoc-commands-topics.html#inqmlmodule-command">\inqmlmodule</a></li>
+<li><a href="13-qdoc-commands-topics.html#instantiates-command">\instantiates</a></li>
+</ul>
+<p>For QML types defined in <tt>.qml</tt> files, QDoc will parse the QML and determine the properties, signals, and the type within the QML definition. The QDoc block then needs to be immediately above the declaration. For QML types implemented in C++, QDoc will output warnings if the C++ class documentation does not exist. The class documentation may be marked as <a href="16-qdoc-commands-status.html#internal-command">internal</a> if it is not a public API.</p>
+<a name="qml-types"></a>
+<h2>QML Types</h2>
+<p>The <a href="13-qdoc-commands-topics.html#qmltype-command">\qmltype</a> command is for QML type documentation.</p>
+<pre class="cpp">    \qmltype TextEdit
+    \instantiates <span class="type">QQuickTextEdit</span>
+    \inqmlmodule <span class="type"><a href="../qtquick/qtquick-module.html">QtQuick</a></span> <span class="number">2</span>
+    \ingroup qtquick<span class="operator">-</span>visual
+    \ingroup qtquick<span class="operator">-</span>input
+    \inherits Item
+    \brief Displays multiple lines of editable formatted text
+
+    The TextEdit item displays a block of editable<span class="operator">,</span> formatted text<span class="operator">.</span>
+
+    It can display both plain <span class="keyword">and</span> rich text<span class="operator">.</span> For example:
+
+    \qml
+        TextEdit {
+            width: <span class="number">240</span>
+            text: <span class="string">&quot;&lt;b&gt;Hello&lt;/b&gt; &lt;i&gt;World!&lt;/i&gt;&quot;</span>
+            font<span class="operator">.</span>family: <span class="string">&quot;Helvetica&quot;</span>
+            font<span class="operator">.</span>pointSize: <span class="number">20</span>
+            color: <span class="string">&quot;blue&quot;</span>
+            focus: <span class="keyword">true</span>
+        }
+    \endqml
+
+    \image declarative<span class="operator">-</span>textedit<span class="operator">.</span>gif
+
+    <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span> omitted detailed description
+
+    \sa Text<span class="operator">,</span> TextInput<span class="operator">,</span> {examples<span class="operator">/</span>quick<span class="operator">/</span>text<span class="operator">/</span>textselection}{Text Selection example}</pre>
+<p>The <a href="13-qdoc-commands-topics.html#instantiates-command">\instantiates</a> accepts the C++ class which implements the QML type as the argument. For types implemented in QML, this is not needed.</p>
+<p>The <i>brief description</i> provides a summary for the QML type. The brief does not need to be a complete sentence and may start with a verb. QDoc will append the brief description onto the QML type in tables and generated lists.</p>
+<pre class="cpp">\qmltype ColorAnimation
+\brief Animates changes in color values</pre>
+<p>Here are some alternate verbs for the brief statement:</p>
+<ul>
+<li>&quot;Provides..&#x2e;&quot;</li>
+<li>&quot;Specifies..&#x2e;&quot;</li>
+<li>&quot;Describes..&#x2e;&quot;</li>
+</ul>
+<p>The <i>detailed description</i> follows the brief and may contain images, snippet, and link to other documentation.</p>
+<a name="properties"></a>
+<h2>Properties</h2>
+<p>The property description focuses on what the property <i>does</i> and may use the following style:</p>
+<p>Property documentation usually starts with &quot;This property..&#x2e;&quot; but for certain properties, these are the common expressions:</p>
+<ul>
+<li>&quot;This property holds..&#x2e;&quot;</li>
+<li>&quot;This property describes..&#x2e;&quot;</li>
+<li>&quot;This property represents..&#x2e;&quot;</li>
+<li>&quot;Returns <tt>true</tt> when..&#x2e; and <tt>false</tt> when..&#x2e;&quot; - for properties that are marked <tt>read-only</tt>.</li>
+<li>&quot;Sets the..&#x2e;&quot; - for properties that configure a type.</li>
+</ul>
+<a name="signals-and-handlers-documentation"></a>
+<h2>Signals and Handlers Documentation</h2>
+<p>QML signals are documented either in the QML file or in the C++ implementation with the <a href="13-qdoc-commands-topics.html#qmlsignal-command">\qmlsignal</a> command. Signal documentation must include the condition for emitting the signal, mention the corresponding signal handler, and document whether the signal accepts a parameter.</p>
+<pre class="cpp"><span class="comment">/*
+    This signal is emitted when the user clicks the button. A click is defined
+    as a press followed by a release. The corresponding handler is
+    \c onClicked.
+*/</span>
+signal clicked()</pre>
+<p>These are the possible documentation styles for signals:</p>
+<ul>
+<li>&quot;This signal is triggered when..&#x2e;&quot;</li>
+<li>&quot;Triggered when..&#x2e;&quot;</li>
+<li>&quot;Emitted when..&#x2e;&quot;</li>
+</ul>
+<a name="methods-and-javascript-functions"></a>
+<h2>Methods and JavaScript Functions</h2>
+<p>Typically, function documentation immediately precedes the implementation of the function in the <tt>.cpp</tt> file. The <a href="13-qdoc-commands-topics.html">topic command</a> for functions is <a href="13-qdoc-commands-topics.html#fn-command">\fn</a>. For functions in QML or JavaScript, the documentation must reside immediately above the function declaration.</p>
+<p>The function documentation starts with a verb, indicating the operation the function performs.</p>
+<pre class="cpp"><span class="comment">/*
+    \qmlmethod QtQuick2::ListModel::remove(int index, int count = 1)
+
+    Deletes the content at \a index from the model.
+
+    \sa clear()
+*/</span>
+<span class="type">void</span> <span class="type">QQuickListModel</span><span class="operator">::</span>remove(QQmlV8Function <span class="operator">*</span>args)</pre>
+<p>Some common verbs for function documentation:</p>
+<ul>
+<li>&quot;Copies..&#x2e;&quot; - for constructors</li>
+<li>&quot;Destroys..&#x2e;&quot; - for destructors</li>
+<li>&quot;Returns..&#x2e;&quot; - for accessor functions</li>
+</ul>
+<p>The function documentation must document:</p>
+<ul>
+<li>the return type</li>
+<li>the parameters</li>
+<li>the actions of the functions</li>
+</ul>
+<p>The <a href="04-qdoc-commands-textmarkup.html#a-command">\a</a> command marks the parameter in the documentation. The return type documentation should link to the type documentation or be marked with the <a href="04-qdoc-commands-textmarkup.html#c-command">\c</a> command in the case of boolean values.</p>
+<a name="enumerations"></a>
+<h2>Enumerations</h2>
+<p>QML enumerations are documented as QML properties with the <a href="13-qdoc-commands-topics.html#qmlproperty-command">\qmlproperty</a> command. The type of the property is <tt>enumeration</tt>.</p>
+<pre class="cpp"><span class="comment">/*!
+\qmlproperty enumeration QtQuick2::Text::font.weight
+
+Sets the font's weight.
+
+The weight can be one of:
+\list
+\li Font.Light
+\li Font.Normal - the default
+\li Font.DemiBold
+\li Font.Bold
+\li Font.Black
+\endlist
+*/</span></pre>
+<p>The QDoc comment lists the values of the enumeration. If the enumeration is implemented in C++, the documentation may link to the corresponding C++ enumeration. However, the QDoc comment should advise that the enumeration is a C++ enumeration.</p>
+</div>
+<!-- @@@qtwritingstyle-qml.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>org.qt-project.qtdoc.502</namespace>
+    <virtualFolder>qtdoc</virtualFolder>
+    <customFilter name="Qtdoc 5.0.2">
+        <filterAttribute>qtdoc</filterAttribute>
+        <filterAttribute>5.0.2</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qtdoc</filterAttribute>
+        <filterAttribute>qtrefdoc</filterAttribute>
+        <filterAttribute>5.0.2</filterAttribute>
+        <toc>
+            <section ref="index.html" title="Qt 5.0.2 Reference Documentation">
+                <section ref="classes.html" title="Classes"/>
+                <section ref="qtexamplesandtutorials.html" title="Tutorials and Examples"/>
+                <section ref="modules-qml.html" title="QML Types"/>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Accessibility" id="Accessibility" ref="accessible.html"/>
+            <keyword name="Accessibility Classes" id="Accessibility Classes" ref="accessibility.html"/>
+            <keyword name="ActiveQt Examples" id="ActiveQt Examples" ref="examples-activeqt.html"/>
+            <keyword name="ActiveX in Qt" id="ActiveX in Qt" ref="qt-activex.html"/>
+            <keyword name="Add-ons" id="Add-ons" ref="addons.html"/>
+            <keyword name="All Classes" id="All Classes" ref="classes.html"/>
+            <keyword name="All Classes by Module" id="All Classes by Module" ref="modules-cpp.html"/>
+            <keyword name="All Functions" id="All Functions" ref="functions.html"/>
+            <keyword name="All Modules" id="All Modules" ref="modules.html"/>
+            <keyword name="All Namespaces" id="All Namespaces" ref="namespaces.html"/>
+            <keyword name="All Overviews and HOWTOs" id="All Overviews and HOWTOs" ref="overviews.html"/>
+            <keyword name="All QML APIs by Module" id="All QML APIs by Module" ref="modules-qml.html"/>
+            <keyword name="Animation Framework Examples" id="Animation Framework Examples" ref="examples-animation.html"/>
+            <keyword name="Annotated Class List" id="Annotated Class List" ref="annotated.html"/>
+            <keyword name="Best Practice Guides" id="Best Practice Guides" ref="best-practices.html"/>
+            <keyword name="C++ API changes" id="C++ API changes" ref="sourcebreaks.html"/>
+            <keyword name="CMake Manual" id="CMake Manual" ref="cmake-manual.html"/>
+            <keyword name="Calling Qt Functions From Unix Signal Handlers" id="Calling Qt Functions From Unix Signal Handlers" ref="unix-signals.html"/>
+            <keyword name="Class and Function Documentation" id="Class and Function Documentation" ref="classlists.html"/>
+            <keyword name="Classes for String Data" id="Classes for String Data" ref="string-processing.html"/>
+            <keyword name="Compiler Notes" id="Compiler Notes" ref="compiler-notes.html"/>
+            <keyword name="Configuring qmake's Environment" id="Configuring qmake's Environment" ref="qmake-environment-reference.html"/>
+            <keyword name="Contributions to the Cocoa Platform Plugin Files" id="Contributions to the Cocoa Platform Plugin Files" ref="qt-mac-cocoa-licensing.html"/>
+            <keyword name="Core Internals" id="Core Internals" ref="topics-core.html"/>
+            <keyword name="Creating Shared Libraries" id="Creating Shared Libraries" ref="sharedlibrary.html"/>
+            <keyword name="Cross-Platform and Platform-Specific Development" id="Cross-Platform and Platform-Specific Development" ref="developing-with-qt.html"/>
+            <keyword name="D-Bus Examples" id="D-Bus Examples" ref="examples-dbus.html"/>
+            <keyword name="Data Storage" id="Data Storage" ref="topics-data-storage.html"/>
+            <keyword name="Debugging Techniques" id="Debugging Techniques" ref="debug.html"/>
+            <keyword name="Deploying Plugins" id="Deploying Plugins" ref="deployment-plugins.html"/>
+            <keyword name="Deploying Qt Applications" id="Deploying Qt Applications" ref="deployment.html"/>
+            <keyword name="Deploying an Application on Mac OS X" id="Deploying an Application on Mac OS X" ref="deployment-mac.html"/>
+            <keyword name="Deploying an Application on Windows" id="Deploying an Application on Windows" ref="deployment-windows.html"/>
+            <keyword name="Deploying an Application on X11 Platforms" id="Deploying an Application on X11 Platforms" ref="deployment-x11.html"/>
+            <keyword name="Desktop Integration" id="Desktop Integration" ref="desktop-integration.html"/>
+            <keyword name="Developing Qt Applications for Mac OS X" id="Developing Qt Applications for Mac OS X" ref="developing-on-mac.html"/>
+            <keyword name="Development Tools" id="Development Tools" ref="topics-app-development.html"/>
+            <keyword name="Drag and Drop Examples" id="Drag and Drop Examples" ref="examples-draganddrop.html"/>
+            <keyword name="qtdemo" id="qtdemo" ref="qtdemo.html#qtdemo"/>
+            <keyword name="Examples Launcher" id="Examples Launcher" ref="qtdemo.html"/>
+            <keyword name="Exception Safety" id="Exception Safety" ref="exceptionsafety.html"/>
+            <keyword name="GNU General Public License (GPL)" id="GNU General Public License (GPL)" ref="gpl.html"/>
+            <keyword name="GNU Lesser General Public License (LGPL)" id="GNU Lesser General Public License (LGPL)" ref="lgpl.html"/>
+            <keyword name="General Qt Requirements" id="General Qt Requirements" ref="requirements.html"/>
+            <keyword name="Gestures Examples" id="Gestures Examples" ref="examples-gestures.html"/>
+            <keyword name="Getting Started Guides" id="Getting Started Guides" ref="gettingstarted.html"/>
+            <keyword name="Getting Started Programming with Qt Quick" id="Getting Started Programming with Qt Quick" ref="gettingstartedqml.html"/>
+            <keyword name="Getting Started Programming with Qt Widgets" id="Getting Started Programming with Qt Widgets" ref="gettingstartedqt.html"/>
+            <keyword name="Graphics" id="Graphics" ref="topics-graphics.html"/>
+            <keyword name="Groups Of Related Classes" id="Groups Of Related Classes" ref="groups.html"/>
+            <keyword name="How to Report a Bug" id="How to Report a Bug" ref="bughowto.html"/>
+            <keyword name="idc" id="idc" ref="activeqt-idc.html#idc"/>
+            <keyword name="IDC - The Interface Description Compiler (ActiveQt)" id="IDC - The Interface Description Compiler (ActiveQt)" ref="activeqt-idc.html"/>
+            <keyword name="Implementing Atomic Operations" id="Implementing Atomic Operations" ref="atomic-operations.html"/>
+            <keyword name="Inheritance Hierarchy" id="Inheritance Hierarchy" ref="hierarchy.html"/>
+            <keyword name="Installation" id="Installation" ref="installation.html"/>
+            <keyword name="Installing Qt for Mac OS X" id="Installing Qt for Mac OS X" ref="install-mac.html"/>
+            <keyword name="Installing Qt for Windows" id="Installing Qt for Windows" ref="install-win.html"/>
+            <keyword name="Installing Qt for Windows CE" id="Installing Qt for Windows CE" ref="install-wince.html"/>
+            <keyword name="Installing Qt for X11 Platforms" id="Installing Qt for X11 Platforms" ref="install-x11.html"/>
+            <keyword name="Integrating Web Content" id="Integrating Web Content" ref="topics-web-content.html"/>
+            <keyword name="Inter-Process Communication in Qt" id="Inter-Process Communication in Qt" ref="ipc.html"/>
+            <keyword name="internationalization" id="internationalization" ref="internationalization.html#internationalization"/>
+            <keyword name="i18n" id="i18n" ref="internationalization.html#i18n"/>
+            <keyword name="localization" id="localization" ref="internationalization.html#localization"/>
+            <keyword name="Internationalization with Qt" id="Internationalization with Qt" ref="internationalization.html"/>
+            <keyword name="Item Views Examples" id="Item Views Examples" ref="examples-itemviews.html"/>
+            <keyword name="Known Issues" id="Known Issues" ref="known-issues.html"/>
+            <keyword name="Layout Examples" id="Layout Examples" ref="examples-layouts.html"/>
+            <keyword name="Licenses for Fonts Used in Qt for Embedded Linux" id="Licenses for Fonts Used in Qt for Embedded Linux" ref="licenses-fonts.html"/>
+            <keyword name="List of Qt Examples" id="List of Qt Examples" ref="all-examples.html"/>
+            <keyword name="Networking and Connectivity" id="Networking and Connectivity" ref="topics-network-connectivity.html"/>
+            <keyword name="New Classes and Functions in Qt 5" id="New Classes and Functions in Qt 5" ref="whatsnew.html"/>
+            <keyword name="Obsolete Classes" id="Obsolete Classes" ref="obsoleteclasses.html"/>
+            <keyword name="Open Source Licensing of Qt" id="Open Source Licensing of Qt" ref="opensourcelicense.html"/>
+            <keyword name="Other Licenses Used in Qt" id="Other Licenses Used in Qt" ref="licenses.html"/>
+            <keyword name="Undo framework" id="Undo framework" ref="qundo.html#undo-framework"/>
+            <keyword name="Overview of Qt's Undo Framework" id="Overview of Qt's Undo Framework" ref="qundo.html"/>
+            <keyword name="Platform Notes - INTEGRITY" id="Platform Notes - INTEGRITY" ref="platform-notes-integrity.html"/>
+            <keyword name="Platform and Compiler Notes" id="Platform and Compiler Notes" ref="platform-notes.html"/>
+            <keyword name="Platform and Compiler Notes - Mac OS X" id="Platform and Compiler Notes - Mac OS X" ref="platform-notes-mac.html"/>
+            <keyword name="Platform and Compiler Notes - QNX" id="Platform and Compiler Notes - QNX" ref="platform-notes-qnx.html"/>
+            <keyword name="Platform and Compiler Notes - VxWorks" id="Platform and Compiler Notes - VxWorks" ref="platform-notes-vxworks.html"/>
+            <keyword name="Platform and Compiler Notes - Windows" id="Platform and Compiler Notes - Windows" ref="platform-notes-windows.html"/>
+            <keyword name="Platform and Compiler Notes - X11" id="Platform and Compiler Notes - X11" ref="platform-notes-x11.html"/>
+            <keyword name="Platform-Specific Documentation" id="Platform-Specific Documentation" ref="platform-specific.html"/>
+            <keyword name="Platform-Specific Functions" id="Platform-Specific Functions" ref="exportedfunctions.html"/>
+            <keyword name="Porting C++ Applications to Qt 5" id="Porting C++ Applications to Qt 5" ref="portingcppapp.html"/>
+            <keyword name="Porting Guide" id="Porting Guide" ref="portingguide.html"/>
+            <keyword name="Porting QML Applications to Qt 5 Example" id="Porting QML Applications to Qt 5 Example" ref="portingqmlapp.html"/>
+            <keyword name="QML Demos" id="QML Demos" ref="qtquick2-qmldemos.html"/>
+            <keyword name="QML Features" id="QML Features" ref="qml-features.html"/>
+            <keyword name="Qt Reference Documentation" id="Qt Reference Documentation" ref="index.html#qt-reference-documentation"/>
+            <keyword name="Qt 5.0" id="Qt 5.0" ref="index.html"/>
+            <keyword name="Qt Classes for Internationalization" id="Qt Classes for Internationalization" ref="i18n.html"/>
+            <keyword name="Qt Commercial License" id="Qt Commercial License" ref="commerciallicense.html"/>
+            <keyword name="Qt Concurrent Examples" id="Qt Concurrent Examples" ref="qtconcurrent-mtexamples.html"/>
+            <keyword name="Qt Examples And Tutorials" id="Qt Examples And Tutorials" ref="qtexamplesandtutorials.html"/>
+            <keyword name="Qt Licensing" id="Qt Licensing" ref="licensing.html"/>
+            <keyword name="Qt Module QML Plugins" id="Qt Module QML Plugins" ref="plugins.html"/>
+            <keyword name="Qt Overviews" id="Qt Overviews" ref="overviews-main.html"/>
+            <keyword name="Qt Platform Abstraction" id="Qt Platform Abstraction" ref="qpa.html"/>
+            <keyword name="Qt Reference Pages" id="Qt Reference Pages" ref="reference-overview.html"/>
+            <keyword name="Qt SQL Examples" id="Qt SQL Examples" ref="sql-examples.html"/>
+            <keyword name="Qt XML Examples" id="Qt XML Examples" ref="xml-examples.html"/>
+            <keyword name="Qt and Key Technologies" id="Qt and Key Technologies" ref="technology-apis.html"/>
+            <keyword name="Qt for Embedded Linux Fonts" id="Qt for Embedded Linux Fonts" ref="qt-embedded-fonts.html"/>
+            <keyword name="Qt for Mac OS X - Specific Issues" id="Qt for Mac OS X - Specific Issues" ref="mac-differences.html"/>
+            <keyword name="Qt for Mac OS X Requirements" id="Qt for Mac OS X Requirements" ref="requirements-mac.html"/>
+            <keyword name="Qt for Windows CE" id="Qt for Windows CE" ref="qtce.html"/>
+            <keyword name="Qt for Windows CE Requirements" id="Qt for Windows CE Requirements" ref="requirements-wince.html"/>
+            <keyword name="Qt for Windows CE and OpenGL ES" id="Qt for Windows CE and OpenGL ES" ref="windowsce-opengl.html"/>
+            <keyword name="Qt for Windows Requirements" id="Qt for Windows Requirements" ref="requirements-win.html"/>
+            <keyword name="Qt for X11 Requirements" id="Qt for X11 Requirements" ref="requirements-x11.html"/>
+            <keyword name="Qt is Mac OS X Native" id="Qt is Mac OS X Native" ref="qtmac-as-native.html"/>
+            <keyword name="Replace Functions" id="Replace Functions" ref="qmake-function-reference.html"/>
+            <keyword name="rcc" id="rcc" ref="rcc.html#rcc"/>
+            <keyword name="Resource Compiler (rcc)" id="Resource Compiler (rcc)" ref="rcc.html"/>
+            <keyword name="Restoring a Window's Geometry" id="Restoring a Window's Geometry" ref="restoring-geometry.html"/>
+            <keyword name="Running qmake" id="Running qmake" ref="qmake-running.html"/>
+            <keyword name="SQL Examples" id="SQL Examples" ref="examples-sql.html"/>
+            <keyword name="SQL in Qt" id="SQL in Qt" ref="qt-sql.html"/>
+            <keyword name="Scalability" id="Scalability" ref="scalability.html"/>
+            <keyword name="Scripting" id="Scripting" ref="topics-scripting.html"/>
+            <keyword name="Session Management" id="Session Management" ref="session.html"/>
+            <keyword name="Setting the Application Icon" id="Setting the Application Icon" ref="appicon.html"/>
+            <keyword name="Standard Accelerator Keys" id="Standard Accelerator Keys" ref="accelerators.html"/>
+            <keyword name="State Machine Examples" id="State Machine Examples" ref="examples-statemachine.html"/>
+            <keyword name="Support for Linux/X11" id="Support for Linux/X11" ref="linuxx11-support.html"/>
+            <keyword name="Support for Mac OS X" id="Support for Mac OS X" ref="mac-support.html"/>
+            <keyword name="Support for Windows" id="Support for Windows" ref="windows-support.html"/>
+            <keyword name="Supported Platforms" id="Supported Platforms" ref="platform-details.html"/>
+            <keyword name="Test Functions" id="Test Functions" ref="qmake-test-function-reference.html"/>
+            <keyword name="Testing and debugging" id="Testing and debugging" ref="testing-and-debugging.html"/>
+            <keyword name="The qtmain Library" id="The qtmain Library" ref="qtmain.html"/>
+            <keyword name="Third-Party Licenses Used in Qt" id="Third-Party Licenses Used in Qt" ref="3rdparty.html"/>
+            <keyword name="Threading and Concurrent Programming Examples" id="Threading and Concurrent Programming Examples" ref="examples-threadandconcurrent.html"/>
+            <keyword name="Tools Examples" id="Tools Examples" ref="examples-widgets-tools.html"/>
+            <keyword name="Touch Input Examples" id="Touch Input Examples" ref="touchinputexamples.html"/>
+            <keyword name="Trademarks" id="Trademarks" ref="trademarks.html"/>
+            <keyword name="Translation Rules for Plurals" id="Translation Rules for Plurals" ref="i18n-plural-rules.html"/>
+            <keyword name="UI Design with Qt" id="UI Design with Qt" ref="qt-gui-concepts.html"/>
+            <keyword name="Unicode" id="Unicode" ref="unicode.html#unicode"/>
+            <keyword name="Unicode in Qt" id="Unicode in Qt" ref="unicode.html"/>
+            <keyword name="uic" id="uic" ref="uic.html#uic"/>
+            <keyword name="User Interface Compiler (uic)" id="User Interface Compiler (uic)" ref="uic.html"/>
+            <keyword name="User Interfaces" id="User Interfaces" ref="topics-ui.html"/>
+            <keyword name="Using Precompiled Headers" id="Using Precompiled Headers" ref="qmake-precompiledheaders.html"/>
+            <keyword name="Using qmake" id="Using qmake" ref="qmake-using.html"/>
+            <keyword name="Using qt.conf" id="Using qt.conf" ref="qt-conf.html"/>
+            <keyword name="moc" id="moc" ref="moc.html#moc"/>
+            <keyword name="Using the Meta-Object Compiler (moc)" id="Using the Meta-Object Compiler (moc)" ref="moc.html"/>
+            <keyword name="Wayland Support in Qt" id="Wayland Support in Qt" ref="wayland-introduction.html"/>
+            <keyword name="What's New in Qt 5" id="What's New in Qt 5" ref="qt5-intro.html"/>
+            <keyword name="Why Does Qt Use Moc for Signals and Slots?" id="Why Does Qt Use Moc for Signals and Slots?" ref="why-moc.html"/>
+            <keyword name="Windows CE - Introduction to using Qt" id="Windows CE - Introduction to using Qt" ref="wince-with-qt-introduction.html"/>
+            <keyword name="Windows CE - Signing" id="Windows CE - Signing" ref="windowsce-signing.html"/>
+            <keyword name="Windows CE - Using shadow builds" id="Windows CE - Using shadow builds" ref="shadow.html"/>
+            <keyword name="Windows CE - Working with Custom SDKs" id="Windows CE - Working with Custom SDKs" ref="windowsce-customization.html"/>
+            <keyword name="Writing Source Code for Translation" id="Writing Source Code for Translation" ref="i18n-source-translation.html"/>
+            <keyword name="XML Examples" id="XML Examples" ref="examples-xml.html"/>
+            <keyword name="kmap2qmap" id="kmap2qmap" ref="qt-embedded-kmap2qmap.html"/>
+            <keyword name="makeqpf" id="makeqpf" ref="qt-embedded-makeqpf.html"/>
+            <keyword name="qmake Advanced Usage" id="qmake Advanced Usage" ref="qmake-advanced-usage.html"/>
+            <keyword name="qmake Common Projects" id="qmake Common Projects" ref="qmake-common-projects.html"/>
+            <keyword name="qmake" id="qmake" ref="qmake-manual.html#qmake"/>
+            <keyword name="qmake Manual" id="qmake Manual" ref="qmake-manual.html"/>
+            <keyword name="qmake Platform Notes" id="qmake Platform Notes" ref="qmake-platform-notes.html"/>
+            <keyword name="qmake Project Files" id="qmake Project Files" ref="qmake-project-files.html"/>
+            <keyword name="qmake Reference" id="qmake Reference" ref="qmake-reference.html"/>
+            <keyword name="qmake Tutorial" id="qmake Tutorial" ref="qmake-tutorial.html"/>
+            <keyword name="qmake Variable Reference" id="qmake Variable Reference" ref="qmake-variable-reference.html"/>
+            <keyword name="testcon" id="testcon" ref="activeqt-testcon.html#testcon"/>
+            <keyword name="testcon - An ActiveX Test Container (ActiveQt)" id="testcon - An ActiveX Test Container (ActiveQt)" ref="activeqt-testcon.html"/>
+        </keywords>
+        <files>
+            <file>platform-notes-mac.html</file>
+            <file>hierarchy.html</file>
+            <file>topics-core.html</file>
+            <file>scalability.html</file>
+            <file>images/sql-examples.png</file>
+            <file>images/qml-texteditor1_filemenu.png</file>
+            <file>qtce.html</file>
+            <file>windows-support.html</file>
+            <file>accessibility.html</file>
+            <file>images/qt-creator-gs.png</file>
+            <file>portingguide.html</file>
+            <file>index.html</file>
+            <file>images/qt5_shadereffect.jpg</file>
+            <file>modules-cpp.html</file>
+            <file>platform-notes.html</file>
+            <file>wince-with-qt-introduction.html</file>
+            <file>images/qml-texteditor1_simplebutton.png</file>
+            <file>classlists.html</file>
+            <file>accelerators.html</file>
+            <file>qt-embedded-fonts.html</file>
+            <file>windowsce-signing.html</file>
+            <file>images/gs4.png</file>
+            <file>linuxx11-support.html</file>
+            <file>wayland-introduction.html</file>
+            <file>qmake-variable-reference.html</file>
+            <file>examples-xml.html</file>
+            <file>unicode.html</file>
+            <file>examples-widgets-tools.html</file>
+            <file>examples-sql.html</file>
+            <file>known-issues.html</file>
+            <file>qpa.html</file>
+            <file>images/xml-examples.png</file>
+            <file>install-wince.html</file>
+            <file>i18n.html</file>
+            <file>atomic-operations.html</file>
+            <file>addons.html</file>
+            <file>install-mac.html</file>
+            <file>images/gs2.png</file>
+            <file>cmake-manual.html</file>
+            <file>lgpl.html</file>
+            <file>images/qml-texteditor1_button.png</file>
+            <file>qmake-test-function-reference.html</file>
+            <file>developing-with-qt.html</file>
+            <file>string-processing.html</file>
+            <file>qt-gui-concepts.html</file>
+            <file>internationalization.html</file>
+            <file>qml-features.html</file>
+            <file>windowsce-opengl.html</file>
+            <file>best-practices.html</file>
+            <file>qtmain.html</file>
+            <file>trademarks.html</file>
+            <file>bughowto.html</file>
+            <file>overviews-main.html</file>
+            <file>topics-app-development.html</file>
+            <file>qt-mac-cocoa-licensing.html</file>
+            <file>qmake-using.html</file>
+            <file>images/qml-texteditor5_newfile.png</file>
+            <file>qtconcurrent-mtexamples.html</file>
+            <file>requirements.html</file>
+            <file>images/gs-project2.png</file>
+            <file>images/thread-examples.png</file>
+            <file>images/qml-texteditor3_texteditor.png</file>
+            <file>topics-network-connectivity.html</file>
+            <file>images/qml-texteditor5_filemenu.png</file>
+            <file>examples-gestures.html</file>
+            <file>unix-signals.html</file>
+            <file>images/deployment-mac-application.png</file>
+            <file>platform-details.html</file>
+            <file>images/itemview-examples.png</file>
+            <file>exportedfunctions.html</file>
+            <file>qt5-intro.html</file>
+            <file>topics-web-content.html</file>
+            <file>platform-specific.html</file>
+            <file>images/session.png</file>
+            <file>sharedlibrary.html</file>
+            <file>plugins.html</file>
+            <file>deployment.html</file>
+            <file>gettingstarted.html</file>
+            <file>modules-qml.html</file>
+            <file>session.html</file>
+            <file>i18n-source-translation.html</file>
+            <file>qmake-function-reference.html</file>
+            <file>qmake-platform-notes.html</file>
+            <file>images/layout-examples.png</file>
+            <file>testing-and-debugging.html</file>
+            <file>images/activeqt-examples.png</file>
+            <file>mac-support.html</file>
+            <file>examples-layouts.html</file>
+            <file>classes.html</file>
+            <file>images/qt5_video.jpg</file>
+            <file>examples-animation.html</file>
+            <file>functions.html</file>
+            <file>images/qt5_graphicaleffects.jpg</file>
+            <file>qt-embedded-kmap2qmap.html</file>
+            <file>qt-sql.html</file>
+            <file>opensourcelicense.html</file>
+            <file>why-moc.html</file>
+            <file>qmake-common-projects.html</file>
+            <file>reference-overview.html</file>
+            <file>examples-dbus.html</file>
+            <file>touchinputexamples.html</file>
+            <file>qmake-environment-reference.html</file>
+            <file>sourcebreaks.html</file>
+            <file>images/qt5_widgets.jpg</file>
+            <file>examples-activeqt.html</file>
+            <file>qmake-reference.html</file>
+            <file>accessible.html</file>
+            <file>xml-examples.html</file>
+            <file>images/gs5.png</file>
+            <file>windowsce-customization.html</file>
+            <file>3rdparty.html</file>
+            <file>platform-notes-integrity.html</file>
+            <file>restoring-geometry.html</file>
+            <file>images/tool-examples.png</file>
+            <file>annotated.html</file>
+            <file>images/deployment-mac-bundlestructure.png</file>
+            <file>examples-itemviews.html</file>
+            <file>images/draganddrop-examples.png</file>
+            <file>topics-graphics.html</file>
+            <file>i18n-plural-rules.html</file>
+            <file>images/gs3.png</file>
+            <file>examples-statemachine.html</file>
+            <file>requirements-win.html</file>
+            <file>obsoleteclasses.html</file>
+            <file>deployment-x11.html</file>
+            <file>developing-on-mac.html</file>
+            <file>deployment-plugins.html</file>
+            <file>gpl.html</file>
+            <file>overviews.html</file>
+            <file>images/qml-texteditor1_editmenu.png</file>
+            <file>qundo.html</file>
+            <file>namespaces.html</file>
+            <file>topics-scripting.html</file>
+            <file>qt-conf.html</file>
+            <file>commerciallicense.html</file>
+            <file>images/qtdemo.png</file>
+            <file>moc.html</file>
+            <file>all-examples.html</file>
+            <file>activeqt-idc.html</file>
+            <file>images/gs1.png</file>
+            <file>mac-differences.html</file>
+            <file>activeqt-testcon.html</file>
+            <file>debug.html</file>
+            <file>installation.html</file>
+            <file>ipc.html</file>
+            <file>qmake-precompiledheaders.html</file>
+            <file>uic.html</file>
+            <file>qmake-project-files.html</file>
+            <file>images/qml-texteditor2_menubar.png</file>
+            <file>examples-threadandconcurrent.html</file>
+            <file>shadow.html</file>
+            <file>qt-activex.html</file>
+            <file>images/animation-examples.png</file>
+            <file>qt-embedded-makeqpf.html</file>
+            <file>gettingstartedqml.html</file>
+            <file>desktop-integration.html</file>
+            <file>portingcppapp.html</file>
+            <file>topics-data-storage.html</file>
+            <file>groups.html</file>
+            <file>images/gs-project1.png</file>
+            <file>requirements-x11.html</file>
+            <file>install-win.html</file>
+            <file>licenses-fonts.html</file>
+            <file>qtexamplesandtutorials.html</file>
+            <file>appicon.html</file>
+            <file>modules.html</file>
+            <file>images/qt-embedded-fontfeatures.png</file>
+            <file>deployment-mac.html</file>
+            <file>platform-notes-x11.html</file>
+            <file>qmake-tutorial.html</file>
+            <file>qtquick2-qmldemos.html</file>
+            <file>licenses.html</file>
+            <file>deployment-windows.html</file>
+            <file>images/deployment-windows-depends.png</file>
+            <file>portingqmlapp.html</file>
+            <file>sql-examples.html</file>
+            <file>qtmac-as-native.html</file>
+            <file>images/qmake-precompile-ui.png</file>
+            <file>qtdemo.html</file>
+            <file>platform-notes-vxworks.html</file>
+            <file>platform-notes-windows.html</file>
+            <file>qmake-running.html</file>
+            <file>whatsnew.html</file>
+            <file>technology-apis.html</file>
+            <file>examples-draganddrop.html</file>
+            <file>exceptionsafety.html</file>
+            <file>images/qml-texteditor5_editmenu.png</file>
+            <file>licensing.html</file>
+            <file>images/qt5_particles.jpg</file>
+            <file>images/animatedtiles_snapshot.png</file>
+            <file>rcc.html</file>
+            <file>requirements-wince.html</file>
+            <file>qmake-manual.html</file>
+            <file>compiler-notes.html</file>
+            <file>install-x11.html</file>
+            <file>qmake-advanced-usage.html</file>
+            <file>platform-notes-qnx.html</file>
+            <file>images/qml-texteditor4_texteditor.png</file>
+            <file>requirements-mac.html</file>
+            <file>topics-ui.html</file>
+            <file>images/flickr_application.png</file>
+            <file>gettingstartedqt.html</file>
+            <file>images/qt5_shadereffect.jpg</file>
+            <file>images/gs2.png</file>
+            <file>images/bullet_sq.png</file>
+            <file>images/qml-texteditor4_texteditor.png</file>
+            <file>images/ico_out.png</file>
+            <file>images/qt5_particles.jpg</file>
+            <file>images/animation-examples.png</file>
+            <file>images/qt5_video.jpg</file>
+            <file>images/gs-project2.png</file>
+            <file>images/thread-examples.png</file>
+            <file>images/gs1.png</file>
+            <file>images/deployment-mac-bundlestructure.png</file>
+            <file>images/qml-texteditor1_editmenu.png</file>
+            <file>images/tool-examples.png</file>
+            <file>images/draganddrop-examples.png</file>
+            <file>images/sql-examples.png</file>
+            <file>images/ico_note_attention.png</file>
+            <file>images/gs-project1.png</file>
+            <file>images/qml-texteditor1_simplebutton.png</file>
+            <file>images/animatedtiles_snapshot.png</file>
+            <file>images/btn_prev.png</file>
+            <file>images/activeqt-examples.png</file>
+            <file>images/qml-texteditor1_filemenu.png</file>
+            <file>images/qt5_graphicaleffects.jpg</file>
+            <file>images/qt-embedded-fontfeatures.png</file>
+            <file>images/qt-creator-gs.png</file>
+            <file>style/offline.css</file>
+            <file>images/itemview-examples.png</file>
+            <file>images/deployment-mac-application.png</file>
+            <file>images/qtdemo.png</file>
+            <file>images/qml-texteditor5_newfile.png</file>
+            <file>images/btn_next.png</file>
+            <file>images/bgrContent.png</file>
+            <file>images/ico_note.png</file>
+            <file>images/qml-texteditor3_texteditor.png</file>
+            <file>images/xml-examples.png</file>
+            <file>images/qml-texteditor5_editmenu.png</file>
+            <file>images/layout-examples.png</file>
+            <file>images/qml-texteditor2_menubar.png</file>
+            <file>images/gs5.png</file>
+            <file>images/gs4.png</file>
+            <file>images/session.png</file>
+            <file>images/qmake-precompile-ui.png</file>
+            <file>images/flickr_application.png</file>
+            <file>images/qml-texteditor5_filemenu.png</file>
+            <file>images/qml-texteditor1_button.png</file>
+            <file>images/qt5_widgets.jpg</file>
+            <file>images/gs3.png</file>
+            <file>images/bullet_dn.png</file>
+            <file>images/deployment-windows-depends.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

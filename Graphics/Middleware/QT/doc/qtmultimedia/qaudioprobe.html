@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qaudioprobe.cpp -->
+  <title>qtmultimedia 5.0: QAudioProbe Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QAudioProbe Class</h1>
+<!-- $$$QAudioProbe-brief -->
+<p>The QAudioProbe class allows you to monitor audio being played or recorded. <a href="#details">More...</a></p>
+<!-- @@@QAudioProbe -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QAudioProbe&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<ul>
+<li><a href="qaudioprobe-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#QAudioProbe">QAudioProbe</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#dtor.QAudioProbe">~QAudioProbe</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#isActive">isActive</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#setSource">setSource</a></b>(QMediaObject *<i> source</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#setSource-2">setSource</a></b>(QMediaRecorder *<i> mediaRecorder</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#audioBufferProbed">audioBufferProbed</a></b>(const QAudioBuffer &amp;<i> buffer</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qaudioprobe.html#flush">flush</a></b>()</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QAudioProbe-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QAudioProbe class allows you to monitor audio being played or recorded.</p>
+<pre class="cpp"><span class="type"><a href="qaudiorecorder.html">QAudioRecorder</a></span> <span class="operator">*</span>recorder <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="qaudiorecorder.html">QAudioRecorder</a></span>();
+<span class="type">QAudioProbe</span> <span class="operator">*</span>probe <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QAudioProbe</span>;
+
+<span class="comment">// ... configure the audio recorder (skipped)</span>
+
+<a href="../qtcore/qobject.html#connect">connect</a>(probe<span class="operator">,</span> SIGNAL(audioBufferProbed(<span class="type"><a href="qaudiobuffer.html">QAudioBuffer</a></span>))<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(processBuffer(<span class="type"><a href="qaudiobuffer.html">QAudioBuffer</a></span>)));
+
+probe<span class="operator">-</span><span class="operator">&gt;</span><a href="qaudioprobe.html#setSource">setSource</a>(recorder); <span class="comment">// Returns true, hopefully.</span>
+
+recorder<span class="operator">-</span><span class="operator">&gt;</span>record(); <span class="comment">// Now we can do things like calculating levels or performing an FFT</span></pre>
+</div>
+<p><b>See also </b><a href="qvideoprobe.html">QVideoProbe</a>, <a href="qmediaplayer.html">QMediaPlayer</a>, and <a href="qcamera.html">QCamera</a>.</p>
+<!-- @@@QAudioProbe -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QAudioProbe[overload1]$$$QAudioProbeQObject* -->
+<h3 class="fn"><a name="QAudioProbe"></a>QAudioProbe::<span class="name">QAudioProbe</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<p>Creates a new <a href="qaudioprobe.html">QAudioProbe</a> class with a <i>parent</i>. After setting the source to monitor with <a href="qaudioprobe.html#setSource">setSource</a>(), the <a href="qaudioprobe.html#audioBufferProbed">audioBufferProbed</a>() signal will be emitted when audio buffers are flowing in the source media object.</p>
+<!-- @@@QAudioProbe -->
+<!-- $$$~QAudioProbe[overload1]$$$~QAudioProbe -->
+<h3 class="fn"><a name="dtor.QAudioProbe"></a>QAudioProbe::<span class="name">~QAudioProbe</span>()</h3>
+<p>Destroys this probe and disconnects from any media object.</p>
+<!-- @@@~QAudioProbe -->
+<!-- $$$audioBufferProbed[overload1]$$$audioBufferProbedconstQAudioBuffer& -->
+<h3 class="fn"><a name="audioBufferProbed"></a><span class="type">void</span> QAudioProbe::<span class="name">audioBufferProbed</span>(const <span class="type"><a href="qaudiobuffer.html">QAudioBuffer</a></span> &amp;<i> buffer</i>)<tt> [signal]</tt></h3>
+<p>This signal should be emitted when an audio <i>buffer</i> is processed in the media service.</p>
+<!-- @@@audioBufferProbed -->
+<!-- $$$flush[overload1]$$$flush -->
+<h3 class="fn"><a name="flush"></a><span class="type">void</span> QAudioProbe::<span class="name">flush</span>()<tt> [signal]</tt></h3>
+<p>This signal should be emitted when it is required to release all buffers. Application must release all outstanding references to audio buffers.</p>
+<!-- @@@flush -->
+<!-- $$$isActive[overload1]$$$isActive -->
+<h3 class="fn"><a name="isActive"></a><span class="type">bool</span> QAudioProbe::<span class="name">isActive</span>() const</h3>
+<p>Returns true if this probe is monitoring something, or false otherwise.</p>
+<p>The source being monitored does not need to be active.</p>
+<!-- @@@isActive -->
+<!-- $$$setSource[overload1]$$$setSourceQMediaObject* -->
+<h3 class="fn"><a name="setSource"></a><span class="type">bool</span> QAudioProbe::<span class="name">setSource</span>(<span class="type"><a href="qmediaobject.html">QMediaObject</a></span> *<i> source</i>)</h3>
+<p>Sets the media object to monitor to <i>source</i>.</p>
+<p>If <i>source</i> is zero, this probe will be deactivated and this function wil return true.</p>
+<p>If the media object does not support monitoring audio, this function will return false.</p>
+<p>The previous object will no longer be monitored. Passing in the same object will be ignored, but monitoring will continue.</p>
+<!-- @@@setSource -->
+<!-- $$$setSource$$$setSourceQMediaRecorder* -->
+<h3 class="fn"><a name="setSource-2"></a><span class="type">bool</span> QAudioProbe::<span class="name">setSource</span>(<span class="type"><a href="qmediarecorder.html">QMediaRecorder</a></span> *<i> mediaRecorder</i>)</h3>
+<p>Starts monitoring the given <i>mediaRecorder</i>.</p>
+<p>Returns true on success.</p>
+<p>If there is no mediaObject associated with <i>mediaRecorder</i>, or if it is zero, this probe will be deactivated and this function wil return true.</p>
+<p>If the media recorder instance does not support monitoring audio, this function will return false.</p>
+<p>Any previously monitored objects will no longer be monitored. Passing in the same (valid) object will be ignored, but monitoring will continue.</p>
+<!-- @@@setSource -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

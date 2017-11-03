@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickanimation.cpp -->
+  <title>QtQuick 5.0: PropertyAction</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">PropertyAction</h1>
+<span class="subtitle"></span>
+<!-- $$$PropertyAction-brief -->
+<p>Specifies immediate property changes during animation <a href="#details">More...</a></p>
+<!-- @@@PropertyAction -->
+<p>Inherits <a href="qml-qtquick2-animation.html">Animation</a></p>
+<ul>
+<li><a href="qml-qtquick2-propertyaction-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick2-propertyaction.html#exclude-prop">exclude</a></b></b> : list&lt;Object&gt;</li>
+<li class="fn"><b><b><a href="qml-qtquick2-propertyaction.html#properties-prop">properties</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-qtquick2-propertyaction.html#property-prop">property</a></b></b> : string</li>
+<li class="fn"><b><b><a href="qml-qtquick2-propertyaction.html#target-prop">target</a></b></b> : Object</li>
+<li class="fn"><b><b><a href="qml-qtquick2-propertyaction.html#targets-prop">targets</a></b></b> : list&lt;Object&gt;</li>
+<li class="fn"><b><b><a href="qml-qtquick2-propertyaction.html#value-prop">value</a></b></b> : any</li>
+</ul>
+<!-- $$$PropertyAction-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>PropertyAction is used to specify an immediate property change during an animation. The property change is not animated.</p>
+<p>It is useful for setting non-animated property values during an animation.</p>
+<p>For example, here is a <a href="qml-qtquick2-sequentialanimation.html">SequentialAnimation</a> that sets the image's <a href="qml-qtquick2-item.html#opacity-prop">opacity</a> property to <tt>.5</tt>, animates the width of the image, then sets <a href="qml-qtquick2-item.html#opacity-prop">opacity</a> back to <tt>1</tt>:</p>
+<pre class="qml"><span class="type"><a href="qml-qtquick2-sequentialanimation.html">SequentialAnimation</a></span> {
+    <span class="type">PropertyAction</span> { <span class="name">target</span>: <span class="name">img</span>; <span class="name">property</span>: <span class="string">&quot;opacity&quot;</span>; <span class="name">value</span>: <span class="number">.5</span> }
+    <span class="type"><a href="qml-qtquick2-numberanimation.html">NumberAnimation</a></span> { <span class="name">target</span>: <span class="name">img</span>; <span class="name">property</span>: <span class="string">&quot;width&quot;</span>; <span class="name">to</span>: <span class="number">300</span>; <span class="name">duration</span>: <span class="number">1000</span> }
+    <span class="type">PropertyAction</span> { <span class="name">target</span>: <span class="name">img</span>; <span class="name">property</span>: <span class="string">&quot;opacity&quot;</span>; <span class="name">value</span>: <span class="number">1</span> }
+}</pre>
+<p>PropertyAction is also useful for setting the exact point at which a property change should occur during a <a href="qml-qtquick2-transition.html">Transition</a>. For example, if <a href="qml-qtquick2-propertychanges.html">PropertyChanges</a> was used in a <a href="qml-qtquick2-state.html">State</a> to rotate an item around a particular <a href="qml-qtquick2-item.html#transformOrigin-prop">transformOrigin</a>, it might be implemented like this:</p>
+<pre class="qml"><span class="type"><a href="qml-qtquick2-item.html">Item</a></span> {
+    <span class="name">width</span>: <span class="number">400</span>; <span class="name">height</span>: <span class="number">400</span>
+
+    <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">rect</span>
+        <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">100</span>
+        <span class="name">color</span>: <span class="string">&quot;red&quot;</span>
+
+        <span class="name">states</span>: <span class="name">State</span> {
+            <span class="name">name</span>: <span class="string">&quot;rotated&quot;</span>
+            <span class="type"><a href="qml-qtquick2-propertychanges.html">PropertyChanges</a></span> { <span class="name">target</span>: <span class="name">rect</span>; <span class="name">rotation</span>: <span class="number">180</span>; <span class="name">transformOrigin</span>: <span class="name">Item</span>.<span class="name">BottomRight</span> }
+        }
+
+        <span class="name">transitions</span>: <span class="name">Transition</span> {
+            <span class="type"><a href="qml-qtquick2-rotationanimation.html">RotationAnimation</a></span> { <span class="name">duration</span>: <span class="number">1000</span>; <span class="name">direction</span>: <span class="name">RotationAnimation</span>.<span class="name">Counterclockwise</span> }
+        }
+
+        <span class="type"><a href="qml-qtquick2-mousearea.html">MouseArea</a></span> {
+            <span class="name">anchors</span>.fill: <span class="name">parent</span>
+            <span class="name">onClicked</span>: <span class="name">rect</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;rotated&quot;</span>
+        }
+    }
+}</pre>
+<p>However, with this code, the <tt>transformOrigin</tt> is not set until <i>after</i> the animation, as a <a href="qml-qtquick2-state.html">State</a> is taken to define the values at the <i>end</i> of a transition. The animation would rotate at the default <tt>transformOrigin</tt>, then jump to <tt>Item.BottomRight</tt>. To fix this, insert a PropertyAction before the <a href="qml-qtquick2-rotationanimation.html">RotationAnimation</a> begins:</p>
+<pre class="qml"><span class="name">transitions</span>: <span class="name">Transition</span> {
+    <span class="type"><a href="qml-qtquick2-sequentialanimation.html">SequentialAnimation</a></span> {
+        <span class="type">PropertyAction</span> { <span class="name">target</span>: <span class="name">rect</span>; <span class="name">property</span>: <span class="string">&quot;transformOrigin&quot;</span> }
+        <span class="type"><a href="qml-qtquick2-rotationanimation.html">RotationAnimation</a></span> { <span class="name">duration</span>: <span class="number">1000</span>; <span class="name">direction</span>: <span class="name">RotationAnimation</span>.<span class="name">Counterclockwise</span> }
+    }
+}</pre>
+<p>This immediately sets the <tt>transformOrigin</tt> property to the value defined in the end state of the <a href="qml-qtquick2-transition.html">Transition</a> (i.e&#x2e; the value defined in the PropertyAction object) so that the rotation animation begins with the correct transform origin.</p>
+<p><b>See also </b><a href="qtquick-statesanimations-animations.html">Animation and Transitions in Qt Quick</a> and <a href="../qtqml/qtqml-module.html">QtQml</a>.</p>
+<!-- @@@PropertyAction -->
+<h2>Property Documentation</h2>
+<!-- $$$exclude -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="exclude-prop"></a><span class="name">exclude</span> : <span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type">Object</span>&gt;</p></td></tr></table></div><div class="qmldoc"><p>This property holds the objects that should not be affected by this action.</p>
+<p><b>See also </b><a href="qml-qtquick2-propertyaction.html#targets-prop">targets</a>.</p>
+</div></div><!-- @@@exclude -->
+<br/>
+<!-- $$$target -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="target-prop"></a><span class="name">target</span> : <span class="type">Object</span></p></td></tr><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="targets-prop"></a><span class="name">targets</span> : <span class="type"><a href="../qtqml/qml-list.html">list</a></span>&lt;<span class="type">Object</span>&gt;</p></td></tr><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="property-prop"></a><span class="name">property</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="properties-prop"></a><span class="name">properties</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>These properties determine the items and their properties that are affected by this action.</p>
+<p>The details of how these properties are interpreted in different situations is covered in the <a href="qml-qtquick2-propertyanimation.html#properties-prop">corresponding</a> <a href="qml-qtquick2-propertyanimation.html">PropertyAnimation</a> documentation.</p>
+<p><b>See also </b><a href="qml-qtquick2-propertyaction.html#exclude-prop">exclude</a>.</p>
+</div></div><!-- @@@target -->
+<br/>
+<!-- $$$value -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="value-prop"></a><span class="name">value</span> : <span class="type">any</span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the value to be set on the property.</p>
+<p>If the <a href="qml-qtquick2-propertyaction.html">PropertyAction</a> is defined within a <a href="qml-qtquick2-transition.html">Transition</a> or <a href="qml-qtquick2-behavior.html">Behavior</a>, this value defaults to the value defined in the end state of the <a href="qml-qtquick2-transition.html">Transition</a>, or the value of the property change that triggered the <a href="qml-qtquick2-behavior.html">Behavior</a>.</p>
+</div></div><!-- @@@value -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

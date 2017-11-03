@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmlscene.qdoc -->
+  <title>QtQuick 5.0: Prototyping with qmlscene</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#adding-module-import-paths">Adding Module Import Paths</a></li>
+<li class="level1"><a href="#loading-test-data">Loading Test Data</a></li>
+</ul>
+</div>
+<h1 class="title">Prototyping with qmlscene</h1>
+<span class="subtitle"></span>
+<!-- $$$qtquick-qmlscene.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Qt 5 includes <tt>qmlscene</tt>, a utility to load QML documents. The <tt>qmlscene</tt> utility enables viewing your QML document even before the application is complete. This utility also provides the following additional features that are useful while developing QML applications:</p>
+<ul>
+<li>View the QML document in a maximized window.</li>
+<li>View the QML document in full-screen mode.</li>
+<li>Make the window transparent.</li>
+<li>Disable multi-sampling (anti-aliasing).</li>
+<li>Do not detect the version of the .qml file.</li>
+<li>Run all animations in slow motion.</li>
+<li>Resize the window to the size of the root item.</li>
+<li>Add the list of import paths.</li>
+<li>Add a named bundle.</li>
+<li>Use a translation file to set the language.</li>
+</ul>
+<p>The <tt>qmlscene</tt> utility is meant to be used for testing your QML applications, and not as a launcher in a production environment. To launch a QML application in a production environment, develop a custom C++ application or bundle the QML file in a module. See <a href="qtquick-deployment.html">Deploying QML applications</a> for more information.</p>
+<p>To load a .qml file, run the tool and select the file to be opened, or provide the file path on the command prompt:</p>
+<pre class="cpp">qmlscene myqmlfile<span class="operator">.</span>qml</pre>
+<p>To see the configuration options, run <tt>qmlscene</tt> with the <tt>-help</tt> argument.</p>
+<a name="adding-module-import-paths"></a>
+<h2>Adding Module Import Paths</h2>
+<p>Additional module import paths can be provided using the <tt>-I</tt> flag. For example, the <a href="../qtqml/plugins.html">QML plugin example</a> creates a C++ plugin identified with the namespace, <tt>TimeExample</tt>. To load the plugin, you must run <tt>qmlscene</tt> with the <tt>-I</tt> flag from the example's base directory:</p>
+<pre class="cpp">qmlscene <span class="operator">-</span>I imports plugins<span class="operator">.</span>qml</pre>
+<p>This adds the current directory to the import path so that <tt>qmlscene</tt> will find the plugin in the <tt>imports</tt> directory.</p>
+<p><b>Note: </b>By default, the current directory is included in the import search path, but modules in a namespace such as <tt>TimeExample</tt> are not found unless the path is explicitly added.</p><a name="loading-test-data"></a>
+<h2>Loading Test Data</h2>
+<p>Often, QML applications are prototyped with test data that is later replaced by real data sources from C++ plugins. The <tt>qmlscene</tt> utility assists in this aspect by loading test data into the application context. It looks for a directory named <tt>dummydata</tt> in the same directory as the target QML file, and loads the .qml files in that directory as QML objects and bind them to the root context as properties named after the files.</p>
+<p>For example, the following QML document refers to a <tt>lottoNumbers</tt> property which does not exist within the document:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-listview.html">ListView</a></span> {
+    <span class="name">width</span>: <span class="number">200</span>; <span class="name">height</span>: <span class="number">300</span>
+    <span class="name">model</span>: <span class="name">lottoNumbers</span>
+    <span class="name">delegate</span>: <span class="name">Text</span> { <span class="name">text</span>: <span class="name">number</span> }
+}</pre>
+<p>If within the document's directory, there is a <tt>dummydata</tt> directory which contains a <tt>lottoNumbers.qml</tt> file like this:</p>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type">ListModel</span> {
+    <span class="type">ListElement</span> { <span class="name">number</span>: <span class="number">23</span> }
+    <span class="type">ListElement</span> { <span class="name">number</span>: <span class="number">44</span> }
+    <span class="type">ListElement</span> { <span class="name">number</span>: <span class="number">78</span> }
+}</pre>
+<p>Then this model would be automatically loaded into the <a href="qml-qtquick2-listview.html">ListView</a> in the previous document.</p>
+<p>Child properties are included when loaded from <tt>dummydata</tt>. The following document refers to a <tt>clock.time</tt> property:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="qml-qtquick2-text.html">Text</a></span> { <span class="name">text</span>: <span class="name">clock</span>.<span class="name">time</span> }</pre>
+<p>The text value could be filled by a <tt>dummydata/clock.qml</tt> file with a <tt>time</tt> property in the root context:</p>
+<pre class="qml">import QtQuick 2.0
+<span class="type"><a href="../qtqml/qml-qtquick2-qtobject.html">QtObject</a></span> { property <span class="type">int</span> <span class="name">time</span>: <span class="number">54321</span> }</pre>
+<p>To replace this with real data, bind the real data object to the root context in C++ using <a href="../qtqml/qqmlcontext.html#setContextProperty">QQmlContext::setContextProperty</a>(). This is detailed in <a href="../qtqml/qtqml-cppintegration-topic.html">Integrating QML and C++</a>.</p>
+</div>
+<!-- @@@qtquick-qmlscene.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

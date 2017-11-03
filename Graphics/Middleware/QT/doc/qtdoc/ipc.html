@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- ipc.qdoc -->
+  <title>QtDoc 5.0: Inter-Process Communication in Qt</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#tcp-ip">TCP/IP</a></li>
+<li class="level1"><a href="#shared-memory">Shared Memory</a></li>
+<li class="level1"><a href="#d-bus-protocol">D-Bus protocol</a></li>
+<li class="level1"><a href="#qprocess">QProcess</a></li>
+</ul>
+</div>
+<h1 class="title">Inter-Process Communication in Qt</h1>
+<span class="subtitle"></span>
+<!-- $$$ipc.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Qt provides several ways to implement Inter-Process Communication (IPC) in Qt applications.</p>
+<a name="tcp-ip"></a>
+<h2>TCP/IP</h2>
+<p>The cross-platform <a href="../qtnetwork/qtnetwork-module.html">QtNetwork</a> module provides classes that make network programming portable and easy. It offers high-level classes (e.g&#x2e;, <a href="../qtnetwork/qnetworkaccessmanager.html">QNetworkAccessManager</a>, QFtp) that communicate using specific application-level protocols, and lower-level classes (e.g&#x2e;, <a href="../qtnetwork/qtcpsocket.html">QTcpSocket</a>, <a href="../qtnetwork/qtcpserver.html">QTcpServer</a>, <a href="../qtnetwork/qsslsocket.html">QSslSocket</a>) for implementing protocols.</p>
+<a name="shared-memory"></a>
+<h2>Shared Memory</h2>
+<p>The cross-platform shared memory class, <a href="../qtcore/qsharedmemory.html">QSharedMemory</a>, provides access to the operating system's shared memory implementation. It allows safe access to shared memory segments by multiple threads and processes. Additionally, <a href="../qtcore/qsystemsemaphore.html">QSystemSemaphore</a> can be used to control access to resources shared by the system, as well as to communicate between processes.</p>
+<a name="d-bus-protocol"></a>
+<h2>D-Bus protocol</h2>
+<p>The <a href="../qtdbus/qtdbus-module.html">QtDBus</a> module is a Unix-only library you can use to implement IPC using the D-Bus protocol. It extends Qt's <a href="../qtcore/signalsandslots.html">Signals and Slots</a> mechanism to the IPC level, allowing a signal emitted by one process to be connected to a slot in another process. The <a href="../qtdbus/qtdbus-index.html">Qt D-Bus</a> documentation has detailed information on how to use the <a href="../qtdbus/qtdbus-module.html">QtDBus</a> module.</p>
+<a name="qprocess"></a>
+<h2>QProcess</h2>
+<p>The cross-platform class <a href="../qtcore/qprocess.html">QProcess</a> can be used to start external programs as child processes, and to communicate with them. It provides an API for monitoring and controlling the state of the child process. <a href="../qtcore/qprocess.html">QProcess</a> gives access to the input/output channels of child process by inheriting from <a href="../qtcore/qiodevice.html">QIODevice</a>.</p>
+</div>
+<!-- @@@ipc.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

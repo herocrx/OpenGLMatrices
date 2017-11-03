@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qqmlerror.cpp -->
+  <title>QtQml 5.0: QQmlError Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#related-non-members">Related Non-Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QQmlError Class</h1>
+<!-- $$$QQmlError-brief -->
+<p>The QQmlError class encapsulates a QML error. <a href="#details">More...</a></p>
+<!-- @@@QQmlError -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QQmlError&gt;</span></pre><p>This class was introduced in QtQml 5.0.</p>
+<ul>
+<li><a href="qqmlerror-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#QQmlError">QQmlError</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#QQmlError-2">QQmlError</a></b>(const QQmlError &amp;<i> other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#column">column</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#description">description</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#isValid">isValid</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#line">line</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#setColumn">setColumn</a></b>(int<i> column</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#setDescription">setDescription</a></b>(const QString &amp;<i> description</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#setLine">setLine</a></b>(int<i> line</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#setUrl">setUrl</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#toString">toString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#url">url</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QQmlError &amp; </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#operator-eq">operator=</a></b>(const QQmlError &amp;<i> other</i>)</td></tr>
+</table>
+<a name="related-non-members"></a>
+<h2>Related Non-Members</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QDebug </td><td class="memItemRight bottomAlign"><b><a href="qqmlerror.html#operator-lt-lt-67">operator&lt;&lt;</a></b>(QDebug<i> debug</i>, const QQmlError &amp;<i> error</i>)</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QQmlError-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QQmlError class encapsulates a QML error.</p>
+<p>QQmlError includes a textual description of the error, as well as location information (the file, line, and column). The <a href="qqmlerror.html#toString">toString</a>() method creates a single-line, human-readable string containing all of this information, for example:</p>
+<pre class="cpp">file:<span class="comment">///home/user/test.qml:7:8: Invalid property assignment: double expected</span></pre>
+<p>You can use <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() or <a href="../qtcore/qtglobal.html#qWarning">qWarning</a>() to output errors to the console. This method will attempt to open the file indicated by the error and include additional contextual information.</p>
+<pre class="cpp">file:<span class="comment">///home/user/test.qml:7:8: Invalid property assignment: double expected</span>
+        y: <span class="string">&quot;hello&quot;</span>
+           <span class="operator">^</span></pre>
+<p>Note that the <a href="../qtquick/qtquick-module.html">QtQuick</a> 1 version is named QDeclarativeError</p>
+</div>
+<p><b>See also </b><a href="../qtquick/qquickview.html#errors">QQuickView::errors</a>() and <a href="qqmlcomponent.html#errors">QQmlComponent::errors</a>().</p>
+<!-- @@@QQmlError -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QQmlError[overload1]$$$QQmlError -->
+<h3 class="fn"><a name="QQmlError"></a>QQmlError::<span class="name">QQmlError</span>()</h3>
+<p>Creates an empty error object.</p>
+<!-- @@@QQmlError -->
+<!-- $$$QQmlError$$$QQmlErrorconstQQmlError& -->
+<h3 class="fn"><a name="QQmlError-2"></a>QQmlError::<span class="name">QQmlError</span>(const <span class="type">QQmlError</span> &amp;<i> other</i>)</h3>
+<p>Creates a copy of <i>other</i>.</p>
+<!-- @@@QQmlError -->
+<!-- $$$column[overload1]$$$column -->
+<h3 class="fn"><a name="column"></a><span class="type">int</span> QQmlError::<span class="name">column</span>() const</h3>
+<p>Returns the error column number.</p>
+<p><b>See also </b><a href="qqmlerror.html#setColumn">setColumn</a>().</p>
+<!-- @@@column -->
+<!-- $$$description[overload1]$$$description -->
+<h3 class="fn"><a name="description"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QQmlError::<span class="name">description</span>() const</h3>
+<p>Returns the error description.</p>
+<p><b>See also </b><a href="qqmlerror.html#setDescription">setDescription</a>().</p>
+<!-- @@@description -->
+<!-- $$$isValid[overload1]$$$isValid -->
+<h3 class="fn"><a name="isValid"></a><span class="type">bool</span> QQmlError::<span class="name">isValid</span>() const</h3>
+<p>Returns true if this error is valid, otherwise false.</p>
+<!-- @@@isValid -->
+<!-- $$$line[overload1]$$$line -->
+<h3 class="fn"><a name="line"></a><span class="type">int</span> QQmlError::<span class="name">line</span>() const</h3>
+<p>Returns the error line number.</p>
+<p><b>See also </b><a href="qqmlerror.html#setLine">setLine</a>().</p>
+<!-- @@@line -->
+<!-- $$$setColumn[overload1]$$$setColumnint -->
+<h3 class="fn"><a name="setColumn"></a><span class="type">void</span> QQmlError::<span class="name">setColumn</span>(<span class="type">int</span><i> column</i>)</h3>
+<p>Sets the error <i>column</i> number.</p>
+<p><b>See also </b><a href="qqmlerror.html#column">column</a>().</p>
+<!-- @@@setColumn -->
+<!-- $$$setDescription[overload1]$$$setDescriptionconstQString& -->
+<h3 class="fn"><a name="setDescription"></a><span class="type">void</span> QQmlError::<span class="name">setDescription</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> description</i>)</h3>
+<p>Sets the error <i>description</i>.</p>
+<p><b>See also </b><a href="qqmlerror.html#description">description</a>().</p>
+<!-- @@@setDescription -->
+<!-- $$$setLine[overload1]$$$setLineint -->
+<h3 class="fn"><a name="setLine"></a><span class="type">void</span> QQmlError::<span class="name">setLine</span>(<span class="type">int</span><i> line</i>)</h3>
+<p>Sets the error <i>line</i> number.</p>
+<p><b>See also </b><a href="qqmlerror.html#line">line</a>().</p>
+<!-- @@@setLine -->
+<!-- $$$setUrl[overload1]$$$setUrlconstQUrl& -->
+<h3 class="fn"><a name="setUrl"></a><span class="type">void</span> QQmlError::<span class="name">setUrl</span>(const <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> &amp;<i> url</i>)</h3>
+<p>Sets the <i>url</i> for the file that caused this error.</p>
+<p><b>See also </b><a href="qqmlerror.html#url">url</a>().</p>
+<!-- @@@setUrl -->
+<!-- $$$toString[overload1]$$$toString -->
+<h3 class="fn"><a name="toString"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QQmlError::<span class="name">toString</span>() const</h3>
+<p>Returns the error as a human readable string.</p>
+<!-- @@@toString -->
+<!-- $$$url[overload1]$$$url -->
+<h3 class="fn"><a name="url"></a><span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> QQmlError::<span class="name">url</span>() const</h3>
+<p>Returns the url for the file that caused this error.</p>
+<p><b>See also </b><a href="qqmlerror.html#setUrl">setUrl</a>().</p>
+<!-- @@@url -->
+<!-- $$$operator=[overload1]$$$operator=constQQmlError& -->
+<h3 class="fn"><a name="operator-eq"></a><span class="type">QQmlError</span> &amp; QQmlError::<span class="name">operator=</span>(const <span class="type">QQmlError</span> &amp;<i> other</i>)</h3>
+<p>Assigns <i>other</i> to this error object.</p>
+<!-- @@@operator= -->
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+<!-- $$$operator<<$$$operator<<QDebugconstQQmlError& -->
+<h3 class="fn"><a name="operator-lt-lt-67"></a><span class="type"><a href="../qtcore/qdebug.html">QDebug</a></span> <span class="name">operator&lt;&lt;</span>(<span class="type"><a href="../qtcore/qdebug.html">QDebug</a></span><i> debug</i>, const <span class="type">QQmlError</span> &amp;<i> error</i>)</h3>
+<p>Outputs a human readable version of <i>error</i> to <i>debug</i>.</p>
+<!-- @@@operator<< -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

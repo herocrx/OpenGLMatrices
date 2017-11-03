@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qradiodata.cpp -->
+  <title>qtmultimedia 5.0: QRadioData Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QRadioData Class</h1>
+<!-- $$$QRadioData-brief -->
+<p>The QRadioData class provides interfaces to the RDS functionality of the system radio. <a href="#details">More...</a></p>
+<!-- @@@QRadioData -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QRadioData&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a> and <a href="qmediabindableinterface.html">QMediaBindableInterface</a>.</p>
+<ul>
+<li><a href="qradiodata-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#Error-enum">Error</a></b> { NoError, ResourceError, OpenError, OutOfRangeError }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#ProgramType-enum">ProgramType</a></b> { Undefined, News, CurrentAffairs, Information, ..., College }</td></tr>
+</table>
+<a name="properties"></a>
+<h2>Properties</h2>
+<table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="qradiodata.html#alternativeFrequenciesEnabled-prop">alternativeFrequenciesEnabled</a></b> : bool</li>
+<li class="fn"><b><a href="qradiodata.html#programType-prop">programType</a></b> : const ProgramType</li>
+<li class="fn"><b><a href="qradiodata.html#programTypeName-prop">programTypeName</a></b> : const QString</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="qradiodata.html#radioText-prop">radioText</a></b> : const QString</li>
+<li class="fn"><b><a href="qradiodata.html#stationId-prop">stationId</a></b> : const QString</li>
+<li class="fn"><b><a href="qradiodata.html#stationName-prop">stationName</a></b> : const QString</li>
+</ul>
+</td></tr>
+</table>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#QRadioData">QRadioData</a></b>(QMediaObject *<i> mediaObject</i>, QObject *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#dtor.QRadioData">~QRadioData</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QMultimedia::AvailabilityStatus </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#availability">availability</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Error </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#error">error</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#errorString">errorString</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#alternativeFrequenciesEnabled-prop">isAlternativeFrequenciesEnabled</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ProgramType </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#programType-prop">programType</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#programTypeName-prop">programTypeName</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#radioText-prop">radioText</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#stationId-prop">stationId</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#stationName-prop">stationName</a></b>() const</td></tr>
+</table>
+<a name="reimplemented-public-functions"></a>
+<h2>Reimplemented Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QMediaObject * </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#mediaObject">mediaObject</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+<li class="fn">1 public function inherited from <a href="qmediabindableinterface.html#public-functions">QMediaBindableInterface</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#alternativeFrequenciesEnabled-prop">setAlternativeFrequenciesEnabled</a></b>(bool<i> enabled</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#alternativeFrequenciesEnabled-prop">alternativeFrequenciesEnabledChanged</a></b>(bool<i> enabled</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#error-2">error</a></b>(QRadioData::Error<i> error</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#programType-prop">programTypeChanged</a></b>(QRadioData::ProgramType<i> programType</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#programTypeName-prop">programTypeNameChanged</a></b>(QString<i> programTypeName</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#radioText-prop">radioTextChanged</a></b>(QString<i> radioText</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#stationId-prop">stationIdChanged</a></b>(QString<i> stationId</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#stationName-prop">stationNameChanged</a></b>(QString<i> stationName</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<a name="reimplemented-protected-functions"></a>
+<h2>Reimplemented Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual bool </td><td class="memItemRight bottomAlign"><b><a href="qradiodata.html#setMediaObject">setMediaObject</a></b>(QMediaObject *<i> mediaObject</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">1 protected function inherited from <a href="qmediabindableinterface.html#protected-functions">QMediaBindableInterface</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">1 protected function inherited from <a href="qmediabindableinterface.html#protected-functions">QMediaBindableInterface</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QRadioData-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QRadioData class provides interfaces to the RDS functionality of the system radio.</p>
+<p>The radio data object will emit signals for any changes in radio data. You can enable or disable alternative frequency with <a href="qradiodata.html#alternativeFrequenciesEnabled-prop">setAlternativeFrequenciesEnabled</a>().</p>
+<p>You can get a QRadioData instance fromt the <a href="qradiotuner.html#radioData-prop">radioData</a> property from a <a href="qradiotuner.html">QRadioTuner</a> instance.</p>
+<pre class="cpp">radio <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="qradiotuner.html">QRadioTuner</a></span>;
+radioData <span class="operator">=</span> radio<span class="operator">-</span><span class="operator">&gt;</span>radioData();</pre>
+<p>Alternatively, you can pass an instance of <a href="qradiotuner.html">QRadioTuner</a> to the constructor to QRadioData.</p>
+</div>
+<p><b>See also </b><a href="radiooverview.html">Radio Overview</a>.</p>
+<!-- @@@QRadioData -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Error$$$NoError$$$ResourceError$$$OpenError$$$OutOfRangeError -->
+<h3 class="fn"><a name="Error-enum"></a>enum QRadioData::<span class="name">Error</span></h3>
+<p>Enumerates radio data error conditions.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QRadioData::NoError</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">No errors have occurred.</td></tr>
+<tr><td class="topAlign"><tt>QRadioData::ResourceError</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">There is no radio service available.</td></tr>
+<tr><td class="topAlign"><tt>QRadioData::OpenError</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">Unable to open radio device.</td></tr>
+<tr><td class="topAlign"><tt>QRadioData::OutOfRangeError</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">An attempt to set a frequency or band that is not supported by radio device.</td></tr>
+</table>
+<!-- @@@Error -->
+<!-- $$$ProgramType$$$Undefined$$$News$$$CurrentAffairs$$$Information$$$Sport$$$Education$$$Drama$$$Culture$$$Science$$$Varied$$$PopMusic$$$RockMusic$$$EasyListening$$$LightClassical$$$SeriousClassical$$$OtherMusic$$$Weather$$$Finance$$$ChildrensProgrammes$$$SocialAffairs$$$Religion$$$PhoneIn$$$Travel$$$Leisure$$$JazzMusic$$$CountryMusic$$$NationalMusic$$$OldiesMusic$$$FolkMusic$$$Documentary$$$AlarmTest$$$Alarm$$$Talk$$$ClassicRock$$$AdultHits$$$SoftRock$$$Top40$$$Soft$$$Nostalgia$$$Classical$$$RhythmAndBlues$$$SoftRhythmAndBlues$$$Language$$$ReligiousMusic$$$ReligiousTalk$$$Personality$$$Public$$$College -->
+<h3 class="fn"><a name="ProgramType-enum"></a>enum QRadioData::<span class="name">ProgramType</span></h3>
+<p>This property holds the type of the currently playing program as transmitted by the radio station. The value can be any one of the values defined in the table below.</p>
+<table class="valuelist"><tr><th class="tblConst">Constant</th><th class="tblVal">Value</th></tr>
+<tr><td class="topAlign"><tt>QRadioData::Undefined</tt></td><td class="topAlign"><tt>0</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::News</tt></td><td class="topAlign"><tt>1</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::CurrentAffairs</tt></td><td class="topAlign"><tt>2</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Information</tt></td><td class="topAlign"><tt>3</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Sport</tt></td><td class="topAlign"><tt>4</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Education</tt></td><td class="topAlign"><tt>5</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Drama</tt></td><td class="topAlign"><tt>6</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Culture</tt></td><td class="topAlign"><tt>7</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Science</tt></td><td class="topAlign"><tt>8</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Varied</tt></td><td class="topAlign"><tt>9</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::PopMusic</tt></td><td class="topAlign"><tt>10</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::RockMusic</tt></td><td class="topAlign"><tt>11</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::EasyListening</tt></td><td class="topAlign"><tt>12</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::LightClassical</tt></td><td class="topAlign"><tt>13</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::SeriousClassical</tt></td><td class="topAlign"><tt>14</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::OtherMusic</tt></td><td class="topAlign"><tt>15</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Weather</tt></td><td class="topAlign"><tt>16</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Finance</tt></td><td class="topAlign"><tt>17</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::ChildrensProgrammes</tt></td><td class="topAlign"><tt>18</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::SocialAffairs</tt></td><td class="topAlign"><tt>19</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Religion</tt></td><td class="topAlign"><tt>20</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::PhoneIn</tt></td><td class="topAlign"><tt>21</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Travel</tt></td><td class="topAlign"><tt>22</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Leisure</tt></td><td class="topAlign"><tt>23</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::JazzMusic</tt></td><td class="topAlign"><tt>24</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::CountryMusic</tt></td><td class="topAlign"><tt>25</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::NationalMusic</tt></td><td class="topAlign"><tt>26</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::OldiesMusic</tt></td><td class="topAlign"><tt>27</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::FolkMusic</tt></td><td class="topAlign"><tt>28</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Documentary</tt></td><td class="topAlign"><tt>29</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::AlarmTest</tt></td><td class="topAlign"><tt>30</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Alarm</tt></td><td class="topAlign"><tt>31</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Talk</tt></td><td class="topAlign"><tt>32</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::ClassicRock</tt></td><td class="topAlign"><tt>33</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::AdultHits</tt></td><td class="topAlign"><tt>34</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::SoftRock</tt></td><td class="topAlign"><tt>35</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Top40</tt></td><td class="topAlign"><tt>36</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Soft</tt></td><td class="topAlign"><tt>37</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Nostalgia</tt></td><td class="topAlign"><tt>38</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Classical</tt></td><td class="topAlign"><tt>39</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::RhythmAndBlues</tt></td><td class="topAlign"><tt>40</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::SoftRhythmAndBlues</tt></td><td class="topAlign"><tt>41</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Language</tt></td><td class="topAlign"><tt>42</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::ReligiousMusic</tt></td><td class="topAlign"><tt>43</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::ReligiousTalk</tt></td><td class="topAlign"><tt>44</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Personality</tt></td><td class="topAlign"><tt>45</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::Public</tt></td><td class="topAlign"><tt>46</tt></td></tr>
+<tr><td class="topAlign"><tt>QRadioData::College</tt></td><td class="topAlign"><tt>47</tt></td></tr>
+</table>
+<!-- @@@ProgramType -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$alternativeFrequenciesEnabled-prop$$$isAlternativeFrequenciesEnabled$$$setAlternativeFrequenciesEnabledbool$$$alternativeFrequenciesEnabledChangedbool -->
+<h3 class="fn"><a name="alternativeFrequenciesEnabled-prop"></a><span class="name">alternativeFrequenciesEnabled</span> : <span class="type">bool</span></h3>
+<p>This property holds is Alternative Frequency currently enabled.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isAlternativeFrequenciesEnabled</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setAlternativeFrequenciesEnabled</b></span>(bool<i> enabled</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>alternativeFrequenciesEnabledChanged</b></span>(bool<i> enabled</i>)</td></tr>
+</table>
+<!-- @@@alternativeFrequenciesEnabled -->
+<!-- $$$programType-prop$$$programType$$$programTypeChangedQRadioData::ProgramType -->
+<h3 class="fn"><a name="programType-prop"></a><span class="name">programType</span> : const <span class="type"><a href="qradiodata.html#ProgramType-enum">ProgramType</a></span></h3>
+<p>This property holds current Program Type.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> ProgramType </td><td class="memItemRight bottomAlign"><span class="name"><b>programType</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>programTypeChanged</b></span>(QRadioData::ProgramType<i> programType</i>)</td></tr>
+</table>
+<!-- @@@programType -->
+<!-- $$$programTypeName-prop$$$programTypeName$$$programTypeNameChangedQString -->
+<h3 class="fn"><a name="programTypeName-prop"></a><span class="name">programTypeName</span> : const <span class="type"><a href="../qtcore/qstring.html">QString</a></span></h3>
+<p>This property holds current Program Type Name.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>programTypeName</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>programTypeNameChanged</b></span>(QString<i> programTypeName</i>)</td></tr>
+</table>
+<!-- @@@programTypeName -->
+<!-- $$$radioText-prop$$$radioText$$$radioTextChangedQString -->
+<h3 class="fn"><a name="radioText-prop"></a><span class="name">radioText</span> : const <span class="type"><a href="../qtcore/qstring.html">QString</a></span></h3>
+<p>This property holds current Radio Text.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>radioText</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>radioTextChanged</b></span>(QString<i> radioText</i>)</td></tr>
+</table>
+<!-- @@@radioText -->
+<!-- $$$stationId-prop$$$stationId$$$stationIdChangedQString -->
+<h3 class="fn"><a name="stationId-prop"></a><span class="name">stationId</span> : const <span class="type"><a href="../qtcore/qstring.html">QString</a></span></h3>
+<p>This property holds current Program Identification.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>stationId</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>stationIdChanged</b></span>(QString<i> stationId</i>)</td></tr>
+</table>
+<!-- @@@stationId -->
+<!-- $$$stationName-prop$$$stationName$$$stationNameChangedQString -->
+<h3 class="fn"><a name="stationName-prop"></a><span class="name">stationName</span> : const <span class="type"><a href="../qtcore/qstring.html">QString</a></span></h3>
+<p>This property holds current Program Service.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>stationName</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>stationNameChanged</b></span>(QString<i> stationName</i>)</td></tr>
+</table>
+<!-- @@@stationName -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QRadioData[overload1]$$$QRadioDataQMediaObject*QObject* -->
+<h3 class="fn"><a name="QRadioData"></a>QRadioData::<span class="name">QRadioData</span>(<span class="type"><a href="qmediaobject.html">QMediaObject</a></span> *<i> mediaObject</i>, <span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<p>Constructs a radio data based on a <i>mediaObject</i> and <i>parent</i>.</p>
+<p>The <i>mediaObject</i> should be an instance of <a href="qradiotuner.html">QRadioTuner</a>. It is preferable to use the <a href="qradiotuner.html#radioData-prop">radioData</a> property on a <a href="qradiotuner.html">QRadioTuner</a> instance to get an instance of <a href="qradiodata.html">QRadioData</a>.</p>
+<p>During construction, this class is bound to the <i>mediaObject</i> using the <a href="qmediaobject.html#bind">bind()</a> method.</p>
+<!-- @@@QRadioData -->
+<!-- $$$~QRadioData[overload1]$$$~QRadioData -->
+<h3 class="fn"><a name="dtor.QRadioData"></a>QRadioData::<span class="name">~QRadioData</span>()</h3>
+<p>Destroys a radio data.</p>
+<!-- @@@~QRadioData -->
+<!-- $$$availability[overload1]$$$availability -->
+<h3 class="fn"><a name="availability"></a><span class="type"><a href="qmultimedia.html#AvailabilityStatus-enum">QMultimedia::AvailabilityStatus</a></span> QRadioData::<span class="name">availability</span>() const</h3>
+<p>Returns the availability of the radio data service.</p>
+<p>A long as there is a media service which provides radio functionality, then the <a href="qmultimedia.html#AvailabilityStatus-enum">availability</a> will be that of the <a href="qradiotuner.html#availability">radio tuner</a>.</p>
+<!-- @@@availability -->
+<!-- $$$error[overload1]$$$error -->
+<h3 class="fn"><a name="error"></a><span class="type"><a href="qradiodata.html#Error-enum">Error</a></span> QRadioData::<span class="name">error</span>() const</h3>
+<p>Returns the error state of a radio data.</p>
+<p><b>See also </b><a href="qradiodata.html#errorString">errorString</a>().</p>
+<!-- @@@error -->
+<!-- $$$error$$$errorQRadioData::Error -->
+<h3 class="fn"><a name="error-2"></a><span class="type">void</span> QRadioData::<span class="name">error</span>(<span class="type"><a href="qradiodata.html#Error-enum">QRadioData::Error</a></span><i> error</i>)<tt> [signal]</tt></h3>
+<p>Signals that an <i>error</i> occurred.</p>
+<!-- @@@error -->
+<!-- $$$errorString[overload1]$$$errorString -->
+<h3 class="fn"><a name="errorString"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QRadioData::<span class="name">errorString</span>() const</h3>
+<p>Returns a description of a radio data's error state.</p>
+<p><b>See also </b><a href="qradiodata.html#error">error</a>().</p>
+<!-- @@@errorString -->
+<!-- $$$mediaObject[overload1]$$$mediaObject -->
+<h3 class="fn"><a name="mediaObject"></a><span class="type"><a href="qmediaobject.html">QMediaObject</a></span> * QRadioData::<span class="name">mediaObject</span>() const<tt> [virtual]</tt></h3>
+<p>Reimplemented from <a href="qmediabindableinterface.html#mediaObject">QMediaBindableInterface::mediaObject</a>().</p>
+<p><b>See also </b><a href="qradiodata.html#setMediaObject">setMediaObject</a>().</p>
+<!-- @@@mediaObject -->
+<!-- $$$setMediaObject[overload1]$$$setMediaObjectQMediaObject* -->
+<h3 class="fn"><a name="setMediaObject"></a><span class="type">bool</span> QRadioData::<span class="name">setMediaObject</span>(<span class="type"><a href="qmediaobject.html">QMediaObject</a></span> *<i> mediaObject</i>)<tt> [virtual protected]</tt></h3>
+<p>Reimplemented from <a href="qmediabindableinterface.html#setMediaObject">QMediaBindableInterface::setMediaObject</a>().</p>
+<p><b>See also </b><a href="qradiodata.html#mediaObject">mediaObject</a>().</p>
+<!-- @@@setMediaObject -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

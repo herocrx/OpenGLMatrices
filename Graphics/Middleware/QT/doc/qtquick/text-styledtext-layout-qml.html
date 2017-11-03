@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtQuick 5.0: styledtext-layout.qml Example File (text/styledtext-layout.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">styledtext-layout.qml Example File</h1>
+<span class="small-subtitle">text/styledtext-layout.qml</span>
+<!-- $$$text/styledtext-layout.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the examples of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
+**
+** &quot;Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
+**
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">main</span>
+    <span class="name">width</span>: <span class="number">320</span>; <span class="name">height</span>: <span class="number">480</span>
+    <span class="name">focus</span>: <span class="number">true</span>
+
+    property <span class="type">real</span> <span class="name">offset</span>: <span class="number">0</span>
+    property <span class="type">real</span> <span class="name">margin</span>: <span class="number">8</span>
+
+    <span class="type"><a href="qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">myText</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">anchors</span>.margins: <span class="number">10</span>
+        <span class="name">wrapMode</span>: <span class="name">Text</span>.<span class="name">WordWrap</span>
+        <span class="name">font</span>.family: <span class="string">&quot;Times New Roman&quot;</span>
+        <span class="name">font</span>.pixelSize: <span class="number">14</span>
+        <span class="name">textFormat</span>: <span class="name">Text</span>.<span class="name">StyledText</span>
+        <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignJustify</span>
+
+        <span class="name">text</span>: <span class="string">&quot;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at ante dui &lt;a href=\&quot;http://www.digia.com\&quot;&gt;www.digia.com&lt;/a&gt;.&lt;br/&gt;Curabitur ante est, pulvinar quis adipiscing a, iaculis id ipsum. Nunc blandit condimentum odio vel egestas.&lt;br&gt;&lt;ul type=\&quot;bullet\&quot;&gt;&lt;li&gt;Coffee&lt;ol type=\&quot;a\&quot;&gt;&lt;li&gt;Espresso&lt;li&gt;Cappuccino&lt;li&gt;Latte&lt;/ol&gt;&lt;li&gt;Juice&lt;ol type=\&quot;1\&quot;&gt;&lt;li&gt;Orange&lt;/li&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;li&gt;Pineapple&lt;/li&gt;&lt;li&gt;Tomato&lt;/li&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;&lt;font color=\&quot;#434343\&quot;&gt;&lt;i&gt;Proin consectetur &lt;b&gt;sapien&lt;/b&gt; in ipsum lacinia sit amet mattis orci interdum. Quisque vitae accumsan lectus. Ut nisi turpis, sollicitudin ut dignissim id, fermentum ac est. Maecenas nec libero leo. Sed ac leo eget ipsum ultricies viverra sit amet eu orci. Praesent et tortor risus, viverra accumsan sapien. Sed faucibus eleifend lectus, sed euismod urna porta eu. Quisque vitae accumsan lectus. Ut nisi turpis, sollicitudin ut dignissim id, fermentum ac est. Maecenas nec libero leo. Sed ac leo eget ipsum ultricies viverra sit amet eu orci.&quot;</span>
+
+        <span class="name">onLineLaidOut</span>: {
+            <span class="name">line</span>.<span class="name">width</span> <span class="operator">=</span> <span class="name">width</span> <span class="operator">/</span> <span class="number">2</span>  <span class="operator">-</span> (<span class="name">margin</span>)
+
+            <span class="keyword">if</span> (<span class="name">line</span>.<span class="name">y</span> <span class="operator">+</span> <span class="name">line</span>.<span class="name">height</span> <span class="operator">&gt;=</span> <span class="name">height</span>) {
+                <span class="name">line</span>.<span class="name">y</span> <span class="operator">-=</span> <span class="name">height</span> <span class="operator">-</span> <span class="name">margin</span>
+                <span class="name">line</span>.<span class="name">x</span> <span class="operator">=</span> <span class="name">width</span> <span class="operator">/</span> <span class="number">2</span> <span class="operator">+</span> <span class="name">margin</span>
+            }
+        }
+    }
+
+}</pre>
+</div>
+<!-- @@@text/styledtext-layout.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

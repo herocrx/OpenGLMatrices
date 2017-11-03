@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdoc-manual.qdoc -->
+  <title>QDoc 5.0: Generating DITA XML Output</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="21-1-minimum-qdocconf.html" />
+  <link rel="next" href="qdoc-index.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="21-1-minimum-qdocconf.html">minimum.qdocconf</a>
+<a class="nextPage" href="qdoc-index.html">QDoc Manual</a>
+</p><p/>
+<h1 class="title">Generating DITA XML Output</h1>
+<span class="subtitle"></span>
+<!-- $$$21-3-qt-dita-xml-output.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>QDoc can generate <a href="http://dita.xml.org">DITA XML output</a>.</p>
+<p>In your confifiguration file, set your <tt>outputformats</tt> variable to <tt>DITAXML</tt>, and send the output to an appropriate directory:</p>
+<pre class="cpp">outputdir                  <span class="operator">=</span> $QTDIR<span class="operator">/</span>doc<span class="operator">/</span>ditaxml
+outputformats              <span class="operator">=</span> DITAXML</pre>
+<p>And include these macros in your configuration file to prevent QDoc from doing some escaping that doesn't validate in XML:</p>
+<pre class="cpp">macro<span class="operator">.</span>aacute<span class="operator">.</span>DITAXML       <span class="operator">=</span> <span class="string">&quot;&amp;aacute;&quot;</span>
+macro<span class="operator">.</span>Aring<span class="operator">.</span>DITAXML        <span class="operator">=</span> <span class="string">&quot;&amp;Aring;&quot;</span>
+macro<span class="operator">.</span>aring<span class="operator">.</span>DITAXML        <span class="operator">=</span> <span class="string">&quot;&amp;aring;&quot;</span>
+macro<span class="operator">.</span>Auml<span class="operator">.</span>DITAXML         <span class="operator">=</span> <span class="string">&quot;&amp;Auml;&quot;</span>
+macro<span class="operator">.</span>br<span class="operator">.</span>DITAXML           <span class="operator">=</span> <span class="string">&quot; &quot;</span>
+macro<span class="operator">.</span>BR<span class="operator">.</span>DITAXML           <span class="operator">=</span> <span class="string">&quot; &quot;</span>
+macro<span class="operator">.</span>copyright<span class="operator">.</span>DITAXML    <span class="operator">=</span> <span class="string">&quot;&amp;copy;&quot;</span>
+macro<span class="operator">.</span>eacute<span class="operator">.</span>DITAXML       <span class="operator">=</span> <span class="string">&quot;&amp;eacute;&quot;</span>
+macro<span class="operator">.</span>hr<span class="operator">.</span>DITAXML           <span class="operator">=</span> <span class="string">&quot; &quot;</span>
+macro<span class="operator">.</span>iacute<span class="operator">.</span>DITAXML       <span class="operator">=</span> <span class="string">&quot;&amp;iacute;&quot;</span>
+macro<span class="operator">.</span>oslash<span class="operator">.</span>DITAXML       <span class="operator">=</span> <span class="string">&quot;&amp;oslash;&quot;</span>
+macro<span class="operator">.</span>ouml<span class="operator">.</span>DITAXML         <span class="operator">=</span> <span class="string">&quot;&amp;ouml;&quot;</span>
+macro<span class="operator">.</span>raisedaster<span class="operator">.</span>DITAXML  <span class="operator">=</span> <span class="string">&quot;&lt;sup&gt;*&lt;/sup&gt;&quot;</span>
+macro<span class="operator">.</span>rarrow<span class="operator">.</span>DITAXML       <span class="operator">=</span> <span class="string">&quot;&amp;rarr;&quot;</span>
+macro<span class="operator">.</span>reg<span class="operator">.</span>DITAXML          <span class="operator">=</span> <span class="string">&quot;&lt;sup&gt;&amp;reg;&lt;/sup&gt;&quot;</span>
+macro<span class="operator">.</span>uuml<span class="operator">.</span>DITAXML         <span class="operator">=</span> <span class="string">&quot;&amp;uuml;&quot;</span>
+macro<span class="operator">.</span>mdash<span class="operator">.</span>DITAXML        <span class="operator">=</span> <span class="string">&quot;&amp;mdash;&quot;</span>
+macro<span class="operator">.</span>emptyspan<span class="operator">.</span>DITAXML    <span class="operator">=</span> <span class="string">&quot; &quot;</span></pre>
+<p>You can also set default values for some of the tags in the DITA <tt>&lt;prolog&gt;</tt> and <tt>&lt;metadata&gt;</tt> elements:</p>
+<pre class="cpp">dita<span class="operator">.</span>metadata<span class="operator">.</span><span class="keyword">default</span><span class="operator">.</span>author      <span class="operator">=</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span> Development Frameworks
+dita<span class="operator">.</span>metadata<span class="operator">.</span><span class="keyword">default</span><span class="operator">.</span>permissions <span class="operator">=</span> all
+dita<span class="operator">.</span>metadata<span class="operator">.</span><span class="keyword">default</span><span class="operator">.</span>publisher   <span class="operator">=</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span> Project
+dita<span class="operator">.</span>metadata<span class="operator">.</span><span class="keyword">default</span><span class="operator">.</span>copyryear <span class="operator">=</span> <span class="number">2013</span>
+dita<span class="operator">.</span>metadata<span class="operator">.</span><span class="keyword">default</span><span class="operator">.</span>copyrholder <span class="operator">=</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span> Project
+dita<span class="operator">.</span>metadata<span class="operator">.</span><span class="keyword">default</span><span class="operator">.</span>audience <span class="operator">=</span> programmer</pre>
+<p>See the <a href="12-0-qdoc-commands-miscellaneous.html#meta-command">\meta</a> command for more details on DITA metadata.</p>
+</div>
+<!-- @@@21-3-qt-dita-xml-output.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="21-1-minimum-qdocconf.html">minimum.qdocconf</a>
+<a class="nextPage" href="qdoc-index.html">QDoc Manual</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

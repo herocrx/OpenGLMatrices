@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtQuick">
+    <demos>
+        <demo name="QML Demo - Calqlatr" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/demos-calqlatr.html" projectPath="quick/calqlatr/calqlatr.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-calqlatr-demo-small.png">
+            <description><![CDATA[This is an example calculator written in QML.]]></description>
+            <tags>calqlatr,qml,demo</tags>
+            <fileToOpen>quick/calqlatr/calqlatr.qml</fileToOpen>
+            <fileToOpen>quick/calqlatr/main.cpp</fileToOpen>
+        </demo>
+    </demos>
+</instructionals>

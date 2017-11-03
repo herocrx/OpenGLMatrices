@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>qtmultimedia 5.0: SeekControl.qml Example File (multimedia/video/qmlvideo/qml/qmlvideo/SeekControl.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">SeekControl.qml Example File</h1>
+<span class="small-subtitle">multimedia/video/qmlvideo/qml/qmlvideo/SeekControl.qml</span>
+<!-- $$$multimedia/video/qmlvideo/qml/qmlvideo/SeekControl.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the Qt Mobility Components.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-item.html">Item</a></span> {
+    <span class="name">id</span>: <span class="name">seekControl</span>
+    <span class="name">height</span>: <span class="number">46</span>
+    property <span class="type">int</span> <span class="name">duration</span>: <span class="number">0</span>
+    property <span class="type">int</span> <span class="name">playPosition</span>: <span class="number">0</span>
+    property <span class="type">int</span> <span class="name">seekPosition</span>: <span class="number">0</span>
+    property <span class="type">bool</span> <span class="name">enabled</span>: <span class="number">true</span>
+    property <span class="type">bool</span> <span class="name">seeking</span>: <span class="number">false</span>
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">background</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+        <span class="name">opacity</span>: <span class="number">0.3</span>
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">id</span>: <span class="name">progressBar</span>
+        <span class="type">anchors</span> { <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>; <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>; <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span> }
+        <span class="name">width</span>: <span class="name">seekControl</span>.<span class="name">duration</span> <span class="operator">==</span> <span class="number">0</span> ? <span class="number">0</span> : <span class="name">background</span>.<span class="name">width</span> <span class="operator">*</span> <span class="name">seekControl</span>.<span class="name">playPosition</span> <span class="operator">/</span> <span class="name">seekControl</span>.<span class="name">duration</span>
+        <span class="name">color</span>: <span class="string">&quot;black&quot;</span>
+        <span class="name">opacity</span>: <span class="number">0.7</span>
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">width</span>: <span class="number">90</span>
+        <span class="type">anchors</span> { <span class="name">left</span>: <span class="name">parent</span>.<span class="name">left</span>; <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>; <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>; <span class="name">leftMargin</span>: <span class="number">10</span> }
+        <span class="type">font</span> { <span class="name">family</span>: <span class="string">&quot;Nokia Sans S60&quot;</span>; <span class="name">pixelSize</span>: <span class="number">24</span> }
+        <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignLeft</span>
+        <span class="name">verticalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignVCenter</span>
+        <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+        <span class="name">smooth</span>: <span class="number">true</span>
+        <span class="name">text</span>: <span class="name">formatTime</span>(<span class="name">playPosition</span>)
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">width</span>: <span class="number">90</span>
+        <span class="type">anchors</span> { <span class="name">right</span>: <span class="name">parent</span>.<span class="name">right</span>; <span class="name">top</span>: <span class="name">parent</span>.<span class="name">top</span>; <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span>; <span class="name">rightMargin</span>: <span class="number">10</span> }
+        <span class="type">font</span> { <span class="name">family</span>: <span class="string">&quot;Nokia Sans S60&quot;</span>; <span class="name">pixelSize</span>: <span class="number">24</span> }
+        <span class="name">horizontalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignRight</span>
+        <span class="name">verticalAlignment</span>: <span class="name">Text</span>.<span class="name">AlignVCenter</span>
+        <span class="name">color</span>: <span class="string">&quot;white&quot;</span>
+        <span class="name">smooth</span>: <span class="number">true</span>
+        <span class="name">text</span>: <span class="name">formatTime</span>(<span class="name">duration</span>)
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> {
+        <span class="name">id</span>: <span class="name">progressHandle</span>
+        <span class="name">height</span>: <span class="number">46</span>
+        <span class="name">width</span>: <span class="number">10</span>
+        <span class="name">source</span>: <span class="name">mouseArea</span>.<span class="name">pressed</span> ? <span class="string">&quot;qrc:/images/progress_handle_pressed.svg&quot;</span> : <span class="string">&quot;qrc:/images/progress_handle.svg&quot;</span>
+        <span class="name">anchors</span>.verticalCenter: <span class="name">progressBar</span>.<span class="name">verticalCenter</span>
+        <span class="name">x</span>: <span class="name">seekControl</span>.<span class="name">duration</span> <span class="operator">==</span> <span class="number">0</span> ? <span class="number">0</span> : <span class="name">seekControl</span>.<span class="name">playPosition</span> <span class="operator">/</span> <span class="name">seekControl</span>.<span class="name">duration</span> <span class="operator">*</span> <span class="number">630</span>
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+            <span class="name">id</span>: <span class="name">mouseArea</span>
+            <span class="type">anchors</span> { <span class="name">horizontalCenter</span>: <span class="name">parent</span>.<span class="name">horizontalCenter</span>; <span class="name">bottom</span>: <span class="name">parent</span>.<span class="name">bottom</span> }
+            <span class="name">height</span>: <span class="number">46</span><span class="operator">+</span><span class="number">16</span>
+            <span class="name">width</span>: <span class="name">height</span>
+            <span class="name">enabled</span>: <span class="name">seekControl</span>.<span class="name">enabled</span>
+            <span class="type">drag</span> {
+                <span class="name">target</span>: <span class="name">progressHandle</span>
+                <span class="name">axis</span>: <span class="name">Drag</span>.<span class="name">XAxis</span>
+                <span class="name">minimumX</span>: <span class="number">0</span>
+                <span class="name">maximumX</span>: <span class="number">631</span>
+            }
+            <span class="name">onPressed</span>: {
+                <span class="name">seekControl</span>.<span class="name">seeking</span> <span class="operator">=</span> <span class="number">true</span>;
+            }
+            <span class="name">onCanceled</span>: {
+                <span class="name">seekControl</span>.<span class="name">seekPosition</span> <span class="operator">=</span> <span class="name">progressHandle</span>.<span class="name">x</span> <span class="operator">*</span> <span class="name">seekControl</span>.<span class="name">duration</span> <span class="operator">/</span> <span class="number">630</span>
+                <span class="name">seekControl</span>.<span class="name">seeking</span> <span class="operator">=</span> <span class="number">false</span>
+            }
+            <span class="name">onReleased</span>: {
+                <span class="name">seekControl</span>.<span class="name">seekPosition</span> <span class="operator">=</span> <span class="name">progressHandle</span>.<span class="name">x</span> <span class="operator">*</span> <span class="name">seekControl</span>.<span class="name">duration</span> <span class="operator">/</span> <span class="number">630</span>
+                <span class="name">seekControl</span>.<span class="name">seeking</span> <span class="operator">=</span> <span class="number">false</span>
+                <span class="name">mouse</span>.<span class="name">accepted</span> <span class="operator">=</span> <span class="number">true</span>
+            }
+        }
+    }
+
+    <span class="type"><a href="../qtqml/qml-qtquick2-timer.html">Timer</a></span> { <span class="comment">// Update position also while user is dragging the progress handle</span>
+        <span class="name">id</span>: <span class="name">seekTimer</span>
+        <span class="name">repeat</span>: <span class="number">true</span>
+        <span class="name">interval</span>: <span class="number">300</span>
+        <span class="name">running</span>: <span class="name">seekControl</span>.<span class="name">seeking</span>
+        <span class="name">onTriggered</span>: {
+            <span class="name">seekControl</span>.<span class="name">seekPosition</span> <span class="operator">=</span> <span class="name">progressHandle</span>.<span class="name">x</span><span class="operator">*</span><span class="name">seekControl</span>.<span class="name">duration</span><span class="operator">/</span><span class="number">630</span>
+        }
+    }
+
+    <span class="keyword">function</span> <span class="name">formatTime</span>(<span class="name">timeInMs</span>) {
+        <span class="keyword">if</span> (!<span class="name">timeInMs</span> <span class="operator">||</span> <span class="name">timeInMs</span> <span class="operator">&lt;=</span> <span class="number">0</span>) <span class="keyword">return</span> <span class="string">&quot;0:00&quot;</span>
+        var <span class="name">seconds</span> = <span class="name">timeInMs</span> <span class="operator">/</span> <span class="number">1000</span>;
+        var <span class="name">minutes</span> = <span class="name">Math</span>.<span class="name">floor</span>(<span class="name">seconds</span> <span class="operator">/</span> <span class="number">60</span>)
+        <span class="name">seconds</span> <span class="operator">=</span> <span class="name">Math</span>.<span class="name">floor</span>(<span class="name">seconds</span> <span class="operator">%</span> <span class="number">60</span>)
+        <span class="keyword">if</span> (<span class="name">seconds</span> <span class="operator">&lt;</span> <span class="number">10</span>) <span class="name">seconds</span> <span class="operator">=</span> <span class="string">&quot;0&quot;</span> <span class="operator">+</span> <span class="name">seconds</span>;
+        <span class="keyword">return</span> <span class="name">minutes</span> <span class="operator">+</span> <span class="string">&quot;:&quot;</span> <span class="operator">+</span> <span class="name">seconds</span>
+    }
+}</pre>
+</div>
+<!-- @@@multimedia/video/qmlvideo/qml/qmlvideo/SeekControl.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

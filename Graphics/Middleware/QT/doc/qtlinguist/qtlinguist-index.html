@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- linguist-manual.qdoc -->
+  <title>QtLinguist : Qt Linguist Manual</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="next" href="linguist-manager.html" />
+  <link rel="start" href="../qtdoc/index.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="nextPage" href="linguist-manager.html">Qt Linguist Manual: Release Manager</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#overview-of-the-translation-process">Overview of the Translation Process</a></li>
+<li class="level1"><a href="#table-of-contents">Table of Contents</a></li>
+</ul>
+</div>
+<h1 class="title">Qt Linguist Manual</h1>
+<span class="subtitle"></span>
+<!-- $$$qtlinguist-index.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="qt-linguist"></a><p>Qt provides excellent support for translating Qt C++ and Qt Quick applications into local languages. Release managers, translators, and developers can use Qt tools to accomplish their tasks.</p>
+<p><a href="linguist-manager.html">Release managers</a> bear the overall responsibility for the release of the application. Typically, they coordinate the work of developers and translators. They can use the <i>lupdate</i> tool to synchronize source code and translations and the <i>lrelease</i> tool to create run-time translation files for use by the released application.</p>
+<p><a href="linguist-translators.html">Translators</a> can use the <i>Qt Linguist</i> tool to translate text in applications. No computer knowledge beyond the ability to start a program and use a text editor or word processor is required.</p>
+<p><a href="linguist-programmers.html">Developers</a> must create Qt applications that are able to use translated text. They should also help translators identify the context in which phrases appear. Developers can use tutorials to learn about their tasks.</p>
+<a name="overview-of-the-translation-process"></a>
+<h2>Overview of the Translation Process</h2>
+<p>Most of the text that must be translated in an application consists of either single words or short phrases. These typically appear as window titles, menu items, pop-up help text (balloon help), and labels to buttons, check boxes and radio buttons.</p>
+<p>The phrases are entered into the source code by the developer in their native language using a simple but special syntax to identify that the phrases require translation. The Qt tools provide context information for each of the phrases to help the translator, and the developer is able to add additional context information to phrases when necessary.</p>
+<p>The release manager generates a set of translation files that are produced from the source files and passes these to the translator. The translator opens the translation files using <i>Qt Linguist</i>, enters their translations and saves the results back into the translation files, which they pass back to the release manager. The release manager then generates fast compact versions of these translation files ready for use by the application.</p>
+<p>The tools are designed to be used in repeated cycles as applications change and evolve, preserving existing translations and making it easy to identify which new translations are required. <i>Qt Linguist</i> also provides a phrase book facility to help ensure consistent translations across multiple applications and projects.</p>
+<p>Translators and developers must address a number of issues because of the subtleties and complexities of human language:</p>
+<ul>
+<li>A single phrase may need to be translated into several different forms depending on context, e.g&#x2e; <i>open</i> in English might become <i>&ouml;</i><i>ffnen</i>, &quot;open file&quot;, or <i>aufbauen</i>, &quot;open internet connection&quot;, in German.</li>
+<li>Keyboard accelerators may need to be changed but without introducing conflicts, e.g&#x2e; &quot;&amp;Quit&quot; in English becomes &quot;Avslutt&quot; in Norwegian which doesn't contain a &quot;Q&quot;. We cannot use a letter that is already in use - unless we change several accelerators.</li>
+<li>Phrases that contain variables, for example, &quot;The 25 files selected will take 63 seconds to process&quot;, where the two numbers are inserted programmatically at run-time may need to be reworded because in a different language the word order and therefore the placement of the variables may have to change.</li>
+</ul>
+<p>The Qt translation tools provide clear and simple solutions to these issues.</p>
+<p><i>Qt Linguist</i> and lupdate are able to import and export XML Localization Interchange File Format (XLIFF) files, making it possible to take advantage of tools and translation services that work with this format. For more information on working with these files, see <a href="linguist-translators.html">Translators</a>.</p>
+<a name="table-of-contents"></a>
+<h2>Table of Contents</h2>
+<ul>
+<li><a href="linguist-manager.html">Release Manager</a></li>
+<li><a href="linguist-translators.html">Translators</a></li>
+<li><a href="linguist-programmers.html">Developers</a></li>
+<li><a href="linguist-ts-file-format.html">TS File Format</a></li>
+<li><a href="linguist-id-based-i18n.html">Text ID Based Translations</a></li>
+</ul>
+</div>
+<!-- @@@qtlinguist-index.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="nextPage" href="linguist-manager.html">Qt Linguist Manual: Release Manager</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,1170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/qtsql" title="Qt SQL Reference Documentation" version="5.0.2">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <page access="public" status="commendable" name="cachedtable" href="cachedtable.html" subtype="example" title="Cached Table Example" fulltitle="Cached Table Example" subtitle="" location="cachedtable.qdoc" module="QtSql" groups="sql_examples">
+            <contents name="tableeditor-class-definition" title="TableEditor Class Definition" level="1"/>
+            <contents name="tableeditor-class-implementation" title="TableEditor Class Implementation" level="1"/>
+            <page access="public" status="commendable" name="cachedtable/cachedtable.pro" href="cachedtable-cachedtable-pro.html" subtype="file" title="" fulltitle="cachedtable.pro Example File" subtitle="cachedtable/cachedtable.pro" location=""/>
+            <page access="public" status="commendable" name="cachedtable/main.cpp" href="cachedtable-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="cachedtable/main.cpp" location=""/>
+            <page access="public" status="commendable" name="cachedtable/tableeditor.cpp" href="cachedtable-tableeditor-cpp.html" subtype="file" title="" fulltitle="tableeditor.cpp Example File" subtitle="cachedtable/tableeditor.cpp" location=""/>
+            <page access="public" status="commendable" name="cachedtable/tableeditor.h" href="cachedtable-tableeditor-h.html" subtype="file" title="" fulltitle="tableeditor.h Example File" subtitle="cachedtable/tableeditor.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="drilldown" href="drilldown.html" subtype="example" title="Drill Down Example" fulltitle="Drill Down Example" subtitle="" location="drilldown.qdoc" module="QtSql" groups="sql_examples">
+            <contents name="informationwindow-class-definition" title="InformationWindow Class Definition" level="1"/>
+            <contents name="informationwindow-class-implementation" title="InformationWindow Class Implementation" level="1"/>
+            <contents name="view-class-definition" title="View Class Definition" level="1"/>
+            <contents name="view-class-implementation" title="View Class Implementation" level="1"/>
+            <contents name="imageitem-class-definition" title="ImageItem Class Definition" level="1"/>
+            <contents name="imageitem-class-implementation" title="ImageItem Class Implementation" level="1"/>
+            <page access="public" status="commendable" name="drilldown/drilldown.pro" href="drilldown-drilldown-pro.html" subtype="file" title="" fulltitle="drilldown.pro Example File" subtitle="drilldown/drilldown.pro" location=""/>
+            <page access="public" status="commendable" name="drilldown/drilldown.qrc" href="drilldown-drilldown-qrc.html" subtype="file" title="" fulltitle="drilldown.qrc Example File" subtitle="drilldown/drilldown.qrc" location=""/>
+            <page access="public" status="commendable" name="drilldown/imageitem.cpp" href="drilldown-imageitem-cpp.html" subtype="file" title="" fulltitle="imageitem.cpp Example File" subtitle="drilldown/imageitem.cpp" location=""/>
+            <page access="public" status="commendable" name="drilldown/imageitem.h" href="drilldown-imageitem-h.html" subtype="file" title="" fulltitle="imageitem.h Example File" subtitle="drilldown/imageitem.h" location=""/>
+            <page access="public" status="commendable" name="drilldown/images/beijing.png" href="drilldown-images-beijing-png.html" title="" fulltitle="beijing.png Image File" subtitle="drilldown/images/beijing.png" location=""/>
+            <page access="public" status="commendable" name="drilldown/images/berlin.png" href="drilldown-images-berlin-png.html" title="" fulltitle="berlin.png Image File" subtitle="drilldown/images/berlin.png" location=""/>
+            <page access="public" status="commendable" name="drilldown/images/brisbane.png" href="drilldown-images-brisbane-png.html" title="" fulltitle="brisbane.png Image File" subtitle="drilldown/images/brisbane.png" location=""/>
+            <page access="public" status="commendable" name="drilldown/images/munich.png" href="drilldown-images-munich-png.html" title="" fulltitle="munich.png Image File" subtitle="drilldown/images/munich.png" location=""/>
+            <page access="public" status="commendable" name="drilldown/images/oslo.png" href="drilldown-images-oslo-png.html" title="" fulltitle="oslo.png Image File" subtitle="drilldown/images/oslo.png" location=""/>
+            <page access="public" status="commendable" name="drilldown/images/redwood.png" href="drilldown-images-redwood-png.html" title="" fulltitle="redwood.png Image File" subtitle="drilldown/images/redwood.png" location=""/>
+            <page access="public" status="commendable" name="drilldown/informationwindow.cpp" href="drilldown-informationwindow-cpp.html" subtype="file" title="" fulltitle="informationwindow.cpp Example File" subtitle="drilldown/informationwindow.cpp" location=""/>
+            <page access="public" status="commendable" name="drilldown/informationwindow.h" href="drilldown-informationwindow-h.html" subtype="file" title="" fulltitle="informationwindow.h Example File" subtitle="drilldown/informationwindow.h" location=""/>
+            <page access="public" status="commendable" name="drilldown/main.cpp" href="drilldown-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="drilldown/main.cpp" location=""/>
+            <page access="public" status="commendable" name="drilldown/view.cpp" href="drilldown-view-cpp.html" subtype="file" title="" fulltitle="view.cpp Example File" subtitle="drilldown/view.cpp" location=""/>
+            <page access="public" status="commendable" name="drilldown/view.h" href="drilldown-view-h.html" subtype="file" title="" fulltitle="view.h Example File" subtitle="drilldown/view.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="masterdetail" href="masterdetail.html" subtype="example" title="Master Detail Example" fulltitle="Master Detail Example" subtitle="" location="masterdetail.qdoc" module="QtSql" groups="sql_examples">
+            <page access="public" status="commendable" name="masterdetail/albumdetails.xml" href="masterdetail-albumdetails-xml.html" subtype="file" title="" fulltitle="albumdetails.xml Example File" subtitle="masterdetail/albumdetails.xml" location=""/>
+            <page access="public" status="commendable" name="masterdetail/database.h" href="masterdetail-database-h.html" subtype="file" title="" fulltitle="database.h Example File" subtitle="masterdetail/database.h" location=""/>
+            <page access="public" status="commendable" name="masterdetail/dialog.cpp" href="masterdetail-dialog-cpp.html" subtype="file" title="" fulltitle="dialog.cpp Example File" subtitle="masterdetail/dialog.cpp" location=""/>
+            <page access="public" status="commendable" name="masterdetail/dialog.h" href="masterdetail-dialog-h.html" subtype="file" title="" fulltitle="dialog.h Example File" subtitle="masterdetail/dialog.h" location=""/>
+            <page access="public" status="commendable" name="masterdetail/images/icon.png" href="masterdetail-images-icon-png.html" title="" fulltitle="icon.png Image File" subtitle="masterdetail/images/icon.png" location=""/>
+            <page access="public" status="commendable" name="masterdetail/images/image.png" href="masterdetail-images-image-png.html" title="" fulltitle="image.png Image File" subtitle="masterdetail/images/image.png" location=""/>
+            <page access="public" status="commendable" name="masterdetail/main.cpp" href="masterdetail-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="masterdetail/main.cpp" location=""/>
+            <page access="public" status="commendable" name="masterdetail/mainwindow.cpp" href="masterdetail-mainwindow-cpp.html" subtype="file" title="" fulltitle="mainwindow.cpp Example File" subtitle="masterdetail/mainwindow.cpp" location=""/>
+            <page access="public" status="commendable" name="masterdetail/mainwindow.h" href="masterdetail-mainwindow-h.html" subtype="file" title="" fulltitle="mainwindow.h Example File" subtitle="masterdetail/mainwindow.h" location=""/>
+            <page access="public" status="commendable" name="masterdetail/masterdetail.pro" href="masterdetail-masterdetail-pro.html" subtype="file" title="" fulltitle="masterdetail.pro Example File" subtitle="masterdetail/masterdetail.pro" location=""/>
+            <page access="public" status="commendable" name="masterdetail/masterdetail.qrc" href="masterdetail-masterdetail-qrc.html" subtype="file" title="" fulltitle="masterdetail.qrc Example File" subtitle="masterdetail/masterdetail.qrc" location=""/>
+        </page>
+        <page access="public" status="commendable" name="querymodel" href="querymodel.html" subtype="example" title="Query Model Example" fulltitle="Query Model Example" subtitle="" location="querymodel.qdoc" module="QtSql" groups="sql_examples">
+            <page access="public" status="commendable" name="querymodel/customsqlmodel.cpp" href="querymodel-customsqlmodel-cpp.html" subtype="file" title="" fulltitle="customsqlmodel.cpp Example File" subtitle="querymodel/customsqlmodel.cpp" location=""/>
+            <page access="public" status="commendable" name="querymodel/customsqlmodel.h" href="querymodel-customsqlmodel-h.html" subtype="file" title="" fulltitle="customsqlmodel.h Example File" subtitle="querymodel/customsqlmodel.h" location=""/>
+            <page access="public" status="commendable" name="querymodel/editablesqlmodel.cpp" href="querymodel-editablesqlmodel-cpp.html" subtype="file" title="" fulltitle="editablesqlmodel.cpp Example File" subtitle="querymodel/editablesqlmodel.cpp" location=""/>
+            <page access="public" status="commendable" name="querymodel/editablesqlmodel.h" href="querymodel-editablesqlmodel-h.html" subtype="file" title="" fulltitle="editablesqlmodel.h Example File" subtitle="querymodel/editablesqlmodel.h" location=""/>
+            <page access="public" status="commendable" name="querymodel/main.cpp" href="querymodel-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="querymodel/main.cpp" location=""/>
+            <page access="public" status="commendable" name="querymodel/querymodel.pro" href="querymodel-querymodel-pro.html" subtype="file" title="" fulltitle="querymodel.pro Example File" subtitle="querymodel/querymodel.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="relationaltablemodel" href="relationaltablemodel.html" subtype="example" title="Relational Table Model Example" fulltitle="Relational Table Model Example" subtitle="" location="relationaltablemodel.qdoc" module="QtSql" groups="sql_examples">
+            <page access="public" status="commendable" name="relationaltablemodel/relationaltablemodel.cpp" href="relationaltablemodel-relationaltablemodel-cpp.html" subtype="file" title="" fulltitle="relationaltablemodel.cpp Example File" subtitle="relationaltablemodel/relationaltablemodel.cpp" location=""/>
+            <page access="public" status="commendable" name="relationaltablemodel/relationaltablemodel.pro" href="relationaltablemodel-relationaltablemodel-pro.html" subtype="file" title="" fulltitle="relationaltablemodel.pro Example File" subtitle="relationaltablemodel/relationaltablemodel.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="sqlbrowser" href="sqlbrowser.html" subtype="example" title="SQL Browser" fulltitle="SQL Browser" subtitle="" location="sqlbrowser.qdoc" module="QtSql" groups="sql_examples">
+            <page access="public" status="commendable" name="sqlbrowser/browser.cpp" href="sqlbrowser-browser-cpp.html" subtype="file" title="" fulltitle="browser.cpp Example File" subtitle="sqlbrowser/browser.cpp" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/browser.h" href="sqlbrowser-browser-h.html" subtype="file" title="" fulltitle="browser.h Example File" subtitle="sqlbrowser/browser.h" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/browserwidget.ui" href="sqlbrowser-browserwidget-ui.html" subtype="file" title="" fulltitle="browserwidget.ui Example File" subtitle="sqlbrowser/browserwidget.ui" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/connectionwidget.cpp" href="sqlbrowser-connectionwidget-cpp.html" subtype="file" title="" fulltitle="connectionwidget.cpp Example File" subtitle="sqlbrowser/connectionwidget.cpp" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/connectionwidget.h" href="sqlbrowser-connectionwidget-h.html" subtype="file" title="" fulltitle="connectionwidget.h Example File" subtitle="sqlbrowser/connectionwidget.h" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/main.cpp" href="sqlbrowser-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="sqlbrowser/main.cpp" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/qsqlconnectiondialog.cpp" href="sqlbrowser-qsqlconnectiondialog-cpp.html" subtype="file" title="" fulltitle="qsqlconnectiondialog.cpp Example File" subtitle="sqlbrowser/qsqlconnectiondialog.cpp" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/qsqlconnectiondialog.h" href="sqlbrowser-qsqlconnectiondialog-h.html" subtype="file" title="" fulltitle="qsqlconnectiondialog.h Example File" subtitle="sqlbrowser/qsqlconnectiondialog.h" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/qsqlconnectiondialog.ui" href="sqlbrowser-qsqlconnectiondialog-ui.html" subtype="file" title="" fulltitle="qsqlconnectiondialog.ui Example File" subtitle="sqlbrowser/qsqlconnectiondialog.ui" location=""/>
+            <page access="public" status="commendable" name="sqlbrowser/sqlbrowser.pro" href="sqlbrowser-sqlbrowser-pro.html" subtype="file" title="" fulltitle="sqlbrowser.pro Example File" subtitle="sqlbrowser/sqlbrowser.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="sqlwidgetmapper" href="sqlwidgetmapper.html" subtype="example" title="SQL Widget Mapper Example" fulltitle="SQL Widget Mapper Example" subtitle="" location="sqlwidgetmapper.qdoc" module="QtSql" groups="sql_examples">
+            <contents name="window-class-definition" title="Window Class Definition" level="1"/>
+            <contents name="window-class-implementation" title="Window Class Implementation" level="1"/>
+            <contents name="summary-and-further-reading" title="Summary and Further Reading" level="1"/>
+            <page access="public" status="commendable" name="sqlwidgetmapper/main.cpp" href="sqlwidgetmapper-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="sqlwidgetmapper/main.cpp" location=""/>
+            <page access="public" status="commendable" name="sqlwidgetmapper/sqlwidgetmapper.pro" href="sqlwidgetmapper-sqlwidgetmapper-pro.html" subtype="file" title="" fulltitle="sqlwidgetmapper.pro Example File" subtitle="sqlwidgetmapper/sqlwidgetmapper.pro" location=""/>
+            <page access="public" status="commendable" name="sqlwidgetmapper/window.cpp" href="sqlwidgetmapper-window-cpp.html" subtype="file" title="" fulltitle="window.cpp Example File" subtitle="sqlwidgetmapper/window.cpp" location=""/>
+            <page access="public" status="commendable" name="sqlwidgetmapper/window.h" href="sqlwidgetmapper-window-h.html" subtype="file" title="" fulltitle="window.h Example File" subtitle="sqlwidgetmapper/window.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="tablemodel" href="tablemodel.html" subtype="example" title="Table Model Example" fulltitle="Table Model Example" subtitle="" location="tablemodel.qdoc" module="QtSql" groups="sql_examples">
+            <page access="public" status="commendable" name="tablemodel/tablemodel.cpp" href="tablemodel-tablemodel-cpp.html" subtype="file" title="" fulltitle="tablemodel.cpp Example File" subtitle="tablemodel/tablemodel.cpp" location=""/>
+            <page access="public" status="commendable" name="tablemodel/tablemodel.pro" href="tablemodel-tablemodel-pro.html" subtype="file" title="" fulltitle="tablemodel.pro Example File" subtitle="tablemodel/tablemodel.pro" location=""/>
+        </page>
+        <namespace access="public" threadsafety="unspecified" status="commendable" name="QSql" href="qsql.html" location="qsql.h" module="QtSql" groups="database">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="Location" fullname="QSql::Location" href="qsql.html#Location-enum" location="qsql.h">
+                <value name="BeforeFirstRow" value="-1"/>
+                <value name="AfterLastRow" value="-2"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="NumericalPrecisionPolicy" fullname="QSql::NumericalPrecisionPolicy" href="qsql.html#NumericalPrecisionPolicy-enum" location="qsql.h">
+                <value name="LowPrecisionInt32" value="0x01"/>
+                <value name="LowPrecisionInt64" value="0x02"/>
+                <value name="LowPrecisionDouble" value="0x04"/>
+                <value name="HighPrecision" value="0"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ParamTypeFlag" fullname="QSql::ParamTypeFlag" href="qsql.html#ParamTypeFlag-enum" location="qsql.h" typedef="QSql::ParamType">
+                <value name="In" value="0x00000001"/>
+                <value name="Out" value="0x00000002"/>
+                <value name="InOut" value="In | Out"/>
+                <value name="Binary" value="0x00000004"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="TableType" fullname="QSql::TableType" href="qsql.html#TableType-enum" location="qsql.h">
+                <value name="Tables" value="0x01"/>
+                <value name="SystemTables" value="0x02"/>
+                <value name="Views" value="0x04"/>
+                <value name="AllTables" value="0xff"/>
+            </enum>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="ParamType" fullname="QSql::ParamType" href="qsql.html#ParamType-typedef" location="qsql.h" enum="QSql::ParamTypeFlag"/>
+        </namespace>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlDatabase" href="qsqldatabase.html" location="qsqldatabase.h" bases="" module="QtSql" groups="database">
+            <function access="public" threadsafety="unspecified" status="commendable" name="addDatabase" fullname="QSqlDatabase::addDatabase" href="qsqldatabase.html#addDatabase-2" location="qsqldatabase.cpp" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="QSqlDatabase" signature="addDatabase(QSqlDriver * driver, const QString &amp; connectionName)">
+                <parameter left="QSqlDriver *" right="" name="driver" default=""/>
+                <parameter left="const QString &amp;" right="" name="connectionName" default="QLatin1String( defaultConnection )"/>
+            </function>
+            <function access="public" threadsafety="thread safe" status="commendable" name="addDatabase" fullname="QSqlDatabase::addDatabase" href="qsqldatabase.html#addDatabase" location="qsqldatabase.cpp" virtual="non" meta="plain" const="false" static="true" overload="false" type="QSqlDatabase" signature="addDatabase(const QString &amp; type, const QString &amp; connectionName)">
+                <parameter left="const QString &amp;" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="connectionName" default="QLatin1String( defaultConnection )"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlDatabase" fullname="QSqlDatabase::QSqlDatabase" href="qsqldatabase.html#QSqlDatabase" location="qsqldatabase.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlDatabase()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlDatabase" fullname="QSqlDatabase::QSqlDatabase" href="qsqldatabase.html#QSqlDatabase-2" location="qsqldatabase.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlDatabase(const QSqlDatabase &amp; other)">
+                <parameter left="const QSqlDatabase &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="QSqlDatabase" fullname="QSqlDatabase::QSqlDatabase" href="qsqldatabase.html#QSqlDatabase-4" location="qsqldatabase.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QSqlDatabase(QSqlDriver * driver)">
+                <parameter left="QSqlDriver *" right="" name="driver" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="QSqlDatabase" fullname="QSqlDatabase::QSqlDatabase" href="qsqldatabase.html#QSqlDatabase-3" location="qsqldatabase.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QSqlDatabase(const QString &amp; type)">
+                <parameter left="const QString &amp;" right="" name="type" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="cloneDatabase" fullname="QSqlDatabase::cloneDatabase" href="qsqldatabase.html#cloneDatabase" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QSqlDatabase" signature="cloneDatabase(const QSqlDatabase &amp; other, const QString &amp; connectionName)">
+                <parameter left="const QSqlDatabase &amp;" right="" name="other" default=""/>
+                <parameter left="const QString &amp;" right="" name="connectionName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="close" fullname="QSqlDatabase::close" href="qsqldatabase.html#close" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="close()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="commit" fullname="QSqlDatabase::commit" href="qsqldatabase.html#commit" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="commit()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connectOptions" fullname="QSqlDatabase::connectOptions" href="qsqldatabase.html#connectOptions" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="connectOptions() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="connectionName" fullname="QSqlDatabase::connectionName" href="qsqldatabase.html#connectionName" location="qsqldatabase.h" since="4.4" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="connectionName() const"/>
+            <function access="public" threadsafety="thread safe" status="commendable" name="connectionNames" fullname="QSqlDatabase::connectionNames" href="qsqldatabase.html#connectionNames" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QStringList" signature="connectionNames()"/>
+            <function access="public" threadsafety="thread safe" status="commendable" name="contains" fullname="QSqlDatabase::contains" href="qsqldatabase.html#contains" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="contains(const QString &amp; connectionName)">
+                <parameter left="const QString &amp;" right="" name="connectionName" default="QLatin1String( defaultConnection )"/>
+            </function>
+            <function access="public" threadsafety="thread safe" status="commendable" name="database" fullname="QSqlDatabase::database" href="qsqldatabase.html#database" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QSqlDatabase" signature="database(const QString &amp; connectionName, bool open)">
+                <parameter left="const QString &amp;" right="" name="connectionName" default="QLatin1String( defaultConnection )"/>
+                <parameter left="bool" right="" name="open" default="true"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="databaseName" fullname="QSqlDatabase::databaseName" href="qsqldatabase.html#databaseName" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="databaseName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="driver" fullname="QSqlDatabase::driver" href="qsqldatabase.html#driver" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlDriver *" signature="driver() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="driverName" fullname="QSqlDatabase::driverName" href="qsqldatabase.html#driverName" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="driverName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="drivers" fullname="QSqlDatabase::drivers" href="qsqldatabase.html#drivers" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="QStringList" signature="drivers()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="exec" fullname="QSqlDatabase::exec" href="qsqldatabase.html#exec" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlQuery" signature="exec(const QString &amp; query) const">
+                <parameter left="const QString &amp;" right="" name="query" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hostName" fullname="QSqlDatabase::hostName" href="qsqldatabase.html#hostName" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="hostName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDriverAvailable" fullname="QSqlDatabase::isDriverAvailable" href="qsqldatabase.html#isDriverAvailable" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="isDriverAvailable(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isOpen" fullname="QSqlDatabase::isOpen" href="qsqldatabase.html#isOpen" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isOpen() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isOpenError" fullname="QSqlDatabase::isOpenError" href="qsqldatabase.html#isOpenError" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isOpenError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSqlDatabase::isValid" href="qsqldatabase.html#isValid" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QSqlDatabase::lastError" href="qsqldatabase.html#lastError" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="numericalPrecisionPolicy" fullname="QSqlDatabase::numericalPrecisionPolicy" href="qsqldatabase.html#numericalPrecisionPolicy" location="qsqldatabase.h" since="4.6" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSql::NumericalPrecisionPolicy" signature="numericalPrecisionPolicy() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="open" fullname="QSqlDatabase::open" href="qsqldatabase.html#open" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="open()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="open" fullname="QSqlDatabase::open" href="qsqldatabase.html#open-2" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="open(const QString &amp; user, const QString &amp; password)">
+                <parameter left="const QString &amp;" right="" name="user" default=""/>
+                <parameter left="const QString &amp;" right="" name="password" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSqlDatabase::operator=" href="qsqldatabase.html#operator=" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSqlDatabase &amp;" signature="operator=(const QSqlDatabase &amp; other)">
+                <parameter left="const QSqlDatabase &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="password" fullname="QSqlDatabase::password" href="qsqldatabase.html#password" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="password() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="port" fullname="QSqlDatabase::port" href="qsqldatabase.html#port" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="port() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="primaryIndex" fullname="QSqlDatabase::primaryIndex" href="qsqldatabase.html#primaryIndex" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlIndex" signature="primaryIndex(const QString &amp; tablename) const">
+                <parameter left="const QString &amp;" right="" name="tablename" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlDatabase::record" href="qsqldatabase.html#record" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlRecord" signature="record(const QString &amp; tablename) const">
+                <parameter left="const QString &amp;" right="" name="tablename" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerSqlDriver" fullname="QSqlDatabase::registerSqlDriver" href="qsqldatabase.html#registerSqlDriver" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="registerSqlDriver(const QString &amp; name, QSqlDriverCreatorBase * creator)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="QSqlDriverCreatorBase *" right="" name="creator" default=""/>
+            </function>
+            <function access="public" threadsafety="thread safe" status="commendable" name="removeDatabase" fullname="QSqlDatabase::removeDatabase" href="qsqldatabase.html#removeDatabase" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="removeDatabase(const QString &amp; connectionName)">
+                <parameter left="const QString &amp;" right="" name="connectionName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="rollback" fullname="QSqlDatabase::rollback" href="qsqldatabase.html#rollback" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="rollback()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setConnectOptions" fullname="QSqlDatabase::setConnectOptions" href="qsqldatabase.html#setConnectOptions" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setConnectOptions(const QString &amp; options)">
+                <parameter left="const QString &amp;" right="" name="options" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDatabaseName" fullname="QSqlDatabase::setDatabaseName" href="qsqldatabase.html#setDatabaseName" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setDatabaseName(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setHostName" fullname="QSqlDatabase::setHostName" href="qsqldatabase.html#setHostName" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setHostName(const QString &amp; host)">
+                <parameter left="const QString &amp;" right="" name="host" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNumericalPrecisionPolicy" fullname="QSqlDatabase::setNumericalPrecisionPolicy" href="qsqldatabase.html#setNumericalPrecisionPolicy" location="qsqldatabase.h" since="4.6" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy precisionPolicy)">
+                <parameter left="QSql::NumericalPrecisionPolicy" right="" name="precisionPolicy" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPassword" fullname="QSqlDatabase::setPassword" href="qsqldatabase.html#setPassword" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPassword(const QString &amp; password)">
+                <parameter left="const QString &amp;" right="" name="password" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPort" fullname="QSqlDatabase::setPort" href="qsqldatabase.html#setPort" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPort(int port)">
+                <parameter left="int" right="" name="port" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setUserName" fullname="QSqlDatabase::setUserName" href="qsqldatabase.html#setUserName" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setUserName(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="tables" fullname="QSqlDatabase::tables" href="qsqldatabase.html#tables" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="tables(QSql::TableType type) const">
+                <parameter left="QSql::TableType" right="" name="type" default="QSql::Tables"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="transaction" fullname="QSqlDatabase::transaction" href="qsqldatabase.html#transaction" location="qsqldatabase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="transaction()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="userName" fullname="QSqlDatabase::userName" href="qsqldatabase.html#userName" location="qsqldatabase.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="userName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlDatabase" fullname="QSqlDatabase::~QSqlDatabase" href="qsqldatabase.html#dtor.QSqlDatabase" location="qsqldatabase.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlDatabase()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlDriverCreator" href="qsqldrivercreator.html" location="qsqldatabase.h" bases="QSqlDriverCreatorBase" module="QtSql" groups="database">
+            <function access="public" threadsafety="unspecified" status="commendable" name="createObject" fullname="QSqlDriverCreator::createObject" href="qsqldrivercreator.html#createObject" location="qsqldatabase.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QSqlDriver *" signature="createObject() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlDriverCreatorBase" href="qsqldrivercreatorbase.html" location="qsqldatabase.h" bases="" module="QtSql" groups="database">
+            <function access="public" threadsafety="unspecified" status="commendable" name="createObject" fullname="QSqlDriverCreatorBase::createObject" href="qsqldrivercreatorbase.html#createObject" location="qsqldatabase.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QSqlDriver *" signature="createObject() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlDriverCreatorBase" fullname="QSqlDriverCreatorBase::~QSqlDriverCreatorBase" href="qsqldrivercreatorbase.html#dtor.QSqlDriverCreatorBase" location="qsqldatabase.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlDriverCreatorBase()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlDriver" href="qsqldriver.html" location="qsqldriver.h" bases="QObject" module="QtSql" groups="database">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="DriverFeature" fullname="QSqlDriver::DriverFeature" href="qsqldriver.html#DriverFeature-enum" location="qsqldriver.h">
+                <value name="Transactions" value="0"/>
+                <value name="QuerySize" value="1"/>
+                <value name="BLOB" value="2"/>
+                <value name="Unicode" value="3"/>
+                <value name="PreparedQueries" value="4"/>
+                <value name="NamedPlaceholders" value="5"/>
+                <value name="PositionalPlaceholders" value="6"/>
+                <value name="LastInsertId" value="7"/>
+                <value name="BatchOperations" value="8"/>
+                <value name="SimpleLocking" value="9"/>
+                <value name="LowPrecisionNumbers" value="10"/>
+                <value name="EventNotifications" value="11"/>
+                <value name="FinishQuery" value="12"/>
+                <value name="MultipleResultSets" value="13"/>
+                <value name="CancelQuery" value="14"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="IdentifierType" fullname="QSqlDriver::IdentifierType" href="qsqldriver.html#IdentifierType-enum" location="qsqldriver.h">
+                <value name="FieldName" value="0"/>
+                <value name="TableName" value="1"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="NotificationSource" fullname="QSqlDriver::NotificationSource" href="qsqldriver.html#NotificationSource-enum" location="qsqldriver.h">
+                <value name="UnknownSource" value="0"/>
+                <value name="SelfSource" value="1"/>
+                <value name="OtherSource" value="2"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="StatementType" fullname="QSqlDriver::StatementType" href="qsqldriver.html#StatementType-enum" location="qsqldriver.h">
+                <value name="WhereStatement" value="0"/>
+                <value name="SelectStatement" value="1"/>
+                <value name="UpdateStatement" value="2"/>
+                <value name="InsertStatement" value="3"/>
+                <value name="DeleteStatement" value="4"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlDriver" fullname="QSqlDriver::QSqlDriver" href="qsqldriver.html#QSqlDriver" location="qsqldriver.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlDriver(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beginTransaction" fullname="QSqlDriver::beginTransaction" href="qsqldriver.html#beginTransaction" location="qsqldriver.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="beginTransaction()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="close" fullname="QSqlDriver::close" href="qsqldriver.html#close" location="qsqldriver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="close()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="commitTransaction" fullname="QSqlDriver::commitTransaction" href="qsqldriver.html#commitTransaction" location="qsqldriver.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="commitTransaction()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createResult" fullname="QSqlDriver::createResult" href="qsqldriver.html#createResult" location="qsqldriver.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QSqlResult *" signature="createResult() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="escapeIdentifier" fullname="QSqlDriver::escapeIdentifier" href="qsqldriver.html#escapeIdentifier" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="escapeIdentifier(const QString &amp; identifier, IdentifierType type) const">
+                <parameter left="const QString &amp;" right="" name="identifier" default=""/>
+                <parameter left="IdentifierType" right="" name="type" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formatValue" fullname="QSqlDriver::formatValue" href="qsqldriver.html#formatValue" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="formatValue(const QSqlField &amp; field, bool trimStrings) const">
+                <parameter left="const QSqlField &amp;" right="" name="field" default=""/>
+                <parameter left="bool" right="" name="trimStrings" default="false"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="handle" fullname="QSqlDriver::handle" href="qsqldriver.html#handle" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="handle() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasFeature" fullname="QSqlDriver::hasFeature" href="qsqldriver.html#hasFeature" location="qsqldriver.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasFeature(DriverFeature feature) const">
+                <parameter left="DriverFeature" right="" name="feature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isIdentifierEscaped" fullname="QSqlDriver::isIdentifierEscaped" href="qsqldriver.html#isIdentifierEscaped" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isIdentifierEscaped(const QString &amp; identifier, IdentifierType type) const">
+                <parameter left="const QString &amp;" right="" name="identifier" default=""/>
+                <parameter left="IdentifierType" right="" name="type" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isOpen" fullname="QSqlDriver::isOpen" href="qsqldriver.html#isOpen" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isOpen() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isOpenError" fullname="QSqlDriver::isOpenError" href="qsqldriver.html#isOpenError" location="qsqldriver.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isOpenError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QSqlDriver::lastError" href="qsqldriver.html#lastError" location="qsqldriver.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="notification" fullname="QSqlDriver::notification" href="qsqldriver.html#notification" location="qsqldriver.h" since="4.4" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="notification(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="notification" fullname="QSqlDriver::notification" href="qsqldriver.html#notification-2" location="qsqldriver.h" since="5.0" virtual="non" meta="signal" const="false" static="false" overload="true" overload-number="2" type="void" signature="notification(const QString &amp; name, QSqlDriver::NotificationSource source, const QVariant &amp; payload)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="QSqlDriver::NotificationSource" right="" name="source" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="payload" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="numericalPrecisionPolicy" fullname="QSqlDriver::numericalPrecisionPolicy" href="qsqldriver.html#numericalPrecisionPolicy" location="qsqldriver.h" since="4.6" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSql::NumericalPrecisionPolicy" signature="numericalPrecisionPolicy() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="open" fullname="QSqlDriver::open" href="qsqldriver.html#open" location="qsqldriver.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="open(const QString &amp; db, const QString &amp; user, const QString &amp; password, const QString &amp; host, int port, const QString &amp; options)">
+                <parameter left="const QString &amp;" right="" name="db" default=""/>
+                <parameter left="const QString &amp;" right="" name="user" default="QString()"/>
+                <parameter left="const QString &amp;" right="" name="password" default="QString()"/>
+                <parameter left="const QString &amp;" right="" name="host" default="QString()"/>
+                <parameter left="int" right="" name="port" default="-1"/>
+                <parameter left="const QString &amp;" right="" name="options" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="primaryIndex" fullname="QSqlDriver::primaryIndex" href="qsqldriver.html#primaryIndex" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QSqlIndex" signature="primaryIndex(const QString &amp; tableName) const">
+                <parameter left="const QString &amp;" right="" name="tableName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlDriver::record" href="qsqldriver.html#record" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QSqlRecord" signature="record(const QString &amp; tableName) const">
+                <parameter left="const QString &amp;" right="" name="tableName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="rollbackTransaction" fullname="QSqlDriver::rollbackTransaction" href="qsqldriver.html#rollbackTransaction" location="qsqldriver.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="rollbackTransaction()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setLastError" fullname="QSqlDriver::setLastError" href="qsqldriver.html#setLastError" location="qsqldriver.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setLastError(const QSqlError &amp; error)">
+                <parameter left="const QSqlError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNumericalPrecisionPolicy" fullname="QSqlDriver::setNumericalPrecisionPolicy" href="qsqldriver.html#setNumericalPrecisionPolicy" location="qsqldriver.h" since="4.6" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy precisionPolicy)">
+                <parameter left="QSql::NumericalPrecisionPolicy" right="" name="precisionPolicy" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setOpen" fullname="QSqlDriver::setOpen" href="qsqldriver.html#setOpen" location="qsqldriver.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setOpen(bool open)">
+                <parameter left="bool" right="" name="open" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setOpenError" fullname="QSqlDriver::setOpenError" href="qsqldriver.html#setOpenError" location="qsqldriver.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setOpenError(bool error)">
+                <parameter left="bool" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sqlStatement" fullname="QSqlDriver::sqlStatement" href="qsqldriver.html#sqlStatement" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="sqlStatement(StatementType type, const QString &amp; tableName, const QSqlRecord &amp; rec, bool preparedStatement) const">
+                <parameter left="StatementType" right="" name="type" default=""/>
+                <parameter left="const QString &amp;" right="" name="tableName" default=""/>
+                <parameter left="const QSqlRecord &amp;" right="" name="rec" default=""/>
+                <parameter left="bool" right="" name="preparedStatement" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="stripDelimiters" fullname="QSqlDriver::stripDelimiters" href="qsqldriver.html#stripDelimiters" location="qsqldriver.h" since="4.5" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="stripDelimiters(const QString &amp; identifier, IdentifierType type) const">
+                <parameter left="const QString &amp;" right="" name="identifier" default=""/>
+                <parameter left="IdentifierType" right="" name="type" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="subscribeToNotification" fullname="QSqlDriver::subscribeToNotification" href="qsqldriver.html#subscribeToNotification" location="qsqldriver.h" since="4.4" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="subscribeToNotification(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="subscribedToNotifications" fullname="QSqlDriver::subscribedToNotifications" href="qsqldriver.html#subscribedToNotifications" location="qsqldriver.h" since="4.4" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="subscribedToNotifications() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="tables" fullname="QSqlDriver::tables" href="qsqldriver.html#tables" location="qsqldriver.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="tables(QSql::TableType tableType) const">
+                <parameter left="QSql::TableType" right="" name="tableType" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unsubscribeFromNotification" fullname="QSqlDriver::unsubscribeFromNotification" href="qsqldriver.html#unsubscribeFromNotification" location="qsqldriver.h" since="4.4" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="unsubscribeFromNotification(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlDriver" fullname="QSqlDriver::~QSqlDriver" href="qsqldriver.html#dtor.QSqlDriver" location="qsqldriver.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlDriver()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlDriverPlugin" href="qsqldriverplugin.html" location="qsqldriverplugin.h" bases="QObject" module="QtSql" groups="plugins">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlDriverPlugin" fullname="QSqlDriverPlugin::QSqlDriverPlugin" href="qsqldriverplugin.html#QSqlDriverPlugin" location="qsqldriverplugin.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlDriverPlugin(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="create" fullname="QSqlDriverPlugin::create" href="qsqldriverplugin.html#create" location="qsqldriverplugin.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="QSqlDriver *" signature="create(const QString &amp; key)">
+                <parameter left="const QString &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlDriverPlugin" fullname="QSqlDriverPlugin::~QSqlDriverPlugin" href="qsqldriverplugin.html#dtor.QSqlDriverPlugin" location="qsqldriverplugin.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlDriverPlugin()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlError" href="qsqlerror.html" location="qsqlerror.h" bases="" module="QtSql" groups="database">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ErrorType" fullname="QSqlError::ErrorType" href="qsqlerror.html#ErrorType-enum" location="qsqlerror.h">
+                <value name="NoError" value="0"/>
+                <value name="ConnectionError" value="1"/>
+                <value name="StatementError" value="2"/>
+                <value name="TransactionError" value="3"/>
+                <value name="UnknownError" value="4"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlError" fullname="QSqlError::QSqlError" href="qsqlerror.html#QSqlError-2" location="qsqlerror.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlError(const QSqlError &amp; other)">
+                <parameter left="const QSqlError &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlError" fullname="QSqlError::QSqlError" href="qsqlerror.html#QSqlError" location="qsqlerror.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlError(const QString &amp; driverText, const QString &amp; databaseText, ErrorType type, int number)">
+                <parameter left="const QString &amp;" right="" name="driverText" default="QString()"/>
+                <parameter left="const QString &amp;" right="" name="databaseText" default="QString()"/>
+                <parameter left="ErrorType" right="" name="type" default="NoError"/>
+                <parameter left="int" right="" name="number" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="databaseText" fullname="QSqlError::databaseText" href="qsqlerror.html#databaseText" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="databaseText() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="driverText" fullname="QSqlError::driverText" href="qsqlerror.html#driverText" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="driverText() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSqlError::isValid" href="qsqlerror.html#isValid" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="number" fullname="QSqlError::number" href="qsqlerror.html#number" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="number() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator!=" fullname="QSqlError::operator!=" href="qsqlerror.html#operator!=" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator!=(const QSqlError &amp; other) const">
+                <parameter left="const QSqlError &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSqlError::operator=" href="qsqlerror.html#operator=" location="qsqlerror.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSqlError &amp;" signature="operator=(const QSqlError &amp; other)">
+                <parameter left="const QSqlError &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator==" fullname="QSqlError::operator==" href="qsqlerror.html#operator==" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator==(const QSqlError &amp; other) const">
+                <parameter left="const QSqlError &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDatabaseText" fullname="QSqlError::setDatabaseText" href="qsqlerror.html#setDatabaseText" location="qsqlerror.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setDatabaseText(const QString &amp; databaseText)">
+                <parameter left="const QString &amp;" right="" name="databaseText" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDriverText" fullname="QSqlError::setDriverText" href="qsqlerror.html#setDriverText" location="qsqlerror.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setDriverText(const QString &amp; driverText)">
+                <parameter left="const QString &amp;" right="" name="driverText" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNumber" fullname="QSqlError::setNumber" href="qsqlerror.html#setNumber" location="qsqlerror.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNumber(int number)">
+                <parameter left="int" right="" name="number" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setType" fullname="QSqlError::setType" href="qsqlerror.html#setType" location="qsqlerror.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setType(ErrorType type)">
+                <parameter left="ErrorType" right="" name="type" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="text" fullname="QSqlError::text" href="qsqlerror.html#text" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="text() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="type" fullname="QSqlError::type" href="qsqlerror.html#type" location="qsqlerror.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="ErrorType" signature="type() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlError" fullname="QSqlError::~QSqlError" href="qsqlerror.html#dtor.QSqlError" location="qsqlerror.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlError()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlField" href="qsqlfield.html" location="qsqlfield.h" bases="" module="QtSql" groups="database,shared">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="RequiredStatus" fullname="QSqlField::RequiredStatus" href="qsqlfield.html#RequiredStatus-enum" location="qsqlfield.h">
+                <value name="Unknown" value="-1"/>
+                <value name="Optional" value="0"/>
+                <value name="Required" value="1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlField" fullname="QSqlField::QSqlField" href="qsqlfield.html#QSqlField-2" location="qsqlfield.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlField(const QSqlField &amp; other)">
+                <parameter left="const QSqlField &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlField" fullname="QSqlField::QSqlField" href="qsqlfield.html#QSqlField" location="qsqlfield.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlField(const QString &amp; fieldName, QVariant::Type type)">
+                <parameter left="const QString &amp;" right="" name="fieldName" default="QString()"/>
+                <parameter left="QVariant::Type" right="" name="type" default="QVariant::Invalid"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlField::clear" href="qsqlfield.html#clear" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="defaultValue" fullname="QSqlField::defaultValue" href="qsqlfield.html#defaultValue" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="defaultValue() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isAutoValue" fullname="QSqlField::isAutoValue" href="qsqlfield.html#isAutoValue" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isAutoValue() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isGenerated" fullname="QSqlField::isGenerated" href="qsqlfield.html#isGenerated" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isGenerated() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QSqlField::isNull" href="qsqlfield.html#isNull" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isReadOnly" fullname="QSqlField::isReadOnly" href="qsqlfield.html#isReadOnly" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isReadOnly() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSqlField::isValid" href="qsqlfield.html#isValid" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="length" fullname="QSqlField::length" href="qsqlfield.html#length" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="length() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="name" fullname="QSqlField::name" href="qsqlfield.html#name" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="name() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator!=" fullname="QSqlField::operator!=" href="qsqlfield.html#operator!=" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator!=(const QSqlField &amp; other) const">
+                <parameter left="const QSqlField &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSqlField::operator=" href="qsqlfield.html#operator=" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSqlField &amp;" signature="operator=(const QSqlField &amp; other)">
+                <parameter left="const QSqlField &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator==" fullname="QSqlField::operator==" href="qsqlfield.html#operator==" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator==(const QSqlField &amp; other) const">
+                <parameter left="const QSqlField &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="precision" fullname="QSqlField::precision" href="qsqlfield.html#precision" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="precision() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="requiredStatus" fullname="QSqlField::requiredStatus" href="qsqlfield.html#requiredStatus" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="RequiredStatus" signature="requiredStatus() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setAutoValue" fullname="QSqlField::setAutoValue" href="qsqlfield.html#setAutoValue" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setAutoValue(bool autoVal)">
+                <parameter left="bool" right="" name="autoVal" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDefaultValue" fullname="QSqlField::setDefaultValue" href="qsqlfield.html#setDefaultValue" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setDefaultValue(const QVariant &amp; value)">
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setGenerated" fullname="QSqlField::setGenerated" href="qsqlfield.html#setGenerated" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setGenerated(bool gen)">
+                <parameter left="bool" right="" name="gen" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setLength" fullname="QSqlField::setLength" href="qsqlfield.html#setLength" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setLength(int fieldLength)">
+                <parameter left="int" right="" name="fieldLength" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setName" fullname="QSqlField::setName" href="qsqlfield.html#setName" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setName(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPrecision" fullname="QSqlField::setPrecision" href="qsqlfield.html#setPrecision" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPrecision(int precision)">
+                <parameter left="int" right="" name="precision" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setReadOnly" fullname="QSqlField::setReadOnly" href="qsqlfield.html#setReadOnly" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setReadOnly(bool readOnly)">
+                <parameter left="bool" right="" name="readOnly" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setRequired" fullname="QSqlField::setRequired" href="qsqlfield.html#setRequired" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setRequired(bool required)">
+                <parameter left="bool" right="" name="required" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setRequiredStatus" fullname="QSqlField::setRequiredStatus" href="qsqlfield.html#setRequiredStatus" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setRequiredStatus(RequiredStatus required)">
+                <parameter left="RequiredStatus" right="" name="required" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setType" fullname="QSqlField::setType" href="qsqlfield.html#setType" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setType(QVariant::Type type)">
+                <parameter left="QVariant::Type" right="" name="type" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setValue" fullname="QSqlField::setValue" href="qsqlfield.html#setValue" location="qsqlfield.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setValue(const QVariant &amp; value)">
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="type" fullname="QSqlField::type" href="qsqlfield.html#type" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant::Type" signature="type() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QSqlField::value" href="qsqlfield.html#value" location="qsqlfield.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="value() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlField" fullname="QSqlField::~QSqlField" href="qsqlfield.html#dtor.QSqlField" location="qsqlfield.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlField()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlIndex" href="qsqlindex.html" location="qsqlindex.h" bases="QSqlRecord" module="QtSql" groups="database">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlIndex" fullname="QSqlIndex::QSqlIndex" href="qsqlindex.html#QSqlIndex-2" location="qsqlindex.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlIndex(const QSqlIndex &amp; other)">
+                <parameter left="const QSqlIndex &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlIndex" fullname="QSqlIndex::QSqlIndex" href="qsqlindex.html#QSqlIndex" location="qsqlindex.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlIndex(const QString &amp; cursorname, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="cursorname" default="QString()"/>
+                <parameter left="const QString &amp;" right="" name="name" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="append" fullname="QSqlIndex::append" href="qsqlindex.html#append" location="qsqlindex.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="append(const QSqlField &amp; field)">
+                <parameter left="const QSqlField &amp;" right="" name="field" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="append" fullname="QSqlIndex::append" href="qsqlindex.html#append-2" location="qsqlindex.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="append(const QSqlField &amp; field, bool desc)">
+                <parameter left="const QSqlField &amp;" right="" name="field" default=""/>
+                <parameter left="bool" right="" name="desc" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="cursorName" fullname="QSqlIndex::cursorName" href="qsqlindex.html#cursorName" location="qsqlindex.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="cursorName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDescending" fullname="QSqlIndex::isDescending" href="qsqlindex.html#isDescending" location="qsqlindex.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isDescending(int i) const">
+                <parameter left="int" right="" name="i" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="name" fullname="QSqlIndex::name" href="qsqlindex.html#name" location="qsqlindex.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="name() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSqlIndex::operator=" href="qsqlindex.html#operator=" location="qsqlindex.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSqlIndex &amp;" signature="operator=(const QSqlIndex &amp; other)">
+                <parameter left="const QSqlIndex &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setCursorName" fullname="QSqlIndex::setCursorName" href="qsqlindex.html#setCursorName" location="qsqlindex.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setCursorName(const QString &amp; cursorName)">
+                <parameter left="const QString &amp;" right="" name="cursorName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDescending" fullname="QSqlIndex::setDescending" href="qsqlindex.html#setDescending" location="qsqlindex.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setDescending(int i, bool desc)">
+                <parameter left="int" right="" name="i" default=""/>
+                <parameter left="bool" right="" name="desc" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setName" fullname="QSqlIndex::setName" href="qsqlindex.html#setName" location="qsqlindex.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setName(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlIndex" fullname="QSqlIndex::~QSqlIndex" href="qsqlindex.html#dtor.QSqlIndex" location="qsqlindex.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlIndex()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlQuery" href="qsqlquery.html" location="qsqlquery.h" bases="" module="QtSql" groups="database,shared">
+            <target name="qsqlquery-examples"/>
+            <contents name="approaches-to-binding-values" title="Approaches to Binding Values" level="1"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="BatchExecutionMode" fullname="QSqlQuery::BatchExecutionMode" href="qsqlquery.html#BatchExecutionMode-enum" location="qsqlquery.h">
+                <value name="ValuesAsRows" value="0"/>
+                <value name="ValuesAsColumns" value="1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlQuery" fullname="QSqlQuery::QSqlQuery" href="qsqlquery.html#QSqlQuery-3" location="qsqlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="3" type="" signature="QSqlQuery(QSqlDatabase db)">
+                <parameter left="QSqlDatabase" right="" name="db" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlQuery" fullname="QSqlQuery::QSqlQuery" href="qsqlquery.html#QSqlQuery" location="qsqlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlQuery(QSqlResult * result)">
+                <parameter left="QSqlResult *" right="" name="result" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlQuery" fullname="QSqlQuery::QSqlQuery" href="qsqlquery.html#QSqlQuery-4" location="qsqlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="4" type="" signature="QSqlQuery(const QSqlQuery &amp; other)">
+                <parameter left="const QSqlQuery &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlQuery" fullname="QSqlQuery::QSqlQuery" href="qsqlquery.html#QSqlQuery-2" location="qsqlquery.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlQuery(const QString &amp; query, QSqlDatabase db)">
+                <parameter left="const QString &amp;" right="" name="query" default="QString()"/>
+                <parameter left="QSqlDatabase" right="" name="db" default="QSqlDatabase()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addBindValue" fullname="QSqlQuery::addBindValue" href="qsqlquery.html#addBindValue" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addBindValue(const QVariant &amp; val, QFlags&lt;QSql::ParamTypeFlag&gt; paramType)">
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+                <parameter left="QFlags&lt;QSql::ParamTypeFlag&gt;" right="" name="paramType" default="QSql::In"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="at" fullname="QSqlQuery::at" href="qsqlquery.html#at" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="at() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindValue" fullname="QSqlQuery::bindValue" href="qsqlquery.html#bindValue" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="bindValue(const QString &amp; placeholder, const QVariant &amp; val, QFlags&lt;QSql::ParamTypeFlag&gt; paramType)">
+                <parameter left="const QString &amp;" right="" name="placeholder" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+                <parameter left="QFlags&lt;QSql::ParamTypeFlag&gt;" right="" name="paramType" default="QSql::In"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="bindValue" fullname="QSqlQuery::bindValue" href="qsqlquery.html#bindValue-2" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="bindValue(int pos, const QVariant &amp; val, QFlags&lt;QSql::ParamTypeFlag&gt; paramType)">
+                <parameter left="int" right="" name="pos" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+                <parameter left="QFlags&lt;QSql::ParamTypeFlag&gt;" right="" name="paramType" default="QSql::In"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="boundValue" fullname="QSqlQuery::boundValue" href="qsqlquery.html#boundValue" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="boundValue(const QString &amp; placeholder) const">
+                <parameter left="const QString &amp;" right="" name="placeholder" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="boundValue" fullname="QSqlQuery::boundValue" href="qsqlquery.html#boundValue-2" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QVariant" signature="boundValue(int pos) const">
+                <parameter left="int" right="" name="pos" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="boundValues" fullname="QSqlQuery::boundValues" href="qsqlquery.html#boundValues" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QMap&lt;QString, QVariant&gt;" signature="boundValues() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlQuery::clear" href="qsqlquery.html#clear" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="driver" fullname="QSqlQuery::driver" href="qsqlquery.html#driver" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QSqlDriver *" signature="driver() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="exec" fullname="QSqlQuery::exec" href="qsqlquery.html#exec-2" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="bool" signature="exec()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="exec" fullname="QSqlQuery::exec" href="qsqlquery.html#exec" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="exec(const QString &amp; query)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="execBatch" fullname="QSqlQuery::execBatch" href="qsqlquery.html#execBatch" location="qsqlquery.h" since="4.2" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="execBatch(BatchExecutionMode mode)">
+                <parameter left="BatchExecutionMode" right="" name="mode" default="ValuesAsRows"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="executedQuery" fullname="QSqlQuery::executedQuery" href="qsqlquery.html#executedQuery" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="executedQuery() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="finish" fullname="QSqlQuery::finish" href="qsqlquery.html#finish" location="qsqlquery.h" since="4.3.2" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="finish()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="first" fullname="QSqlQuery::first" href="qsqlquery.html#first" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="first()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isActive" fullname="QSqlQuery::isActive" href="qsqlquery.html#isActive" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isActive() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isForwardOnly" fullname="QSqlQuery::isForwardOnly" href="qsqlquery.html#isForwardOnly" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isForwardOnly() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QSqlQuery::isNull" href="qsqlquery.html#isNull" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull(int field) const">
+                <parameter left="int" right="" name="field" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isSelect" fullname="QSqlQuery::isSelect" href="qsqlquery.html#isSelect" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isSelect() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSqlQuery::isValid" href="qsqlquery.html#isValid" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="last" fullname="QSqlQuery::last" href="qsqlquery.html#last" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="last()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QSqlQuery::lastError" href="qsqlquery.html#lastError" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastInsertId" fullname="QSqlQuery::lastInsertId" href="qsqlquery.html#lastInsertId" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="lastInsertId() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastQuery" fullname="QSqlQuery::lastQuery" href="qsqlquery.html#lastQuery" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="lastQuery() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="next" fullname="QSqlQuery::next" href="qsqlquery.html#next" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="next()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="nextResult" fullname="QSqlQuery::nextResult" href="qsqlquery.html#nextResult" location="qsqlquery.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="nextResult()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="numRowsAffected" fullname="QSqlQuery::numRowsAffected" href="qsqlquery.html#numRowsAffected" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="numRowsAffected() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="numericalPrecisionPolicy" fullname="QSqlQuery::numericalPrecisionPolicy" href="qsqlquery.html#numericalPrecisionPolicy" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSql::NumericalPrecisionPolicy" signature="numericalPrecisionPolicy() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSqlQuery::operator=" href="qsqlquery.html#operator=" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSqlQuery &amp;" signature="operator=(const QSqlQuery &amp; other)">
+                <parameter left="const QSqlQuery &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="prepare" fullname="QSqlQuery::prepare" href="qsqlquery.html#prepare" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="prepare(const QString &amp; query)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="previous" fullname="QSqlQuery::previous" href="qsqlquery.html#previous" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="previous()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlQuery::record" href="qsqlquery.html#record" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlRecord" signature="record() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="result" fullname="QSqlQuery::result" href="qsqlquery.html#result" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QSqlResult *" signature="result() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="seek" fullname="QSqlQuery::seek" href="qsqlquery.html#seek" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="seek(int index, bool relative)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="bool" right="" name="relative" default="false"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setForwardOnly" fullname="QSqlQuery::setForwardOnly" href="qsqlquery.html#setForwardOnly" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setForwardOnly(bool forward)">
+                <parameter left="bool" right="" name="forward" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNumericalPrecisionPolicy" fullname="QSqlQuery::setNumericalPrecisionPolicy" href="qsqlquery.html#setNumericalPrecisionPolicy" location="qsqlquery.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNumericalPrecisionPolicy(QSql::NumericalPrecisionPolicy precisionPolicy)">
+                <parameter left="QSql::NumericalPrecisionPolicy" right="" name="precisionPolicy" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="size" fullname="QSqlQuery::size" href="qsqlquery.html#size" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="size() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QSqlQuery::value" href="qsqlquery.html#value-2" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QVariant" signature="value(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QSqlQuery::value" href="qsqlquery.html#value" location="qsqlquery.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="value(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlQuery" fullname="QSqlQuery::~QSqlQuery" href="qsqlquery.html#dtor.QSqlQuery" location="qsqlquery.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlQuery()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlRecord" href="qsqlrecord.html" location="qsqlrecord.h" bases="" module="QtSql" groups="database,shared">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlRecord" fullname="QSqlRecord::QSqlRecord" href="qsqlrecord.html#QSqlRecord" location="qsqlrecord.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlRecord()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlRecord" fullname="QSqlRecord::QSqlRecord" href="qsqlrecord.html#QSqlRecord-2" location="qsqlrecord.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlRecord(const QSqlRecord &amp; other)">
+                <parameter left="const QSqlRecord &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="append" fullname="QSqlRecord::append" href="qsqlrecord.html#append" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="append(const QSqlField &amp; field)">
+                <parameter left="const QSqlField &amp;" right="" name="field" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlRecord::clear" href="qsqlrecord.html#clear" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clearValues" fullname="QSqlRecord::clearValues" href="qsqlrecord.html#clearValues" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clearValues()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="contains" fullname="QSqlRecord::contains" href="qsqlrecord.html#contains" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="contains(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="count" fullname="QSqlRecord::count" href="qsqlrecord.html#count" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="count() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="field" fullname="QSqlRecord::field" href="qsqlrecord.html#field-2" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QSqlField" signature="field(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="field" fullname="QSqlRecord::field" href="qsqlrecord.html#field" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlField" signature="field(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fieldName" fullname="QSqlRecord::fieldName" href="qsqlrecord.html#fieldName" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="fieldName(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="indexOf" fullname="QSqlRecord::indexOf" href="qsqlrecord.html#indexOf" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="indexOf(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="insert" fullname="QSqlRecord::insert" href="qsqlrecord.html#insert" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="insert(int pos, const QSqlField &amp; field)">
+                <parameter left="int" right="" name="pos" default=""/>
+                <parameter left="const QSqlField &amp;" right="" name="field" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isEmpty" fullname="QSqlRecord::isEmpty" href="qsqlrecord.html#isEmpty" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isEmpty() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isGenerated" fullname="QSqlRecord::isGenerated" href="qsqlrecord.html#isGenerated" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isGenerated(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isGenerated" fullname="QSqlRecord::isGenerated" href="qsqlrecord.html#isGenerated-2" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="bool" signature="isGenerated(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QSqlRecord::isNull" href="qsqlrecord.html#isNull" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isNull(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isNull" fullname="QSqlRecord::isNull" href="qsqlrecord.html#isNull-2" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="bool" signature="isNull(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator!=" fullname="QSqlRecord::operator!=" href="qsqlrecord.html#operator!=" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator!=(const QSqlRecord &amp; other) const">
+                <parameter left="const QSqlRecord &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator=" fullname="QSqlRecord::operator=" href="qsqlrecord.html#operator=" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QSqlRecord &amp;" signature="operator=(const QSqlRecord &amp; other)">
+                <parameter left="const QSqlRecord &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="operator==" fullname="QSqlRecord::operator==" href="qsqlrecord.html#operator==" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="operator==(const QSqlRecord &amp; other) const">
+                <parameter left="const QSqlRecord &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="remove" fullname="QSqlRecord::remove" href="qsqlrecord.html#remove" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="remove(int pos)">
+                <parameter left="int" right="" name="pos" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="replace" fullname="QSqlRecord::replace" href="qsqlrecord.html#replace" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="replace(int pos, const QSqlField &amp; field)">
+                <parameter left="int" right="" name="pos" default=""/>
+                <parameter left="const QSqlField &amp;" right="" name="field" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setGenerated" fullname="QSqlRecord::setGenerated" href="qsqlrecord.html#setGenerated" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setGenerated(const QString &amp; name, bool generated)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="bool" right="" name="generated" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setGenerated" fullname="QSqlRecord::setGenerated" href="qsqlrecord.html#setGenerated-2" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="setGenerated(int index, bool generated)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="bool" right="" name="generated" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNull" fullname="QSqlRecord::setNull" href="qsqlrecord.html#setNull-2" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="setNull(const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setNull" fullname="QSqlRecord::setNull" href="qsqlrecord.html#setNull" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setNull(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setValue" fullname="QSqlRecord::setValue" href="qsqlrecord.html#setValue-2" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="setValue(const QString &amp; name, const QVariant &amp; val)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setValue" fullname="QSqlRecord::setValue" href="qsqlrecord.html#setValue" location="qsqlrecord.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setValue(int index, const QVariant &amp; val)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QSqlRecord::value" href="qsqlrecord.html#value-2" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QVariant" signature="value(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="value" fullname="QSqlRecord::value" href="qsqlrecord.html#value" location="qsqlrecord.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="value(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlRecord" fullname="QSqlRecord::~QSqlRecord" href="qsqlrecord.html#dtor.QSqlRecord" location="qsqlrecord.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlRecord()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlResult" href="qsqlresult.html" location="qsqlresult.h" bases="" module="QtSql" groups="database">
+            <function access="protected" threadsafety="unspecified" status="commendable" name="resetBindCount" fullname="QSqlResult::resetBindCount" href="qsqlresult.html#resetBindCount" location="qsqlresult.cpp" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="resetBindCount()"/>
+            <enum access="protected" threadsafety="unspecified" status="commendable" name="BindingSyntax" fullname="QSqlResult::BindingSyntax" href="qsqlresult.html#BindingSyntax-enum" location="qsqlresult.h">
+                <value name="PositionalBinding" value="0"/>
+                <value name="NamedBinding" value="1"/>
+            </enum>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="QSqlResult" fullname="QSqlResult::QSqlResult" href="qsqlresult.html#QSqlResult" location="qsqlresult.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlResult(const QSqlDriver * db)">
+                <parameter left="const QSqlDriver *" right="" name="db" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="addBindValue" fullname="QSqlResult::addBindValue" href="qsqlresult.html#addBindValue" location="qsqlresult.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addBindValue(const QVariant &amp; val, QFlags&lt;QSql::ParamTypeFlag&gt; paramType)">
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+                <parameter left="QFlags&lt;QSql::ParamTypeFlag&gt;" right="" name="paramType" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="at" fullname="QSqlResult::at" href="qsqlresult.html#at" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="at() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="bindValue" fullname="QSqlResult::bindValue" href="qsqlresult.html#bindValue-2" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="bindValue(const QString &amp; placeholder, const QVariant &amp; val, QFlags&lt;QSql::ParamTypeFlag&gt; paramType)">
+                <parameter left="const QString &amp;" right="" name="placeholder" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+                <parameter left="QFlags&lt;QSql::ParamTypeFlag&gt;" right="" name="paramType" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="bindValue" fullname="QSqlResult::bindValue" href="qsqlresult.html#bindValue" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="bindValue(int index, const QVariant &amp; val, QFlags&lt;QSql::ParamTypeFlag&gt; paramType)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="val" default=""/>
+                <parameter left="QFlags&lt;QSql::ParamTypeFlag&gt;" right="" name="paramType" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="bindValueType" fullname="QSqlResult::bindValueType" href="qsqlresult.html#bindValueType-2" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QSql::ParamType" signature="bindValueType(const QString &amp; placeholder) const">
+                <parameter left="const QString &amp;" right="" name="placeholder" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="bindValueType" fullname="QSqlResult::bindValueType" href="qsqlresult.html#bindValueType" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSql::ParamType" signature="bindValueType(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="bindingSyntax" fullname="QSqlResult::bindingSyntax" href="qsqlresult.html#bindingSyntax" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="BindingSyntax" signature="bindingSyntax() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="boundValue" fullname="QSqlResult::boundValue" href="qsqlresult.html#boundValue-2" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QVariant" signature="boundValue(const QString &amp; placeholder) const">
+                <parameter left="const QString &amp;" right="" name="placeholder" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="boundValue" fullname="QSqlResult::boundValue" href="qsqlresult.html#boundValue" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="boundValue(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="boundValueCount" fullname="QSqlResult::boundValueCount" href="qsqlresult.html#boundValueCount" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="boundValueCount() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="boundValueName" fullname="QSqlResult::boundValueName" href="qsqlresult.html#boundValueName" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="boundValueName(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="boundValues" fullname="QSqlResult::boundValues" href="qsqlresult.html#boundValues" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QVector&lt;QVariant&gt; &amp;" signature="boundValues() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlResult::clear" href="qsqlresult.html#clear" location="qsqlresult.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="data" fullname="QSqlResult::data" href="qsqlresult.html#data" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="QVariant" signature="data(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="driver" fullname="QSqlResult::driver" href="qsqlresult.html#driver" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="const QSqlDriver *" signature="driver() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="exec" fullname="QSqlResult::exec" href="qsqlresult.html#exec" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="exec()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="executedQuery" fullname="QSqlResult::executedQuery" href="qsqlresult.html#executedQuery" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="executedQuery() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="fetch" fullname="QSqlResult::fetch" href="qsqlresult.html#fetch" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="fetch(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="fetchFirst" fullname="QSqlResult::fetchFirst" href="qsqlresult.html#fetchFirst" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="fetchFirst()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="fetchLast" fullname="QSqlResult::fetchLast" href="qsqlresult.html#fetchLast" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="fetchLast()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="fetchNext" fullname="QSqlResult::fetchNext" href="qsqlresult.html#fetchNext" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="fetchNext()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="fetchPrevious" fullname="QSqlResult::fetchPrevious" href="qsqlresult.html#fetchPrevious" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="fetchPrevious()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="handle" fullname="QSqlResult::handle" href="qsqlresult.html#handle" location="qsqlresult.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="handle() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="hasOutValues" fullname="QSqlResult::hasOutValues" href="qsqlresult.html#hasOutValues" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasOutValues() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="isActive" fullname="QSqlResult::isActive" href="qsqlresult.html#isActive" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isActive() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="isForwardOnly" fullname="QSqlResult::isForwardOnly" href="qsqlresult.html#isForwardOnly" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isForwardOnly() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="isNull" fullname="QSqlResult::isNull" href="qsqlresult.html#isNull" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="isNull(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="isSelect" fullname="QSqlResult::isSelect" href="qsqlresult.html#isSelect" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isSelect() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSqlResult::isValid" href="qsqlresult.html#isValid" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="lastError" fullname="QSqlResult::lastError" href="qsqlresult.html#lastError" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlError" signature="lastError() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="lastInsertId" fullname="QSqlResult::lastInsertId" href="qsqlresult.html#lastInsertId" location="qsqlresult.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="lastInsertId() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="lastQuery" fullname="QSqlResult::lastQuery" href="qsqlresult.html#lastQuery" location="qsqlresult.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="lastQuery() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="numRowsAffected" fullname="QSqlResult::numRowsAffected" href="qsqlresult.html#numRowsAffected" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="int" signature="numRowsAffected()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="prepare" fullname="QSqlResult::prepare" href="qsqlresult.html#prepare" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="prepare(const QString &amp; query)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlResult::record" href="qsqlresult.html#record" location="qsqlresult.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QSqlRecord" signature="record() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="reset" fullname="QSqlResult::reset" href="qsqlresult.html#reset" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="reset(const QString &amp; query)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="savePrepare" fullname="QSqlResult::savePrepare" href="qsqlresult.html#savePrepare" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="savePrepare(const QString &amp; query)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setActive" fullname="QSqlResult::setActive" href="qsqlresult.html#setActive" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setActive(bool active)">
+                <parameter left="bool" right="" name="active" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setAt" fullname="QSqlResult::setAt" href="qsqlresult.html#setAt" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setAt(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setForwardOnly" fullname="QSqlResult::setForwardOnly" href="qsqlresult.html#setForwardOnly" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setForwardOnly(bool forward)">
+                <parameter left="bool" right="" name="forward" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setLastError" fullname="QSqlResult::setLastError" href="qsqlresult.html#setLastError" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setLastError(const QSqlError &amp; error)">
+                <parameter left="const QSqlError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QSqlResult::setQuery" href="qsqlresult.html#setQuery" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setQuery(const QString &amp; query)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setSelect" fullname="QSqlResult::setSelect" href="qsqlresult.html#setSelect" location="qsqlresult.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setSelect(bool select)">
+                <parameter left="bool" right="" name="select" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="size" fullname="QSqlResult::size" href="qsqlresult.html#size" location="qsqlresult.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="int" signature="size()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlResult" fullname="QSqlResult::~QSqlResult" href="qsqlresult.html#dtor.QSqlResult" location="qsqlresult.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlResult()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlQueryModel" href="qsqlquerymodel.html" location="qsqlquerymodel.h" bases="QAbstractTableModel" module="QtSql" groups="database">
+            <function access="public" threadsafety="unspecified" status="commendable" name="rowCount" fullname="QSqlQueryModel::rowCount" href="qsqlquerymodel.html#rowCount" location="qsqlquerymodel.cpp" since="4.1" virtual="impure" meta="plain" const="true" static="false" overload="false" type="int" signature="rowCount(const QModelIndex &amp; parent) const">
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlQueryModel" fullname="QSqlQueryModel::QSqlQueryModel" href="qsqlquerymodel.html#QSqlQueryModel" location="qsqlquerymodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlQueryModel(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="canFetchMore" fullname="QSqlQueryModel::canFetchMore" href="qsqlquerymodel.html#canFetchMore" location="qsqlquerymodel.h" since="4.1" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="canFetchMore(const QModelIndex &amp; parent) const">
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlQueryModel::clear" href="qsqlquerymodel.html#clear" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="columnCount" fullname="QSqlQueryModel::columnCount" href="qsqlquerymodel.html#columnCount" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="int" signature="columnCount(const QModelIndex &amp; index) const">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="data" fullname="QSqlQueryModel::data" href="qsqlquerymodel.html#data" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="data(const QModelIndex &amp; item, int role) const">
+                <parameter left="const QModelIndex &amp;" right="" name="item" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::DisplayRole"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fetchMore" fullname="QSqlQueryModel::fetchMore" href="qsqlquerymodel.html#fetchMore" location="qsqlquerymodel.h" since="4.1" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="fetchMore(const QModelIndex &amp; parent)">
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="headerData" fullname="QSqlQueryModel::headerData" href="qsqlquerymodel.html#headerData" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="headerData(int section, Qt::Orientation orientation, int role) const">
+                <parameter left="int" right="" name="section" default=""/>
+                <parameter left="Qt::Orientation" right="" name="orientation" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::DisplayRole"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="indexInQuery" fullname="QSqlQueryModel::indexInQuery" href="qsqlquerymodel.html#indexInQuery" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QModelIndex" signature="indexInQuery(const QModelIndex &amp; item) const">
+                <parameter left="const QModelIndex &amp;" right="" name="item" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="insertColumns" fullname="QSqlQueryModel::insertColumns" href="qsqlquerymodel.html#insertColumns" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="insertColumns(int column, int count, const QModelIndex &amp; parent)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="int" right="" name="count" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="lastError" fullname="QSqlQueryModel::lastError" href="qsqlquerymodel.html#lastError" location="qsqlquerymodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlError" signature="lastError() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="query" fullname="QSqlQueryModel::query" href="qsqlquerymodel.html#query" location="qsqlquerymodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlQuery" signature="query() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="queryChange" fullname="QSqlQueryModel::queryChange" href="qsqlquerymodel.html#queryChange" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="queryChange()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlQueryModel::record" href="qsqlquerymodel.html#record-2" location="qsqlquerymodel.h" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QSqlRecord" signature="record() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlQueryModel::record" href="qsqlquerymodel.html#record" location="qsqlquerymodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlRecord" signature="record(int row) const">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeColumns" fullname="QSqlQueryModel::removeColumns" href="qsqlquerymodel.html#removeColumns" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="removeColumns(int column, int count, const QModelIndex &amp; parent)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="int" right="" name="count" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setHeaderData" fullname="QSqlQueryModel::setHeaderData" href="qsqlquerymodel.html#setHeaderData" location="qsqlquerymodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="setHeaderData(int section, Qt::Orientation orientation, const QVariant &amp; value, int role)">
+                <parameter left="int" right="" name="section" default=""/>
+                <parameter left="Qt::Orientation" right="" name="orientation" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::EditRole"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setLastError" fullname="QSqlQueryModel::setLastError" href="qsqlquerymodel.html#setLastError" location="qsqlquerymodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setLastError(const QSqlError &amp; error)">
+                <parameter left="const QSqlError &amp;" right="" name="error" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QSqlQueryModel::setQuery" href="qsqlquerymodel.html#setQuery" location="qsqlquerymodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setQuery(const QSqlQuery &amp; query)">
+                <parameter left="const QSqlQuery &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QSqlQueryModel::setQuery" href="qsqlquerymodel.html#setQuery-2" location="qsqlquerymodel.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="setQuery(const QString &amp; query, const QSqlDatabase &amp; db)">
+                <parameter left="const QString &amp;" right="" name="query" default=""/>
+                <parameter left="const QSqlDatabase &amp;" right="" name="db" default="QSqlDatabase()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlQueryModel" fullname="QSqlQueryModel::~QSqlQueryModel" href="qsqlquerymodel.html#dtor.QSqlQueryModel" location="qsqlquerymodel.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlQueryModel()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlRelationalDelegate" href="qsqlrelationaldelegate.html" location="qsqlrelationaldelegate.h" bases="" module="QtSql">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlRelationalDelegate" fullname="QSqlRelationalDelegate::QSqlRelationalDelegate" href="qsqlrelationaldelegate.html#QSqlRelationalDelegate" location="qsqlrelationaldelegate.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlRelationalDelegate(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createEditor" fullname="QSqlRelationalDelegate::createEditor" href="qsqlrelationaldelegate.html#createEditor" location="qsqlrelationaldelegate.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="createEditor(QWidget * parent, const QStyleOptionViewItem &amp; option, const QModelIndex &amp; index) const">
+                <parameter left="QWidget *" right="" name="parent" default=""/>
+                <parameter left="const QStyleOptionViewItem &amp;" right="" name="option" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setModelData" fullname="QSqlRelationalDelegate::setModelData" href="qsqlrelationaldelegate.html#setModelData" location="qsqlrelationaldelegate.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="void" signature="setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex &amp; index) const">
+                <parameter left="QWidget *" right="" name="editor" default=""/>
+                <parameter left="QAbstractItemModel *" right="" name="model" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlRelationalDelegate" fullname="QSqlRelationalDelegate::~QSqlRelationalDelegate" href="qsqlrelationaldelegate.html#dtor.QSqlRelationalDelegate" location="qsqlrelationaldelegate.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlRelationalDelegate()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlRelation" href="qsqlrelation.html" location="qsqlrelationaltablemodel.h" bases="" module="QtSql">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlRelation" fullname="QSqlRelation::QSqlRelation" href="qsqlrelation.html#QSqlRelation" location="qsqlrelationaltablemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlRelation()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlRelation" fullname="QSqlRelation::QSqlRelation" href="qsqlrelation.html#QSqlRelation-2" location="qsqlrelationaltablemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QSqlRelation(const QString &amp; tableName, const QString &amp; indexColumn, const QString &amp; displayColumn)">
+                <parameter left="const QString &amp;" right="" name="tableName" default=""/>
+                <parameter left="const QString &amp;" right="" name="indexColumn" default=""/>
+                <parameter left="const QString &amp;" right="" name="displayColumn" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="displayColumn" fullname="QSqlRelation::displayColumn" href="qsqlrelation.html#displayColumn" location="qsqlrelationaltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="displayColumn() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="indexColumn" fullname="QSqlRelation::indexColumn" href="qsqlrelation.html#indexColumn" location="qsqlrelationaltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="indexColumn() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSqlRelation::isValid" href="qsqlrelation.html#isValid" location="qsqlrelationaltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="tableName" fullname="QSqlRelation::tableName" href="qsqlrelation.html#tableName" location="qsqlrelationaltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="tableName() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlRelationalTableModel" href="qsqlrelationaltablemodel.html" location="qsqlrelationaltablemodel.h" bases="QSqlTableModel" module="QtSql" groups="database">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="JoinMode" fullname="QSqlRelationalTableModel::JoinMode" href="qsqlrelationaltablemodel.html#JoinMode-enum" location="qsqlrelationaltablemodel.h" since="4.8">
+                <value name="InnerJoin" value="0"/>
+                <value name="LeftJoin" value="1"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlRelationalTableModel" fullname="QSqlRelationalTableModel::QSqlRelationalTableModel" href="qsqlrelationaltablemodel.html#QSqlRelationalTableModel" location="qsqlrelationaltablemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlRelationalTableModel(QObject * parent, QSqlDatabase db)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+                <parameter left="QSqlDatabase" right="" name="db" default="QSqlDatabase()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlRelationalTableModel::clear" href="qsqlrelationaltablemodel.html#clear" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="data" fullname="QSqlRelationalTableModel::data" href="qsqlrelationaltablemodel.html#data" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="data(const QModelIndex &amp; index, int role) const">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::DisplayRole"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="insertRowIntoTable" fullname="QSqlRelationalTableModel::insertRowIntoTable" href="qsqlrelationaltablemodel.html#insertRowIntoTable" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="insertRowIntoTable(const QSqlRecord &amp; values)">
+                <parameter left="const QSqlRecord &amp;" right="" name="values" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="orderByClause" fullname="QSqlRelationalTableModel::orderByClause" href="qsqlrelationaltablemodel.html#orderByClause" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="orderByClause() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="relation" fullname="QSqlRelationalTableModel::relation" href="qsqlrelationaltablemodel.html#relation" location="qsqlrelationaltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlRelation" signature="relation(int column) const">
+                <parameter left="int" right="" name="column" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="relationModel" fullname="QSqlRelationalTableModel::relationModel" href="qsqlrelationaltablemodel.html#relationModel" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QSqlTableModel *" signature="relationModel(int column) const">
+                <parameter left="int" right="" name="column" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeColumns" fullname="QSqlRelationalTableModel::removeColumns" href="qsqlrelationaltablemodel.html#removeColumns" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="removeColumns(int column, int count, const QModelIndex &amp; parent)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="int" right="" name="count" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="revertRow" fullname="QSqlRelationalTableModel::revertRow" href="qsqlrelationaltablemodel.html#revertRow" location="qsqlrelationaltablemodel.h" virtual="impure" meta="slot" const="false" static="false" overload="false" type="void" signature="revertRow(int row)">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="select" fullname="QSqlRelationalTableModel::select" href="qsqlrelationaltablemodel.html#select" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="select()"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="selectStatement" fullname="QSqlRelationalTableModel::selectStatement" href="qsqlrelationaltablemodel.html#selectStatement" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="selectStatement() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setData" fullname="QSqlRelationalTableModel::setData" href="qsqlrelationaltablemodel.html#setData" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="setData(const QModelIndex &amp; index, const QVariant &amp; value, int role)">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::EditRole"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setJoinMode" fullname="QSqlRelationalTableModel::setJoinMode" href="qsqlrelationaltablemodel.html#setJoinMode" location="qsqlrelationaltablemodel.h" since="4.8" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setJoinMode(QSqlRelationalTableModel::JoinMode joinMode)">
+                <parameter left="QSqlRelationalTableModel::JoinMode" right="" name="joinMode" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setRelation" fullname="QSqlRelationalTableModel::setRelation" href="qsqlrelationaltablemodel.html#setRelation" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setRelation(int column, const QSqlRelation &amp; relation)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="const QSqlRelation &amp;" right="" name="relation" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setTable" fullname="QSqlRelationalTableModel::setTable" href="qsqlrelationaltablemodel.html#setTable" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setTable(const QString &amp; table)">
+                <parameter left="const QString &amp;" right="" name="table" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="updateRowInTable" fullname="QSqlRelationalTableModel::updateRowInTable" href="qsqlrelationaltablemodel.html#updateRowInTable" location="qsqlrelationaltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="updateRowInTable(int row, const QSqlRecord &amp; values)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="const QSqlRecord &amp;" right="" name="values" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlRelationalTableModel" fullname="QSqlRelationalTableModel::~QSqlRelationalTableModel" href="qsqlrelationaltablemodel.html#dtor.QSqlRelationalTableModel" location="qsqlrelationaltablemodel.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlRelationalTableModel()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSqlTableModel" href="qsqltablemodel.html" location="qsqltablemodel.h" bases="QSqlQueryModel" module="QtSql" groups="database">
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlTableModel::record" href="qsqltablemodel.html#record" location="qsqltablemodel.cpp" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlRecord" signature="record() const"/>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="EditStrategy" fullname="QSqlTableModel::EditStrategy" href="qsqltablemodel.html#EditStrategy-enum" location="qsqltablemodel.h">
+                <value name="OnFieldChange" value="0"/>
+                <value name="OnRowChange" value="1"/>
+                <value name="OnManualSubmit" value="2"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSqlTableModel" fullname="QSqlTableModel::QSqlTableModel" href="qsqltablemodel.html#QSqlTableModel" location="qsqltablemodel.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSqlTableModel(QObject * parent, QSqlDatabase db)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+                <parameter left="QSqlDatabase" right="" name="db" default="QSqlDatabase()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beforeDelete" fullname="QSqlTableModel::beforeDelete" href="qsqltablemodel.html#beforeDelete" location="qsqltablemodel.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="beforeDelete(int row)">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beforeInsert" fullname="QSqlTableModel::beforeInsert" href="qsqltablemodel.html#beforeInsert" location="qsqltablemodel.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="beforeInsert(QSqlRecord &amp; record)">
+                <parameter left="QSqlRecord &amp;" right="" name="record" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="beforeUpdate" fullname="QSqlTableModel::beforeUpdate" href="qsqltablemodel.html#beforeUpdate" location="qsqltablemodel.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="beforeUpdate(int row, QSqlRecord &amp; record)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="QSqlRecord &amp;" right="" name="record" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QSqlTableModel::clear" href="qsqltablemodel.html#clear" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="data" fullname="QSqlTableModel::data" href="qsqltablemodel.html#data" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="data(const QModelIndex &amp; index, int role) const">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::DisplayRole"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="database" fullname="QSqlTableModel::database" href="qsqltablemodel.html#database" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlDatabase" signature="database() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="deleteRowFromTable" fullname="QSqlTableModel::deleteRowFromTable" href="qsqltablemodel.html#deleteRowFromTable" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="deleteRowFromTable(int row)">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="editStrategy" fullname="QSqlTableModel::editStrategy" href="qsqltablemodel.html#editStrategy" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="EditStrategy" signature="editStrategy() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fieldIndex" fullname="QSqlTableModel::fieldIndex" href="qsqltablemodel.html#fieldIndex" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="int" signature="fieldIndex(const QString &amp; fieldName) const">
+                <parameter left="const QString &amp;" right="" name="fieldName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="filter" fullname="QSqlTableModel::filter" href="qsqltablemodel.html#filter" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="filter() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="flags" fullname="QSqlTableModel::flags" href="qsqltablemodel.html#flags" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="Qt::ItemFlags" signature="flags(const QModelIndex &amp; index) const">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="headerData" fullname="QSqlTableModel::headerData" href="qsqltablemodel.html#headerData" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="headerData(int section, Qt::Orientation orientation, int role) const">
+                <parameter left="int" right="" name="section" default=""/>
+                <parameter left="Qt::Orientation" right="" name="orientation" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::DisplayRole"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="indexInQuery" fullname="QSqlTableModel::indexInQuery" href="qsqltablemodel.html#indexInQuery" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QModelIndex" signature="indexInQuery(const QModelIndex &amp; item) const">
+                <parameter left="const QModelIndex &amp;" right="" name="item" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="insertRecord" fullname="QSqlTableModel::insertRecord" href="qsqltablemodel.html#insertRecord" location="qsqltablemodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="insertRecord(int row, const QSqlRecord &amp; record)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="const QSqlRecord &amp;" right="" name="record" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="insertRowIntoTable" fullname="QSqlTableModel::insertRowIntoTable" href="qsqltablemodel.html#insertRowIntoTable" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="insertRowIntoTable(const QSqlRecord &amp; values)">
+                <parameter left="const QSqlRecord &amp;" right="" name="values" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="insertRows" fullname="QSqlTableModel::insertRows" href="qsqltablemodel.html#insertRows" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="insertRows(int row, int count, const QModelIndex &amp; parent)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="int" right="" name="count" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDirty" fullname="QSqlTableModel::isDirty" href="qsqltablemodel.html#isDirty-2" location="qsqltablemodel.h" since="5.0" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="bool" signature="isDirty() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDirty" fullname="QSqlTableModel::isDirty" href="qsqltablemodel.html#isDirty" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isDirty(const QModelIndex &amp; index) const">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="orderByClause" fullname="QSqlTableModel::orderByClause" href="qsqltablemodel.html#orderByClause" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="orderByClause() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="primaryKey" fullname="QSqlTableModel::primaryKey" href="qsqltablemodel.html#primaryKey" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QSqlIndex" signature="primaryKey() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="primeInsert" fullname="QSqlTableModel::primeInsert" href="qsqltablemodel.html#primeInsert" location="qsqltablemodel.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="primeInsert(int row, QSqlRecord &amp; record)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="QSqlRecord &amp;" right="" name="record" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="record" fullname="QSqlTableModel::record" href="qsqltablemodel.html#record-2" location="qsqltablemodel.h" since="5.0" virtual="non" meta="plain" const="true" static="false" overload="true" overload-number="2" type="QSqlRecord" signature="record(int row) const">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeColumns" fullname="QSqlTableModel::removeColumns" href="qsqltablemodel.html#removeColumns" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="removeColumns(int column, int count, const QModelIndex &amp; parent)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="int" right="" name="count" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeRows" fullname="QSqlTableModel::removeRows" href="qsqltablemodel.html#removeRows" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="removeRows(int row, int count, const QModelIndex &amp; parent)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="int" right="" name="count" default=""/>
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="revert" fullname="QSqlTableModel::revert" href="qsqltablemodel.html#revert" location="qsqltablemodel.h" virtual="impure" meta="slot" const="false" static="false" overload="false" type="void" signature="revert()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="revertAll" fullname="QSqlTableModel::revertAll" href="qsqltablemodel.html#revertAll" location="qsqltablemodel.h" virtual="non" meta="slot" const="false" static="false" overload="false" type="void" signature="revertAll()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="revertRow" fullname="QSqlTableModel::revertRow" href="qsqltablemodel.html#revertRow" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="revertRow(int row)">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="rowCount" fullname="QSqlTableModel::rowCount" href="qsqltablemodel.html#rowCount" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="int" signature="rowCount(const QModelIndex &amp; parent) const">
+                <parameter left="const QModelIndex &amp;" right="" name="parent" default="QModelIndex()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="select" fullname="QSqlTableModel::select" href="qsqltablemodel.html#select" location="qsqltablemodel.h" virtual="impure" meta="slot" const="false" static="false" overload="false" type="bool" signature="select()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="selectRow" fullname="QSqlTableModel::selectRow" href="qsqltablemodel.html#selectRow" location="qsqltablemodel.h" since="5.0" virtual="impure" meta="slot" const="false" static="false" overload="false" type="bool" signature="selectRow(int row)">
+                <parameter left="int" right="" name="row" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="selectStatement" fullname="QSqlTableModel::selectStatement" href="qsqltablemodel.html#selectStatement" location="qsqltablemodel.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="selectStatement() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setData" fullname="QSqlTableModel::setData" href="qsqltablemodel.html#setData" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="setData(const QModelIndex &amp; index, const QVariant &amp; value, int role)">
+                <parameter left="const QModelIndex &amp;" right="" name="index" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+                <parameter left="int" right="" name="role" default="Qt::EditRole"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setEditStrategy" fullname="QSqlTableModel::setEditStrategy" href="qsqltablemodel.html#setEditStrategy" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setEditStrategy(EditStrategy strategy)">
+                <parameter left="EditStrategy" right="" name="strategy" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFilter" fullname="QSqlTableModel::setFilter" href="qsqltablemodel.html#setFilter" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setFilter(const QString &amp; filter)">
+                <parameter left="const QString &amp;" right="" name="filter" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setPrimaryKey" fullname="QSqlTableModel::setPrimaryKey" href="qsqltablemodel.html#setPrimaryKey" location="qsqltablemodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPrimaryKey(const QSqlIndex &amp; key)">
+                <parameter left="const QSqlIndex &amp;" right="" name="key" default=""/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="setQuery" fullname="QSqlTableModel::setQuery" href="qsqltablemodel.html#setQuery" location="qsqltablemodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setQuery(const QSqlQuery &amp; query)">
+                <parameter left="const QSqlQuery &amp;" right="" name="query" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setRecord" fullname="QSqlTableModel::setRecord" href="qsqltablemodel.html#setRecord" location="qsqltablemodel.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="setRecord(int row, const QSqlRecord &amp; values)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="const QSqlRecord &amp;" right="" name="values" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setSort" fullname="QSqlTableModel::setSort" href="qsqltablemodel.html#setSort" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setSort(int column, Qt::SortOrder order)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="Qt::SortOrder" right="" name="order" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setTable" fullname="QSqlTableModel::setTable" href="qsqltablemodel.html#setTable" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="setTable(const QString &amp; tableName)">
+                <parameter left="const QString &amp;" right="" name="tableName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sort" fullname="QSqlTableModel::sort" href="qsqltablemodel.html#sort" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="sort(int column, Qt::SortOrder order)">
+                <parameter left="int" right="" name="column" default=""/>
+                <parameter left="Qt::SortOrder" right="" name="order" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="submit" fullname="QSqlTableModel::submit" href="qsqltablemodel.html#submit" location="qsqltablemodel.h" virtual="impure" meta="slot" const="false" static="false" overload="false" type="bool" signature="submit()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="submitAll" fullname="QSqlTableModel::submitAll" href="qsqltablemodel.html#submitAll" location="qsqltablemodel.h" virtual="non" meta="slot" const="false" static="false" overload="false" type="bool" signature="submitAll()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="tableName" fullname="QSqlTableModel::tableName" href="qsqltablemodel.html#tableName" location="qsqltablemodel.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="tableName() const"/>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="updateRowInTable" fullname="QSqlTableModel::updateRowInTable" href="qsqltablemodel.html#updateRowInTable" location="qsqltablemodel.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="bool" signature="updateRowInTable(int row, const QSqlRecord &amp; values)">
+                <parameter left="int" right="" name="row" default=""/>
+                <parameter left="const QSqlRecord &amp;" right="" name="values" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QSqlTableModel" fullname="QSqlTableModel::~QSqlTableModel" href="qsqltablemodel.html#dtor.QSqlTableModel" location="qsqltablemodel.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QSqlTableModel()"/>
+        </class>
+        <page access="public" status="commendable" name="sql-types.html" href="sql-types.html" subtype="page" title="Data Types for Qt-supported Database Systems" fulltitle="Data Types for Qt-supported Database Systems" subtitle="" location="qsqldatatype-table.qdoc" module="QtSql" groups="qt-sql">
+            <contents name="recommended-data-types-for-qt-supported-database-systems" title="Recommended Data Types for Qt-Supported Database Systems" level="1"/>
+            <contents name="ibm-db2-data-types" title="IBM DB2 Data Types" level="2"/>
+            <contents name="borland-interbase-data-types" title="Borland InterBase Data Types" level="2"/>
+            <contents name="mysql-data-types" title="MySQL Data Types" level="2"/>
+            <contents name="oracle-call-interface-data-types" title="Oracle Call Interface Data Types" level="2"/>
+            <contents name="odbc-data-types" title="ODBC Data Types" level="2"/>
+            <contents name="postgresql-data-types" title="PostgreSQL Data Types" level="2"/>
+            <contents name="qsqlite-sqlite-version-3-data-types" title="QSQLITE SQLite version 3 Data Types" level="2"/>
+            <contents name="sybase-adaptive-server-data-types" title="Sybase Adaptive Server Data Types" level="2"/>
+            <contents name="sqlite-version-2" title="SQLite Version 2" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="QtSql" href="qtsql-module.html" subtype="module" title="Qt SQL Module C++ Classes" fulltitle="Qt SQL Module C++ Classes" subtitle="" location="qtsql.qdoc" groups="modules"/>
+        <page access="public" status="commendable" name="qtsql-index.html" href="qtsql-index.html" subtype="page" title="Qt SQL" fulltitle="Qt SQL" subtitle="" location="qtsql.qdoc" module="QtSql">
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="reference" title="Reference" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="sql-driver.html" href="sql-driver.html" subtype="page" title="SQL Database Drivers" fulltitle="SQL Database Drivers" subtitle="" location="sql-driver.qdoc" module="QtSql" groups="qt-sql">
+            <target name="building"/>
+            <target name="buildingmanually"/>
+            <target name="qmysql"/>
+            <target name="qoci"/>
+            <target name="qodbc"/>
+            <target name="qpsql"/>
+            <target name="qtds"/>
+            <target name="qdb2"/>
+            <target name="qsqlite2"/>
+            <target name="qsqlite"/>
+            <target name="qibase"/>
+            <target name="troubleshooting"/>
+            <target name="development"/>
+            <contents name="supported-databases" title="Supported Databases" level="1"/>
+            <contents name="building-the-drivers-using-configure" title="Building the Drivers Using Configure" level="1"/>
+            <contents name="building-the-plugins-manually" title="Building the Plugins Manually" level="1"/>
+            <contents name="qmysql-for-mysql-4-and-higher" title="QMYSQL for MySQL 4 and higher" level="2"/>
+            <contents name="qmysql-stored-procedure-support" title="QMYSQL Stored Procedure Support" level="3"/>
+            <contents name="embedded-mysql-server" title="Embedded MySQL Server" level="3"/>
+            <contents name="how-to-build-the-qmysql-plugin-on-unix-and-mac-os-x" title="How to Build the QMYSQL Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-qmysql-plugin-on-windows" title="How to Build the QMYSQL Plugin on Windows" level="3"/>
+            <contents name="how-to-build-the-mysql-driver-for-mingw-users" title="How to build the MySQL driver for MinGW users" level="3"/>
+            <contents name="qoci-for-the-oracle-call-interface-oci" title="QOCI for the Oracle Call Interface (OCI)" level="2"/>
+            <contents name="general-information-about-the-oci-plugin" title="General Information about the OCI plugin" level="3"/>
+            <contents name="oci-user-authentication" title="OCI User Authentication" level="3"/>
+            <contents name="oci-blob-lob-support" title="OCI BLOB/LOB Support" level="3"/>
+            <contents name="how-to-build-the-oci-plugin-on-unix-and-mac-os-x" title="How to Build the OCI Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-oci-plugin-on-windows" title="How to Build the OCI Plugin on Windows" level="3"/>
+            <contents name="qodbc-for-open-database-connectivity-odbc" title="QODBC for Open Database Connectivity (ODBC)" level="2"/>
+            <contents name="general-information-about-the-odbc-plugin" title="General Information about the ODBC plugin" level="3"/>
+            <contents name="odbc-stored-procedure-support" title="ODBC Stored Procedure Support" level="3"/>
+            <contents name="odbc-unicode-support" title="ODBC Unicode Support" level="3"/>
+            <contents name="how-to-build-the-odbc-plugin-on-unix-and-mac-os-x" title="How to Build the ODBC Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-odbc-plugin-on-windows" title="How to Build the ODBC Plugin on Windows" level="3"/>
+            <contents name="qpsql-for-postgresql-version-7-3-and-above" title="QPSQL for PostgreSQL (Version 7.3 and Above)" level="2"/>
+            <contents name="general-information-about-the-qpsql-driver" title="General Information about the QPSQL driver" level="3"/>
+            <contents name="qpsql-unicode-support" title="QPSQL Unicode Support" level="3"/>
+            <contents name="qpsql-blob-support" title="QPSQL BLOB Support" level="3"/>
+            <contents name="how-to-build-the-qpsql-plugin-on-unix-and-mac-os-x" title="How to Build the QPSQL Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-qpsql-plugin-on-windows" title="How to Build the QPSQL Plugin on Windows" level="3"/>
+            <contents name="qtds-for-sybase-adaptive-server" title="QTDS for Sybase Adaptive Server" level="2"/>
+            <contents name="general-information-about-qtds" title="General Information about QTDS" level="3"/>
+            <contents name="how-to-build-the-qtds-plugin-on-unix-and-mac-os-x" title="How to Build the QTDS Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-qdts-plugin-on-windows" title="How to Build the QDTS Plugin on Windows" level="3"/>
+            <contents name="qdb2-for-ibm-db2-version-7-1-and-above" title="QDB2 for IBM DB2 (Version 7.1 and Above)" level="2"/>
+            <contents name="general-information-about-qdb2" title="General Information about QDB2" level="3"/>
+            <contents name="how-to-build-the-qdb2-plugin-on-unix-and-mac-os-x" title="How to Build the QDB2 Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-qdb2-plugin-on-windows" title="How to Build the QDB2 Plugin on Windows" level="3"/>
+            <contents name="qsqlite2-for-sqlite-version-2" title="QSQLITE2 for SQLite Version 2" level="2"/>
+            <contents name="qsqlite-for-sqlite-version-3-and-above" title="QSQLITE for SQLite (Version 3 and Above)" level="2"/>
+            <contents name="general-information-about-qsqlite" title="General Information about QSQLITE" level="3"/>
+            <contents name="how-to-build-the-qsqlite-plugin" title="How to Build the QSQLITE Plugin" level="3"/>
+            <contents name="qsqlite-file-format-compatibility" title="QSQLITE File Format Compatibility" level="3"/>
+            <contents name="qibase-for-borland-interbase" title="QIBASE for Borland InterBase" level="2"/>
+            <contents name="general-information-about-qibase" title="General Information about QIBASE" level="3"/>
+            <contents name="qibase-unicode-support-and-text-encoding" title="QIBASE Unicode Support and Text Encoding" level="3"/>
+            <contents name="qibase-stored-procedures" title="QIBASE Stored procedures" level="3"/>
+            <contents name="how-to-build-the-qibase-plugin-on-unix-and-mac-os-x" title="How to Build the QIBASE Plugin on Unix and Mac OS X" level="3"/>
+            <contents name="how-to-build-the-qibase-plugin-on-windows" title="How to Build the QIBASE Plugin on Windows" level="3"/>
+            <contents name="troubleshooting" title="Troubleshooting" level="1"/>
+            <contents name="how-to-write-your-own-database-driver" title="How to Write Your Own Database Driver" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="sql-connecting.html" href="sql-connecting.html" subtype="page" title="Connecting to Databases" fulltitle="Connecting to Databases" subtitle="" location="sql-programming.qdoc" module="QtSql" groups="qt-sql"/>
+        <page access="public" status="commendable" name="sql-forms.html" href="sql-forms.html" subtype="page" title="Creating Data-Aware Forms" fulltitle="Creating Data-Aware Forms" subtitle="" location="sql-programming.qdoc" module="QtSql" groups="qt-sql"/>
+        <page access="public" status="commendable" name="sql-model.html" href="sql-model.html" subtype="page" title="Using the SQL Model Classes" fulltitle="Using the SQL Model Classes" subtitle="" location="sql-programming.qdoc" module="QtSql" groups="qt-sql">
+            <contents name="the-sql-query-model" title="The SQL Query Model" level="2"/>
+            <contents name="the-sql-table-model" title="The SQL Table Model" level="2"/>
+            <contents name="the-sql-relational-table-model" title="The SQL Relational Table Model" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="sql-presenting.html" href="sql-presenting.html" subtype="page" title="Presenting Data in a Table View" fulltitle="Presenting Data in a Table View" subtitle="" location="sql-programming.qdoc" module="QtSql" groups="qt-sql"/>
+        <page access="public" status="commendable" name="sql-programming.html" href="sql-programming.html" subtype="page" title="SQL Programming" fulltitle="SQL Programming" subtitle="" location="sql-programming.qdoc" module="QtSql" groups="qt-sql">
+            <contents name="topics" title="Topics:" level="1"/>
+            <contents name="database-classes" title="Database Classes" level="1"/>
+            <contents name="driver-layer" title="Driver Layer" level="2"/>
+            <contents name="sql-api-layer" title="SQL API Layer" level="2"/>
+            <contents name="user-interface-layer" title="User Interface Layer" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="sql-sqlstatements.html" href="sql-sqlstatements.html" subtype="page" title="Executing SQL Statements" fulltitle="Executing SQL Statements" subtitle="" location="sql-programming.qdoc" module="QtSql" groups="qt-sql">
+            <contents name="executing-a-query" title="Executing a Query" level="2"/>
+            <contents name="navigating-the-result-set" title="Navigating the Result Set" level="2"/>
+            <contents name="inserting-updating-and-deleting-records" title="Inserting, Updating, and Deleting Records" level="2"/>
+            <contents name="transactions" title="Transactions" level="2"/>
+        </page>
+    </namespace>
+    <page access="public" status="commendable" name="database" href="database.html" subtype="group" seen="true" members="QSql,QSqlDriverCreatorBase,QSqlDriverCreator,QSqlDatabase,QSqlDriver,QSqlError,QSqlField,QSqlIndex,QSqlQuery,QSqlRecord,QSqlResult,QSqlQueryModel,QSqlRelationalTableModel,QSqlTableModel" title="Database Classes" fulltitle="Database Classes" subtitle="" location="sql-programming.qdoc"/>
+</INDEX>

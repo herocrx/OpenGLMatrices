@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- customgeometry.qdoc -->
+  <title>QtQuick 5.0: Custom Geometry Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#beziercurve-declaration">BezierCurve Declaration</a></li>
+<li class="level1"><a href="#beziercurve-implementation">BezierCurve Implementation</a></li>
+<li class="level1"><a href="#application-entry-point">Application Entry-Point</a></li>
+<li class="level1"><a href="#using-the-item">Using the Item</a></li>
+</ul>
+</div>
+<h1 class="title">Custom Geometry Example</h1>
+<span class="subtitle"></span>
+<!-- $$$scenegraph/customgeometry-description -->
+<div class="descr"> <a name="details"></a>
+<p>Shows how to implement a custom geometry in the Qt Quick Scene Graph.<p>The custom geometry example shows how to create a <a href="qquickitem.html">QQuickItem</a> which uses the scene graph API to build a custom geometry for the scene graph. It does this by creating a BezierCurve item which is made part of the CustomGeometry module and makes use of this in a QML file.<p class="centerAlign"><img src="images/custom-geometry-example.png" alt="" /></p><a name="beziercurve-declaration"></a>
+<h2>BezierCurve Declaration</h2>
+<pre class="cpp"></pre>
+<p>The item declaration subclasses the <a href="qquickitem.html">QQuickItem</a> class and adds five properties. One for each of the four control points in the bezier curve and a parameter to control the number of segments the curve is subdivided into. For each of the properties we have corresponding getter and setter functions. Since these properties can be bound to in QML, it is also preferable to have notifier signals for each of them so changes will be picked up the QML engine and used accordingly.</p>
+<pre class="cpp"></pre>
+<p>The synchronization point between the QML scene and the rendering scene graph is the virtual function <a href="qquickitem.html#updatePaintNode">QQuickItem::updatePaintNode</a>() which all items with custom scene graph logic must implement.</p>
+<p><b>Note: </b>The scene graph will on many hardware configurations be rendering on a separate thread. It is therefore crucial that interaction with the scene graph happens in a controlled manner, first and foremost through the <a href="qquickitem.html#updatePaintNode">QQuickItem::updatePaintNode</a>() function.</p><a name="beziercurve-implementation"></a>
+<h2>BezierCurve Implementation</h2>
+<pre class="cpp"></pre>
+<p>The BezierCurve constructor sets up default values for the control points and the number of segments. The bezier curve is specified in normalized coordinates relative to the item's bounding rectangle.</p>
+<p>The constructor also sets the flag <a href="qquickitem.html#Flag-enum">QQuickItem::ItemHasContents</a>. This flags tells the canvas that this item provides visual content and will call <a href="qquickitem.html#updatePaintNode">QQuickItem::updatePaintNode</a>() when it is time for the QML scene to be synchronized with the rendering scene graph.</p>
+<pre class="cpp"></pre>
+<p>The BezierCurve class has no data members that need to be cleaned up so the destructor does nothing. It is worth mentioning that the rendering scene graph is managed by the scene graph it self, potentially in a different thread, so one should never retain <a href="qsgnode.html">QSGNode</a> references in the <a href="qquickitem.html">QQuickItem</a> class nor try to clean them up explicitly.</p>
+<pre class="cpp"></pre>
+<p>The setter function for the p1 property checks if the value is unchanged and exits early if this is the case. Then it updates the internal value and emits the changed signal. It then proceeds to call the <a href="qquickitem.html#update">QQuickItem::update</a>() function which will notify the rendering scene graph, that the state of this object has changed and needs to be synchronized with the rendering scene graph. A call to update() will result in a call to <a href="qquickitem.html#updatePaintNode">QQuickItem::updatePaintNode</a>() at a later time.</p>
+<p>The other property setters are equivalent, and are omitted from this example.</p>
+<pre class="cpp"></pre>
+<p>The updatePaintNode() function is the primary integration point for synchronizing the state of the QML scene with the rendering scene graph. The function gets passed a <a href="qsgnode.html">QSGNode</a> which is the instance that was returned on the last call to the function. It will be null the first time the function gets called and we create our <a href="qsggeometrynode.html">QSGGeometryNode</a> which we will fill with geometry and a material.</p>
+<pre class="cpp"></pre>
+<p>We then create the geometry and add it to the node. The first argument to the <a href="qsggeometry.html">QSGGeometry</a> constructor is a definition of the vertex type, called an &quot;attribute set&quot;. Since the graphics often used in QML centers around a few common standard attribute sets, these are provided by default. Here we use the Point2D attribute set which has two floats, one for x coordinates and one for y coordinates. The second argument is the vertex count.</p>
+<p>Custom attribute sets can also created, but that is not covered in this example.</p>
+<p>Since we do not have any special needs for memory managing the geometry, we specify that the <a href="qsggeometrynode.html">QSGGeometryNode</a> should own the geometry.</p>
+<p>To minimize allocations, reduce memory fragmentation and improve performance, it would also be possible to make the geometry a member of a <a href="qsggeometrynode.html">QSGGeometryNode</a> subclass, in which case, we would not have set the <a href="qsgnode.html#Flag-enum">QSGGeometryNode::OwnsGeometry</a> flag.</p>
+<pre class="cpp"></pre>
+<p>The scene graph API provides a few commonly used used material implementations. In this example we use the <a href="qsgflatcolormaterial.html">QSGFlatColorMaterial</a> which will fill the shape defined by the geometry with a solid color. Again we pass the ownership of the material to the node, so it can be cleaned up by the scene graph.</p>
+<pre class="cpp"></pre>
+<p>In the case where the QML item has changed and we only want to modify the existing node's geometry, we cast the <tt>oldNode</tt> to a <a href="qsggeometrynode.html">QSGGeometryNode</a> instance and extract it's geometry. In case the segment count has changed, we call <a href="qsggeometry.html#allocate">QSGGeometry::allocate</a>() to make sure it has the right number of vertices.</p>
+<pre class="cpp"></pre>
+<p>To fill the geometry, we first extract the vertex array from it. Since we are using one of the default attribute sets, we can use the convenience function <a href="qsggeometry.html#vertexDataAsPoint2D">QSGGeometry::vertexDataAsPoint2D</a>(). Then we go through each segment and calculate its position and write that value to the vertex.</p>
+<pre class="cpp"></pre>
+<p>In the end of the function, we return the node so the scene graph can render it.</p>
+<a name="application-entry-point"></a>
+<h2>Application Entry-Point</h2>
+<pre class="cpp"></pre>
+<p>The application is a straightforward QML application, with a <a href="../qtgui/qguiapplication.html">QGuiApplication</a> and a <a href="qquickview.html">QQuickView</a> that we pass a .qml file. To make use of the BezierCurve item, we need to register it in the QML engine, using the qmlRegisterType function. We give it the name BezierCurve and make it part of the <tt>CustomGeometry 1.0</tt> module.</p>
+<p>As the bezier curve is drawn using GL_LINE_STRIP, we specify that the view should be multisampled to get antialiasing. This is not required, but it will make the item look a bit nicer on hardware that supports it. Multisampling is not enabled by default because it often results in higher memory usage.</p>
+<a name="using-the-item"></a>
+<h2>Using the Item</h2>
+<pre class="qml"></pre>
+<p>Our .qml file imports the <tt>QtQuick 2.0</tt> module to get the standard elements and also our own <tt>CustomGeometry 1.0</tt> module which contains our newly created BezierCurve element.</p>
+<pre class="qml"></pre>
+<p>Then we create the our root item and an instance of the BezierCurve which we anchor to fill the root.</p>
+<pre class="qml"></pre>
+<p>To make the example a bit more interesting we add an animation to change the two control points in the curve. The end points stay unchanged.</p>
+<pre class="qml"></pre>
+<p>Finally we overlay a short text outlining what the example shows.</p>
+<p>Files:</p>
+<ul>
+<li><a href="scenegraph-customgeometry-beziercurve-cpp.html">scenegraph/customgeometry/beziercurve.cpp</a></li>
+<li><a href="scenegraph-customgeometry-beziercurve-h.html">scenegraph/customgeometry/beziercurve.h</a></li>
+<li><a href="scenegraph-customgeometry-main-qml.html">scenegraph/customgeometry/main.qml</a></li>
+<li><a href="scenegraph-customgeometry-main-cpp.html">scenegraph/customgeometry/main.cpp</a></li>
+<li><a href="scenegraph-customgeometry-customgeometry-pro.html">scenegraph/customgeometry/customgeometry.pro</a></li>
+<li><a href="scenegraph-customgeometry-customgeometry-qrc.html">scenegraph/customgeometry/customgeometry.qrc</a></li>
+</ul>
+</div>
+<!-- @@@scenegraph/customgeometry -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

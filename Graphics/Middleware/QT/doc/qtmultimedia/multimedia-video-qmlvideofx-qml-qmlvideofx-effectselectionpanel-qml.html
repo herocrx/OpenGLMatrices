@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>qtmultimedia 5.0: EffectSelectionPanel.qml Example File (multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSelectionPanel.qml)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">EffectSelectionPanel.qml Example File</h1>
+<span class="small-subtitle">multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSelectionPanel.qml</span>
+<!-- $$$multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSelectionPanel.qml-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="qml"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the Qt Mobility Components.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+import QtQuick 2.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">root</span>
+    property <span class="type">int</span> <span class="name">itemHeight</span>: <span class="number">25</span>
+    property <span class="type">string</span> <span class="name">effectSource</span>: <span class="string">&quot;&quot;</span>
+
+    signal <span class="type">clicked</span>
+
+    <span class="type"><a href="../qtqml/qml-qtquick2-qtobject.html">QtObject</a></span> {
+        <span class="name">id</span>: <span class="name">d</span>
+        property <span class="type"><a href="../qtquick/qml-qtquick2-item.html">Item</a></span> <span class="name">selectedItem</span>
+    }
+
+    <span class="type">ListModel</span> {
+        <span class="name">id</span>: <span class="name">sources</span>
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;No effect&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectPassThrough.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Billboard&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectBillboard.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Black &amp; white&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectBlackAndWhite.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Blur&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectGaussianBlur.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Edge detection&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectSobelEdgeDetection1.qml&quot;</span> }
+        <span class="comment">//ListElement { name: &quot;Edge detection (Sobel, #2)&quot;; source: &quot;EffectSobelEdgeDetection2.qml&quot; }</span>
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Emboss&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectEmboss.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Glow&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectGlow.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Isolate&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectIsolate.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Magnify&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectMagnify.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Page curl&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectPageCurl.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Pixelate&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectPixelate.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Posterize&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectPosterize.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Ripple&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectRipple.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Sepia&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectSepia.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Sharpen&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectSharpen.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Shockwave&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectShockwave.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Tilt shift&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectTiltShift.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Toon&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectToon.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Warhol&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectWarhol.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Wobble&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectWobble.qml&quot;</span> }
+        <span class="type">ListElement</span> { <span class="name">name</span>: <span class="string">&quot;Vignette&quot;</span>; <span class="name">source</span>: <span class="string">&quot;EffectVignette.qml&quot;</span> }
+    }
+
+    <span class="type"><a href="../qtqml/qml-qtquick2-component.html">Component</a></span> {
+        <span class="name">id</span>: <span class="name">sourceDelegate</span>
+        <span class="type"><a href="../qtquick/qml-qtquick2-item.html">Item</a></span> {
+            <span class="name">id</span>: <span class="name">sourceDelegateItem</span>
+            <span class="name">width</span>: <span class="name">root</span>.<span class="name">width</span>
+            <span class="name">height</span>: <span class="name">itemHeight</span>
+
+            <span class="type">Button</span> {
+                <span class="name">id</span>: <span class="name">sourceSelectorItem</span>
+                <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+                <span class="name">width</span>: <span class="number">0.9</span> <span class="operator">*</span> <span class="name">parent</span>.<span class="name">width</span>
+                <span class="name">height</span>: <span class="number">0.8</span> <span class="operator">*</span> <span class="name">itemHeight</span>
+                <span class="name">text</span>: <span class="name">name</span>
+                <span class="name">onClicked</span>: {
+                    <span class="keyword">if</span> (<span class="name">d</span>.<span class="name">selectedItem</span>)
+                        <span class="name">d</span>.<span class="name">selectedItem</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;baseState&quot;</span>
+                    <span class="name">d</span>.<span class="name">selectedItem</span> <span class="operator">=</span> <span class="name">sourceDelegateItem</span>
+                    <span class="name">d</span>.<span class="name">selectedItem</span>.<span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;selected&quot;</span>
+                    <span class="name">effectSource</span> <span class="operator">=</span> <span class="name">source</span>
+                    <span class="name">root</span>.<span class="name">clicked</span>()
+                }
+            }
+
+            <span class="name">states</span>: [
+                <span class="type"><a href="../qtquick/qml-qtquick2-state.html">State</a></span> {
+                    <span class="name">name</span>: <span class="string">&quot;selected&quot;</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-propertychanges.html">PropertyChanges</a></span> {
+                        <span class="name">target</span>: <span class="name">sourceSelectorItem</span>
+                        <span class="name">bgColor</span>: <span class="string">&quot;#ff8888&quot;</span>
+                    }
+                }
+            ]
+
+            <span class="name">Component</span>.onCompleted: {
+                <span class="keyword">if</span> (<span class="name">name</span> <span class="operator">==</span> <span class="string">&quot;No effect&quot;</span>) {
+                    <span class="name">state</span> <span class="operator">=</span> <span class="string">&quot;selected&quot;</span>
+                    <span class="name">d</span>.<span class="name">selectedItem</span> <span class="operator">=</span> <span class="name">sourceDelegateItem</span>
+                }
+            }
+
+            <span class="name">transitions</span>: [
+                <span class="type"><a href="../qtquick/qml-qtquick2-transition.html">Transition</a></span> {
+                    <span class="name">from</span>: <span class="string">&quot;*&quot;</span>
+                    <span class="name">to</span>: <span class="string">&quot;*&quot;</span>
+                    <span class="type"><a href="../qtquick/qml-qtquick2-coloranimation.html">ColorAnimation</a></span> {
+                        <span class="name">properties</span>: <span class="string">&quot;color&quot;</span>
+                        <span class="name">easing</span>.type: <span class="name">Easing</span>.<span class="name">OutQuart</span>
+                        <span class="name">duration</span>: <span class="number">500</span>
+                    }
+                }
+            ]
+        }
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-flickable.html">Flickable</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">contentHeight</span>: (<span class="name">itemHeight</span> <span class="operator">*</span> <span class="name">sources</span>.<span class="name">count</span>) <span class="operator">+</span> <span class="name">layout</span>.<span class="name">anchors</span>.<span class="name">topMargin</span> <span class="operator">+</span> <span class="name">layout</span>.<span class="name">spacing</span>
+        <span class="name">clip</span>: <span class="number">true</span>
+
+        <span class="type"><a href="../qtquick/qml-qtquick2-column.html">Column</a></span> {
+            <span class="name">id</span>: <span class="name">layout</span>
+
+            <span class="type">anchors</span> {
+                <span class="name">fill</span>: <span class="name">parent</span>
+                <span class="name">topMargin</span>: <span class="number">10</span>
+            }
+
+            <span class="type"><a href="../qtquick/qml-qtquick2-repeater.html">Repeater</a></span> {
+                <span class="name">model</span>: <span class="name">sources</span>
+                <span class="name">delegate</span>: <span class="name">sourceDelegate</span>
+            }
+        }
+    }
+}</pre>
+</div>
+<!-- @@@multimedia/video/qmlvideofx/qml/qmlvideofx/EffectSelectionPanel.qml -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

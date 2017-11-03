@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmediaserviceprovider.cpp -->
+  <title>qtmultimedia 5.0: QMediaServiceSupportedFormatsInterface Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QMediaServiceSupportedFormatsInterface Class</h1>
+<!-- $$$QMediaServiceSupportedFormatsInterface-brief -->
+<p>The QMediaServiceSupportedFormatsInterface class interface identifies if a media service plug-in supports a media format. <a href="#details">More...</a></p>
+<!-- @@@QMediaServiceSupportedFormatsInterface -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QMediaServiceSupportedFormatsInterface&gt;</span></pre><ul>
+<li><a href="qmediaservicesupportedformatsinterface-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qmediaservicesupportedformatsinterface.html#dtor.QMediaServiceSupportedFormatsInterface">~QMediaServiceSupportedFormatsInterface</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QMultimedia::SupportEstimate </td><td class="memItemRight bottomAlign"><b><a href="qmediaservicesupportedformatsinterface.html#hasSupport">hasSupport</a></b>(const QString &amp;<i> mimeType</i>, const QStringList &amp;<i> codecs</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QStringList </td><td class="memItemRight bottomAlign"><b><a href="qmediaservicesupportedformatsinterface.html#supportedMimeTypes">supportedMimeTypes</a></b>() const = 0</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QMediaServiceSupportedFormatsInterface-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QMediaServiceSupportedFormatsInterface class interface identifies if a media service plug-in supports a media format.</p>
+<p>A <a href="qmediaserviceproviderplugin.html">QMediaServiceProviderPlugin</a> may implement this interface.</p>
+</div>
+<!-- @@@QMediaServiceSupportedFormatsInterface -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$~QMediaServiceSupportedFormatsInterface[overload1]$$$~QMediaServiceSupportedFormatsInterface -->
+<h3 class="fn"><a name="dtor.QMediaServiceSupportedFormatsInterface"></a>QMediaServiceSupportedFormatsInterface::<span class="name">~QMediaServiceSupportedFormatsInterface</span>()<tt> [virtual]</tt></h3>
+<p>Destroys a media service supported formats interface.</p>
+<!-- @@@~QMediaServiceSupportedFormatsInterface -->
+<!-- $$$hasSupport[overload1]$$$hasSupportconstQString&constQStringList& -->
+<h3 class="fn"><a name="hasSupport"></a><span class="type"><a href="qmultimedia.html#SupportEstimate-enum">QMultimedia::SupportEstimate</a></span> QMediaServiceSupportedFormatsInterface::<span class="name">hasSupport</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> mimeType</i>, const <span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> &amp;<i> codecs</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns the level of support a media service plug-in has for a <i>mimeType</i> and set of <i>codecs</i>.</p>
+<!-- @@@hasSupport -->
+<!-- $$$supportedMimeTypes[overload1]$$$supportedMimeTypes -->
+<h3 class="fn"><a name="supportedMimeTypes"></a><span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> QMediaServiceSupportedFormatsInterface::<span class="name">supportedMimeTypes</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns a list of MIME types supported by the media service plug-in.</p>
+<!-- @@@supportedMimeTypes -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

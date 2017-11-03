@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qquickscreen.cpp -->
+  <title>QtQuick 5.0: Screen</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Attached Properties</a></li>
+<li class="level1"><a href="#methods">Attached Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">Screen</h1>
+<span class="subtitle"></span>
+<!-- $$$Screen-brief -->
+<p>The Screen attached object provides information about the Screen an Item is displayed on. <a href="#details">More...</a></p>
+<!-- @@@Screen -->
+<ul>
+<li><a href="qml-qtquick-window2-screen-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="attached-properties"></a>
+<h2>Attached Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtquick-window2-screen.html#height-prop">height</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-qtquick-window2-screen.html#orientation-prop">orientation</a></b></b> : Qt::ScreenOrientation</li>
+<li class="fn"><b><b><a href="qml-qtquick-window2-screen.html#primaryOrientation-prop">primaryOrientation</a></b></b> : Qt::ScreenOrientation</li>
+<li class="fn"><b><b><a href="qml-qtquick-window2-screen.html#width-prop">width</a></b></b> : int</li>
+</ul>
+<a name="attached-methods"></a>
+<h2>Attached Methods</h2>
+<ul>
+<li class="fn">int <b><b><a href="qml-qtquick-window2-screen.html#angleBetween-method">angleBetween</a></b></b>(Qt::ScreenOrientation <i>a</i>, Qt::ScreenOrientation <i>b</i>)</li>
+</ul>
+<!-- $$$Screen-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The Screen attached object is only valid inside Item or Item derived types, after component completion. Inside these items it refers to the screen that the item is currently being displayed on.</p>
+<p>To use this type, you will need to import the module with the following line:</p>
+<pre class="cpp">import <span class="type"><a href="qtquick-module.html">QtQuick</a></span><span class="operator">.</span>Window <span class="number">2.0</span></pre>
+<p>Note that the Screen type is not valid at Component.onCompleted, because the Item has not been displayed on a screen by this time.</p>
+<p>Restricting this import will allow you to have a QML environment without access to window system features.</p>
+<!-- @@@Screen -->
+<h2>Attached Property Documentation</h2>
+<!-- $$$height -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="height-prop"></a><span class="qmlreadonly">read-only</span><span class="name">Screen.height</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr></table></div><div class="qmldoc"><p>This contains the height of the screen in pixels.</p>
+</div></div><!-- @@@height -->
+<br/>
+<!-- $$$orientation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="orientation-prop"></a><span class="qmlreadonly">read-only</span><span class="name">Screen.orientation</span> : <span class="type"><a href="../qtcore/qt.html#ScreenOrientation-enum">Qt::ScreenOrientation</a></span></p></td></tr></table></div><div class="qmldoc"><p>This contains the current orientation of the screen.</p>
+</div></div><!-- @@@orientation -->
+<br/>
+<!-- $$$primaryOrientation -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="primaryOrientation-prop"></a><span class="qmlreadonly">read-only</span><span class="name">Screen.primaryOrientation</span> : <span class="type"><a href="../qtcore/qt.html#ScreenOrientation-enum">Qt::ScreenOrientation</a></span></p></td></tr></table></div><div class="qmldoc"><p>This contains the primary orientation of the screen.</p>
+</div></div><!-- @@@primaryOrientation -->
+<br/>
+<!-- $$$width -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="width-prop"></a><span class="qmlreadonly">read-only</span><span class="name">Screen.width</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr></table></div><div class="qmldoc"><p>This contains the width of the screen in pixels.</p>
+</div></div><!-- @@@width -->
+<br/>
+<h2>Attached Method Documentation</h2>
+<!-- $$$angleBetween -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="angleBetween-method"></a><span class="type"><a href="../qtqml/qml-int.html">int</a></span> Screen::<span class="name">angleBetween</span>(<span class="type"><a href="../qtcore/qt.html#ScreenOrientation-enum">Qt::ScreenOrientation</a></span><i> a</i>, <span class="type"><a href="../qtcore/qt.html#ScreenOrientation-enum">Qt::ScreenOrientation</a></span><i> b</i>)</p></td></tr></table></div><div class="qmldoc"><p>Returns the rotation angle, in degrees, between the two specified angles.</p>
+</div></div><!-- @@@angleBetween -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

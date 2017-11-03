@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- youtubeview.qdoc -->
+  <title>QtWebKitExamples 5.0: YouTube View Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">YouTube View Example</h1>
+<span class="subtitle"></span>
+<!-- $$$webkitqml/youtubeview-description -->
+<div class="descr"> <a name="details"></a>
+<p>Demonstrates how to embed a web view in a Qt Quick application<p>The YouTube View QML example uses a WebView to play <a href="http://www.youtube.com/html5">HTML5 video clips from YouTube</a>.</p>
+<p class="centerAlign"><img src="images/youtubeview-example.png" alt="" /></p><p>The applicaiton makes use of an <a href="../qtquick/qml-qtquick-xmllistmodel2-xmllistmodel.html">XmlListModel</a> to query the <a href="https://developers.google.com/youtube">YouTube API</a> for HTML5 video clips and lists thumbnails of the clips in a <a href="../qtquick/qml-qtquick2-listview.html">ListView</a> at the top. The WebView loads a local <tt>player.html</tt> file that embeds a YouTube HTML5 video player using the <a href="https://developers.google.com/youtube/iframe_api_reference">IFrame player API</a>, which allows to control the YouTube player using JavaScript.</p>
+<p>When clicking on a thumbnail, the corresponding clip is loaded in the WebView by passing the video ID as a query string to <tt>player.html</tt>. When the video is started, the thumbnail list is hidden with an animated fade-out, when the video is stopped the list is showed again. The specific states of the player change the title of the WebView using <i>document.title</i> in JavaScript. The application is acting on these title changes in the <tt>onTitleChanged</tt> slot of the WebView item and thus switches between specific states. By default the application loads a list of movie trailers.</p>
+<p>When clicking on the button below the thumbnail list, the application switches to search mode, which allows to search for videos using keywords. Additionally it is also possible to choose from a number of preset movie trailer streams.</p>
+<p class="centerAlign"><img src="images/youtubeview-example-preset.png" alt="" /></p><p>This example uses the QtWebKit QML API that utilizes the WebKit2 split-process architecture.</p>
+<p>Files:</p>
+<ul>
+<li><a href="webkitqml-youtubeview-youtubeview-qml.html">webkitqml/youtubeview/youtubeview.qml</a></li>
+<li><a href="webkitqml-youtubeview-content-youtubedialog-qml.html">webkitqml/youtubeview/content/YouTubeDialog.qml</a></li>
+<li><a href="webkitqml-youtubeview-youtubeview-pro.html">webkitqml/youtubeview/youtubeview.pro</a></li>
+<li><a href="webkitqml-youtubeview-youtubeview-qmlproject.html">webkitqml/youtubeview/youtubeview.qmlproject</a></li>
+<li><a href="webkitqml-youtubeview-youtubeview-qrc.html">webkitqml/youtubeview/youtubeview.qrc</a></li>
+</ul>
+</div>
+<!-- @@@webkitqml/youtubeview -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

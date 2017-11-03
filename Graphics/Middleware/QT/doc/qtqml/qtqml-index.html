@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qtqml.qdoc -->
+  <title>QtQml 5.0: Qt QML</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#overview-of-the-qt-qml-module">Overview of the Qt QML Module</a></li>
+<li class="level1"><a href="#qt-qml-module-documentation">Qt QML Module Documentation</a></li>
+<li class="level1"><a href="#syntax-of-the-qml-language">Syntax of the QML Language</a></li>
+<li class="level1"><a href="#reference-documentation">Reference Documentation</a></li>
+</ul>
+</div>
+<h1 class="title">Qt QML</h1>
+<span class="subtitle"></span>
+<!-- $$$qtqml-index.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="overview-of-the-qt-qml-module"></a>
+<h2>Overview of the Qt QML Module</h2>
+<p>The Qt QML module provides a framework for developing applications and libraries with the QML language. It defines and implements the language and engine infrastructure, and provides an API to enable application developers to extend the QML language with custom types and integrate QML code with JavaScript and C++.</p>
+<p>The Qt QML module provides both the <tt>QtQml</tt> QML module, which supplies <a href="qtqml-module.html">a set of core QML types</a> for creating QML applications, and the <tt>QtQml</tt> C++ module, which supplies <a href="qtqml-module.html">a set of C++ APIs</a> for extending QML applications with custom types and integrating C++ implementations with QML applications.</p>
+<p>Note that the Qt QML module provides only the language and infrastructure for the QML, and does not provide a visual canvas or rendering engine for creating user interfaces. These are provided instead by the <a href="../qtquick/qtquick-index.html">Qt Quick</a> module, which provides many visual components, model/view support, an animation framework and much more for building user interfaces with QML.</p>
+<p>For those new to QML and Qt Quick, please see <a href="../qtquick/qtquick-applicationdevelopers.html">QML Application Developer Resources</a> for an introduction to writing QML applications.</p>
+<a name="qt-qml-module-documentation"></a>
+<h2>Qt QML Module Documentation</h2>
+<ul>
+<li><a href="qtqml-cppclasses-topic.html">Important C++ Classes</a><ul>
+<li><a href="qqmlengine.html">QQmlEngine</a></li>
+<li><a href="qqmlcontext.html">QQmlContext</a></li>
+<li><a href="qqmlcomponent.html">QQmlComponent</a></li>
+<li><a href="qqmlexpression.html">QQmlExpression</a></li>
+</ul>
+</li>
+<li><a href="qtqml-typesystem-topic.html">The QML Type System</a><ul>
+<li><a href="qtqml-typesystem-basictypes.html">Basic Types</a></li>
+<li><a href="qtqml-typesystem-topic.html#javascript-types">JavaScript Types</a></li>
+<li><a href="qtqml-typesystem-objecttypes.html">QML Object Types</a><ul>
+<li><a href="qtqml-documents-definetypes.html">Defining Object Types from QML</a></li>
+<li><a href="qtqml-cppintegration-definetypes.html">Defining Object Types from C++</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="qtqml-modules-topic.html">QML Modules</a><ul>
+<li><a href="qtqml-modules-qmldir.html">Specifying A QML Module</a></li>
+<li><a href="qtqml-modules-topic.html#supported-qml-module-types">Supported QML Module Types</a><ul>
+<li><a href="qtqml-modules-identifiedmodules.html">Identified Modules</a></li>
+<li><a href="qtqml-modules-legacymodules.html">Legacy Modules</a></li>
+</ul>
+</li>
+<li><a href="qtqml-modules-cppplugins.html">Providing Types and Functionality in a C++ Plugin</a></li>
+</ul>
+</li>
+<li><a href="qtqml-documents-topic.html">QML Documents</a><ul>
+<li><a href="qtqml-documents-structure.html">Structure of a QML Document</a></li>
+<li><a href="#syntax-of-the-qml-language">Syntax of the QML Language</a></li>
+<li><a href="qtqml-documents-definetypes.html">Defining Object Types through QML Documents</a><ul>
+<li><a href="qtqml-documents-definetypes.html#defining-an-object-type-with-a-qml-file">Defining an Object Type with a QML File</a></li>
+<li><a href="qtqml-documents-definetypes.html#accessible-attributes-of-custom-types">Accessible Attributes of Custom Types</a></li>
+</ul>
+</li>
+<li><a href="qtqml-documents-networktransparency.html">Resource Loading and Network Transparency</a></li>
+<li><a href="qtqml-documents-scope.html">Scope and Naming Resolution</a></li>
+</ul>
+</li>
+<li><a href="qtqml-typereference-topic.html">QML Types Provided by the QtQml Module</a><ul>
+<li><a href="qtqml-typereference-topic.html#importing-qtqml">Importing <tt>QtQml</tt></a></li>
+<li><a href="qtqml-typereference-topic.html#basic-types">Basic Types</a></li>
+<li><a href="qtqml-typereference-topic.html#object-types">Object Types</a><ul>
+<li><a href="qtqml-typereference-topic.html#qtobject">QtObject</a></li>
+<li><a href="qtqml-typereference-topic.html#component">Component</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="qtqml-javascript-topic.html">Integrating QML and JavaScript</a><ul>
+<li><a href="qtqml-javascript-expressions.html">Using JavaScript Expressions with QML</a></li>
+<li><a href="qtqml-javascript-dynamicobjectcreation.html">Dynamic QML Object Creation from JavaScript</a></li>
+<li><a href="qtqml-javascript-resources.html">Defining JavaScript Resources In QML</a></li>
+<li><a href="qtqml-javascript-imports.html">Importing JavaScript Resources In QML</a></li>
+<li><a href="qtqml-javascript-hostenvironment.html">JavaScript Host Environment</a><ul>
+<li><a href="qtqml-javascript-hostenvironment.html#common-base">Common Base</a></li>
+<li><a href="qtqml-javascript-hostenvironment.html#qml-global-object">QML Global Object</a></li>
+<li><a href="qtqml-javascript-hostenvironment.html#javascript-objects-and-functions">JavaScript Objects and Functions</a></li>
+<li><a href="qtqml-javascript-hostenvironment.html#javascript-environment-restrictions">JavaScript Environment Restrictions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="qtqml-cppintegration-topic.html">Integrating QML and C++</a><ul>
+<li><a href="qtqml-cppintegration-exposecppattributes.html">Exposing Attributes of C++ Classes to QML</a></li>
+<li><a href="qtqml-cppintegration-definetypes.html">Defining QML Types from C++</a></li>
+<li><a href="qtqml-cppintegration-contextproperties.html">Embedding C++ Objects into QML with Context Properties</a></li>
+<li><a href="qtqml-cppintegration-interactqmlfromcpp.html">Interacting with QML Objects from C++</a></li>
+<li><a href="qtqml-cppintegration-data.html">Data Type Conversion Between QML and C++</a></li>
+</ul>
+</li>
+</ul>
+<a name="syntax-of-the-qml-language"></a>
+<h2>Syntax of the QML Language</h2>
+<ul>
+<li><a href="qtqml-syntax-basics.html">QML Syntax Basics</a><ul>
+<li><a href="qtqml-syntax-imports.html">Import Statements</a></li>
+<li><a href="qtqml-syntax-basics.html#object-declarations">Object Declarations</a><ul>
+<li><a href="qtqml-syntax-basics.html#child-objects">Child Objects</a></li>
+</ul>
+</li>
+<li><a href="qtqml-syntax-basics.html#comments">Comments</a></li>
+</ul>
+</li>
+<li><a href="qtqml-syntax-objectattributes.html">QML Object Attributes</a><ul>
+<li><a href="qtqml-syntax-objectattributes.html#the-id-attribute">The <i>id</i> Attribute</a></li>
+<li><a href="qtqml-syntax-objectattributes.html#property-attributes">Property Attributes</a></li>
+<li><a href="qtqml-syntax-objectattributes.html#signal-attributes">Signal Attributes</a></li>
+<li><a href="qtqml-syntax-objectattributes.html#method-attributes">Method Attributes</a></li>
+<li><a href="qtqml-syntax-objectattributes.html#attached-properties-and-attached-signal-handlers">Attached Properties and Attached Signal Handlers</a></li>
+</ul>
+</li>
+<li><a href="qtqml-syntax-propertybinding.html">Property Binding</a></li>
+<li><a href="qtqml-syntax-signals.html">Signal and Handler Event System</a></li>
+</ul>
+<a name="reference-documentation"></a>
+<h2>Reference Documentation</h2>
+<p>Additional Qt QML information:</p>
+<ul>
+<li><a href="qtqml-module.html">Qt QML Module - C++ Classes</a> - the C++ API provided by the Qt QML module</li>
+<li><a href="qtquick2-qtqml-releasenotes.html">Qt QML Release Notes</a> - list of changes and additions in the Qt QML module</li>
+</ul>
+<p>Further information for writing QML applications:</p>
+<ul>
+<li><a href="../qtquick/qtquick-applicationdevelopers.html">QML Application Developer Resources</a> - essential information for application development with QML and Qt Quick</li>
+<li><a href="../qtquick/qtquick-index.html">Qt Quick</a> - documentation for the Qt Quick module, which provides a visual canvas, an animation framework, model/view components and more for building fluid user interfaces and applications with QML</li>
+</ul>
+</div>
+<!-- @@@qtqml-index.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

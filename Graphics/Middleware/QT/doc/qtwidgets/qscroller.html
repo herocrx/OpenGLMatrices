@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qscroller.cpp -->
+  <title>QtWidgets 5.0: QScroller Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QScroller Class</h1>
+<!-- $$$QScroller-brief -->
+<p>The QScroller class enables kinetic scrolling for any scrolling widget or graphics item. <a href="#details">More...</a></p>
+<!-- @@@QScroller -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QScroller&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<p>This class was introduced in QtWidgets 5.0.</p>
+<ul>
+<li><a href="qscroller-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#Input-enum">Input</a></b> { InputPress, InputMove, InputRelease }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#ScrollerGestureType-enum">ScrollerGestureType</a></b> { TouchGesture, LeftMouseButtonGesture, MiddleMouseButtonGesture, RightMouseButtonGesture }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#State-enum">State</a></b> { Inactive, Pressed, Dragging, Scrolling }</td></tr>
+</table>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><a href="qscroller.html#scrollerProperties-prop">scrollerProperties</a></b> : QScrollerProperties</li>
+<li class="fn"><b><a href="qscroller.html#state-prop">state</a></b> : const State</li>
+</ul>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QPointF </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#finalPosition">finalPosition</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#handleInput">handleInput</a></b>(Input<i> input</i>, const QPointF &amp;<i> position</i>, qint64<i> timestamp</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPointF </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#pixelPerMeter">pixelPerMeter</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QScrollerProperties </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scrollerProperties-prop">scrollerProperties</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#setSnapPositionsX">setSnapPositionsX</a></b>(const QList&lt;qreal&gt; &amp;<i> positions</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#setSnapPositionsX-2">setSnapPositionsX</a></b>(qreal<i> first</i>, qreal<i> interval</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#setSnapPositionsY">setSnapPositionsY</a></b>(const QList&lt;qreal&gt; &amp;<i> positions</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#setSnapPositionsY-2">setSnapPositionsY</a></b>(qreal<i> first</i>, qreal<i> interval</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> State </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#state-prop">state</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#stop">stop</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QObject * </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#target">target</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPointF </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#velocity">velocity</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#ensureVisible">ensureVisible</a></b>(const QRectF &amp;<i> rect</i>, qreal<i> xmargin</i>, qreal<i> ymargin</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#ensureVisible-2">ensureVisible</a></b>(const QRectF &amp;<i> rect</i>, qreal<i> xmargin</i>, qreal<i> ymargin</i>, int<i> scrollTime</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#resendPrepareEvent">resendPrepareEvent</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scrollTo">scrollTo</a></b>(const QPointF &amp;<i> pos</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scrollTo-2">scrollTo</a></b>(const QPointF &amp;<i> pos</i>, int<i> scrollTime</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scrollerProperties-prop">setScrollerProperties</a></b>(const QScrollerProperties &amp;<i> prop</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scrollerProperties-prop">scrollerPropertiesChanged</a></b>(const QScrollerProperties &amp;<i> newProperties</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#state-prop">stateChanged</a></b>(QScroller::State<i> newState</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2>Static Public Members</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QList&lt;QScroller *&gt; </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#activeScrollers">activeScrollers</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Qt::GestureType </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#grabGesture">grabGesture</a></b>(QObject *<i> target</i>, ScrollerGestureType<i> scrollGestureType</i> = TouchGesture)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Qt::GestureType </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#grabbedGesture">grabbedGesture</a></b>(QObject *<i> target</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#hasScroller">hasScroller</a></b>(QObject *<i> target</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QScroller * </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scroller">scroller</a></b>(QObject *<i> target</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const QScroller * </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#scroller-2">scroller</a></b>(const QObject *<i> target</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qscroller.html#ungrabGesture">ungrabGesture</a></b>(QObject *<i> target</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QScroller-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QScroller class enables kinetic scrolling for any scrolling widget or graphics item.</p>
+<p>With kinetic scrolling, the user can push the widget in a given direction and it will continue to scroll in this direction until it is stopped either by the user or by friction. Aspects of inertia, friction and other physical concepts can be changed in order to fine-tune an intuitive user experience.</p>
+<p>The QScroller object is the object that stores the current position and scrolling speed and takes care of updates. QScroller can be triggered by a flick gesture</p>
+<pre class="cpp"><span class="type"><a href="qwidget.html">QWidget</a></span> <span class="operator">*</span>w <span class="operator">=</span> <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>;
+<span class="type">QScroller</span><span class="operator">::</span><a href="qscroller.html#grabGesture">grabGesture</a>(w<span class="operator">,</span> <span class="type">QScroller</span><span class="operator">::</span>LeftMouseButtonGesture);</pre>
+<p>or directly like this:</p>
+<pre class="cpp"><span class="type"><a href="qwidget.html">QWidget</a></span> <span class="operator">*</span>w <span class="operator">=</span> <span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>;
+<span class="type">QScroller</span> <span class="operator">*</span>scroller <span class="operator">=</span> <span class="type">QScroller</span><span class="operator">::</span><a href="qscroller.html#scroller">scroller</a>(w);
+scroller<span class="operator">-</span><span class="operator">&gt;</span><a href="qscroller.html#scrollTo">scrollTo</a>(<span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span>(<span class="number">100</span><span class="operator">,</span> <span class="number">100</span>));</pre>
+<p>The scrolled QObjects receive a <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a> whenever the scroller needs to update its geometry information and a <a href="../qtgui/qscrollevent.html">QScrollEvent</a> whenever the content of the object should actually be scrolled.</p>
+<p>The scroller uses the global <a href="../qtcore/qabstractanimation.html">QAbstractAnimation</a> timer to generate its QScrollEvents. This can be changed with <a href="qscrollerproperties.html#ScrollMetric-enum">QScrollerProperties::FrameRate</a> on a per-QScroller basis.</p>
+<p>Several examples in the <tt>scroller</tt> examples directory show how QScroller, <a href="../qtgui/qscrollevent.html">QScrollEvent</a> and the scroller gesture can be used.</p>
+<p>Even though this kinetic scroller has a large number of settings available via <a href="qscrollerproperties.html">QScrollerProperties</a>, we recommend that you leave them all at their default, platform optimized values. Before changing them you can experiment with the <tt>plot</tt> example in the <tt>scroller</tt> examples directory.</p>
+</div>
+<p><b>See also </b><a href="../qtgui/qscrollevent.html">QScrollEvent</a>, <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a>, and <a href="qscrollerproperties.html">QScrollerProperties</a>.</p>
+<!-- @@@QScroller -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Input$$$InputPress$$$InputMove$$$InputRelease -->
+<h3 class="fn"><a name="Input-enum"></a>enum QScroller::<span class="name">Input</span></h3>
+<p>This enum contains an input device agnostic view of input events that are relevant for <a href="qscroller.html">QScroller</a>.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QScroller::InputPress</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">The user pressed the input device (e.g&#x2e; <a href="../qtcore/qevent.html#Type-enum">QEvent::MouseButtonPress</a>, <a href="../qtcore/qevent.html#Type-enum">QEvent::GraphicsSceneMousePress</a>, <a href="../qtcore/qevent.html#Type-enum">QEvent::TouchBegin</a>)</td></tr>
+<tr><td class="topAlign"><tt>QScroller::InputMove</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">The user moved the input device (e.g&#x2e; <a href="../qtcore/qevent.html#Type-enum">QEvent::MouseMove</a>, <a href="../qtcore/qevent.html#Type-enum">QEvent::GraphicsSceneMouseMove</a>, <a href="../qtcore/qevent.html#Type-enum">QEvent::TouchUpdate</a>)</td></tr>
+<tr><td class="topAlign"><tt>QScroller::InputRelease</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">The user released the input device (e.g&#x2e; <a href="../qtcore/qevent.html#Type-enum">QEvent::MouseButtonRelease</a>, <a href="../qtcore/qevent.html#Type-enum">QEvent::GraphicsSceneMouseRelease</a>, <a href="../qtcore/qevent.html#Type-enum">QEvent::TouchEnd</a>)</td></tr>
+</table>
+<!-- @@@Input -->
+<!-- $$$ScrollerGestureType$$$TouchGesture$$$LeftMouseButtonGesture$$$RightMouseButtonGesture$$$MiddleMouseButtonGesture -->
+<h3 class="fn"><a name="ScrollerGestureType-enum"></a>enum QScroller::<span class="name">ScrollerGestureType</span></h3>
+<p>This enum contains the different gesture types that are supported by the <a href="qscroller.html">QScroller</a> gesture recognizer.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QScroller::TouchGesture</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">The gesture recognizer will only trigger on touch events. Specifically it will react on single touch points when using a touch screen and dual touch points when using a touchpad.</td></tr>
+<tr><td class="topAlign"><tt>QScroller::LeftMouseButtonGesture</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">The gesture recognizer will only trigger on left mouse button events.</td></tr>
+<tr><td class="topAlign"><tt>QScroller::MiddleMouseButtonGesture</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">The gesture recognizer will only trigger on middle mouse button events.</td></tr>
+<tr><td class="topAlign"><tt>QScroller::RightMouseButtonGesture</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">The gesture recognizer will only trigger on right mouse button events.</td></tr>
+</table>
+<!-- @@@ScrollerGestureType -->
+<!-- $$$State$$$Inactive$$$Pressed$$$Dragging$$$Scrolling -->
+<h3 class="fn"><a name="State-enum"></a>enum QScroller::<span class="name">State</span></h3>
+<p>This enum contains the different <a href="qscroller.html">QScroller</a> states.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QScroller::Inactive</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">The scroller is not scrolling and nothing is pressed.</td></tr>
+<tr><td class="topAlign"><tt>QScroller::Pressed</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">A touch event was received or the mouse button was pressed but the scroll area is currently not dragged.</td></tr>
+<tr><td class="topAlign"><tt>QScroller::Dragging</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">The scroll area is currently following the touch point or mouse.</td></tr>
+<tr><td class="topAlign"><tt>QScroller::Scrolling</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">The scroll area is moving on it's own.</td></tr>
+</table>
+<!-- @@@State -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$scrollerProperties-prop$$$scrollerProperties$$$setScrollerPropertiesconstQScrollerProperties&$$$scrollerPropertiesChangedconstQScrollerProperties& -->
+<h3 class="fn"><a name="scrollerProperties-prop"></a><span class="name">scrollerProperties</span> : <span class="type"><a href="qscrollerproperties.html">QScrollerProperties</a></span></h3>
+<p>This property holds the scroller properties of this scroller. The properties are used by the QScroller to determine its scrolling behavior.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QScrollerProperties </td><td class="memItemRight bottomAlign"><span class="name"><b>scrollerProperties</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setScrollerProperties</b></span>(const QScrollerProperties &amp;<i> prop</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>scrollerPropertiesChanged</b></span>(const QScrollerProperties &amp;<i> newProperties</i>)</td></tr>
+</table>
+<!-- @@@scrollerProperties -->
+<!-- $$$state-prop$$$state$$$stateChangedQScroller::State -->
+<h3 class="fn"><a name="state-prop"></a><span class="name">state</span> : const <span class="type"><a href="qscroller.html#State-enum">State</a></span></h3>
+<p>This property holds the state of the scroller.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> State </td><td class="memItemRight bottomAlign"><span class="name"><b>state</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>stateChanged</b></span>(QScroller::State<i> newState</i>)</td></tr>
+</table>
+<p><b>See also </b><a href="qscroller.html#State-enum">QScroller::State</a>.</p>
+<!-- @@@state -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$activeScrollers[overload1]$$$activeScrollers -->
+<h3 class="fn"><a name="activeScrollers"></a><span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type">QScroller</span> *&gt; QScroller::<span class="name">activeScrollers</span>()<tt> [static]</tt></h3>
+<p>Returns an application wide list of currently active <a href="qscroller.html">QScroller</a> objects. Active <a href="qscroller.html">QScroller</a> objects are in a <a href="qscroller.html#state-prop">state</a>() that is not <a href="qscroller.html#State-enum">QScroller::Inactive</a>. This function is useful when writing your own gesture recognizer.</p>
+<!-- @@@activeScrollers -->
+<!-- $$$ensureVisible[overload1]$$$ensureVisibleconstQRectF&qrealqreal -->
+<h3 class="fn"><a name="ensureVisible"></a><span class="type">void</span> QScroller::<span class="name">ensureVisible</span>(const <span class="type"><a href="../qtcore/qrectf.html">QRectF</a></span> &amp;<i> rect</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> xmargin</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> ymargin</i>)<tt> [slot]</tt></h3>
+<p>Starts scrolling so that the rectangle <i>rect</i> is visible inside the viewport with additional margins specified in pixels by <i>xmargin</i> and <i>ymargin</i> around the rect.</p>
+<p>In cases where it is not possible to fit the rect plus margins inside the viewport the contents are scrolled so that as much as possible is visible from <i>rect</i>.</p>
+<p>The scrolling speed is calculated so that the given position is reached after a platform-defined time span.</p>
+<p>This function performs the actual scrolling by calling <a href="qscroller.html#scrollTo">scrollTo</a>().</p>
+<p><b>See also </b><a href="qscroller.html#scrollTo">scrollTo</a>().</p>
+<!-- @@@ensureVisible -->
+<!-- $$$ensureVisible$$$ensureVisibleconstQRectF&qrealqrealint -->
+<h3 class="fn"><a name="ensureVisible-2"></a><span class="type">void</span> QScroller::<span class="name">ensureVisible</span>(const <span class="type"><a href="../qtcore/qrectf.html">QRectF</a></span> &amp;<i> rect</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> xmargin</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> ymargin</i>, <span class="type">int</span><i> scrollTime</i>)<tt> [slot]</tt></h3>
+<p>This is an overloaded function.</p>
+<p>This version will reach its destination position in <i>scrollTime</i> milliseconds.</p>
+<!-- @@@ensureVisible -->
+<!-- $$$finalPosition[overload1]$$$finalPosition -->
+<h3 class="fn"><a name="finalPosition"></a><span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> QScroller::<span class="name">finalPosition</span>() const</h3>
+<p>Returns the estimated final position for the current scroll movement. Returns the current position if the scroller state is not Scrolling. The result is undefined when the scroller state is Inactive.</p>
+<p>The target position is in pixel.</p>
+<p><b>See also </b><a href="qscroller.html#pixelPerMeter">pixelPerMeter</a>() and <a href="qscroller.html#scrollTo">scrollTo</a>().</p>
+<!-- @@@finalPosition -->
+<!-- $$$grabGesture[overload1]$$$grabGestureQObject*ScrollerGestureType -->
+<h3 class="fn"><a name="grabGesture"></a><span class="type"><a href="../qtcore/qt.html#GestureType-enum">Qt::GestureType</a></span> QScroller::<span class="name">grabGesture</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> target</i>, <span class="type"><a href="qscroller.html#ScrollerGestureType-enum">ScrollerGestureType</a></span><i> scrollGestureType</i> = TouchGesture)<tt> [static]</tt></h3>
+<p>Registers a custom scroll gesture recognizer, grabs it for the <i>target</i> and returns the resulting gesture type. If <i>scrollGestureType</i> is set to <a href="qscroller.html#ScrollerGestureType-enum">TouchGesture</a> the gesture triggers on touch events. If it is set to one of <a href="qscroller.html#ScrollerGestureType-enum">LeftMouseButtonGesture</a>, <a href="qscroller.html#ScrollerGestureType-enum">RightMouseButtonGesture</a> or <a href="qscroller.html#ScrollerGestureType-enum">MiddleMouseButtonGesture</a> it triggers on mouse events of the corresponding button.</p>
+<p>Only one scroll gesture can be active on a single object at the same time. If you call this function twice on the same object, it will ungrab the existing gesture before grabbing the new one.</p>
+<p><b>Note: </b>To avoid unwanted side-effects, mouse events are consumed while the gesture is triggered. Since the initial mouse press event is not consumed, the gesture sends a fake mouse release event at the global position <tt>(INT_MIN, INT_MIN)</tt>. This ensures that internal states of the widget that received the original mouse press are consistent.</p><p><b>See also </b><a href="qscroller.html#ungrabGesture">ungrabGesture</a>() and <a href="qscroller.html#grabbedGesture">grabbedGesture</a>().</p>
+<!-- @@@grabGesture -->
+<!-- $$$grabbedGesture[overload1]$$$grabbedGestureQObject* -->
+<h3 class="fn"><a name="grabbedGesture"></a><span class="type"><a href="../qtcore/qt.html#GestureType-enum">Qt::GestureType</a></span> QScroller::<span class="name">grabbedGesture</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> target</i>)<tt> [static]</tt></h3>
+<p>Returns the gesture type currently grabbed for the <i>target</i> or 0 if no gesture is grabbed.</p>
+<p><b>See also </b><a href="qscroller.html#grabGesture">grabGesture</a>() and <a href="qscroller.html#ungrabGesture">ungrabGesture</a>().</p>
+<!-- @@@grabbedGesture -->
+<!-- $$$handleInput[overload1]$$$handleInputInputconstQPointF&qint64 -->
+<h3 class="fn"><a name="handleInput"></a><span class="type">bool</span> QScroller::<span class="name">handleInput</span>(<span class="type"><a href="qscroller.html#Input-enum">Input</a></span><i> input</i>, const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp;<i> position</i>, <span class="type"><a href="../qtcore/qtglobal.html#qint64-typedef">qint64</a></span><i> timestamp</i> = 0)</h3>
+<p>This function is used by gesture recognizers to inform the scroller about a new input event. The scroller changes its internal <a href="qscroller.html#state-prop">state</a>() according to the input event and its attached scroller properties. The scroller doesn't distinguish between the kind of input device the event came from. Therefore the event needs to be split into the <i>input</i> type, a <i>position</i> and a milli-second <i>timestamp</i>. The <i>position</i> needs to be in the target's coordinate system.</p>
+<p>The return value is <tt>true</tt> if the event should be consumed by the calling filter or <tt>false</tt> if the event should be forwarded to the control.</p>
+<p><b>Note: </b>Using <a href="qscroller.html#grabGesture">grabGesture</a>() should be sufficient for most use cases.</p><!-- @@@handleInput -->
+<!-- $$$hasScroller[overload1]$$$hasScrollerQObject* -->
+<h3 class="fn"><a name="hasScroller"></a><span class="type">bool</span> QScroller::<span class="name">hasScroller</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> target</i>)<tt> [static]</tt></h3>
+<p>Returns <tt>true</tt> if a <a href="qscroller.html">QScroller</a> object was already created for <i>target</i>; <tt>false</tt> otherwise.</p>
+<p><b>See also </b><a href="qscroller.html#scroller">scroller</a>().</p>
+<!-- @@@hasScroller -->
+<!-- $$$pixelPerMeter[overload1]$$$pixelPerMeter -->
+<h3 class="fn"><a name="pixelPerMeter"></a><span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> QScroller::<span class="name">pixelPerMeter</span>() const</h3>
+<p>Returns the pixel per meter metric for the scrolled widget.</p>
+<p>The value is reported for both the x and y axis separately by using a <a href="../qtcore/qpointf.html">QPointF</a>.</p>
+<p><b>Note: </b>Please note that this value should be physically correct. The actual DPI settings that Qt returns for the display may be reported wrongly on purpose by the underlying windowing system, for example on Mac OS X.</p><!-- @@@pixelPerMeter -->
+<!-- $$$resendPrepareEvent[overload1]$$$resendPrepareEvent -->
+<h3 class="fn"><a name="resendPrepareEvent"></a><span class="type">void</span> QScroller::<span class="name">resendPrepareEvent</span>()<tt> [slot]</tt></h3>
+<p>This function resends the <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a>. Calling resendPrepareEvent triggers a <a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a> from the scroller. This allows the receiver to re-set content position and content size while scrolling. Calling this function while in the Inactive state is useless as the prepare event is sent again before scrolling starts.</p>
+<!-- @@@resendPrepareEvent -->
+<!-- $$$scrollTo[overload1]$$$scrollToconstQPointF& -->
+<h3 class="fn"><a name="scrollTo"></a><span class="type">void</span> QScroller::<span class="name">scrollTo</span>(const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp;<i> pos</i>)<tt> [slot]</tt></h3>
+<p>Starts scrolling the widget so that point <i>pos</i> is at the top-left position in the viewport.</p>
+<p>The behaviour when scrolling outside the valid scroll area is undefined. In this case the scroller might or might not overshoot.</p>
+<p>The scrolling speed will be calculated so that the given position will be reached after a platform-defined time span.</p>
+<p><i>pos</i> is given in viewport coordinates.</p>
+<p><b>See also </b><a href="qscroller.html#ensureVisible">ensureVisible</a>().</p>
+<!-- @@@scrollTo -->
+<!-- $$$scrollTo$$$scrollToconstQPointF&int -->
+<h3 class="fn"><a name="scrollTo-2"></a><span class="type">void</span> QScroller::<span class="name">scrollTo</span>(const <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> &amp;<i> pos</i>, <span class="type">int</span><i> scrollTime</i>)<tt> [slot]</tt></h3>
+<p>This is an overloaded function.</p>
+<p>This version will reach its destination position in <i>scrollTime</i> milliseconds.</p>
+<!-- @@@scrollTo -->
+<!-- $$$scroller[overload1]$$$scrollerQObject* -->
+<h3 class="fn"><a name="scroller"></a><span class="type">QScroller</span> * QScroller::<span class="name">scroller</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> target</i>)<tt> [static]</tt></h3>
+<p>Returns the scroller for the given <i>target</i>. As long as the object exists this function will always return the same <a href="qscroller.html">QScroller</a> instance. If no <a href="qscroller.html">QScroller</a> exists for the <i>target</i>, one will implicitly be created. At no point more than one <a href="qscroller.html">QScroller</a> will be active on an object.</p>
+<p><b>See also </b><a href="qscroller.html#hasScroller">hasScroller</a>() and <a href="qscroller.html#target">target</a>().</p>
+<!-- @@@scroller -->
+<!-- $$$scroller$$$scrollerconstQObject* -->
+<h3 class="fn"><a name="scroller-2"></a>const <span class="type">QScroller</span> * QScroller::<span class="name">scroller</span>(const <span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> target</i>)<tt> [static]</tt></h3>
+<p>This is an overloaded function.</p>
+<p>This is the const version of <a href="qscroller.html#scroller">scroller</a>().</p>
+<!-- @@@scroller -->
+<!-- $$$setSnapPositionsX[overload1]$$$setSnapPositionsXconstQList<qreal>& -->
+<h3 class="fn"><a name="setSnapPositionsX"></a><span class="type">void</span> QScroller::<span class="name">setSnapPositionsX</span>(const <span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span>&gt; &amp;<i> positions</i>)</h3>
+<p>Set the snap positions for the horizontal axis to a list of <i>positions</i>. This overwrites all previously set snap positions and also a previously set snapping interval. Snapping can be deactivated by setting an empty list of positions.</p>
+<!-- @@@setSnapPositionsX -->
+<!-- $$$setSnapPositionsX$$$setSnapPositionsXqrealqreal -->
+<h3 class="fn"><a name="setSnapPositionsX-2"></a><span class="type">void</span> QScroller::<span class="name">setSnapPositionsX</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> first</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> interval</i>)</h3>
+<p>Set the snap positions for the horizontal axis to regular spaced intervals. The first snap position is at <i>first</i>. The next at <i>first</i> + <i>interval</i>. This can be used to implement a list header. This overwrites all previously set snap positions and also a previously set snapping interval. Snapping can be deactivated by setting an interval of 0.0</p>
+<!-- @@@setSnapPositionsX -->
+<!-- $$$setSnapPositionsY[overload1]$$$setSnapPositionsYconstQList<qreal>& -->
+<h3 class="fn"><a name="setSnapPositionsY"></a><span class="type">void</span> QScroller::<span class="name">setSnapPositionsY</span>(const <span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span>&gt; &amp;<i> positions</i>)</h3>
+<p>Set the snap positions for the vertical axis to a list of <i>positions</i>. This overwrites all previously set snap positions and also a previously set snapping interval. Snapping can be deactivated by setting an empty list of positions.</p>
+<!-- @@@setSnapPositionsY -->
+<!-- $$$setSnapPositionsY$$$setSnapPositionsYqrealqreal -->
+<h3 class="fn"><a name="setSnapPositionsY-2"></a><span class="type">void</span> QScroller::<span class="name">setSnapPositionsY</span>(<span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> first</i>, <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span><i> interval</i>)</h3>
+<p>Set the snap positions for the vertical axis to regular spaced intervals. The first snap position is at <i>first</i>. The next at <i>first</i> + <i>interval</i>. This overwrites all previously set snap positions and also a previously set snapping interval. Snapping can be deactivated by setting an interval of 0.0</p>
+<!-- @@@setSnapPositionsY -->
+<!-- $$$stop[overload1]$$$stop -->
+<h3 class="fn"><a name="stop"></a><span class="type">void</span> QScroller::<span class="name">stop</span>()</h3>
+<p>Stops the scroller and resets its state back to Inactive.</p>
+<!-- @@@stop -->
+<!-- $$$target[overload1]$$$target -->
+<h3 class="fn"><a name="target"></a><span class="type"><a href="../qtcore/qobject.html">QObject</a></span> * QScroller::<span class="name">target</span>() const</h3>
+<p>Returns the target object of this scroller.</p>
+<p><b>See also </b><a href="qscroller.html#hasScroller">hasScroller</a>() and <a href="qscroller.html#scroller">scroller</a>().</p>
+<!-- @@@target -->
+<!-- $$$ungrabGesture[overload1]$$$ungrabGestureQObject* -->
+<h3 class="fn"><a name="ungrabGesture"></a><span class="type">void</span> QScroller::<span class="name">ungrabGesture</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> target</i>)<tt> [static]</tt></h3>
+<p>Ungrabs the gesture for the <i>target</i>. Does nothing if no gesture is grabbed.</p>
+<p><b>See also </b><a href="qscroller.html#grabGesture">grabGesture</a>() and <a href="qscroller.html#grabbedGesture">grabbedGesture</a>().</p>
+<!-- @@@ungrabGesture -->
+<!-- $$$velocity[overload1]$$$velocity -->
+<h3 class="fn"><a name="velocity"></a><span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span> QScroller::<span class="name">velocity</span>() const</h3>
+<p>Returns the current scrolling velocity in meter per second when the state is Scrolling or Dragging. Returns a zero velocity otherwise.</p>
+<p>The velocity is reported for both the x and y axis separately by using a <a href="../qtcore/qpointf.html">QPointF</a>.</p>
+<p><b>See also </b><a href="qscroller.html#pixelPerMeter">pixelPerMeter</a>().</p>
+<!-- @@@velocity -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

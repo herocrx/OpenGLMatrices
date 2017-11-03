@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qaudiorecorder.cpp -->
+  <title>qtmultimedia 5.0: QAudioRecorder Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QAudioRecorder Class</h1>
+<!-- $$$QAudioRecorder-brief -->
+<p>The QAudioRecorder class is used for the recording of audio. <a href="#details">More...</a></p>
+<!-- @@@QAudioRecorder -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QAudioRecorder&gt;</span></pre><p><b>Inherits: </b><a href="qmediarecorder.html">QMediaRecorder</a>.</p>
+<ul>
+<li><a href="qaudiorecorder-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><a href="qaudiorecorder.html#audioInput-prop">audioInput</a></b> : QString</li>
+</ul>
+<ul>
+<li class="fn">9 properties inherited from <a href="qmediarecorder.html#properties">QMediaRecorder</a></li>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#QAudioRecorder">QAudioRecorder</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#dtor.QAudioRecorder">~QAudioRecorder</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#audioInput-prop">audioInput</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#audioInputDescription">audioInputDescription</a></b>(const QString &amp;<i> name</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#audioInputs">audioInputs</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#defaultAudioInput">defaultAudioInput</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">34 public functions inherited from <a href="qmediarecorder.html#public-functions">QMediaRecorder</a></li>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+<li class="fn">1 public function inherited from <a href="qmediabindableinterface.html#public-functions">QMediaBindableInterface</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#audioInput-prop">setAudioInput</a></b>(const QString &amp;<i> name</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">5 public slots inherited from <a href="qmediarecorder.html#public-slots">QMediaRecorder</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#audioInput-prop">audioInputChanged</a></b>(const QString &amp;<i> name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qaudiorecorder.html#availableAudioInputsChanged">availableAudioInputsChanged</a></b>()</td></tr>
+</table>
+<ul>
+<li class="fn">13 signals inherited from <a href="qmediarecorder.html#signals">QMediaRecorder</a></li>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">1 protected function inherited from <a href="qmediabindableinterface.html#protected-functions">QMediaBindableInterface</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QAudioRecorder-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QAudioRecorder class is used for the recording of audio.</p>
+<p>The QAudioRecorder class is a high level media recording class and contains the same functionality as <a href="qmediarecorder.html">QMediaRecorder</a>.</p>
+<pre class="cpp">audioRecorder <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QAudioRecorder</span>;
+
+<span class="type"><a href="qaudioencodersettings.html">QAudioEncoderSettings</a></span> audioSettings;
+audioSettings<span class="operator">.</span>setCodec(<span class="string">&quot;audio/amr&quot;</span>);
+audioSettings<span class="operator">.</span>setQuality(<span class="type"><a href="qmultimedia.html">QMultimedia</a></span><span class="operator">::</span>HighQuality);
+
+audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>setEncodingSettings(audioSettings);
+
+audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>setOutputLocation(<span class="type"><a href="../qtcore/qurl.html">QUrl</a></span><span class="operator">::</span>fromLocalFile(<span class="string">&quot;test.amr&quot;</span>));
+audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>record();</pre>
+<p>In addition QAudioRecorder provides functionality for selecting the audio input.</p>
+<pre class="cpp"><span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> inputs <span class="operator">=</span> audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>audioInputs();
+<span class="type"><a href="../qtcore/qstring.html">QString</a></span> selectedInput <span class="operator">=</span> audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>defaultAudioInput();
+
+foreach (<span class="type"><a href="../qtcore/qstring.html">QString</a></span> input<span class="operator">,</span> inputs) {
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> description <span class="operator">=</span> audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>audioInputDescription(input);
+    <span class="comment">// show descriptions to user and allow selection</span>
+    selectedInput <span class="operator">=</span> input;
+}
+
+audioRecorder<span class="operator">-</span><span class="operator">&gt;</span>setAudioInput(selectedInput);</pre>
+<p>The Audio Recorder example shows how to use this class in more detail.</p>
+</div>
+<p><b>See also </b><a href="qmediarecorder.html">QMediaRecorder</a> and <a href="qaudioinputselectorcontrol.html">QAudioInputSelectorControl</a>.</p>
+<!-- @@@QAudioRecorder -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$audioInput-prop$$$audioInput$$$setAudioInputconstQString&$$$audioInputChangedconstQString& -->
+<h3 class="fn"><a name="audioInput-prop"></a><span class="name">audioInput</span> : <span class="type"><a href="../qtcore/qstring.html">QString</a></span></h3>
+<p>This property holds the active audio input name.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>audioInput</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setAudioInput</b></span>(const QString &amp;<i> name</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>audioInputChanged</b></span>(const QString &amp;<i> name</i>)</td></tr>
+</table>
+<!-- @@@audioInput -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QAudioRecorder[overload1]$$$QAudioRecorderQObject* -->
+<h3 class="fn"><a name="QAudioRecorder"></a>QAudioRecorder::<span class="name">QAudioRecorder</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<p>Constructs an audio recorder. The <i>parent</i> is passed to <a href="qmediaobject.html">QMediaObject</a>.</p>
+<!-- @@@QAudioRecorder -->
+<!-- $$$~QAudioRecorder[overload1]$$$~QAudioRecorder -->
+<h3 class="fn"><a name="dtor.QAudioRecorder"></a>QAudioRecorder::<span class="name">~QAudioRecorder</span>()</h3>
+<p>Destroys an audio recorder object.</p>
+<!-- @@@~QAudioRecorder -->
+<!-- $$$audioInputDescription[overload1]$$$audioInputDescriptionconstQString& -->
+<h3 class="fn"><a name="audioInputDescription"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QAudioRecorder::<span class="name">audioInputDescription</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> name</i>) const</h3>
+<p>Returns the readable translated description of the audio input device with <i>name</i>.</p>
+<!-- @@@audioInputDescription -->
+<!-- $$$audioInputs[overload1]$$$audioInputs -->
+<h3 class="fn"><a name="audioInputs"></a><span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> QAudioRecorder::<span class="name">audioInputs</span>() const</h3>
+<p>Returns a list of available audio inputs</p>
+<!-- @@@audioInputs -->
+<!-- $$$availableAudioInputsChanged[overload1]$$$availableAudioInputsChanged -->
+<h3 class="fn"><a name="availableAudioInputsChanged"></a><span class="type">void</span> QAudioRecorder::<span class="name">availableAudioInputsChanged</span>()<tt> [signal]</tt></h3>
+<p>Signal is emitted when the available audio inputs change.</p>
+<!-- @@@availableAudioInputsChanged -->
+<!-- $$$defaultAudioInput[overload1]$$$defaultAudioInput -->
+<h3 class="fn"><a name="defaultAudioInput"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QAudioRecorder::<span class="name">defaultAudioInput</span>() const</h3>
+<p>Returns the default audio input name.</p>
+<!-- @@@defaultAudioInput -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+prefix=/home/heroadm/Qt//5.0.2/gcc_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 WebKit
+Description: Qt WebKit module
+Version: 5.0.2
+Libs: -L${libdir} -lQt5WebKit 
+Libs.private: -L/usr/X11R6/lib64 -L/home/heroadm/Qt//5.0.2/gcc_64/lib -lQt5Network 
+Cflags: -I${includedir}/QtWebKit -I${includedir}
+Requires: QtCore QtGui QtNetwork QtWidgets Qt5Core Qt5Gui Qt5Network
+

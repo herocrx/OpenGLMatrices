@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- modules.qdoc -->
+  <title>QtDoc 5.0: All Modules</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="next" href="../qtcore/qtcore-module.html" />
+  <link rel="start" href="index.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="nextPage" href="../qtcore/qtcore-module.html">Qt Core C++ Classes</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#qt-essentials">Qt Essentials</a></li>
+<li class="level1"><a href="#qt-add-ons">Qt Add-Ons</a></li>
+<li class="level1"><a href="#qt-tools">Qt Tools</a></li>
+</ul>
+</div>
+<h1 class="title">All Modules</h1>
+<span class="subtitle"></span>
+<!-- $$$modules-description -->
+<div class="descr"> <a name="details"></a>
+<a name="qt-essentials"></a>
+<h2>Qt Essentials</h2>
+<p>Qt essentials define the foundation of Qt on all platforms. They are available on all supported development platforms and on the tested target platforms. They will remain source and binary compatible during Qt 5.</p>
+<p>Essential modules are general and useful for a majority of Qt applications. A module that is used for a special purpose is considered an add-on module even if it is available on all supported platforms.</p>
+<p>The following table lists the Qt essentials:</p>
+<table class="generic" width="80%">
+ <thead><tr class="qt-style"><th >Module</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td ><a href="../qtcore/qtcore-index.html">Qt Core</a></td><td >Core non-graphical classes used by other modules.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtgui/qtgui-index.html">Qt GUI</a></td><td >Base classes for graphical user interface (GUI) components. Includes OpenGL.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtmultimedia/qtmultimedia-index.html">Qt Multimedia</a></td><td >Classes for audio, video, radio and camera functionality.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtnetwork/qtnetwork-index.html">Qt Network</a></td><td >Classes to make network programming easier and more portable.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtqml/qtqml-index.html">Qt QML</a></td><td >Classes for QML and JavaScript languages.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtquick/qtquick-index.html">Qt Quick</a></td><td >A declarative framework for building highly dynamic applications with custom user interfaces.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtsql/qtsql-index.html">Qt SQL</a></td><td >Classes for database integration using SQL.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qttestlib/qttest-index.html">Qt Test</a></td><td >Classes for unit testing Qt applications and libraries.</td></tr>
+<tr valign="top" class="odd"><td ><a href="topics-ui.html#qt-webkit">Qt WebKit</a></td><td >Classes for a WebKit2 based implementation and a new QML API. See also Qt WebKit Widgets in the add-on modules.</td></tr>
+<tr valign="top" class="even"><td >Qt WebKit Widgets</td><td >WebKit1 and <a href="../qtwidgets/qwidget.html">QWidget</a>-based classes from Qt 4.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtwidgets/qtwidgets-index.html">Qt Widgets</a></td><td >Classes to extend Qt GUI with C++ widgets.</td></tr>
+</table>
+<p>If you use <a href="qmake-manual.html#qmake">qmake</a> to build your projects, the <a href="../qtcore/qtcore-module.html">QtCore</a> and <a href="../qtgui/qtgui-module.html">QtGui</a> modules are included by default. To link only against <a href="../qtcore/qtcore-module.html">QtCore</a>, add the following line to your <tt>.pro</tt> file:</p>
+<pre class="cpp">QT -= gui</pre>
+<p>On Windows, if you do not use <a href="qmake-manual.html#qmake">qmake</a> or other build tools such as CMake, you also need to link against the <tt>qtmain</tt> library.</p>
+<a name="qt-add-ons"></a>
+<h2>Qt Add-Ons</h2>
+<p>Qt add-on modules bring additional value for specific purposes. These modules may only be available on some development platform for some target platforms. Some of them are included in the Qt releases on particular platforms. Each add-on module specifies its compatibility promise separately.</p>
+<p>The following table lists the Qt add-ons:</p>
+<table class="generic" width="80%">
+ <thead><tr class="qt-style"><th >Module</th><th >Development Platforms</th><th >Target Platforms</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td ><a href="../activeqt/activeqt-index.html">Active Qt</a></td><td >Windows</td><td ></td><td >Classes for applications which use ActiveX and COM</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtconcurrent/qtconcurrent-index.html">Qt Concurrent</a></td><td ></td><td ></td><td >Classes for writing multi-threaded programs without using low-level threading primitives.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtdbus/qtdbus-index.html">Qt D-Bus</a></td><td >Unix</td><td ></td><td >Classes for inter-process communication over the D-Bus protocol.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtgraphicaleffects/qtgraphicaleffects-index.html">Qt Graphical Effects</a></td><td >All</td><td ></td><td >Graphical effects for use with Qt Quick 2.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtimageformats/qtimageformats-index.html">Qt Image Formats</a></td><td >All</td><td ></td><td >Plugins for additional image formats: TIFF, MNG, TGA, WBMP.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtopengl/qtopengl-index.html">Qt OpenGL</a></td><td ></td><td ></td><td >OpenGL support classes.<p><b>Note: </b>Provided to ease porting from Qt 4.x&#x2e; Please use the QOpenGL classes in <a href="../qtgui/qtgui-module.html">QtGui</a> for new code.</p></td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtprintsupport/qtprintsupport-index.html">Qt Print Support</a></td><td >All</td><td ></td><td >Classes to make printing easier and more portable.</td></tr>
+<tr valign="top" class="even"><td ><a href="http://qt-project.org/doc/qt-4.8/qtquick.html">Qt Declarative</a></td><td >All</td><td ></td><td >Qt Declarative is provided for <a href="http://qt-project.org/doc/qt-4.8">Qt 4</a> compatibility. The documentation is available through the Qt 4.8 <a href="http://qt-project.org/doc/qt-4.8/qtquick.html">Qt Quick</a> documentation.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtscript/qtscript-index.html">Qt Script</a></td><td >All</td><td ></td><td >Classes for making Qt applications scriptable. Provided for Qt 4.x compatibility. Please use the QJS* classes in the <a href="../qtqml/qtqml-module.html">QtQml</a> module for new code.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtscripttools/qtscripttools-index.html">Qt Script Tools</a></td><td >All</td><td ></td><td >Additional components for applications that use Qt Script.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtsvg/qtsvg-index.html">Qt SVG</a></td><td >All</td><td ></td><td >Classes for displaying the contents of SVG files.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qtxml/qtxml-index.html">Qt XML</a></td><td ></td><td ></td><td >C++ implementations of SAX and DOM.<p><b>Note: </b>Deprecated, please use <a href="../qtcore/qxmlstreamreader.html">QXmlStreamReader</a> and <a href="../qtcore/qxmlstreamwriter.html">QXmlStreamWriter</a> for new functionality.</p></td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtxmlpatterns/qtxmlpatterns-index.html">Qt XML Patterns</a></td><td ></td><td ></td><td >Support for XPath, <a href="../qtxmlpatterns/xmlprocessing.html">XQuery</a>, XSLT and XML schema validation.</td></tr>
+</table>
+<a name="qt-tools"></a>
+<h2>Qt Tools</h2>
+<p>Tools that are officially a part of Qt. The official tools run on all the supported development platforms.</p>
+<p>The following table lists the Qt tools:</p>
+<table class="generic" width="80%">
+ <thead><tr class="qt-style"><th >Tool</th><th >Description</th></tr></thead>
+<tr valign="top" class="odd"><td ><a href="../qtdesigner/qtdesigner-index.html">Qt Designer</a></td><td >Classes for extending <i>Qt Designer</i>.</td></tr>
+<tr valign="top" class="even"><td ><a href="../qthelp/qthelp-index.html">Qt Help</a></td><td >Classes for online help.</td></tr>
+<tr valign="top" class="odd"><td ><a href="../qtuitools/qtuitools-index.html">Qt UI Tools</a></td><td >Classes for UI tools.</td></tr>
+</table>
+</div>
+<p><b>See also </b><a href="classlists.html">Class and Function Documentation</a>.</p>
+<!-- @@@modules -->
+<table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../activeqt/qaxcontainer-module.html">QAxContainer C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../activeqt/qaxserver-module.html">QAxServer C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtconcurrent/qtconcurrent-module.html">Qt Concurrent C++ classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtcore/qtcore-module.html">Qt Core C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtdbus/qtdbus-module.html">Qt D-Bus C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtdesigner/qtdesigner-module.html">Qt Designer C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qthelp/qthelp-module.html">Qt Help C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtgui/qtgui-module.html">Qt GUI C++ API</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtmultimedia/qtmultimedia-module.html">Qt Multimedia C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtnetwork/qtnetwork-module.html">Qt Network C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtopengl/qtopengl-module.html">Qt OpenGL C++ classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtprintsupport/qtprintsupport-module.html">Qt Print Support C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtquick/qtquick-module.html">Qt Quick Module C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtscript/qtscript-module.html">Qt Script C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtscripttools/qtscripttools-module.html">Qt Script Tools C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtsql/qtsql-module.html">Qt SQL Module C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtsvg/qtsvg-module.html">Qt SVG C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qttestlib/qttest-module.html">Qt Test C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtuitools/qtuitools-module.html">Qt UI Tools C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtwidgets/qtwidgets-module.html">Qt Widgets C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtxml/qtxml-module.html">Qt XML C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtxmlpatterns/qtxmlpatterns-module.html">Qt XML Patterns C++ Classes</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="classlists.html">Class and Function Documentation</a></p></td><td class="tblDescr"><p>Lists and Indexes of classes, functions, and types.</p></td></tr>
+</table>
+<p class="naviNextPrevious footerNavi">
+<a class="nextPage" href="../qtcore/qtcore-module.html">Qt Core C++ Classes</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

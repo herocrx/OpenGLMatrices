@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>org.qt-project.linguist.502</namespace>
+    <virtualFolder>qtlinguist</virtualFolder>
+    <customFilter name="Qt Linguist Manual">
+        <filterAttribute>qt</filterAttribute>
+        <filterAttribute>qtlinguist</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>qt</filterAttribute>
+        <filterAttribute>qtlinguist</filterAttribute>
+        <filterAttribute>5.0.2</filterAttribute>
+        <filterAttribute>tools</filterAttribute>
+        <toc>
+            <section ref="qtlinguist-index.html" title="Qt Linguist Manual">
+                <section ref="examples-linguist.html" title="Examples">
+                    <section ref="arrowpad.html" title="Arrow Pad Example"/>
+                    <section ref="hellotr.html" title="Hello tr() Example"/>
+                    <section ref="trollprint.html" title="Troll Print Example"/>
+                </section>
+                <section ref="qtlinguist-index.html" title="Manual">
+                    <section ref="qtlinguist-index.html" title="Qt Linguist Manual"/>
+                    <section ref="linguist-manager.html" title="Qt Linguist Manual: Release Manager"/>
+                    <section ref="linguist-translators.html" title="Qt Linguist Manual: Translators"/>
+                    <section ref="linguist-programmers.html" title="Qt Linguist Manual: Developers"/>
+                    <section ref="linguist-ts-file-format.html" title="Qt Linguist Manual: TS File Format"/>
+                    <section ref="linguist-id-based-i18n.html" title="Qt Linguist Manual: Text ID Based Translations"/>
+                </section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Arrow Pad Example" id="Arrow Pad Example" ref="arrowpad.html"/>
+            <keyword name="Hello tr() Example" id="Hello tr() Example" ref="hellotr.html"/>
+            <keyword name="Qt Linguist Examples" id="Qt Linguist Examples" ref="examples-linguist.html"/>
+            <keyword name="Qt Linguist" id="Qt Linguist" ref="qtlinguist-index.html#qt-linguist"/>
+            <keyword name="Qt Linguist Manual" id="Qt Linguist Manual" ref="qtlinguist-index.html"/>
+            <keyword name="Qt Linguist Manual: Developers" id="Qt Linguist Manual: Developers" ref="linguist-programmers.html"/>
+            <keyword name="Qt Linguist Manual: Release Manager" id="Qt Linguist Manual: Release Manager" ref="linguist-manager.html"/>
+            <keyword name="Qt Linguist Manual: TS File Format" id="Qt Linguist Manual: TS File Format" ref="linguist-ts-file-format.html"/>
+            <keyword name="Qt Linguist Manual: Text ID Based Translations" id="Qt Linguist Manual: Text ID Based Translations" ref="linguist-id-based-i18n.html"/>
+            <keyword name="Qt Linguist Manual: Translators" id="Qt Linguist Manual: Translators" ref="linguist-translators.html"/>
+            <keyword name="Troll Print Example" id="Troll Print Example" ref="trollprint.html"/>
+        </keywords>
+        <files>
+            <file>images/linguist-validatepunctuation.png</file>
+            <file>images/linguist-fileopen.png</file>
+            <file>arrowpad-mainwindow-cpp.html</file>
+            <file>images/linguist-arrowpad_fr.png</file>
+            <file>images/linguist-validatephrases.png</file>
+            <file>linguist-ts-file-format.html</file>
+            <file>images/linguist-filesave.png</file>
+            <file>images/linguist-trollprint_11_en.png</file>
+            <file>images/linguist-editundo.png</file>
+            <file>images/linguist-translationfilesettings.png</file>
+            <file>images/linguist-check-on.png</file>
+            <file>arrowpad-arrowpad-pro.html</file>
+            <file>arrowpad-arrowpad-h.html</file>
+            <file>images/linguist-next.png</file>
+            <file>images/linguist-phrasebookopen.png</file>
+            <file>linguist-programmers.html</file>
+            <file>trollprint-printpanel-h.html</file>
+            <file>images/linguist-prev.png</file>
+            <file>hellotr-hellotr-pro.html</file>
+            <file>arrowpad-arrowpad-cpp.html</file>
+            <file>trollprint-printpanel-cpp.html</file>
+            <file>linguist-manager.html</file>
+            <file>images/linguist-check-off.png</file>
+            <file>images/linguist-menubar.png</file>
+            <file>images/linguist-trollprint_11_pt.png</file>
+            <file>images/linguist-validateplacemarkers.png</file>
+            <file>trollprint-trollprint-pro.html</file>
+            <file>images/linguist-hellotr_la.png</file>
+            <file>images/linguist-trollprint_10_en.png</file>
+            <file>images/linguist-check-empty.png</file>
+            <file>images/linguist-check-warning.png</file>
+            <file>images/linguist-danger.png</file>
+            <file>images/linguist-linguist_2.png</file>
+            <file>images/linguist-editredo.png</file>
+            <file>images/linguist-toolbar.png</file>
+            <file>images/linguist-phrasebookdialog.png</file>
+            <file>images/linguist-fileprint.png</file>
+            <file>images/linguist-validateaccelerators.png</file>
+            <file>hellotr-main-cpp.html</file>
+            <file>images/linguist-trollprint_10_pt_good.png</file>
+            <file>images/linguist-hellotr_en.png</file>
+            <file>images/linguist-arrowpad_nl.png</file>
+            <file>images/linguist-previewtool.png</file>
+            <file>images/linguist-trollprint_10_pt_bad.png</file>
+            <file>qtlinguist-index.html</file>
+            <file>images/linguist-check-obsolete.png</file>
+            <file>arrowpad-mainwindow-h.html</file>
+            <file>images/linguist-editfind.png</file>
+            <file>linguist-id-based-i18n.html</file>
+            <file>linguist-translators.html</file>
+            <file>trollprint-main-cpp.html</file>
+            <file>trollprint-mainwindow-cpp.html</file>
+            <file>images/linguist-doneandnext.png</file>
+            <file>trollprint.html</file>
+            <file>images/linguist-editcopy.png</file>
+            <file>images/linguist-prevunfinished.png</file>
+            <file>images/linguist-linguist.png</file>
+            <file>arrowpad.html</file>
+            <file>arrowpad-main-cpp.html</file>
+            <file>images/linguist-editpaste.png</file>
+            <file>images/linguist-arrowpad_en.png</file>
+            <file>images/linguist-batchtranslation.png</file>
+            <file>trollprint-mainwindow-h.html</file>
+            <file>hellotr.html</file>
+            <file>examples-linguist.html</file>
+            <file>images/linguist-nextunfinished.png</file>
+            <file>images/linguist-editcut.png</file>
+            <file>images/linguist-editredo.png</file>
+            <file>images/linguist-validatephrases.png</file>
+            <file>images/linguist-trollprint_11_pt.png</file>
+            <file>images/linguist-validateaccelerators.png</file>
+            <file>images/linguist-editpaste.png</file>
+            <file>images/bullet_dn.png</file>
+            <file>images/linguist-trollprint_10_pt_bad.png</file>
+            <file>images/linguist-filesave.png</file>
+            <file>images/linguist-menubar.png</file>
+            <file>images/linguist-toolbar.png</file>
+            <file>images/btn_next.png</file>
+            <file>images/linguist-hellotr_la.png</file>
+            <file>images/ico_note.png</file>
+            <file>images/bullet_sq.png</file>
+            <file>images/linguist-trollprint_10_en.png</file>
+            <file>images/ico_out.png</file>
+            <file>images/linguist-prev.png</file>
+            <file>images/linguist-trollprint_11_en.png</file>
+            <file>images/linguist-validatepunctuation.png</file>
+            <file>images/linguist-validateplacemarkers.png</file>
+            <file>images/linguist-trollprint_10_pt_good.png</file>
+            <file>images/linguist-phrasebookopen.png</file>
+            <file>images/linguist-check-on.png</file>
+            <file>images/linguist-nextunfinished.png</file>
+            <file>images/linguist-arrowpad_en.png</file>
+            <file>images/linguist-danger.png</file>
+            <file>images/linguist-check-off.png</file>
+            <file>images/linguist-fileopen.png</file>
+            <file>images/linguist-arrowpad_nl.png</file>
+            <file>images/linguist-editfind.png</file>
+            <file>images/linguist-next.png</file>
+            <file>images/bgrContent.png</file>
+            <file>images/linguist-hellotr_en.png</file>
+            <file>images/ico_note_attention.png</file>
+            <file>images/linguist-editundo.png</file>
+            <file>images/linguist-check-warning.png</file>
+            <file>images/linguist-check-obsolete.png</file>
+            <file>images/linguist-translationfilesettings.png</file>
+            <file>images/linguist-phrasebookdialog.png</file>
+            <file>images/linguist-check-empty.png</file>
+            <file>images/linguist-previewtool.png</file>
+            <file>style/offline.css</file>
+            <file>images/linguist-arrowpad_fr.png</file>
+            <file>images/linguist-editcopy.png</file>
+            <file>images/linguist-linguist.png</file>
+            <file>images/linguist-editcut.png</file>
+            <file>images/linguist-doneandnext.png</file>
+            <file>images/linguist-prevunfinished.png</file>
+            <file>images/btn_prev.png</file>
+            <file>images/linguist-batchtranslation.png</file>
+            <file>images/linguist-linguist_2.png</file>
+            <file>images/linguist-fileprint.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

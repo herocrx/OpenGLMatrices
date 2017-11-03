@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtUiTools">
+    <examples>
+        <example name="Multiple Inheritance Example" docUrl="qthelp://org.qt-project.qtuitools.502/qtuitools/multipleinheritance.html" projectPath="uitools/multipleinheritance/multipleinheritance.pro" imageUrl="qthelp://org.qt-project.qtuitools.502/qtuitools/images/multipleinheritance-example.png">
+            <description><![CDATA[Using a form created with Qt Designer in an application.]]></description>
+            <tags>inheritance,multiple</tags>
+            <fileToOpen>uitools/multipleinheritance/main.cpp</fileToOpen>
+        </example>
+        <example name="Text Finder Example" docUrl="qthelp://org.qt-project.qtuitools.502/qtuitools/textfinder.html" projectPath="uitools/textfinder/textfinder.pro" imageUrl="qthelp://org.qt-project.qtuitools.502/qtuitools/images/textfinder-example-find.png">
+            <description><![CDATA[Dynamically processing forms using Qt UI Tools.]]></description>
+            <tags>finder,text</tags>
+            <fileToOpen>uitools/textfinder/textfinder.cpp</fileToOpen>
+            <fileToOpen>uitools/textfinder/textfinder.h</fileToOpen>
+            <fileToOpen>uitools/textfinder/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

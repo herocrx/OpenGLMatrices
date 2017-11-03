@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/qtuitools" title="Qt UI Tools Reference Documentation" version="5.0.2">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <page access="public" status="commendable" name="multipleinheritance" href="multipleinheritance.html" subtype="example" title="Multiple Inheritance Example" fulltitle="Multiple Inheritance Example" subtitle="" location="multipleinheritance.qdoc" module="QtUiTools" groups="examples-qtuitools">
+            <contents name="calculatorform-definition" title="CalculatorForm Definition" level="1"/>
+            <contents name="calculatorform-implementation" title="CalculatorForm Implementation" level="1"/>
+            <contents name="func-target-main-main-func-function" title="&lt;@func target=&quot;main()&quot;&gt;main&lt;/@func&gt;() Function" level="1"/>
+            <page access="public" status="commendable" name="multipleinheritance/calculatorform.cpp" href="multipleinheritance-calculatorform-cpp.html" subtype="file" title="" fulltitle="calculatorform.cpp Example File" subtitle="multipleinheritance/calculatorform.cpp" location=""/>
+            <page access="public" status="commendable" name="multipleinheritance/calculatorform.h" href="multipleinheritance-calculatorform-h.html" subtype="file" title="" fulltitle="calculatorform.h Example File" subtitle="multipleinheritance/calculatorform.h" location=""/>
+            <page access="public" status="commendable" name="multipleinheritance/calculatorform.ui" href="multipleinheritance-calculatorform-ui.html" subtype="file" title="" fulltitle="calculatorform.ui Example File" subtitle="multipleinheritance/calculatorform.ui" location=""/>
+            <page access="public" status="commendable" name="multipleinheritance/main.cpp" href="multipleinheritance-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="multipleinheritance/main.cpp" location=""/>
+            <page access="public" status="commendable" name="multipleinheritance/multipleinheritance.pro" href="multipleinheritance-multipleinheritance-pro.html" subtype="file" title="" fulltitle="multipleinheritance.pro Example File" subtitle="multipleinheritance/multipleinheritance.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="textfinder" href="textfinder.html" subtype="example" title="Text Finder Example" fulltitle="Text Finder Example" subtitle="" location="textfinder.qdoc" module="QtUiTools" groups="examples-qtuitools">
+            <contents name="setting-up-the-resource-file" title="Setting Up The Resource File" level="1"/>
+            <contents name="textfinder-class-definition" title="TextFinder Class Definition" level="1"/>
+            <contents name="textfinder-class-implementation" title="TextFinder Class Implementation" level="1"/>
+            <contents name="func-target-main-main-func-function" title="&lt;@func target=&quot;main()&quot;&gt;main&lt;/@func&gt;() Function" level="1"/>
+            <page access="public" status="commendable" name="textfinder/forms/textfinder.ui" href="textfinder-forms-textfinder-ui.html" subtype="file" title="" fulltitle="textfinder.ui Example File" subtitle="textfinder/forms/textfinder.ui" location=""/>
+            <page access="public" status="commendable" name="textfinder/main.cpp" href="textfinder-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="textfinder/main.cpp" location=""/>
+            <page access="public" status="commendable" name="textfinder/textfinder.cpp" href="textfinder-textfinder-cpp.html" subtype="file" title="" fulltitle="textfinder.cpp Example File" subtitle="textfinder/textfinder.cpp" location=""/>
+            <page access="public" status="commendable" name="textfinder/textfinder.h" href="textfinder-textfinder-h.html" subtype="file" title="" fulltitle="textfinder.h Example File" subtitle="textfinder/textfinder.h" location=""/>
+            <page access="public" status="commendable" name="textfinder/textfinder.pro" href="textfinder-textfinder-pro.html" subtype="file" title="" fulltitle="textfinder.pro Example File" subtitle="textfinder/textfinder.pro" location=""/>
+            <page access="public" status="commendable" name="textfinder/textfinder.qrc" href="textfinder-textfinder-qrc.html" subtype="file" title="" fulltitle="textfinder.qrc Example File" subtitle="textfinder/textfinder.qrc" location=""/>
+        </page>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QUiLoader" href="quiloader.html" location="quiloader.h" bases="QObject" module="QtUiTools">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QUiLoader" fullname="QUiLoader::QUiLoader" href="quiloader.html#QUiLoader" location="quiloader.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QUiLoader(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addPluginPath" fullname="QUiLoader::addPluginPath" href="quiloader.html#addPluginPath" location="quiloader.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addPluginPath(const QString &amp; path)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="availableLayouts" fullname="QUiLoader::availableLayouts" href="quiloader.html#availableLayouts" location="quiloader.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="availableLayouts() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="availableWidgets" fullname="QUiLoader::availableWidgets" href="quiloader.html#availableWidgets" location="quiloader.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="availableWidgets() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clearPluginPaths" fullname="QUiLoader::clearPluginPaths" href="quiloader.html#clearPluginPaths" location="quiloader.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clearPluginPaths()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createAction" fullname="QUiLoader::createAction" href="quiloader.html#createAction" location="quiloader.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QAction *" signature="createAction(QObject * parent, const QString &amp; name)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+                <parameter left="const QString &amp;" right="" name="name" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createActionGroup" fullname="QUiLoader::createActionGroup" href="quiloader.html#createActionGroup" location="quiloader.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QActionGroup *" signature="createActionGroup(QObject * parent, const QString &amp; name)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+                <parameter left="const QString &amp;" right="" name="name" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createLayout" fullname="QUiLoader::createLayout" href="quiloader.html#createLayout" location="quiloader.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QLayout *" signature="createLayout(const QString &amp; className, QObject * parent, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="className" default=""/>
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+                <parameter left="const QString &amp;" right="" name="name" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createWidget" fullname="QUiLoader::createWidget" href="quiloader.html#createWidget" location="quiloader.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QWidget *" signature="createWidget(const QString &amp; className, QWidget * parent, const QString &amp; name)">
+                <parameter left="const QString &amp;" right="" name="className" default=""/>
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="const QString &amp;" right="" name="name" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="errorString" fullname="QUiLoader::errorString" href="quiloader.html#errorString" location="quiloader.h" since="5.0" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="errorString() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isLanguageChangeEnabled" fullname="QUiLoader::isLanguageChangeEnabled" href="quiloader.html#isLanguageChangeEnabled" location="quiloader.h" since="4.5" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isLanguageChangeEnabled() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QUiLoader::load" href="quiloader.html#load" location="quiloader.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QWidget *" signature="load(QIODevice * device, QWidget * parentWidget)">
+                <parameter left="QIODevice *" right="" name="device" default=""/>
+                <parameter left="QWidget *" right="" name="parentWidget" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="pluginPaths" fullname="QUiLoader::pluginPaths" href="quiloader.html#pluginPaths" location="quiloader.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="pluginPaths() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setLanguageChangeEnabled" fullname="QUiLoader::setLanguageChangeEnabled" href="quiloader.html#setLanguageChangeEnabled" location="quiloader.h" since="4.5" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setLanguageChangeEnabled(bool enabled)">
+                <parameter left="bool" right="" name="enabled" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setWorkingDirectory" fullname="QUiLoader::setWorkingDirectory" href="quiloader.html#setWorkingDirectory" location="quiloader.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setWorkingDirectory(const QDir &amp; dir)">
+                <parameter left="const QDir &amp;" right="" name="dir" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="workingDirectory" fullname="QUiLoader::workingDirectory" href="quiloader.html#workingDirectory" location="quiloader.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDir" signature="workingDirectory() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QUiLoader" fullname="QUiLoader::~QUiLoader" href="quiloader.html#dtor.QUiLoader" location="quiloader.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QUiLoader()"/>
+        </class>
+        <page access="public" status="commendable" name="qtuitools-index.html" href="qtuitools-index.html" subtype="page" title="Qt UI Tools" fulltitle="Qt UI Tools" subtitle="" location="qtuitools-index.qdoc" module="QtUiTools">
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="api-reference" title="API Reference" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="QtUiTools" href="qtuitools-module.html" since="4.1" subtype="module" title="Qt UI Tools C++ Classes" fulltitle="Qt UI Tools C++ Classes" subtitle="" location="qtuitools-module.qdoc" groups="modules"/>
+    </namespace>
+    <page access="public" status="commendable" name="examples-qtuitools" href="examples-qtuitools.html" subtype="group" seen="true" members="multipleinheritance,textfinder,all-examples" title="Qt UI Tools Examples" fulltitle="Qt UI Tools Examples" subtitle="" location="qtuitools-examples.qdoc" groups="all-examples"/>
+</INDEX>

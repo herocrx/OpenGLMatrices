@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qheaderview.cpp -->
+  <title>QtWidgets 5.0: Compatibility Members for QHeaderView</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Compatibility Members for QHeaderView</h1>
+<p><b>The following class members are part of the Qt compatibility layer.</b> We advise against using them in new code.</p>
+<p><ul><li><a href="qheaderview.html">QHeaderView class reference</a></li></ul></p>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#isClickable">isClickable</a></b>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#isMovable">isMovable</a></b>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> ResizeMode </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#resizeMode">resizeMode</a></b>(int<i> logicalIndex</i>) const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#setClickable">setClickable</a></b>(bool<i> clickable</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#setMovable">setMovable</a></b>(bool<i> movable</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#setResizeMode">setResizeMode</a></b>(ResizeMode<i> mode</i>)</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qheaderview-compat.html#setResizeMode-2">setResizeMode</a></b>(int<i> logicalIndex</i>, ResizeMode<i> mode</i>)</td></tr>
+</table>
+<h2>Member Function Documentation</h2>
+<!-- $$$isClickable[overload1]$$$isClickable -->
+<h3 class="fn"><a name="isClickable"></a><span class="type">bool</span> QHeaderView::<span class="name">isClickable</span>() const</h3>
+<p>Use sectionsClickable instead.</p>
+<p><b>See also </b><a href="qheaderview.html#sectionsClickable">sectionsClickable</a>().</p>
+<!-- @@@isClickable -->
+<!-- $$$isMovable[overload1]$$$isMovable -->
+<h3 class="fn"><a name="isMovable"></a><span class="type">bool</span> QHeaderView::<span class="name">isMovable</span>() const</h3>
+<p>Use sectionsMovable instead.</p>
+<p><b>See also </b><a href="qheaderview.html#sectionsMovable">sectionsMovable</a>().</p>
+<!-- @@@isMovable -->
+<!-- $$$resizeMode[overload1]$$$resizeModeint -->
+<h3 class="fn"><a name="resizeMode"></a><span class="type"><a href="qheaderview.html#ResizeMode-enum">ResizeMode</a></span> QHeaderView::<span class="name">resizeMode</span>(<span class="type">int</span><i> logicalIndex</i>) const</h3>
+<p>Use sectionResizeMode instead.</p>
+<p><b>See also </b><a href="qheaderview-compat.html#setResizeMode">setResizeMode</a>() and <a href="qheaderview.html#sectionResizeMode">sectionResizeMode</a>().</p>
+<!-- @@@resizeMode -->
+<!-- $$$setClickable[overload1]$$$setClickablebool -->
+<h3 class="fn"><a name="setClickable"></a><span class="type">void</span> QHeaderView::<span class="name">setClickable</span>(<span class="type">bool</span><i> clickable</i>)</h3>
+<p>Use setSectionsClickable instead.</p>
+<p><b>See also </b><a href="qheaderview-compat.html#isClickable">isClickable</a>() and <a href="qheaderview.html#setSectionsClickable">setSectionsClickable</a>().</p>
+<!-- @@@setClickable -->
+<!-- $$$setMovable[overload1]$$$setMovablebool -->
+<h3 class="fn"><a name="setMovable"></a><span class="type">void</span> QHeaderView::<span class="name">setMovable</span>(<span class="type">bool</span><i> movable</i>)</h3>
+<p>Use setSectionsMovable instead.</p>
+<p><b>See also </b><a href="qheaderview-compat.html#isMovable">isMovable</a>() and <a href="qheaderview.html#setSectionsMovable">setSectionsMovable</a>().</p>
+<!-- @@@setMovable -->
+<!-- $$$setResizeMode[overload1]$$$setResizeModeResizeMode -->
+<h3 class="fn"><a name="setResizeMode"></a><span class="type">void</span> QHeaderView::<span class="name">setResizeMode</span>(<span class="type"><a href="qheaderview.html#ResizeMode-enum">ResizeMode</a></span><i> mode</i>)</h3>
+<p>Use setSectionResizeMode instead.</p>
+<p><b>See also </b><a href="qheaderview-compat.html#resizeMode">resizeMode</a>() and <a href="qheaderview.html#setSectionResizeMode">setSectionResizeMode</a>().</p>
+<!-- @@@setResizeMode -->
+<!-- $$$setResizeMode$$$setResizeModeintResizeMode -->
+<h3 class="fn"><a name="setResizeMode-2"></a><span class="type">void</span> QHeaderView::<span class="name">setResizeMode</span>(<span class="type">int</span><i> logicalIndex</i>, <span class="type"><a href="qheaderview.html#ResizeMode-enum">ResizeMode</a></span><i> mode</i>)</h3>
+<p>This is an overloaded function.</p>
+<p>Use setSectionResizeMode instead.</p>
+<p><b>See also </b><a href="qheaderview.html#setSectionResizeMode">setSectionResizeMode</a>().</p>
+<!-- @@@setResizeMode -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

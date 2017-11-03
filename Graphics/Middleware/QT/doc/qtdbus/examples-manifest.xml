@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="qtdbus">
+    <examples>
+        <example name="D-Bus Chat Example" docUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/chat.html" projectPath="dbus/chat/chat.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>d-bus,chat</tags>
+            <fileToOpen>dbus/chat/chat.cpp</fileToOpen>
+            <fileToOpen>dbus/chat/chat.h</fileToOpen>
+        </example>
+        <example name="D-Bus Complex Ping Pong Example" docUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/complexpingpong.html" projectPath="dbus/complexpingpong/complexpingpong.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>d-bus,ping,complex,pong</tags>
+        </example>
+        <example name="D-Bus List Names Example" docUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/listnames.html" projectPath="dbus/listnames/listnames.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>d-bus,list,names</tags>
+            <fileToOpen>dbus/listnames/listnames.cpp</fileToOpen>
+        </example>
+        <example name="D-Bus Ping Pong Example" docUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/pingpong.html" projectPath="dbus/pingpong/pingpong.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>d-bus,ping,pong</tags>
+        </example>
+        <example name="D-Bus Remote Controlled Car Example" docUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/dbus-remotecontrolledcar.html" imageUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/images/remotecontrolledcar-car-example.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>remote,d-bus,controlled,car</tags>
+        </example>
+        <example name="D-Bus Remote Controlled Car Example" docUrl="qthelp://org.qt-project.qtdbus.502/qtdbus/remotecontrolledcar.html" projectPath="dbus/remotecontrolledcar/remotecontrolledcar.pro">
+            <description><![CDATA[No description available]]></description>
+            <tags>remote,d-bus,controlled,car</tags>
+            <fileToOpen>dbus/remotecontrolledcar/car/main.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- basictypes.qdoc -->
+  <title>QtQml 5.0: QML Basic Types</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#supported-basic-types">Supported Basic Types</a></li>
+<li class="level2"><a href="#basic-types-provided-by-the-qml-language">Basic Types Provided By The QML Language</a></li>
+<li class="level2"><a href="#basic-types-provided-by-qml-modules">Basic Types Provided By QML Modules</a></li>
+<li class="level1"><a href="#property-change-behavior-for-basic-types">Property Change Behavior for Basic Types</a></li>
+</ul>
+</div>
+<h1 class="title">QML Basic Types</h1>
+<span class="subtitle"></span>
+<!-- $$$qtqml-typesystem-basictypes.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>QML supports a number of basic types.</p>
+<p>A <i>basic type</i> is one that refers to a simple value, such as an <tt>int</tt> or a <tt>string</tt>. This contrasts with a <a href="qtqml-typesystem-topic.html#qml-object-types">QML Object Types</a>, which refers to an object with properties, signals, methods and so on. Unlike an object type, a basic type cannot be used to declare QML objects: it is not possible, for example, to declare an <tt>int{}</tt> object or a <tt>size{}</tt> object.</p>
+<p>Basic types can be used to refer to:</p>
+<ul>
+<li>A single value (e.g&#x2e; <a href="qml-int.html">int</a> refers to a single number, <a href="qml-var.html">var</a> can refer to a single list of items)</li>
+<li>A value that contains a simple set of property-value pairs (e.g&#x2e; <a href="qml-size.html">size</a> refers to a value with <tt>width</tt> and <tt>height</tt> attributes)</li>
+</ul>
+<a name="supported-basic-types"></a>
+<h2>Supported Basic Types</h2>
+<p>Some basic types are supported by the engine by default and do not require an <a href="qtqml-syntax-imports.html">import statement</a> to be used, while others do require the client to import the module which provides them. All of the basic types listed below may be used as a <tt>property</tt> type in a QML document, with the following exceptions:</p>
+<ul>
+<li><tt>list</tt> must be used in conjunction with a QML object type</li>
+<li><tt>enumeration</tt> cannot be used directly as the enumeration must be defined by a registered QML object type</li>
+</ul>
+<a name="basic-types-provided-by-the-qml-language"></a>
+<h3>Basic Types Provided By The QML Language</h3>
+<p>The basic types supported natively in the QML language are listed below: <table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-int.html">int</a></p></td><td class="tblDescr"><p>a whole number, e.g&#x2e; 0, 10, or -20.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-bool.html">bool</a></p></td><td class="tblDescr"><p>a binary true/false value.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-real.html">real</a></p></td><td class="tblDescr"><p>a number with a decimal point.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-double.html">double</a></p></td><td class="tblDescr"><p>a number with a decimal point, stored in double precision.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-string.html">string</a></p></td><td class="tblDescr"><p>a free form text string.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-url.html">url</a></p></td><td class="tblDescr"><p>a resource locator.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-list.html">list</a></p></td><td class="tblDescr"><p>a list of QML objects.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-var.html">var</a></p></td><td class="tblDescr"><p>a generic property type.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-enumeration.html">enumeration</a></p></td><td class="tblDescr"><p>a named enumeration value.</p></td></tr>
+</table>
+</p>
+<a name="basic-types-provided-by-qml-modules"></a>
+<h3>Basic Types Provided By QML Modules</h3>
+<p>QML modules may extend the QML language with more basic types. For example, the basic types provided by the <a href="../qtquick/qtquick-module.html">QtQuick</a> module are listed below: <table class="annotated">
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtquick/qml-color.html">color</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtquick/qml-font.html">font</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtquick/qml-matrix4x4.html">matrix4x4</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtquick/qml-quaternion.html">quaternion</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtquick/qml-vector2d.html">vector2d</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="../qtquick/qml-vector3d.html">vector3d</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="../qtquick/qml-vector4d.html">vector4d</a></p></td><td class="tblDescr"><p></p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-date.html">date</a></p></td><td class="tblDescr"><p>a date value.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-time.html">time</a></p></td><td class="tblDescr"><p>a time value.</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-point.html">point</a></p></td><td class="tblDescr"><p>a value with x and y attributes.</p></td></tr>
+<tr class="odd topAlign"><td class="tblName"><p><a href="qml-size.html">size</a></p></td><td class="tblDescr"><p>a value with width and height attributes</p></td></tr>
+<tr class="even topAlign"><td class="tblName"><p><a href="qml-rect.html">rect</a></p></td><td class="tblDescr"><p>a value with x, y, width and height attributes.</p></td></tr>
+</table>
+</p>
+<p>Currently only QML modules which are provided by Qt may provide their own basic types, however this may change in future releases of Qt QML. In order to use types provided by a particular QML module, clients must import that module in their QML documents.</p>
+<a name="property-change-behavior-for-basic-types"></a>
+<h2>Property Change Behavior for Basic Types</h2>
+<p>Some basic types have properties: for example, the <a href="../qtquick/qml-font.html">font</a> type has <tt>pixelSize</tt>, <tt>family</tt> and <tt>b</tt> properties. Unlike properties of <a href="qtqml-typesystem-topic.html#qml-object-types">object types</a>, properties of basic types do not provide their own property change signals. It is only possible to create a property change signal handler for the basic type property itself:</p>
+<pre class="cpp">Text {
+    <span class="comment">// invalid!</span>
+    onFont<span class="operator">.</span>pixelSizeChanged: doSomething()
+
+    <span class="comment">// also invalid!</span>
+    font {
+        onPixelSizeChanged: doSomething()
+    }
+
+    <span class="comment">// but this is ok</span>
+    onFontChanged: doSomething()
+}</pre>
+<p>Be aware, however, that a property change signal for a basic type is emitted whenever <i>any</i> of its attributes have changed, as well as when the property itself changes. Take the following code, for example:</p>
+<pre class="qml"><span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> {
+    <span class="name">onFontChanged</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;font changed&quot;</span>)
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-text.html">Text</a></span> { <span class="name">id</span>: <span class="name">otherText</span> }
+
+    <span class="name">focus</span>: <span class="number">true</span>
+
+    <span class="comment">// changing any of the font attributes, or reassigning the property</span>
+    <span class="comment">// to a different font value, will invoke the onFontChanged handler</span>
+    <span class="name">Keys</span>.onDigit1Pressed: <span class="name">font</span>.<span class="name">pixelSize</span> <span class="operator">+=</span> <span class="number">1</span>
+    <span class="name">Keys</span>.onDigit2Pressed: <span class="name">font</span>.<span class="name">b</span> <span class="operator">=</span> !<span class="name">font</span>.<span class="name">b</span>
+    <span class="name">Keys</span>.onDigit3Pressed: <span class="name">font</span> <span class="operator">=</span> <span class="name">otherText</span>.<span class="name">font</span>
+}</pre>
+<p>In contrast, properties of an <a href="qtqml-typesystem-topic.html#qml-object-types">object type</a> emit their own property change signals, and a property change signal handler for an object-type property is only invoked when the property is reassigned to a different object value.</p>
+</div>
+<p><b>See also </b><a href="qtqml-typesystem-topic.html">The QML Type System</a>.</p>
+<!-- @@@qtqml-typesystem-basictypes.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

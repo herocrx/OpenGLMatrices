@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qsgmaterial.cpp -->
+  <title>QtQuick 5.0: RenderState Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">RenderState Class</h1>
+<span class="small-subtitle">(QSGMaterialShader::RenderState)<br/></span>
+<!-- $$$RenderState-brief -->
+<p>The QSGMaterialShader::RenderState encapsulates the current rendering state during a call to <a href="qsgmaterialshader.html#updateState">QSGMaterialShader::updateState</a>(). <a href="#details">More...</a></p>
+<!-- @@@RenderState -->
+<pre class="cpp"><span class="preprocessor">#include &lt;<a href="qsgmaterialshader.html">QSGMaterialShader</a>&gt;</span></pre><ul>
+<li><a href="qsgmaterialshader-renderstate-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#DirtyState-enum">DirtyState</a></b> { DirtyMatrix, DirtyOpacity }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#DirtyState-enum">DirtyStates</a></b></td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QMatrix4x4 </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#combinedMatrix">combinedMatrix</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QOpenGLContext * </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#context">context</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#determinant">determinant</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRect </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#deviceRect">deviceRect</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> DirtyStates </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#dirtyStates">dirtyStates</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#isMatrixDirty">isMatrixDirty</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#isOpacityDirty">isOpacityDirty</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QMatrix4x4 </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#modelViewMatrix">modelViewMatrix</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> float </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#opacity">opacity</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRect </td><td class="memItemRight bottomAlign"><b><a href="qsgmaterialshader-renderstate.html#viewportRect">viewportRect</a></b>() const</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$RenderState-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QSGMaterialShader::RenderState encapsulates the current rendering state during a call to <a href="qsgmaterialshader.html#updateState">QSGMaterialShader::updateState</a>().</p>
+<p>The render state contains a number of accessors that the shader needs to respect in order to conform to the current state of the scene graph.</p>
+<p>The instance is only valid inside a call to <a href="qsgmaterialshader.html#updateState">QSGMaterialShader::updateState</a>() and should not be used outisde this function.</p>
+</div>
+<!-- @@@RenderState -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$DirtyState$$$DirtyMatrix$$$DirtyOpacity -->
+<h3 class="flags"><a name="DirtyState-enum"></a>enum RenderState::<span class="name">DirtyState</span><br/>flags RenderState::<span class="name">DirtyStates</span></h3>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSGMaterialShader::RenderState::DirtyMatrix</tt></td><td class="topAlign"><tt>0x0001</tt></td><td class="topAlign">Used to indicate that the matrix has changed and must be updated.</td></tr>
+<tr><td class="topAlign"><tt>QSGMaterialShader::RenderState::DirtyOpacity</tt></td><td class="topAlign"><tt>0x0002</tt></td><td class="topAlign">Used to indicate that the opacity has changed and must be updated.</td></tr>
+</table>
+<p>The DirtyStates type is a typedef for <a href="qflags.html">QFlags</a>&lt;DirtyState&gt;. It stores an OR combination of DirtyState values.</p>
+<!-- @@@DirtyState -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$combinedMatrix[overload1]$$$combinedMatrix -->
+<h3 class="fn"><a name="combinedMatrix"></a><span class="type"><a href="../qtgui/qmatrix4x4.html">QMatrix4x4</a></span> RenderState::<span class="name">combinedMatrix</span>() const</h3>
+<p>Returns the matrix combined of modelview matrix and project matrix.</p>
+<!-- @@@combinedMatrix -->
+<!-- $$$context[overload1]$$$context -->
+<h3 class="fn"><a name="context"></a><span class="type"><a href="../qtgui/qopenglcontext.html">QOpenGLContext</a></span> * RenderState::<span class="name">context</span>() const</h3>
+<p>Returns the <a href="../qtgui/qopenglcontext.html">QOpenGLContext</a> that is being used for rendering</p>
+<!-- @@@context -->
+<!-- $$$determinant[overload1]$$$determinant -->
+<h3 class="fn"><a name="determinant"></a><span class="type">float</span> RenderState::<span class="name">determinant</span>() const</h3>
+<p>Returns the modelview determinant to be used for rendering.</p>
+<!-- @@@determinant -->
+<!-- $$$deviceRect[overload1]$$$deviceRect -->
+<h3 class="fn"><a name="deviceRect"></a><span class="type"><a href="../qtcore/qrect.html">QRect</a></span> RenderState::<span class="name">deviceRect</span>() const</h3>
+<p>Returns the device rect of the surface being rendered to</p>
+<!-- @@@deviceRect -->
+<!-- $$$dirtyStates[overload1]$$$dirtyStates -->
+<h3 class="fn"><a name="dirtyStates"></a><span class="type"><a href="qsgmaterialshader-renderstate.html#DirtyState-enum">DirtyStates</a></span> RenderState::<span class="name">dirtyStates</span>() const</h3>
+<p>Returns which rendering states that have changed and needs to be updated for geometry rendered with this material to conform to the current rendering state.</p>
+<!-- @@@dirtyStates -->
+<!-- $$$isMatrixDirty[overload1]$$$isMatrixDirty -->
+<h3 class="fn"><a name="isMatrixDirty"></a><span class="type">bool</span> RenderState::<span class="name">isMatrixDirty</span>() const</h3>
+<p>Returns <tt>true</tt> if the <a href="qsgmaterialshader-renderstate.html#dirtyStates">dirtyStates</a>() contain the dirty matrix state, otherwise returns <tt>false</tt>.</p>
+<!-- @@@isMatrixDirty -->
+<!-- $$$isOpacityDirty[overload1]$$$isOpacityDirty -->
+<h3 class="fn"><a name="isOpacityDirty"></a><span class="type">bool</span> RenderState::<span class="name">isOpacityDirty</span>() const</h3>
+<p>Returns <tt>true</tt> if the <a href="qsgmaterialshader-renderstate.html#dirtyStates">dirtyStates</a>() contains the dirty opacity state, otherwise returns <tt>false</tt>.</p>
+<!-- @@@isOpacityDirty -->
+<!-- $$$modelViewMatrix[overload1]$$$modelViewMatrix -->
+<h3 class="fn"><a name="modelViewMatrix"></a><span class="type"><a href="../qtgui/qmatrix4x4.html">QMatrix4x4</a></span> RenderState::<span class="name">modelViewMatrix</span>() const</h3>
+<p>Returns the model view matrix.</p>
+<p>If the material has the RequiresFullMatrix flag set, this is guaranteed to be the complete transform matrix calculated from the scenegraph.</p>
+<p>However, if this flag is not set, the renderer may choose to alter this matrix. For example, it may pre-transform vertices on the CPU and set this matrix to identity.</p>
+<p>In a situation such as the above, it is still possible to retrieve the actual matrix determinant by setting the RequiresDeterminant flag in the material and calling the <a href="qsgmaterialshader-renderstate.html#determinant">determinant</a>() accessor.</p>
+<!-- @@@modelViewMatrix -->
+<!-- $$$opacity[overload1]$$$opacity -->
+<h3 class="fn"><a name="opacity"></a><span class="type">float</span> RenderState::<span class="name">opacity</span>() const</h3>
+<p>Returns the accumulated opacity to be used for rendering.</p>
+<!-- @@@opacity -->
+<!-- $$$viewportRect[overload1]$$$viewportRect -->
+<h3 class="fn"><a name="viewportRect"></a><span class="type"><a href="../qtcore/qrect.html">QRect</a></span> RenderState::<span class="name">viewportRect</span>() const</h3>
+<p>Returns the viewport rect of the surface being rendered to.</p>
+<!-- @@@viewportRect -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

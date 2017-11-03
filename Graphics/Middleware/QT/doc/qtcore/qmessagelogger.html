@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qlogging.cpp -->
+  <title>QtCore 5.0: QMessageLogger Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QMessageLogger Class</h1>
+<!-- $$$QMessageLogger-brief -->
+<p>The QMessageLogger class generates log messages. <a href="#details">More...</a></p>
+<!-- @@@QMessageLogger -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QMessageLogger&gt;</span></pre><p>This class was introduced in QtCore 5.0.</p>
+<ul>
+<li><a href="qmessagelogger-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#QMessageLogger">QMessageLogger</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#QMessageLogger-2">QMessageLogger</a></b>(const char *<i> file</i>, int<i> line</i>, const char *<i> function</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#QMessageLogger-3">QMessageLogger</a></b>(const char *<i> file</i>, int<i> line</i>, const char *<i> function</i>, const char *<i> category</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#critical">critical</a></b>(const char *<i> msg</i>, ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QDebug </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#critical-2">critical</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#debug">debug</a></b>(const char *<i> msg</i>, ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QDebug </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#debug-2">debug</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#warning">warning</a></b>(const char *<i> msg</i>, ...) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QDebug </td><td class="memItemRight bottomAlign"><b><a href="qmessagelogger.html#warning-2">warning</a></b>() const</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QMessageLogger-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QMessageLogger class generates log messages.</p>
+<p>QMessageLogger is used to generate messages for the Qt logging framework. Usually one uses it through <a href="qtglobal.html#qDebug">qDebug</a>(), <a href="qtglobal.html#qWarning">qWarning</a>(), qCritical, or <a href="qtglobal.html#qFatal">qFatal</a>() functions, which are actually macros that expand to QMessageLogger(__FILE__, __LINE__, Q_FUNC_INFO).<a href="qmessagelogger.html#debug">debug</a>() et al.</p>
+<p>One example of direct use is to forward errors that stem from a scripting language, e.g&#x2e; QML:</p>
+<pre class="cpp">    <span class="type">void</span> statusChanged(<span class="type">QDeclarativeComponent</span><span class="operator">::</span>Status status) {
+        <span class="keyword">if</span> (status <span class="operator">=</span><span class="operator">=</span> <span class="type">QDeclarativeComponent</span><span class="operator">::</span>Error) {
+            foreach (<span class="keyword">const</span> <span class="type">QDeclarativeError</span> <span class="operator">&amp;</span>error<span class="operator">,</span> component<span class="operator">-</span><span class="operator">&gt;</span>errors()) {
+                <span class="keyword">const</span> <span class="type"><a href="qbytearray.html">QByteArray</a></span> file <span class="operator">=</span> error<span class="operator">.</span>url()<span class="operator">.</span>toEncoded();
+                <span class="type">QMessageLogger</span>(file<span class="operator">.</span>constData()<span class="operator">,</span> error<span class="operator">.</span>line()<span class="operator">,</span> <span class="number">0</span>)<span class="operator">.</span>debug() <span class="operator">&lt;</span><span class="operator">&lt;</span> error<span class="operator">.</span>description();
+            }
+        }
+    }</pre>
+</div>
+<p><b>See also </b><a href="qmessagelogcontext.html">QMessageLogContext</a>, <a href="qtglobal.html#qDebug">qDebug</a>(), <a href="qtglobal.html#qWarning">qWarning</a>(), <a href="qtglobal.html#qCritical">qCritical</a>(), and <a href="qtglobal.html#qFatal">qFatal</a>().</p>
+<!-- @@@QMessageLogger -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QMessageLogger[overload1]$$$QMessageLogger -->
+<h3 class="fn"><a name="QMessageLogger"></a>QMessageLogger::<span class="name">QMessageLogger</span>()</h3>
+<p>Constructs a default <a href="qmessagelogger.html">QMessageLogger</a>. See the other constructors to specify context information.</p>
+<!-- @@@QMessageLogger -->
+<!-- $$$QMessageLogger$$$QMessageLoggerconstchar*intconstchar* -->
+<h3 class="fn"><a name="QMessageLogger-2"></a>QMessageLogger::<span class="name">QMessageLogger</span>(const <span class="type">char</span> *<i> file</i>, <span class="type">int</span><i> line</i>, const <span class="type">char</span> *<i> function</i>)</h3>
+<p>Constructs a <a href="qmessagelogger.html">QMessageLogger</a> to record log messages for <i>file</i> at <i>line</i> in <i>function</i>. The is equivalent to <a href="qmessagelogger.html">QMessageLogger</a>(file, line, function, &quot;default&quot;)</p>
+<!-- @@@QMessageLogger -->
+<!-- $$$QMessageLogger$$$QMessageLoggerconstchar*intconstchar*constchar* -->
+<h3 class="fn"><a name="QMessageLogger-3"></a>QMessageLogger::<span class="name">QMessageLogger</span>(const <span class="type">char</span> *<i> file</i>, <span class="type">int</span><i> line</i>, const <span class="type">char</span> *<i> function</i>, const <span class="type">char</span> *<i> category</i>)</h3>
+<p>Constructs a <a href="qmessagelogger.html">QMessageLogger</a> to record <i>category</i> messages for <i>file</i> at <i>line</i> in <i>function</i>.</p>
+<!-- @@@QMessageLogger -->
+<!-- $$$critical[overload1]$$$criticalconstchar*... -->
+<h3 class="fn"><a name="critical"></a><span class="type">void</span> QMessageLogger::<span class="name">critical</span>(const <span class="type">char</span> *<i> msg</i>, ...) const</h3>
+<p>Logs a critical message specified with format <i>msg</i>. Additional parameters, specified by <i>msg</i>, may be used.</p>
+<p><b>See also </b><a href="qtglobal.html#qCritical">qCritical</a>().</p>
+<!-- @@@critical -->
+<!-- $$$critical$$$critical -->
+<h3 class="fn"><a name="critical-2"></a><span class="type"><a href="qdebug.html">QDebug</a></span> QMessageLogger::<span class="name">critical</span>() const</h3>
+<p>Logs a critical message using a <a href="qdebug.html">QDebug</a> stream</p>
+<p><b>See also </b><a href="qtglobal.html#qCritical">qCritical</a>() and <a href="qdebug.html">QDebug</a>.</p>
+<!-- @@@critical -->
+<!-- $$$debug[overload1]$$$debugconstchar*... -->
+<h3 class="fn"><a name="debug"></a><span class="type">void</span> QMessageLogger::<span class="name">debug</span>(const <span class="type">char</span> *<i> msg</i>, ...) const</h3>
+<p>Logs a debug message specified with format <i>msg</i>. Additional parameters, specified by <i>msg</i>, may be used.</p>
+<p><b>See also </b><a href="qtglobal.html#qDebug">qDebug</a>().</p>
+<!-- @@@debug -->
+<!-- $$$debug$$$debug -->
+<h3 class="fn"><a name="debug-2"></a><span class="type"><a href="qdebug.html">QDebug</a></span> QMessageLogger::<span class="name">debug</span>() const</h3>
+<p>Logs a debug message using a <a href="qdebug.html">QDebug</a> stream</p>
+<p><b>See also </b><a href="qtglobal.html#qDebug">qDebug</a>() and <a href="qdebug.html">QDebug</a>.</p>
+<!-- @@@debug -->
+<!-- $$$warning[overload1]$$$warningconstchar*... -->
+<h3 class="fn"><a name="warning"></a><span class="type">void</span> QMessageLogger::<span class="name">warning</span>(const <span class="type">char</span> *<i> msg</i>, ...) const</h3>
+<p>Logs a warning message specified with format <i>msg</i>. Additional parameters, specified by <i>msg</i>, may be used.</p>
+<p><b>See also </b><a href="qtglobal.html#qWarning">qWarning</a>().</p>
+<!-- @@@warning -->
+<!-- $$$warning$$$warning -->
+<h3 class="fn"><a name="warning-2"></a><span class="type"><a href="qdebug.html">QDebug</a></span> QMessageLogger::<span class="name">warning</span>() const</h3>
+<p>Logs a debug message using a <a href="qdebug.html">QDebug</a> stream</p>
+<p><b>See also </b><a href="qtglobal.html#qWarning">qWarning</a>() and <a href="qdebug.html">QDebug</a>.</p>
+<!-- @@@warning -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

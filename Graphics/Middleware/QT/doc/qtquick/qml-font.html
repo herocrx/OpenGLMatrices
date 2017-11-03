@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmltypereference.qdoc -->
+  <title>QtQuick 5.0: QML Basic Type: font</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">QML Basic Type: font</h1>
+<span class="subtitle"></span>
+<!-- $$$font-description -->
+<div class="descr"> <a name="details"></a>
+<p>The most commonly used properties are:</p>
+<ul>
+<li><a href="../qtqml/qml-string.html">string</a> <tt>font.family</tt></li>
+<li><a href="../qtqml/qml-bool.html">bool</a> <tt>font.bold</tt></li>
+<li><a href="../qtqml/qml-bool.html">bool</a> <tt>font.italic</tt></li>
+<li><a href="../qtqml/qml-bool.html">bool</a> <tt>font.underline</tt></li>
+<li><a href="../qtqml/qml-real.html">real</a> <tt>font.pointSize</tt></li>
+<li><a href="../qtqml/qml-int.html">int</a> <tt>font.pixelSize</tt></li>
+</ul>
+<p>If both <tt>pointSize</tt> and a <tt>pixelSize</tt> are specified, <tt>pixelSize</tt> will be used.</p>
+<p>The following properties are also available:</p>
+<ul>
+<li><a href="../qtqml/qml-enumeration.html">enumeration</a> <tt>font.weight</tt></li>
+<li><a href="../qtqml/qml-bool.html">bool</a> <tt>font.overline</tt></li>
+<li><a href="../qtqml/qml-bool.html">bool</a> <tt>font.strikeout</tt></li>
+<li><a href="../qtqml/qml-enumeration.html">enumeration</a> <tt>font.capitalization</tt></li>
+<li><a href="../qtqml/qml-real.html">real</a> <tt>font.letterSpacing</tt></li>
+<li><a href="../qtqml/qml-real.html">real</a> <tt>font.wordSpacing</tt></li>
+</ul>
+<p>Example:</p>
+<pre class="qml"><span class="type"><a href="qml-qtquick2-text.html">Text</a></span> { <span class="name">font</span>.family: <span class="string">&quot;Helvetica&quot;</span>; <span class="name">font</span>.pointSize: <span class="number">13</span>; <span class="name">font</span>.bold: <span class="number">true</span> }</pre>
+<p>When integrating with C++, note that any <a href="../qtgui/qfont.html">QFont</a> value <a href="../qtqml/qtqml-cppintegration-data.html">passed into QML from C++</a> is automatically converted into a <tt>font</tt> value, and vice-versa.</p>
+<p>This basic type is provided by the <a href="qtquick-module.html">QtQuick</a> import.</p>
+<p>Font weighting is classified on a scale from 0 to 99, where a weight of 0 is ultralight, and 99 is extremely black. The following values are supported:</p>
+<table class="generic">
+ <tr valign="top" class="odd"><td ><tt>Font.Light</tt></td><td >25</td></tr>
+<tr valign="top" class="even"><td ><tt>Font.Normal</tt></td><td >50</td></tr>
+<tr valign="top" class="odd"><td ><tt>Font.DemiBold</tt></td><td >63</td></tr>
+<tr valign="top" class="even"><td ><tt>Font.Bold</tt></td><td >75</td></tr>
+<tr valign="top" class="odd"><td ><tt>Font.Black</tt></td><td >87</td></tr>
+</table>
+<p>Capitalization supports the following values:</p>
+<table class="generic">
+ <tr valign="top" class="odd"><td ><tt>Font.MixedCase</tt></td><td >No capitalization change is applied.</td></tr>
+<tr valign="top" class="even"><td ><tt>Font.AllUppercase</tt></td><td >Alters the text to be rendered in all uppercase type.</td></tr>
+<tr valign="top" class="odd"><td ><tt>Font.AllLowercase</tt></td><td >Alters the text to be rendered in all lowercase type.</td></tr>
+<tr valign="top" class="even"><td ><tt>Font.SmallCaps</tt></td><td >Alters the text to be rendered in small-caps type.</td></tr>
+<tr valign="top" class="odd"><td ><tt>Font.Capitalize</tt></td><td >Alters the text to be rendered with the first character of each word as an uppercase character.</td></tr>
+</table>
+</div>
+<p><b>See also </b><a href="../qtqml/qtqml-typesystem-basictypes.html">QML Basic Types</a>.</p>
+<!-- @@@font -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

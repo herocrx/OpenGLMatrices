@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instructionals module="QtQuick">
+    <examples>
+        <example name="Custom Geometry Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/scenegraph-customgeometry.html" projectPath="quick/scenegraph/customgeometry/customgeometry.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/custom-geometry-example.png">
+            <description><![CDATA[Shows how to implement a custom geometry in the Qt Quick Scene Graph.]]></description>
+            <tags>geometry,custom</tags>
+            <fileToOpen>quick/scenegraph/customgeometry/main.qml</fileToOpen>
+            <fileToOpen>quick/scenegraph/customgeometry/main.cpp</fileToOpen>
+        </example>
+        <example name="Extending QML - Adding Types Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-adding.html">
+            <description><![CDATA[Exporting C++ Classes]]></description>
+            <tags>adding,qml,extending,types</tags>
+        </example>
+        <example name="Extending QML - Attached Properties Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-attached.html">
+            <description><![CDATA[Attached Properties]]></description>
+            <tags>qml,properties,extending,attached</tags>
+        </example>
+        <example name="Extending QML - Binding Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-binding.html">
+            <description><![CDATA[Binding]]></description>
+            <tags>qml,extending,binding</tags>
+        </example>
+        <example name="Extending QML - Default Property Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-default.html">
+            <description><![CDATA[Default Property]]></description>
+            <tags>qml,property,extending,default</tags>
+        </example>
+        <example name="Extending QML - Grouped Properties Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-grouped.html">
+            <description><![CDATA[Grouped Properties]]></description>
+            <tags>qml,properties,grouped,extending</tags>
+        </example>
+        <example name="Extending QML - Inheritance and Coercion Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-coercion.html">
+            <description><![CDATA[C++ Inheritance and Coercion]]></description>
+            <tags>and,inheritance,qml,coercion,extending</tags>
+        </example>
+        <example name="Extending QML - Methods Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-methods.html">
+            <description><![CDATA[Methods Support]]></description>
+            <tags>qml,methods,extending</tags>
+        </example>
+        <example name="Extending QML - Object and List Property Types Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-properties.html">
+            <description><![CDATA[Exporting C++ Properties]]></description>
+            <tags>and,list,qml,property,object,extending,types</tags>
+        </example>
+        <example name="Extending QML - Property Value Source Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-valuesource.html">
+            <description><![CDATA[Property Value Source]]></description>
+            <tags>qml,property,extending,value,source</tags>
+        </example>
+        <example name="Extending QML - Signal Support Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/referenceexamples-signal.html">
+            <description><![CDATA[Signal Support]]></description>
+            <tags>signal,qml,extending,support</tags>
+        </example>
+        <example name="OpenGL Under QML" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/scenegraph-openglunderqml.html" projectPath="quick/scenegraph/openglunderqml/openglunderqml.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/openglunderqml-example.jpg">
+            <description><![CDATA[Shows how to render OpenGL under a Qt Quick scene.]]></description>
+            <tags>qml,under,opengl</tags>
+            <fileToOpen>quick/scenegraph/openglunderqml/main.qml</fileToOpen>
+            <fileToOpen>quick/scenegraph/openglunderqml/main.cpp</fileToOpen>
+        </example>
+        <example name="QML Advanced Tutorial 1 - Creating the Game Canvas and Blocks" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-samegame-samegame1.html" projectPath="quick/tutorials/samegame/samegame1/samegame1.qmlproject" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/declarative-adv-tutorial1.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>and,game,qml,canvas,the,advanced,blocks,creating,tutorial</tags>
+        </example>
+        <example name="QML Advanced Tutorial 2 - Populating the Game Canvas" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-samegame-samegame2.html" projectPath="quick/tutorials/samegame/samegame2/samegame2.qmlproject" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/declarative-adv-tutorial2.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>game,qml,canvas,the,advanced,populating,tutorial</tags>
+        </example>
+        <example name="QML Advanced Tutorial 3 - Implementing the Game Logic" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-samegame-samegame3.html" projectPath="quick/tutorials/samegame/samegame3/samegame3.qmlproject" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/declarative-adv-tutorial3.png">
+            <description><![CDATA[No description available]]></description>
+            <tags>game,qml,logic,the,advanced,implementing,tutorial</tags>
+        </example>
+        <example name="QML Advanced Tutorial 4 - Finishing Touches" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-samegame-samegame4.html" projectPath="quick/tutorials/samegame/samegame4/samegame4.qmlproject" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/declarative-adv-tutorial4.gif">
+            <description><![CDATA[No description available]]></description>
+            <tags>qml,finishing,advanced,touches,tutorial</tags>
+        </example>
+        <example name="QML Dynamic View Ordering Tutorial 1 - A Simple ListView and Delegate" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-dynamicview-dynamicview1.html" projectPath="quick/tutorials/dynamicview/dynamicview1/dynamicview1.qmlproject">
+            <description><![CDATA[No description available]]></description>
+            <tags>and,qml,simple,listview,a,dynamic,delegate,tutorial,ordering,view</tags>
+        </example>
+        <example name="QML Dynamic View Ordering Tutorial 2 - Dragging View Items" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-dynamicview-dynamicview2.html" projectPath="quick/tutorials/dynamicview/dynamicview2/dynamicview2.qmlproject">
+            <description><![CDATA[No description available]]></description>
+            <tags>dragging,items,qml,dynamic,tutorial,ordering,view</tags>
+        </example>
+        <example name="QML Dynamic View Ordering Tutorial 3 - Moving Dragged Items" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-dynamicview-dynamicview3.html" projectPath="quick/tutorials/dynamicview/dynamicview3/dynamicview3.qmlproject">
+            <description><![CDATA[No description available]]></description>
+            <tags>items,qml,moving,dynamic,dragged,tutorial,ordering,view</tags>
+        </example>
+        <example name="QML Dynamic View Ordering Tutorial 4 - Sorting Items" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/qtquick2-tutorials-dynamicview-dynamicview4.html" projectPath="quick/tutorials/dynamicview/dynamicview4/dynamicview4.qmlproject">
+            <description><![CDATA[No description available]]></description>
+            <tags>items,qml,dynamic,sorting,tutorial,ordering,view</tags>
+        </example>
+        <example name="QML Examples - Image Elements" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/imageelements.html" projectPath="quick/imageelements/imageelements.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-imageelements-example.png">
+            <description><![CDATA[This is a collection of QML examples relating to image elements.]]></description>
+            <tags>qml,image,elements</tags>
+            <fileToOpen>quick/imageelements/imageelements.qml</fileToOpen>
+            <fileToOpen>quick/imageelements/main.cpp</fileToOpen>
+        </example>
+        <example name="QML Examples - Shader Effects" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/shadereffects.html" projectPath="quick/shadereffects/shadereffects.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-shadereffects-example.png">
+            <description><![CDATA[This is a shader effects example]]></description>
+            <tags>effects,qml,shader</tags>
+            <fileToOpen>quick/shadereffects/shadereffects.qml</fileToOpen>
+            <fileToOpen>quick/shadereffects/main.cpp</fileToOpen>
+        </example>
+        <example name="QML Examples - Text" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/text.html" projectPath="quick/text/text.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-text-example.png">
+            <description><![CDATA[This is a collection of QML examples relating to text]]></description>
+            <tags>qml,text</tags>
+            <fileToOpen>quick/text/text.qml</fileToOpen>
+            <fileToOpen>quick/text/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Accessibility" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/accessibility.html" projectPath="quick/accessibility/accessibility.pro">
+            <description><![CDATA[This example has accessible buttons.]]></description>
+            <tags>qtquick,accessibility</tags>
+            <fileToOpen>quick/accessibility/accessibility.qml</fileToOpen>
+            <fileToOpen>quick/accessibility/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Animation" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/animation.html" projectPath="quick/animation/animation.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-animations-example.png">
+            <description><![CDATA[This is a collection of QML Animation examples.]]></description>
+            <tags>qtquick,animation</tags>
+            <fileToOpen>quick/animation/animation.qml</fileToOpen>
+            <fileToOpen>quick/animation/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Canvas" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/canvas.html" projectPath="quick/canvas/canvas.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-canvas-example.png">
+            <description><![CDATA[This is a collection of QML Canvas examples.]]></description>
+            <tags>qtquick,canvas</tags>
+            <fileToOpen>quick/canvas/canvas.qml</fileToOpen>
+            <fileToOpen>quick/canvas/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Drag and Drop" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/draganddrop.html" projectPath="quick/draganddrop/draganddrop.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-draganddrop-example.png">
+            <description><![CDATA[This is a collection of QML drag and drop examples]]></description>
+            <tags>and,drag,drop,qtquick</tags>
+            <fileToOpen>quick/draganddrop/draganddrop.qml</fileToOpen>
+            <fileToOpen>quick/draganddrop/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Key Interaction" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/keyinteraction.html" projectPath="quick/keyinteraction/keyinteraction.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-keyinteraction-example.png">
+            <description><![CDATA[This is a collection of QML keyboard interaction examples.]]></description>
+            <tags>key,qtquick,interaction</tags>
+            <fileToOpen>quick/keyinteraction/keyinteraction.qml</fileToOpen>
+            <fileToOpen>quick/keyinteraction/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Local Storage" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/localstorage.html" projectPath="quick/localstorage/localstorage.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-localstorage-example.png">
+            <description><![CDATA[A collection of QML local storage examples.]]></description>
+            <tags>local,qtquick,storage</tags>
+            <fileToOpen>quick/localstorage/localstorage/localstorage.qml</fileToOpen>
+            <fileToOpen>quick/localstorage/localstorage/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - MouseArea" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/mousearea.html" projectPath="quick/mousearea/mousearea.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-mousearea-example.png">
+            <description><![CDATA[This is an example of the MouseArea element in QML]]></description>
+            <tags>qtquick,mousearea</tags>
+            <fileToOpen>quick/mousearea/mousearea.qml</fileToOpen>
+            <fileToOpen>quick/mousearea/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Positioners" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/positioners.html" projectPath="quick/positioners/positioners.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-positioners-example.png">
+            <description><![CDATA[This is a collection of QML Positioner examples.]]></description>
+            <tags>positioners,qtquick</tags>
+            <fileToOpen>quick/positioners/positioners.qml</fileToOpen>
+            <fileToOpen>quick/positioners/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Right to Left" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/righttoleft.html" projectPath="quick/righttoleft/righttoleft.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-righttoleft-example.png">
+            <description><![CDATA[This is a collection of QML Right to Left examples.]]></description>
+            <tags>qtquick,left,right,to</tags>
+            <fileToOpen>quick/righttoleft/righttoleft.qml</fileToOpen>
+            <fileToOpen>quick/righttoleft/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Threading" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/threading.html" projectPath="quick/threading/threading.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-threading-example.png">
+            <description><![CDATA[This is a collection of QML Multithreading examples.]]></description>
+            <tags>threading,qtquick</tags>
+            <fileToOpen>quick/threading/threading.qml</fileToOpen>
+            <fileToOpen>quick/threading/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Touch Interaction" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/touchinteraction.html" projectPath="quick/touchinteraction/touchinteraction.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-touchinteraction-example.png">
+            <description><![CDATA[This is a collection of QML Touch Interaction examples.]]></description>
+            <tags>touch,qtquick,interaction</tags>
+            <fileToOpen>quick/touchinteraction/touchinteraction.qml</fileToOpen>
+            <fileToOpen>quick/touchinteraction/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick Examples - Views" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/views.html" projectPath="quick/views/views.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-modelviews-example.png">
+            <description><![CDATA[This is a collection of QML model/view examples]]></description>
+            <tags>qtquick,views</tags>
+            <fileToOpen>quick/views/views.qml</fileToOpen>
+            <fileToOpen>quick/views/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick.Particles Examples - Affectors" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/particles-system.html" projectPath="quick/particles/system/system.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-system-example.png">
+            <description><![CDATA[This is a collection of examples using Affectors in the QML particle system.]]></description>
+            <tags>affectors,qtquick.particles</tags>
+            <fileToOpen>quick/particles/system/system.qml</fileToOpen>
+            <fileToOpen>quick/particles/system/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick.Particles Examples - Affectors" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/particles-imageparticle.html" projectPath="quick/particles/imageparticle/imageparticle.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-imageparticle-example.png">
+            <description><![CDATA[This is a collection of examples using Affectors in the QML particle system.]]></description>
+            <tags>affectors,qtquick.particles</tags>
+            <fileToOpen>quick/particles/imageparticle/imageparticle.qml</fileToOpen>
+            <fileToOpen>quick/particles/imageparticle/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick.Particles Examples - Affectors" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/particles-affectors.html" projectPath="quick/particles/affectors/affectors.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-affectors-example.png">
+            <description><![CDATA[This is a collection of examples using Affectors in the QML particle system.]]></description>
+            <tags>affectors,qtquick.particles</tags>
+            <fileToOpen>quick/particles/affectors/affectors.qml</fileToOpen>
+            <fileToOpen>quick/particles/affectors/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick.Particles Examples - CustomParticle" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/particles-customparticle.html" projectPath="quick/particles/customparticle/customparticle.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-customparticle-example.png">
+            <description><![CDATA[This is a collection of examples using CustomParticle in the QML particle system.]]></description>
+            <tags>customparticle,qtquick.particles</tags>
+            <fileToOpen>quick/particles/customparticle/customparticle.qml</fileToOpen>
+            <fileToOpen>quick/particles/customparticle/main.cpp</fileToOpen>
+        </example>
+        <example name="QtQuick.Particles Examples - Emitters" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/particles-emitters.html" projectPath="quick/particles/emitters/emitters.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/qml-emitters-example.png">
+            <description><![CDATA[This is a collection of examples using Emitters in the QML particle system.]]></description>
+            <tags>emitters,qtquick.particles</tags>
+            <fileToOpen>quick/particles/emitters/emitters.qml</fileToOpen>
+            <fileToOpen>quick/particles/emitters/main.cpp</fileToOpen>
+        </example>
+        <example name="Scenegraph Painted Item Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/customitems-painteditem.html" projectPath="quick/customitems/painteditem/painteditem.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/declarative-textballoons_example.png">
+            <description><![CDATA[Shows how to implement QPainter-based custom scenegraph items.]]></description>
+            <tags>scenegraph,item,painted</tags>
+        </example>
+        <example name="Simple Material Example" docUrl="qthelp://org.qt-project.qtquick.502/qtquick/scenegraph-simplematerial.html" projectPath="quick/scenegraph/simplematerial/simplematerial.pro" imageUrl="qthelp://org.qt-project.qtquick.502/qtquick/images/simplematerial-example.jpg">
+            <description><![CDATA[Shows how to define a scene graph material to fill a shape.]]></description>
+            <tags>material,simple</tags>
+            <fileToOpen>quick/scenegraph/simplematerial/main.qml</fileToOpen>
+            <fileToOpen>quick/scenegraph/simplematerial/simplematerial.cpp</fileToOpen>
+        </example>
+    </examples>
+</instructionals>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtQml 5.0: ListModel Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">ListModel Class</h1>
+<ul>
+<li><a href="listmodel-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#ListModel">ListModel</a></b>(ListLayout *<i> layout</i>, QQuickListModel *<i> modelCache</i>, int<i> uid</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#dtor.ListModel">~ListModel</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#append">append</a></b>(v8::Handle&lt;v8::Object&gt;<i> object</i>, QV8Engine *<i> eng</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#appendElement">appendElement</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#clear">clear</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#destroy">destroy</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#elementCount">elementCount</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const ListLayout::Role &amp; </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#getExistingRole">getExistingRole</a></b>(int<i> index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ListModel * </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#getListProperty">getListProperty</a></b>(int<i> elementIndex</i>, const ListLayout::Role &amp;<i> role</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> const ListLayout::Role &amp; </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#getOrCreateListRole">getOrCreateListRole</a></b>(const QString &amp;<i> name</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> ModelObject * </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#getOrCreateModelObject">getOrCreateModelObject</a></b>(QQuickListModel *<i> model</i>, int<i> elementIndex</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QVariant </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#getProperty">getProperty</a></b>(int<i> elementIndex</i>, int<i> roleIndex</i>, const QQuickListModel *<i> owner</i>, QV8Engine *<i> eng</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#getUid">getUid</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#insert">insert</a></b>(int<i> elementIndex</i>, v8::Handle&lt;v8::Object&gt;<i> object</i>, QV8Engine *<i> eng</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#insertElement">insertElement</a></b>(int<i> index</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#move">move</a></b>(int<i> from</i>, int<i> to</i>, int<i> n</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#remove">remove</a></b>(int<i> index</i>, int<i> count</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#roleCount">roleCount</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#set">set</a></b>(int<i> elementIndex</i>, v8::Handle&lt;v8::Object&gt;<i> object</i>, QVector&lt;int&gt; *<i> roles</i>, QV8Engine *<i> eng</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#set-2">set</a></b>(int<i> elementIndex</i>, v8::Handle&lt;v8::Object&gt;<i> object</i>, QV8Engine *<i> eng</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#setExistingProperty">setExistingProperty</a></b>(int<i> uid</i>, const QString &amp;<i> key</i>, v8::Handle&lt;v8::Value&gt;<i> data</i>, QV8Engine *<i> eng</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#setOrCreateProperty">setOrCreateProperty</a></b>(int<i> elementIndex</i>, const QString &amp;<i> key</i>, const QVariant &amp;<i> data</i>)</td></tr>
+</table>
+<a name="static-public-members"></a>
+<h2>Static Public Members</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="listmodel.html#sync">sync</a></b>(ListModel *<i> src</i>, ListModel *<i> target</i>, QHash&lt;int, ListModel *&gt; *<i> srcModelHash</i>)</td></tr>
+</table>
+<a name="details"></a>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$ListModel[overload1]$$$ListModelListLayout*QQuickListModel*int -->
+<h3 class="fn"><a name="ListModel"></a>ListModel::<span class="name">ListModel</span>(<span class="type">ListLayout</span> *<i> layout</i>, <span class="type">QQuickListModel</span> *<i> modelCache</i>, <span class="type">int</span><i> uid</i>)</h3>
+<!-- @@@ListModel -->
+<!-- $$$~ListModel[overload1]$$$~ListModel -->
+<h3 class="fn"><a name="dtor.ListModel"></a>ListModel::<span class="name">~ListModel</span>()</h3>
+<!-- @@@~ListModel -->
+<!-- $$$append[overload1]$$$appendv8::Handle<v8::Object>QV8Engine* -->
+<h3 class="fn"><a name="append"></a><span class="type">int</span> ListModel::<span class="name">append</span>(<span class="type">v8::Handle</span>&lt;<span class="type">v8::Object</span>&gt;<i> object</i>, <span class="type">QV8Engine</span> *<i> eng</i>)</h3>
+<!-- @@@append -->
+<!-- $$$appendElement[overload1]$$$appendElement -->
+<h3 class="fn"><a name="appendElement"></a><span class="type">int</span> ListModel::<span class="name">appendElement</span>()</h3>
+<!-- @@@appendElement -->
+<!-- $$$clear[overload1]$$$clear -->
+<h3 class="fn"><a name="clear"></a><span class="type">void</span> ListModel::<span class="name">clear</span>()</h3>
+<!-- @@@clear -->
+<!-- $$$destroy[overload1]$$$destroy -->
+<h3 class="fn"><a name="destroy"></a><span class="type">void</span> ListModel::<span class="name">destroy</span>()</h3>
+<!-- @@@destroy -->
+<!-- $$$elementCount[overload1]$$$elementCount -->
+<h3 class="fn"><a name="elementCount"></a><span class="type">int</span> ListModel::<span class="name">elementCount</span>() const</h3>
+<!-- @@@elementCount -->
+<!-- $$$getExistingRole[overload1]$$$getExistingRoleint -->
+<h3 class="fn"><a name="getExistingRole"></a>const <span class="type"><a href="listlayout-role.html">ListLayout::Role</a></span> &amp; ListModel::<span class="name">getExistingRole</span>(<span class="type">int</span><i> index</i>)</h3>
+<!-- @@@getExistingRole -->
+<!-- $$$getListProperty[overload1]$$$getListPropertyintconstListLayout::Role& -->
+<h3 class="fn"><a name="getListProperty"></a><span class="type"><a href="collision-listmodel.html">ListModel</a></span> * ListModel::<span class="name">getListProperty</span>(<span class="type">int</span><i> elementIndex</i>, const <span class="type"><a href="listlayout-role.html">ListLayout::Role</a></span> &amp;<i> role</i>)</h3>
+<!-- @@@getListProperty -->
+<!-- $$$getOrCreateListRole[overload1]$$$getOrCreateListRoleconstQString& -->
+<h3 class="fn"><a name="getOrCreateListRole"></a>const <span class="type"><a href="listlayout-role.html">ListLayout::Role</a></span> &amp; ListModel::<span class="name">getOrCreateListRole</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> name</i>)</h3>
+<!-- @@@getOrCreateListRole -->
+<!-- $$$getOrCreateModelObject[overload1]$$$getOrCreateModelObjectQQuickListModel*int -->
+<h3 class="fn"><a name="getOrCreateModelObject"></a><span class="type">ModelObject</span> * ListModel::<span class="name">getOrCreateModelObject</span>(<span class="type">QQuickListModel</span> *<i> model</i>, <span class="type">int</span><i> elementIndex</i>)</h3>
+<!-- @@@getOrCreateModelObject -->
+<!-- $$$getProperty[overload1]$$$getPropertyintintconstQQuickListModel*QV8Engine* -->
+<h3 class="fn"><a name="getProperty"></a><span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> ListModel::<span class="name">getProperty</span>(<span class="type">int</span><i> elementIndex</i>, <span class="type">int</span><i> roleIndex</i>, const <span class="type">QQuickListModel</span> *<i> owner</i>, <span class="type">QV8Engine</span> *<i> eng</i>)</h3>
+<!-- @@@getProperty -->
+<!-- $$$getUid[overload1]$$$getUid -->
+<h3 class="fn"><a name="getUid"></a><span class="type">int</span> ListModel::<span class="name">getUid</span>() const</h3>
+<!-- @@@getUid -->
+<!-- $$$insert[overload1]$$$insertintv8::Handle<v8::Object>QV8Engine* -->
+<h3 class="fn"><a name="insert"></a><span class="type">void</span> ListModel::<span class="name">insert</span>(<span class="type">int</span><i> elementIndex</i>, <span class="type">v8::Handle</span>&lt;<span class="type">v8::Object</span>&gt;<i> object</i>, <span class="type">QV8Engine</span> *<i> eng</i>)</h3>
+<!-- @@@insert -->
+<!-- $$$insertElement[overload1]$$$insertElementint -->
+<h3 class="fn"><a name="insertElement"></a><span class="type">void</span> ListModel::<span class="name">insertElement</span>(<span class="type">int</span><i> index</i>)</h3>
+<!-- @@@insertElement -->
+<!-- $$$move[overload1]$$$moveintintint -->
+<h3 class="fn"><a name="move"></a><span class="type">void</span> ListModel::<span class="name">move</span>(<span class="type">int</span><i> from</i>, <span class="type">int</span><i> to</i>, <span class="type">int</span><i> n</i>)</h3>
+<!-- @@@move -->
+<!-- $$$remove[overload1]$$$removeintint -->
+<h3 class="fn"><a name="remove"></a><span class="type">void</span> ListModel::<span class="name">remove</span>(<span class="type">int</span><i> index</i>, <span class="type">int</span><i> count</i>)</h3>
+<!-- @@@remove -->
+<!-- $$$roleCount[overload1]$$$roleCount -->
+<h3 class="fn"><a name="roleCount"></a><span class="type">int</span> ListModel::<span class="name">roleCount</span>() const</h3>
+<!-- @@@roleCount -->
+<!-- $$$set[overload1]$$$setintv8::Handle<v8::Object>QVector<int>*QV8Engine* -->
+<h3 class="fn"><a name="set"></a><span class="type">void</span> ListModel::<span class="name">set</span>(<span class="type">int</span><i> elementIndex</i>, <span class="type">v8::Handle</span>&lt;<span class="type">v8::Object</span>&gt;<i> object</i>, <span class="type"><a href="../qtcore/qvector.html">QVector</a></span>&lt;<span class="type">int</span>&gt; *<i> roles</i>, <span class="type">QV8Engine</span> *<i> eng</i>)</h3>
+<!-- @@@set -->
+<!-- $$$set$$$setintv8::Handle<v8::Object>QV8Engine* -->
+<h3 class="fn"><a name="set-2"></a><span class="type">void</span> ListModel::<span class="name">set</span>(<span class="type">int</span><i> elementIndex</i>, <span class="type">v8::Handle</span>&lt;<span class="type">v8::Object</span>&gt;<i> object</i>, <span class="type">QV8Engine</span> *<i> eng</i>)</h3>
+<!-- @@@set -->
+<!-- $$$setExistingProperty[overload1]$$$setExistingPropertyintconstQString&v8::Handle<v8::Value>QV8Engine* -->
+<h3 class="fn"><a name="setExistingProperty"></a><span class="type">int</span> ListModel::<span class="name">setExistingProperty</span>(<span class="type">int</span><i> uid</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> key</i>, <span class="type">v8::Handle</span>&lt;<span class="type">v8::Value</span>&gt;<i> data</i>, <span class="type">QV8Engine</span> *<i> eng</i>)</h3>
+<!-- @@@setExistingProperty -->
+<!-- $$$setOrCreateProperty[overload1]$$$setOrCreatePropertyintconstQString&constQVariant& -->
+<h3 class="fn"><a name="setOrCreateProperty"></a><span class="type">int</span> ListModel::<span class="name">setOrCreateProperty</span>(<span class="type">int</span><i> elementIndex</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> key</i>, const <span class="type"><a href="../qtcore/qvariant.html">QVariant</a></span> &amp;<i> data</i>)</h3>
+<!-- @@@setOrCreateProperty -->
+<!-- $$$sync[overload1]$$$syncListModel*ListModel*QHash<int,ListModel*>* -->
+<h3 class="fn"><a name="sync"></a><span class="type">void</span> ListModel::<span class="name">sync</span>(<span class="type"><a href="collision-listmodel.html">ListModel</a></span> *<i> src</i>, <span class="type"><a href="collision-listmodel.html">ListModel</a></span> *<i> target</i>, <span class="type"><a href="../qtcore/qhash.html">QHash</a></span>&lt;<span class="type">int</span>, <span class="type"><a href="collision-listmodel.html">ListModel</a></span> *&gt; *<i> srcModelHash</i>)<tt> [static]</tt></h3>
+<!-- @@@sync -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

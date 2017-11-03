@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdeclarative_audioengine_p.cpp -->
+  <title>qtmultimedia 5.0: AudioEngine</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">AudioEngine</h1>
+<span class="subtitle"></span>
+<!-- $$$AudioEngine-brief -->
+<p>Organize all your 3d audio content in one place. <a href="#details">More...</a></p>
+<!-- @@@AudioEngine -->
+<p>Inherits <a href="../qtquick/qml-qtquick2-item.html">Item</a></p>
+<p>This type was introduced in qtmultimedia 1.0.</p>
+<ul>
+<li><a href="qml-qtaudioengine1-audioengine-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#categories-prop">categories</a></b></b> : map</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#dopplerFactor-prop">dopplerFactor</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#listener-prop">listener</a></b></b> : QtAudioEngine1::AudioListener</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#liveInstances-prop">liveInstances</a></b></b> : int</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#loading-prop">loading</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#samples-prop">samples</a></b></b> : map</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#sounds-prop">sounds</a></b></b> : map</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#speedOfSound-prop">speedOfSound</a></b></b> : real</li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#finishedLoading-signal">finishedLoading</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#isLoadingChanged-signal">isLoadingChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#liveInstanceCountChanged-signal">liveInstanceCountChanged</a></b></b>()</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-audioengine.html#ready-signal">ready</a></b></b>()</li>
+</ul>
+<!-- $$$AudioEngine-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p><tt>AudioEngine</tt> is part of the <b>QtAudioEngine 1.0</b> module.</p>
+<pre class="qml">import QtQuick 2.0
+import QtAudioEngine 1.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">color</span>:<span class="string">&quot;white&quot;</span>
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">500</span>
+
+    <span class="type">AudioEngine</span> {
+        <span class="name">id</span>:<span class="name">audioengine</span>
+
+        <span class="type"><a href="qml-qtaudioengine1-audiosample.html">AudioSample</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion&quot;</span>
+            <span class="name">source</span>: <span class="string">&quot;explosion-02.wav&quot;</span>
+        }
+
+        <span class="type"><a href="qml-qtaudioengine1-sound.html">Sound</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion&quot;</span>
+            <span class="type"><a href="qml-qtaudioengine1-playvariation.html">PlayVariation</a></span> {
+                <span class="name">sample</span>:<span class="string">&quot;explosion&quot;</span>
+            }
+        }
+
+        <span class="name">dopplerFactor</span>: <span class="number">1</span>
+        <span class="name">speedOfSound</span>: <span class="number">343.33</span> <span class="comment">// Approximate speed of sound in air at 20 degrees Celsius</span>
+
+        <span class="name">listener</span>.up:<span class="string">&quot;0,0,1&quot;</span>
+        <span class="name">listener</span>.position:<span class="string">&quot;0,0,0&quot;</span>
+        <span class="name">listener</span>.velocity:<span class="string">&quot;0,0,0&quot;</span>
+        <span class="name">listener</span>.direction:<span class="string">&quot;0,1,0&quot;</span>
+    }
+
+    <span class="type"><a href="../qtquick/qml-qtquick2-mousearea.html">MouseArea</a></span> {
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="name">onPressed</span>: {
+            <span class="name">audioengine</span>.<span class="name">sounds</span>[<span class="string">&quot;explosion&quot;</span>].<span class="name">play</span>();
+        }
+    }
+}</pre>
+<p><tt>AudioEngine</tt> acts as a central library for configuring all 3d audio content in an app, so you should define only one in your app.</p>
+<p>It is mostly used as a container to access other types such as <a href="qml-qtaudioengine1-audiocategory.html">AudioCategory</a>, <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a> and Sound.</p>
+<p><b>See also </b><a href="qml-qtaudioengine1-audiocategory.html">AudioCategory</a>, <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a>, <a href="qml-qtaudioengine1-sound.html">Sound</a>, <a href="qml-qtaudioengine1-soundinstance.html">SoundInstance</a>, <a href="qml-qtaudioengine1-attenuationmodellinear.html">AttenuationModelLinear</a>, and <a href="qml-qtaudioengine1-attenuationmodelinverse.html">AttenuationModelInverse</a>.</p>
+<!-- @@@AudioEngine -->
+<h2>Property Documentation</h2>
+<!-- $$$categories -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="categories-prop"></a><span class="name">categories</span> : <span class="type">map</span></p></td></tr></table></div><div class="qmldoc"><p>Container of all <a href="qml-qtaudioengine1-audiocategory.html">AudioCategory</a> instances.</p>
+</div></div><!-- @@@categories -->
+<br/>
+<!-- $$$dopplerFactor -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="dopplerFactor-prop"></a><span class="name">dopplerFactor</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds a simple scaling for the effect of doppler shift.</p>
+</div></div><!-- @@@dopplerFactor -->
+<br/>
+<!-- $$$listener -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="listener-prop"></a><span class="name">listener</span> : <span class="type"><a href="qml-qtaudioengine1-audiolistener.html">QtAudioEngine1::AudioListener</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the listener object. You can change various properties to affect the 3D positioning of sounds.</p>
+<p><b>See also </b><a href="qml-qtaudioengine1-audiolistener.html">AudioListener</a>.</p>
+</div></div><!-- @@@listener -->
+<br/>
+<!-- $$$liveInstances -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="liveInstances-prop"></a><span class="name">liveInstances</span> : <span class="type"><a href="../qtqml/qml-int.html">int</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates how many live sound instances there are at the moment.</p>
+</div></div><!-- @@@liveInstances -->
+<br/>
+<!-- $$$loading -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="loading-prop"></a><span class="name">loading</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates if the audio engine is loading any audio sample at the moment. This may be useful if you specified the preloaded property in <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a> and would like to show a loading screen to the user before all audio samples are loaded.</p>
+<p>/sa <a href="qml-qtaudioengine1-audioengine.html#finishedLoading-signal">finishedLoading</a>, <a href="qml-qtaudioengine1-audiosample.html#preloaded-prop">AudioSample::preloaded</a></p>
+</div></div><!-- @@@loading -->
+<br/>
+<!-- $$$samples -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="samples-prop"></a><span class="name">samples</span> : <span class="type">map</span></p></td></tr></table></div><div class="qmldoc"><p>Container of all <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a> instances.</p>
+</div></div><!-- @@@samples -->
+<br/>
+<!-- $$$sounds -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sounds-prop"></a><span class="name">sounds</span> : <span class="type">map</span></p></td></tr></table></div><div class="qmldoc"><p>Container of all Sound instances.</p>
+</div></div><!-- @@@sounds -->
+<br/>
+<!-- $$$speedOfSound -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="speedOfSound-prop"></a><span class="name">speedOfSound</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property holds the reference value of the sound speed (in meters per second) which will be used in doppler shift calculation. The doppler shift calculation is used to emulate the change in frequency in sound that is perceived by an observer when the sound source is travelling towards or away from the observer. The speed of sound depends on the medium the sound is propagating through.</p>
+</div></div><!-- @@@speedOfSound -->
+<br/>
+<h2>Signal Documentation</h2>
+<!-- $$$finishedLoading -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="finishedLoading-signal"></a>AudioEngine::<span class="name">finishedLoading</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when <a href="qml-qtaudioengine1-audioengine.html#loading-prop">loading</a> has completed.</p>
+<p>The corresponding handler is <tt>onFinishedLoading</tt>.</p>
+</div></div><!-- @@@finishedLoading -->
+<br/>
+<!-- $$$isLoadingChanged -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="isLoadingChanged-signal"></a>AudioEngine::<span class="name">isLoadingChanged</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when the <a href="qml-qtaudioengine1-audioengine.html#loading-prop">loading</a> property changes.</p>
+<p>The corresponding handler is <tt>onIsLoadingChanged</tt>.</p>
+</div></div><!-- @@@isLoadingChanged -->
+<br/>
+<!-- $$$liveInstanceCountChanged -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="liveInstanceCountChanged-signal"></a>AudioEngine::<span class="name">liveInstanceCountChanged</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when the number of live instances managed by the <a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a> is changed.</p>
+<p>The corresponding handler is <tt>onLiveInstanceCountChanged</tt>.</p>
+</div></div><!-- @@@liveInstanceCountChanged -->
+<br/>
+<!-- $$$ready -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="ready-signal"></a>AudioEngine::<span class="name">ready</span>()</p></td></tr></table></div><div class="qmldoc"><p>This signal is emitted when the <a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a> is ready to use.</p>
+<p>The corresponding handler is <tt>onReady</tt>.</p>
+</div></div><!-- @@@ready -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- spectrum.qdoc -->
+  <title>qtmultimedia 5.0: Spectrum Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">Spectrum Example</h1>
+<span class="subtitle"></span>
+<!-- $$$multimedia/spectrum-description -->
+<div class="descr"> <a name="details"></a>
+<p>The Spectrum Example uses a combination multimedia APIs to process microphone input.<p>The Spectrum Analyzer example shows how the <a href="qtmultimedia-index.html">Qt Multimedia</a> module can be used to record and then play back an audio stream.</p>
+<p class="centerAlign"><img src="images/spectrum-demo.png" alt="" /></p><p>Because Qt Multimedia allows the application to access the raw audio stream, the data can either be inspected or modified by the application. The Spectrum Analyzer example displays three pieces of information while audio is being either captured or played back:</p>
+<ul>
+<li>Information about the raw audio stream, shown in the uppermost widget:<ul>
+<li>The amount of data currently in the buffer, shown in blue</li>
+<li>The segment of data which was most recently analysed to compute the frequency spectrum, shown in green</li>
+<li>The raw audio waveform, shown in white and scrolling from right to left</li>
+</ul>
+</li>
+<li>A representation of the frequency spectrum, shown at the lower left</li>
+<li>The current RMS level of the audio stream, and the recent 'high watermark' level, shown at the lower right</li>
+</ul>
+<p>Spectrum analysis is performed by calculating the Fast Fourier Transform (FFT) of a segment of audio data. An open-source library, <a href="http://ldesoras.free.fr/prod.html">FFTReal</a>, against which the application is dynamically linked, is used to compute the transform.</p>
+<p>Files:</p>
+<ul>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-array-h.html">multimedia/spectrum/3rdparty/fftreal/Array.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-dynarray-h.html">multimedia/spectrum/3rdparty/fftreal/DynArray.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftreal-h.html">multimedia/spectrum/3rdparty/fftreal/FFTReal.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftrealfixlen-h.html">multimedia/spectrum/3rdparty/fftreal/FFTRealFixLen.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftrealfixlenparam-h.html">multimedia/spectrum/3rdparty/fftreal/FFTRealFixLenParam.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftrealpassdirect-h.html">multimedia/spectrum/3rdparty/fftreal/FFTRealPassDirect.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftrealpassinverse-h.html">multimedia/spectrum/3rdparty/fftreal/FFTRealPassInverse.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftrealselect-h.html">multimedia/spectrum/3rdparty/fftreal/FFTRealSelect.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftrealusetrigo-h.html">multimedia/spectrum/3rdparty/fftreal/FFTRealUseTrigo.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-oscsincos-h.html">multimedia/spectrum/3rdparty/fftreal/OscSinCos.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-testaccuracy-h.html">multimedia/spectrum/3rdparty/fftreal/TestAccuracy.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-testhelperfixlen-h.html">multimedia/spectrum/3rdparty/fftreal/TestHelperFixLen.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-testhelpernormal-h.html">multimedia/spectrum/3rdparty/fftreal/TestHelperNormal.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-testspeed-h.html">multimedia/spectrum/3rdparty/fftreal/TestSpeed.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-testwhitenoisegen-h.html">multimedia/spectrum/3rdparty/fftreal/TestWhiteNoiseGen.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-def-h.html">multimedia/spectrum/3rdparty/fftreal/def.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftreal-wrapper-cpp.html">multimedia/spectrum/3rdparty/fftreal/fftreal_wrapper.cpp</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftreal-wrapper-h.html">multimedia/spectrum/3rdparty/fftreal/fftreal_wrapper.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-test-cpp.html">multimedia/spectrum/3rdparty/fftreal/test.cpp</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-test-fnc-h.html">multimedia/spectrum/3rdparty/fftreal/test_fnc.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-test-settings-h.html">multimedia/spectrum/3rdparty/fftreal/test_settings.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-clockcyclecounter-cpp.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/ClockCycleCounter.cpp</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-clockcyclecounter-h.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/ClockCycleCounter.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-int64-h.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/Int64.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-stopwatch-cpp.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/StopWatch.cpp</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-stopwatch-h.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/StopWatch.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-def-h.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/def.h</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-stopwatch-fnc-h.html">multimedia/spectrum/3rdparty/fftreal/stopwatch/fnc.h</a></li>
+<li><a href="multimedia-spectrum-app-engine-cpp.html">multimedia/spectrum/app/engine.cpp</a></li>
+<li><a href="multimedia-spectrum-app-engine-h.html">multimedia/spectrum/app/engine.h</a></li>
+<li><a href="multimedia-spectrum-app-frequencyspectrum-cpp.html">multimedia/spectrum/app/frequencyspectrum.cpp</a></li>
+<li><a href="multimedia-spectrum-app-frequencyspectrum-h.html">multimedia/spectrum/app/frequencyspectrum.h</a></li>
+<li><a href="multimedia-spectrum-app-levelmeter-cpp.html">multimedia/spectrum/app/levelmeter.cpp</a></li>
+<li><a href="multimedia-spectrum-app-levelmeter-h.html">multimedia/spectrum/app/levelmeter.h</a></li>
+<li><a href="multimedia-spectrum-app-mainwidget-cpp.html">multimedia/spectrum/app/mainwidget.cpp</a></li>
+<li><a href="multimedia-spectrum-app-mainwidget-h.html">multimedia/spectrum/app/mainwidget.h</a></li>
+<li><a href="multimedia-spectrum-app-progressbar-cpp.html">multimedia/spectrum/app/progressbar.cpp</a></li>
+<li><a href="multimedia-spectrum-app-progressbar-h.html">multimedia/spectrum/app/progressbar.h</a></li>
+<li><a href="multimedia-spectrum-app-settingsdialog-cpp.html">multimedia/spectrum/app/settingsdialog.cpp</a></li>
+<li><a href="multimedia-spectrum-app-settingsdialog-h.html">multimedia/spectrum/app/settingsdialog.h</a></li>
+<li><a href="multimedia-spectrum-app-spectrograph-cpp.html">multimedia/spectrum/app/spectrograph.cpp</a></li>
+<li><a href="multimedia-spectrum-app-spectrograph-h.html">multimedia/spectrum/app/spectrograph.h</a></li>
+<li><a href="multimedia-spectrum-app-spectrum-h.html">multimedia/spectrum/app/spectrum.h</a></li>
+<li><a href="multimedia-spectrum-app-spectrumanalyser-cpp.html">multimedia/spectrum/app/spectrumanalyser.cpp</a></li>
+<li><a href="multimedia-spectrum-app-spectrumanalyser-h.html">multimedia/spectrum/app/spectrumanalyser.h</a></li>
+<li><a href="multimedia-spectrum-app-tonegenerator-cpp.html">multimedia/spectrum/app/tonegenerator.cpp</a></li>
+<li><a href="multimedia-spectrum-app-tonegenerator-h.html">multimedia/spectrum/app/tonegenerator.h</a></li>
+<li><a href="multimedia-spectrum-app-tonegeneratordialog-cpp.html">multimedia/spectrum/app/tonegeneratordialog.cpp</a></li>
+<li><a href="multimedia-spectrum-app-tonegeneratordialog-h.html">multimedia/spectrum/app/tonegeneratordialog.h</a></li>
+<li><a href="multimedia-spectrum-app-utils-cpp.html">multimedia/spectrum/app/utils.cpp</a></li>
+<li><a href="multimedia-spectrum-app-utils-h.html">multimedia/spectrum/app/utils.h</a></li>
+<li><a href="multimedia-spectrum-app-waveform-cpp.html">multimedia/spectrum/app/waveform.cpp</a></li>
+<li><a href="multimedia-spectrum-app-waveform-h.html">multimedia/spectrum/app/waveform.h</a></li>
+<li><a href="multimedia-spectrum-app-wavfile-cpp.html">multimedia/spectrum/app/wavfile.cpp</a></li>
+<li><a href="multimedia-spectrum-app-wavfile-h.html">multimedia/spectrum/app/wavfile.h</a></li>
+<li><a href="multimedia-spectrum-app-main-cpp.html">multimedia/spectrum/app/main.cpp</a></li>
+<li><a href="multimedia-spectrum-spectrum-pro.html">multimedia/spectrum/spectrum.pro</a></li>
+<li><a href="multimedia-spectrum-3rdparty-fftreal-fftreal-pro.html">multimedia/spectrum/3rdparty/fftreal/fftreal.pro</a></li>
+<li><a href="multimedia-spectrum-app-app-pro.html">multimedia/spectrum/app/app.pro</a></li>
+<li><a href="multimedia-spectrum-app-spectrum-qrc.html">multimedia/spectrum/app/spectrum.qrc</a></li>
+</ul>
+</div>
+<!-- @@@multimedia/spectrum -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

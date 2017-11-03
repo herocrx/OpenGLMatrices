@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QtHelpProject version="1.0">
+    <namespace>org.qt-project.qtgraphicaleffects.502</namespace>
+    <virtualFolder>qtgraphicaleffects</virtualFolder>
+    <customFilter name="QtGraphicalEffects 5.0.2">
+        <filterAttribute>5.0.2</filterAttribute>
+        <filterAttribute>qtgraphicaleffects</filterAttribute>
+    </customFilter>
+    <filterSection>
+        <filterAttribute>5.0.2</filterAttribute>
+        <filterAttribute>qtgraphicaleffects</filterAttribute>
+        <filterAttribute>qtrefdoc</filterAttribute>
+        <toc>
+            <section ref="qtgraphicaleffects-index.html" title="Qt Graphical Effects">
+                <section ref="graphicaleffects.html" title="QML Types">
+                    <section ref="qml-qtgraphicaleffects1-blend.html" title="Blend Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-blend-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-brightnesscontrast.html" title="BrightnessContrast Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-brightnesscontrast-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-coloroverlay.html" title="ColorOverlay Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-coloroverlay-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-colorize.html" title="Colorize Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-colorize-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-conicalgradient.html" title="ConicalGradient Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-conicalgradient-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-desaturate.html" title="Desaturate Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-desaturate-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-directionalblur.html" title="DirectionalBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-directionalblur-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-displace.html" title="Displace Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-displace-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-dropshadow.html" title="DropShadow Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-dropshadow-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-fastblur.html" title="FastBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-fastblur-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-gammaadjust.html" title="GammaAdjust Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-gammaadjust-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-gaussianblur.html" title="GaussianBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-gaussianblur-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-glow.html" title="Glow Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-glow-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-huesaturation.html" title="HueSaturation Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-huesaturation-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-innershadow.html" title="InnerShadow Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-innershadow-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-leveladjust.html" title="LevelAdjust Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-leveladjust-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-lineargradient.html" title="LinearGradient Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-lineargradient-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-maskedblur.html" title="MaskedBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-maskedblur-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-opacitymask.html" title="OpacityMask Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-opacitymask-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-radialblur.html" title="RadialBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-radialblur-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-radialgradient.html" title="RadialGradient Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-radialgradient-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-rectangularglow.html" title="RectangularGlow Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-rectangularglow-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-recursiveblur.html" title="RecursiveBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-recursiveblur-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-thresholdmask.html" title="ThresholdMask Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-thresholdmask-members.html" title="List of all members"/>
+                    </section>
+                    <section ref="qml-qtgraphicaleffects1-zoomblur.html" title="ZoomBlur Type Reference">
+                        <section ref="qml-qtgraphicaleffects1-zoomblur-members.html" title="List of all members"/>
+                    </section>
+                </section>
+            </section>
+        </toc>
+        <keywords>
+            <keyword name="Blend" id="QML.Blend" ref="qml-qtgraphicaleffects1-blend.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-blend.html#cached-prop"/>
+            <keyword name="foregroundSource" id="::foregroundSource" ref="qml-qtgraphicaleffects1-blend.html#foregroundSource-prop"/>
+            <keyword name="mode" id="::mode" ref="qml-qtgraphicaleffects1-blend.html#mode-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-blend.html#source-prop"/>
+            <keyword name="BrightnessContrast" id="QML.BrightnessContrast" ref="qml-qtgraphicaleffects1-brightnesscontrast.html"/>
+            <keyword name="brightness" id="::brightness" ref="qml-qtgraphicaleffects1-brightnesscontrast.html#brightness-prop"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-brightnesscontrast.html#cached-prop"/>
+            <keyword name="contrast" id="::contrast" ref="qml-qtgraphicaleffects1-brightnesscontrast.html#contrast-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-brightnesscontrast.html#source-prop"/>
+            <keyword name="ColorOverlay" id="QML.ColorOverlay" ref="qml-qtgraphicaleffects1-coloroverlay.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-coloroverlay.html#cached-prop"/>
+            <keyword name="color" id="::color" ref="qml-qtgraphicaleffects1-coloroverlay.html#color-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-coloroverlay.html#source-prop"/>
+            <keyword name="Colorize" id="QML.Colorize" ref="qml-qtgraphicaleffects1-colorize.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-colorize.html#cached-prop"/>
+            <keyword name="hue" id="::hue" ref="qml-qtgraphicaleffects1-colorize.html#hue-prop"/>
+            <keyword name="lightness" id="::lightness" ref="qml-qtgraphicaleffects1-colorize.html#lightness-prop"/>
+            <keyword name="saturation" id="::saturation" ref="qml-qtgraphicaleffects1-colorize.html#saturation-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-colorize.html#source-prop"/>
+            <keyword name="ConicalGradient" id="QML.ConicalGradient" ref="qml-qtgraphicaleffects1-conicalgradient.html"/>
+            <keyword name="angle" id="::angle" ref="qml-qtgraphicaleffects1-conicalgradient.html#angle-prop"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-conicalgradient.html#cached-prop"/>
+            <keyword name="gradient" id="::gradient" ref="qml-qtgraphicaleffects1-conicalgradient.html#gradient-prop"/>
+            <keyword name="horizontalOffset" id="::horizontalOffset" ref="qml-qtgraphicaleffects1-conicalgradient.html#horizontalOffset-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-conicalgradient.html#source-prop"/>
+            <keyword name="verticalOffset" id="::verticalOffset" ref="qml-qtgraphicaleffects1-conicalgradient.html#verticalOffset-prop"/>
+            <keyword name="Desaturate" id="QML.Desaturate" ref="qml-qtgraphicaleffects1-desaturate.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-desaturate.html#cached-prop"/>
+            <keyword name="desaturation" id="::desaturation" ref="qml-qtgraphicaleffects1-desaturate.html#desaturation-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-desaturate.html#source-prop"/>
+            <keyword name="DirectionalBlur" id="QML.DirectionalBlur" ref="qml-qtgraphicaleffects1-directionalblur.html"/>
+            <keyword name="angle" id="::angle" ref="qml-qtgraphicaleffects1-directionalblur.html#angle-prop"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-directionalblur.html#cached-prop"/>
+            <keyword name="length" id="::length" ref="qml-qtgraphicaleffects1-directionalblur.html#length-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-directionalblur.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-directionalblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-directionalblur.html#transparentBorder-prop"/>
+            <keyword name="Displace" id="QML.Displace" ref="qml-qtgraphicaleffects1-displace.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-displace.html#cached-prop"/>
+            <keyword name="displacement" id="::displacement" ref="qml-qtgraphicaleffects1-displace.html#displacement-prop"/>
+            <keyword name="displacementSource" id="::displacementSource" ref="qml-qtgraphicaleffects1-displace.html#displacementSource-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-displace.html#source-prop"/>
+            <keyword name="DropShadow" id="QML.DropShadow" ref="qml-qtgraphicaleffects1-dropshadow.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-dropshadow.html#cached-prop"/>
+            <keyword name="color" id="::color" ref="qml-qtgraphicaleffects1-dropshadow.html#color-prop"/>
+            <keyword name="fast" id="::fast" ref="qml-qtgraphicaleffects1-dropshadow.html#fast-prop"/>
+            <keyword name="horizontalOffset" id="::horizontalOffset" ref="qml-qtgraphicaleffects1-dropshadow.html#horizontalOffset-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-dropshadow.html#radius-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-dropshadow.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-dropshadow.html#source-prop"/>
+            <keyword name="spread" id="::spread" ref="qml-qtgraphicaleffects1-dropshadow.html#spread-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-dropshadow.html#transparentBorder-prop"/>
+            <keyword name="verticalOffset" id="::verticalOffset" ref="qml-qtgraphicaleffects1-dropshadow.html#verticalOffset-prop"/>
+            <keyword name="FastBlur" id="QML.FastBlur" ref="qml-qtgraphicaleffects1-fastblur.html"/>
+            <keyword name="__internalBlurFragmentShader" id="::__internalBlurFragmentShader" ref="qml-qtgraphicaleffects1-fastblur.html#__internalBlurFragmentShader-prop"/>
+            <keyword name="__internalBlurVertexShader" id="::__internalBlurVertexShader" ref="qml-qtgraphicaleffects1-fastblur.html#__internalBlurVertexShader-prop"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-fastblur.html#cached-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-fastblur.html#radius-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-fastblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-fastblur.html#transparentBorder-prop"/>
+            <keyword name="GammaAdjust" id="QML.GammaAdjust" ref="qml-qtgraphicaleffects1-gammaadjust.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-gammaadjust.html#cached-prop"/>
+            <keyword name="gamma" id="::gamma" ref="qml-qtgraphicaleffects1-gammaadjust.html#gamma-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-gammaadjust.html#source-prop"/>
+            <keyword name="GaussianBlur" id="QML.GaussianBlur" ref="qml-qtgraphicaleffects1-gaussianblur.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-gaussianblur.html#cached-prop"/>
+            <keyword name="deviation" id="::deviation" ref="qml-qtgraphicaleffects1-gaussianblur.html#deviation-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-gaussianblur.html#radius-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-gaussianblur.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-gaussianblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-gaussianblur.html#transparentBorder-prop"/>
+            <keyword name="Glow" id="QML.Glow" ref="qml-qtgraphicaleffects1-glow.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-glow.html#cached-prop"/>
+            <keyword name="color" id="::color" ref="qml-qtgraphicaleffects1-glow.html#color-prop"/>
+            <keyword name="fast" id="::fast" ref="qml-qtgraphicaleffects1-glow.html#fast-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-glow.html#radius-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-glow.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-glow.html#source-prop"/>
+            <keyword name="spread" id="::spread" ref="qml-qtgraphicaleffects1-glow.html#spread-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-glow.html#transparentBorder-prop"/>
+            <keyword name="Graphical Effects" id="Graphical Effects" ref="graphicaleffects.html"/>
+            <keyword name="HueSaturation" id="QML.HueSaturation" ref="qml-qtgraphicaleffects1-huesaturation.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-huesaturation.html#cached-prop"/>
+            <keyword name="hue" id="::hue" ref="qml-qtgraphicaleffects1-huesaturation.html#hue-prop"/>
+            <keyword name="lightness" id="::lightness" ref="qml-qtgraphicaleffects1-huesaturation.html#lightness-prop"/>
+            <keyword name="saturation" id="::saturation" ref="qml-qtgraphicaleffects1-huesaturation.html#saturation-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-huesaturation.html#source-prop"/>
+            <keyword name="InnerShadow" id="QML.InnerShadow" ref="qml-qtgraphicaleffects1-innershadow.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-innershadow.html#cached-prop"/>
+            <keyword name="color" id="::color" ref="qml-qtgraphicaleffects1-innershadow.html#color-prop"/>
+            <keyword name="fast" id="::fast" ref="qml-qtgraphicaleffects1-innershadow.html#fast-prop"/>
+            <keyword name="horizontalOffset" id="::horizontalOffset" ref="qml-qtgraphicaleffects1-innershadow.html#horizontalOffset-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-innershadow.html#radius-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-innershadow.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-innershadow.html#source-prop"/>
+            <keyword name="spread" id="::spread" ref="qml-qtgraphicaleffects1-innershadow.html#spread-prop"/>
+            <keyword name="verticalOffset" id="::verticalOffset" ref="qml-qtgraphicaleffects1-innershadow.html#verticalOffset-prop"/>
+            <keyword name="LevelAdjust" id="QML.LevelAdjust" ref="qml-qtgraphicaleffects1-leveladjust.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-leveladjust.html#cached-prop"/>
+            <keyword name="gamma" id="::gamma" ref="qml-qtgraphicaleffects1-leveladjust.html#gamma-prop"/>
+            <keyword name="maximumInput" id="::maximumInput" ref="qml-qtgraphicaleffects1-leveladjust.html#maximumInput-prop"/>
+            <keyword name="maximumOutput" id="::maximumOutput" ref="qml-qtgraphicaleffects1-leveladjust.html#maximumOutput-prop"/>
+            <keyword name="minimumInput" id="::minimumInput" ref="qml-qtgraphicaleffects1-leveladjust.html#minimumInput-prop"/>
+            <keyword name="minimumOutput" id="::minimumOutput" ref="qml-qtgraphicaleffects1-leveladjust.html#minimumOutput-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-leveladjust.html#source-prop"/>
+            <keyword name="LinearGradient" id="QML.LinearGradient" ref="qml-qtgraphicaleffects1-lineargradient.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-lineargradient.html#cached-prop"/>
+            <keyword name="end" id="::end" ref="qml-qtgraphicaleffects1-lineargradient.html#end-prop"/>
+            <keyword name="gradient" id="::gradient" ref="qml-qtgraphicaleffects1-lineargradient.html#gradient-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-lineargradient.html#source-prop"/>
+            <keyword name="start" id="::start" ref="qml-qtgraphicaleffects1-lineargradient.html#start-prop"/>
+            <keyword name="MaskedBlur" id="QML.MaskedBlur" ref="qml-qtgraphicaleffects1-maskedblur.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-maskedblur.html#cached-prop"/>
+            <keyword name="fast" id="::fast" ref="qml-qtgraphicaleffects1-maskedblur.html#fast-prop"/>
+            <keyword name="maskSource" id="::maskSource" ref="qml-qtgraphicaleffects1-maskedblur.html#maskSource-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-maskedblur.html#radius-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-maskedblur.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-maskedblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-maskedblur.html#transparentBorder-prop"/>
+            <keyword name="OpacityMask" id="QML.OpacityMask" ref="qml-qtgraphicaleffects1-opacitymask.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-opacitymask.html#cached-prop"/>
+            <keyword name="maskSource" id="::maskSource" ref="qml-qtgraphicaleffects1-opacitymask.html#maskSource-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-opacitymask.html#source-prop"/>
+            <keyword name="Qt Graphical Effect QML Types" id="Qt Graphical Effect QML Types" ref="qmlmodule-qtgraphicaleffects1-qtgraphicaleffects-1-0.html"/>
+            <keyword name="Qt Graphical Effects" id="Qt Graphical Effects" ref="qtgraphicaleffects-index.html"/>
+            <keyword name="RadialBlur" id="QML.RadialBlur" ref="qml-qtgraphicaleffects1-radialblur.html"/>
+            <keyword name="angle" id="::angle" ref="qml-qtgraphicaleffects1-radialblur.html#angle-prop"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-radialblur.html#cached-prop"/>
+            <keyword name="horizontalOffset" id="::horizontalOffset" ref="qml-qtgraphicaleffects1-radialblur.html#horizontalOffset-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-radialblur.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-radialblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-radialblur.html#transparentBorder-prop"/>
+            <keyword name="verticalOffset" id="::verticalOffset" ref="qml-qtgraphicaleffects1-radialblur.html#verticalOffset-prop"/>
+            <keyword name="RadialGradient" id="QML.RadialGradient" ref="qml-qtgraphicaleffects1-radialgradient.html"/>
+            <keyword name="angle" id="::angle" ref="qml-qtgraphicaleffects1-radialgradient.html#angle-prop"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-radialgradient.html#cached-prop"/>
+            <keyword name="gradient" id="::gradient" ref="qml-qtgraphicaleffects1-radialgradient.html#gradient-prop"/>
+            <keyword name="horizontalOffset" id="::horizontalOffset" ref="qml-qtgraphicaleffects1-radialgradient.html#horizontalOffset-prop"/>
+            <keyword name="horizontalRadius" id="::horizontalRadius" ref="qml-qtgraphicaleffects1-radialgradient.html#horizontalRadius-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-radialgradient.html#source-prop"/>
+            <keyword name="verticalOffset" id="::verticalOffset" ref="qml-qtgraphicaleffects1-radialgradient.html#verticalOffset-prop"/>
+            <keyword name="verticalRadius" id="::verticalRadius" ref="qml-qtgraphicaleffects1-radialgradient.html#verticalRadius-prop"/>
+            <keyword name="RectangularGlow" id="QML.RectangularGlow" ref="qml-qtgraphicaleffects1-rectangularglow.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-rectangularglow.html#cached-prop"/>
+            <keyword name="color" id="::color" ref="qml-qtgraphicaleffects1-rectangularglow.html#color-prop"/>
+            <keyword name="cornerRadius" id="::cornerRadius" ref="qml-qtgraphicaleffects1-rectangularglow.html#cornerRadius-prop"/>
+            <keyword name="glowRadius" id="::glowRadius" ref="qml-qtgraphicaleffects1-rectangularglow.html#glowRadius-prop"/>
+            <keyword name="spread" id="::spread" ref="qml-qtgraphicaleffects1-rectangularglow.html#spread-prop"/>
+            <keyword name="RecursiveBlur" id="QML.RecursiveBlur" ref="qml-qtgraphicaleffects1-recursiveblur.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-recursiveblur.html#cached-prop"/>
+            <keyword name="loops" id="::loops" ref="qml-qtgraphicaleffects1-recursiveblur.html#loops-prop"/>
+            <keyword name="onLoopsChanged" id="RecursiveBlur::onLoopsChanged" ref="qml-qtgraphicaleffects1-recursiveblur.html#onLoopsChanged-signal-handler"/>
+            <keyword name="onRadiusChanged" id="RecursiveBlur::onRadiusChanged" ref="qml-qtgraphicaleffects1-recursiveblur.html#onRadiusChanged-signal-handler"/>
+            <keyword name="onSourceChanged" id="RecursiveBlur::onSourceChanged" ref="qml-qtgraphicaleffects1-recursiveblur.html#onSourceChanged-signal-handler"/>
+            <keyword name="onTransparentBorderChanged" id="RecursiveBlur::onTransparentBorderChanged" ref="qml-qtgraphicaleffects1-recursiveblur.html#onTransparentBorderChanged-signal-handler"/>
+            <keyword name="progress" id="::progress" ref="qml-qtgraphicaleffects1-recursiveblur.html#progress-prop"/>
+            <keyword name="radius" id="::radius" ref="qml-qtgraphicaleffects1-recursiveblur.html#radius-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-recursiveblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-recursiveblur.html#transparentBorder-prop"/>
+            <keyword name="ThresholdMask" id="QML.ThresholdMask" ref="qml-qtgraphicaleffects1-thresholdmask.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-thresholdmask.html#cached-prop"/>
+            <keyword name="maskSource" id="::maskSource" ref="qml-qtgraphicaleffects1-thresholdmask.html#maskSource-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-thresholdmask.html#source-prop"/>
+            <keyword name="spread" id="::spread" ref="qml-qtgraphicaleffects1-thresholdmask.html#spread-prop"/>
+            <keyword name="threshold" id="::threshold" ref="qml-qtgraphicaleffects1-thresholdmask.html#threshold-prop"/>
+            <keyword name="ZoomBlur" id="QML.ZoomBlur" ref="qml-qtgraphicaleffects1-zoomblur.html"/>
+            <keyword name="cached" id="::cached" ref="qml-qtgraphicaleffects1-zoomblur.html#cached-prop"/>
+            <keyword name="horizontalOffset" id="::horizontalOffset" ref="qml-qtgraphicaleffects1-zoomblur.html#horizontalOffset-prop"/>
+            <keyword name="length" id="::length" ref="qml-qtgraphicaleffects1-zoomblur.html#length-prop"/>
+            <keyword name="samples" id="::samples" ref="qml-qtgraphicaleffects1-zoomblur.html#samples-prop"/>
+            <keyword name="source" id="::source" ref="qml-qtgraphicaleffects1-zoomblur.html#source-prop"/>
+            <keyword name="transparentBorder" id="::transparentBorder" ref="qml-qtgraphicaleffects1-zoomblur.html#transparentBorder-prop"/>
+            <keyword name="verticalOffset" id="::verticalOffset" ref="qml-qtgraphicaleffects1-zoomblur.html#verticalOffset-prop"/>
+        </keywords>
+        <files>
+            <file>images/BrightnessContrast_contrast3.png</file>
+            <file>images/RecursiveBlur_transparentBorder2.png</file>
+            <file>images/ConicalGradient.png</file>
+            <file>images/LevelAdjust_maximumOutput3_curve.png</file>
+            <file>images/Glow_spread2.png</file>
+            <file>images/RadialGradient_maskSource1.png</file>
+            <file>images/ThresholdMask_spread1.png</file>
+            <file>images/LevelAdjust_gamma3_curve.png</file>
+            <file>images/LinearGradient_gradient2.png</file>
+            <file>images/Blend_mode8.png</file>
+            <file>images/RecursiveBlur_radius1.png</file>
+            <file>qml-qtgraphicaleffects1-radialgradient-members.html</file>
+            <file>images/GaussianBlur_radius2.png</file>
+            <file>qml-qtgraphicaleffects1-lineargradient.html</file>
+            <file>images/DirectionalBlur_bug.png</file>
+            <file>images/RectangularGlow_glowRadius3.png</file>
+            <file>images/FastBlur_radius3.png</file>
+            <file>images/DropShadow_horizontalOffset1.png</file>
+            <file>images/RadialGradient_gradient2.png</file>
+            <file>images/GammaAdjust_gamma2_graph.png</file>
+            <file>images/InnerShadow_radius3.png</file>
+            <file>images/Displace_displacement2.png</file>
+            <file>images/LinearGradient.png</file>
+            <file>images/Blend_mode3.png</file>
+            <file>images/ConicalGradient_horizontalOffset3.png</file>
+            <file>images/DropShadow_spread2.png</file>
+            <file>images/MaskedBlur_radius1.png</file>
+            <file>images/InnerShadow_spread3.png</file>
+            <file>images/MaskedBlur_fast2.png</file>
+            <file>images/InnerShadow_horizontalOffset3.png</file>
+            <file>images/GaussianBlur_deviation_graph.png</file>
+            <file>images/Displace_map.png</file>
+            <file>images/RadialGradient_angle3.png</file>
+            <file>qml-qtgraphicaleffects1-desaturate.html</file>
+            <file>qml-qtgraphicaleffects1-radialblur-members.html</file>
+            <file>images/RecursiveBlur_loops1.png</file>
+            <file>images/ThresholdMask_threshold1.png</file>
+            <file>images/Glow_fast2.png</file>
+            <file>images/LevelAdjust_minimumOutput1.png</file>
+            <file>images/GaussianBlur_deviation3.png</file>
+            <file>images/Colorize_lightness3.png</file>
+            <file>images/LevelAdjust_maximumInput2.png</file>
+            <file>images/ConicalGradient_gradient3.png</file>
+            <file>images/Desaturate_desaturation3.png</file>
+            <file>images/GaussianBlur_bug.png</file>
+            <file>images/RadialBlur_horizontalOffset2.png</file>
+            <file>images/FastBlur_transparentBorder1.png</file>
+            <file>images/Blend_mode16.png</file>
+            <file>images/Colorize_saturation1.png</file>
+            <file>images/LevelAdjust_minimumOutput2_curve.png</file>
+            <file>images/Blend_mode22.png</file>
+            <file>images/ColorOverlay_color1.png</file>
+            <file>qml-qtgraphicaleffects1-displace-members.html</file>
+            <file>qml-qtgraphicaleffects1-directionalblur.html</file>
+            <file>images/DropShadow_color1.png</file>
+            <file>images/GammaAdjust_bug.png</file>
+            <file>images/GaussianBlur_transparentBorder1.png</file>
+            <file>images/RadialBlur_angle1.png</file>
+            <file>images/Blend_mode11.png</file>
+            <file>images/ThresholdMask_spread3.png</file>
+            <file>qml-qtgraphicaleffects1-brightnesscontrast-members.html</file>
+            <file>images/HueSaturation_hue2.png</file>
+            <file>images/LevelAdjust_maximumInput2_curve.png</file>
+            <file>images/RecursiveBlur_radius3.png</file>
+            <file>images/Glow_color1.png</file>
+            <file>images/LinearGradient_start1.png</file>
+            <file>images/ConicalGradient_angle1.png</file>
+            <file>images/RadialGradient_horizontalOffset1.png</file>
+            <file>images/DirectionalBlur_angle1.png</file>
+            <file>images/BrightnessContrast_bug.png</file>
+            <file>images/DirectionalBlur_length2.png</file>
+            <file>images/Original_bug.png</file>
+            <file>images/LinearGradient_end1.png</file>
+            <file>images/RadialGradient_horizontalRadius2.png</file>
+            <file>images/DropShadow_horizontalOffset3.png</file>
+            <file>images/Blend_mode5.png</file>
+            <file>images/ConicalGradient_maskSource1.png</file>
+            <file>qml-qtgraphicaleffects1-brightnesscontrast.html</file>
+            <file>images/MaskedBlur_radius3.png</file>
+            <file>images/BrightnessContrast_brightness1.png</file>
+            <file>images/LevelAdjust_maximumOutput1.png</file>
+            <file>images/RadialBlur_bug.png</file>
+            <file>images/DropShadow_radius2.png</file>
+            <file>qml-qtgraphicaleffects1-recursiveblur-members.html</file>
+            <file>images/BrightnessContrast_contrast_graph.png</file>
+            <file>images/MaskedBlur_bug.png</file>
+            <file>images/RectangularGlow_spread1.png</file>
+            <file>images/LevelAdjust_gamma2.png</file>
+            <file>images/Colorize_bug.png</file>
+            <file>qml-qtgraphicaleffects1-radialblur.html</file>
+            <file>images/DropShadow_fast2.png</file>
+            <file>qml-qtgraphicaleffects1-rectangularglow.html</file>
+            <file>images/ZoomBlur_horizontalOffset1.png</file>
+            <file>qml-qtgraphicaleffects1-leveladjust-members.html</file>
+            <file>images/RecursiveBlur_loops3.png</file>
+            <file>images/ThresholdMask_threshold3.png</file>
+            <file>images/HueSaturation_saturation1.png</file>
+            <file>images/GammaAdjust_gamma1.png</file>
+            <file>images/LevelAdjust_minimumOutput3.png</file>
+            <file>graphicaleffects.html</file>
+            <file>qml-qtgraphicaleffects1-maskedblur.html</file>
+            <file>qml-qtgraphicaleffects1-thresholdmask.html</file>
+            <file>images/Colorize_saturation3.png</file>
+            <file>images/Blend_mode18.png</file>
+            <file>images/ZoomBlur_length2.png</file>
+            <file>qml-qtgraphicaleffects1-gaussianblur-members.html</file>
+            <file>images/RectangularGlow_color1.png</file>
+            <file>images/MaskedBlur_transparentBorder2.png</file>
+            <file>images/GammaAdjust_gamma3_graph.png</file>
+            <file>images/LevelAdjust_minimumInput2.png</file>
+            <file>images/InnerShadow_color1.png</file>
+            <file>images/RectangularGlow_cornerRadius1.png</file>
+            <file>images/ColorOverlay_color3.png</file>
+            <file>images/Displace_bug.png</file>
+            <file>images/DropShadow_color3.png</file>
+            <file>images/RadialBlur_angle3.png</file>
+            <file>images/LinearGradient_maskSource1.png</file>
+            <file>images/Colorize_hue2.png</file>
+            <file>images/Blend_mode13.png</file>
+            <file>images/Original_butterfly.png</file>
+            <file>qml-qtgraphicaleffects1-innershadow-members.html</file>
+            <file>images/Glow_radius1.png</file>
+            <file>qml-qtgraphicaleffects1-conicalgradient-members.html</file>
+            <file>images/HueSaturation_lightness2.png</file>
+            <file>images/Glow_color3.png</file>
+            <file>qml-qtgraphicaleffects1-fastblur-members.html</file>
+            <file>images/ConicalGradient_angle3.png</file>
+            <file>images/LinearGradient_start3.png</file>
+            <file>images/LevelAdjust_butterfly.png</file>
+            <file>images/BrightnessContrast_contrast2.png</file>
+            <file>images/RecursiveBlur_transparentBorder1.png</file>
+            <file>images/RadialGradient_horizontalOffset3.png</file>
+            <file>images/Glow_spread1.png</file>
+            <file>images/Glow_butterfly.png</file>
+            <file>images/DirectionalBlur_angle3.png</file>
+            <file>qml-qtgraphicaleffects1-fastblur.html</file>
+            <file>images/LinearGradient_end3.png</file>
+            <file>qml-qtgraphicaleffects1-huesaturation.html</file>
+            <file>images/LinearGradient_gradient1.png</file>
+            <file>images/Blend_mode7.png</file>
+            <file>images/OpacityMask_bug.png</file>
+            <file>images/GaussianBlur_radius1.png</file>
+            <file>images/BrightnessContrast_brightness3.png</file>
+            <file>images/RectangularGlow_glowRadius2.png</file>
+            <file>images/FastBlur_radius2.png</file>
+            <file>images/LevelAdjust_maximumOutput3.png</file>
+            <file>images/RadialGradient_gradient1.png</file>
+            <file>images/InnerShadow_radius2.png</file>
+            <file>images/Displace_displacement1.png</file>
+            <file>images/Blend_mode2.png</file>
+            <file>images/ConicalGradient_horizontalOffset2.png</file>
+            <file>images/RectangularGlow_spread3.png</file>
+            <file>images/DropShadow_spread1.png</file>
+            <file>images/InnerShadow_spread2.png</file>
+            <file>images/MaskedBlur_fast1.png</file>
+            <file>images/LevelAdjust_minimumOutput3_curve.png</file>
+            <file>images/InnerShadow_fast2.png</file>
+            <file>images/ZoomBlur_horizontalOffset3.png</file>
+            <file>qml-qtgraphicaleffects1-displace.html</file>
+            <file>images/InnerShadow_horizontalOffset2.png</file>
+            <file>images/ThresholdMask_bug.png</file>
+            <file>images/HueSaturation_saturation3.png</file>
+            <file>images/Blend_bug_and_butterfly.png</file>
+            <file>images/GammaAdjust_gamma3.png</file>
+            <file>images/RadialGradient_angle2.png</file>
+            <file>qml-qtgraphicaleffects1-glow.html</file>
+            <file>qml-qtgraphicaleffects1-colorize-members.html</file>
+            <file>images/LevelAdjust_maximumInput3_curve.png</file>
+            <file>qml-qtgraphicaleffects1-blend.html</file>
+            <file>qml-qtgraphicaleffects1-innershadow.html</file>
+            <file>qml-qtgraphicaleffects1-lineargradient-members.html</file>
+            <file>qml-qtgraphicaleffects1-directionalblur-members.html</file>
+            <file>images/RectangularGlow_color3.png</file>
+            <file>qml-qtgraphicaleffects1-dropshadow.html</file>
+            <file>images/Glow_fast1.png</file>
+            <file>images/GaussianBlur_deviation2.png</file>
+            <file>images/InnerShadow_color3.png</file>
+            <file>images/RectangularGlow_cornerRadius3.png</file>
+            <file>images/Colorize_lightness2.png</file>
+            <file>images/LevelAdjust_maximumInput1.png</file>
+            <file>images/ConicalGradient_gradient2.png</file>
+            <file>images/Desaturate_desaturation2.png</file>
+            <file>images/RadialBlur_horizontalOffset1.png</file>
+            <file>qml-qtgraphicaleffects1-huesaturation-members.html</file>
+            <file>qml-qtgraphicaleffects1-rectangularglow-members.html</file>
+            <file>images/Blend_mode15.png</file>
+            <file>images/LevelAdjust_minimumInput2_curve.png</file>
+            <file>images/Glow_radius3.png</file>
+            <file>qml-qtgraphicaleffects1-leveladjust.html</file>
+            <file>images/Blend_mode21.png</file>
+            <file>qml-qtgraphicaleffects1-opacitymask.html</file>
+            <file>images/Glow_spread3.png</file>
+            <file>qml-qtgraphicaleffects1-thresholdmask-members.html</file>
+            <file>images/RadialGradient_maskSource2.png</file>
+            <file>images/Blend_mode10.png</file>
+            <file>images/ThresholdMask_spread2.png</file>
+            <file>images/HueSaturation_hue1.png</file>
+            <file>images/LinearGradient_gradient3.png</file>
+            <file>images/Blend_mode9.png</file>
+            <file>images/RecursiveBlur_radius2.png</file>
+            <file>images/GaussianBlur_radius3.png</file>
+            <file>qml-qtgraphicaleffects1-coloroverlay-members.html</file>
+            <file>images/DirectionalBlur_length1.png</file>
+            <file>images/RadialGradient_horizontalRadius1.png</file>
+            <file>images/DropShadow_horizontalOffset2.png</file>
+            <file>images/RadialGradient_gradient3.png</file>
+            <file>images/LevelAdjust_default_curve.png</file>
+            <file>images/Displace_displacement3.png</file>
+            <file>qml-qtgraphicaleffects1-colorize.html</file>
+            <file>images/Blend_mode4.png</file>
+            <file>qml-qtgraphicaleffects1-radialgradient.html</file>
+            <file>images/DropShadow_spread3.png</file>
+            <file>images/LevelAdjust_minimumInput3_curve.png</file>
+            <file>images/MaskedBlur_radius2.png</file>
+            <file>qml-qtgraphicaleffects1-dropshadow-members.html</file>
+            <file>qml-qtgraphicaleffects1-conicalgradient.html</file>
+            <file>images/ColorOverlay_butterfly.png</file>
+            <file>qmlmodule-qtgraphicaleffects1-qtgraphicaleffects-1-0.html</file>
+            <file>images/DropShadow_radius1.png</file>
+            <file>images/RadialGradient.png</file>
+            <file>images/LevelAdjust_maximumOutput2_curve.png</file>
+            <file>images/LevelAdjust_gamma1.png</file>
+            <file>qml-qtgraphicaleffects1-zoomblur.html</file>
+            <file>images/DropShadow_fast1.png</file>
+            <file>images/RecursiveBlur_loops2.png</file>
+            <file>images/ThresholdMask_threshold2.png</file>
+            <file>images/LevelAdjust_minimumOutput2.png</file>
+            <file>images/DropShadow_butterfly.png</file>
+            <file>images/LevelAdjust_maximumInput3.png</file>
+            <file>images/RadialBlur_horizontalOffset3.png</file>
+            <file>images/MaskedBlur_mask.png</file>
+            <file>images/FastBlur_transparentBorder2.png</file>
+            <file>images/ZoomBlur_bug.png</file>
+            <file>images/Colorize_saturation2.png</file>
+            <file>images/Blend_mode17.png</file>
+            <file>images/ZoomBlur_length1.png</file>
+            <file>images/RecursiveBlur_bug.png</file>
+            <file>images/MaskedBlur_transparentBorder1.png</file>
+            <file>images/LevelAdjust_minimumInput1.png</file>
+            <file>images/Colorize_hue_scale.png</file>
+            <file>images/ColorOverlay_color2.png</file>
+            <file>images/DropShadow_color2.png</file>
+            <file>qtgraphicaleffects-index.html</file>
+            <file>images/GaussianBlur_transparentBorder2.png</file>
+            <file>images/RadialBlur_angle2.png</file>
+            <file>images/Colorize_hue1.png</file>
+            <file>images/Blend_mode12.png</file>
+            <file>images/HueSaturation_bug.png</file>
+            <file>images/HueSaturation_hue3.png</file>
+            <file>images/Desaturate_bug.png</file>
+            <file>qml-qtgraphicaleffects1-glow-members.html</file>
+            <file>images/HueSaturation_lightness1.png</file>
+            <file>qml-qtgraphicaleffects1-recursiveblur.html</file>
+            <file>images/Glow_color2.png</file>
+            <file>images/ConicalGradient_angle2.png</file>
+            <file>images/LinearGradient_start2.png</file>
+            <file>images/BrightnessContrast_contrast1.png</file>
+            <file>images/RadialGradient_horizontalOffset2.png</file>
+            <file>images/DirectionalBlur_angle2.png</file>
+            <file>images/DirectionalBlur_length3.png</file>
+            <file>images/LinearGradient_end2.png</file>
+            <file>images/RectangularGlow_applied.png</file>
+            <file>qml-qtgraphicaleffects1-blend-members.html</file>
+            <file>images/Blend_mode6.png</file>
+            <file>images/FastBlur_bug.png</file>
+            <file>images/ConicalGradient_maskSource2.png</file>
+            <file>images/InnerShadow_butterfly.png</file>
+            <file>qml-qtgraphicaleffects1-desaturate-members.html</file>
+            <file>images/BrightnessContrast_brightness2.png</file>
+            <file>images/RectangularGlow_glowRadius1.png</file>
+            <file>qml-qtgraphicaleffects1-zoomblur-members.html</file>
+            <file>images/LevelAdjust_maximumOutput2.png</file>
+            <file>images/FastBlur_radius1.png</file>
+            <file>qml-qtgraphicaleffects1-gammaadjust-members.html</file>
+            <file>images/Original_butterfly_black.png</file>
+            <file>images/DropShadow_radius3.png</file>
+            <file>images/InnerShadow_radius1.png</file>
+            <file>images/Blend_mode1.png</file>
+            <file>images/ConicalGradient_horizontalOffset1.png</file>
+            <file>images/RectangularGlow_spread2.png</file>
+            <file>images/LevelAdjust_gamma3.png</file>
+            <file>qml-qtgraphicaleffects1-gaussianblur.html</file>
+            <file>images/InnerShadow_spread1.png</file>
+            <file>images/InnerShadow_fast1.png</file>
+            <file>images/OpacityMask_mask.png</file>
+            <file>qml-qtgraphicaleffects1-gammaadjust.html</file>
+            <file>images/ZoomBlur_horizontalOffset2.png</file>
+            <file>images/InnerShadow_horizontalOffset1.png</file>
+            <file>qml-qtgraphicaleffects1-opacitymask-members.html</file>
+            <file>images/HueSaturation_saturation2.png</file>
+            <file>images/GammaAdjust_gamma2.png</file>
+            <file>images/RadialGradient_angle1.png</file>
+            <file>qml-qtgraphicaleffects1-maskedblur-members.html</file>
+            <file>images/LevelAdjust_gamma2_curve.png</file>
+            <file>images/Blend_mode19.png</file>
+            <file>images/ZoomBlur_length3.png</file>
+            <file>images/RectangularGlow_color2.png</file>
+            <file>qml-qtgraphicaleffects1-coloroverlay.html</file>
+            <file>images/GaussianBlur_deviation1.png</file>
+            <file>images/LevelAdjust_minimumInput3.png</file>
+            <file>images/InnerShadow_color2.png</file>
+            <file>images/RectangularGlow_cornerRadius2.png</file>
+            <file>images/Colorize_lightness1.png</file>
+            <file>images/Desaturate_desaturation1.png</file>
+            <file>images/ConicalGradient_gradient1.png</file>
+            <file>images/GammaAdjust_gamma1_graph.png</file>
+            <file>images/Colorize_hue3.png</file>
+            <file>images/Blend_mode14.png</file>
+            <file>images/LinearGradient_maskSource2.png</file>
+            <file>images/ThresholdMask_mask.png</file>
+            <file>images/Glow_radius2.png</file>
+            <file>images/Blend_mode20.png</file>
+            <file>images/HueSaturation_lightness3.png</file>
+            <file>images/BrightnessContrast_contrast3.png</file>
+            <file>images/RecursiveBlur_transparentBorder2.png</file>
+            <file>images/ConicalGradient.png</file>
+            <file>images/LevelAdjust_maximumOutput3_curve.png</file>
+            <file>images/Glow_spread2.png</file>
+            <file>images/bullet_sq.png</file>
+            <file>images/RadialGradient_maskSource1.png</file>
+            <file>images/ThresholdMask_spread1.png</file>
+            <file>images/LevelAdjust_gamma3_curve.png</file>
+            <file>images/LinearGradient_gradient2.png</file>
+            <file>images/RecursiveBlur_radius1.png</file>
+            <file>images/Blend_mode8.png</file>
+            <file>images/GaussianBlur_radius2.png</file>
+            <file>images/DirectionalBlur_bug.png</file>
+            <file>images/RectangularGlow_glowRadius3.png</file>
+            <file>images/FastBlur_radius3.png</file>
+            <file>images/DropShadow_horizontalOffset1.png</file>
+            <file>images/RadialGradient_gradient2.png</file>
+            <file>images/GammaAdjust_gamma2_graph.png</file>
+            <file>images/InnerShadow_radius3.png</file>
+            <file>images/Displace_displacement2.png</file>
+            <file>images/LinearGradient.png</file>
+            <file>images/Blend_mode3.png</file>
+            <file>images/ConicalGradient_horizontalOffset3.png</file>
+            <file>images/DropShadow_spread2.png</file>
+            <file>images/MaskedBlur_radius1.png</file>
+            <file>images/InnerShadow_spread3.png</file>
+            <file>images/MaskedBlur_fast2.png</file>
+            <file>images/InnerShadow_horizontalOffset3.png</file>
+            <file>images/GaussianBlur_deviation_graph.png</file>
+            <file>images/Displace_map.png</file>
+            <file>images/RadialGradient_angle3.png</file>
+            <file>images/RecursiveBlur_loops1.png</file>
+            <file>images/ThresholdMask_threshold1.png</file>
+            <file>images/Glow_fast2.png</file>
+            <file>images/LevelAdjust_minimumOutput1.png</file>
+            <file>images/GaussianBlur_deviation3.png</file>
+            <file>images/Colorize_lightness3.png</file>
+            <file>images/LevelAdjust_maximumInput2.png</file>
+            <file>images/ConicalGradient_gradient3.png</file>
+            <file>images/Desaturate_desaturation3.png</file>
+            <file>images/GaussianBlur_bug.png</file>
+            <file>images/RadialBlur_horizontalOffset2.png</file>
+            <file>images/FastBlur_transparentBorder1.png</file>
+            <file>images/Blend_mode16.png</file>
+            <file>images/Colorize_saturation1.png</file>
+            <file>images/ico_note_attention.png</file>
+            <file>images/LevelAdjust_minimumOutput2_curve.png</file>
+            <file>images/Blend_mode22.png</file>
+            <file>images/ColorOverlay_color1.png</file>
+            <file>images/DropShadow_color1.png</file>
+            <file>images/GammaAdjust_bug.png</file>
+            <file>images/GaussianBlur_transparentBorder1.png</file>
+            <file>images/RadialBlur_angle1.png</file>
+            <file>images/Blend_mode11.png</file>
+            <file>images/ThresholdMask_spread3.png</file>
+            <file>images/HueSaturation_hue2.png</file>
+            <file>images/LevelAdjust_maximumInput2_curve.png</file>
+            <file>images/RecursiveBlur_radius3.png</file>
+            <file>images/Glow_color1.png</file>
+            <file>images/LinearGradient_start1.png</file>
+            <file>images/ConicalGradient_angle1.png</file>
+            <file>images/RadialGradient_horizontalOffset1.png</file>
+            <file>images/DirectionalBlur_angle1.png</file>
+            <file>images/btn_next.png</file>
+            <file>images/BrightnessContrast_bug.png</file>
+            <file>images/DirectionalBlur_length2.png</file>
+            <file>images/Original_bug.png</file>
+            <file>images/RadialGradient_horizontalRadius2.png</file>
+            <file>images/ico_note.png</file>
+            <file>images/LinearGradient_end1.png</file>
+            <file>images/DropShadow_horizontalOffset3.png</file>
+            <file>images/Blend_mode5.png</file>
+            <file>images/ConicalGradient_maskSource1.png</file>
+            <file>images/MaskedBlur_radius3.png</file>
+            <file>images/BrightnessContrast_brightness1.png</file>
+            <file>images/LevelAdjust_maximumOutput1.png</file>
+            <file>images/RadialBlur_bug.png</file>
+            <file>images/DropShadow_radius2.png</file>
+            <file>images/BrightnessContrast_contrast_graph.png</file>
+            <file>images/MaskedBlur_bug.png</file>
+            <file>images/RectangularGlow_spread1.png</file>
+            <file>images/LevelAdjust_gamma2.png</file>
+            <file>images/Colorize_bug.png</file>
+            <file>images/DropShadow_fast2.png</file>
+            <file>images/ZoomBlur_horizontalOffset1.png</file>
+            <file>images/RecursiveBlur_loops3.png</file>
+            <file>images/ThresholdMask_threshold3.png</file>
+            <file>images/ico_out.png</file>
+            <file>images/HueSaturation_saturation1.png</file>
+            <file>images/GammaAdjust_gamma1.png</file>
+            <file>images/LevelAdjust_minimumOutput3.png</file>
+            <file>images/Colorize_saturation3.png</file>
+            <file>images/Blend_mode18.png</file>
+            <file>images/ZoomBlur_length2.png</file>
+            <file>images/RectangularGlow_color1.png</file>
+            <file>images/MaskedBlur_transparentBorder2.png</file>
+            <file>images/GammaAdjust_gamma3_graph.png</file>
+            <file>images/RectangularGlow_cornerRadius1.png</file>
+            <file>images/LevelAdjust_minimumInput2.png</file>
+            <file>images/InnerShadow_color1.png</file>
+            <file>images/ColorOverlay_color3.png</file>
+            <file>images/Displace_bug.png</file>
+            <file>images/DropShadow_color3.png</file>
+            <file>images/RadialBlur_angle3.png</file>
+            <file>images/LinearGradient_maskSource1.png</file>
+            <file>images/Colorize_hue2.png</file>
+            <file>images/Blend_mode13.png</file>
+            <file>images/Original_butterfly.png</file>
+            <file>images/Glow_radius1.png</file>
+            <file>images/HueSaturation_lightness2.png</file>
+            <file>images/Glow_color3.png</file>
+            <file>images/ConicalGradient_angle3.png</file>
+            <file>images/LinearGradient_start3.png</file>
+            <file>images/LevelAdjust_butterfly.png</file>
+            <file>images/BrightnessContrast_contrast2.png</file>
+            <file>images/RecursiveBlur_transparentBorder1.png</file>
+            <file>images/RadialGradient_horizontalOffset3.png</file>
+            <file>images/Glow_spread1.png</file>
+            <file>images/Glow_butterfly.png</file>
+            <file>images/DirectionalBlur_angle3.png</file>
+            <file>images/LinearGradient_end3.png</file>
+            <file>images/LinearGradient_gradient1.png</file>
+            <file>images/Blend_mode7.png</file>
+            <file>images/OpacityMask_bug.png</file>
+            <file>images/bullet_dn.png</file>
+            <file>images/GaussianBlur_radius1.png</file>
+            <file>images/BrightnessContrast_brightness3.png</file>
+            <file>images/RectangularGlow_glowRadius2.png</file>
+            <file>images/FastBlur_radius2.png</file>
+            <file>images/LevelAdjust_maximumOutput3.png</file>
+            <file>images/RadialGradient_gradient1.png</file>
+            <file>images/InnerShadow_radius2.png</file>
+            <file>images/Displace_displacement1.png</file>
+            <file>images/btn_prev.png</file>
+            <file>images/bgrContent.png</file>
+            <file>images/Blend_mode2.png</file>
+            <file>images/ConicalGradient_horizontalOffset2.png</file>
+            <file>images/RectangularGlow_spread3.png</file>
+            <file>images/DropShadow_spread1.png</file>
+            <file>images/InnerShadow_spread2.png</file>
+            <file>images/MaskedBlur_fast1.png</file>
+            <file>images/LevelAdjust_minimumOutput3_curve.png</file>
+            <file>images/InnerShadow_fast2.png</file>
+            <file>images/ZoomBlur_horizontalOffset3.png</file>
+            <file>images/InnerShadow_horizontalOffset2.png</file>
+            <file>images/ThresholdMask_bug.png</file>
+            <file>images/HueSaturation_saturation3.png</file>
+            <file>images/Blend_bug_and_butterfly.png</file>
+            <file>images/GammaAdjust_gamma3.png</file>
+            <file>images/RadialGradient_angle2.png</file>
+            <file>images/LevelAdjust_maximumInput3_curve.png</file>
+            <file>images/RectangularGlow_color3.png</file>
+            <file>images/Glow_fast1.png</file>
+            <file>images/GaussianBlur_deviation2.png</file>
+            <file>images/RectangularGlow_cornerRadius3.png</file>
+            <file>images/InnerShadow_color3.png</file>
+            <file>images/Colorize_lightness2.png</file>
+            <file>images/LevelAdjust_maximumInput1.png</file>
+            <file>images/ConicalGradient_gradient2.png</file>
+            <file>images/Desaturate_desaturation2.png</file>
+            <file>images/RadialBlur_horizontalOffset1.png</file>
+            <file>images/Blend_mode15.png</file>
+            <file>images/LevelAdjust_minimumInput2_curve.png</file>
+            <file>images/Glow_radius3.png</file>
+            <file>images/Blend_mode21.png</file>
+            <file>images/Glow_spread3.png</file>
+            <file>images/RadialGradient_maskSource2.png</file>
+            <file>images/Blend_mode10.png</file>
+            <file>images/ThresholdMask_spread2.png</file>
+            <file>images/HueSaturation_hue1.png</file>
+            <file>images/LinearGradient_gradient3.png</file>
+            <file>images/Blend_mode9.png</file>
+            <file>images/RecursiveBlur_radius2.png</file>
+            <file>images/GaussianBlur_radius3.png</file>
+            <file>images/DirectionalBlur_length1.png</file>
+            <file>images/RadialGradient_horizontalRadius1.png</file>
+            <file>images/DropShadow_horizontalOffset2.png</file>
+            <file>images/RadialGradient_gradient3.png</file>
+            <file>images/LevelAdjust_default_curve.png</file>
+            <file>images/Displace_displacement3.png</file>
+            <file>images/Blend_mode4.png</file>
+            <file>images/DropShadow_spread3.png</file>
+            <file>images/LevelAdjust_minimumInput3_curve.png</file>
+            <file>images/MaskedBlur_radius2.png</file>
+            <file>images/ColorOverlay_butterfly.png</file>
+            <file>style/offline.css</file>
+            <file>images/DropShadow_radius1.png</file>
+            <file>images/RadialGradient.png</file>
+            <file>images/LevelAdjust_maximumOutput2_curve.png</file>
+            <file>images/LevelAdjust_gamma1.png</file>
+            <file>images/DropShadow_fast1.png</file>
+            <file>images/RecursiveBlur_loops2.png</file>
+            <file>images/ThresholdMask_threshold2.png</file>
+            <file>images/LevelAdjust_minimumOutput2.png</file>
+            <file>images/DropShadow_butterfly.png</file>
+            <file>images/LevelAdjust_maximumInput3.png</file>
+            <file>images/RadialBlur_horizontalOffset3.png</file>
+            <file>images/MaskedBlur_mask.png</file>
+            <file>images/FastBlur_transparentBorder2.png</file>
+            <file>images/ZoomBlur_bug.png</file>
+            <file>images/Colorize_saturation2.png</file>
+            <file>images/Blend_mode17.png</file>
+            <file>images/ZoomBlur_length1.png</file>
+            <file>images/RecursiveBlur_bug.png</file>
+            <file>images/MaskedBlur_transparentBorder1.png</file>
+            <file>images/LevelAdjust_minimumInput1.png</file>
+            <file>images/Colorize_hue_scale.png</file>
+            <file>images/ColorOverlay_color2.png</file>
+            <file>images/DropShadow_color2.png</file>
+            <file>images/GaussianBlur_transparentBorder2.png</file>
+            <file>images/RadialBlur_angle2.png</file>
+            <file>images/Colorize_hue1.png</file>
+            <file>images/Blend_mode12.png</file>
+            <file>images/HueSaturation_bug.png</file>
+            <file>images/HueSaturation_hue3.png</file>
+            <file>images/Desaturate_bug.png</file>
+            <file>images/HueSaturation_lightness1.png</file>
+            <file>images/Glow_color2.png</file>
+            <file>images/ConicalGradient_angle2.png</file>
+            <file>images/LinearGradient_start2.png</file>
+            <file>images/BrightnessContrast_contrast1.png</file>
+            <file>images/RadialGradient_horizontalOffset2.png</file>
+            <file>images/DirectionalBlur_angle2.png</file>
+            <file>images/DirectionalBlur_length3.png</file>
+            <file>images/LinearGradient_end2.png</file>
+            <file>images/RectangularGlow_applied.png</file>
+            <file>images/Blend_mode6.png</file>
+            <file>images/FastBlur_bug.png</file>
+            <file>images/ConicalGradient_maskSource2.png</file>
+            <file>images/InnerShadow_butterfly.png</file>
+            <file>images/RectangularGlow_glowRadius1.png</file>
+            <file>images/BrightnessContrast_brightness2.png</file>
+            <file>images/LevelAdjust_maximumOutput2.png</file>
+            <file>images/FastBlur_radius1.png</file>
+            <file>images/Original_butterfly_black.png</file>
+            <file>images/DropShadow_radius3.png</file>
+            <file>images/InnerShadow_radius1.png</file>
+            <file>images/Blend_mode1.png</file>
+            <file>images/ConicalGradient_horizontalOffset1.png</file>
+            <file>images/RectangularGlow_spread2.png</file>
+            <file>images/LevelAdjust_gamma3.png</file>
+            <file>images/InnerShadow_spread1.png</file>
+            <file>images/InnerShadow_fast1.png</file>
+            <file>images/OpacityMask_mask.png</file>
+            <file>images/ZoomBlur_horizontalOffset2.png</file>
+            <file>images/InnerShadow_horizontalOffset1.png</file>
+            <file>images/HueSaturation_saturation2.png</file>
+            <file>images/GammaAdjust_gamma2.png</file>
+            <file>images/RadialGradient_angle1.png</file>
+            <file>images/LevelAdjust_gamma2_curve.png</file>
+            <file>images/Blend_mode19.png</file>
+            <file>images/ZoomBlur_length3.png</file>
+            <file>images/RectangularGlow_color2.png</file>
+            <file>images/GaussianBlur_deviation1.png</file>
+            <file>images/LevelAdjust_minimumInput3.png</file>
+            <file>images/InnerShadow_color2.png</file>
+            <file>images/RectangularGlow_cornerRadius2.png</file>
+            <file>images/Colorize_lightness1.png</file>
+            <file>images/Desaturate_desaturation1.png</file>
+            <file>images/ConicalGradient_gradient1.png</file>
+            <file>images/GammaAdjust_gamma1_graph.png</file>
+            <file>images/Colorize_hue3.png</file>
+            <file>images/Blend_mode14.png</file>
+            <file>images/LinearGradient_maskSource2.png</file>
+            <file>images/ThresholdMask_mask.png</file>
+            <file>images/Glow_radius2.png</file>
+            <file>images/Blend_mode20.png</file>
+            <file>images/HueSaturation_lightness3.png</file>
+        </files>
+    </filterSection>
+</QtHelpProject>

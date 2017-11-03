@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- installation.qdoc -->
+  <title>QtDoc 5.0: Qt for Windows Requirements</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="requirements.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="requirements.html">General Qt Requirements</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#graphics-drivers">Graphics Drivers</a></li>
+<li class="level1"><a href="#libraries">Libraries</a></li>
+<li class="level1"><a href="#development-tools">Development tools</a></li>
+<li class="level1"><a href="#sdks-and-compilers">SDKs and Compilers</a></li>
+<li class="level2"><a href="#popular-ides">Popular IDEs</a></li>
+</ul>
+</div>
+<h1 class="title">Qt for Windows Requirements</h1>
+<span class="subtitle"></span>
+<!-- $$$requirements-win.html-description -->
+<div class="descr"> <a name="details"></a>
+<a name="graphics-drivers"></a>
+<h2>Graphics Drivers</h2>
+<p>For <a href="../qtquick/qtquick-module.html">QtQuick</a> 2.0 to work, a graphics driver that provides OpenGL 2.1 or higher is required. The Windows default driver provides only OpenGL 1.1, which is not sufficient. To work around this limitation, Qt now includes a version of the <a href="http://code.google.com/p/angleproject/">ANGLE</a> project which is used by default. ANGLE implements the OpenGL ES 2.0 API on top of DirectX 9. ANGLE requires that the DirectX SDK is installed when building Qt.</p>
+<p>To use a custom version of ANGLE, set the <tt>ANGLE_DIR</tt> environment variable to point to the ANGLE source tree before building Qt.</p>
+<p>If you have installed additional OpenGL drivers from your hardware vendor, then you may want to consider using this version of OpenGL instead of ANGLE. To use &quot;desktop&quot; OpenGL you should pass the command line options <tt>-opengl desktop</tt> to configure.</p>
+<p>If you wish to use an OpenGL ES 2.0 emulator other than ANGLE, then you can use the following command line options: <tt>-opengl es2 -no-angle</tt>.</p>
+<a name="libraries"></a>
+<h2>Libraries</h2>
+<ul>
+<li><a href="http://site.icu-project.org/">ICU</a>: Qt 5 can make use of the ICU library for UNICODE and Globalization support (required for QtWebKit). At compile time, the include and lib folders of the ICU installation must be appended to the <tt>INCLUDE</tt> and <tt>LIB</tt> environment variables. At run-time, the ICU DLLs need to be found. This can be achieved by copying the DLLs to the application folder or adding the bin folder of the ICU installation to the <tt>PATH</tt> environment variable.</li>
+<li><a href="http://code.google.com/p/angleproject/">ANGLE</a>: This library converts OpenGL ES 2.0 API calls to DirectX 9, removing the need to install graphics drivers on the target machines. <a href="http://code.google.com/p/angleproject/wiki/DevSetup">Building</a> the library requires the installation of the <a href="http://msdn.microsoft.com/en-us/directx/default.aspx">Direct X SDK</a>.<p><b>Note: </b>When building for 64bit, de-activate the <tt>WarnAsError</tt> option in every project file (as otherwise integer conversion warnings will break the build).</p></li>
+</ul>
+<a name="development-tools"></a>
+<h2>Development tools</h2>
+<ul>
+<li>Install a recent version of <a href="http://www.activestate.com/Products/activeperl/index.mhtml">ActivePerl</a> and add the installation location to your PATH.<p><b>Note: </b>Please make sure the perl executable is found in the path before the perl executable provided by msysgit, since the latter is outdated.</p></li>
+<li>Install Python from <a href="http://www.python.org/download/">here</a> and add the installation location to your PATH in order to be able to build QtJsBackend and QtWebKit.</li>
+<li>Install <a href="http://www.ruby-lang.org">Ruby</a> from <a href="http://rubyinstaller.org/">here</a> and add the installation location to your PATH in order to be able to build QtWebKit.</li>
+<li><a href="http://qt-project.org/wiki/jom">jom</a> is a replacement for <tt>nmake</tt> which makes use of all CPU cores and thus speeds up building.</li>
+</ul>
+<p>QtWebKit and ANGLE depend on some extra tools from the <a href="http://gnuwin32.sourceforge.net/packages.html">GnuWin32 Project</a> which are provided for your convenience in the <tt>gnuwin32/bin</tt> folder:</p>
+<ul>
+<li><a href="http://gnuwin32.sourceforge.net/downlinks/bison.php">Bison</a></li>
+<li><a href="http://gnuwin32.sourceforge.net/downlinks/gperf.php">GPerf</a></li>
+<li><a href="http://gnuwin32.sourceforge.net/downlinks/flex.php">Flex</a></li>
+</ul>
+<p>The folder should be added to the PATH.</p>
+<a name="sdks-and-compilers"></a>
+<h2>SDKs and Compilers</h2>
+<p>A Windows SDK is required to develop Qt applications on Windows. Below, we have listed some potential options for SDKs and compilers.</p>
+<ul>
+<li>Windows SDK 8 (with Visual Studio 2012 Express). As of Windows 8, the SDK no longer ships with a complete command-line build environment. You must install a compiler and build environment separately. If you require a complete development environment that includes compilers and a build environment, you can download Visual Studio 2012 Express, which includes the appropriate components of the Windows SDK. <a href="http://msdn.microsoft.com/en-us/windows/desktop/hh852363.aspx">http://msdn.microsoft.com/en-us/windows/desktop/hh852363.aspx</a></li>
+<li>Windows SDK 7.1&#x2e; Note that, as of 16.3&#x2e;2012, if you use this SDK with Visual Studio 2010, installing the SDK requires installing the following packages in this order (see <tt>readme.html</tt> provided with the service pack):<ul>
+<li>Install Visual Studio 2010</li>
+<li>Install Windows SDK 7.1</li>
+<li>Install Visual Studio 2010 SP1</li>
+<li>Install Visual C++ 2010 SP1 Compiler Update for the Windows SDK 7.1</li>
+</ul>
+</li>
+<li>Windows SDK 7.</li>
+<li>A <a href="http://www.mingw.org/">MinGW</a> toolchain with g++ version 4.7 or higher. Qt 5 is tested regularly with a <a href="http://sourceforge.net/projects/mingwbuilds/files/host-windows/releases/4.7.2/32-bit/threads-posix/sjlj/x32-4.7.2-release-posix-sjlj-rev8.7z">32 bit gcc 4.7&#x2e;2 toolchain</a> from the <a href="http://mingwbuilds.sourceforge.net">MinGW-builds</a> project.</li>
+</ul>
+<a name="popular-ides"></a>
+<h3>Popular IDEs</h3>
+<p>There are several popular IDEs for Qt development on Windows:</p>
+<ul>
+<li>Qt Creator</li>
+<li>Visual Studio</li>
+<li>Eclipse</li>
+</ul>
+<p>For the most up to date information about QtWebKit dependencies, please refer to the <a href="http://trac.webkit.org/wiki/BuildingQtOnWindows">QtWebKit wiki for Windows</a>.</p>
+</div>
+<p><b>See also </b><a href="known-issues.html">Known Issues</a>.</p>
+<!-- @@@requirements-win.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="requirements.html">General Qt Requirements</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

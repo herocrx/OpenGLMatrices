@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/qttestlib" title="Qt Test Reference Documentation" version="5.0.2">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <function access="public" threadsafety="unspecified" status="commendable" name="QCOMPARE" href="qtest.html#QCOMPARE" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QCOMPARE( actual,  expected)">
+            <parameter left="" right="" name="actual" default=""/>
+            <parameter left="" right="" name="expected" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QEXPECT_FAIL" href="qtest.html#QEXPECT_FAIL" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QEXPECT_FAIL( dataIndex,  comment,  mode)">
+            <parameter left="" right="" name="dataIndex" default=""/>
+            <parameter left="" right="" name="comment" default=""/>
+            <parameter left="" right="" name="mode" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QFAIL" href="qtest.html#QFAIL" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QFAIL( message)">
+            <parameter left="" right="" name="message" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QFETCH" href="qtest.html#QFETCH" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QFETCH( type,  name)">
+            <parameter left="" right="" name="type" default=""/>
+            <parameter left="" right="" name="name" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QFINDTESTDATA" href="qtest.html#QFINDTESTDATA" location="" since="5.0" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QFINDTESTDATA( filename)">
+            <parameter left="" right="" name="filename" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QSKIP" href="qtest.html#QSKIP" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QSKIP( description)">
+            <parameter left="" right="" name="description" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTEST" href="qtest.html#QTEST" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTEST( actual,  testElement)">
+            <parameter left="" right="" name="actual" default=""/>
+            <parameter left="" right="" name="testElement" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTEST_APPLESS_MAIN" href="qtest.html#QTEST_APPLESS_MAIN" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTEST_APPLESS_MAIN( TestClass)">
+            <parameter left="" right="" name="TestClass" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTEST_GUILESS_MAIN" href="qtest.html#QTEST_GUILESS_MAIN" location="" since="5.0" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTEST_GUILESS_MAIN( TestClass)">
+            <parameter left="" right="" name="TestClass" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTEST_MAIN" href="qtest.html#QTEST_MAIN" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTEST_MAIN( TestClass)">
+            <parameter left="" right="" name="TestClass" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTRY_COMPARE" href="qtest.html#QTRY_COMPARE" location="" since="5.0" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTRY_COMPARE( actual,  expected)">
+            <parameter left="" right="" name="actual" default=""/>
+            <parameter left="" right="" name="expected" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTRY_COMPARE_WITH_TIMEOUT" href="qtest.html#QTRY_COMPARE_WITH_TIMEOUT" location="" since="5.0" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTRY_COMPARE_WITH_TIMEOUT( actual,  expected,  timeout)">
+            <parameter left="" right="" name="actual" default=""/>
+            <parameter left="" right="" name="expected" default=""/>
+            <parameter left="" right="" name="timeout" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTRY_VERIFY" href="qtest.html#QTRY_VERIFY" location="" since="5.0" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTRY_VERIFY( condition)">
+            <parameter left="" right="" name="condition" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QTRY_VERIFY_WITH_TIMEOUT" href="qtest.html#QTRY_VERIFY_WITH_TIMEOUT" location="" since="5.0" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QTRY_VERIFY_WITH_TIMEOUT( condition,  timeout)">
+            <parameter left="" right="" name="condition" default=""/>
+            <parameter left="" right="" name="timeout" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QVERIFY" href="qtest.html#QVERIFY" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QVERIFY( condition)">
+            <parameter left="" right="" name="condition" default=""/>
+        </function>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QVERIFY2" href="qtest.html#QVERIFY2" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QVERIFY2( condition,  message)">
+            <parameter left="" right="" name="condition" default=""/>
+            <parameter left="" right="" name="message" default=""/>
+        </function>
+        <function access="public" threadsafety="thread safe" status="commendable" name="QWARN" href="qtest.html#QWARN" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QWARN( message)">
+            <parameter left="" right="" name="message" default=""/>
+        </function>
+        <namespace access="public" threadsafety="unspecified" status="commendable" name="QTest" href="qtest.html" location="qabstracttestlogger_p.h" module="QtTest">
+            <function access="public" threadsafety="unspecified" status="commendable" name="setBenchmarkResult" fullname="QTest::setBenchmarkResult" href="qtest.html#setBenchmarkResult" location="qbenchmark.h" since="4.7" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setBenchmarkResult(qreal result, QBenchmarkMetric metric)">
+                <parameter left="qreal" right="" name="result" default=""/>
+                <parameter left="QBenchmarkMetric" right="" name="metric" default=""/>
+            </function>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="QBenchmarkMetric" fullname="QTest::QBenchmarkMetric" href="qtest.html#QBenchmarkMetric-enum" location="qbenchmarkmetric.h" since="4.7">
+                <value name="FramesPerSecond" value="0"/>
+                <value name="BitsPerSecond" value="1"/>
+                <value name="BytesPerSecond" value="2"/>
+                <value name="WalltimeMilliseconds" value="3"/>
+                <value name="CPUTicks" value="4"/>
+                <value name="InstructionReads" value="5"/>
+                <value name="Events" value="6"/>
+                <value name="WalltimeNanoseconds" value="7"/>
+                <value name="BytesAllocated" value="8"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="benchmarkMetricName" fullname="QTest::benchmarkMetricName" href="qtest.html#benchmarkMetricName" location="qbenchmarkmetric_p.h" since="4.7" virtual="non" meta="plain" const="false" static="false" overload="false" relates="QTest" type="const char *" signature="benchmarkMetricName(QBenchmarkMetric metric)">
+                <parameter left="QBenchmarkMetric" right="" name="metric" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="benchmarkMetricUnit" fullname="QTest::benchmarkMetricUnit" href="qtest.html#benchmarkMetricUnit" location="qbenchmarkmetric_p.h" since="4.7" virtual="non" meta="plain" const="false" static="false" overload="false" relates="QTest" type="const char *" signature="benchmarkMetricUnit(QBenchmarkMetric metric)">
+                <parameter left="QBenchmarkMetric" right="" name="metric" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-6" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="6" type="char *" signature="toString(const QByteArray &amp; ba)">
+                <parameter left="const QByteArray &amp;" right="" name="ba" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-10" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="10" type="char *" signature="toString(const QChar &amp; character)">
+                <parameter left="const QChar &amp;" right="" name="character" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-8" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="8" type="char *" signature="toString(const QDate &amp; date)">
+                <parameter left="const QDate &amp;" right="" name="date" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-9" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="9" type="char *" signature="toString(const QDateTime &amp; dateTime)">
+                <parameter left="const QDateTime &amp;" right="" name="dateTime" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-4" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="4" type="char *" signature="toString(const QLatin1String &amp; string)">
+                <parameter left="const QLatin1String &amp;" right="" name="string" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-11" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="11" type="char *" signature="toString(const QPoint &amp; point)">
+                <parameter left="const QPoint &amp;" right="" name="point" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-15" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="15" type="char *" signature="toString(const QPointF &amp; point)">
+                <parameter left="const QPointF &amp;" right="" name="point" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-13" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="13" type="char *" signature="toString(const QRect &amp; rectangle)">
+                <parameter left="const QRect &amp;" right="" name="rectangle" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-17" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="17" type="char *" signature="toString(const QRectF &amp; rectangle)">
+                <parameter left="const QRectF &amp;" right="" name="rectangle" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-12" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="12" type="char *" signature="toString(const QSize &amp; size)">
+                <parameter left="const QSize &amp;" right="" name="size" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-16" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="16" type="char *" signature="toString(const QSizeF &amp; size)">
+                <parameter left="const QSizeF &amp;" right="" name="size" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-5" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="5" type="char *" signature="toString(const QString &amp; string)">
+                <parameter left="const QString &amp;" right="" name="string" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-7" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="7" type="char *" signature="toString(const QTime &amp; time)">
+                <parameter left="const QTime &amp;" right="" name="time" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-14" location="qtest.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="14" type="char *" signature="toString(const QUrl &amp; url)">
+                <parameter left="const QUrl &amp;" right="" name="url" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString-18" location="qtest.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="18" type="char *" signature="toString(const QVariant &amp; variant)">
+                <parameter left="const QVariant &amp;" right="" name="variant" default=""/>
+            </function>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="TestFailMode" fullname="QTest::TestFailMode" href="qtest.html#TestFailMode-enum" location="qtest_global.h">
+                <value name="Abort" value="1"/>
+                <value name="Continue" value="2"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qCompare" fullname="QTest::qCompare" href="qtest.html#qCompare" location="qtest_gui.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="qCompare(QImage const &amp; t1, QImage const &amp; t2, const char * actual, const char * expected, const char * file, int line)">
+                <parameter left="QImage const &amp;" right="" name="t1" default=""/>
+                <parameter left="QImage const &amp;" right="" name="t2" default=""/>
+                <parameter left="const char *" right="" name="actual" default=""/>
+                <parameter left="const char *" right="" name="expected" default=""/>
+                <parameter left="const char *" right="" name="file" default=""/>
+                <parameter left="int" right="" name="line" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qFindTestData" fullname="QTest::qFindTestData" href="qtest.html#qFindTestData" location="qtestcase.cpp" virtual="non" meta="plain" const="false" static="false" overload="false" type="QString" signature="qFindTestData(const QString &amp; basepath, const char * file, int line, const char * builddir)">
+                <parameter left="const QString &amp;" right="" name="basepath" default=""/>
+                <parameter left="const char *" right="" name="file" default="0"/>
+                <parameter left="int" right="" name="line" default="0"/>
+                <parameter left="const char *" right="" name="builddir" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addColumn" fullname="QTest::addColumn" href="qtest.html#addColumn" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addColumn(const char * name, T * dummy)">
+                <parameter left="const char *" right="" name="name" default=""/>
+                <parameter left="T *" right="" name="dummy" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="currentDataTag" fullname="QTest::currentDataTag" href="qtest.html#currentDataTag" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="const char *" signature="currentDataTag()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="currentTestFailed" fullname="QTest::currentTestFailed" href="qtest.html#currentTestFailed" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="currentTestFailed()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="currentTestFunction" fullname="QTest::currentTestFunction" href="qtest.html#currentTestFunction" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="const char *" signature="currentTestFunction()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="ignoreMessage" fullname="QTest::ignoreMessage" href="qtest.html#ignoreMessage" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="ignoreMessage(QtMsgType type, const char * message)">
+                <parameter left="QtMsgType" right="" name="type" default=""/>
+                <parameter left="const char *" right="" name="message" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="newRow" fullname="QTest::newRow" href="qtest.html#newRow" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QTestData &amp;" signature="newRow(const char * dataTag)">
+                <parameter left="const char *" right="" name="dataTag" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qCompare" fullname="QTest::qCompare" href="qtest.html#qCompare-13" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="13" type="bool" signature="qCompare(double const &amp; t1, float const &amp; t2, const char * actual, const char * expected, const char * file, int line)">
+                <parameter left="double const &amp;" right="" name="t1" default=""/>
+                <parameter left="float const &amp;" right="" name="t2" default=""/>
+                <parameter left="const char *" right="" name="actual" default=""/>
+                <parameter left="const char *" right="" name="expected" default=""/>
+                <parameter left="const char *" right="" name="file" default=""/>
+                <parameter left="int" right="" name="line" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qCompare" fullname="QTest::qCompare" href="qtest.html#qCompare-14" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="14" type="bool" signature="qCompare(float const &amp; t1, double const &amp; t2, const char * actual, const char * expected, const char * file, int line)">
+                <parameter left="float const &amp;" right="" name="t1" default=""/>
+                <parameter left="double const &amp;" right="" name="t2" default=""/>
+                <parameter left="const char *" right="" name="actual" default=""/>
+                <parameter left="const char *" right="" name="expected" default=""/>
+                <parameter left="const char *" right="" name="file" default=""/>
+                <parameter left="int" right="" name="line" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qExec" fullname="QTest::qExec" href="qtest.html#qExec-2" location="qtestcase.h" since="4.4" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="int" signature="qExec(QObject * testObject, const QStringList &amp; arguments)">
+                <parameter left="QObject *" right="" name="testObject" default=""/>
+                <parameter left="const QStringList &amp;" right="" name="arguments" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qExec" fullname="QTest::qExec" href="qtest.html#qExec" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="int" signature="qExec(QObject * testObject, int argc, char ** argv)">
+                <parameter left="QObject *" right="" name="testObject" default=""/>
+                <parameter left="int" right="" name="argc" default="0"/>
+                <parameter left="char **" right="" name="argv" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qSleep" fullname="QTest::qSleep" href="qtest.html#qSleep" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="qSleep(int ms)">
+                <parameter left="int" right="" name="ms" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toHexRepresentation" fullname="QTest::toHexRepresentation" href="qtest.html#toHexRepresentation" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="char *" signature="toHexRepresentation(const char * ba, int length)">
+                <parameter left="const char *" right="" name="ba" default=""/>
+                <parameter left="int" right="" name="length" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toString" fullname="QTest::toString" href="qtest.html#toString" location="qtestcase.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="char *" signature="toString(const T &amp; value)">
+                <parameter left="const T &amp;" right="" name="value" default=""/>
+            </function>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="AttributeIndex" fullname="QTest::AttributeIndex" href="qtest.html#AttributeIndex-enum" location="qtestelementattribute_p.h">
+                <value name="AI_Undefined" value="-1"/>
+                <value name="AI_Name" value="0"/>
+                <value name="AI_Result" value="1"/>
+                <value name="AI_Tests" value="2"/>
+                <value name="AI_Failures" value="3"/>
+                <value name="AI_Errors" value="4"/>
+                <value name="AI_Type" value="5"/>
+                <value name="AI_Description" value="6"/>
+                <value name="AI_PropertyValue" value="7"/>
+                <value name="AI_QTestVersion" value="8"/>
+                <value name="AI_QtVersion" value="9"/>
+                <value name="AI_File" value="10"/>
+                <value name="AI_Line" value="11"/>
+                <value name="AI_Metric" value="12"/>
+                <value name="AI_Tag" value="13"/>
+                <value name="AI_Value" value="14"/>
+                <value name="AI_Iterations" value="15"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="LogElementType" fullname="QTest::LogElementType" href="qtest.html#LogElementType-enum" location="qtestelementattribute_p.h">
+                <value name="LET_Undefined" value="-1"/>
+                <value name="LET_Property" value="0"/>
+                <value name="LET_Properties" value="1"/>
+                <value name="LET_Failure" value="2"/>
+                <value name="LET_Error" value="3"/>
+                <value name="LET_TestCase" value="4"/>
+                <value name="LET_TestSuite" value="5"/>
+                <value name="LET_Benchmark" value="6"/>
+                <value name="LET_SystemError" value="7"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="KeyAction" fullname="QTest::KeyAction" href="qtest.html#KeyAction-enum" location="qtestkeyboard.h">
+                <value name="Press" value="0"/>
+                <value name="Release" value="1"/>
+                <value name="Click" value="2"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyClick" fullname="QTest::keyClick" href="qtest.html#keyClick-3" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="3" type="void" signature="keyClick(QWidget * widget, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyClick" fullname="QTest::keyClick" href="qtest.html#keyClick-4" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="4" type="void" signature="keyClick(QWidget * widget, char key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="char" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyClick" fullname="QTest::keyClick" href="qtest.html#keyClick" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="keyClick(QWindow * window, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyClick" fullname="QTest::keyClick" href="qtest.html#keyClick-2" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="void" signature="keyClick(QWindow * window, char key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="char" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyClicks" fullname="QTest::keyClicks" href="qtest.html#keyClicks" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="keyClicks(QWidget * widget, const QString &amp; sequence, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="const QString &amp;" right="" name="sequence" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyEvent" fullname="QTest::keyEvent" href="qtest.html#keyEvent-3" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="3" type="void" signature="keyEvent(KeyAction action, QWidget * widget, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="KeyAction" right="" name="action" default=""/>
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyEvent" fullname="QTest::keyEvent" href="qtest.html#keyEvent-4" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="4" type="void" signature="keyEvent(KeyAction action, QWidget * widget, char ascii, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="KeyAction" right="" name="action" default=""/>
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="char" right="" name="ascii" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyEvent" fullname="QTest::keyEvent" href="qtest.html#keyEvent-2" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="void" signature="keyEvent(KeyAction action, QWindow * window, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="KeyAction" right="" name="action" default=""/>
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyEvent" fullname="QTest::keyEvent" href="qtest.html#keyEvent" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="keyEvent(KeyAction action, QWindow * window, char ascii, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="KeyAction" right="" name="action" default=""/>
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="char" right="" name="ascii" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyPress" fullname="QTest::keyPress" href="qtest.html#keyPress-3" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="3" type="void" signature="keyPress(QWidget * widget, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyPress" fullname="QTest::keyPress" href="qtest.html#keyPress-4" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="4" type="void" signature="keyPress(QWidget * widget, char key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="char" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyPress" fullname="QTest::keyPress" href="qtest.html#keyPress-2" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="void" signature="keyPress(QWindow * window, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyPress" fullname="QTest::keyPress" href="qtest.html#keyPress" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="keyPress(QWindow * window, char key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="char" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyRelease" fullname="QTest::keyRelease" href="qtest.html#keyRelease-3" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="3" type="void" signature="keyRelease(QWidget * widget, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyRelease" fullname="QTest::keyRelease" href="qtest.html#keyRelease-4" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="4" type="void" signature="keyRelease(QWidget * widget, char key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="char" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyRelease" fullname="QTest::keyRelease" href="qtest.html#keyRelease-2" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="void" signature="keyRelease(QWindow * window, Qt::Key key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::Key" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="keyRelease" fullname="QTest::keyRelease" href="qtest.html#keyRelease" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="keyRelease(QWindow * window, char key, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="char" right="" name="key" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sendKeyEvent" fullname="QTest::sendKeyEvent" href="qtest.html#sendKeyEvent" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="sendKeyEvent(KeyAction action, QWindow * window, Qt::Key code, QString text, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="KeyAction" right="" name="action" default=""/>
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::Key" right="" name="code" default=""/>
+                <parameter left="QString" right="" name="text" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default=""/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="sendKeyEvent" fullname="QTest::sendKeyEvent" href="qtest.html#sendKeyEvent-2" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="void" signature="sendKeyEvent(KeyAction action, QWindow * window, Qt::Key code, char ascii, Qt::KeyboardModifiers modifier, int delay)">
+                <parameter left="KeyAction" right="" name="action" default=""/>
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::Key" right="" name="code" default=""/>
+                <parameter left="char" right="" name="ascii" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default=""/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="simulateEvent" fullname="QTest::simulateEvent" href="qtest.html#simulateEvent" location="qtestkeyboard.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="simulateEvent(QWindow * window, bool press, int code, Qt::KeyboardModifiers modifier, QString text, bool repeat, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="bool" right="" name="press" default=""/>
+                <parameter left="int" right="" name="code" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default=""/>
+                <parameter left="QString" right="" name="text" default=""/>
+                <parameter left="bool" right="" name="repeat" default=""/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="MouseAction" fullname="QTest::MouseAction" href="qtest.html#MouseAction-enum" location="qtestmouse.h">
+                <value name="MousePress" value="0"/>
+                <value name="MouseRelease" value="1"/>
+                <value name="MouseClick" value="2"/>
+                <value name="MouseDClick" value="3"/>
+                <value name="MouseMove" value="4"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseClick" fullname="QTest::mouseClick" href="qtest.html#mouseClick-2" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="mouseClick(QWidget * widget, Qt::MouseButton button, Qt::KeyboardModifiers modifier, QPoint pos, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseClick" fullname="QTest::mouseClick" href="qtest.html#mouseClick" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="mouseClick(QWindow * window, Qt::MouseButton button, Qt::KeyboardModifiers stateKey, QPoint pos, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="stateKey" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseDClick" fullname="QTest::mouseDClick" href="qtest.html#mouseDClick-2" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="mouseDClick(QWidget * widget, Qt::MouseButton button, Qt::KeyboardModifiers modifier, QPoint pos, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseDClick" fullname="QTest::mouseDClick" href="qtest.html#mouseDClick" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="mouseDClick(QWindow * window, Qt::MouseButton button, Qt::KeyboardModifiers stateKey, QPoint pos, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="stateKey" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseEvent" fullname="QTest::mouseEvent" href="qtest.html#mouseEvent" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="mouseEvent(MouseAction action, QWindow * window, Qt::MouseButton button, Qt::KeyboardModifiers stateKey, QPoint pos, int delay)">
+                <parameter left="MouseAction" right="" name="action" default=""/>
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="stateKey" default=""/>
+                <parameter left="QPoint" right="" name="pos" default=""/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseMove" fullname="QTest::mouseMove" href="qtest.html#mouseMove-2" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="mouseMove(QWidget * widget, QPoint pos, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseMove" fullname="QTest::mouseMove" href="qtest.html#mouseMove" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="mouseMove(QWindow * window, QPoint pos, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mousePress" fullname="QTest::mousePress" href="qtest.html#mousePress-2" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="mousePress(QWidget * widget, Qt::MouseButton button, Qt::KeyboardModifiers modifier, QPoint pos, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mousePress" fullname="QTest::mousePress" href="qtest.html#mousePress" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="mousePress(QWindow * window, Qt::MouseButton button, Qt::KeyboardModifiers stateKey, QPoint pos, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="stateKey" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseRelease" fullname="QTest::mouseRelease" href="qtest.html#mouseRelease-2" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="mouseRelease(QWidget * widget, Qt::MouseButton button, Qt::KeyboardModifiers modifier, QPoint pos, int delay)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifier" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mouseRelease" fullname="QTest::mouseRelease" href="qtest.html#mouseRelease" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="mouseRelease(QWindow * window, Qt::MouseButton button, Qt::KeyboardModifiers stateKey, QPoint pos, int delay)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="stateKey" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="waitForEvents" fullname="QTest::waitForEvents" href="qtest.html#waitForEvents" location="qtestmouse.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="waitForEvents()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qWait" fullname="QTest::qWait" href="qtest.html#qWait" location="qtestsystem.h" virtual="non" meta="plain" const="false" static="true" overload="false" type="void" signature="qWait(int ms)">
+                <parameter left="int" right="" name="ms" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qWaitForWindowActive" fullname="QTest::qWaitForWindowActive" href="qtest.html#qWaitForWindowActive-2" location="qtestsystem.h" since="5.0" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="bool" signature="qWaitForWindowActive(QWidget * widget, int timeout)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="int" right="" name="timeout" default="1000"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qWaitForWindowActive" fullname="QTest::qWaitForWindowActive" href="qtest.html#qWaitForWindowActive" location="qtestsystem.h" since="5.0" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="qWaitForWindowActive(QWindow * window, int timeout)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="int" right="" name="timeout" default="1000"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qWaitForWindowExposed" fullname="QTest::qWaitForWindowExposed" href="qtest.html#qWaitForWindowExposed-2" location="qtestsystem.h" since="5.0" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="bool" signature="qWaitForWindowExposed(QWidget * widget, int timeout)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="int" right="" name="timeout" default="1000"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="qWaitForWindowExposed" fullname="QTest::qWaitForWindowExposed" href="qtest.html#qWaitForWindowExposed" location="qtestsystem.h" since="5.0" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="qWaitForWindowExposed(QWindow * window, int timeout)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="int" right="" name="timeout" default="1000"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="deprecated" name="qWaitForWindowShown" fullname="QTest::qWaitForWindowShown" href="qtest.html#qWaitForWindowShown" location="qtestsystem.h" since="5.0" virtual="non" meta="plain" const="false" static="true" overload="false" type="bool" signature="qWaitForWindowShown(QWidget * widget, int timeout)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="int" right="" name="timeout" default="1000"/>
+            </function>
+            <class access="public" threadsafety="unspecified" status="commendable" name="QTouchEventSequence" fullname="QTest::QTouchEventSequence" href="qtest-qtoucheventsequence.html" location="qtesttouch.h" since="4.6" bases="" module="QtTest">
+                <function access="public" threadsafety="unspecified" status="commendable" name="commit" fullname="QTest::QTouchEventSequence::commit" href="qtest-qtoucheventsequence.html#commit" location="qtesttouch.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="commit(bool processEvents)">
+                    <parameter left="bool" right="" name="processEvents" default="true"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="move" fullname="QTest::QTouchEventSequence::move" href="qtest-qtoucheventsequence.html#move-2" location="qtesttouch.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QTouchEventSequence &amp;" signature="move(int touchId, const QPoint &amp; pt, QWidget * widget)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                    <parameter left="const QPoint &amp;" right="" name="pt" default=""/>
+                    <parameter left="QWidget *" right="" name="widget" default="0"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="move" fullname="QTest::QTouchEventSequence::move" href="qtest-qtoucheventsequence.html#move" location="qtesttouch.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="false" type="QTouchEventSequence &amp;" signature="move(int touchId, const QPoint &amp; pt, QWindow * window)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                    <parameter left="const QPoint &amp;" right="" name="pt" default=""/>
+                    <parameter left="QWindow *" right="" name="window" default="0"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="press" fullname="QTest::QTouchEventSequence::press" href="qtest-qtoucheventsequence.html#press-2" location="qtesttouch.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QTouchEventSequence &amp;" signature="press(int touchId, const QPoint &amp; pt, QWidget * widget)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                    <parameter left="const QPoint &amp;" right="" name="pt" default=""/>
+                    <parameter left="QWidget *" right="" name="widget" default="0"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="press" fullname="QTest::QTouchEventSequence::press" href="qtest-qtoucheventsequence.html#press" location="qtesttouch.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="false" type="QTouchEventSequence &amp;" signature="press(int touchId, const QPoint &amp; pt, QWindow * window)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                    <parameter left="const QPoint &amp;" right="" name="pt" default=""/>
+                    <parameter left="QWindow *" right="" name="window" default="0"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="release" fullname="QTest::QTouchEventSequence::release" href="qtest-qtoucheventsequence.html#release-2" location="qtesttouch.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QTouchEventSequence &amp;" signature="release(int touchId, const QPoint &amp; pt, QWidget * widget)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                    <parameter left="const QPoint &amp;" right="" name="pt" default=""/>
+                    <parameter left="QWidget *" right="" name="widget" default="0"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="release" fullname="QTest::QTouchEventSequence::release" href="qtest-qtoucheventsequence.html#release" location="qtesttouch.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="false" type="QTouchEventSequence &amp;" signature="release(int touchId, const QPoint &amp; pt, QWindow * window)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                    <parameter left="const QPoint &amp;" right="" name="pt" default=""/>
+                    <parameter left="QWindow *" right="" name="window" default="0"/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="stationary" fullname="QTest::QTouchEventSequence::stationary" href="qtest-qtoucheventsequence.html#stationary" location="qtesttouch.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QTouchEventSequence &amp;" signature="stationary(int touchId)">
+                    <parameter left="int" right="" name="touchId" default=""/>
+                </function>
+                <function access="public" threadsafety="unspecified" status="commendable" name="~QTouchEventSequence" fullname="QTest::QTouchEventSequence::~QTouchEventSequence" href="qtest-qtoucheventsequence.html#dtor.QTouchEventSequence" location="qtesttouch.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QTouchEventSequence()"/>
+            </class>
+            <function access="public" threadsafety="unspecified" status="commendable" name="touchEvent" fullname="QTest::touchEvent" href="qtest.html#touchEvent" location="qtesttouch.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="QTouchEventSequence" signature="touchEvent(QWidget * widget, QTouchDevice * device, bool autoCommit)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="QTouchDevice *" right="" name="device" default=""/>
+                <parameter left="bool" right="" name="autoCommit" default="true"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="touchEvent" fullname="QTest::touchEvent" href="qtest.html#touchEvent-2" location="qtesttouch.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="QTouchEventSequence" signature="touchEvent(QWindow * window, QTouchDevice * device, bool autoCommit)">
+                <parameter left="QWindow *" right="" name="window" default=""/>
+                <parameter left="QTouchDevice *" right="" name="device" default=""/>
+                <parameter left="bool" right="" name="autoCommit" default="true"/>
+            </function>
+        </namespace>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QSignalSpy" href="qsignalspy.html" location="qsignalspy.h" bases="QList,QObject" module="QtTest">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QSignalSpy" fullname="QSignalSpy::QSignalSpy" href="qsignalspy.html#QSignalSpy" location="qsignalspy.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QSignalSpy(const QObject * object, const char * signal)">
+                <parameter left="const QObject *" right="" name="object" default=""/>
+                <parameter left="const char *" right="" name="signal" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isValid" fullname="QSignalSpy::isValid" href="qsignalspy.html#isValid" location="qsignalspy.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isValid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="signal" fullname="QSignalSpy::signal" href="qsignalspy.html#signal" location="qsignalspy.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QByteArray" signature="signal() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="wait" fullname="QSignalSpy::wait" href="qsignalspy.html#wait" location="qsignalspy.h" since="5.0" virtual="non" meta="plain" const="false" static="false" overload="false" type="bool" signature="wait(int timeout)">
+                <parameter left="int" right="" name="timeout" default="5000"/>
+            </function>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QBENCHMARK" href="qtest.html#QBENCHMARK" location="qtestcase.cpp" virtual="non" meta="macrowithoutparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QBENCHMARK()"/>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QBENCHMARK_ONCE" href="qtest.html#QBENCHMARK_ONCE" location="qtestcase.cpp" since="4.6" virtual="non" meta="macrowithoutparams" const="false" static="false" overload="false" relates="QTest" type="" signature="QBENCHMARK_ONCE()"/>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QTestEventList" href="qtesteventlist.html" location="qtestevent.h" bases="QList" module="QtTest">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QTestEventList" fullname="QTestEventList::QTestEventList" href="qtesteventlist.html#QTestEventList" location="qtestevent.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QTestEventList()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QTestEventList" fullname="QTestEventList::QTestEventList" href="qtesteventlist.html#QTestEventList-2" location="qtestevent.h" virtual="non" meta="constructor" const="false" static="false" overload="true" overload-number="2" type="" signature="QTestEventList(const QTestEventList &amp; other)">
+                <parameter left="const QTestEventList &amp;" right="" name="other" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addDelay" fullname="QTestEventList::addDelay" href="qtesteventlist.html#addDelay" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addDelay(int msecs)">
+                <parameter left="int" right="" name="msecs" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyClick" fullname="QTestEventList::addKeyClick" href="qtesteventlist.html#addKeyClick" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addKeyClick(Qt::Key qtKey, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="Qt::Key" right="" name="qtKey" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyClick" fullname="QTestEventList::addKeyClick" href="qtesteventlist.html#addKeyClick-2" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="addKeyClick(char ascii, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="char" right="" name="ascii" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyClicks" fullname="QTestEventList::addKeyClicks" href="qtesteventlist.html#addKeyClicks" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addKeyClicks(const QString &amp; keys, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="const QString &amp;" right="" name="keys" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyPress" fullname="QTestEventList::addKeyPress" href="qtesteventlist.html#addKeyPress" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addKeyPress(Qt::Key qtKey, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="Qt::Key" right="" name="qtKey" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyPress" fullname="QTestEventList::addKeyPress" href="qtesteventlist.html#addKeyPress-2" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="addKeyPress(char ascii, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="char" right="" name="ascii" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyRelease" fullname="QTestEventList::addKeyRelease" href="qtesteventlist.html#addKeyRelease" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addKeyRelease(Qt::Key qtKey, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="Qt::Key" right="" name="qtKey" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addKeyRelease" fullname="QTestEventList::addKeyRelease" href="qtesteventlist.html#addKeyRelease-2" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="true" overload-number="2" type="void" signature="addKeyRelease(char ascii, Qt::KeyboardModifiers modifiers, int msecs)">
+                <parameter left="char" right="" name="ascii" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="Qt::NoModifier"/>
+                <parameter left="int" right="" name="msecs" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addMouseClick" fullname="QTestEventList::addMouseClick" href="qtesteventlist.html#addMouseClick" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addMouseClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers, QPoint pos, int delay)">
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addMouseDClick" fullname="QTestEventList::addMouseDClick" href="qtesteventlist.html#addMouseDClick" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addMouseDClick(Qt::MouseButton button, Qt::KeyboardModifiers modifiers, QPoint pos, int delay)">
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addMouseMove" fullname="QTestEventList::addMouseMove" href="qtesteventlist.html#addMouseMove" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addMouseMove(QPoint pos, int delay)">
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addMousePress" fullname="QTestEventList::addMousePress" href="qtesteventlist.html#addMousePress" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addMousePress(Qt::MouseButton button, Qt::KeyboardModifiers modifiers, QPoint pos, int delay)">
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addMouseRelease" fullname="QTestEventList::addMouseRelease" href="qtesteventlist.html#addMouseRelease" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addMouseRelease(Qt::MouseButton button, Qt::KeyboardModifiers modifiers, QPoint pos, int delay)">
+                <parameter left="Qt::MouseButton" right="" name="button" default=""/>
+                <parameter left="Qt::KeyboardModifiers" right="" name="modifiers" default="0"/>
+                <parameter left="QPoint" right="" name="pos" default="QPoint()"/>
+                <parameter left="int" right="" name="delay" default="-1"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clear" fullname="QTestEventList::clear" href="qtesteventlist.html#clear" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clear()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="simulate" fullname="QTestEventList::simulate" href="qtesteventlist.html#simulate" location="qtestevent.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="simulate(QWidget * w)">
+                <parameter left="QWidget *" right="" name="w" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QTestEventList" fullname="QTestEventList::~QTestEventList" href="qtesteventlist.html#dtor.QTestEventList" location="qtestevent.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QTestEventList()"/>
+        </class>
+        <page access="public" status="commendable" name="http://blog.qt.digia.com" href="http-blog-qt-digia-com.html" subtype="externalpage" title="Qt Labs" fulltitle="Qt Labs" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://blog.qt.digia.com/blog/2008/12/05/qtestlib-now-with-nice-graphs-pointing-upwards/" href="http-blog-qt-digia-com-blog-2008-12-05-qtestlib-now-with-nice-graphs-pointing-upwards.html" subtype="externalpage" title="qtestlib-tools Announcement" fulltitle="qtestlib-tools Announcement" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt.gitorious.org/qt-labs/qtestlib-tools" href="http-qt-gitorious-org-qt-labs-qtestlib-tools.html" subtype="externalpage" title="qtestlib-tools" fulltitle="qtestlib-tools" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="qttest-index.html" href="qttest-index.html" subtype="page" title="Qt Test" fulltitle="Qt Test" subtitle="" location="qttest-index.qdoc" module="QtTestLib">
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="articles-and-guides" title="Articles and Guides" level="1"/>
+            <contents name="reference" title="Reference" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="QtTest" href="qttest-module.html" subtype="module" title="Qt Test C++ Classes" fulltitle="Qt Test C++ Classes" subtitle="" location="qttest.qdoc" groups="modules">
+            <keyword name="qttest"/>
+        </page>
+        <page access="public" status="commendable" name="qtest-overview.html" href="qtest-overview.html" subtype="page" title="Qt Test Overview" fulltitle="Qt Test Overview" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib" groups="frameworks-technologies,qt-basic-concepts">
+            <target name="testlib-benchmarking-measurement"/>
+            <keyword name="qtestlib"/>
+            <contents name="creating-a-test" title="Creating a Test" level="1"/>
+            <contents name="building-a-test" title="Building a Test" level="1"/>
+            <contents name="qt-test-command-line-arguments" title="Qt Test Command Line Arguments" level="1"/>
+            <contents name="syntax" title="Syntax" level="2"/>
+            <contents name="options" title="Options" level="2"/>
+            <contents name="logging-options" title="Logging Options" level="3"/>
+            <contents name="test-log-detail-options" title="Test Log Detail Options" level="3"/>
+            <contents name="testing-options" title="Testing Options" level="3"/>
+            <contents name="benchmarking-options" title="Benchmarking Options" level="3"/>
+            <contents name="miscellaneous-options" title="Miscellaneous Options" level="3"/>
+            <contents name="creating-a-benchmark" title="Creating a Benchmark" level="1"/>
+            <contents name="using-qt-test-remotely-on-windows-ce" title="Using Qt Test Remotely on Windows CE" level="1"/>
+            <contents name="syntax" title="Syntax" level="2"/>
+            <contents name="options" title="Options" level="2"/>
+            <contents name="qtremote" title="QtRemote" level="2"/>
+            <contents name="requirements" title="Requirements" level="2"/>
+            <contents name="3rd-party-code" title="3rd Party Code" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qtest-tutorial.html" href="qtest-tutorial.html" subtype="page" title="Qt Test Tutorial" fulltitle="Qt Test Tutorial" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib" groups="best-practices"/>
+        <page access="public" status="commendable" name="tutorial1" href="tutorial1.html" subtype="example" title="Chapter 1: Writing a Unit Test" fulltitle="Chapter 1: Writing a Unit Test" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib">
+            <contents name="writing-a-test" title="Writing a Test" level="1"/>
+            <contents name="executing-a-test" title="Executing a Test" level="1"/>
+            <page access="public" status="commendable" name="tutorial1/testqstring.cpp" href="tutorial1-testqstring-cpp.html" subtype="file" title="" fulltitle="testqstring.cpp Example File" subtitle="tutorial1/testqstring.cpp" location=""/>
+            <page access="public" status="commendable" name="tutorial1/tutorial1.pro" href="tutorial1-tutorial1-pro.html" subtype="file" title="" fulltitle="tutorial1.pro Example File" subtitle="tutorial1/tutorial1.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="tutorial2" href="tutorial2.html" subtype="example" title="Chapter 2: Data Driven Testing" fulltitle="Chapter 2: Data Driven Testing" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib">
+            <contents name="writing-the-data-function" title="Writing the Data Function" level="1"/>
+            <contents name="rewriting-the-test-function" title="Rewriting the Test Function" level="1"/>
+            <page access="public" status="commendable" name="tutorial2/testqstring.cpp" href="tutorial2-testqstring-cpp.html" subtype="file" title="" fulltitle="testqstring.cpp Example File" subtitle="tutorial2/testqstring.cpp" location=""/>
+            <page access="public" status="commendable" name="tutorial2/tutorial2.pro" href="tutorial2-tutorial2-pro.html" subtype="file" title="" fulltitle="tutorial2.pro Example File" subtitle="tutorial2/tutorial2.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="tutorial3" href="tutorial3.html" subtype="example" title="Chapter 3: Simulating GUI Events" fulltitle="Chapter 3: Simulating GUI Events" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib">
+            <contents name="writing-a-gui-test" title="Writing a GUI test" level="1"/>
+            <page access="public" status="commendable" name="tutorial3/testgui.cpp" href="tutorial3-testgui-cpp.html" subtype="file" title="" fulltitle="testgui.cpp Example File" subtitle="tutorial3/testgui.cpp" location=""/>
+            <page access="public" status="commendable" name="tutorial3/tutorial3.pro" href="tutorial3-tutorial3-pro.html" subtype="file" title="" fulltitle="tutorial3.pro Example File" subtitle="tutorial3/tutorial3.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="tutorial4" href="tutorial4.html" subtype="example" title="Chapter 4: Replaying GUI Events" fulltitle="Chapter 4: Replaying GUI Events" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib">
+            <contents name="writing-the-data-function" title="Writing the Data Function" level="1"/>
+            <contents name="rewriting-the-test-function" title="Rewriting the Test Function" level="1"/>
+            <page access="public" status="commendable" name="tutorial4/testgui.cpp" href="tutorial4-testgui-cpp.html" subtype="file" title="" fulltitle="testgui.cpp Example File" subtitle="tutorial4/testgui.cpp" location=""/>
+            <page access="public" status="commendable" name="tutorial4/tutorial4.pro" href="tutorial4-tutorial4-pro.html" subtype="file" title="" fulltitle="tutorial4.pro Example File" subtitle="tutorial4/tutorial4.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="tutorial5" href="tutorial5.html" subtype="example" title="Chapter 5: Writing a Benchmark" fulltitle="Chapter 5: Writing a Benchmark" subtitle="" location="qttestlib-manual.qdoc" module="QtTestLib">
+            <contents name="writing-a-benchmark" title="Writing a Benchmark" level="1"/>
+            <contents name="data-functions" title="Data Functions" level="1"/>
+            <contents name="external-tools" title="External Tools" level="1"/>
+            <page access="public" status="commendable" name="tutorial5/benchmarking.cpp" href="tutorial5-benchmarking-cpp.html" subtype="file" title="" fulltitle="benchmarking.cpp Example File" subtitle="tutorial5/benchmarking.cpp" location=""/>
+            <page access="public" status="commendable" name="tutorial5/containers.cpp" href="tutorial5-containers-cpp.html" subtype="file" title="" fulltitle="containers.cpp Example File" subtitle="tutorial5/containers.cpp" location=""/>
+            <page access="public" status="commendable" name="tutorial5/tutorial5.pro" href="tutorial5-tutorial5-pro.html" subtype="file" title="" fulltitle="tutorial5.pro Example File" subtitle="tutorial5/tutorial5.pro" location=""/>
+        </page>
+    </namespace>
+</INDEX>

@@ -1,0 +1,1378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/qtdoc" title="Qt Reference Documentation" version="5.0.2">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <page access="public" status="commendable" name="addons.html" href="addons.html" subtype="page" title="Add-ons" fulltitle="Add-ons" subtitle="" location="addons.qdoc" module="QtDoc">
+            <contents name="qt-activeqt-module" title="Qt ActiveQt Module" level="1"/>
+            <contents name="qt-concurrent-module" title="Qt Concurrent Module" level="1"/>
+            <contents name="qt-declarative-module" title="Qt Declarative Module" level="1"/>
+            <contents name="qt-graphical-effects-module" title="Qt Graphical Effects Module" level="1"/>
+            <contents name="qt-image-formats-module" title="Qt Image Formats Module" level="1"/>
+            <contents name="qt-opengl-module" title="Qt OpenGL Module" level="1"/>
+            <contents name="qt-print-support-module" title="Qt Print Support Module" level="1"/>
+            <contents name="qt-script-module" title="Qt Script Module" level="1"/>
+            <contents name="qt-svg-module" title="Qt SVG Module" level="1"/>
+            <contents name="qt-tools-module" title="Qt Tools Module" level="1"/>
+            <contents name="qt-xml-module" title="Qt XML Module" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="bughowto.html" href="bughowto.html" subtype="page" title="How to Report a Bug" fulltitle="How to Report a Bug" subtitle="" location="bughowto.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="annotated.html" href="annotated.html" subtype="page" title="Annotated Class List" fulltitle="Annotated Class List" subtitle="" location="classes.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="classes.html" href="classes.html" subtype="page" title="All Classes" fulltitle="All Classes" subtitle="" location="classes.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="functions.html" href="functions.html" subtype="page" title="All Functions" fulltitle="All Functions" subtitle="" location="classes.qdoc" module="QtDoc" groups="funclists"/>
+        <page access="public" status="commendable" name="hierarchy.html" href="hierarchy.html" subtype="page" title="Inheritance Hierarchy" fulltitle="Inheritance Hierarchy" subtitle="" location="classes.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="namespaces.html" href="namespaces.html" subtype="page" title="All Namespaces" fulltitle="All Namespaces" subtitle="" location="classes.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="obsoleteclasses.html" href="obsoleteclasses.html" subtype="page" title="Obsolete Classes" fulltitle="Obsolete Classes" subtitle="" location="classes.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="exportedfunctions.html" href="exportedfunctions.html" subtype="page" title="Platform-Specific Functions" fulltitle="Platform-Specific Functions" subtitle="" location="exportedfunctions.qdoc" module="QtDoc" groups="funclists">
+            <contents name="void-qt-set-library-config-file-const-qstring-filename" title="void qt_set_library_config_file(const QString &amp;fileName)" level="1"/>
+            <contents name="void-qt-set-sequence-auto-mnemonic-bool-enable" title="void qt_set_sequence_auto_mnemonic(bool enable)" level="1"/>
+            <contents name="void-qt-x11-wait-for-window-manager-qwidget-widget" title="void qt_x11_wait_for_window_manager(QWidget *widget)" level="1"/>
+            <contents name="void-qt-mac-secure-keyboard-bool-enable" title="void qt_mac_secure_keyboard(bool enable)" level="1"/>
+            <contents name="void-qt-mac-set-dock-menu-qmenu-menu" title="void qt_mac_set_dock_menu(QMenu *menu)" level="1"/>
+            <contents name="void-qt-mac-set-menubar-icons-bool-enable" title="void qt_mac_set_menubar_icons(bool enable)" level="1"/>
+            <contents name="void-qt-mac-set-menubar-merge-bool-enable" title="void qt_mac_set_menubar_merge(bool enable)" level="1"/>
+            <contents name="void-qt-mac-set-native-menubar-bool-enable" title="void qt_mac_set_native_menubar(bool enable)" level="1"/>
+            <contents name="void-qt-mac-set-press-and-hold-context-bool-enable" title="void qt_mac_set_press_and_hold_context(bool enable)" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="topics-network-connectivity.html" href="topics-network-connectivity.html" subtype="page" title="Networking and Connectivity" fulltitle="Networking and Connectivity" subtitle="" location="connectivity.qdoc" module="QtDoc">
+            <contents name="network-communication" title="Network Communication" level="1"/>
+            <contents name="world-wide-web-support" title="World Wide Web Support" level="1"/>
+            <contents name="inter-process-communication" title="Inter-Process Communication" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="topics-core.html" href="topics-core.html" subtype="page" title="Core Internals" fulltitle="Core Internals" subtitle="" location="core.qdoc" module="QtDoc">
+            <contents name="objects-properties-and-events" title="Objects, Properties and Events" level="1"/>
+            <contents name="container-classes" title="Container Classes" level="1"/>
+            <contents name="internationalization" title="Internationalization" level="1"/>
+            <contents name="inter-process-communication" title="Inter-Process Communication" level="1"/>
+            <contents name="threading" title="Threading" level="1"/>
+            <contents name="platform-support" title="Platform Support" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="topics-data-storage.html" href="topics-data-storage.html" subtype="page" title="Data Storage" fulltitle="Data Storage" subtitle="" location="datastorage.qdoc" module="QtDoc">
+            <contents name="saving-and-loading-data" title="Saving and Loading Data" level="1"/>
+            <contents name="sql-support-in-qt" title="SQL support in Qt" level="1"/>
+            <contents name="xml-support-in-qt" title="XML Support in Qt" level="1"/>
+            <contents name="json-in-qt" title="JSON in Qt" level="1"/>
+            <contents name="local-storage" title="Local Storage" level="1"/>
+            <contents name="qsettings" title="QSettings" level="1"/>
+            <contents name="resources" title="Resources" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="deployment-plugins.html" href="deployment-plugins.html" subtype="page" title="Deploying Plugins" fulltitle="Deploying Plugins" subtitle="" location="deployment-plugins.qdoc" module="QtDoc">
+            <contents name="the-plugin-directory" title="The Plugin Directory" level="1"/>
+            <contents name="loading-and-verifying-plugins-dynamically" title="Loading and Verifying Plugins Dynamically" level="1"/>
+            <contents name="debugging-plugins" title="Debugging Plugins" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="deployment-mac.html" href="deployment-mac.html" subtype="page" title="Deploying an Application on Mac OS X" fulltitle="Deploying an Application on Mac OS X" subtitle="" location="deployment.qdoc" module="QtDoc">
+            <target name="macdeploy"/>
+            <contents name="the-bundle" title="The Bundle" level="1"/>
+            <contents name="static-linking" title="Static Linking" level="1"/>
+            <contents name="building-qt-statically" title="Building Qt Statically" level="2"/>
+            <contents name="linking-the-application-to-the-static-version-of-qt" title="Linking the Application to the Static Version of Qt" level="2"/>
+            <contents name="frameworks" title="Frameworks" level="1"/>
+            <contents name="building-qt-as-frameworks" title="Building Qt as Frameworks" level="2"/>
+            <contents name="linking-the-application-to-qt-as-frameworks" title="Linking the Application to Qt as Frameworks" level="2"/>
+            <contents name="creating-the-application-package" title="Creating the Application Package" level="2"/>
+            <contents name="application-dependencies" title="Application Dependencies" level="1"/>
+            <contents name="qt-plugins" title="Qt Plugins" level="2"/>
+            <contents name="additional-libraries" title="Additional Libraries" level="2"/>
+            <contents name="mac-os-x-version-dependencies" title="Mac OS X Version Dependencies" level="2"/>
+            <contents name="the-mac-deployment-tool" title="The Mac Deployment Tool" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="deployment-windows.html" href="deployment-windows.html" subtype="page" title="Deploying an Application on Windows" fulltitle="Deploying an Application on Windows" subtitle="" location="deployment.qdoc" module="QtDoc">
+            <contents name="static-linking" title="Static Linking" level="1"/>
+            <contents name="building-qt-statically" title="Building Qt Statically" level="2"/>
+            <contents name="linking-the-application-to-the-static-version-of-qt" title="Linking the Application to the Static Version of Qt" level="2"/>
+            <contents name="shared-libraries" title="Shared Libraries" level="1"/>
+            <contents name="building-qt-as-a-shared-library" title="Building Qt as a Shared Library" level="2"/>
+            <contents name="linking-the-application-to-qt-as-a-shared-library" title="Linking the Application to Qt as a Shared Library" level="2"/>
+            <contents name="creating-the-application-package" title="Creating the Application Package" level="2"/>
+            <contents name="manifest-files" title="Manifest files" level="2"/>
+            <contents name="manual-installations-with-visual-studio-2008-and-2010" title="Manual installations with Visual Studio 2008 and 2010" level="2"/>
+            <contents name="application-dependencies" title="Application Dependencies" level="1"/>
+            <contents name="additional-libraries" title="Additional Libraries" level="2"/>
+            <contents name="qt-plugins" title="Qt Plugins" level="2"/>
+            <contents name="related-third-party-resources" title="Related Third Party Resources" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="deployment-x11.html" href="deployment-x11.html" subtype="page" title="Deploying an Application on X11 Platforms" fulltitle="Deploying an Application on X11 Platforms" subtitle="" location="deployment.qdoc" module="QtDoc">
+            <contents name="static-linking" title="Static Linking" level="1"/>
+            <contents name="building-qt-statically" title="Building Qt Statically" level="2"/>
+            <contents name="linking-the-application-to-the-static-version-of-qt" title="Linking the Application to the Static Version of Qt" level="2"/>
+            <contents name="shared-libraries" title="Shared Libraries" level="1"/>
+            <contents name="building-qt-as-a-shared-library" title="Building Qt as a Shared Library" level="2"/>
+            <contents name="linking-the-application-to-qt-as-a-shared-library" title="Linking the Application to Qt as a Shared Library" level="2"/>
+            <contents name="creating-the-application-package" title="Creating the Application Package" level="2"/>
+            <contents name="application-dependencies" title="Application Dependencies" level="1"/>
+            <contents name="additional-libraries" title="Additional Libraries" level="2"/>
+            <contents name="qt-plugins" title="Qt Plugins" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="deployment.html" href="deployment.html" subtype="page" title="Deploying Qt Applications" fulltitle="Deploying Qt Applications" subtitle="" location="deployment.qdoc" module="QtDoc">
+            <contents name="static-vs-shared-libraries" title="Static vs. Shared Libraries" level="1"/>
+            <contents name="deploying-qt-s-libraries" title="Deploying Qt's Libraries" level="1"/>
+            <contents name="licensing" title="Licensing" level="1"/>
+            <contents name="platform-specific-notes" title="Platform-Specific Notes" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qt-conf.html" href="qt-conf.html" subtype="page" title="Using qt.conf" fulltitle="Using qt.conf" subtitle="" location="qt-conf.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="activeqt-idc.html" href="activeqt-idc.html" subtype="page" title="IDC - The Interface Description Compiler (ActiveQt)" fulltitle="IDC - The Interface Description Compiler (ActiveQt)" subtitle="" location="activeqt-idc.qdoc" module="QtDoc" groups="activeqt-tools">
+            <keyword name="idc"/>
+        </page>
+        <page access="public" status="commendable" name="activeqt-testcon.html" href="activeqt-testcon.html" subtype="page" title="testcon - An ActiveX Test Container (ActiveQt)" fulltitle="testcon - An ActiveX Test Container (ActiveQt)" subtitle="" location="activeqt-testcon.qdoc" module="QtDoc" groups="activeqt-tools">
+            <keyword name="testcon"/>
+        </page>
+        <page access="public" status="commendable" name="cmake-manual.html" href="cmake-manual.html" subtype="page" title="CMake Manual" fulltitle="CMake Manual" subtitle="" location="cmake-manual.qdoc" module="QtDoc">
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="imported-targets" title="Imported targets" level="2"/>
+            <contents name="using-qt-5-with-cmake-older-than-2-8-9" title="Using Qt 5 with CMake older than 2.8.9" level="2"/>
+            <contents name="variable-reference" title="Variable Reference" level="1"/>
+            <contents name="module-variables" title="Module variables" level="2"/>
+            <contents name="installation-variables" title="Installation variables" level="2"/>
+            <contents name="macro-reference" title="Macro Reference" level="1"/>
+            <contents name="qt5core-macros" title="Qt5Core macros" level="2"/>
+            <contents name="qt5widgets-macros" title="Qt5Widgets macros" level="2"/>
+            <contents name="qt5dbus-macros" title="Qt5DBus macros" level="2"/>
+            <contents name="qt5linguisttools-macros" title="Qt5LinguistTools macros" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="debug.html" href="debug.html" subtype="page" title="Debugging Techniques" fulltitle="Debugging Techniques" subtitle="" location="debug.qdoc" module="QtDoc">
+            <contents name="configuring-qt-for-debugging" title="Configuring Qt for Debugging" level="1"/>
+            <contents name="debugging-in-mac-os-x-and-xcode" title="Debugging in Mac OS X and Xcode" level="2"/>
+            <contents name="debugging-with-without-frameworks" title="Debugging With/Without Frameworks" level="3"/>
+            <contents name="with-frameworks" title="With Frameworks:" level="4"/>
+            <contents name="without-frameworks" title="Without Frameworks:" level="4"/>
+            <contents name="command-line-options-recognized-by-qt" title="Command Line Options Recognized by Qt" level="1"/>
+            <contents name="environment-variables-recognized-by-qt" title="Environment Variables Recognized by Qt" level="1"/>
+            <contents name="warning-and-debugging-messages" title="Warning and Debugging Messages" level="1"/>
+            <contents name="providing-support-for-the-qdebug-stream-operator" title="Providing Support for the qDebug() Stream Operator" level="1"/>
+            <contents name="debugging-macros" title="Debugging Macros" level="1"/>
+            <contents name="common-bugs" title="Common Bugs" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="developing-on-mac.html" href="developing-on-mac.html" subtype="page" title="Developing Qt Applications for Mac OS X" fulltitle="Developing Qt Applications for Mac OS X" subtitle="" location="developing-on-mac.qdoc" module="QtDoc" groups="platform-specific">
+            <contents name="what-versions-of-mac-os-x-are-supported" title="What Versions of Mac OS X are Supported?" level="1"/>
+            <contents name="carbon-or-cocoa" title="Carbon or Cocoa?" level="2"/>
+            <contents name="32-bit-or-64-bit" title="32-bit or 64-bit" level="2"/>
+            <contents name="building-qt-statically" title="Building Qt statically" level="2"/>
+            <contents name="day-to-day-application-development-on-os-x" title="Day-to-Day Application Development on OS X" level="1"/>
+            <contents name="deployment-compile-once-deploy-everywhere" title="Deployment - &quot;Compile once, deploy everywhere&quot;" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="developing-with-qt.html" href="developing-with-qt.html" subtype="page" title="Cross-Platform and Platform-Specific Development" fulltitle="Cross-Platform and Platform-Specific Development" subtitle="" location="developing-with-qt.qdoc" module="QtDoc">
+            <contents name="cross-platform-development-with-qt" title="Cross-Platform Development with Qt" level="1"/>
+            <contents name="platform-specific-development-with-qt" title="Platform-Specific Development with Qt" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="moc.html" href="moc.html" subtype="page" title="Using the Meta-Object Compiler (moc)" fulltitle="Using the Meta-Object Compiler (moc)" subtitle="" location="moc.qdoc" module="QtDoc" groups="qttools">
+            <keyword name="moc"/>
+            <contents name="usage" title="Usage" level="1"/>
+            <contents name="writing-make-rules-for-invoking-moc" title="Writing Make Rules for Invoking moc" level="1"/>
+            <contents name="command-line-options" title="Command-Line Options" level="1"/>
+            <contents name="diagnostics" title="Diagnostics" level="1"/>
+            <contents name="limitations" title="Limitations" level="1"/>
+            <contents name="multiple-inheritance-requires-qobject-to-be-first" title="Multiple Inheritance Requires QObject to Be First" level="2"/>
+            <contents name="function-pointers-cannot-be-signal-or-slot-parameters" title="Function Pointers Cannot Be Signal or Slot Parameters" level="2"/>
+            <contents name="enums-and-typedefs-must-be-fully-qualified-for-signal-and-slot-parameters" title="Enums and Typedefs Must Be Fully Qualified for Signal and Slot Parameters" level="2"/>
+            <contents name="nested-classes-cannot-have-signals-or-slots" title="Nested Classes Cannot Have Signals or Slots" level="2"/>
+            <contents name="signal-slot-return-types-cannot-be-references" title="Signal/Slot return types cannot be references" level="2"/>
+            <contents name="only-signals-and-slots-may-appear-in-the-keyword-signals-keyword-and-keyword-slots-keyword-sections-of-a-class" title="Only Signals and Slots May Appear in the &lt;@keyword&gt;signals&lt;/@keyword&gt; and &lt;@keyword&gt;slots&lt;/@keyword&gt; Sections of a Class" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-advanced-usage.html" href="qmake-advanced-usage.html" subtype="page" title="qmake Advanced Usage" fulltitle="qmake Advanced Usage" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="scopes"/>
+            <target name="variableprocessingfunctions"/>
+            <target name="conditionalfunctions"/>
+            <contents name="operators" title="Operators" level="1"/>
+            <contents name="scopes" title="Scopes" level="1"/>
+            <contents name="syntax" title="Syntax" level="2"/>
+            <contents name="scopes-and-conditions" title="Scopes and Conditions" level="2"/>
+            <contents name="configuration-and-scopes" title="Configuration and Scopes" level="2"/>
+            <contents name="platform-scope-values" title="Platform Scope Values" level="2"/>
+            <contents name="variables" title="Variables" level="1"/>
+            <contents name="variable-processing-functions" title="Variable Processing Functions" level="1"/>
+            <contents name="conditional-functions" title="Conditional Functions" level="1"/>
+            <contents name="adding-new-configuration-features" title="Adding New Configuration Features" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-common-projects.html" href="qmake-common-projects.html" subtype="page" title="qmake Common Projects" fulltitle="qmake Common Projects" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="application"/>
+            <target name="library"/>
+            <target name="plugin"/>
+            <contents name="building-an-application" title="Building an Application" level="1"/>
+            <contents name="the-app-template" title="The app Template" level="2"/>
+            <contents name="building-a-testcase" title="Building a Testcase" level="2"/>
+            <contents name="building-a-library" title="Building a Library" level="1"/>
+            <contents name="the-lib-template" title="The lib Template" level="2"/>
+            <contents name="building-a-plugin" title="Building a Plugin" level="1"/>
+            <contents name="building-a-qt-designer-plugin" title="Building a Qt Designer Plugin" level="2"/>
+            <contents name="building-and-installing-in-debug-and-release-modes" title="Building and Installing in Debug and Release Modes" level="1"/>
+            <contents name="building-in-both-modes" title="Building in Both Modes" level="2"/>
+            <contents name="installing-in-both-modes" title="Installing in Both Modes" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-environment-reference.html" href="qmake-environment-reference.html" subtype="page" title="Configuring qmake's Environment" fulltitle="Configuring qmake's Environment" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="properties"/>
+            <target name="qmakespec"/>
+            <target name="installs"/>
+            <target name="cache"/>
+            <target name="libdepend"/>
+            <target name="extensions"/>
+            <target name="customizing"/>
+            <contents name="properties" title="Properties" level="1"/>
+            <contents name="qmakespec" title="QMAKESPEC" level="1"/>
+            <contents name="installs" title="INSTALLS" level="1"/>
+            <contents name="cache-file" title="Cache File" level="1"/>
+            <contents name="library-dependencies" title="Library Dependencies" level="1"/>
+            <contents name="file-extensions" title="File Extensions" level="1"/>
+            <contents name="customizing-makefile-output" title="Customizing Makefile Output" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-function-reference.html" href="qmake-function-reference.html" subtype="page" title="Replace Functions" fulltitle="Replace Functions" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="unique"/>
+            <contents name="built-in-replace-functions" title="Built-in Replace Functions" level="1"/>
+            <contents name="absolute-path-path-base" title="absolute_path(path[, base])" level="2"/>
+            <contents name="basename-variablename" title="basename(variablename)" level="2"/>
+            <contents name="cat-filename-mode" title="cat(filename[, mode])" level="2"/>
+            <contents name="clean-path-path" title="clean_path(path)" level="2"/>
+            <contents name="dirname-file" title="dirname(file)" level="2"/>
+            <contents name="enumerate-vars" title="enumerate_vars" level="2"/>
+            <contents name="escape-expand-arg1-arg2-argn" title="escape_expand(arg1 [, arg2 ..., argn])" level="2"/>
+            <contents name="find-variablename-substr" title="find(variablename, substr)" level="2"/>
+            <contents name="first-variablename" title="first(variablename)" level="2"/>
+            <contents name="format-number-number-options" title="format_number(number[, options...])" level="2"/>
+            <contents name="fromfile-filename-variablename" title="fromfile(filename, variablename)" level="2"/>
+            <contents name="join-variablename-glue-before-after" title="join(variablename, glue, before, after)" level="2"/>
+            <contents name="last-variablename" title="last(variablename)" level="2"/>
+            <contents name="list-arg1-arg2-argn" title="list(arg1 [, arg2 ..., argn])" level="2"/>
+            <contents name="lower-arg1-arg2-argn" title="lower(arg1 [, arg2 ..., argn])" level="2"/>
+            <contents name="member-variablename-position" title="member(variablename, position)" level="2"/>
+            <contents name="prompt-question" title="prompt(question)" level="2"/>
+            <contents name="quote-string" title="quote(string)" level="2"/>
+            <contents name="re-escape-string" title="re_escape(string)" level="2"/>
+            <contents name="relative-path-filepath-base" title="relative_path(filePath[, base])" level="2"/>
+            <contents name="replace-string-old-string-new-string" title="replace(string, old_string, new_string)" level="2"/>
+            <contents name="sprintf-string-arguments" title="sprintf(string, arguments...)" level="2"/>
+            <contents name="resolve-depends-variablename-prefix" title="resolve_depends(variablename, prefix)" level="2"/>
+            <contents name="reverse-variablename" title="reverse(variablename)" level="2"/>
+            <contents name="section-variablename-separator-begin-end" title="section(variablename, separator, begin, end)" level="2"/>
+            <contents name="shadowed-path" title="shadowed(path)" level="2"/>
+            <contents name="shell-path-path" title="shell_path(path)" level="2"/>
+            <contents name="shell-quote-arg" title="shell_quote(arg)" level="2"/>
+            <contents name="size-variablename" title="size(variablename)" level="2"/>
+            <contents name="sort-depends-variablename-prefix" title="sort_depends(variablename, prefix)" level="2"/>
+            <contents name="split-variablename-separator" title="split(variablename, separator)" level="2"/>
+            <contents name="system-command-mode" title="system(command[, mode])" level="2"/>
+            <contents name="system-path-path" title="system_path(path)" level="2"/>
+            <contents name="system-quote-arg" title="system_quote(arg)" level="2"/>
+            <contents name="unique-variablename" title="unique(variablename)" level="2"/>
+            <contents name="upper-arg1-arg2-argn" title="upper(arg1 [, arg2 ..., argn])" level="2"/>
+            <contents name="val-escape-variablename" title="val_escape(variablename)" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-manual.html" href="qmake-manual.html" subtype="page" title="qmake Manual" fulltitle="qmake Manual" subtitle="" location="qmake-manual.qdoc" module="QtDoc" groups="qttools">
+            <keyword name="qmake"/>
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="table-of-contents" title="Table of Contents" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-platform-notes.html" href="qmake-platform-notes.html" subtype="page" title="qmake Platform Notes" fulltitle="qmake Platform Notes" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <contents name="mac-os-x" title="Mac OS X" level="1"/>
+            <contents name="source-and-binary-packages" title="Source and Binary Packages" level="2"/>
+            <contents name="using-frameworks" title="Using Frameworks" level="2"/>
+            <contents name="creating-frameworks" title="Creating Frameworks" level="2"/>
+            <contents name="creating-and-moving-xcode-projects" title="Creating and Moving Xcode Projects" level="2"/>
+            <contents name="on-supporting-two-build-targets-simultaneously" title="On supporting two build targets simultaneously" level="2"/>
+            <contents name="windows" title="Windows" level="1"/>
+            <contents name="creating-visual-studio-project-files" title="Creating Visual Studio Project Files" level="2"/>
+            <contents name="visual-studio-2005-manifest-files" title="Visual Studio 2005 Manifest Files" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-precompiledheaders.html" href="qmake-precompiledheaders.html" subtype="page" title="Using Precompiled Headers" fulltitle="Using Precompiled Headers" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="introduction"/>
+            <target name="add-pch"/>
+            <target name="pch-contents"/>
+            <target name="project-options"/>
+            <target name="example-project"/>
+            <contents name="adding-precompiled-headers-to-your-project" title="Adding Precompiled Headers to Your Project" level="1"/>
+            <contents name="contents-of-the-precompiled-header-file" title="Contents of the Precompiled Header File" level="2"/>
+            <contents name="example-stable-op-op-h" title="Example: stable&lt;@op&gt;.&lt;/@op&gt;h" level="3"/>
+            <contents name="project-options" title="Project Options" level="2"/>
+            <contents name="notes-on-possible-issues" title="Notes on Possible Issues" level="1"/>
+            <contents name="example-project" title="Example Project" level="1"/>
+            <contents name="mydialog-op-op-ui" title="mydialog&lt;@op&gt;.&lt;/@op&gt;ui" level="2"/>
+            <contents name="stable-op-op-h" title="stable&lt;@op&gt;.&lt;/@op&gt;h" level="2"/>
+            <contents name="myobject-op-op-h" title="myobject&lt;@op&gt;.&lt;/@op&gt;h" level="2"/>
+            <contents name="myobject-op-op-cpp" title="myobject&lt;@op&gt;.&lt;/@op&gt;cpp" level="2"/>
+            <contents name="util-op-op-cpp" title="util&lt;@op&gt;.&lt;/@op&gt;cpp" level="2"/>
+            <contents name="main-op-op-cpp" title="main&lt;@op&gt;.&lt;/@op&gt;cpp" level="2"/>
+            <contents name="precompile-op-op-pro" title="precompile&lt;@op&gt;.&lt;/@op&gt;pro" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-project-files.html" href="qmake-project-files.html" subtype="page" title="qmake Project Files" fulltitle="qmake Project Files" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="generalconfiguration"/>
+            <contents name="project-file-elements" title="Project File Elements" level="1"/>
+            <contents name="variables" title="Variables" level="2"/>
+            <contents name="whitespace" title="Whitespace" level="3"/>
+            <contents name="comments" title="Comments" level="2"/>
+            <contents name="built-in-functions-and-control-flow" title="Built-in Functions and Control Flow" level="2"/>
+            <contents name="project-templates" title="Project Templates" level="1"/>
+            <contents name="general-configuration" title="General Configuration" level="1"/>
+            <contents name="declaring-qt-libraries" title="Declaring Qt Libraries" level="1"/>
+            <contents name="configuration-features" title="Configuration Features" level="1"/>
+            <contents name="declaring-other-libraries" title="Declaring Other Libraries" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-reference.html" href="qmake-reference.html" subtype="page" title="qmake Reference" fulltitle="qmake Reference" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="frequentlyusedvariables"/>
+            <contents name="variable-reference" title="Variable Reference" level="1"/>
+            <contents name="function-reference" title="Function Reference" level="1"/>
+            <contents name="frequently-used-variables" title="Frequently Used Variables" level="1"/>
+            <contents name="environment-variables-and-configuration" title="Environment Variables and Configuration" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-running.html" href="qmake-running.html" subtype="page" title="Running qmake" fulltitle="Running qmake" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="commands"/>
+            <target name="makefilemode"/>
+            <target name="projectmode"/>
+            <contents name="command-line-options" title="Command-Line Options" level="1"/>
+            <contents name="syntax" title="Syntax" level="2"/>
+            <contents name="options" title="Options" level="2"/>
+            <contents name="makefile-mode-options" title="Makefile Mode Options" level="2"/>
+            <contents name="project-mode-options" title="Project Mode Options" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-test-function-reference.html" href="qmake-test-function-reference.html" subtype="page" title="Test Functions" fulltitle="Test Functions" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <contents name="built-in-test-functions" title="Built-in Test Functions" level="1"/>
+            <contents name="cache-variablename-set-add-sub-transient-super-source-variablename" title="cache(variablename, [set|add|sub] [transient] [super], [source variablename])" level="2"/>
+            <contents name="config-config" title="CONFIG(config)" level="2"/>
+            <contents name="contains-variablename-value" title="contains(variablename, value)" level="2"/>
+            <contents name="count-variablename-number" title="count(variablename, number)" level="2"/>
+            <contents name="debug-level-message" title="debug(level, message)" level="2"/>
+            <contents name="defined-name-type" title="defined(name[, type])" level="2"/>
+            <contents name="equals-variablename-value" title="equals(variablename, value)" level="2"/>
+            <contents name="error-string" title="error(string)" level="2"/>
+            <contents name="eval-string" title="eval(string)" level="2"/>
+            <contents name="exists-filename" title="exists(filename)" level="2"/>
+            <contents name="export-variablename" title="export(variablename)" level="2"/>
+            <contents name="files-pattern-recursive-false" title="files(pattern[, recursive=false])" level="2"/>
+            <contents name="for-iterate-list" title="for(iterate, list)" level="2"/>
+            <contents name="greaterthan-variablename-value" title="greaterThan(variablename, value)" level="2"/>
+            <contents name="if-condition" title="if(condition)" level="2"/>
+            <contents name="include-filename" title="include(filename)" level="2"/>
+            <contents name="infile-filename-var-val" title="infile(filename, var, val)" level="2"/>
+            <contents name="isactiveconfig" title="isActiveConfig" level="2"/>
+            <contents name="isempty-variablename" title="isEmpty(variablename)" level="2"/>
+            <contents name="isequal" title="isEqual" level="2"/>
+            <contents name="lessthan-variablename-value" title="lessThan(variablename, value)" level="2"/>
+            <contents name="load-feature" title="load(feature)" level="2"/>
+            <contents name="log-message" title="log(message)" level="2"/>
+            <contents name="message-string" title="message(string)" level="2"/>
+            <contents name="mkpath-dirpath" title="mkpath(dirPath)" level="2"/>
+            <contents name="requires-condition" title="requires(condition)" level="2"/>
+            <contents name="system-command" title="system(command)" level="2"/>
+            <contents name="touch-filename-reference-filename" title="touch(filename, reference_filename)" level="2"/>
+            <contents name="unset-variablename" title="unset(variablename)" level="2"/>
+            <contents name="warning-string" title="warning(string)" level="2"/>
+            <contents name="write-file-filename-variablename-mode" title="write_file(filename, [variablename, [mode]])" level="2"/>
+            <contents name="test-function-library" title="Test Function Library" level="1"/>
+            <contents name="packagesexist-packages" title="packagesExist(packages)" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-tutorial.html" href="qmake-tutorial.html" subtype="page" title="qmake Tutorial" fulltitle="qmake Tutorial" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <contents name="starting-off-simple" title="Starting off Simple" level="1"/>
+            <contents name="making-an-application-debuggable" title="Making an Application Debuggable" level="1"/>
+            <contents name="adding-platform-specific-source-files" title="Adding Platform-Specific Source Files" level="1"/>
+            <contents name="stopping-qmake-if-a-file-doesn-t-exist" title="Stopping qmake If a File Doesn't Exist" level="1"/>
+            <contents name="checking-for-more-than-one-condition" title="Checking for More than One Condition" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-using.html" href="qmake-using.html" subtype="page" title="Using qmake" fulltitle="Using qmake" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <contents name="describing-a-project" title="Describing a Project" level="1"/>
+            <contents name="building-a-project" title="Building a Project" level="1"/>
+            <contents name="using-precompiled-headers" title="Using Precompiled Headers" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qmake-variable-reference.html" href="qmake-variable-reference.html" subtype="page" title="qmake Variable Reference" fulltitle="qmake Variable Reference" subtitle="" location="qmake-manual.qdoc" module="QtDoc">
+            <target name="config"/>
+            <target name="defines"/>
+            <target name="def-file"/>
+            <target name="dependpath"/>
+            <target name="deployment"/>
+            <target name="deployment-plugin"/>
+            <target name="destdir"/>
+            <target name="destdir-target"/>
+            <target name="dlldestdir"/>
+            <target name="distfiles"/>
+            <target name="forms"/>
+            <target name="guid"/>
+            <target name="headers"/>
+            <target name="icon"/>
+            <target name="includepath"/>
+            <target name="installs"/>
+            <target name="leximpls"/>
+            <target name="lexobjects"/>
+            <target name="lexsources"/>
+            <target name="libs"/>
+            <target name="literal-hash"/>
+            <target name="makefile"/>
+            <target name="makefile-generator"/>
+            <target name="moc-dir"/>
+            <target name="objects"/>
+            <target name="objects-dir"/>
+            <target name="objmoc"/>
+            <target name="post-targetdeps"/>
+            <target name="pre-targetdeps"/>
+            <target name="precompiled-header"/>
+            <target name="pwd"/>
+            <target name="out-pwd"/>
+            <target name="qmake-systemvariable"/>
+            <target name="qmakespec-systemvariable"/>
+            <target name="qmake-app-flag"/>
+            <target name="qmake-app-or-dll"/>
+            <target name="qmake-ar-cmd"/>
+            <target name="qmake-bundle-data"/>
+            <target name="qmake-cflags-debug"/>
+            <target name="qmake-cflags-release"/>
+            <target name="qmake-cflags-shlib"/>
+            <target name="qmake-cflags-thread"/>
+            <target name="qmake-cflags-warn-off"/>
+            <target name="qmake-cflags-warn-on"/>
+            <target name="qmake-clean"/>
+            <target name="qmake-cxxflags-debug"/>
+            <target name="qmake-cxxflags-release"/>
+            <target name="qmake-cxxflags-shlib"/>
+            <target name="qmake-cxxflags-thread"/>
+            <target name="qmake-cxxflags-warn-off"/>
+            <target name="qmake-cxxflags-warn-on"/>
+            <target name="qmake-distclean"/>
+            <target name="qmake-extension-shlib"/>
+            <target name="qmake-failed-requirements"/>
+            <target name="qmake-framework-version"/>
+            <target name="qmake-incdir"/>
+            <target name="qmake-incdir-egl"/>
+            <target name="qmake-incdir-opengl"/>
+            <target name="qmake-incdir-openvg"/>
+            <target name="qmake-incdir-qt"/>
+            <target name="qmake-incdir-thread"/>
+            <target name="qmake-incdir-x11"/>
+            <target name="qmake-info-plist"/>
+            <target name="qmake-lflags-console"/>
+            <target name="qt-version"/>
+            <target name="qt-major-version"/>
+            <target name="qt-minor-version"/>
+            <target name="qt-patch-version"/>
+            <target name="rcc-dir"/>
+            <target name="requires"/>
+            <target name="signature-file"/>
+            <target name="sources"/>
+            <target name="subdirs"/>
+            <target name="target"/>
+            <target name="template"/>
+            <target name="ui-dir"/>
+            <target name="ui-headers-dir"/>
+            <target name="ui-sources-dir"/>
+            <target name="version"/>
+            <target name="yaccsources"/>
+            <contents name="config" title="CONFIG" level="1"/>
+            <contents name="defines" title="DEFINES" level="1"/>
+            <contents name="def-file" title="DEF_FILE" level="1"/>
+            <contents name="dependpath" title="DEPENDPATH" level="1"/>
+            <contents name="deployment" title="DEPLOYMENT" level="1"/>
+            <contents name="deployment-plugin" title="DEPLOYMENT_PLUGIN" level="1"/>
+            <contents name="destdir" title="DESTDIR" level="1"/>
+            <contents name="destdir-target" title="DESTDIR_TARGET" level="1"/>
+            <contents name="dlldestdir" title="DLLDESTDIR" level="1"/>
+            <contents name="distfiles" title="DISTFILES" level="1"/>
+            <contents name="forms" title="FORMS" level="1"/>
+            <contents name="guid" title="GUID" level="1"/>
+            <contents name="headers" title="HEADERS" level="1"/>
+            <contents name="icon" title="ICON" level="1"/>
+            <contents name="includepath" title="INCLUDEPATH" level="1"/>
+            <contents name="installs" title="INSTALLS" level="1"/>
+            <contents name="leximpls" title="LEXIMPLS" level="1"/>
+            <contents name="lexobjects" title="LEXOBJECTS" level="1"/>
+            <contents name="lexsources" title="LEXSOURCES" level="1"/>
+            <contents name="libs" title="LIBS" level="1"/>
+            <contents name="literal-hash" title="LITERAL_HASH" level="1"/>
+            <contents name="makefile" title="MAKEFILE" level="1"/>
+            <contents name="makefile-generator" title="MAKEFILE_GENERATOR" level="1"/>
+            <contents name="moc-dir" title="MOC_DIR" level="1"/>
+            <contents name="objects" title="OBJECTS" level="1"/>
+            <contents name="objects-dir" title="OBJECTS_DIR" level="1"/>
+            <contents name="objmoc" title="OBJMOC" level="1"/>
+            <contents name="post-targetdeps" title="POST_TARGETDEPS" level="1"/>
+            <contents name="pre-targetdeps" title="PRE_TARGETDEPS" level="1"/>
+            <contents name="precompiled-header" title="PRECOMPILED_HEADER" level="1"/>
+            <contents name="pwd" title="PWD" level="1"/>
+            <contents name="out-pwd" title="OUT_PWD" level="1"/>
+            <contents name="qmake" title="QMAKE" level="1"/>
+            <contents name="qmakespec" title="QMAKESPEC" level="1"/>
+            <contents name="qmake-app-flag" title="QMAKE_APP_FLAG" level="1"/>
+            <contents name="qmake-app-or-dll" title="QMAKE_APP_OR_DLL" level="1"/>
+            <contents name="qmake-ar-cmd" title="QMAKE_AR_CMD" level="1"/>
+            <contents name="qmake-bundle-data" title="QMAKE_BUNDLE_DATA" level="1"/>
+            <contents name="qmake-bundle-extension" title="QMAKE_BUNDLE_EXTENSION" level="1"/>
+            <contents name="qmake-cc" title="QMAKE_CC" level="1"/>
+            <contents name="qmake-cflags-debug" title="QMAKE_CFLAGS_DEBUG" level="1"/>
+            <contents name="qmake-cflags-release" title="QMAKE_CFLAGS_RELEASE" level="1"/>
+            <contents name="qmake-cflags-shlib" title="QMAKE_CFLAGS_SHLIB" level="1"/>
+            <contents name="qmake-cflags-thread" title="QMAKE_CFLAGS_THREAD" level="1"/>
+            <contents name="qmake-cflags-warn-off" title="QMAKE_CFLAGS_WARN_OFF" level="1"/>
+            <contents name="qmake-cflags-warn-on" title="QMAKE_CFLAGS_WARN_ON" level="1"/>
+            <contents name="qmake-clean" title="QMAKE_CLEAN" level="1"/>
+            <contents name="qmake-cxx" title="QMAKE_CXX" level="1"/>
+            <contents name="qmake-cxxflags" title="QMAKE_CXXFLAGS" level="1"/>
+            <contents name="qmake-cxxflags-debug" title="QMAKE_CXXFLAGS_DEBUG" level="1"/>
+            <contents name="qmake-cxxflags-release" title="QMAKE_CXXFLAGS_RELEASE" level="1"/>
+            <contents name="qmake-cxxflags-shlib" title="QMAKE_CXXFLAGS_SHLIB" level="1"/>
+            <contents name="qmake-cxxflags-thread" title="QMAKE_CXXFLAGS_THREAD" level="1"/>
+            <contents name="qmake-cxxflags-warn-off" title="QMAKE_CXXFLAGS_WARN_OFF" level="1"/>
+            <contents name="qmake-cxxflags-warn-on" title="QMAKE_CXXFLAGS_WARN_ON" level="1"/>
+            <contents name="qmake-distclean" title="QMAKE_DISTCLEAN" level="1"/>
+            <contents name="qmake-extension-shlib" title="QMAKE_EXTENSION_SHLIB" level="1"/>
+            <contents name="qmake-ext-moc" title="QMAKE_EXT_MOC" level="1"/>
+            <contents name="qmake-ext-ui" title="QMAKE_EXT_UI" level="1"/>
+            <contents name="qmake-ext-prl" title="QMAKE_EXT_PRL" level="1"/>
+            <contents name="qmake-ext-lex" title="QMAKE_EXT_LEX" level="1"/>
+            <contents name="qmake-ext-yacc" title="QMAKE_EXT_YACC" level="1"/>
+            <contents name="qmake-ext-obj" title="QMAKE_EXT_OBJ" level="1"/>
+            <contents name="qmake-ext-cpp" title="QMAKE_EXT_CPP" level="1"/>
+            <contents name="qmake-ext-h" title="QMAKE_EXT_H" level="1"/>
+            <contents name="qmake-extra-compilers" title="QMAKE_EXTRA_COMPILERS" level="1"/>
+            <contents name="qmake-extra-targets" title="QMAKE_EXTRA_TARGETS" level="1"/>
+            <contents name="qmake-failed-requirements" title="QMAKE_FAILED_REQUIREMENTS" level="1"/>
+            <contents name="qmake-framework-bundle-name" title="QMAKE_FRAMEWORK_BUNDLE_NAME" level="1"/>
+            <contents name="qmake-framework-version" title="QMAKE_FRAMEWORK_VERSION" level="1"/>
+            <contents name="qmake-incdir" title="QMAKE_INCDIR" level="1"/>
+            <contents name="qmake-incdir-egl" title="QMAKE_INCDIR_EGL" level="1"/>
+            <contents name="qmake-incdir-opengl" title="QMAKE_INCDIR_OPENGL" level="1"/>
+            <contents name="qmake-incdir-opengl-es1-qmake-incdir-opengl-es2" title="QMAKE_INCDIR_OPENGL_ES1, QMAKE_INCDIR_OPENGL_ES2" level="1"/>
+            <contents name="qmake-incdir-openvg" title="QMAKE_INCDIR_OPENVG" level="1"/>
+            <contents name="qmake-incdir-qt" title="QMAKE_INCDIR_QT" level="1"/>
+            <contents name="qmake-incdir-thread" title="QMAKE_INCDIR_THREAD" level="1"/>
+            <contents name="qmake-incdir-x11" title="QMAKE_INCDIR_X11" level="1"/>
+            <contents name="qmake-info-plist" title="QMAKE_INFO_PLIST" level="1"/>
+            <contents name="qmake-lflags" title="QMAKE_LFLAGS" level="1"/>
+            <contents name="qmake-lflags-console" title="QMAKE_LFLAGS_CONSOLE" level="1"/>
+            <contents name="qmake-lflags-debug" title="QMAKE_LFLAGS_DEBUG" level="1"/>
+            <contents name="qmake-lflags-plugin" title="QMAKE_LFLAGS_PLUGIN" level="1"/>
+            <contents name="qmake-lflags-rpath" title="QMAKE_LFLAGS_RPATH" level="1"/>
+            <contents name="qmake-lflags-qt-dll" title="QMAKE_LFLAGS_QT_DLL" level="1"/>
+            <contents name="qmake-lflags-release" title="QMAKE_LFLAGS_RELEASE" level="1"/>
+            <contents name="qmake-lflags-shapp" title="QMAKE_LFLAGS_SHAPP" level="1"/>
+            <contents name="qmake-lflags-shlib" title="QMAKE_LFLAGS_SHLIB" level="1"/>
+            <contents name="qmake-lflags-soname" title="QMAKE_LFLAGS_SONAME" level="1"/>
+            <contents name="qmake-lflags-thread" title="QMAKE_LFLAGS_THREAD" level="1"/>
+            <contents name="qmake-lflags-windows" title="QMAKE_LFLAGS_WINDOWS" level="1"/>
+            <contents name="qmake-libdir" title="QMAKE_LIBDIR" level="1"/>
+            <contents name="qmake-libdir-flags" title="QMAKE_LIBDIR_FLAGS" level="1"/>
+            <contents name="qmake-libdir-egl" title="QMAKE_LIBDIR_EGL" level="1"/>
+            <contents name="qmake-libdir-opengl" title="QMAKE_LIBDIR_OPENGL" level="1"/>
+            <contents name="qmake-libdir-openvg" title="QMAKE_LIBDIR_OPENVG" level="1"/>
+            <contents name="qmake-libdir-qt" title="QMAKE_LIBDIR_QT" level="1"/>
+            <contents name="qmake-libdir-x11" title="QMAKE_LIBDIR_X11" level="1"/>
+            <contents name="qmake-libs" title="QMAKE_LIBS" level="1"/>
+            <contents name="qmake-libs-egl" title="QMAKE_LIBS_EGL" level="1"/>
+            <contents name="qmake-libs-opengl" title="QMAKE_LIBS_OPENGL" level="1"/>
+            <contents name="qmake-libs-opengl-qt" title="QMAKE_LIBS_OPENGL_QT" level="1"/>
+            <contents name="qmake-libs-opengl-es1-qmake-libs-opengl-es2" title="QMAKE_LIBS_OPENGL_ES1, QMAKE_LIBS_OPENGL_ES2" level="1"/>
+            <contents name="qmake-libs-openvg" title="QMAKE_LIBS_OPENVG" level="1"/>
+            <contents name="qmake-libs-qt" title="QMAKE_LIBS_QT" level="1"/>
+            <contents name="qmake-libs-qt-dll" title="QMAKE_LIBS_QT_DLL" level="1"/>
+            <contents name="qmake-libs-qt-opengl" title="QMAKE_LIBS_QT_OPENGL" level="1"/>
+            <contents name="qmake-libs-qt-thread" title="QMAKE_LIBS_QT_THREAD" level="1"/>
+            <contents name="qmake-libs-rt" title="QMAKE_LIBS_RT" level="1"/>
+            <contents name="qmake-libs-rtmt" title="QMAKE_LIBS_RTMT" level="1"/>
+            <contents name="qmake-libs-thread" title="QMAKE_LIBS_THREAD" level="1"/>
+            <contents name="qmake-libs-windows" title="QMAKE_LIBS_WINDOWS" level="1"/>
+            <contents name="qmake-libs-x11" title="QMAKE_LIBS_X11" level="1"/>
+            <contents name="qmake-lib-flag" title="QMAKE_LIB_FLAG" level="1"/>
+            <contents name="qmake-link-shlib-cmd" title="QMAKE_LINK_SHLIB_CMD" level="1"/>
+            <contents name="qmake-ln-shlib" title="QMAKE_LN_SHLIB" level="1"/>
+            <contents name="qmake-post-link" title="QMAKE_POST_LINK" level="1"/>
+            <contents name="qmake-pre-link" title="QMAKE_PRE_LINK" level="1"/>
+            <contents name="qmake-project-name" title="QMAKE_PROJECT_NAME" level="1"/>
+            <contents name="qmake-mac-sdk" title="QMAKE_MAC_SDK" level="1"/>
+            <contents name="qmake-macosx-deployment-target" title="QMAKE_MACOSX_DEPLOYMENT_TARGET" level="1"/>
+            <contents name="qmake-makefile" title="QMAKE_MAKEFILE" level="1"/>
+            <contents name="qmake-moc-src" title="QMAKE_MOC_SRC" level="1"/>
+            <contents name="qmake-qmake" title="QMAKE_QMAKE" level="1"/>
+            <contents name="qmake-qt-dll" title="QMAKE_QT_DLL" level="1"/>
+            <contents name="qmake-resource-flags" title="QMAKE_RESOURCE_FLAGS" level="1"/>
+            <contents name="qmake-rpath" title="QMAKE_RPATH" level="1"/>
+            <contents name="qmake-rpathdir" title="QMAKE_RPATHDIR" level="1"/>
+            <contents name="qmake-run-cc" title="QMAKE_RUN_CC" level="1"/>
+            <contents name="qmake-run-cc-imp" title="QMAKE_RUN_CC_IMP" level="1"/>
+            <contents name="qmake-run-cxx" title="QMAKE_RUN_CXX" level="1"/>
+            <contents name="qmake-run-cxx-imp" title="QMAKE_RUN_CXX_IMP" level="1"/>
+            <contents name="qmake-target" title="QMAKE_TARGET" level="1"/>
+            <contents name="qmake-uic" title="QMAKE_UIC" level="1"/>
+            <contents name="qt" title="QT" level="1"/>
+            <contents name="qtplugin" title="QTPLUGIN" level="1"/>
+            <contents name="qt-version" title="QT_VERSION" level="1"/>
+            <contents name="qt-major-version" title="QT_MAJOR_VERSION" level="1"/>
+            <contents name="qt-minor-version" title="QT_MINOR_VERSION" level="1"/>
+            <contents name="qt-patch-version" title="QT_PATCH_VERSION" level="1"/>
+            <contents name="rc-file" title="RC_FILE" level="1"/>
+            <contents name="rc-includepath" title="RC_INCLUDEPATH" level="1"/>
+            <contents name="rcc-dir" title="RCC_DIR" level="1"/>
+            <contents name="requires" title="REQUIRES" level="1"/>
+            <contents name="resources" title="RESOURCES" level="1"/>
+            <contents name="res-file" title="RES_FILE" level="1"/>
+            <contents name="signature-file" title="SIGNATURE_FILE" level="1"/>
+            <contents name="sources" title="SOURCES" level="1"/>
+            <contents name="srcmoc" title="SRCMOC" level="1"/>
+            <contents name="subdirs" title="SUBDIRS" level="1"/>
+            <contents name="target" title="TARGET" level="1"/>
+            <contents name="target-ext" title="TARGET_EXT" level="1"/>
+            <contents name="target-x" title="TARGET_x" level="1"/>
+            <contents name="target-x-y-z" title="TARGET_x.y.z" level="1"/>
+            <contents name="template" title="TEMPLATE" level="1"/>
+            <contents name="translations" title="TRANSLATIONS" level="1"/>
+            <contents name="uicimpls" title="UICIMPLS" level="1"/>
+            <contents name="uicobjects" title="UICOBJECTS" level="1"/>
+            <contents name="ui-dir" title="UI_DIR" level="1"/>
+            <contents name="ui-headers-dir" title="UI_HEADERS_DIR" level="1"/>
+            <contents name="ui-sources-dir" title="UI_SOURCES_DIR" level="1"/>
+            <contents name="version" title="VERSION" level="1"/>
+            <contents name="ver-maj" title="VER_MAJ" level="1"/>
+            <contents name="ver-min" title="VER_MIN" level="1"/>
+            <contents name="ver-pat" title="VER_PAT" level="1"/>
+            <contents name="vpath" title="VPATH" level="1"/>
+            <contents name="yaccimpls" title="YACCIMPLS" level="1"/>
+            <contents name="yaccobjects" title="YACCOBJECTS" level="1"/>
+            <contents name="yaccsources" title="YACCSOURCES" level="1"/>
+            <contents name="pro-file" title="_PRO_FILE_" level="1"/>
+            <contents name="pro-file-pwd" title="_PRO_FILE_PWD_" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="rcc.html" href="rcc.html" subtype="page" title="Resource Compiler (rcc)" fulltitle="Resource Compiler (rcc)" subtitle="" location="rcc.qdoc" module="QtDoc" groups="qttools">
+            <keyword name="rcc"/>
+        </page>
+        <page access="public" status="commendable" name="uic.html" href="uic.html" subtype="page" title="User Interface Compiler (uic)" fulltitle="User Interface Compiler (uic)" subtitle="" location="uic.qdoc" module="QtDoc" groups="qttools">
+            <keyword name="uic"/>
+            <contents name="options" title="Options" level="1"/>
+            <contents name="examples" title="Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="topics-app-development.html" href="topics-app-development.html" subtype="page" title="Development Tools" fulltitle="Development Tools" subtitle="" location="developmenttools.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="qtdemo.html" href="qtdemo.html" subtype="page" title="Examples Launcher" fulltitle="Examples Launcher" subtitle="" location="qtdemo.qdoc" module="QtDoc" groups="qttools">
+            <keyword name="qtdemo"/>
+        </page>
+        <page access="public" status="commendable" name="http://opensource.org/licenses/bsd-license.php" href="http-opensource-org-licenses-bsd-license-php.html" subtype="externalpage" title="New and Modified BSD Licenses" fulltitle="New and Modified BSD Licenses" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/contribute" href="http-qt-project-org-contribute.html" subtype="externalpage" title="Contributing to Qt" fulltitle="Contributing to Qt" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/downloads" href="http-qt-project-org-downloads.html" subtype="externalpage" title="Opensource Downloads" fulltitle="Opensource Downloads" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://qt.digia.com/licensing/" href="http-qt-digia-com-licensing.html" subtype="externalpage" title="Qt Licensing Overview" fulltitle="Qt Licensing Overview" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.gnu.org/licenses/gpl.html" href="http-www-gnu-org-licenses-gpl.html" subtype="externalpage" title="GNU General Public License" fulltitle="GNU General Public License" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html" href="http-www-gnu-org-licenses-old-licenses-lgpl-2-1.html" subtype="externalpage" title="GNU Lesser General Public License, version 2.1" fulltitle="GNU Lesser General Public License, version 2.1" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="ftp://ftp.qt.nokia.com/pub/qt/solutions/lgpl/qtmotifextension-2.7_1-opensource.tar.gz" href="ftp-ftp-qt-nokia-com-pub-qt-solutions-lgpl-qtmotifextension-2-7-1-opensource-tar-gz.html" subtype="externalpage" title="Motif Extension" fulltitle="Motif Extension" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://accessibility.linuxfoundation.org/a11yspecs/ia2/docs/html/_accessible_event_i_d_8idl.html" href="http-accessibility-linuxfoundation-org-a11yspecs-ia2-docs-html-accessible-event-i-d-8idl.html" subtype="externalpage" title="AccessibleEventID.idl File Reference" fulltitle="AccessibleEventID.idl File Reference" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://arora-browser.org/" href="http-arora-browser-org.html" subtype="externalpage" title="Arora Browser" fulltitle="Arora Browser" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://cgi.netscape.com/newsref/std/cookie_spec.html" href="http-cgi-netscape-com-newsref-std-cookie-spec.html" subtype="externalpage" title="Netscape Cookie Specification" fulltitle="Netscape Cookie Specification" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://code.google.com/p/angleproject/" href="http-code-google-com-p-angleproject.html" subtype="externalpage" title="ANGLE" fulltitle="ANGLE" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://developers.sun.com/sunstudio/downloads/patches/index.jsp" href="http-developers-sun-com-sunstudio-downloads-patches-index-jsp.html" subtype="externalpage" title="Sun Studio Patches" fulltitle="Sun Studio Patches" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://directfb.org/docs/DirectFB_Reference_1_4/IDirectFBImageProvider.html" href="http-directfb-org-docs-directfb-reference-1-4-idirectfbimageprovider.html" subtype="externalpage" title="DirectFB - IDirectFBImageProvider" fulltitle="DirectFB - IDirectFBImageProvider" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://en.tldp.org/HOWTO/Framebuffer-HOWTO.html" href="http-en-tldp-org-howto-framebuffer-howto.html" subtype="externalpage" title="Framebuffer HOWTO" fulltitle="Framebuffer HOWTO" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://git.iksaif.net/?p=qsslkey-p11.git" href="http-git-iksaif-net-p-qsslkey-p11-git.html" subtype="externalpage" title="qsslkey example" fulltitle="qsslkey example" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://gnuwin32.sourceforge.net/packages.html" href="http-gnuwin32-sourceforge-net-packages.html" subtype="externalpage" title="GnuWin32 Project" fulltitle="GnuWin32 Project" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://linux.sybase.com" href="http-linux-sybase-com.html" subtype="externalpage" title="http://linux.sybase.com" fulltitle="http://linux.sybase.com" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://msdn.microsoft.com/en-us/directx/default.aspx" href="http-msdn-microsoft-com-en-us-directx-default-aspx.html" subtype="externalpage" title="Direct X SDK" fulltitle="Direct X SDK" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://msdn.microsoft.com/en-us/library/dd318066.aspx" href="http-msdn-microsoft-com-en-us-library-dd318066-aspx.html" subtype="externalpage" title="Microsoft Active Accessibility Event Constants" fulltitle="Microsoft Active Accessibility Event Constants" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://msdn.microsoft.com/en-us/library/ms533046(VS.85).aspx" href="http-msdn-microsoft-com-en-us-library-ms533046-vs-85-aspx.html" subtype="externalpage" title="Mitigating Cross-site Scripting With HTTP-only Cookies" fulltitle="Mitigating Cross-site Scripting With HTTP-only Cookies" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://opensource.org/licenses/bsd-license.php" href="http-opensource-org-licenses-bsd-license-php.html" subtype="externalpage" title="New and Modified BSD Licenses" fulltitle="New and Modified BSD Licenses" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://publicsuffix.org/" href="http-publicsuffix-org.html" subtype="externalpage" title="publicsuffix.org" fulltitle="publicsuffix.org" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://pyxml.sourceforge.net/topics/xbel/" href="http-pyxml-sourceforge-net-topics-xbel.html" subtype="externalpage" title="XML Bookmark Exchange Language Resource Page" fulltitle="XML Bookmark Exchange Language Resource Page" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://site.icu-project.org/" href="http-site-icu-project-org.html" subtype="externalpage" title="ICU" fulltitle="ICU" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://tdm-gcc.tdragon.net/" href="http-tdm-gcc-tdragon-net.html" subtype="externalpage" title="TDM-GCC" fulltitle="TDM-GCC" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://wap.trafikanten.no" href="http-wap-trafikanten-no.html" subtype="externalpage" title="Trafikanten" fulltitle="Trafikanten" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://webkit.org/" href="http-webkit-org.html" subtype="externalpage" title="WebKit Open Source Project" fulltitle="WebKit Open Source Project" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://wiki.forum.nokia.com/" href="http-wiki-forum-nokia-com.html" subtype="externalpage" title="Forum Nokia Wiki" fulltitle="Forum Nokia Wiki" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.activestate.com/Products/activeperl/index.mhtml" href="http-www-activestate-com-products-activeperl-index-mhtml.html" subtype="externalpage" title="ActivePerl" fulltitle="ActivePerl" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.amazon.com/Pthreads-Programming-Standard-Multiprocessing-Nutshell/dp/1565921151/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1354884565&amp;sr=1-1&amp;keywords=threads+Programming%3A+A+POSIX+Standard+for+Better+Multiprocessing" href="http-www-amazon-com-pthreads-programming-standard-multiprocessing-nutshell-dp-1565921151-ref-sr-1-1-s-books-ie-utf8-qid-1354884565-sr-1-1-keywords-threads-programming-3a-a-posix-standard-for-better-multiprocessing.html" subtype="externalpage" title="Pthreads Programming: A POSIX Standard for Better Multiprocessing" fulltitle="Pthreads Programming: A POSIX Standard for Better Multiprocessing" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.amazon.com/Thread-Time-MultiThreaded-Programming-Guide/dp/0131900676/ref=sr_1_sc_3?ie=UTF8&amp;qid=1354884427&amp;sr=8-3-spell&amp;keywords=The+Mulltithread+Programming+Guide" href="http-www-amazon-com-thread-time-multithreaded-programming-guide-dp-0131900676-ref-sr-1-sc-3-ie-utf8-qid-1354884427-sr-8-3-spell-keywords-the-mulltithread-programming-guide.html" subtype="externalpage" title="Thread Time: The Multithreaded Programming Guide" fulltitle="Thread Time: The Multithreaded Programming Guide" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.amazon.com/Threads-Primer-Guide-Multithreaded-Programming/dp/0134436989/ref=sr_1_1?ie=UTF8&amp;qid=1354884049&amp;sr=8-1&amp;keywords=a+guide+to+multithreaded+programming" href="http-www-amazon-com-threads-primer-guide-multithreaded-programming-dp-0134436989-ref-sr-1-1-ie-utf8-qid-1354884049-sr-8-1-keywords-a-guide-to-multithreaded-programming.html" subtype="externalpage" title="Threads Primer: A Guide to Multithreaded Programming" fulltitle="Threads Primer: A Guide to Multithreaded Programming" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.amazon.com/Win32-Multithreaded-Programming-Aaron-Cohen/dp/B00007GW3Z/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1354884647&amp;sr=1-1&amp;keywords=Win32+Multithreaded+Programming" href="http-www-amazon-com-win32-multithreaded-programming-aaron-cohen-dp-b00007gw3z-ref-sr-1-1-s-books-ie-utf8-qid-1354884647-sr-1-1-keywords-win32-multithreaded-programming.html" subtype="externalpage" title="Win32 Multithreaded Programming" fulltitle="Win32 Multithreaded Programming" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cmake.org/cmake/help/documentation.html" href="http-www-cmake-org-cmake-help-documentation.html" subtype="externalpage" title="CMake Documentation" fulltitle="CMake Documentation" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cmake.org/cmake/help/v2.8.9/cmake.html#command:find_package" href="http-www-cmake-org-cmake-help-v2-8-9-cmake-html-command-find-package.html" subtype="externalpage" title="CMake find_package Documentation" fulltitle="CMake find_package Documentation" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cmake.org/cmake/help/v2.8.9/cmake.html#command:target_link_libraries" href="http-www-cmake-org-cmake-help-v2-8-9-cmake-html-command-target-link-libraries.html" subtype="externalpage" title="CMake target_link_libraries Documentation" fulltitle="CMake target_link_libraries Documentation" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cmake.org/cmake/help/v2.8.9/cmake.html#prop_tgt:AUTOMOC" href="http-www-cmake-org-cmake-help-v2-8-9-cmake-html-prop-tgt-automoc.html" subtype="externalpage" title="CMake AUTOMOC Documentation" fulltitle="CMake AUTOMOC Documentation" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cmake.org/cmake/help/v2.8.9/cmake.html#prop_tgt:LOCATION" href="http-www-cmake-org-cmake-help-v2-8-9-cmake-html-prop-tgt-location.html" subtype="externalpage" title="CMake LOCATION Documentation" fulltitle="CMake LOCATION Documentation" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cmake.org/cmake/help/v2.8.9/cmake.html#prop_tgt:POSITION_INDEPENDENT_CODE" href="http-www-cmake-org-cmake-help-v2-8-9-cmake-html-prop-tgt-position-independent-code.html" subtype="externalpage" title="CMake POSITION_INDEPENDENT_CODE Documentation" fulltitle="CMake POSITION_INDEPENDENT_CODE Documentation" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cplusplus.com/reference/clibrary/cstring/memcpy/" href="http-www-cplusplus-com-reference-clibrary-cstring-memcpy.html" subtype="externalpage" title="C++ Reference - memcpy" fulltitle="C++ Reference - memcpy" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.cups.org/" href="http-www-cups-org.html" subtype="externalpage" title="Common Unix Printing System (CUPS)" fulltitle="Common Unix Printing System (CUPS)" subtitle="" location="external-resources.qdoc">
+            <keyword name="cups"/>
+        </page>
+        <page access="public" status="commendable" name="http://www.dependencywalker.com/" href="http-www-dependencywalker-com.html" subtype="externalpage" title="Dependency Walker" fulltitle="Dependency Walker" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/docs/DirectFB_Reference_1_4/IDirectFBPalette.html" href="http-www-directfb-org-docs-directfb-reference-1-4-idirectfbpalette.html" subtype="externalpage" title="DirectFB - IDirectFBPalette" fulltitle="DirectFB - IDirectFBPalette" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/docs/DirectFB_Reference_1_4/IDirectFBSurface.html" href="http-www-directfb-org-docs-directfb-reference-1-4-idirectfbsurface.html" subtype="externalpage" title="DirectFB - IDirectFBSurface" fulltitle="DirectFB - IDirectFBSurface" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/docs/DirectFB_Reference_1_4/IDirectFBWindow" href="http-www-directfb-org-docs-directfb-reference-1-4-idirectfbwindow.html" subtype="externalpage" title="DirectFB - IDirectFBWindow" fulltitle="DirectFB - IDirectFBWindow" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/docs/DirectFB_Reference_1_4/IDirectFB_CreateInputEventBuffer.html" href="http-www-directfb-org-docs-directfb-reference-1-4-idirectfb-createinputeventbuffer.html" subtype="externalpage" title="DirectFB - CreateInputEventBuffer" fulltitle="DirectFB - CreateInputEventBuffer" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/docs/DirectFB_Reference_1_4/types.html#DFBSurfaceBlittingFlags" href="http-www-directfb-org-docs-directfb-reference-1-4-types-html-dfbsurfaceblittingflags.html" subtype="externalpage" title="DirectFB - DFBSurfaceBlittingFlags" fulltitle="DirectFB - DFBSurfaceBlittingFlags" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/docs/DirectFB_Reference_1_4/types.html#DFBSurfaceDescription" href="http-www-directfb-org-docs-directfb-reference-1-4-types-html-dfbsurfacedescription.html" subtype="externalpage" title="DirectFB - DFBSurfaceDescription" fulltitle="DirectFB - DFBSurfaceDescription" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.directfb.org/index.php?path=Main%2FDownloads&amp;amp;page=1" href="http-www-directfb-org-index-php-path-main-2fdownloads-amp-page-1.html" subtype="externalpage" title="DirectFB - df_window example" fulltitle="DirectFB - df_window example" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.ecma-international.org/publications/standards/Ecma-262.htm" href="http-www-ecma-international-org-publications-standards-ecma-262-htm.html" subtype="externalpage" title="ECMAScript Language Specification" fulltitle="ECMAScript Language Specification" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.freedesktop.org/" href="http-www-freedesktop-org.html" subtype="externalpage" title="freedesktop.org" fulltitle="freedesktop.org" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.freedesktop.org/Standards/icon-theme-spec" href="http-www-freedesktop-org-standards-icon-theme-spec.html" subtype="externalpage" title="Icon Themes Specification" fulltitle="Icon Themes Specification" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.freedesktop.org/Standards/xembed-spec" href="http-www-freedesktop-org-standards-xembed-spec.html" subtype="externalpage" title="XEmbed Specification" fulltitle="XEmbed Specification" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.freedesktop.org/wiki/Standards_2fdesktop_2dentry_2dspec" href="http-www-freedesktop-org-wiki-standards-2fdesktop-2dentry-2dspec.html" subtype="externalpage" title="Desktop Entry Specification" fulltitle="Desktop Entry Specification" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.freetds.org" href="http-www-freetds-org.html" subtype="externalpage" title="http://www.freetds.org" fulltitle="http://www.freetds.org" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.gnome.org/" href="http-www-gnome-org.html" subtype="externalpage" title="GNOME" fulltitle="GNOME" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.gnu.org/licenses/gpl.html" href="http-www-gnu-org-licenses-gpl.html" subtype="externalpage" title="GNU General Public License" fulltitle="GNU General Public License" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html" href="http-www-gnu-org-licenses-old-licenses-lgpl-2-1.html" subtype="externalpage" title="GNU Lesser General Public License, version 2.1" fulltitle="GNU Lesser General Public License, version 2.1" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.gnu.org/software/emacs/" href="http-www-gnu-org-software-emacs.html" subtype="externalpage" title="GNU Emacs" fulltitle="GNU Emacs" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.informit.com/store/product.aspx?isbn=0132354160" href="http-www-informit-com-store-product-aspx-isbn-0132354160.html" subtype="externalpage" title="C++ GUI Programming with Qt 4, 2nd Edition" fulltitle="C++ GUI Programming with Qt 4, 2nd Edition" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.kde.org" href="http-www-kde-org.html" subtype="externalpage" title="KDE" fulltitle="KDE" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.kde.org/" href="http-www-kde-org.html" subtype="externalpage" title="The K Desktop Environment" fulltitle="The K Desktop Environment" subtitle="" location="external-resources.qdoc">
+            <keyword name="kde"/>
+        </page>
+        <page access="public" status="commendable" name="http://www.kdedevelopers.org/node/2345" href="http-www-kdedevelopers-org-node-2345.html" subtype="externalpage" title="KDE applications" fulltitle="KDE applications" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.khronos.org/registry/gles/" href="http-www-khronos-org-registry-gles.html" subtype="externalpage" title="Khronos OpenGL ES API Registry" fulltitle="Khronos OpenGL ES API Registry" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.libusb.org/" href="http-www-libusb-org.html" subtype="externalpage" title="libusb" fulltitle="libusb" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.mingw.org/" href="http-www-mingw-org.html" subtype="externalpage" title="MinGW" fulltitle="MinGW" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.opengl.org/registry/" href="http-www-opengl-org-registry.html" subtype="externalpage" title="OpenGL Registry" fulltitle="OpenGL Registry" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.openssl.org/" href="http-www-openssl-org.html" subtype="externalpage" title="OpenSSL Toolkit" fulltitle="OpenSSL Toolkit" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.phptr.com/content/images/0131872494/samplechapter/blanchette_ch10.pdf" href="http-www-phptr-com-content-images-0131872494-samplechapter-blanchette-ch10-pdf.html" subtype="externalpage" title="&quot;Item View Classes&quot; Chapter of C++ GUI Programming with Qt 4" fulltitle="&quot;Item View Classes&quot; Chapter of C++ GUI Programming with Qt 4" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.postgresql.org" href="http-www-postgresql-org.html" subtype="externalpage" title="http://www.postgresql.org" fulltitle="http://www.postgresql.org" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.postgresql.org/docs/current/static/installation-platform-notes.html#INSTALLATION-NOTES-MINGW" href="http-www-postgresql-org-docs-current-static-installation-platform-notes-html-installation-notes-mingw.html" subtype="externalpage" title="PostgreSQL MinGW/Native Windows" fulltitle="PostgreSQL MinGW/Native Windows" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.python.org/" href="http-www-python-org.html" subtype="externalpage" title="Python" fulltitle="Python" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.qtcentre.org" href="http-www-qtcentre-org.html" subtype="externalpage" title="Qt Centre" fulltitle="Qt Centre" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.sqlite.org" href="http-www-sqlite-org.html" subtype="externalpage" title="http://www.sqlite.org" fulltitle="http://www.sqlite.org" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.sybase.com" href="http-www-sybase-com.html" subtype="externalpage" title="http://www.sybase.com" fulltitle="http://www.sybase.com" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.unixodbc.org" href="http-www-unixodbc-org.html" subtype="externalpage" title="http://www.unixodbc.org" fulltitle="http://www.unixodbc.org" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/Graphics/SVG/" href="http-www-w3-org-graphics-svg.html" subtype="externalpage" title="SVG Working Group" fulltitle="SVG Working Group" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/Graphics/SVG/About.html" href="http-www-w3-org-graphics-svg-about.html" subtype="externalpage" title="About SVG" fulltitle="About SVG" subtitle="" location="external-resources.qdoc">
+            <keyword name="scalable-vector-graphics"/>
+        </page>
+        <page access="public" status="commendable" name="http://www.w3.org/Graphics/SVG/feature/1.2/#SVG-static" href="http-www-w3-org-graphics-svg-feature-1-2-svg-static.html" subtype="externalpage" title="SVG 1.2 Tiny Static Features" fulltitle="SVG 1.2 Tiny Static Features" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/2009/WD-webdatabase-20091029/" href="http-www-w3-org-tr-2009-wd-webdatabase-20091029.html" subtype="externalpage" title="HTML5 Web Database API" fulltitle="HTML5 Web Database API" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/REC-CSS2/selector.html#q1" href="http-www-w3-org-tr-rec-css2-selector-html-q1.html" subtype="externalpage" title="Standard CSS2 selector" fulltitle="Standard CSS2 selector" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/SVG/types.html#ColorKeywords" href="http-www-w3-org-tr-svg-types-html-colorkeywords.html" subtype="externalpage" title="SVG color keyword names" fulltitle="SVG color keyword names" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/SVGMobile/" href="http-www-w3-org-tr-svgmobile.html" subtype="externalpage" title="Mobile SVG Profiles" fulltitle="Mobile SVG Profiles" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/SVGMobile12/" href="http-www-w3-org-tr-svgmobile12.html" subtype="externalpage" title="SVG 1.2 Tiny" fulltitle="SVG 1.2 Tiny" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/html401/" href="http-www-w3-org-tr-html401.html" subtype="externalpage" title="HTML 4" fulltitle="HTML 4" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/html5/" href="http-www-w3-org-tr-html5.html" subtype="externalpage" title="HTML 5" fulltitle="HTML 5" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/scxml/" href="http-www-w3-org-tr-scxml.html" subtype="externalpage" title="State Chart XML: State Machine Notation for Control Abstraction" fulltitle="State Chart XML: State Machine Notation for Control Abstraction" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/TR/xquery/#errors" href="http-www-w3-org-tr-xquery-errors.html" subtype="externalpage" title="error handling in the XQuery language" fulltitle="error handling in the XQuery language" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/XML/Core/#Publications" href="http-www-w3-org-xml-core-publications.html" subtype="externalpage" title="W3C XML specifications" fulltitle="W3C XML specifications" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.w3.org/XML/Schema" href="http-www-w3-org-xml-schema.html" subtype="externalpage" title="XML Schema" fulltitle="XML Schema" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://www.wisdom.weizmann.ac.il/~dharel/SCANNED.PAPERS/Statecharts.pdf" href="http-www-wisdom-weizmann-ac-il-dharel-scanned-papers-statecharts-pdf.html" subtype="externalpage" title="Statecharts: A visual formalism for complex systems" fulltitle="Statecharts: A visual formalism for complex systems" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://xaos.sourceforge.net/" href="http-xaos-sourceforge-net.html" subtype="externalpage" title="XaoS" fulltitle="XaoS" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="https://developer.apple.com/library/mac/#documentation/UserExperience/Conceptual/AppleHIGuidelines/Intro/Intro.html" href="https-developer-apple-com-library-mac-documentation-userexperience-conceptual-applehiguidelines-intro-intro.html" subtype="externalpage" title="Mac OS X Aqua" fulltitle="Mac OS X Aqua" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="https://developer.mozilla.org/en/JavaScript" href="https-developer-mozilla-org-en-javascript.html" subtype="externalpage" title="JavaScript Resources" fulltitle="JavaScript Resources" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="https://developer.mozilla.org/en/JavaScript/About_JavaScript" href="https-developer-mozilla-org-en-javascript-about-javascript.html" subtype="externalpage" title="About JavaScript" fulltitle="About JavaScript" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="https://developer.mozilla.org/en/JavaScript/Guide" href="https-developer-mozilla-org-en-javascript-guide.html" subtype="externalpage" title="JavaScript Guide" fulltitle="JavaScript Guide" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="https://developer.mozilla.org/en/JavaScript/Reference/Reserved_Words" href="https-developer-mozilla-org-en-javascript-reference-reserved-words.html" subtype="externalpage" title="JavaScript Reserved Words" fulltitle="JavaScript Reserved Words" subtitle="" location="external-resources.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtcreator/creator-publish-ovi.html" href="http-doc-qt-digia-com-qtcreator-creator-publish-ovi.html" subtype="externalpage" title="external: Publishing Applications to Ovi Store" fulltitle="external: Publishing Applications to Ovi Store" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtcreator/creator-qml-application.html" href="http-doc-qt-digia-com-qtcreator-creator-qml-application.html" subtype="externalpage" title="external: Developing Qt Quick Applications with Creator" fulltitle="external: Developing Qt Quick Applications with Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtcreator/creator-visual-editor.html" href="http-doc-qt-digia-com-qtcreator-creator-visual-editor.html" subtype="externalpage" title="external: Developing Qt Quick Applications" fulltitle="external: Developing Qt Quick Applications" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtmobility/all-examples.html" href="http-doc-qt-digia-com-qtmobility-all-examples.html" subtype="externalpage" title="external: Qt Mobility Examples" fulltitle="external: Qt Mobility Examples" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtmobility/index.html" href="http-doc-qt-digia-com-qtmobility-index.html" subtype="externalpage" title="external: Qt Mobility Manual" fulltitle="external: Qt Mobility Manual" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtmobility/location-overview.html" href="http-doc-qt-digia-com-qtmobility-location-overview.html" subtype="externalpage" title="external: Mobility Location" fulltitle="external: Mobility Location" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtmobility/multimedia.html" href="http-doc-qt-digia-com-qtmobility-multimedia.html" subtype="externalpage" title="external: Mobility Multimedia" fulltitle="external: Mobility Multimedia" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qtmobility/qml-plugins.html" href="http-doc-qt-digia-com-qtmobility-qml-plugins.html" subtype="externalpage" title="external: Qt Mobility QML Plugins" fulltitle="external: Qt Mobility QML Plugins" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator" href="http-qt-project-org-doc-qtcreator.html" subtype="externalpage" title="external: Qt Creator Manual" fulltitle="external: Qt Creator Manual" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-build-settings.html" href="http-qt-project-org-doc-qtcreator-creator-build-settings.html" subtype="externalpage" title="external: Build Settings in Creator" fulltitle="external: Build Settings in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-building-running.html" href="http-qt-project-org-doc-qtcreator-creator-building-running.html" subtype="externalpage" title="external: Building and Running Applications in Creator" fulltitle="external: Building and Running Applications in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-debugging.html" href="http-qt-project-org-doc-qtcreator-creator-debugging.html" subtype="externalpage" title="external: Debugging Applications in Creator" fulltitle="external: Debugging Applications in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-overview.html" href="http-qt-project-org-doc-qtcreator-creator-overview.html" subtype="externalpage" title="external: Qt Creator Overview" fulltitle="external: Qt Creator Overview" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-project-managing.html" href="http-qt-project-org-doc-qtcreator-creator-project-managing.html" subtype="externalpage" title="external: Creating Qt Projects in Creator" fulltitle="external: Creating Qt Projects in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-run-settings.html" href="http-qt-project-org-doc-qtcreator-creator-run-settings.html" subtype="externalpage" title="external: Run Settings in Creator" fulltitle="external: Run Settings in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-running-targets.html" href="http-qt-project-org-doc-qtcreator-creator-running-targets.html" subtype="externalpage" title="external: Set Compiler Targets in Creator" fulltitle="external: Set Compiler Targets in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-tutorials.html" href="http-qt-project-org-doc-qtcreator-creator-tutorials.html" subtype="externalpage" title="external: Tutorials for Creator" fulltitle="external: Tutorials for Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qtcreator/creator-using-qt-designer.html" href="http-qt-project-org-doc-qtcreator-creator-using-qt-designer.html" subtype="externalpage" title="external: Designer in Creator" fulltitle="external: Designer in Creator" subtitle="" location="qch-urls.qdoc"/>
+        <page access="public" status="commendable" name="http://blog.qt.digia.com/2012/02/29/pimp-my-video-shader-effects-and-multimedia/" href="http-blog-qt-digia-com-2012-02-29-pimp-my-video-shader-effects-and-multimedia.html" subtype="externalpage" title="Pimp my video" fulltitle="Pimp my video" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://bugreports.qt-project.org" href="http-bugreports-qt-project-org.html" subtype="externalpage" title="Qt Bug Tracker" fulltitle="Qt Bug Tracker" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qq/" href="http-doc-qt-digia-com-qq.html" subtype="externalpage" title="Qt Quarterly" fulltitle="Qt Quarterly" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qq/qq11-events.html" href="http-doc-qt-digia-com-qq-qq11-events.html" subtype="externalpage" title="Qt Quarterly: Another Look at Events" fulltitle="Qt Quarterly: Another Look at Events" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qq/qq19-plurals.html" href="http-doc-qt-digia-com-qq-qq19-plurals.html" subtype="externalpage" title="Qt Quarterly: Plural Form in Translation" fulltitle="Qt Quarterly: Plural Form in Translation" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://doc.qt.digia.com/qt-eclipse-1.6/index.html" href="http-doc-qt-digia-com-qt-eclipse-1-6-index.html" subtype="externalpage" title="Eclipse Plugin" fulltitle="Eclipse Plugin" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/" href="http-qt-project-org.html" subtype="externalpage" title="Qt Homepage" fulltitle="Qt Homepage" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qt-4.8" href="http-qt-project-org-doc-qt-4-8.html" subtype="externalpage" title="Qt 4.8 Reference Documentation" fulltitle="Qt 4.8 Reference Documentation" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/doc/qt-4.8/qtquick.html" href="http-qt-project-org-doc-qt-4-8-qtquick.html" subtype="externalpage" title="Qt Quick 1 Reference Documentation" fulltitle="Qt Quick 1 Reference Documentation" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/videos/watch/livecoding-video-effects-with-qt5" href="http-qt-project-org-videos-watch-livecoding-video-effects-with-qt5.html" subtype="externalpage" title="Livecoding video effects with Qt5" fulltitle="Livecoding video effects with Qt5" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/wiki/Qt-RaspberryPi" href="http-qt-project-org-wiki-qt-raspberrypi.html" subtype="externalpage" title="QtonPi" fulltitle="QtonPi" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/wiki/QtMediaHub" href="http-qt-project-org-wiki-qtmediahub.html" subtype="externalpage" title="QtMediaHub" fulltitle="QtMediaHub" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/wiki/Qt_Coding_Style" href="http-qt-project-org-wiki-qt-coding-style.html" subtype="externalpage" title="Qt Coding Style" fulltitle="Qt Coding Style" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt-project.org/wiki/jom" href="http-qt-project-org-wiki-jom.html" subtype="externalpage" title="jom" fulltitle="jom" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt.digia.com/downloads" href="http-qt-digia-com-downloads.html" subtype="externalpage" title="Downloads" fulltitle="Downloads" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt.digia.com/licensing/" href="http-qt-digia-com-licensing.html" subtype="externalpage" title="Qt Licensing Overview" fulltitle="Qt Licensing Overview" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt.gitorious.org" href="http-qt-gitorious-org.html" subtype="externalpage" title="Public Qt Repository" fulltitle="Public Qt Repository" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://qt.gitorious.org/qt-labs/qtestlib-tools" href="http-qt-gitorious-org-qt-labs-qtestlib-tools.html" subtype="externalpage" title="qtestlib-tools" fulltitle="qtestlib-tools" subtitle="" location="qt-webpages.qdoc"/>
+        <page access="public" status="commendable" name="http://www.ietf.org/rfc/rfc1179.txt" href="http-www-ietf-org-rfc-rfc1179-txt.html" subtype="externalpage" title="RFC 1179" fulltitle="RFC 1179" subtitle="" location="rfc.qdoc">
+            <keyword name="lpr"/>
+        </page>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc1738.txt" href="http-www-rfc-editor-org-rfc-rfc1738-txt.html" subtype="externalpage" title="RFC 1738" fulltitle="RFC 1738" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc1928.txt" href="http-www-rfc-editor-org-rfc-rfc1928-txt.html" subtype="externalpage" title="RFC 1928" fulltitle="RFC 1928" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc1929.txt" href="http-www-rfc-editor-org-rfc-rfc1929-txt.html" subtype="externalpage" title="RFC 1929" fulltitle="RFC 1929" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc2045.txt" href="http-www-rfc-editor-org-rfc-rfc2045-txt.html" subtype="externalpage" title="RFC 2045" fulltitle="RFC 2045" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc2109.txt" href="http-www-rfc-editor-org-rfc-rfc2109-txt.html" subtype="externalpage" title="RFC 2109" fulltitle="RFC 2109" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc2965.txt" href="http-www-rfc-editor-org-rfc-rfc2965-txt.html" subtype="externalpage" title="RFC 2965" fulltitle="RFC 2965" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc3174.txt" href="http-www-rfc-editor-org-rfc-rfc3174-txt.html" subtype="externalpage" title="RFC 3174" fulltitle="RFC 3174" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc3491.txt" href="http-www-rfc-editor-org-rfc-rfc3491-txt.html" subtype="externalpage" title="RFC 3491" fulltitle="RFC 3491" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="http://www.rfc-editor.org/rfc/rfc3986.txt" href="http-www-rfc-editor-org-rfc-rfc3986-txt.html" subtype="externalpage" title="RFC 3986" fulltitle="RFC 3986" subtitle="" location="rfc.qdoc"/>
+        <page access="public" status="commendable" name="accessible.html" href="accessible.html" subtype="page" title="Accessibility" fulltitle="Accessibility" subtitle="" location="accessible.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="desktop-integration.html" href="desktop-integration.html" subtype="page" title="Desktop Integration" fulltitle="Desktop Integration" subtitle="" location="desktop-integration.qdoc" module="QtDoc" groups="best-practices,qt-gui-concepts">
+            <contents name="useful-classes" title="Useful Classes" level="1"/>
+            <contents name="opening-external-resources" title="Opening External Resources" level="1"/>
+            <contents name="system-tray-icons" title="System Tray Icons" level="1"/>
+            <contents name="desktop-widgets" title="Desktop Widgets" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="ipc.html" href="ipc.html" subtype="page" title="Inter-Process Communication in Qt" fulltitle="Inter-Process Communication in Qt" subtitle="" location="ipc.qdoc" module="QtDoc" groups="technology-apis">
+            <contents name="tcp-ip" title="TCP/IP" level="1"/>
+            <contents name="shared-memory" title="Shared Memory" level="1"/>
+            <contents name="d-bus-protocol" title="D-Bus protocol" level="1"/>
+            <contents name="qprocess" title="QProcess" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qundo.html" href="qundo.html" subtype="page" title="Overview of Qt's Undo Framework" fulltitle="Overview of Qt's Undo Framework" subtitle="" location="qundo.qdoc" module="QtDoc" groups="frameworks-technologies">
+            <keyword name="undo-framework"/>
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="classes" title="Classes" level="1"/>
+            <contents name="concepts" title="Concepts" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="unicode.html" href="unicode.html" subtype="page" title="Unicode in Qt" fulltitle="Unicode in Qt" subtitle="" location="unicode.qdoc" module="QtDoc" groups="technology-apis">
+            <keyword name="unicode"/>
+            <contents name="qt-s-classes-for-working-with-strings" title="Qt's Classes for Working with Strings" level="1"/>
+            <contents name="information-about-unicode-on-the-web" title="Information about Unicode on the Web" level="1"/>
+            <contents name="unicode-in-qt" title="Unicode in Qt" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="why-moc.html" href="why-moc.html" subtype="page" title="Why Does Qt Use Moc for Signals and Slots?" fulltitle="Why Does Qt Use Moc for Signals and Slots?" subtitle="" location="why-moc.qdoc" module="QtDoc">
+            <contents name="syntax-matters" title="Syntax matters" level="1"/>
+            <contents name="code-generators-are-good" title="Code Generators are Good" level="1"/>
+            <contents name="guis-are-dynamic" title="GUIs are Dynamic" level="1"/>
+            <contents name="calling-performance-is-not-everything" title="Calling Performance is Not Everything" level="1"/>
+            <contents name="no-limits" title="No Limits" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="examples-activeqt.html" href="examples-activeqt.html" subtype="page" title="ActiveQt Examples" fulltitle="ActiveQt Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-animation.html" href="examples-animation.html" subtype="page" title="Animation Framework Examples" fulltitle="Animation Framework Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-dbus.html" href="examples-dbus.html" subtype="page" title="D-Bus Examples" fulltitle="D-Bus Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-draganddrop.html" href="examples-draganddrop.html" subtype="page" title="Drag and Drop Examples" fulltitle="Drag and Drop Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-gestures.html" href="examples-gestures.html" subtype="page" title="Gestures Examples" fulltitle="Gestures Examples" subtitle="" location="examples.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="examples-itemviews.html" href="examples-itemviews.html" subtype="page" title="Item Views Examples" fulltitle="Item Views Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-layouts.html" href="examples-layouts.html" subtype="page" title="Layout Examples" fulltitle="Layout Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-sql.html" href="examples-sql.html" subtype="page" title="SQL Examples" fulltitle="SQL Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-statemachine.html" href="examples-statemachine.html" subtype="page" title="State Machine Examples" fulltitle="State Machine Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-threadandconcurrent.html" href="examples-threadandconcurrent.html" subtype="page" title="Threading and Concurrent Programming Examples" fulltitle="Threading and Concurrent Programming Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="examples-xml.html" href="examples-xml.html" subtype="page" title="XML Examples" fulltitle="XML Examples" subtitle="" location="examples.qdoc" module="QtDoc" groups="all-examples"/>
+        <page access="public" status="commendable" name="qtexamplesandtutorials.html" href="qtexamplesandtutorials.html" subtype="page" title="Qt Examples And Tutorials" fulltitle="Qt Examples And Tutorials" subtitle="" location="examples.qdoc" module="QtDoc">
+            <contents name="tutorials" title="Tutorials" level="1"/>
+            <contents name="qt-creator" title="Qt Creator" level="2"/>
+            <contents name="qt-quick-essentials" title="Qt Quick Essentials" level="2"/>
+            <contents name="qt-essentials" title="Qt Essentials" level="2"/>
+            <contents name="qt-utilities" title="Qt Utilities" level="2"/>
+            <contents name="examples" title="Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="gettingstartedqml.html" href="gettingstartedqml.html" subtype="page" title="Getting Started Programming with Qt Quick" fulltitle="Getting Started Programming with Qt Quick" subtitle="" location="gettingstartedqml.qdoc" module="QtDoc" groups="gettingStarted">
+            <contents name="qml-to-build-user-interfaces" title="QML to Build User Interfaces" level="1"/>
+            <contents name="defining-a-button-and-a-menu" title="Defining a Button and a Menu" level="1"/>
+            <contents name="basic-component-a-button" title="Basic Component - a Button" level="2"/>
+            <contents name="creating-a-menu-page" title="Creating a Menu Page" level="2"/>
+            <contents name="implementing-a-menu-bar" title="Implementing a Menu Bar" level="1"/>
+            <contents name="using-data-models-and-views" title="Using Data Models and Views" level="2"/>
+            <contents name="building-a-text-editor" title="Building a Text Editor" level="1"/>
+            <contents name="declaring-a-textarea" title="Declaring a TextArea" level="2"/>
+            <contents name="combining-components-for-the-text-editor" title="Combining Components for the Text Editor" level="2"/>
+            <contents name="decorating-the-text-editor" title="Decorating the Text Editor" level="1"/>
+            <contents name="implementing-a-drawer-interface" title="Implementing a Drawer Interface" level="2"/>
+            <contents name="where-to-go-from-here" title="Where to Go from Here" level="3"/>
+            <contents name="extending-qml-using-qt-c" title="Extending QML using Qt C++" level="2"/>
+            <contents name="exposing-c-classes-to-qml" title="Exposing C++ Classes to QML" level="3"/>
+            <contents name="building-a-qt-plugin" title="Building a Qt Plugin" level="3"/>
+            <contents name="registering-a-class-into-qml" title="Registering a Class into QML" level="3"/>
+            <contents name="creating-qml-properties-in-a-c-class" title="Creating QML Properties in a C++ class" level="3"/>
+            <contents name="importing-a-plugin-in-qml" title="Importing a Plugin in QML" level="3"/>
+            <contents name="integrating-a-file-dialog-into-the-file-menu" title="Integrating a File Dialog into the File Menu" level="3"/>
+            <contents name="text-editor-completion" title="Text Editor Completion" level="2"/>
+            <contents name="running-the-text-editor" title="Running the Text Editor" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="gettingstartedqt.html" href="gettingstartedqt.html" subtype="page" title="Getting Started Programming with Qt Widgets" fulltitle="Getting Started Programming with Qt Widgets" subtitle="" location="gettingstartedqt.qdoc" module="QtDoc" groups="gettingStarted">
+            <contents name="creating-the-notepad-project" title="Creating the Notepad Project" level="1"/>
+            <contents name="learn-more" title="Learn More" level="2"/>
+            <contents name="main-source-file" title="Main Source File" level="1"/>
+            <contents name="learn-more" title="Learn More" level="2"/>
+            <contents name="designing-a-ui" title="Designing a UI" level="1"/>
+            <contents name="using-qt-designer" title="Using Qt Designer" level="2"/>
+            <contents name="notepad-header-file" title="Notepad Header File" level="2"/>
+            <contents name="notepad-source-file" title="Notepad Source File" level="2"/>
+            <contents name="project-file" title="Project File" level="2"/>
+            <contents name="learn-more" title="Learn More" level="2"/>
+            <contents name="adding-user-interaction" title="Adding User Interaction" level="1"/>
+            <contents name="adding-push-buttons" title="Adding Push Buttons" level="2"/>
+            <contents name="learn-more" title="Learn More" level="2"/>
+            <contents name="adding-menu-items" title="Adding Menu Items" level="2"/>
+            <contents name="opening-files" title="Opening Files" level="2"/>
+            <contents name="saving-files" title="Saving Files" level="2"/>
+            <contents name="learn-more" title="Learn More" level="2"/>
+            <contents name="building-and-running-notepad" title="Building and Running Notepad" level="1"/>
+            <contents name="building-and-running-from-the-command-line" title="Building and Running from the Command Line" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="install-mac.html" href="install-mac.html" subtype="page" title="Installing Qt for Mac OS X" fulltitle="Installing Qt for Mac OS X" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="step-1-install-the-license-file-commercial-editions-only" title="Step 1: Install the License File (commercial editions only)" level="1"/>
+            <contents name="step-2-build-the-qt-library" title="Step 2: Build the Qt Library" level="1"/>
+            <contents name="step-3-set-the-environment-variables" title="Step 3: Set the Environment variables" level="1"/>
+            <contents name="qt-demos-and-examples" title="Qt Demos and Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="install-win.html" href="install-win.html" subtype="page" title="Installing Qt for Windows" fulltitle="Installing Qt for Windows" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="step-1-install-the-license-file-commercial-editions-only" title="Step 1: Install the License File (commercial editions only)" level="1"/>
+            <contents name="step-2-unpack-the-archive" title="Step 2: Unpack the Archive" level="1"/>
+            <contents name="step-3-set-the-environment-variables" title="Step 3: Set the Environment variables" level="1"/>
+            <contents name="step-4-build-the-qt-library" title="Step 4: Build the Qt Library" level="1"/>
+            <contents name="qt-demos-and-examples" title="Qt Demos and Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="install-wince.html" href="install-wince.html" subtype="page" title="Installing Qt for Windows CE" fulltitle="Installing Qt for Windows CE" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation,qtce">
+            <contents name="step-1-install-the-license-file-commercial-editions-only" title="Step 1: Install the License File (commercial editions only)" level="1"/>
+            <contents name="step-2-set-the-environment-variables" title="Step 2: Set the Environment variables" level="1"/>
+            <contents name="step-3-configure-qt" title="Step 3: Configure Qt" level="1"/>
+            <contents name="step-4-build-qt-library" title="Step 4: Build Qt Library" level="1"/>
+            <contents name="qt-demos-and-examples" title="Qt Demos and Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="install-x11.html" href="install-x11.html" subtype="page" title="Installing Qt for X11 Platforms" fulltitle="Installing Qt for X11 Platforms" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="step-1-installing-the-license-file-commercial-editions-only" title="Step 1: Installing the License File (commercial editions only)" level="1"/>
+            <contents name="step-2-unpacking-the-archive" title="Step 2: Unpacking the Archive" level="1"/>
+            <contents name="step-3-building-the-library" title="Step 3: Building the Library" level="1"/>
+            <contents name="step-4-set-the-environment-variables" title="Step 4: Set the Environment Variables" level="1"/>
+            <contents name="qt-demos-and-examples" title="Qt Demos and Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="requirements-mac.html" href="requirements-mac.html" subtype="page" title="Qt for Mac OS X Requirements" fulltitle="Qt for Mac OS X Requirements" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation"/>
+        <page access="public" status="commendable" name="requirements-win.html" href="requirements-win.html" subtype="page" title="Qt for Windows Requirements" fulltitle="Qt for Windows Requirements" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="graphics-drivers" title="Graphics Drivers" level="1"/>
+            <contents name="libraries" title="Libraries" level="1"/>
+            <contents name="development-tools" title="Development tools" level="1"/>
+            <contents name="sdks-and-compilers" title="SDKs and Compilers" level="1"/>
+            <contents name="popular-ides" title="Popular IDEs" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="requirements-wince.html" href="requirements-wince.html" subtype="page" title="Qt for Windows CE Requirements" fulltitle="Qt for Windows CE Requirements" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="requirements" title="Requirements" level="3"/>
+        </page>
+        <page access="public" status="commendable" name="requirements-x11.html" href="requirements-x11.html" subtype="page" title="Qt for X11 Requirements" fulltitle="Qt for X11 Requirements" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="platform-plugin-dependencies" title="Platform plugin dependencies" level="1"/>
+            <contents name="opengl-dependencies" title="OpenGL Dependencies" level="1"/>
+            <contents name="multimedia-dependencies" title="Multimedia Dependencies" level="1"/>
+            <contents name="qtwebkit-dependencies" title="QtWebKit Dependencies" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="requirements.html" href="requirements.html" subtype="page" title="General Qt Requirements" fulltitle="General Qt Requirements" subtitle="" location="installation.qdoc" module="QtDoc" groups="installation">
+            <contents name="openssl-version-0-9-7-or-later" title="OpenSSL (version 0.9.7 or later)" level="1"/>
+            <contents name="platform-specific-requirements" title="Platform-Specific Requirements" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="known-issues.html" href="known-issues.html" subtype="page" title="Known Issues" fulltitle="Known Issues" subtitle="" location="known-issues.qdoc" module="QtDoc" groups="platform-specific"/>
+        <page access="public" status="commendable" name="topics-graphics.html" href="topics-graphics.html" subtype="page" title="Graphics" fulltitle="Graphics" subtitle="" location="graphics.qdoc" module="QtDoc">
+            <contents name="2d-graphics-with-qpainter" title="2D graphics with QPainter" level="1"/>
+            <contents name="opengl-and-3d" title="OpenGL and 3D" level="1"/>
+            <contents name="qt-quick-scene-graph" title="Qt Quick scene graph" level="1"/>
+            <contents name="printing" title="Printing" level="1"/>
+            <contents name="images" title="Images" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="accelerators.html" href="accelerators.html" subtype="page" title="Standard Accelerator Keys" fulltitle="Standard Accelerator Keys" subtitle="" location="accelerators.qdoc" module="QtDoc" groups="best-practices"/>
+        <page access="public" status="commendable" name="appicon.html" href="appicon.html" subtype="page" title="Setting the Application Icon" fulltitle="Setting the Application Icon" subtitle="" location="appicon.qdoc" module="QtDoc" groups="best-practices">
+            <contents name="setting-the-application-icon-on-windows" title="Setting the Application Icon on Windows" level="1"/>
+            <contents name="setting-the-application-icon-on-mac-os-x" title="Setting the Application Icon on Mac OS X" level="1"/>
+            <contents name="setting-the-application-icon-on-common-linux-desktops" title="Setting the Application Icon on Common Linux Desktops" level="1"/>
+            <contents name="k-desktop-environment-kde" title="K Desktop Environment (KDE)" level="2"/>
+            <contents name="gnome" title="GNOME" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="exceptionsafety.html" href="exceptionsafety.html" subtype="page" title="Exception Safety" fulltitle="Exception Safety" subtitle="" location="exceptionsafety.qdoc" module="QtDoc" groups="best-practices">
+            <contents name="exception-safe-modules" title="Exception safe modules" level="1"/>
+            <contents name="containers" title="Containers" level="2"/>
+            <contents name="out-of-memory-handling" title="Out of Memory Handling" level="1"/>
+            <contents name="recovering-from-exceptions" title="Recovering from exceptions" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="restoring-geometry.html" href="restoring-geometry.html" subtype="page" title="Restoring a Window's Geometry" fulltitle="Restoring a Window's Geometry" subtitle="" location="restoring-geometry.qdoc" module="QtDoc" groups="best-practices"/>
+        <page access="public" status="preliminary" name="scalability.html" href="scalability.html" subtype="page" title="Scalability" fulltitle="Scalability" subtitle="" location="scalabilityintro.qdoc" module="QtDoc">
+            <contents name="developing-scalable-uis" title="Developing Scalable UIs" level="1"/>
+            <contents name="implementing-the-top-level-layouts" title="Implementing the Top-Level Layouts" level="1"/>
+            <contents name="defining-measurements" title="Defining Measurements" level="1"/>
+            <contents name="using-qml-s-layout-features" title="Using QML's Layout Features" level="1"/>
+            <contents name="orientation-switches" title="Orientation Switches" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="session.html" href="session.html" subtype="page" title="Session Management" fulltitle="Session Management" subtitle="" location="session.qdoc" module="QtDoc" groups="best-practices">
+            <contents name="shutting-a-session-down" title="Shutting a Session Down" level="1"/>
+            <contents name="protocols-and-support-on-different-platforms" title="Protocols and Support on Different Platforms" level="1"/>
+            <contents name="getting-session-management-to-work-with-qt" title="Getting Session Management to Work with Qt" level="1"/>
+            <contents name="testing-and-debugging-session-management" title="Testing and Debugging Session Management" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="sharedlibrary.html" href="sharedlibrary.html" subtype="page" title="Creating Shared Libraries" fulltitle="Creating Shared Libraries" subtitle="" location="sharedlibrary.qdoc" module="QtDoc" groups="best-practices">
+            <contents name="using-symbols-from-shared-libraries" title="Using Symbols from Shared Libraries" level="1"/>
+            <contents name="header-file-considerations" title="Header File Considerations" level="1"/>
+            <contents name="binary-compatibility" title="Binary compatibility" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="unix-signals.html" href="unix-signals.html" subtype="page" title="Calling Qt Functions From Unix Signal Handlers" fulltitle="Calling Qt Functions From Unix Signal Handlers" subtitle="" location="unix-signal-handlers.qdoc" module="QtDoc" groups="platform-specific,best-practices"/>
+        <page access="public" status="commendable" name="index.html" href="index.html" subtype="page" title="Qt 5.0" fulltitle="Qt 5.0" subtitle="" location="index.qdoc" module="QtDoc">
+            <keyword name="qt-reference-documentation"/>
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="overviews" title="Overviews" level="1"/>
+            <contents name="reference" title="Reference" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="i18n-plural-rules.html" href="i18n-plural-rules.html" subtype="page" title="Translation Rules for Plurals" fulltitle="Translation Rules for Plurals" subtitle="" location="i18n.qdoc" module="QtDoc" groups="internationalization"/>
+        <page access="public" status="commendable" name="i18n-source-translation.html" href="i18n-source-translation.html" subtype="page" title="Writing Source Code for Translation" fulltitle="Writing Source Code for Translation" subtitle="" location="i18n.qdoc" module="QtDoc" groups="internationalization">
+            <contents name="the-basics" title="The Basics" level="1"/>
+            <contents name="defining-a-translation-context" title="Defining a Translation Context" level="1"/>
+            <contents name="using-tr-to-obtain-a-translation" title="Using tr() to Obtain a Translation" level="1"/>
+            <contents name="translator-comments" title="Translator Comments" level="1"/>
+            <contents name="adding-meta-data-to-strings" title="Adding Meta-Data to Strings" level="1"/>
+            <contents name="disambiguation" title="Disambiguation" level="1"/>
+            <contents name="character-encodings" title="Character Encodings" level="1"/>
+            <contents name="handling-plurals" title="Handling Plurals" level="1"/>
+            <contents name="enabling-translation" title="Enabling Translation" level="1"/>
+            <contents name="further-reading" title="Further Reading" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="3rdparty.html" href="3rdparty.html" subtype="page" title="Third-Party Licenses Used in Qt" fulltitle="Third-Party Licenses Used in Qt" subtitle="" location="3rdparty.qdoc" module="QtDoc" groups="licensing">
+            <contents name="freetype-2-freetype-version-2-3-9" title="FreeType 2 (freetype) version 2.3.9" level="1"/>
+            <contents name="harfbuzz-harfbuzz" title="HarfBuzz (harfbuzz)" level="1"/>
+            <contents name="the-independent-jpeg-group-s-jpeg-software-libjpeg-version-8c" title="The Independent JPEG Group's JPEG Software (libjpeg) version 8c" level="1"/>
+            <contents name="md4-md4-op-op-cpp-and-md4-op-op-h" title="MD4 (md4&lt;@op&gt;.&lt;/@op&gt;cpp and md4&lt;@op&gt;.&lt;/@op&gt;h)" level="1"/>
+            <contents name="md5-md5-op-op-cpp-and-md5-op-op-h" title="MD5 (md5&lt;@op&gt;.&lt;/@op&gt;cpp and md5&lt;@op&gt;.&lt;/@op&gt;h)" level="1"/>
+            <contents name="mng-library-libmng-version-1-0-10" title="MNG Library (libmng) version 1.0.10" level="1"/>
+            <contents name="png-reference-library-libpng-version-1-5-10" title="PNG Reference Library (libpng) version 1.5.10" level="1"/>
+            <contents name="sha-1-sha1-op-op-cpp" title="SHA-1 (sha1&lt;@op&gt;.&lt;/@op&gt;cpp)" level="1"/>
+            <contents name="sqlite-sqlite-version-3-7-7-1" title="SQLite (sqlite) version 3.7.7.1" level="1"/>
+            <contents name="tiff-software-distribution-libtiff-version-3-9-2" title="TIFF Software Distribution (libtiff) version 3.9.2" level="1"/>
+            <contents name="wintab-api-wintab" title="Wintab API (wintab)" level="1"/>
+            <contents name="data-compression-library-zlib-version-1-2-5" title="Data Compression Library (zlib) version 1.2.5" level="1"/>
+            <contents name="javascriptcore" title="JavaScriptCore" level="1"/>
+            <contents name="pixman-pixman-version-0-17-11" title="Pixman (pixman) version 0.17.11" level="1"/>
+            <contents name="webcore-webkit" title="WebCore (WebKit)" level="1"/>
+            <contents name="the-public-suffix-list" title="The Public Suffix List" level="1"/>
+            <contents name="iaccessible2-idl-specification" title="IAccessible2 IDL Specification" level="1"/>
+            <contents name="angle-angle" title="ANGLE (angle)" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="commerciallicense.html" href="commerciallicense.html" subtype="page" title="Qt Commercial License" fulltitle="Qt Commercial License" subtitle="" location="commerciallicense.qdoc" module="QtDoc">
+            <contents name="purchasing-and-sales-information" title="Purchasing and Sales Information" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="gpl.html" href="gpl.html" subtype="page" title="GNU General Public License (GPL)" fulltitle="GNU General Public License (GPL)" subtitle="" location="gpl.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="lgpl.html" href="lgpl.html" subtype="page" title="GNU Lesser General Public License (LGPL)" fulltitle="GNU Lesser General Public License (LGPL)" subtitle="" location="gpl.qdoc" module="QtDoc">
+            <contents name="digia-qt-lgpl-exception-version-1-1" title="Digia Qt LGPL Exception version 1.1" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="licenses-fonts.html" href="licenses-fonts.html" subtype="page" title="Licenses for Fonts Used in Qt for Embedded Linux" fulltitle="Licenses for Fonts Used in Qt for Embedded Linux" subtitle="" location="licenses-fonts.qdoc" module="QtDoc" groups="qt-embedded-linux,licensing">
+            <contents name="adobe-helvetica" title="Adobe Helvetica" level="1"/>
+            <contents name="adobe-utopia" title="Adobe Utopia" level="1"/>
+            <contents name="babelfish" title="Babelfish" level="1"/>
+            <contents name="bigelow-holmes-luxi" title="Bigelow &amp; Holmes Luxi" level="1"/>
+            <contents name="bitstream-charter-and-courier" title="Bitstream Charter and Courier" level="1"/>
+            <contents name="bitstream-vera" title="Bitstream Vera" level="1"/>
+            <contents name="cursor" title="Cursor" level="1"/>
+            <contents name="dejavu-fonts" title="DejaVu Fonts" level="1"/>
+            <contents name="fixed-fonts" title="Fixed Fonts" level="1"/>
+            <contents name="ibm-courier" title="IBM Courier" level="1"/>
+            <contents name="micro" title="Micro" level="1"/>
+            <contents name="unifont" title="Unifont" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="licenses.html" href="licenses.html" subtype="page" title="Other Licenses Used in Qt" fulltitle="Other Licenses Used in Qt" subtitle="" location="licenses.qdoc" module="QtDoc" groups="licensing">
+            <contents name="qcrashhandler-class" title="QCrashHandler class" level="1"/>
+            <contents name="freetype" title="FreeType" level="1"/>
+            <contents name="q3polygonscanner-class-used-in-qt-for-embedded-linux" title="Q3PolygonScanner class used in Qt for Embedded Linux" level="1"/>
+            <contents name="qkeymapper-class-on-x11-platforms" title="QKeyMapper class on X11 platforms" level="1"/>
+            <contents name="pnmscale-c" title="pnmscale.c" level="1"/>
+            <contents name="qurl-cpp" title="qurl.cpp" level="1"/>
+            <contents name="parts-of-the-codecs-implemented-by-qt" title="Parts of the codecs implemented by Qt" level="1"/>
+            <contents name="testlib" title="Testlib" level="1"/>
+            <contents name="angle" title="ANGLE" level="1"/>
+            <contents name="webkit-used-by-the-qtwebkit-module" title="WebKit used by the QtWebKit module" level="1"/>
+            <contents name="unicode" title="Unicode" level="1"/>
+            <contents name="macros-for-building-qt-files" title="Macros for building Qt files" level="1"/>
+            <contents name="the-pcre-library" title="The PCRE library" level="1"/>
+            <contents name="des-des-op-op-cpp" title="DES (des&lt;@op&gt;.&lt;/@op&gt;cpp)" level="1"/>
+            <contents name="v8-benchmark-tests" title="V8 benchmark tests" level="1"/>
+            <contents name="sunspider-benchmark-tests" title="Sunspider benchmark tests" level="1"/>
+            <contents name="part-of-the-arthur-tests" title="Part of the Arthur tests" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="opensourcelicense.html" href="opensourcelicense.html" subtype="page" title="Open Source Licensing of Qt" fulltitle="Open Source Licensing of Qt" subtitle="" location="opensourcelicense.qdoc" module="QtDoc" groups="licensing"/>
+        <page access="public" status="commendable" name="trademarks.html" href="trademarks.html" subtype="page" title="Trademarks" fulltitle="Trademarks" subtitle="" location="trademarks.qdoc" module="QtDoc" groups="licensing"/>
+        <page access="public" status="commendable" name="modules-cpp.html" href="modules-cpp.html" subtype="page" title="All Classes by Module" fulltitle="All Classes by Module" subtitle="" location="modules-cpp.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="modules-qml.html" href="modules-qml.html" subtype="page" title="All QML APIs by Module" fulltitle="All QML APIs by Module" subtitle="" location="modules-qml.qdoc" module="QtDoc" groups="classlists"/>
+        <page access="public" status="commendable" name="qtmain.html" href="qtmain.html" subtype="page" title="The qtmain Library" fulltitle="The qtmain Library" subtitle="" location="modules.qdoc" module="QtDoc" groups="licensing,platform-specific">
+            <contents name="license-information" title="License Information" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="overviews.html" href="overviews.html" subtype="page" title="All Overviews and HOWTOs" fulltitle="All Overviews and HOWTOs" subtitle="" location="overviews.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="atomic-operations.html" href="atomic-operations.html" subtype="page" title="Implementing Atomic Operations" fulltitle="Implementing Atomic Operations" subtitle="" location="atomic-operations.qdoc" module="QtDoc" groups="best-practices,qt-embedded-linux"/>
+        <page access="public" status="commendable" name="compiler-notes.html" href="compiler-notes.html" subtype="page" title="Compiler Notes" fulltitle="Compiler Notes" subtitle="" location="compiler-notes.qdoc" module="QtDoc" groups="platform-specific"/>
+        <page access="public" status="commendable" name="qt-embedded-fonts.html" href="qt-embedded-fonts.html" subtype="page" title="Qt for Embedded Linux Fonts" fulltitle="Qt for Embedded Linux Fonts" subtitle="" location="emb-fonts.qdoc" module="QtDoc" groups="qt-embedded-linux">
+            <target name="freetype"/>
+            <target name="qpf2"/>
+            <target name="qpf"/>
+            <contents name="freetype-formats" title="FreeType Formats" level="1"/>
+            <contents name="qt-prerendered-font-qpf2" title="Qt Prerendered Font (QPF2)" level="1"/>
+            <contents name="legacy-qt-prerendered-font-qpf" title="Legacy Qt Prerendered Font (QPF)" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qt-embedded-kmap2qmap.html" href="qt-embedded-kmap2qmap.html" subtype="page" title="kmap2qmap" fulltitle="kmap2qmap" subtitle="" location="emb-kmap2qmap.qdoc" module="QtDoc" groups="qt-embedded-linux"/>
+        <page access="public" status="commendable" name="qt-embedded-makeqpf.html" href="qt-embedded-makeqpf.html" subtype="page" title="makeqpf" fulltitle="makeqpf" subtitle="" location="emb-makeqpf.qdoc" module="QtDoc" groups="qt-embedded-linux"/>
+        <page access="public" status="commendable" name="mac-differences.html" href="mac-differences.html" subtype="page" title="Qt for Mac OS X - Specific Issues" fulltitle="Qt for Mac OS X - Specific Issues" subtitle="" location="mac-differences.qdoc" module="QtDoc" groups="platform-specific">
+            <contents name="gui-applications" title="GUI Applications" level="1"/>
+            <contents name="painting" title="Painting" level="1"/>
+            <contents name="library-support" title="Library Support" level="1"/>
+            <contents name="qt-libraries-as-frameworks" title="Qt libraries as frameworks" level="2"/>
+            <contents name="bundle-based-libraries" title="Bundle-Based Libraries" level="2"/>
+            <contents name="combining-libraries" title="Combining Libraries" level="2"/>
+            <contents name="initialization-order" title="Initialization Order" level="2"/>
+            <contents name="compile-time-flags" title="Compile-Time Flags" level="1"/>
+            <contents name="mac-os-x-native-api-access" title="Mac OS X Native API Access" level="1"/>
+            <contents name="accessing-the-bundle-path" title="Accessing the Bundle Path" level="2"/>
+            <contents name="translating-the-application-menu-and-native-dialogs" title="Translating the Application Menu and Native Dialogs" level="2"/>
+            <contents name="user-interface" title="User Interface" level="1"/>
+            <contents name="right-mouse-clicks" title="Right-Mouse Clicks" level="2"/>
+            <contents name="menu-bar" title="Menu Bar" level="2"/>
+            <contents name="special-keys" title="Special Keys" level="2"/>
+            <contents name="limitations" title="Limitations" level="1"/>
+            <contents name="menu-actions" title="Menu Actions" level="2"/>
+            <contents name="native-widgets" title="Native Widgets" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qt-mac-cocoa-licensing.html" href="qt-mac-cocoa-licensing.html" subtype="page" title="Contributions to the Cocoa Platform Plugin Files" fulltitle="Contributions to the Cocoa Platform Plugin Files" subtitle="" location="mac-differences.qdoc" module="QtDoc" groups="licensing">
+            <contents name="cocoa-platform-plugin" title="Cocoa Platform Plugin" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes-integrity.html" href="platform-notes-integrity.html" subtype="page" title="Platform Notes - INTEGRITY" fulltitle="Platform Notes - INTEGRITY" subtitle="" location="platform-notes-rtos.qdoc" module="QtDoc">
+            <target name="integrity"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes-qnx.html" href="platform-notes-qnx.html" subtype="page" title="Platform and Compiler Notes - QNX" fulltitle="Platform and Compiler Notes - QNX" subtitle="" location="platform-notes-rtos.qdoc" module="QtDoc">
+            <target name="qnx"/>
+            <contents name="supported-architectures-and-qnx-versions" title="Supported Architectures and QNX Versions" level="1"/>
+            <contents name="build-requirements" title="Build Requirements" level="1"/>
+            <contents name="screen-and-opengl" title="Screen and OpenGL" level="2"/>
+            <contents name="runtime-requirements" title="Runtime Requirements" level="1"/>
+            <contents name="ui-core-qnx-screen" title="UI Core (QNX Screen)" level="2"/>
+            <contents name="ipv6-support" title="IPv6 Support" level="2"/>
+            <contents name="dev-random" title="/dev/random" level="2"/>
+            <contents name="physical-screen-size" title="Physical Screen Size" level="2"/>
+            <contents name="development-board-setup" title="Development Board Setup" level="1"/>
+            <contents name="ssh" title="ssh" level="2"/>
+            <contents name="pdebug" title="pdebug" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes-vxworks.html" href="platform-notes-vxworks.html" subtype="page" title="Platform and Compiler Notes - VxWorks" fulltitle="Platform and Compiler Notes - VxWorks" subtitle="" location="platform-notes-rtos.qdoc" module="QtDoc">
+            <target name="vxworks"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes-mac.html" href="platform-notes-mac.html" subtype="page" title="Platform and Compiler Notes - Mac OS X" fulltitle="Platform and Compiler Notes - Mac OS X" subtitle="" location="platform-notes.qdoc" module="QtDoc">
+            <contents name="general-information" title="General Information" level="1"/>
+            <contents name="required-compiler-versions" title="Required Compiler Versions" level="2"/>
+            <contents name="binary-package" title="Binary Package" level="2"/>
+            <contents name="mac-os-x-on-powerpc-hardware" title="Mac OS X on PowerPC hardware" level="2"/>
+            <contents name="fink" title="Fink" level="2"/>
+            <contents name="mysql-and-mac-os-x" title="MySQL and Mac OS X" level="2"/>
+            <contents name="attributes" title="Attributes" level="2"/>
+            <contents name="mixing-qt-with-native-code" title="Mixing Qt with native code" level="2"/>
+            <contents name="using-native-cocoa-panels" title="Using native Cocoa panels" level="3"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes-windows.html" href="platform-notes-windows.html" subtype="page" title="Platform and Compiler Notes - Windows" fulltitle="Platform and Compiler Notes - Windows" subtitle="" location="platform-notes.qdoc" module="QtDoc">
+            <contents name="windows-vista-windows-7-windows-8" title="Windows Vista, Windows 7, Windows 8" level="1"/>
+            <contents name="windows-xp" title="Windows XP" level="1"/>
+            <contents name="installation-location" title="Installation location" level="2"/>
+            <contents name="possible-gl-conflict" title="Possible GL conflict" level="2"/>
+            <contents name="gcc-mingw-builds" title="GCC (MinGW-builds)" level="2"/>
+            <contents name="intel-c-compiler-windows-altix" title="Intel C++ Compiler (Windows, Altix)" level="2"/>
+            <contents name="visual-studio-windows" title="Visual Studio (Windows)" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes-x11.html" href="platform-notes-x11.html" subtype="page" title="Platform and Compiler Notes - X11" fulltitle="Platform and Compiler Notes - X11" subtitle="" location="platform-notes.qdoc" module="QtDoc">
+            <contents name="linux" title="Linux" level="1"/>
+            <contents name="installation-problems" title="Installation problems" level="2"/>
+            <contents name="intel-c-compiler-for-linux" title="Intel C++ Compiler for Linux" level="2"/>
+            <contents name="known-issues-with-intel-c-compiler-for-linux" title="Known Issues with Intel C++ Compiler for Linux" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="platform-notes.html" href="platform-notes.html" subtype="page" title="Platform and Compiler Notes" fulltitle="Platform and Compiler Notes" subtitle="" location="platform-notes.qdoc" module="QtDoc" groups="platform-specific">
+            <contents name="general-compiler-notes" title="General Compiler Notes" level="1"/>
+            <contents name="supported-features" title="Supported Features" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qpa.html" href="qpa.html" subtype="page" title="Qt Platform Abstraction" fulltitle="Qt Platform Abstraction" subtitle="" location="qpa.qdoc" module="QtDoc">
+            <contents name="class-overview" title="Class Overview" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qtmac-as-native.html" href="qtmac-as-native.html" subtype="page" title="Qt is Mac OS X Native" fulltitle="Qt is Mac OS X Native" subtitle="" location="qtmac-as-native.qdoc" module="QtDoc" groups="platform-specific">
+            <contents name="the-global-menu-bar" title="The Global Menu Bar" level="1"/>
+            <contents name="aqua" title="Aqua" level="1"/>
+            <contents name="dock" title="Dock" level="1"/>
+            <contents name="accessiblity" title="Accessiblity" level="1"/>
+            <contents name="development-tools" title="Development Tools" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="linuxX11-support.html" href="linuxx11-support.html" subtype="page" title="Support for Linux/X11" fulltitle="Support for Linux/X11" subtitle="" location="supported-platforms.qdoc" module="QtDoc" groups="platform-specific,platform-details">
+            <contents name="qt-on-linux-x11" title="Qt on Linux/X11" level="1"/>
+            <contents name="getting-started-on-linux-x11" title="Getting Started on Linux/X11" level="1"/>
+            <contents name="key-features-for-linux-x11-development" title="Key Features for Linux/X11 Development" level="1"/>
+            <contents name="integrated-development-tools" title="Integrated Development Tools" level="2"/>
+            <contents name="cross-platform-development-using-qt-creator" title="Cross-Platform Development using Qt Creator" level="2"/>
+            <contents name="rich-class-library" title="Rich Class Library" level="2"/>
+            <contents name="qt-is-the-foundation-of-kde" title="Qt is the Foundation of KDE" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="mac-support.html" href="mac-support.html" subtype="page" title="Support for Mac OS X" fulltitle="Support for Mac OS X" subtitle="" location="supported-platforms.qdoc" module="QtDoc" groups="platform-specific,platform-details">
+            <contents name="qt-on-mac-os-x" title="Qt on Mac OS X" level="1"/>
+            <contents name="getting-started-on-mac" title="Getting Started on Mac" level="1"/>
+            <contents name="key-features-for-mac-os-x-development" title="Key Features for Mac OS X Development" level="1"/>
+            <contents name="integrated-development-tools" title="Integrated Development Tools" level="2"/>
+            <contents name="cross-platform-development-using-qt-creator" title="Cross-Platform Development using Qt Creator" level="2"/>
+            <contents name="rich-class-library" title="Rich Class Library" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="windows-support.html" href="windows-support.html" subtype="page" title="Support for Windows" fulltitle="Support for Windows" subtitle="" location="supported-platforms.qdoc" module="QtDoc" groups="platform-specific,platform-details">
+            <contents name="qt-on-windows" title="Qt on Windows" level="1"/>
+            <contents name="getting-started-on-windows" title="Getting Started on Windows" level="1"/>
+            <contents name="key-features-for-windows-development" title="Key Features for Windows Development" level="1"/>
+            <contents name="rich-class-library" title="Rich Class Library" level="2"/>
+            <contents name="integrated-development-tools" title="Integrated Development Tools" level="2"/>
+            <contents name="cross-platform-development-using-qt-creator" title="Cross-Platform Development using Qt Creator" level="2"/>
+            <contents name="visual-studio-add-in" title="Visual Studio Add-in." level="2"/>
+        </page>
+        <page access="public" status="commendable" name="wayland-introduction.html" href="wayland-introduction.html" subtype="page" title="Wayland Support in Qt" fulltitle="Wayland Support in Qt" subtitle="" location="wayland-introduction.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="shadow" href="shadow.html" subtype="page" title="Windows CE - Using shadow builds" fulltitle="Windows CE - Using shadow builds" subtitle="" location="wince-customization.qdoc" module="QtDoc" groups="qtce"/>
+        <page access="public" status="commendable" name="windowsce-customization.html" href="windowsce-customization.html" subtype="page" title="Windows CE - Working with Custom SDKs" fulltitle="Windows CE - Working with Custom SDKs" subtitle="" location="wince-customization.qdoc" module="QtDoc" groups="qtce">
+            <contents name="creating-a-custom-build-specification" title="Creating a Custom Build Specification" level="1"/>
+            <contents name="fine-tuning-options" title="Fine-Tuning Options" level="1"/>
+            <contents name="cross-compilation-environment-for-a-custom-sdk" title="Cross-compilation Environment for a Custom SDK" level="1"/>
+            <contents name="compiling-qt-for-a-custom-sdk" title="Compiling Qt for a Custom SDK" level="1"/>
+            <contents name="making-qt-applications-start-on-a-custom-device" title="Making Qt Applications Start on a Custom Device" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="wince-with-qt-introduction.html" href="wince-with-qt-introduction.html" subtype="page" title="Windows CE - Introduction to using Qt" fulltitle="Windows CE - Introduction to using Qt" subtitle="" location="wince-introduction.qdoc" module="QtDoc" groups="qtce">
+            <contents name="required-tools" title="Required tools" level="1"/>
+            <contents name="installing-qt" title="Installing Qt" level="1"/>
+            <contents name="building-your-own-applications" title="Building your own applications" level="1"/>
+            <contents name="running-the-application" title="Running the application" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="windowsce-opengl.html" href="windowsce-opengl.html" subtype="page" title="Qt for Windows CE and OpenGL ES" fulltitle="Qt for Windows CE and OpenGL ES" subtitle="" location="wince-opengl.qdoc" module="QtDoc" groups="qtce">
+            <contents name="introduction" title="Introduction" level="1"/>
+            <contents name="using-opengl-es-with-qt" title="Using OpenGL ES with Qt" level="1"/>
+            <contents name="using-opengl-with-qt-for-windows-ce" title="Using OpenGL with Qt for Windows CE" level="1"/>
+            <contents name="configure" title="Configure" level="2"/>
+            <contents name="using-opengl-to-accelerate-normal-2d-painting" title="Using OpenGL to Accelerate Normal 2D Painting" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="windowsce-signing.html" href="windowsce-signing.html" subtype="page" title="Windows CE - Signing" fulltitle="Windows CE - Signing" subtitle="" location="wince-signing.qdoc" module="QtDoc" groups="qtce">
+            <contents name="signing-on-windows-ce" title="Signing on Windows CE" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="portingcppapp.html" href="portingcppapp.html" subtype="page" title="Porting C++ Applications to Qt 5" fulltitle="Porting C++ Applications to Qt 5" subtitle="" location="portingcppapps_toqt5.qdoc" module="QtDoc">
+            <contents name="related-topics" title="Related topics" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="portingguide.html" href="portingguide.html" subtype="page" title="Porting Guide" fulltitle="Porting Guide" subtitle="" location="portingguide.qdoc" module="QtDoc">
+            <contents name="related-topics" title="Related Topics" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="portingqmlapp.html" href="portingqmlapp.html" subtype="page" title="Porting QML Applications to Qt 5 Example" fulltitle="Porting QML Applications to Qt 5 Example" subtitle="" location="portingqmlapp.qdoc" module="QtDoc">
+            <contents name="related-topics" title="Related Topics" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qt5-intro.html" href="qt5-intro.html" subtype="page" title="What's New in Qt 5" fulltitle="What's New in Qt 5" subtitle="" location="qt5-intro.qdoc" module="QtDoc">
+            <contents name="amazing-graphics-capability-and-performance" title="Amazing Graphics Capability and Performance" level="1"/>
+            <contents name="qt-quick-in-qt-5" title="Qt Quick in Qt 5" level="1"/>
+            <contents name="webkit-and-html5" title="WebKit and HTML5" level="1"/>
+            <contents name="multimedia" title="Multimedia" level="1"/>
+            <contents name="modularized-qt-libraries" title="Modularized Qt Libraries" level="1"/>
+            <contents name="widgets-in-qt-5" title="Widgets in Qt 5" level="2"/>
+            <contents name="qt-platform-abstraction" title="Qt Platform Abstraction" level="1"/>
+            <contents name="new-connection-syntax" title="New Connection Syntax" level="1"/>
+            <contents name="connectivity-and-networking" title="Connectivity and Networking" level="1"/>
+            <contents name="json-support" title="JSON Support" level="1"/>
+            <contents name="user-input" title="User Input" level="1"/>
+            <contents name="related-topics" title="Related Topics" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="reference-overview.html" href="reference-overview.html" subtype="page" title="Qt Reference Pages" fulltitle="Qt Reference Pages" subtitle="" location="reference.qdoc" module="QtDoc">
+            <contents name="class-lists" title="Class Lists" level="2"/>
+            <contents name="function-lists" title="Function Lists" level="2"/>
+            <contents name="qt-tool-manuals" title="Qt Tool Manuals" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="topics-scripting.html" href="topics-scripting.html" subtype="page" title="Scripting" fulltitle="Scripting" subtitle="" location="scripting.qdoc" module="QtDoc">
+            <contents name="qtscript" title="QtScript" level="1"/>
+            <contents name="js-api" title="JS API" level="1"/>
+            <contents name="qml" title="QML" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="sourcebreaks.html" href="sourcebreaks.html" subtype="page" title="C++ API changes" fulltitle="C++ API changes" subtitle="" location="source-breaks.qdoc" module="QtDoc">
+            <contents name="changes-to-qt-core" title="Changes to Qt Core" level="1"/>
+            <contents name="changes-to-qt-gui" title="Changes to Qt GUI" level="1"/>
+            <contents name="changes-to-qt-widgets" title="Changes to Qt Widgets" level="1"/>
+            <contents name="changes-to-qt-webkit" title="Changes to Qt WebKit" level="1"/>
+            <contents name="changes-to-qt-print-support" title="Changes to Qt Print Support" level="1"/>
+            <contents name="changes-to-qt-network" title="Changes to Qt Network" level="1"/>
+            <contents name="changes-to-qt-sql" title="Changes to Qt SQL" level="1"/>
+            <contents name="changes-to-qt-test" title="Changes to Qt Test" level="1"/>
+            <contents name="changes-to-qt-global" title="Changes to Qt Global" level="1"/>
+            <contents name="changes-to-tools" title="Changes to Tools" level="1"/>
+            <contents name="related-topics" title="Related Topics" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="testing-and-debugging.html" href="testing-and-debugging.html" subtype="page" title="Testing and debugging" fulltitle="Testing and debugging" subtitle="" location="testing.qdoc" module="QtDoc">
+            <contents name="testing-qt-based-code" title="Testing Qt-based code" level="1"/>
+            <contents name="debugging-qt-applications" title="Debugging Qt applications" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="overviews-main.html" href="overviews-main.html" subtype="page" title="Qt Overviews" fulltitle="Qt Overviews" subtitle="" location="topics.qdoc" module="QtDoc"/>
+        <page access="public" status="commendable" name="topics-ui.html" href="topics-ui.html" subtype="page" title="User Interfaces" fulltitle="User Interfaces" subtitle="" location="userinterfaces.qdoc" module="QtDoc">
+            <contents name="qt-quick" title="Qt Quick" level="1"/>
+            <contents name="important-concepts-in-qt-quick" title="Important Concepts in Qt Quick" level="2"/>
+            <contents name="qt-widgets" title="Qt Widgets" level="1"/>
+            <contents name="important-concepts-in-qt-widgets" title="Important Concepts in Qt Widgets" level="2"/>
+            <contents name="qt-webkit" title="Qt WebKit" level="1"/>
+            <contents name="comparison" title="Comparison" level="1"/>
+            <contents name="internationalization-and-translations" title="Internationalization and Translations" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="topics-web-content.html" href="topics-web-content.html" subtype="page" title="Integrating Web Content" fulltitle="Integrating Web Content" subtitle="" location="web-content.qdoc" module="QtDoc">
+            <contents name="qtwebkit-widgets-integration" title="QtWebKit Widgets integration" level="1"/>
+            <contents name="qtwebkit-qt-quick-integration" title="QtWebKit Qt Quick integration" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="whatsnew.html" href="whatsnew.html" subtype="page" title="New Classes and Functions in Qt 5" fulltitle="New Classes and Functions in Qt 5" subtitle="" location="whatsnew.qdoc" module="QtDoc">
+            <contents name="qt-core-changes" title="Qt Core Changes" level="1"/>
+            <contents name="qstandardpaths" title="QStandardPaths" level="2"/>
+            <contents name="compile-time-checks-for-signal-slot-connections" title="Compile-time Checks for Signal-slot Connections" level="2"/>
+            <contents name="perl-compatible-regular-expressions" title="Perl-Compatible Regular Expressions" level="2"/>
+            <contents name="qt-gui-changes" title="Qt Gui Changes" level="1"/>
+            <contents name="new-classes-for-windowing-and-rendering" title="New Classes for Windowing and Rendering" level="2"/>
+            <contents name="opengl-classes" title="OpenGL Classes" level="2"/>
+            <contents name="qopenglpaintdevice" title="QOpenGLPaintDevice" level="2"/>
+            <contents name="qt-network-changes" title="Qt Network Changes" level="1"/>
+            <contents name="qdnslookup" title="QDnsLookup" level="2"/>
+            <contents name="better-support-for-ipv6-and-dual-mode-networks" title="Better Support for IPv6 and Dual-mode Networks" level="2"/>
+            <contents name="binding-tcp-sockets" title="Binding TCP Sockets" level="2"/>
+            <contents name="ssl-certificates" title="SSL Certificates" level="2"/>
+            <contents name="workarounds-for-buggy-ssl-servers" title="Workarounds for Buggy SSL Servers" level="2"/>
+            <contents name="support-for-opaque-private-keys" title="Support for Opaque Private Keys" level="2"/>
+            <contents name="qt-qml-changes" title="Qt Qml Changes" level="1"/>
+            <contents name="qml-engine" title="QML Engine" level="2"/>
+            <contents name="type-system" title="Type System" level="2"/>
+            <contents name="other" title="Other" level="2"/>
+            <contents name="qt-quick-changes" title="Qt Quick Changes" level="1"/>
+            <contents name="new-graphics-architecture" title="New Graphics Architecture" level="2"/>
+            <contents name="visual-and-graphic-types" title="Visual and Graphic Types" level="2"/>
+            <contents name="animations" title="Animations" level="2"/>
+            <contents name="text" title="Text" level="2"/>
+            <contents name="user-input" title="User Input" level="2"/>
+            <contents name="specialized-containers" title="Specialized Containers" level="2"/>
+            <contents name="positioners" title="Positioners" level="2"/>
+            <contents name="models-and-views" title="Models and Views" level="2"/>
+            <contents name="particles-system-support" title="Particles System Support" level="2"/>
+            <contents name="utility-types" title="Utility Types" level="2"/>
+            <contents name="qt-multimedia-changes" title="Qt Multimedia Changes" level="1"/>
+            <contents name="new-classes-and-functions" title="New Classes and Functions" level="1"/>
+        </page>
+    </namespace>
+    <page access="public" status="commendable" name="accessibility" href="accessibility.html" subtype="group" seen="true" members="Accessible" title="Accessibility Classes" fulltitle="Accessibility Classes" subtitle="" location="accessible.qdoc"/>
+    <page access="public" status="commendable" name="all-examples" href="all-examples.html" subtype="group" seen="true" members="examples-qtassistant,examples-designer,examples-qthelp,examples-linguist,multimedia_examples,examples-network,examples-widgets-opengl,qtquick-codesamples.html,examples-qtuitools,examples-graphicsview.html,examples-desktop,examples-dialogs,examples-itemviews,examples-mainwindow,examples-painting,examples-richtext,examples-widgets,webkit-qmlexamples,webkit-widgetexamples,qmldemos,examples-layouts.html,examples-itemviews.html,examples-draganddrop.html,examples-threadandconcurrent.html,examples-widgets-tools,examples-sql.html,examples-xml.html,examples-statemachine.html,examples-animation.html,touchinputexamples,examples-dbus.html,examples-activeqt.html" title="List of Qt Examples" fulltitle="List of Qt Examples" subtitle="" location="examples.qdoc" groups="examples-qtassistant,examples-designer,examples-qthelp,examples-linguist,multimedia_examples,examples-network,examples-widgets-opengl,examples-qtuitools,examples-desktop,examples-dialogs,examples-itemviews,examples-mainwindow,examples-painting,examples-richtext,examples-widgets,webkit-qmlexamples,webkit-widgetexamples,qmldemos,examples-widgets-tools,touchinputexamples"/>
+    <page access="public" status="commendable" name="best-practices" href="best-practices.html" subtype="group" seen="true" members="custom-types.html,timers.html,usingadaptors.html,qtdesigner-components.html,coordsys.html,richtext.html,qtest-tutorial.html,guibooks.html,accessible-qtquick.html,desktop-integration.html,accelerators.html,appicon.html,exceptionsafety.html,restoring-geometry.html,session.html,sharedlibrary.html,unix-signals.html,qt-sql,atomic-operations.html" title="Best Practice Guides" fulltitle="Best Practice Guides" subtitle="" location="overviews.qdoc" groups="qt-sql"/>
+    <page access="public" status="commendable" name="classlists" href="classlists.html" subtype="group" seen="true" members="classes.html,annotated.html,groups,hierarchy.html,obsoleteclasses.html,namespaces.html,modules-cpp.html,modules-qml.html,modules" title="Class and Function Documentation" fulltitle="Class and Function Documentation" subtitle="" location="classes.qdoc" groups="groups,modules">
+        <contents name="class-lists" title="Class Lists" level="2"/>
+        <contents name="function-lists" title="Function Lists" level="2"/>
+    </page>
+    <page access="public" status="commendable" name="examples-widgets-tools" href="examples-widgets-tools.html" subtype="group" seen="true" members="tools/completer,tools/i18n,tools/plugandpaint,tools/regexp,tools/settingseditor,tools/styleplugin,tools/treemodelcompleter,tools/undo,tools/undoframework,all-examples" title="Tools Examples" fulltitle="Tools Examples" subtitle="" location="examples.qdoc" groups="all-examples"/>
+    <page access="public" status="commendable" name="gettingStarted" href="gettingstarted.html" subtype="group" seen="true" members="gettingstartedqml.html,gettingstartedqt.html" title="Getting Started Guides" fulltitle="Getting Started Guides" subtitle="" location="gettingstarted.qdoc">
+        <contents name="creating-applications-using-qt-is-easy" title="Creating Applications Using Qt Is Easy" level="1"/>
+        <contents name="user-interface-options" title="User Interface Options" level="1"/>
+        <contents name="the-tutorials" title="The Tutorials" level="1"/>
+    </page>
+    <page access="public" status="commendable" name="groups" href="groups.html" subtype="group" seen="true" members="containers.html,events,io,plugins,helpsystem,events,painting,painting-3D,network,printing,classlists" title="Groups Of Related Classes" fulltitle="Groups Of Related Classes" subtitle="" location="classes.qdoc" groups="events,io,plugins,helpsystem,events,painting,painting-3D,network,printing,classlists"/>
+    <page access="public" status="commendable" name="i18n" href="i18n.html" subtype="group" seen="true" members="QTextCodec,QTextDecoder,QTextEncoder,QTranslator,QLocale" title="Qt Classes for Internationalization" fulltitle="Qt Classes for Internationalization" subtitle="" location="i18n.qdoc"/>
+    <page access="public" status="commendable" name="installation" href="installation.html" subtype="group" seen="true" members="install-x11.html,install-win.html,install-mac.html,install-wince.html,requirements.html,requirements-win.html,requirements-mac.html,requirements-x11.html,requirements-wince.html" title="Installation" fulltitle="Installation" subtitle="" location="installation.qdoc"/>
+    <page access="public" status="commendable" name="internationalization" href="internationalization.html" subtype="group" seen="true" members="linguist-id-based-i18n.html,linguist-manager.html,linguist-programmers.html,linguist-translators.html,linguist-ts-file-format.html,qtlinguist-index.html,examples-linguist,i18n-source-translation.html,i18n-plural-rules.html" title="Internationalization with Qt" fulltitle="Internationalization with Qt" subtitle="" location="i18n.qdoc" groups="examples-linguist">
+        <target name="qt-itself"/>
+        <keyword name="internationalization"/>
+        <keyword name="i18n"/>
+        <keyword name="localization"/>
+        <contents name="relevant-qt-classes-and-apis" title="Relevant Qt Classes and APIs" level="1"/>
+        <contents name="languages-and-writing-systems" title="Languages and Writing Systems" level="1"/>
+        <contents name="step-by-step" title="Step by Step" level="1"/>
+        <contents name="use-qstring-for-all-user-visible-text" title="Use QString for All User-Visible Text" level="2"/>
+        <contents name="use-tr-for-all-literal-text" title="Use tr() for All Literal Text" level="2"/>
+        <contents name="use-qkeysequence-for-accelerator-values" title="Use QKeySequence() for Accelerator Values" level="2"/>
+        <contents name="use-qstring-arg-for-dynamic-text" title="Use QString::arg() for Dynamic Text" level="2"/>
+        <contents name="produce-translations" title="Produce Translations" level="2"/>
+        <contents name="support-for-encodings" title="Support for Encodings" level="2"/>
+        <contents name="localize" title="Localize" level="2"/>
+        <contents name="dynamic-translation" title="Dynamic Translation" level="1"/>
+        <contents name="translating-non-qt-classes" title="Translating Non-Qt Classes" level="1"/>
+        <contents name="system-support" title="System Support" level="1"/>
+        <contents name="unix-x11" title="Unix/X11" level="2"/>
+        <contents name="linux" title="Linux" level="2"/>
+        <contents name="windows" title="Windows" level="2"/>
+        <contents name="mac-os-x" title="Mac OS X" level="2"/>
+    </page>
+    <page access="public" status="commendable" name="licensing" href="licensing.html" subtype="group" seen="true" members="designer-recursive-shadow-casting.html,pdf-licensing.html,qtsvglicense.html,3rdparty.html,licenses-fonts.html,licenses.html,opensourcelicense.html,trademarks.html,qtmain.html,qt-mac-cocoa-licensing.html" title="Qt Licensing" fulltitle="Qt Licensing" subtitle="" location="licenses.qdoc">
+        <contents name="purchasing-and-sales-information" title="Purchasing and Sales Information" level="1"/>
+        <contents name="additional-information" title="Additional information" level="1"/>
+    </page>
+    <page access="public" status="commendable" name="modules" href="modules.html" subtype="group" seen="true" members="QAxContainer,QAxServer,QtConcurrent,QtCore,QtDBus,QtDesigner,QtHelp,QtGui,QtMultimedia,QtNetwork,QtOpenGL,QtPrintSupport,QtQuick,QtScript,QtScriptTools,QtSql,QtSvg,QtTest,QtUiTools,QtWidgets,QtXml,QtXmlPatterns,classlists" title="All Modules" fulltitle="All Modules" subtitle="" location="modules.qdoc" groups="classlists">
+        <contents name="qt-essentials" title="Qt Essentials" level="1"/>
+        <contents name="qt-add-ons" title="Qt Add-Ons" level="1"/>
+        <contents name="qt-tools" title="Qt Tools" level="1"/>
+    </page>
+    <page access="public" status="commendable" name="platform-details" href="platform-details.html" subtype="group" seen="true" members="windows-support.html,linuxX11-support.html,mac-support.html,platform-specific" title="Supported Platforms" fulltitle="Supported Platforms" subtitle="" location="supported-platforms.qdoc" groups="platform-specific">
+        <contents name="desktop-platforms" title="Desktop Platforms" level="1"/>
+        <contents name="embedded-platforms" title="Embedded platforms" level="1"/>
+        <contents name="mobile-platforms" title="Mobile platforms" level="1"/>
+        <contents name="reference-configurations" title="Reference Configurations" level="1"/>
+        <contents name="availability-of-binary-installation-packages" title="Availability of Binary Installation Packages" level="1"/>
+        <contents name="general-legal-disclaimer" title="General Legal Disclaimer" level="1"/>
+    </page>
+    <page access="public" status="commendable" name="platform-specific" href="platform-specific.html" subtype="group" seen="true" members="developing-on-mac.html,known-issues.html,unix-signals.html,qtmain.html,qt-activex,compiler-notes.html,mac-differences.html,platform-notes.html,qtmac-as-native.html,windows-support.html,linuxX11-support.html,mac-support.html,platform-details" title="Platform-Specific Documentation" fulltitle="Platform-Specific Documentation" subtitle="" location="platform-notes.qdoc" groups="qt-activex,platform-details"/>
+    <page access="public" status="commendable" name="plugins" href="plugins.html" subtype="group" seen="true" members="QLibrary,&lt;QtPlugin&gt;,QPluginLoader,QIconEnginePlugin,QImageIOPlugin,QPictureFormatPlugin,QGenericPlugin,QGenericPluginFactory,QQmlExtensionPlugin,QScriptExtensionPlugin,QSqlDriverPlugin,QStylePlugin" title="Qt Module QML Plugins" fulltitle="Qt Module QML Plugins" subtitle="" location="qml-plugins.qdoc">
+        <contents name="list-of-qml-plugins" title="List of QML Plugins" level="1"/>
+    </page>
+    <page access="public" status="commendable" name="qml-features" href="qml-features.html" subtype="group" seen="true" members="qtqml-syntax-signals.html,qtquick-internationalization.html,qtquick-effects-sprites.html,qtquick-input-focus.html,qtquick-positioning-layouts.html,qtquick-positioning-righttoleft.html" title="QML Features" fulltitle="QML Features" subtitle="" location="overviews.qdoc"/>
+    <page access="public" status="commendable" name="qmldemos" href="qtquick2-qmldemos.html" subtype="group" seen="true" members="demos/calqlatr,all-examples,qtquick" title="QML Demos" fulltitle="QML Demos" subtitle="" location="qmldemos.qdoc" groups="all-examples,qtquick"/>
+    <page access="public" status="commendable" name="qt-activex" href="qt-activex.html" subtype="group" seen="true" members="activeqt-index.html,activeqt-container.html,activeqt-server.html,technology-apis,platform-specific" title="ActiveX in Qt" fulltitle="ActiveX in Qt" subtitle="" location="overviews.qdoc" groups="technology-apis,platform-specific"/>
+    <page access="public" status="commendable" name="qt-gui-concepts" href="qt-gui-concepts.html" subtype="group" seen="true" members="animation-overview.html,dnd.html,gestures-overview.html,layout.html,style-reference.html,stylesheet.html,widget-classes.html,dialogs.html,application-windows.html,mainwindow.html,standard-dialogs,desktop-integration.html" title="UI Design with Qt" fulltitle="UI Design with Qt" subtitle="" location="overviews.qdoc" groups="standard-dialogs"/>
+    <page access="public" status="commendable" name="qt-sql" href="qt-sql.html" subtype="group" seen="true" members="sql-types.html,sql-driver.html,sql-connecting.html,sql-forms.html,sql-model.html,sql-presenting.html,sql-programming.html,sql-sqlstatements.html,technology-apis,best-practices" title="SQL in Qt" fulltitle="SQL in Qt" subtitle="" location="overviews.qdoc" groups="technology-apis,best-practices"/>
+    <page access="public" status="commendable" name="qtce" href="qtce.html" subtype="group" seen="true" members="dialogs/sipdialog,install-wince.html,windowsce-customization.html,shadow,qt-embedded,wince-with-qt-introduction.html,windowsce-opengl.html,windowsce-signing.html" title="Qt for Windows CE" fulltitle="Qt for Windows CE" subtitle="" location="wince-introduction.qdoc" groups="qt-embedded"/>
+    <page access="public" status="commendable" name="qtconcurrent-mtexamples" href="qtconcurrent-mtexamples.html" subtype="group" seen="true" members="mandelbrot,queuedcustomtype,semaphores,waitconditions" title="Qt Concurrent Examples" fulltitle="Qt Concurrent Examples" subtitle="" location="example_groups.qdoc"/>
+    <page access="public" status="commendable" name="qtconcurrentexamples" href="qtconcurrentexamples.html" subtype="group" seen="true" members="imagescaling,map,progressdialog,runfunction,wordcount" title="Qt Concurrent Examples" fulltitle="Qt Concurrent Examples" subtitle="" location="example_groups.qdoc"/>
+    <page access="public" status="commendable" name="sql_examples" href="sql-examples.html" subtype="group" seen="true" members="cachedtable,drilldown,masterdetail,querymodel,relationaltablemodel,sqlbrowser,sqlwidgetmapper,tablemodel" title="Qt SQL Examples" fulltitle="Qt SQL Examples" subtitle="" location="example_groups.qdoc"/>
+    <page access="public" status="commendable" name="string-processing" href="string-processing.html" subtype="group" seen="true" members="QTextStream,QByteArray,QByteArrayMatcher,QChar,QLatin1Char,QLocale,QLatin1String,QString,QStringRef,QStringList,QStringMatcher,QTextBoundaryFinder" title="Classes for String Data" fulltitle="Classes for String Data" subtitle="" location="unicode.qdoc"/>
+    <page access="public" status="commendable" name="technology-apis" href="technology-apis.html" subtype="group" seen="true" members="QtConcurrent,containers.html,qtdbus-index.html,QtDBus,multimediaoverview.html,QtOpenGL,qtprintsupport-index.html,QtPrintSupport,qtscript-index.html,gestures-overview.html,QtXml,xml-processing.html,QtXmlPatterns,accessible-qtquick.html,ipc.html,unicode.html,qt-activex,qt-sql" title="Qt and Key Technologies" fulltitle="Qt and Key Technologies" subtitle="" location="overviews.qdoc" groups="qt-activex,qt-sql"/>
+    <page access="public" status="commendable" name="touchinputexamples" href="touchinputexamples.html" subtype="group" seen="true" members="all-examples" title="Touch Input Examples" fulltitle="Touch Input Examples" subtitle="" location="examples.qdoc" groups="all-examples"/>
+    <page access="public" status="commendable" name="xml-examples" href="xml-examples.html" subtype="group" seen="true" members="xml/streambookmarks,saxbookmarks" title="Qt XML Examples" fulltitle="Qt XML Examples" subtitle="" location="example_groups.qdoc"/>
+</INDEX>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- developing-on-mac.qdoc -->
+  <title>QtDoc 5.0: Developing Qt Applications for Mac OS X</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#what-versions-of-mac-os-x-are-supported">What Versions of Mac OS X are Supported?</a></li>
+<li class="level2"><a href="#carbon-or-cocoa">Carbon or Cocoa?</a></li>
+<li class="level2"><a href="#32-bit-or-64-bit">32-bit or 64-bit</a></li>
+<li class="level2"><a href="#building-qt-statically">Building Qt statically</a></li>
+<li class="level1"><a href="#day-to-day-application-development-on-os-x">Day-to-Day Application Development on OS X</a></li>
+<li class="level1"><a href="#deployment-compile-once-deploy-everywhere">Deployment - &quot;Compile once, deploy everywhere&quot;</a></li>
+</ul>
+</div>
+<h1 class="title">Developing Qt Applications for Mac OS X</h1>
+<span class="subtitle"></span>
+<!-- $$$developing-on-mac.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>Mac OS X is a UNIX platform and behaves similar to other Unix-like platforms. The main difference is X11 is not used as the primary windowing system. Instead, Mac OS X uses its own native windowing system that is accessible through the Cocoa API. Application development on Mac OS X is done using Xcode, available from the Mac App store.</p>
+<p>After installing Xcode you need to download the command line tools. This is done in the Preferences dialog under the Downloads section. After installing, &quot;clang&quot; should be available on the command line.</p>
+<p>You can also download the command line tools directly and skip the code download. Log on to developer.apple.com and look for &quot;Command Line Tools for Xcode&quot; in the download area.</p>
+<a name="what-versions-of-mac-os-x-are-supported"></a>
+<h2>What Versions of Mac OS X are Supported?</h2>
+<p>Qt 5 supports Mac OS X versions 10.6 (Snow Leopard) and up. It is usually in the best interest of the developer and user to be running the latest updates to any version. We test internally against Mac OS X 10.6 and 10.7&#x2e;</p>
+<a name="carbon-or-cocoa"></a>
+<h3>Carbon or Cocoa?</h3>
+<p>Qt 5 uses Cocoa. Building for Carbon is not possible.</p>
+<a name="32-bit-or-64-bit"></a>
+<h3>32-bit or 64-bit</h3>
+<p>Qt can be built for either x86 or x86_64. 64-bit is used by default. To select a 32-bit build, use the macx-clang-32 (or macx-g++32) mkspec. This is selectable at configure time: ./configure -platform macx-clang-32</p>
+<p>The Qt build system does not support building unversal binaries directly. Instead, use the &quot;lipo&quot; tool to glue two Qt builds together.</p>
+<a name="building-qt-statically"></a>
+<h3>Building Qt statically</h3>
+<p>Static builds are not tested.</p>
+<a name="day-to-day-application-development-on-os-x"></a>
+<h2>Day-to-Day Application Development on OS X</h2>
+<p>On the command-line, applications can be built using <tt>qmake</tt> and <tt>make</tt>. Optionally, <tt>qmake</tt> can generate project files for Xcode with <tt>-spec macx-xcode</tt>. If you are using the binary package, <tt>qmake</tt> generates Xcode projects by default; use <tt>-spec macx-gcc</tt> to generate makefiles.</p>
+<p>The result of the build process is an application bundle, which is a directory structure that contains the actual application executable. The application can be launched by double-clicking it in Finder, or by referring directly to its executable from the command line, i. e. <tt>myApp.app/Contents/MacOS/myApp</tt>.</p>
+<p>If you wish to have a command-line tool that does not use the GUI (e.g&#x2e;, <tt>moc</tt>, <tt>uic</tt> or <tt>ls</tt>), you can tell <tt>qmake</tt> not to execute the bundle creating steps by removing it from the <tt>CONFIG</tt> in your <tt>.pro</tt> file:</p>
+<pre class="cpp">CONFIG <span class="operator">-</span><span class="operator">=</span> app_bundle</pre>
+<a name="deployment-compile-once-deploy-everywhere"></a>
+<h2>Deployment - &quot;Compile once, deploy everywhere&quot;</h2>
+<p>In general, Qt supports building on one Mac OS X version and deploying on all others, both forward and backwards. You can build on 10.7 Lion and run the same binary on 10.6 and up. The recommended way is to build on the latest OS version and deploy backwards.</p>
+<p>Mac applications are typically deployed as self-contained application bundles. The application bundle contains the application executable as well as dependencies such as the Qt libraries, plugins, translations and other resources you may need. Third party libraries like Qt are normally not installed system-wide; each application provides its own copy.</p>
+<p>A common way to distribute applications is to provide a compressed disk image (.dmg file) that the user can mount in Finder. The Mac deployment tool (macdeployqt) can be used to create the self-contained bundles, and optionally also create a .dmg archive. See the <a href="deployment-mac.html">Mac deployment guide</a> for more information about deployment.</p>
+<p>Applications can also be distributed through the Mac App store. Qt 5 aims to stay within the app store sandbox rules. macdeployqt (qttools/src/macdeployqt) can be used as a starting point for app store deployment.</p>
+</div>
+<!-- @@@developing-on-mac.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

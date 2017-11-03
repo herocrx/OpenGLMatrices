@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- number.qdoc -->
+  <title>QtQml 5.0: Number</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#methods">Methods</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">Number</h1>
+<span class="subtitle"></span>
+<!-- $$$Number-brief -->
+<p>The Number object provides represents a number value <a href="#details">More...</a></p>
+<!-- @@@Number -->
+<ul>
+<li><a href="qml-qtquick2-number-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="methods"></a>
+<h2>Methods</h2>
+<ul>
+<li class="fn">string <b><b><a href="qml-qtquick2-number.html#fromLocaleString-method">fromLocaleString</a></b></b>(locale, number)</li>
+<li class="fn">string <b><b><a href="qml-qtquick2-number.html#toLocaleCurrencyString-method">toLocaleCurrencyString</a></b></b>(locale, symbol)</li>
+<li class="fn">string <b><b><a href="qml-qtquick2-number.html#toLocaleString-method">toLocaleString</a></b></b>(locale, format, precision)</li>
+</ul>
+<!-- $$$Number-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>The QML Number object extends the JS Number object with locale aware functions.</p>
+<p><b>See also </b><a href="qml-qtquick2-locale.html">Locale</a>.</p>
+<!-- @@@Number -->
+<h2>Method Documentation</h2>
+<!-- $$$fromLocaleString -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="fromLocaleString-method"></a><span class="type"><a href="qml-string.html">string</a></span> Number::<span class="name">fromLocaleString</span>(<span class="type">locale</span>, <span class="type">number</span>)</p></td></tr></table></div><div class="qmldoc"><p>Returns a Number by parsing <i>number</i> using the conventions of the supplied <i>locale</i>.</p>
+<p>If <i>locale</i> is not supplied the default locale will be used.</p>
+<p>For example, using the German locale:</p>
+<pre class="cpp">var german <span class="operator">=</span> <span class="type"><a href="collision-qt.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>);
+var d;
+d <span class="operator">=</span> Number<span class="operator">.</span>fromLocaleString(german<span class="operator">,</span> <span class="string">&quot;1234,56)   // d == 1234.56
+d = Number.fromLocaleString(german, &quot;</span><span class="number">1.234</span><span class="operator">,</span><span class="number">56</span><span class="string">&quot;) // d == 1234.56
+d = Number.fromLocaleString(german, &quot;</span><span class="number">1234.56</span><span class="string">&quot;)  // throws exception
+d = Number.fromLocaleString(german, &quot;</span><span class="number">1.234</span><span class="string">&quot;)    // d == 1234.0
+</span></pre>
+</div></div><!-- @@@fromLocaleString -->
+<br/>
+<!-- $$$toLocaleCurrencyString -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toLocaleCurrencyString-method"></a><span class="type"><a href="qml-string.html">string</a></span> Number::<span class="name">toLocaleCurrencyString</span>(<span class="type">locale</span>, <span class="type">symbol</span>)</p></td></tr></table></div><div class="qmldoc"><p>Converts the Number to a currency using the currency and conventions of the specified <i>locale</i>. If <i>symbol</i> is specified it will be used as the currency symbol.</p>
+<p><b>See also </b><a href="qml-qtquick2-locale.html#currencySymbol-method">Locale::currencySymbol()</a>.</p>
+</div></div><!-- @@@toLocaleCurrencyString -->
+<br/>
+<!-- $$$toLocaleString -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlFuncNode"><p><a name="toLocaleString-method"></a><span class="type"><a href="qml-string.html">string</a></span> Number::<span class="name">toLocaleString</span>(<span class="type">locale</span>, <span class="type">format</span>, <span class="type">precision</span>)</p></td></tr></table></div><div class="qmldoc"><p>Converts the Number to a string suitable for the specified <i>locale</i> in the specified <i>format</i>, with the specified <i>precision</i>.</p>
+<p>Valid formats are:</p>
+<ul>
+<li>'f' Decimal floating point, e.g&#x2e; 248.65</li>
+<li>'e' Scientific notation using e character, e.g&#x2e; 2.4865e+2</li>
+<li>'E' Scientific notation using E character, e.g&#x2e; 2.4865E+2</li>
+<li>'g' Use the shorter of e or f</li>
+<li>'G' Use the shorter of E or f</li>
+</ul>
+<p>If precision is not specified, the precision will be 2.</p>
+<p>If the format is not specified 'f' will be used.</p>
+<p>If <i>locale</i> is not specified, the default locale will be used.</p>
+<p>The following example shows a number formatted for the German locale:</p>
+<pre class="cpp">import <span class="type"><a href="../qtquick/qtquick-module.html">QtQuick</a></span> <span class="number">2.0</span>
+
+Text {
+    text: <span class="string">&quot;The value is: &quot;</span> <span class="operator">+</span>  Number(<span class="number">4742378.423</span>)<span class="operator">.</span>toLocaleString(<span class="type"><a href="collision-qt.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>))
+}</pre>
+<p>You can apply toLocaleString() directly to constants, provided the decimal is included in the constant, e.g&#x2e;</p>
+<pre class="cpp"><span class="number">123.0.toLocaleString</span>(<span class="type"><a href="collision-qt.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>)) <span class="comment">// OK</span>
+<span class="number">123..toLocaleString</span>(<span class="type"><a href="collision-qt.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>))  <span class="comment">// OK</span>
+<span class="number">123.toLocaleString</span>(<span class="type"><a href="collision-qt.html">Qt</a></span><span class="operator">.</span>locale(<span class="string">&quot;de_DE&quot;</span>))   <span class="comment">// fails</span></pre>
+</div></div><!-- @@@toLocaleString -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

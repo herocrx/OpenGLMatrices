@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: wheelwidget.cpp Example File (webkitwidgets/scroller/wheel/wheelwidget.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">wheelwidget.cpp Example File</h1>
+<span class="small-subtitle">webkitwidgets/scroller/wheel/wheelwidget.cpp</span>
+<!-- $$$webkitwidgets/scroller/wheel/wheelwidget.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the examples of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:BSD$
+** You may use this file under the terms of the BSD license as follows:
+**
+** &quot;Redistribution and use in source and binary forms, with or without
+** modification, are permitted provided that the following conditions are
+** met:
+**   * Redistributions of source code must retain the above copyright
+**     notice, this list of conditions and the following disclaimer.
+**   * Redistributions in binary form must reproduce the above copyright
+**     notice, this list of conditions and the following disclaimer in
+**     the documentation and/or other materials provided with the
+**     distribution.
+**   * Neither the name of Digia Plc and its Subsidiary(-ies) nor the names
+**     of its contributors may be used to endorse or promote products derived
+**     from this software without specific prior written permission.
+**
+**
+** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+** &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+** LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+** A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+** OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+** SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+** LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+** DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+** THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+** OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.&quot;
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+<span class="preprocessor">#include &lt;QtWidgets&gt;</span>
+
+<span class="preprocessor">#include &quot;wheelwidget.h&quot;</span>
+
+<span class="preprocessor">#define WHEEL_SCROLL_OFFSET 50000.0</span>
+
+AbstractWheelWidget<span class="operator">::</span>AbstractWheelWidget(<span class="type">bool</span> touch<span class="operator">,</span> <span class="type"><a href="../qtwidgets/qwidget.html">QWidget</a></span> <span class="operator">*</span>parent)
+    : <span class="type"><a href="../qtwidgets/qwidget.html">QWidget</a></span>(parent)
+    <span class="operator">,</span> m_currentItem(<span class="number">0</span>)
+    <span class="operator">,</span> m_itemOffset(<span class="number">0</span>)
+{
+<span class="comment">// ![0]</span>
+    <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>grabGesture(<span class="keyword">this</span><span class="operator">,</span> touch <span class="operator">?</span> <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>TouchGesture : <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>LeftMouseButtonGesture);
+<span class="comment">// ![0]</span>
+}
+
+AbstractWheelWidget<span class="operator">::</span><span class="operator">~</span>AbstractWheelWidget()
+{ }
+
+<span class="type">int</span> AbstractWheelWidget<span class="operator">::</span>currentIndex() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_currentItem;
+}
+
+<span class="type">void</span> AbstractWheelWidget<span class="operator">::</span>setCurrentIndex(<span class="type">int</span> index)
+{
+    <span class="keyword">if</span> (index <span class="operator">&gt;</span><span class="operator">=</span> <span class="number">0</span> <span class="operator">&amp;</span><span class="operator">&amp;</span> index <span class="operator">&lt;</span> itemCount()) {
+        m_currentItem <span class="operator">=</span> index;
+        m_itemOffset <span class="operator">=</span> <span class="number">0</span>;
+        update();
+    }
+}
+
+<span class="type">bool</span> AbstractWheelWidget<span class="operator">::</span>event(<span class="type"><a href="../qtcore/qevent.html">QEvent</a></span> <span class="operator">*</span>e)
+{
+    <span class="keyword">switch</span> (e<span class="operator">-</span><span class="operator">&gt;</span>type()) {
+<span class="comment">// ![1]</span>
+    <span class="keyword">case</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>ScrollPrepare:
+    {
+        <span class="comment">// We set the snap positions as late as possible so that we are sure</span>
+        <span class="comment">// we get the correct itemHeight</span>
+        <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span> <span class="operator">*</span>scroller <span class="operator">=</span> <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>scroller(<span class="keyword">this</span>);
+        scroller<span class="operator">-</span><span class="operator">&gt;</span>setSnapPositionsY( WHEEL_SCROLL_OFFSET<span class="operator">,</span> itemHeight() );
+
+        <span class="type"><a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a></span> <span class="operator">*</span>se <span class="operator">=</span> <span class="keyword">static_cast</span><span class="operator">&lt;</span><span class="type"><a href="../qtgui/qscrollprepareevent.html">QScrollPrepareEvent</a></span> <span class="operator">*</span><span class="operator">&gt;</span>(e);
+        se<span class="operator">-</span><span class="operator">&gt;</span>setViewportSize(<span class="type"><a href="../qtcore/qsizef.html">QSizeF</a></span>(size()));
+        <span class="comment">// we claim a huge scrolling area and a huge content position and</span>
+        <span class="comment">// hope that the user doesn't notice that the scroll area is restricted</span>
+        se<span class="operator">-</span><span class="operator">&gt;</span>setContentPosRange(<span class="type"><a href="../qtcore/qrectf.html">QRectF</a></span>(<span class="number">0.0</span><span class="operator">,</span> <span class="number">0.0</span><span class="operator">,</span> <span class="number">0.0</span><span class="operator">,</span> WHEEL_SCROLL_OFFSET <span class="operator">*</span> <span class="number">2</span>));
+        se<span class="operator">-</span><span class="operator">&gt;</span>setContentPos(<span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span>(<span class="number">0.0</span><span class="operator">,</span> WHEEL_SCROLL_OFFSET <span class="operator">+</span> m_currentItem <span class="operator">*</span> itemHeight() <span class="operator">+</span> m_itemOffset));
+        se<span class="operator">-</span><span class="operator">&gt;</span>accept();
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+    }
+<span class="comment">// ![1]</span>
+<span class="comment">// ![2]</span>
+    <span class="keyword">case</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>Scroll:
+    {
+        <span class="type"><a href="../qtgui/qscrollevent.html">QScrollEvent</a></span> <span class="operator">*</span>se <span class="operator">=</span> <span class="keyword">static_cast</span><span class="operator">&lt;</span><span class="type"><a href="../qtgui/qscrollevent.html">QScrollEvent</a></span> <span class="operator">*</span><span class="operator">&gt;</span>(e);
+
+        <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span> y <span class="operator">=</span> se<span class="operator">-</span><span class="operator">&gt;</span>contentPos()<span class="operator">.</span>y();
+        <span class="type">int</span> iy <span class="operator">=</span> y <span class="operator">-</span> WHEEL_SCROLL_OFFSET;
+        <span class="type">int</span> ih <span class="operator">=</span> itemHeight();
+
+<span class="comment">// ![2]</span>
+<span class="comment">// ![3]</span>
+        <span class="comment">// -- calculate the current item position and offset and redraw the widget</span>
+        <span class="type">int</span> ic <span class="operator">=</span> itemCount();
+        <span class="keyword">if</span> (ic<span class="operator">&gt;</span><span class="number">0</span>) {
+            m_currentItem <span class="operator">=</span> iy <span class="operator">/</span> ih <span class="operator">%</span> ic;
+            m_itemOffset <span class="operator">=</span> iy <span class="operator">%</span> ih;
+
+            <span class="comment">// take care when scrolling backwards. Modulo returns negative numbers</span>
+            <span class="keyword">if</span> (m_itemOffset <span class="operator">&lt;</span> <span class="number">0</span>) {
+                m_itemOffset <span class="operator">+</span><span class="operator">=</span> ih;
+                m_currentItem<span class="operator">-</span><span class="operator">-</span>;
+            }
+
+            <span class="keyword">if</span> (m_currentItem <span class="operator">&lt;</span> <span class="number">0</span>)
+                m_currentItem <span class="operator">+</span><span class="operator">=</span> ic;
+        }
+        <span class="comment">// -- repaint</span>
+        update();
+
+        se<span class="operator">-</span><span class="operator">&gt;</span>accept();
+        <span class="keyword">return</span> <span class="keyword">true</span>;
+<span class="comment">// ![3]</span>
+    }
+    <span class="keyword">default</span>:
+        <span class="keyword">return</span> <span class="type"><a href="../qtwidgets/qwidget.html">QWidget</a></span><span class="operator">::</span>event(e);
+    }
+    <span class="keyword">return</span> <span class="keyword">true</span>;
+}
+
+<span class="type">void</span> AbstractWheelWidget<span class="operator">::</span>paintEvent(<span class="type"><a href="../qtgui/qpaintevent.html">QPaintEvent</a></span><span class="operator">*</span> event)
+{
+    Q_UNUSED( event );
+
+    <span class="comment">// -- first calculate size and position.</span>
+    <span class="type">int</span> w <span class="operator">=</span> width();
+    <span class="type">int</span> h <span class="operator">=</span> height();
+
+    <span class="type"><a href="../qtgui/qpainter.html">QPainter</a></span> painter(<span class="keyword">this</span>);
+    <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span> palette <span class="operator">=</span> <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span><span class="operator">::</span>palette();
+    <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>ColorGroup colorGroup <span class="operator">=</span> isEnabled() <span class="operator">?</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>Active : <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>Disabled;
+
+    <span class="comment">// linear gradient brush</span>
+    <span class="type"><a href="../qtgui/qlineargradient.html">QLinearGradient</a></span> grad(<span class="number">0.5</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">0.5</span><span class="operator">,</span> <span class="number">1.0</span>);
+    grad<span class="operator">.</span>setColorAt(<span class="number">0</span><span class="operator">,</span> palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>ButtonText));
+    grad<span class="operator">.</span>setColorAt(<span class="number">0.2</span><span class="operator">,</span> palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>Button));
+    grad<span class="operator">.</span>setColorAt(<span class="number">0.8</span><span class="operator">,</span> palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>Button));
+    grad<span class="operator">.</span>setColorAt(<span class="number">1.0</span><span class="operator">,</span> palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>ButtonText));
+    grad<span class="operator">.</span>setCoordinateMode( <span class="type"><a href="../qtgui/qgradient.html">QGradient</a></span><span class="operator">::</span>ObjectBoundingMode );
+    <span class="type"><a href="../qtgui/qbrush.html">QBrush</a></span> gBrush( grad );
+
+    <span class="comment">// paint a border and background</span>
+    painter<span class="operator">.</span>setPen(palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>ButtonText));
+    painter<span class="operator">.</span>setBrush(gBrush);
+    <span class="comment">// painter.setBrushOrigin( QPointF( 0.0, 0.0 ) );</span>
+    painter<span class="operator">.</span>drawRect( <span class="number">0</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> w<span class="operator">-</span><span class="number">1</span><span class="operator">,</span> h<span class="operator">-</span><span class="number">1</span> );
+
+    <span class="comment">// paint inner border</span>
+    painter<span class="operator">.</span>setPen(palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>Button));
+    painter<span class="operator">.</span>setBrush(<span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>NoBrush);
+    painter<span class="operator">.</span>drawRect( <span class="number">1</span><span class="operator">,</span> <span class="number">1</span><span class="operator">,</span> w<span class="operator">-</span><span class="number">3</span><span class="operator">,</span> h<span class="operator">-</span><span class="number">3</span> );
+
+    <span class="comment">// paint the items</span>
+    painter<span class="operator">.</span>setClipRect( <span class="type"><a href="../qtcore/qrect.html">QRect</a></span>( <span class="number">3</span><span class="operator">,</span> <span class="number">3</span><span class="operator">,</span> w<span class="operator">-</span><span class="number">6</span><span class="operator">,</span> h<span class="operator">-</span><span class="number">6</span> ) );
+    painter<span class="operator">.</span>setPen(palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>ButtonText));
+
+    <span class="type">int</span> iH <span class="operator">=</span> itemHeight();
+    <span class="type">int</span> iC <span class="operator">=</span> itemCount();
+    <span class="keyword">if</span> (iC <span class="operator">&gt;</span> <span class="number">0</span>) {
+
+        m_itemOffset <span class="operator">=</span> m_itemOffset <span class="operator">%</span> iH;
+
+        <span class="keyword">for</span> (<span class="type">int</span> i<span class="operator">=</span><span class="operator">-</span>h<span class="operator">/</span><span class="number">2</span><span class="operator">/</span>iH; i<span class="operator">&lt;</span><span class="operator">=</span>h<span class="operator">/</span><span class="number">2</span><span class="operator">/</span>iH<span class="operator">+</span><span class="number">1</span>; i<span class="operator">+</span><span class="operator">+</span>) {
+
+            <span class="type">int</span> itemNum <span class="operator">=</span> m_currentItem <span class="operator">+</span> i;
+            <span class="keyword">while</span> (itemNum <span class="operator">&lt;</span> <span class="number">0</span>)
+                itemNum <span class="operator">+</span><span class="operator">=</span> iC;
+            <span class="keyword">while</span> (itemNum <span class="operator">&gt;</span><span class="operator">=</span> iC)
+                itemNum <span class="operator">-</span><span class="operator">=</span> iC;
+
+            paintItem(<span class="operator">&amp;</span>painter<span class="operator">,</span> itemNum<span class="operator">,</span> <span class="type"><a href="../qtcore/qrect.html">QRect</a></span>(<span class="number">6</span><span class="operator">,</span> h<span class="operator">/</span><span class="number">2</span> <span class="operator">+</span>i<span class="operator">*</span>iH <span class="operator">-</span> m_itemOffset <span class="operator">-</span> iH<span class="operator">/</span><span class="number">2</span><span class="operator">,</span> w<span class="operator">-</span><span class="number">6</span><span class="operator">,</span> iH ));
+        }
+    }
+
+    <span class="comment">// draw a transparent bar over the center</span>
+    <span class="type"><a href="../qtgui/qcolor.html">QColor</a></span> highlight <span class="operator">=</span> palette<span class="operator">.</span>color(colorGroup<span class="operator">,</span> <span class="type"><a href="../qtgui/qpalette.html">QPalette</a></span><span class="operator">::</span>Highlight);
+    highlight<span class="operator">.</span>setAlpha(<span class="number">150</span>);
+
+    <span class="type"><a href="../qtgui/qlineargradient.html">QLinearGradient</a></span> grad2(<span class="number">0.5</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">0.5</span><span class="operator">,</span> <span class="number">1.0</span>);
+    grad2<span class="operator">.</span>setColorAt(<span class="number">0</span><span class="operator">,</span> highlight);
+    grad2<span class="operator">.</span>setColorAt(<span class="number">1.0</span><span class="operator">,</span> highlight<span class="operator">.</span>lighter());
+    grad2<span class="operator">.</span>setCoordinateMode( <span class="type"><a href="../qtgui/qgradient.html">QGradient</a></span><span class="operator">::</span>ObjectBoundingMode );
+    <span class="type"><a href="../qtgui/qbrush.html">QBrush</a></span> gBrush2( grad2 );
+
+    <span class="type"><a href="../qtgui/qlineargradient.html">QLinearGradient</a></span> grad3(<span class="number">0.5</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">0.5</span><span class="operator">,</span> <span class="number">1.0</span>);
+    grad3<span class="operator">.</span>setColorAt(<span class="number">0</span><span class="operator">,</span> highlight);
+    grad3<span class="operator">.</span>setColorAt(<span class="number">1.0</span><span class="operator">,</span> highlight<span class="operator">.</span>darker());
+    grad3<span class="operator">.</span>setCoordinateMode( <span class="type"><a href="../qtgui/qgradient.html">QGradient</a></span><span class="operator">::</span>ObjectBoundingMode );
+    <span class="type"><a href="../qtgui/qbrush.html">QBrush</a></span> gBrush3( grad3 );
+
+    painter<span class="operator">.</span>fillRect( <span class="type"><a href="../qtcore/qrect.html">QRect</a></span>( <span class="number">0</span><span class="operator">,</span> h<span class="operator">/</span><span class="number">2</span> <span class="operator">-</span> iH<span class="operator">/</span><span class="number">2</span><span class="operator">,</span> w<span class="operator">,</span> iH<span class="operator">/</span><span class="number">2</span> )<span class="operator">,</span> gBrush2 );
+    painter<span class="operator">.</span>fillRect( <span class="type"><a href="../qtcore/qrect.html">QRect</a></span>( <span class="number">0</span><span class="operator">,</span> h<span class="operator">/</span><span class="number">2</span><span class="operator">,</span>        w<span class="operator">,</span> iH<span class="operator">/</span><span class="number">2</span> )<span class="operator">,</span> gBrush3 );
+}
+
+<span class="comment">/*!
+    Rotates the wheel widget to a given index.
+    You can also give an index greater than itemCount or less than zero in which
+    case the wheel widget will scroll in the given direction and end up with
+    (index % itemCount)
+*/</span>
+<span class="type">void</span> AbstractWheelWidget<span class="operator">::</span>scrollTo(<span class="type">int</span> index)
+{
+    <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span> <span class="operator">*</span>scroller <span class="operator">=</span> <span class="type"><a href="../qtwidgets/qscroller.html">QScroller</a></span><span class="operator">::</span>scroller(<span class="keyword">this</span>);
+
+    scroller<span class="operator">-</span><span class="operator">&gt;</span>scrollTo(<span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span>(<span class="number">0</span><span class="operator">,</span> WHEEL_SCROLL_OFFSET <span class="operator">+</span> index <span class="operator">*</span> itemHeight())<span class="operator">,</span> <span class="number">5000</span>);
+}
+
+<span class="comment">/*!
+    \class StringWheelWidget
+    \brief The StringWheelWidget class is an implementation of the AbstractWheelWidget class that draws QStrings as items.
+    \sa AbstractWheelWidget
+*/</span>
+
+StringWheelWidget<span class="operator">::</span>StringWheelWidget(<span class="type">bool</span> touch)
+    : AbstractWheelWidget(touch)
+{ }
+
+<span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> StringWheelWidget<span class="operator">::</span>items() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_items;
+}
+
+<span class="type">void</span> StringWheelWidget<span class="operator">::</span>setItems( <span class="keyword">const</span> <span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> <span class="operator">&amp;</span>items )
+{
+    m_items <span class="operator">=</span> items;
+    <span class="keyword">if</span> (m_currentItem <span class="operator">&gt;</span><span class="operator">=</span> items<span class="operator">.</span>count())
+        m_currentItem <span class="operator">=</span> items<span class="operator">.</span>count()<span class="operator">-</span><span class="number">1</span>;
+    update();
+}
+
+<span class="type"><a href="../qtcore/qsize.html">QSize</a></span> StringWheelWidget<span class="operator">::</span>sizeHint() <span class="keyword">const</span>
+{
+    <span class="comment">// determine font size</span>
+    <span class="type"><a href="../qtgui/qfontmetrics.html">QFontMetrics</a></span> fm(font());
+
+    <span class="keyword">return</span> <span class="type"><a href="../qtcore/qsize.html">QSize</a></span>( fm<span class="operator">.</span>width(<span class="string">&quot;m&quot;</span>) <span class="operator">*</span> <span class="number">10</span> <span class="operator">+</span> <span class="number">6</span><span class="operator">,</span> fm<span class="operator">.</span>height() <span class="operator">*</span> <span class="number">7</span> <span class="operator">+</span> <span class="number">6</span> );
+}
+
+<span class="type"><a href="../qtcore/qsize.html">QSize</a></span> StringWheelWidget<span class="operator">::</span>minimumSizeHint() <span class="keyword">const</span>
+{
+    <span class="type"><a href="../qtgui/qfontmetrics.html">QFontMetrics</a></span> fm(font());
+
+    <span class="keyword">return</span> <span class="type"><a href="../qtcore/qsize.html">QSize</a></span>( fm<span class="operator">.</span>width(<span class="string">&quot;m&quot;</span>) <span class="operator">*</span> <span class="number">5</span> <span class="operator">+</span> <span class="number">6</span><span class="operator">,</span> fm<span class="operator">.</span>height() <span class="operator">*</span> <span class="number">3</span> <span class="operator">+</span> <span class="number">6</span> );
+}
+
+<span class="type">void</span> StringWheelWidget<span class="operator">::</span>paintItem(<span class="type"><a href="../qtgui/qpainter.html">QPainter</a></span><span class="operator">*</span> painter<span class="operator">,</span> <span class="type">int</span> index<span class="operator">,</span> <span class="keyword">const</span> <span class="type"><a href="../qtcore/qrect.html">QRect</a></span> <span class="operator">&amp;</span>rect)
+{
+    painter<span class="operator">-</span><span class="operator">&gt;</span>drawText(rect<span class="operator">,</span> <span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>AlignCenter<span class="operator">,</span> m_items<span class="operator">.</span>at(index));
+}
+
+<span class="type">int</span> StringWheelWidget<span class="operator">::</span>itemHeight() <span class="keyword">const</span>
+{
+    <span class="type"><a href="../qtgui/qfontmetrics.html">QFontMetrics</a></span> fm(font());
+    <span class="keyword">return</span> fm<span class="operator">.</span>height();
+}
+
+<span class="type">int</span> StringWheelWidget<span class="operator">::</span>itemCount() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> m_items<span class="operator">.</span>count();
+}</pre>
+</div>
+<!-- @@@webkitwidgets/scroller/wheel/wheelwidget.cpp -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

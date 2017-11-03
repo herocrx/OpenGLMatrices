@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- styling.qdoc -->
+  <title>QtQuick 5.0: Use Case - Style And Theme Support</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#example-themed-text">Example Themed Text</a></li>
+<li class="level2"><a href="#button-definition">Button Definition</a></li>
+<li class="level2"><a href="#using-the-text">Using the Text</a></li>
+<li class="level1"><a href="#example-themed-button">Example Themed Button</a></li>
+<li class="level2"><a href="#button-definition">Button Definition</a></li>
+<li class="level2"><a href="#using-the-button">Using the Button</a></li>
+</ul>
+</div>
+<h1 class="title">Use Case - Style And Theme Support</h1>
+<span class="subtitle"></span>
+<!-- $$$qtquick-usecase-styling.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>The types provided in the <a href="qtquick-module.html">QtQuick</a> module are not complete user interface elements on their own. A common use case is to develop a set of custom styled user interface elements out of the types in the <a href="qtquick-module.html">QtQuick</a> module. This is easily accomplished by creating your own reusable components.</p>
+<p>With the reusable components approach, you define your own type with the appearance you want to have in your application and style that type directly. You then use that type in your application instead of the unstyled type. For example, you could create a MyText.qml which is a Text element with certain properties set by default, and use MyText instead of Text elsewhere in your application.</p>
+<a name="example-themed-text"></a>
+<h2>Example Themed Text</h2>
+<a name="button-definition"></a>
+<h3>Button Definition</h3>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-text.html">Text</a></span> {
+    <span class="name">color</span>: <span class="string">&quot;lightsteelblue&quot;</span>
+    <span class="type">font</span> { <span class="name">family</span>: <span class="string">'Courier'</span>; <span class="name">pixelSize</span>: <span class="number">20</span>; <span class="name">bold</span>: <span class="number">true</span>; <span class="name">capitalization</span>: <span class="name">Font</span>.<span class="name">SmallCaps</span> }
+}</pre>
+<a name="using-the-text"></a>
+<h3>Using the Text</h3>
+<pre class="qml">    <span class="type"><a href="qml-qtquick2-column.html">Column</a></span> {
+        <span class="name">spacing</span>: <span class="number">20</span>
+
+        <span class="type">MyText</span> { <span class="name">text</span>: <span class="string">'I am the very model of a modern major general!'</span> }
+
+        <span class="type">MyText</span> { <span class="name">text</span>: <span class="string">'I\'ve information vegetable, animal and mineral.'</span> }
+
+        <span class="type">MyText</span> {
+            <span class="name">width</span>: <span class="name">root</span>.<span class="name">width</span>
+            <span class="name">wrapMode</span>: <span class="name">Text</span>.<span class="name">WordWrap</span>
+            <span class="name">text</span>: <span class="string">'I know the kings of England and I quote the fights historical:'</span>
+        }
+
+        <span class="type">MyText</span> { <span class="name">text</span>: <span class="string">'From Marathon to Waterloo in order categorical.'</span> }
+    }</pre>
+<p class="centerAlign"><img src="images/qml-uses-styling-text.png" alt="" /></p><p>Because the root item in MyText.qml is a Text item it will behave as a Text item, and the properties can be overriden in specific uses. However, the properties will be set to the values specified in MyText when the item is first generated, thus applying your style by default.</p>
+<p>For pre-styled user interface elements, see the <tt>Qt Components</tt> add-on which provides a set of components. For accessing the system theme, see the <a href="qml-qtquick2-systempalette.html">SystemPalette</a> element documentation.</p>
+<a name="example-themed-button"></a>
+<h2>Example Themed Button</h2>
+<a name="button-definition"></a>
+<h3>Button Definition</h3>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">id</span>: <span class="name">container</span>
+    <span class="comment">// The caption property is an alias to the text of the Text element, so Button users can set the text</span>
+    property <span class="type">alias</span> <span class="name">caption</span>: <span class="name">txt</span>.<span class="name">text</span>
+    <span class="comment">// The clicked signal is emitted whenever the button is clicked, so Button users can respond</span>
+    signal <span class="type">clicked</span>
+
+    <span class="comment">// The button is set to have rounded corners and a thin black border</span>
+    <span class="name">radius</span>: <span class="number">4</span>
+    <span class="name">border</span>.width: <span class="number">1</span>
+    <span class="comment">// This button has a fixed size, but it could resize based on the text</span>
+    <span class="name">width</span>: <span class="number">160</span>
+    <span class="name">height</span>: <span class="number">40</span>
+
+    <span class="comment">// A SystemPalette is used to get colors from the system settings for the background</span>
+    <span class="type"><a href="qml-qtquick2-systempalette.html">SystemPalette</a></span> { <span class="name">id</span>: <span class="name">sysPalette</span> }
+
+    <span class="name">gradient</span>: <span class="name">Gradient</span> {
+
+        <span class="comment">// The top gradient is darker when 'pressed', all colors come from the system palette</span>
+        <span class="type"><a href="qml-qtquick2-gradientstop.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">0.0</span>; <span class="name">color</span>: <span class="name">ma</span>.<span class="name">pressed</span> ? <span class="name">sysPalette</span>.<span class="name">dark</span> : <span class="name">sysPalette</span>.<span class="name">light</span> }
+
+        <span class="type"><a href="qml-qtquick2-gradientstop.html">GradientStop</a></span> { <span class="name">position</span>: <span class="number">1.0</span>; <span class="name">color</span>: <span class="name">sysPalette</span>.<span class="name">button</span> }
+    }
+
+    <span class="type"><a href="qml-qtquick2-text.html">Text</a></span> {
+        <span class="name">id</span>: <span class="name">txt</span>
+        <span class="comment">// This is the default value of the text, but most Button users will set their own with the caption property</span>
+        <span class="name">text</span>: <span class="string">&quot;Button&quot;</span>
+        <span class="name">font</span>.bold: <span class="number">true</span>
+        <span class="name">font</span>.pixelSize: <span class="number">16</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+    }
+
+    <span class="type"><a href="qml-qtquick2-mousearea.html">MouseArea</a></span> {
+        <span class="name">id</span>: <span class="name">ma</span>
+        <span class="name">anchors</span>.fill: <span class="name">parent</span>
+        <span class="comment">// This re-emits the clicked signal on the root item, so that Button users can respond to it</span>
+        <span class="name">onClicked</span>: <span class="name">container</span>.<span class="name">clicked</span>()
+    }
+}</pre>
+<a name="using-the-button"></a>
+<h3>Using the Button</h3>
+<pre class="qml">import QtQuick 2.0
+
+<span class="type"><a href="qml-qtquick2-item.html">Item</a></span> {
+    <span class="name">width</span>: <span class="number">320</span>
+    <span class="name">height</span>: <span class="number">480</span>
+
+    <span class="type"><a href="qml-qtquick2-rectangle.html">Rectangle</a></span> {
+        <span class="name">color</span>: <span class="string">&quot;#272822&quot;</span>
+        <span class="name">width</span>: <span class="number">320</span>
+        <span class="name">height</span>: <span class="number">480</span>
+    }
+
+    <span class="type"><a href="qml-qtquick2-column.html">Column</a></span> {
+        <span class="name">width</span>: <span class="name">childrenRect</span>.<span class="name">width</span>
+        <span class="name">anchors</span>.centerIn: <span class="name">parent</span>
+        <span class="name">spacing</span>: <span class="number">8</span>
+        <span class="comment">// Each of these is a Button as styled in Button.qml</span>
+        <span class="type">Button</span> { <span class="name">caption</span>: <span class="string">&quot;Eeny&quot;</span>; <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Eeny&quot;</span>);}
+        <span class="type">Button</span> { <span class="name">caption</span>: <span class="string">&quot;Meeny&quot;</span>; <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Meeny&quot;</span>);}
+        <span class="type">Button</span> { <span class="name">caption</span>: <span class="string">&quot;Miny&quot;</span>; <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Miny&quot;</span>);}
+        <span class="type">Button</span> { <span class="name">caption</span>: <span class="string">&quot;Mo&quot;</span>; <span class="name">onClicked</span>: <span class="name">console</span>.<span class="name">log</span>(<span class="string">&quot;Mo&quot;</span>);}
+    }
+}</pre>
+<p class="centerAlign"><img src="images/qml-uses-styling.png" alt="" /></p><p>For more examples of creating custom UI components in QML, see the tutorials.</p>
+</div>
+<!-- @@@qtquick-usecase-styling.html -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

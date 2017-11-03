@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qdeclarative_playvariation_p.cpp -->
+  <title>qtmultimedia 5.0: PlayVariation</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">PlayVariation</h1>
+<span class="subtitle"></span>
+<!-- $$$PlayVariation-brief -->
+<p>Define a playback variation for <a href="qml-qtaudioengine1-sound.html">sounds</a>. So each time the playback of the same sound can be a slightly different even with the same <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a>. <a href="#details">More...</a></p>
+<!-- @@@PlayVariation -->
+<p>Inherits <a href="../qtquick/qml-qtquick2-item.html">Item</a></p>
+<p>This type was introduced in qtmultimedia 1.0.</p>
+<ul>
+<li><a href="qml-qtaudioengine1-playvariation-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<ul>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-playvariation.html#looping-prop">looping</a></b></b> : bool</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-playvariation.html#maxGain-prop">maxGain</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-playvariation.html#maxPitch-prop">maxPitch</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-playvariation.html#minGain-prop">minGain</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-playvariation.html#minPitch-prop">minPitch</a></b></b> : real</li>
+<li class="fn"><b><b><a href="qml-qtaudioengine1-playvariation.html#sample-prop">sample</a></b></b> : string</li>
+</ul>
+<!-- $$$PlayVariation-description -->
+<a name="details"></a>
+<h2>Detailed Description</h2>
+<p>This type is part of the <b>QtAudioEngine 1.0</b> module.</p>
+<p>PlayVariation must be defined inside a <a href="qml-qtaudioengine1-sound.html">Sound</a>.</p>
+<pre class="qml">import QtQuick 2.0
+import QtAudioEngine 1.0
+
+<span class="type"><a href="../qtquick/qml-qtquick2-rectangle.html">Rectangle</a></span> {
+    <span class="name">color</span>:<span class="string">&quot;white&quot;</span>
+    <span class="name">width</span>: <span class="number">300</span>
+    <span class="name">height</span>: <span class="number">500</span>
+
+    <span class="type"><a href="qml-qtaudioengine1-audioengine.html">AudioEngine</a></span> {
+        <span class="name">id</span>:<span class="name">audioengine</span>
+
+        <span class="type"><a href="qml-qtaudioengine1-audiosample.html">AudioSample</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion01&quot;</span>
+            <span class="name">source</span>: <span class="string">&quot;explosion-01.wav&quot;</span>
+        }
+
+        <span class="type"><a href="qml-qtaudioengine1-audiosample.html">AudioSample</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion02&quot;</span>
+            <span class="name">source</span>: <span class="string">&quot;explosion-02.wav&quot;</span>
+        }
+
+        <span class="type"><a href="qml-qtaudioengine1-sound.html">Sound</a></span> {
+            <span class="name">name</span>:<span class="string">&quot;explosion&quot;</span>
+            <span class="type">PlayVariation</span> {
+                <span class="name">sample</span>:<span class="string">&quot;explosion01&quot;</span>
+                <span class="name">minPitch</span>: <span class="number">0.8</span>
+                <span class="name">maxPitch</span>: <span class="number">1.1</span>
+            }
+            <span class="type">PlayVariation</span> {
+                <span class="name">sample</span>:<span class="string">&quot;explosion01&quot;</span>
+                <span class="name">minGain</span>: <span class="number">1.1</span>
+                <span class="name">maxGain</span>: <span class="number">1.5</span>
+            }
+        }
+    }
+}</pre>
+<!-- @@@PlayVariation -->
+<h2>Property Documentation</h2>
+<!-- $$$looping -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="looping-prop"></a><span class="name">looping</span> : <span class="type"><a href="../qtqml/qml-bool.html">bool</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property indicates whether the playback will be looped or not.</p>
+</div></div><!-- @@@looping -->
+<br/>
+<!-- $$$maxGain -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="maxGain-prop"></a><span class="name">maxGain</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property specifies the maximum gain adjustment that can be applied in any playback.</p>
+</div></div><!-- @@@maxGain -->
+<br/>
+<!-- $$$maxPitch -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="maxPitch-prop"></a><span class="name">maxPitch</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property specifies the maximum pitch adjustment that can be applied in any playback.</p>
+</div></div><!-- @@@maxPitch -->
+<br/>
+<!-- $$$minGain -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="minGain-prop"></a><span class="name">minGain</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property specifies the minimum gain adjustment that can be applied in any playback.</p>
+</div></div><!-- @@@minGain -->
+<br/>
+<!-- $$$minPitch -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="minPitch-prop"></a><span class="name">minPitch</span> : <span class="type"><a href="../qtqml/qml-real.html">real</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property specifies the minimum pitch adjustment that can be applied in any playback.</p>
+</div></div><!-- @@@minPitch -->
+<br/>
+<!-- $$$sample -->
+<div class="qmlitem"><div class="qmlproto"><table class="qmlname"><tr valign="top" class="odd"><td class="tblQmlPropNode"><p><a name="sample-prop"></a><span class="name">sample</span> : <span class="type"><a href="../qtqml/qml-string.html">string</a></span></p></td></tr></table></div><div class="qmldoc"><p>This property specifies which <a href="qml-qtaudioengine1-audiosample.html">AudioSample</a> this variation will use.</p>
+</div></div><!-- @@@sample -->
+<br/>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

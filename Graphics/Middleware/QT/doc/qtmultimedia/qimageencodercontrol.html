@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qimageencodercontrol.cpp -->
+  <title>qtmultimedia 5.0: QImageEncoderControl Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#protected-functions">Protected Functions</a></li>
+<li class="level1"><a href="#macros">Macros</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QImageEncoderControl Class</h1>
+<!-- $$$QImageEncoderControl-brief -->
+<p>The QImageEncoderControl class provides access to the settings of a media service that performs image encoding. <a href="#details">More...</a></p>
+<!-- @@@QImageEncoderControl -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QImageEncoderControl&gt;</span></pre><p><b>Inherits: </b><a href="qmediacontrol.html">QMediaControl</a>.</p>
+<ul>
+<li><a href="qimageencodercontrol-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#dtor.QImageEncoderControl">~QImageEncoderControl</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QString </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#imageCodecDescription">imageCodecDescription</a></b>(const QString &amp;<i> codec</i>) const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QImageEncoderSettings </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#imageSettings">imageSettings</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual void </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#setImageSettings">setImageSettings</a></b>(const QImageEncoderSettings &amp;<i> settings</i>) = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QStringList </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#supportedImageCodecs">supportedImageCodecs</a></b>() const = 0</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QList&lt;QSize&gt; </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#supportedResolutions">supportedResolutions</a></b>(const QImageEncoderSettings &amp;<i> settings</i>, bool *<i> continuous</i> = 0) const = 0</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="protected-functions"></a>
+<h2>Protected Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#QImageEncoderControl">QImageEncoderControl</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+</table>
+<ul>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+</ul>
+<a name="macros"></a>
+<h2>Macros</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qimageencodercontrol.html#QImageEncoderControl_iid">QImageEncoderControl_iid</a></b></td></tr>
+</table>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QImageEncoderControl-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QImageEncoderControl class provides access to the settings of a media service that performs image encoding.</p>
+<p>If a <a href="qmediaservice.html">QMediaService</a> supports encoding image data it will implement QImageEncoderControl. This control allows to <a href="qimageencodercontrol.html#setImageSettings">set image encoding settings</a> and provides functions for quering supported image <a href="qimageencodercontrol.html#supportedImageCodecs">codecs</a> and <a href="qimageencodercontrol.html#supportedResolutions">resolutions</a>.</p>
+<p>The interface name of QImageEncoderControl is <tt>org.qt-project.qt.imageencodercontrol/5.0</tt> as defined in <a href="qimageencodercontrol.html#QImageEncoderControl_iid">QImageEncoderControl_iid</a>.</p>
+</div>
+<p><b>See also </b><a href="qimageencodersettings.html">QImageEncoderSettings</a> and <a href="qmediaservice.html#requestControl">QMediaService::requestControl</a>().</p>
+<!-- @@@QImageEncoderControl -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QImageEncoderControl[overload1]$$$QImageEncoderControlQObject* -->
+<h3 class="fn"><a name="QImageEncoderControl"></a>QImageEncoderControl::<span class="name">QImageEncoderControl</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)<tt> [protected]</tt></h3>
+<p>Constructs a new image encoder control object with the given <i>parent</i></p>
+<!-- @@@QImageEncoderControl -->
+<!-- $$$~QImageEncoderControl[overload1]$$$~QImageEncoderControl -->
+<h3 class="fn"><a name="dtor.QImageEncoderControl"></a>QImageEncoderControl::<span class="name">~QImageEncoderControl</span>()<tt> [virtual]</tt></h3>
+<p>Destroys the image encoder control.</p>
+<!-- @@@~QImageEncoderControl -->
+<!-- $$$imageCodecDescription[overload1]$$$imageCodecDescriptionconstQString& -->
+<h3 class="fn"><a name="imageCodecDescription"></a><span class="type"><a href="../qtcore/qstring.html">QString</a></span> QImageEncoderControl::<span class="name">imageCodecDescription</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> codec</i>) const<tt> [pure virtual]</tt></h3>
+<p>Returns a description of an image <i>codec</i>.</p>
+<!-- @@@imageCodecDescription -->
+<!-- $$$imageSettings[overload1]$$$imageSettings -->
+<h3 class="fn"><a name="imageSettings"></a><span class="type"><a href="qimageencodersettings.html">QImageEncoderSettings</a></span> QImageEncoderControl::<span class="name">imageSettings</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns the currently used image encoder settings.</p>
+<p>The returned value may be different tha passed to <a href="qimageencodercontrol.html#setImageSettings">QImageEncoderControl::setImageSettings</a>() if the settings contains the default or undefined parameters. In this case if the undefined parameters are already resolved, they should be returned.</p>
+<p><b>See also </b><a href="qimageencodercontrol.html#setImageSettings">setImageSettings</a>().</p>
+<!-- @@@imageSettings -->
+<!-- $$$setImageSettings[overload1]$$$setImageSettingsconstQImageEncoderSettings& -->
+<h3 class="fn"><a name="setImageSettings"></a><span class="type">void</span> QImageEncoderControl::<span class="name">setImageSettings</span>(const <span class="type"><a href="qimageencodersettings.html">QImageEncoderSettings</a></span> &amp;<i> settings</i>)<tt> [pure virtual]</tt></h3>
+<p>Sets the selected image encoder <i>settings</i>.</p>
+<p><b>See also </b><a href="qimageencodercontrol.html#imageSettings">imageSettings</a>().</p>
+<!-- @@@setImageSettings -->
+<!-- $$$supportedImageCodecs[overload1]$$$supportedImageCodecs -->
+<h3 class="fn"><a name="supportedImageCodecs"></a><span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> QImageEncoderControl::<span class="name">supportedImageCodecs</span>() const<tt> [pure virtual]</tt></h3>
+<p>Returns a list of supported image codecs.</p>
+<!-- @@@supportedImageCodecs -->
+<!-- $$$supportedResolutions[overload1]$$$supportedResolutionsconstQImageEncoderSettings&bool* -->
+<h3 class="fn"><a name="supportedResolutions"></a><span class="type"><a href="../qtcore/qlist.html">QList</a></span>&lt;<span class="type"><a href="../qtcore/qsize.html">QSize</a></span>&gt; QImageEncoderControl::<span class="name">supportedResolutions</span>(const <span class="type"><a href="qimageencodersettings.html">QImageEncoderSettings</a></span> &amp;<i> settings</i>, <span class="type">bool</span> *<i> continuous</i> = 0) const<tt> [pure virtual]</tt></h3>
+<p>Returns a list of supported resolutions.</p>
+<p>If non null image <i>settings</i> parameter is passed, the returned list is reduced to resolutions supported with partial settings applied. It can be used to query the list of resolutions, supported by specific image codec.</p>
+<p>If the encoder supports arbitrary resolutions within the supported resolutions range, *<i>continuous</i> is set to true, otherwise *<i>continuous</i> is set to false.</p>
+<!-- @@@supportedResolutions -->
+</div>
+<div class="macros">
+<h2>Macro Documentation</h2>
+<!-- $$$QImageEncoderControl_iid[overload1]$$$QImageEncoderControl_iid -->
+<h3 class="fn"><a name="QImageEncoderControl_iid"></a><span class="name">QImageEncoderControl_iid</span></h3>
+<p><tt>org.qt-project.qt.imageencodercontrol/5.0</tt></p>
+<p>Defines the interface name of the <a href="qimageencodercontrol.html">QImageEncoderControl</a> class.</p>
+<!-- @@@QImageEncoderControl_iid -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

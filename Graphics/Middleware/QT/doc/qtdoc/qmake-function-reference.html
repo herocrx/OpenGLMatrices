@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qmake-manual.qdoc -->
+  <title>QtDoc 5.0: Replace Functions</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+  <link rel="prev" href="qmake-variable-reference.html" />
+  <link rel="next" href="qmake-test-function-reference.html" />
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="qmake-variable-reference.html">qmake Variable Reference</a>
+<a class="nextPage" href="qmake-test-function-reference.html">Test Functions</a>
+</p><p/>
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#built-in-replace-functions">Built-in Replace Functions</a></li>
+<li class="level2"><a href="#absolute-path-path-base">absolute_path(path[, base])</a></li>
+<li class="level2"><a href="#basename-variablename">basename(variablename)</a></li>
+<li class="level2"><a href="#cat-filename-mode">cat(filename[, mode])</a></li>
+<li class="level2"><a href="#clean-path-path">clean_path(path)</a></li>
+<li class="level2"><a href="#dirname-file">dirname(file)</a></li>
+<li class="level2"><a href="#enumerate-vars">enumerate_vars</a></li>
+<li class="level2"><a href="#escape-expand-arg1-arg2-argn">escape_expand(arg1 [, arg2 ..&#x2e;, argn])</a></li>
+<li class="level2"><a href="#find-variablename-substr">find(variablename, substr)</a></li>
+<li class="level2"><a href="#first-variablename">first(variablename)</a></li>
+<li class="level2"><a href="#format-number-number-options">format_number(number[, options..&#x2e;])</a></li>
+<li class="level2"><a href="#fromfile-filename-variablename">fromfile(filename, variablename)</a></li>
+<li class="level2"><a href="#join-variablename-glue-before-after">join(variablename, glue, before, after)</a></li>
+<li class="level2"><a href="#last-variablename">last(variablename)</a></li>
+<li class="level2"><a href="#list-arg1-arg2-argn">list(arg1 [, arg2 ..&#x2e;, argn])</a></li>
+<li class="level2"><a href="#lower-arg1-arg2-argn">lower(arg1 [, arg2 ..&#x2e;, argn])</a></li>
+<li class="level2"><a href="#member-variablename-position">member(variablename, position)</a></li>
+<li class="level2"><a href="#prompt-question">prompt(question)</a></li>
+<li class="level2"><a href="#quote-string">quote(string)</a></li>
+<li class="level2"><a href="#re-escape-string">re_escape(string)</a></li>
+<li class="level2"><a href="#relative-path-filepath-base">relative_path(filePath[, base])</a></li>
+<li class="level2"><a href="#replace-string-old-string-new-string">replace(string, old_string, new_string)</a></li>
+<li class="level2"><a href="#sprintf-string-arguments">sprintf(string, arguments..&#x2e;)</a></li>
+<li class="level2"><a href="#resolve-depends-variablename-prefix">resolve_depends(variablename, prefix)</a></li>
+<li class="level2"><a href="#reverse-variablename">reverse(variablename)</a></li>
+<li class="level2"><a href="#section-variablename-separator-begin-end">section(variablename, separator, begin, end)</a></li>
+<li class="level2"><a href="#shadowed-path">shadowed(path)</a></li>
+<li class="level2"><a href="#shell-path-path">shell_path(path)</a></li>
+<li class="level2"><a href="#shell-quote-arg">shell_quote(arg)</a></li>
+<li class="level2"><a href="#size-variablename">size(variablename)</a></li>
+<li class="level2"><a href="#sort-depends-variablename-prefix">sort_depends(variablename, prefix)</a></li>
+<li class="level2"><a href="#split-variablename-separator">split(variablename, separator)</a></li>
+<li class="level2"><a href="#system-command-mode">system(command[, mode])</a></li>
+<li class="level2"><a href="#system-path-path">system_path(path)</a></li>
+<li class="level2"><a href="#system-quote-arg">system_quote(arg)</a></li>
+<li class="level2"><a href="#unique-variablename">unique(variablename)</a></li>
+<li class="level2"><a href="#upper-arg1-arg2-argn">upper(arg1 [, arg2 ..&#x2e;, argn])</a></li>
+<li class="level2"><a href="#val-escape-variablename">val_escape(variablename)</a></li>
+</ul>
+</div>
+<h1 class="title">Replace Functions</h1>
+<span class="subtitle"></span>
+<!-- $$$qmake-function-reference.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>qmake provides functions for processing the contents of variables during the configuration process. These functions are called <i>replace functions</i>. Typically, they return values that you can assign to other variables. You can obtain these values by prefixing a function with the <tt>$$</tt> operator. Replace functions can be divided into built-in functions and function libraries.</p>
+<p>See also <a href="qmake-test-function-reference.html">Test Functions</a>.</p>
+<a name="built-in-replace-functions"></a>
+<h2>Built-in Replace Functions</h2>
+<p>Basic replace functions are implemented as built-in functions.</p>
+<a name="absolute-path-path-base"></a>
+<h3>absolute_path(path[, base])</h3>
+<p>Returns the absolute path of <tt>path</tt>.</p>
+<p>If <tt>base</tt> is not specified, uses the current directory as the base directory.</p>
+<p>For example, the following call returns the string <tt>&quot;/home/johndoe/myproject/readme.txt&quot;</tt>:</p>
+<pre class="cpp">message($$absolute_path(&quot;readme.txt&quot;, &quot;/home/johndoe/myproject&quot;))</pre>
+<p>See also <a href="#clean-path-path">clean_path()</a>, <a href="#relative-path-filepath-base">relative_path()</a>.</p>
+<a name="basename-variablename"></a>
+<h3>basename(variablename)</h3>
+<p>Returns the basename of the file specified. For example:</p>
+<pre class="cpp">FILE = /etc/passwd
+FILENAME = $$basename(FILE) #passwd</pre>
+<a name="cat-filename-mode"></a>
+<h3>cat(filename[, mode])</h3>
+<p>Returns the contents of <tt>filename</tt>. You can specify the following options for <tt>mode</tt>:</p>
+<ul>
+<li><tt>blob</tt> returns the entire contents of the file as one value</li>
+<li><tt>lines</tt> returns each line as a separate value (without line endings)</li>
+<li><tt>true</tt> (default value) and <tt>false</tt> return file contents as separate values, split according to qmake value list splitting rules (as in variable assignments). If <tt>mode</tt> is <tt>false</tt>, values that contain only a newline character are inserted into the list to indicate where line breaks were in the file.</li>
+</ul>
+<a name="clean-path-path"></a>
+<h3>clean_path(path)</h3>
+<p>Returns <tt>path</tt> with directory separators normalized (converted to &quot;/&quot;) and redundant ones removed, and &quot;.&quot;s and &quot;..&quot;s resolved (as far as possible). This function is a wrapper around QDir::cleanPath.</p>
+<p>See also <a href="#absolute-path-path-base">absolute_path()</a>, <a href="#relative-path-filepath-base">relative_path()</a>, <a href="#shell-path-path">shell_path()</a>, <a href="#system-path-path">system_path()</a>.</p>
+<a name="dirname-file"></a>
+<h3>dirname(file)</h3>
+<p>Returns the directory name part of the specified file. For example:</p>
+<pre class="cpp">FILE = /etc/X11R6/XF86Config
+DIRNAME = $$dirname(FILE) #/etc/X11R6</pre>
+<a name="enumerate-vars"></a>
+<h3>enumerate_vars</h3>
+<p>Returns a list of all defined variable names.</p>
+<a name="escape-expand-arg1-arg2-argn"></a>
+<h3>escape_expand(arg1 [, arg2 ..&#x2e;, argn])</h3>
+<p>This function accepts an arbitrary number of arguments. It expands the escape sequences <tt>\n</tt>, <tt>\r</tt>, <tt>\t</tt> for each argument and returns the arguments as a list.</p>
+<p><b>Note: </b>If you specify the string to expand literally, you need to escape the backslashes, as illustrated by the following code snippet:</p><pre class="cpp">message(&quot;First line$$escape_expand(\\n)Second line&quot;)</pre>
+<a name="find-variablename-substr"></a>
+<h3>find(variablename, substr)</h3>
+<p>Places all the values in <i>variablename</i> that match <i>substr</i>. <i>substr</i> may be a regular expression, and will be matched accordingly.</p>
+<pre class="cpp">MY_VAR = one two three four
+MY_VAR2 = $$join(MY_VAR, &quot; -L&quot;, -L) -Lfive
+MY_VAR3 = $$member(MY_VAR, 2) $$find(MY_VAR, t.*)</pre>
+<p>MY_VAR2 will contain '-Lone -Ltwo -Lthree -Lfour -Lfive', and MY_VAR3 will contains 'three two three'.</p>
+<a name="first-variablename"></a>
+<h3>first(variablename)</h3>
+<p>Returns the first value of <tt>variablename</tt>.</p>
+<p>For example, the following call returns <tt>firstname</tt>:</p>
+<pre class="cpp">CONTACT = firstname middlename surname phone
+message($$first(CONTACT))</pre>
+<p>See also <a href="#last-variablename">last()</a>.</p>
+<a name="format-number-number-options"></a>
+<h3>format_number(number[, options..&#x2e;])</h3>
+<p>Returns <tt>number</tt> in the format specified by <tt>options</tt>. You can specify the following options:</p>
+<ul>
+<li><tt>ibase=n</tt> sets the base of the input to <tt>n</tt></li>
+<li><tt>obase=n</tt> sets the base of the output to <tt>n</tt></li>
+<li><tt>width=n</tt> sets the minimum width of the output to <tt>n</tt>. If the output is shorter than <tt>width</tt>, it is padded with spaces</li>
+<li><tt>zeropad</tt> pads the output with zeroes instead of spaces</li>
+<li><tt>padsign</tt> prepends a space to positive values in the output</li>
+<li><tt>alwayssign</tt> prepends a plus sign to positive values in the output</li>
+<li><tt>leftalign</tt> places the padding to the right of the value in the output</li>
+</ul>
+<p>Floating-point numbers are currently not supported.</p>
+<p>For example, the following call converts the hexadecimal number <tt>BAD</tt> to <tt>002989</tt>:</p>
+<pre class="cpp">message($$format_number(BAD, ibase=16 width=6 zeropad))</pre>
+<a name="fromfile-filename-variablename"></a>
+<h3>fromfile(filename, variablename)</h3>
+<p>Evaluates <tt>filename</tt> as a qmake project file and returns the value assigned to <tt>variablename</tt>.</p>
+<p>See also <a href="qmake-test-function-reference.html#infile-filename-var-val">infile()</a>.</p>
+<a name="join-variablename-glue-before-after"></a>
+<h3>join(variablename, glue, before, after)</h3>
+<p>Joins the value of <i>variablename</i> with <tt>glue</tt>. If this value is non-empty it prefixes the value with <i>before</i> and suffix it with <i>after</i>. <i>variablename</i> is the only required field, the others default to empty strings. If you need to encode spaces in <i>glue</i>, <i>before</i>, or <i>after</i> you must quote them.</p>
+<a name="last-variablename"></a>
+<h3>last(variablename)</h3>
+<p>Returns the last value of <tt>variablename</tt>.</p>
+<p>For example, the following call returns <tt>phone</tt>:</p>
+<pre class="cpp">CONTACT = firstname middlename surname phone
+message($$last(CONTACT))</pre>
+<p>See also <a href="#first-variablename">first()</a>.</p>
+<a name="list-arg1-arg2-argn"></a>
+<h3>list(arg1 [, arg2 ..&#x2e;, argn])</h3>
+<p>This function takes an arbitrary number of arguments. It creates a uniquely named variable that contains a list of the arguments, and returns the name of that variable. You can use the variable to write a loop as illustrated by the following code snippet</p>
+<pre class="cpp">for(var, $$list(foo bar baz)) {
+    ...
+}</pre>
+<p>instead of:</p>
+<pre class="cpp">values = foo bar baz
+for(var, values) {
+    ...
+}</pre>
+<a name="lower-arg1-arg2-argn"></a>
+<h3>lower(arg1 [, arg2 ..&#x2e;, argn])</h3>
+<p>Takes an arbitrary number of arguments and converts them to lower case.</p>
+<p>See also <a href="#upper-arg1-arg2-argn">upper()</a>.</p>
+<a name="member-variablename-position"></a>
+<h3>member(variablename, position)</h3>
+<p>Returns the value at the given <i>position</i> in the list of items in <i>variablename</i>. If an item cannot be found at the position specified, an empty string is returned. <i>variablename</i> is the only required field. If not specified, <tt>position</tt> defaults to 0, causing the first value in the list to be returned.</p>
+<a name="prompt-question"></a>
+<h3>prompt(question)</h3>
+<p>Displays the specified <i>question</i>, and returns a value read from stdin.</p>
+<a name="quote-string"></a>
+<h3>quote(string)</h3>
+<p>Converts a whole <i>string</i> into a single entity and returns the result. This is just a fancy way of enclosing the string into double quotes.</p>
+<a name="re-escape-string"></a>
+<h3>re_escape(string)</h3>
+<p>Returns the <tt>string</tt> with every special regular expression character escaped with a backslash. This function is a wrapper around QRegExp::escape.</p>
+<a name="relative-path-filepath-base"></a>
+<h3>relative_path(filePath[, base])</h3>
+<p>Returns the path to <tt>filePath</tt> relative to <tt>base</tt>. If <tt>base</tt> is not specified, it is the current project directory. This function is a wrapper around QDir::relativeFilePath.</p>
+<p>See also <a href="#absolute-path-path-base">absolute_path()</a>, <a href="#clean-path-path">clean_path()</a>.</p>
+<a name="replace-string-old-string-new-string"></a>
+<h3>replace(string, old_string, new_string)</h3>
+<p>Replaces each instance of <tt>old_string</tt> with <tt>new_string</tt> in the contents of the variable supplied as <tt>string</tt>. For example, the code</p>
+<pre class="cpp">MESSAGE = This is a tent.
+message($$replace(MESSAGE, tent, test))</pre>
+<p>prints the message:</p>
+<pre class="cpp">This is a test.</pre>
+<a name="sprintf-string-arguments"></a>
+<h3>sprintf(string, arguments..&#x2e;)</h3>
+<p>Replaces %1-%9 with the arguments passed in the comma-separated list of function <i>arguments</i> and returns the processed string.</p>
+<a name="resolve-depends-variablename-prefix"></a>
+<h3>resolve_depends(variablename, prefix)</h3>
+<p>This is an internal function that you will typically not need.</p>
+<a name="reverse-variablename"></a>
+<h3>reverse(variablename)</h3>
+<p>Returns the values of <tt>variablename</tt> in reverse order.</p>
+<a name="section-variablename-separator-begin-end"></a>
+<h3>section(variablename, separator, begin, end)</h3>
+<p>Returns a section of the value of <tt>variablename</tt>. This function is a wrapper around QString::section.</p>
+<p>For example, the following call outputs <tt>surname</tt>:</p>
+<pre class="cpp">CONTACT = firstname:middlename:surname:phone
+message($$section(CONTACT, :, 2, 2))</pre>
+<a name="shadowed-path"></a>
+<h3>shadowed(path)</h3>
+<p>Maps the path from the project source directory to the build directory. This function returns <tt>path</tt> for in-source builds. It returns an empty string if <tt>path</tt> points outside of the source tree.</p>
+<a name="shell-path-path"></a>
+<h3>shell_path(path)</h3>
+<p>Converts all directory separators within <tt>path</tt> to separators that are compatible with the shell that is used while building the project (that is, the shell that is invoked by the make tool). For example, slashes are converted to backslashes when the Windows shell is used.</p>
+<p>See also <a href="#system-path-path">system_path()</a>.</p>
+<a name="shell-quote-arg"></a>
+<h3>shell_quote(arg)</h3>
+<p>Quotes <tt>arg</tt> for the shell that is used while building the project.</p>
+<p>See also <a href="#system-quote-arg">system_quote()</a>.</p>
+<a name="size-variablename"></a>
+<h3>size(variablename)</h3>
+<p>Returns the number of values of <tt>variablename</tt>.</p>
+<a name="sort-depends-variablename-prefix"></a>
+<h3>sort_depends(variablename, prefix)</h3>
+<p>This is an internal function that you will typically not need.</p>
+<a name="split-variablename-separator"></a>
+<h3>split(variablename, separator)</h3>
+<p>Splits the value of <tt>variablename</tt> into separate values, and returns them as a list. This function is a wrapper around QString::split.</p>
+<p>For example:</p>
+<pre class="cpp">CONTACT = firstname:middlename:surname:phone
+message($$split(CONTACT, :))</pre>
+<a name="system-command-mode"></a>
+<h3>system(command[, mode])</h3>
+<p>You can use this variant of the <tt>system</tt> function to obtain stdout from the command and assign it to a variable.</p>
+<p>For example:</p>
+<pre class="cpp">UNAME = $$system(uname -s)
+contains( UNAME, [lL]inux ):message( This looks like Linux ($$UNAME) to me )</pre>
+<p>See also the test variant of <a href="qmake-test-function-reference.html#system-command">system()</a>.</p>
+<a name="system-path-path"></a>
+<h3>system_path(path)</h3>
+<p>Converts all directory separators within <tt>path</tt> to separators that are compatible with the shell that is used by the <tt>system()</tt> functions to invoke commands. For example, slashes are converted to backslashes for the Windows shell.</p>
+<p>See also <a href="#shell-path-path">shell_path()</a>.</p>
+<a name="system-quote-arg"></a>
+<h3>system_quote(arg)</h3>
+<p>Quotes <tt>arg</tt> for the for the shell that is used by the <tt>system()</tt> functions.</p>
+<p>See also <a href="#shell-quote-arg">shell_quote()</a>.</p>
+<a name="unique"></a><a name="unique-variablename"></a>
+<h3>unique(variablename)</h3>
+<p>This will return a list of values in variable that are unique (that is with repetitive entries removed). For example:</p>
+<pre class="cpp">ARGS = 1 2 3 2 5 1
+ARGS = $$unique(ARGS) #1 2 3 5</pre>
+<a name="upper-arg1-arg2-argn"></a>
+<h3>upper(arg1 [, arg2 ..&#x2e;, argn])</h3>
+<p>Takes an arbitrary number of arguments and converts them to upper case.</p>
+<p>See also <a href="#lower-arg1-arg2-argn">lower()</a>.</p>
+<a name="val-escape-variablename"></a>
+<h3>val_escape(variablename)</h3>
+<p>Escapes the values of <tt>variablename</tt> in a way that enables parsing them as qmake code.</p>
+</div>
+<!-- @@@qmake-function-reference.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="qmake-variable-reference.html">qmake Variable Reference</a>
+<a class="nextPage" href="qmake-test-function-reference.html">Test Functions</a>
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

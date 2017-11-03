@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qsoundeffect.cpp -->
+  <title>qtmultimedia 5.0: QSoundEffect Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#public-slots">Public Slots</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#static-public-members">Static Public Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QSoundEffect Class</h1>
+<!-- $$$QSoundEffect-brief -->
+<p>The QSoundEffect class provides a way to play low latency sound effects. <a href="#details">More...</a></p>
+<!-- @@@QSoundEffect -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QSoundEffect&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<p>QSoundEffect is instantiated by QML Type <a href="qml-qtmultimedia5-soundeffect.html">SoundEffect</a></p>
+<ul>
+<li><a href="qsoundeffect-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#Loop-enum">Loop</a></b> { Infinite }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#Status-enum">Status</a></b> { Null, Loading, Ready, Error }</td></tr>
+</table>
+<a name="properties"></a>
+<h2>Properties</h2>
+<table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="qsoundeffect.html#category-prop">category</a></b> : QString</li>
+<li class="fn"><b><a href="qsoundeffect.html#loops-prop">loops</a></b> : int</li>
+<li class="fn"><b><a href="qsoundeffect.html#loopsRemaining-prop">loopsRemaining</a></b> : const int</li>
+<li class="fn"><b><a href="qsoundeffect.html#muted-prop">muted</a></b> : bool</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="qsoundeffect.html#playing-prop">playing</a></b> : const bool</li>
+<li class="fn"><b><a href="qsoundeffect.html#source-prop">source</a></b> : QUrl</li>
+<li class="fn"><b><a href="qsoundeffect.html#status-prop">status</a></b> : const Status</li>
+<li class="fn"><b><a href="qsoundeffect.html#volume-prop">volume</a></b> : qreal</li>
+</ul>
+</td></tr>
+</table>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#QSoundEffect">QSoundEffect</a></b>(QObject *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#dtor.QSoundEffect">~QSoundEffect</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QString </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#category-prop">category</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#isLoaded">isLoaded</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#muted-prop">isMuted</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#playing-prop">isPlaying</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#loops-prop">loopCount</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#loopsRemaining-prop">loopsRemaining</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#category-prop">setCategory</a></b>(const QString &amp;<i> category</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#loops-prop">setLoopCount</a></b>(int<i> loopCount</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#muted-prop">setMuted</a></b>(bool<i> muted</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#source-prop">setSource</a></b>(const QUrl &amp;<i> url</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#volume-prop">setVolume</a></b>(qreal<i> volume</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QUrl </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#source-prop">source</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Status </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#status-prop">status</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> qreal </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#volume-prop">volume</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<a name="public-slots"></a>
+<h2>Public Slots</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#play">play</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#stop">stop</a></b>()</td></tr>
+</table>
+<ul>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#category-prop">categoryChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#loadedChanged">loadedChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#loops-prop">loopCountChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#loopsRemaining-prop">loopsRemainingChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#muted-prop">mutedChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#playing-prop">playingChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#source-prop">sourceChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#status-prop">statusChanged</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#volume-prop">volumeChanged</a></b>()</td></tr>
+</table>
+<ul>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+</ul>
+<a name="static-public-members"></a>
+<h2>Static Public Members</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> QStringList </td><td class="memItemRight bottomAlign"><b><a href="qsoundeffect.html#supportedMimeTypes">supportedMimeTypes</a></b>()</td></tr>
+</table>
+<ul>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QSoundEffect-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QSoundEffect class provides a way to play low latency sound effects.</p>
+<p>This class allows you to play uncompressed audio files (typically WAV files) in a generally lower latency way, and is suitable for &quot;feedback&quot; type sounds in response to user actions (e.g&#x2e; virtual keyboard sounds, positive or negative feedback for popup dialogs, or game sounds). If low latency is not important, consider using the <a href="qmediaplayer.html">QMediaPlayer</a> class instead, since it supports a wider variety of media formats and is less resource intensive.</p>
+<p>This example shows how a looping, somewhat quiet sound effect can be played:</p>
+<pre class="cpp"><span class="type">QSoundEffect</span> effect;
+effect<span class="operator">.</span>setSource(<span class="type"><a href="../qtcore/qurl.html">QUrl</a></span><span class="operator">::</span>fromLocalFile(<span class="string">&quot;engine.wav&quot;</span>));
+effect<span class="operator">.</span>setLoopCount(<span class="type">QSoundEffect</span><span class="operator">::</span>Infinite);
+effect<span class="operator">.</span>setVolume(<span class="number">0.25f</span>);
+effect<span class="operator">.</span>play();</pre>
+<p>Typically the sound effect should be reused, which allows all the parsing and preparation to be done ahead of time, and only triggered when necessary. This assists with lower latency audio playback.</p>
+<pre class="cpp">MyGame()
+    : m_explosion(<span class="keyword">this</span>)
+{
+    m_explosion<span class="operator">.</span>setSource(<span class="type"><a href="../qtcore/qurl.html">QUrl</a></span><span class="operator">::</span>fromLocalFile(<span class="string">&quot;explosion.wav&quot;</span>));
+    m_explosion<span class="operator">.</span>setVolume(<span class="number">0.25f</span>);
+
+    <span class="comment">// Set up click handling etc.</span>
+    connect(clickSource<span class="operator">,</span> SIGNAL(clicked())<span class="operator">,</span> <span class="operator">&amp;</span>m_explosion<span class="operator">,</span> SLOT(play()));
+}
+<span class="keyword">private</span>:
+<span class="type">QSoundEffect</span> m_explosion;</pre>
+<p>Since QSoundEffect requires slightly more resources to achieve lower latency playback, the platform may limit the number of simultaneously playing sound effects.</p>
+</div>
+<!-- @@@QSoundEffect -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$Loop$$$Infinite -->
+<h3 class="fn"><a name="Loop-enum"></a>enum QSoundEffect::<span class="name">Loop</span></h3>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSoundEffect::Infinite</tt></td><td class="topAlign"><tt>-2</tt></td><td class="topAlign">Used as a parameter to <a href="qsoundeffect.html#loops-prop">setLoopCount</a>() for infinite looping</td></tr>
+</table>
+<!-- @@@Loop -->
+<!-- $$$Status$$$Null$$$Loading$$$Ready$$$Error -->
+<h3 class="fn"><a name="Status-enum"></a>enum QSoundEffect::<span class="name">Status</span></h3>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSoundEffect::Null</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">No source has been set or the source is null.</td></tr>
+<tr><td class="topAlign"><tt>QSoundEffect::Loading</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">The <a href="qml-qtmultimedia5-soundeffect.html">SoundEffect</a> is trying to load the source.</td></tr>
+<tr><td class="topAlign"><tt>QSoundEffect::Ready</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">The source is loaded and ready for play.</td></tr>
+<tr><td class="topAlign"><tt>QSoundEffect::Error</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">An error occurred during operation, such as failure of loading the source.</td></tr>
+</table>
+<!-- @@@Status -->
+</div>
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$category-prop$$$category$$$setCategoryconstQString&$$$categoryChanged -->
+<h3 class="fn"><a name="category-prop"></a><span class="name">category</span> : <span class="type"><a href="../qtcore/qstring.html">QString</a></span></h3>
+<p>This property contains the <i>category</i> of this sound effect.</p>
+<p>Some platforms can perform different audio routing for different categories, or may allow the user to set different volume levels for different categories.</p>
+<p>This setting will be ignored on platforms that do not support audio categories.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QString </td><td class="memItemRight bottomAlign"><span class="name"><b>category</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setCategory</b></span>(const QString &amp;<i> category</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>categoryChanged</b></span>()</td></tr>
+</table>
+<!-- @@@category -->
+<!-- $$$loops-prop$$$loopCount$$$setLoopCountint$$$loopCountChanged -->
+<h3 class="fn"><a name="loops-prop"></a><span class="name">loops</span> : <span class="type">int</span></h3>
+<p>This property provides a way to control the number of times to repeat the sound on each <a href="qsoundeffect.html#play">play</a>().</p>
+<p>Set to <a href="qsoundeffect.html#Loop-enum">QSoundEffect::Infinite</a> to enable infinite looping.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>loopCount</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setLoopCount</b></span>(int<i> loopCount</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>loopCountChanged</b></span>()</td></tr>
+</table>
+<!-- @@@loops -->
+<!-- $$$loopsRemaining-prop$$$loopsRemaining$$$loopsRemainingChanged -->
+<h3 class="fn"><a name="loopsRemaining-prop"></a><span class="name">loopsRemaining</span> : const <span class="type">int</span></h3>
+<p>This property contains the number of loops remaining before the sound effect stops by itself, or <a href="qsoundeffect.html#Loop-enum">QSoundEffect::Infinite</a> if that's what has been set in <a href="qsoundeffect.html#loops-prop">loops</a>.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> int </td><td class="memItemRight bottomAlign"><span class="name"><b>loopsRemaining</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>loopsRemainingChanged</b></span>()</td></tr>
+</table>
+<!-- @@@loopsRemaining -->
+<!-- $$$muted-prop$$$isMuted$$$setMutedbool$$$mutedChanged -->
+<h3 class="fn"><a name="muted-prop"></a><span class="name">muted</span> : <span class="type">bool</span></h3>
+<p>This property provides a way to control muting. A value of <tt>true</tt> will mute this effect.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isMuted</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setMuted</b></span>(bool<i> muted</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>mutedChanged</b></span>()</td></tr>
+</table>
+<!-- @@@muted -->
+<!-- $$$playing-prop$$$isPlaying$$$playingChanged -->
+<h3 class="fn"><a name="playing-prop"></a><span class="name">playing</span> : const <span class="type">bool</span></h3>
+<p>This property indicates whether the sound effect is playing or not.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> bool </td><td class="memItemRight bottomAlign"><span class="name"><b>isPlaying</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>playingChanged</b></span>()</td></tr>
+</table>
+<!-- @@@playing -->
+<!-- $$$source-prop$$$source$$$setSourceconstQUrl&$$$sourceChanged -->
+<h3 class="fn"><a name="source-prop"></a><span class="name">source</span> : <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span></h3>
+<p>This property holds the url for the sound to play. For the <a href="qml-qtmultimedia5-soundeffect.html">SoundEffect</a> to attempt to load the source, the URL must exist and the application must have read permission in the specified directory.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QUrl </td><td class="memItemRight bottomAlign"><span class="name"><b>source</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setSource</b></span>(const QUrl &amp;<i> url</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>sourceChanged</b></span>()</td></tr>
+</table>
+<!-- @@@source -->
+<!-- $$$status-prop$$$status$$$statusChanged -->
+<h3 class="fn"><a name="status-prop"></a><span class="name">status</span> : const <span class="type"><a href="qsoundeffect.html#Status-enum">Status</a></span></h3>
+<p>This property indicates the current status of the sound effect from the <a href="qsoundeffect.html#Status-enum">QSoundEffect::Status</a> enumeration.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Status </td><td class="memItemRight bottomAlign"><span class="name"><b>status</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>statusChanged</b></span>()</td></tr>
+</table>
+<!-- @@@status -->
+<!-- $$$volume-prop$$$volume$$$setVolumeqreal$$$volumeChanged -->
+<h3 class="fn"><a name="volume-prop"></a><span class="name">volume</span> : <span class="type"><a href="../qtcore/qtglobal.html#qreal-typedef">qreal</a></span></h3>
+<p>This property holds the volume of the sound effect playback, from 0.0 (silent) to 1.0 (maximum volume).</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> qreal </td><td class="memItemRight bottomAlign"><span class="name"><b>volume</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setVolume</b></span>(qreal<i> volume</i>)</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>volumeChanged</b></span>()</td></tr>
+</table>
+<!-- @@@volume -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QSoundEffect[overload1]$$$QSoundEffectQObject* -->
+<h3 class="fn"><a name="QSoundEffect"></a>QSoundEffect::<span class="name">QSoundEffect</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i> = 0)</h3>
+<p>Creates a <a href="qsoundeffect.html">QSoundEffect</a> with the given <i>parent</i>.</p>
+<!-- @@@QSoundEffect -->
+<!-- $$$~QSoundEffect[overload1]$$$~QSoundEffect -->
+<h3 class="fn"><a name="dtor.QSoundEffect"></a>QSoundEffect::<span class="name">~QSoundEffect</span>()</h3>
+<p>Destroys this sound effect.</p>
+<!-- @@@~QSoundEffect -->
+<!-- $$$isLoaded[overload1]$$$isLoaded -->
+<h3 class="fn"><a name="isLoaded"></a><span class="type">bool</span> QSoundEffect::<span class="name">isLoaded</span>() const</h3>
+<p>Returns whether the sound effect has finished loading the <a href="qsoundeffect.html#source-prop">source</a>().</p>
+<!-- @@@isLoaded -->
+<!-- $$$loadedChanged[overload1]$$$loadedChanged -->
+<h3 class="fn"><a name="loadedChanged"></a><span class="type">void</span> QSoundEffect::<span class="name">loadedChanged</span>()<tt> [signal]</tt></h3>
+<p>The <tt>loadedChanged</tt> signal is emitted when the loading state has changed.</p>
+<!-- @@@loadedChanged -->
+<!-- $$$play[overload1]$$$play -->
+<h3 class="fn"><a name="play"></a><span class="type">void</span> QSoundEffect::<span class="name">play</span>()<tt> [slot]</tt></h3>
+<p>Start playback of the sound effect, looping the effect for the number of times as specified in the loops property.</p>
+<!-- @@@play -->
+<!-- $$$stop[overload1]$$$stop -->
+<h3 class="fn"><a name="stop"></a><span class="type">void</span> QSoundEffect::<span class="name">stop</span>()<tt> [slot]</tt></h3>
+<p>Stop current playback.</p>
+<!-- @@@stop -->
+<!-- $$$supportedMimeTypes[overload1]$$$supportedMimeTypes -->
+<h3 class="fn"><a name="supportedMimeTypes"></a><span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> QSoundEffect::<span class="name">supportedMimeTypes</span>()<tt> [static]</tt></h3>
+<p>Returns a list of the supported mime types for this sound effect.</p>
+<!-- @@@supportedMimeTypes -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

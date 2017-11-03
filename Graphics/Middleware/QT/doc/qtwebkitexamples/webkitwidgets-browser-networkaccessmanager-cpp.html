@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: networkaccessmanager.cpp Example File (webkitwidgets/browser/networkaccessmanager.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">networkaccessmanager.cpp Example File</h1>
+<span class="small-subtitle">webkitwidgets/browser/networkaccessmanager.cpp</span>
+<!-- $$$webkitwidgets/browser/networkaccessmanager.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the demonstration applications of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+<span class="preprocessor">#include &quot;networkaccessmanager.h&quot;</span>
+
+<span class="preprocessor">#include &quot;browserapplication.h&quot;</span>
+<span class="preprocessor">#include &quot;browsermainwindow.h&quot;</span>
+<span class="preprocessor">#include &quot;ui_passworddialog.h&quot;</span>
+<span class="preprocessor">#include &quot;ui_proxy.h&quot;</span>
+
+<span class="preprocessor">#include &lt;QtCore/QSettings&gt;</span>
+
+<span class="preprocessor">#include &lt;QtGui/QDesktopServices&gt;</span>
+<span class="preprocessor">#include &lt;QtWidgets/QDialog&gt;</span>
+<span class="preprocessor">#include &lt;QtWidgets/QMessageBox&gt;</span>
+<span class="preprocessor">#include &lt;QtWidgets/QStyle&gt;</span>
+<span class="preprocessor">#include &lt;QtGui/QTextDocument&gt;</span>
+
+<span class="preprocessor">#include &lt;QtNetwork/QAuthenticator&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QNetworkDiskCache&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QNetworkProxy&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QNetworkRequest&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QNetworkReply&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QSslError&gt;</span>
+
+NetworkAccessManager<span class="operator">::</span>NetworkAccessManager(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> <span class="operator">*</span>parent)
+    : <span class="type">QNetworkAccessManager</span>(parent)<span class="operator">,</span>
+    requestFinishedCount(<span class="number">0</span>)<span class="operator">,</span> requestFinishedFromCacheCount(<span class="number">0</span>)<span class="operator">,</span> requestFinishedPipelinedCount(<span class="number">0</span>)<span class="operator">,</span>
+    requestFinishedSecureCount(<span class="number">0</span>)<span class="operator">,</span> requestFinishedDownloadBufferCount(<span class="number">0</span>)
+{
+    connect(<span class="keyword">this</span><span class="operator">,</span> SIGNAL(authenticationRequired(<span class="type">QNetworkReply</span><span class="operator">*</span><span class="operator">,</span><span class="type">QAuthenticator</span><span class="operator">*</span>))<span class="operator">,</span>
+            SLOT(authenticationRequired(<span class="type">QNetworkReply</span><span class="operator">*</span><span class="operator">,</span><span class="type">QAuthenticator</span><span class="operator">*</span>)));
+    connect(<span class="keyword">this</span><span class="operator">,</span> SIGNAL(proxyAuthenticationRequired(<span class="type">QNetworkProxy</span><span class="operator">,</span><span class="type">QAuthenticator</span><span class="operator">*</span>))<span class="operator">,</span>
+            SLOT(proxyAuthenticationRequired(<span class="type">QNetworkProxy</span><span class="operator">,</span><span class="type">QAuthenticator</span><span class="operator">*</span>)));
+    connect(<span class="keyword">this</span><span class="operator">,</span> SIGNAL(finished(<span class="type">QNetworkReply</span><span class="operator">*</span>))<span class="operator">,</span>
+            SLOT(requestFinished(<span class="type">QNetworkReply</span><span class="operator">*</span>)));
+<span class="preprocessor">#ifndef QT_NO_OPENSSL</span>
+    connect(<span class="keyword">this</span><span class="operator">,</span> SIGNAL(sslErrors(<span class="type">QNetworkReply</span><span class="operator">*</span><span class="operator">,</span><span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span><span class="type">QSslError</span><span class="operator">&gt;</span>))<span class="operator">,</span>
+            SLOT(sslErrors(<span class="type">QNetworkReply</span><span class="operator">*</span><span class="operator">,</span><span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span><span class="type">QSslError</span><span class="operator">&gt;</span>)));
+<span class="preprocessor">#endif</span>
+    loadSettings();
+
+    <span class="type">QNetworkDiskCache</span> <span class="operator">*</span>diskCache <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QNetworkDiskCache</span>(<span class="keyword">this</span>);
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> location <span class="operator">=</span> <span class="type"><a href="../qtcore/qstandardpaths.html">QStandardPaths</a></span><span class="operator">::</span>writableLocation(<span class="type"><a href="../qtcore/qstandardpaths.html">QStandardPaths</a></span><span class="operator">::</span>CacheLocation);
+    diskCache<span class="operator">-</span><span class="operator">&gt;</span>setCacheDirectory(location);
+    setCache(diskCache);
+}
+
+<span class="type">QNetworkReply</span><span class="operator">*</span> NetworkAccessManager<span class="operator">::</span>createRequest(Operation op<span class="operator">,</span> <span class="keyword">const</span> <span class="type">QNetworkRequest</span> <span class="operator">&amp;</span> req<span class="operator">,</span> <span class="type"><a href="../qtcore/qiodevice.html">QIODevice</a></span> <span class="operator">*</span> outgoingData)
+{
+    <span class="type">QNetworkRequest</span> request <span class="operator">=</span> req; <span class="comment">// copy so we can modify</span>
+    <span class="comment">// this is a temporary hack until we properly use the pipelining flags from QtWebkit</span>
+    <span class="comment">// pipeline everything! :)</span>
+    request<span class="operator">.</span>setAttribute(<span class="type">QNetworkRequest</span><span class="operator">::</span>HttpPipeliningAllowedAttribute<span class="operator">,</span> <span class="keyword">true</span>);
+    <span class="keyword">return</span> <span class="type">QNetworkAccessManager</span><span class="operator">::</span>createRequest(op<span class="operator">,</span> request<span class="operator">,</span> outgoingData);
+}
+
+<span class="type">void</span> NetworkAccessManager<span class="operator">::</span>requestFinished(<span class="type">QNetworkReply</span> <span class="operator">*</span>reply)
+{
+    requestFinishedCount<span class="operator">+</span><span class="operator">+</span>;
+
+    <span class="keyword">if</span> (reply<span class="operator">-</span><span class="operator">&gt;</span>attribute(<span class="type">QNetworkRequest</span><span class="operator">::</span>SourceIsFromCacheAttribute)<span class="operator">.</span>toBool() <span class="operator">=</span><span class="operator">=</span> <span class="keyword">true</span>)
+        requestFinishedFromCacheCount<span class="operator">+</span><span class="operator">+</span>;
+
+    <span class="keyword">if</span> (reply<span class="operator">-</span><span class="operator">&gt;</span>attribute(<span class="type">QNetworkRequest</span><span class="operator">::</span>HttpPipeliningWasUsedAttribute)<span class="operator">.</span>toBool() <span class="operator">=</span><span class="operator">=</span> <span class="keyword">true</span>)
+        requestFinishedPipelinedCount<span class="operator">+</span><span class="operator">+</span>;
+
+    <span class="keyword">if</span> (reply<span class="operator">-</span><span class="operator">&gt;</span>attribute(<span class="type">QNetworkRequest</span><span class="operator">::</span>ConnectionEncryptedAttribute)<span class="operator">.</span>toBool() <span class="operator">=</span><span class="operator">=</span> <span class="keyword">true</span>)
+        requestFinishedSecureCount<span class="operator">+</span><span class="operator">+</span>;
+
+    <span class="keyword">if</span> (reply<span class="operator">-</span><span class="operator">&gt;</span>attribute(<span class="type">QNetworkRequest</span><span class="operator">::</span>DownloadBufferAttribute)<span class="operator">.</span>isValid() <span class="operator">=</span><span class="operator">=</span> <span class="keyword">true</span>)
+        requestFinishedDownloadBufferCount<span class="operator">+</span><span class="operator">+</span>;
+
+    <span class="keyword">if</span> (requestFinishedCount <span class="operator">%</span> <span class="number">10</span>)
+        <span class="keyword">return</span>;
+
+    <span class="type">double</span> pctCached <span class="operator">=</span> (<span class="type">double</span>(requestFinishedFromCacheCount) <span class="operator">*</span> <span class="number">100.0</span><span class="operator">/</span> <span class="type">double</span>(requestFinishedCount));
+    <span class="type">double</span> pctPipelined <span class="operator">=</span> (<span class="type">double</span>(requestFinishedPipelinedCount) <span class="operator">*</span> <span class="number">100.0</span><span class="operator">/</span> <span class="type">double</span>(requestFinishedCount));
+    <span class="type">double</span> pctSecure <span class="operator">=</span> (<span class="type">double</span>(requestFinishedSecureCount) <span class="operator">*</span> <span class="number">100.0</span><span class="operator">/</span> <span class="type">double</span>(requestFinishedCount));
+    <span class="type">double</span> pctDownloadBuffer <span class="operator">=</span> (<span class="type">double</span>(requestFinishedDownloadBufferCount) <span class="operator">*</span> <span class="number">100.0</span><span class="operator">/</span> <span class="type">double</span>(requestFinishedCount));
+
+<span class="preprocessor">#ifdef QT_DEBUG</span>
+    <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>(<span class="string">&quot;STATS [%lli requests total] [%3.2f%% from cache] [%3.2f%% pipelined] [%3.2f%% SSL/TLS] [%3.2f%% Zerocopy]&quot;</span><span class="operator">,</span> requestFinishedCount<span class="operator">,</span> pctCached<span class="operator">,</span> pctPipelined<span class="operator">,</span> pctSecure<span class="operator">,</span> pctDownloadBuffer);
+<span class="preprocessor">#endif</span>
+}
+
+<span class="type">void</span> NetworkAccessManager<span class="operator">::</span>loadSettings()
+{
+    <span class="type"><a href="../qtcore/qsettings.html">QSettings</a></span> settings;
+    settings<span class="operator">.</span>beginGroup(QLatin1String(<span class="string">&quot;proxy&quot;</span>));
+    <span class="type">QNetworkProxy</span> proxy;
+    <span class="keyword">if</span> (settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;enabled&quot;</span>)<span class="operator">,</span> <span class="keyword">false</span>)<span class="operator">.</span>toBool()) {
+        <span class="keyword">if</span> (settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;type&quot;</span>)<span class="operator">,</span> <span class="number">0</span>)<span class="operator">.</span>toInt() <span class="operator">=</span><span class="operator">=</span> <span class="number">0</span>)
+            proxy <span class="operator">=</span> <span class="type">QNetworkProxy</span><span class="operator">::</span>Socks5Proxy;
+        <span class="keyword">else</span>
+            proxy <span class="operator">=</span> <span class="type">QNetworkProxy</span><span class="operator">::</span>HttpProxy;
+        proxy<span class="operator">.</span>setHostName(settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;hostName&quot;</span>))<span class="operator">.</span>toString());
+        proxy<span class="operator">.</span>setPort(settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;port&quot;</span>)<span class="operator">,</span> <span class="number">1080</span>)<span class="operator">.</span>toInt());
+        proxy<span class="operator">.</span>setUser(settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;userName&quot;</span>))<span class="operator">.</span>toString());
+        proxy<span class="operator">.</span>setPassword(settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;password&quot;</span>))<span class="operator">.</span>toString());
+    }
+    setProxy(proxy);
+}
+
+<span class="type">void</span> NetworkAccessManager<span class="operator">::</span>authenticationRequired(<span class="type">QNetworkReply</span> <span class="operator">*</span>reply<span class="operator">,</span> <span class="type">QAuthenticator</span> <span class="operator">*</span>auth)
+{
+    BrowserMainWindow <span class="operator">*</span>mainWindow <span class="operator">=</span> BrowserApplication<span class="operator">::</span>instance()<span class="operator">-</span><span class="operator">&gt;</span>mainWindow();
+
+    <span class="type"><a href="../qtwidgets/qdialog.html">QDialog</a></span> dialog(mainWindow);
+    dialog<span class="operator">.</span>setWindowFlags(<span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>Sheet);
+
+    Ui<span class="operator">::</span>PasswordDialog passwordDialog;
+    passwordDialog<span class="operator">.</span>setupUi(<span class="operator">&amp;</span>dialog);
+
+    passwordDialog<span class="operator">.</span>iconLabel<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="type"><a href="../qtcore/qstring.html">QString</a></span>());
+    passwordDialog<span class="operator">.</span>iconLabel<span class="operator">-</span><span class="operator">&gt;</span>setPixmap(mainWindow<span class="operator">-</span><span class="operator">&gt;</span>style()<span class="operator">-</span><span class="operator">&gt;</span>standardIcon(<span class="type"><a href="../qtwidgets/qstyle.html">QStyle</a></span><span class="operator">::</span>SP_MessageBoxQuestion<span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> mainWindow)<span class="operator">.</span>pixmap(<span class="number">32</span><span class="operator">,</span> <span class="number">32</span>));
+
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> introMessage <span class="operator">=</span> tr(<span class="string">&quot;&lt;qt&gt;Enter username and password for \&quot;%1\&quot; at %2&lt;/qt&gt;&quot;</span>);
+    introMessage <span class="operator">=</span> introMessage<span class="operator">.</span>arg(reply<span class="operator">-</span><span class="operator">&gt;</span>url()<span class="operator">.</span>toString()<span class="operator">.</span>toHtmlEscaped())<span class="operator">.</span>arg(reply<span class="operator">-</span><span class="operator">&gt;</span>url()<span class="operator">.</span>toString()<span class="operator">.</span>toHtmlEscaped());
+    passwordDialog<span class="operator">.</span>introLabel<span class="operator">-</span><span class="operator">&gt;</span>setText(introMessage);
+    passwordDialog<span class="operator">.</span>introLabel<span class="operator">-</span><span class="operator">&gt;</span>setWordWrap(<span class="keyword">true</span>);
+
+    <span class="keyword">if</span> (dialog<span class="operator">.</span>exec() <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="../qtwidgets/qdialog.html">QDialog</a></span><span class="operator">::</span>Accepted) {
+        auth<span class="operator">-</span><span class="operator">&gt;</span>setUser(passwordDialog<span class="operator">.</span>userNameLineEdit<span class="operator">-</span><span class="operator">&gt;</span>text());
+        auth<span class="operator">-</span><span class="operator">&gt;</span>setPassword(passwordDialog<span class="operator">.</span>passwordLineEdit<span class="operator">-</span><span class="operator">&gt;</span>text());
+    }
+}
+
+<span class="type">void</span> NetworkAccessManager<span class="operator">::</span>proxyAuthenticationRequired(<span class="keyword">const</span> <span class="type">QNetworkProxy</span> <span class="operator">&amp;</span>proxy<span class="operator">,</span> <span class="type">QAuthenticator</span> <span class="operator">*</span>auth)
+{
+    BrowserMainWindow <span class="operator">*</span>mainWindow <span class="operator">=</span> BrowserApplication<span class="operator">::</span>instance()<span class="operator">-</span><span class="operator">&gt;</span>mainWindow();
+
+    <span class="type"><a href="../qtwidgets/qdialog.html">QDialog</a></span> dialog(mainWindow);
+    dialog<span class="operator">.</span>setWindowFlags(<span class="type"><a href="../qtcore/qt.html">Qt</a></span><span class="operator">::</span>Sheet);
+
+    Ui<span class="operator">::</span>ProxyDialog proxyDialog;
+    proxyDialog<span class="operator">.</span>setupUi(<span class="operator">&amp;</span>dialog);
+
+    proxyDialog<span class="operator">.</span>iconLabel<span class="operator">-</span><span class="operator">&gt;</span>setText(<span class="type"><a href="../qtcore/qstring.html">QString</a></span>());
+    proxyDialog<span class="operator">.</span>iconLabel<span class="operator">-</span><span class="operator">&gt;</span>setPixmap(mainWindow<span class="operator">-</span><span class="operator">&gt;</span>style()<span class="operator">-</span><span class="operator">&gt;</span>standardIcon(<span class="type"><a href="../qtwidgets/qstyle.html">QStyle</a></span><span class="operator">::</span>SP_MessageBoxQuestion<span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> mainWindow)<span class="operator">.</span>pixmap(<span class="number">32</span><span class="operator">,</span> <span class="number">32</span>));
+
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> introMessage <span class="operator">=</span> tr(<span class="string">&quot;&lt;qt&gt;Connect to proxy \&quot;%1\&quot; using:&lt;/qt&gt;&quot;</span>);
+    introMessage <span class="operator">=</span> introMessage<span class="operator">.</span>arg(proxy<span class="operator">.</span>hostName()<span class="operator">.</span>toHtmlEscaped());
+    proxyDialog<span class="operator">.</span>introLabel<span class="operator">-</span><span class="operator">&gt;</span>setText(introMessage);
+    proxyDialog<span class="operator">.</span>introLabel<span class="operator">-</span><span class="operator">&gt;</span>setWordWrap(<span class="keyword">true</span>);
+
+    <span class="keyword">if</span> (dialog<span class="operator">.</span>exec() <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="../qtwidgets/qdialog.html">QDialog</a></span><span class="operator">::</span>Accepted) {
+        auth<span class="operator">-</span><span class="operator">&gt;</span>setUser(proxyDialog<span class="operator">.</span>userNameLineEdit<span class="operator">-</span><span class="operator">&gt;</span>text());
+        auth<span class="operator">-</span><span class="operator">&gt;</span>setPassword(proxyDialog<span class="operator">.</span>passwordLineEdit<span class="operator">-</span><span class="operator">&gt;</span>text());
+    }
+}
+
+<span class="preprocessor">#ifndef QT_NO_OPENSSL</span>
+<span class="type">void</span> NetworkAccessManager<span class="operator">::</span>sslErrors(<span class="type">QNetworkReply</span> <span class="operator">*</span>reply<span class="operator">,</span> <span class="keyword">const</span> <span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span><span class="type">QSslError</span><span class="operator">&gt;</span> <span class="operator">&amp;</span>error)
+{
+    <span class="comment">// check if SSL certificate has been trusted already</span>
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> replyHost <span class="operator">=</span> reply<span class="operator">-</span><span class="operator">&gt;</span>url()<span class="operator">.</span>host() <span class="operator">+</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span>(<span class="string">&quot;:%1&quot;</span>)<span class="operator">.</span>arg(reply<span class="operator">-</span><span class="operator">&gt;</span>url()<span class="operator">.</span>port());
+    <span class="keyword">if</span>(<span class="operator">!</span> sslTrustedHostList<span class="operator">.</span>contains(replyHost)) {
+        BrowserMainWindow <span class="operator">*</span>mainWindow <span class="operator">=</span> BrowserApplication<span class="operator">::</span>instance()<span class="operator">-</span><span class="operator">&gt;</span>mainWindow();
+
+        <span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> errorStrings;
+        <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> error<span class="operator">.</span>count(); <span class="operator">+</span><span class="operator">+</span>i)
+            errorStrings <span class="operator">+</span><span class="operator">=</span> error<span class="operator">.</span>at(i)<span class="operator">.</span>errorString();
+        <span class="type"><a href="../qtcore/qstring.html">QString</a></span> errors <span class="operator">=</span> errorStrings<span class="operator">.</span>join(QLatin1String(<span class="string">&quot;\n&quot;</span>));
+        <span class="type">int</span> ret <span class="operator">=</span> <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>warning(mainWindow<span class="operator">,</span> <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>applicationName()<span class="operator">,</span>
+                tr(<span class="string">&quot;SSL Errors:\n\n%1\n\n%2\n\n&quot;</span>
+                        <span class="string">&quot;Do you want to ignore these errors for this host?&quot;</span>)<span class="operator">.</span>arg(reply<span class="operator">-</span><span class="operator">&gt;</span>url()<span class="operator">.</span>toString())<span class="operator">.</span>arg(errors)<span class="operator">,</span>
+                        <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>Yes <span class="operator">|</span> <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>No<span class="operator">,</span>
+                        <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>No);
+        <span class="keyword">if</span> (ret <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>Yes) {
+            reply<span class="operator">-</span><span class="operator">&gt;</span>ignoreSslErrors();
+            sslTrustedHostList<span class="operator">.</span>append(replyHost);
+        }
+    }
+}
+<span class="preprocessor">#endif</span></pre>
+</div>
+<!-- @@@webkitwidgets/browser/networkaccessmanager.cpp -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

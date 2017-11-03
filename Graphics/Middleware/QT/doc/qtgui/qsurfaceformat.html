@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qsurfaceformat.cpp -->
+  <title>QtGui 5.0: QSurfaceFormat Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-types">Public Types</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#related-non-members">Related Non-Members</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QSurfaceFormat Class</h1>
+<!-- $$$QSurfaceFormat-brief -->
+<p>The QSurfaceFormat class represents the format of a <a href="qsurface.html">QSurface</a>. <a href="#details">More...</a></p>
+<!-- @@@QSurfaceFormat -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QSurfaceFormat&gt;</span></pre><p>This class was introduced in QtGui 5.0.</p>
+<ul>
+<li><a href="qsurfaceformat-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-types"></a>
+<h2>Public Types</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#FormatOption-enum">FormatOption</a></b> { StereoBuffers, DebugContext, DeprecatedFunctions }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> flags </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#FormatOption-enum">FormatOptions</a></b></td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#OpenGLContextProfile-enum">OpenGLContextProfile</a></b> { NoProfile, CoreProfile, CompatibilityProfile }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#RenderableType-enum">RenderableType</a></b> { DefaultRenderableType, OpenGL, OpenGLES, OpenVG }</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> enum </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#SwapBehavior-enum">SwapBehavior</a></b> { DefaultSwapBehavior, SingleBuffer, DoubleBuffer, TripleBuffer }</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#QSurfaceFormat">QSurfaceFormat</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#QSurfaceFormat-2">QSurfaceFormat</a></b>(FormatOptions<i> options</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#QSurfaceFormat-3">QSurfaceFormat</a></b>(const QSurfaceFormat &amp;<i> other</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#dtor.QSurfaceFormat">~QSurfaceFormat</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#alphaBufferSize">alphaBufferSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#blueBufferSize">blueBufferSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#depthBufferSize">depthBufferSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#greenBufferSize">greenBufferSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#hasAlpha">hasAlpha</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#majorVersion">majorVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#minorVersion">minorVersion</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> OpenGLContextProfile </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#profile">profile</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#redBufferSize">redBufferSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> RenderableType </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#renderableType">renderableType</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#samples">samples</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setAlphaBufferSize">setAlphaBufferSize</a></b>(int<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setBlueBufferSize">setBlueBufferSize</a></b>(int<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setDepthBufferSize">setDepthBufferSize</a></b>(int<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setGreenBufferSize">setGreenBufferSize</a></b>(int<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setMajorVersion">setMajorVersion</a></b>(int<i> major</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setMinorVersion">setMinorVersion</a></b>(int<i> minor</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setOption">setOption</a></b>(QSurfaceFormat::FormatOptions<i> opt</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setProfile">setProfile</a></b>(OpenGLContextProfile<i> profile</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setRedBufferSize">setRedBufferSize</a></b>(int<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setRenderableType">setRenderableType</a></b>(RenderableType<i> type</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setSamples">setSamples</a></b>(int<i> numSamples</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setStencilBufferSize">setStencilBufferSize</a></b>(int<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setStereo">setStereo</a></b>(bool<i> enable</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#setSwapBehavior">setSwapBehavior</a></b>(SwapBehavior<i> behavior</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> int </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#stencilBufferSize">stencilBufferSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#stereo">stereo</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> SwapBehavior </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#swapBehavior">swapBehavior</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#testOption">testOption</a></b>(QSurfaceFormat::FormatOptions<i> opt</i>) const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSurfaceFormat &amp; </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#operator-eq">operator=</a></b>(const QSurfaceFormat &amp;<i> other</i>)</td></tr>
+</table>
+<a name="related-non-members"></a>
+<h2>Related Non-Members</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#operator-not-eq-30">operator!=</a></b>(const QSurfaceFormat &amp;<i> a</i>, const QSurfaceFormat &amp;<i> b</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> bool </td><td class="memItemRight bottomAlign"><b><a href="qsurfaceformat.html#operator-eq-eq-37">operator==</a></b>(const QSurfaceFormat &amp;<i> a</i>, const QSurfaceFormat &amp;<i> b</i>)</td></tr>
+</table>
+<a name="details"></a>
+<!-- $$$QSurfaceFormat-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QSurfaceFormat class represents the format of a <a href="qsurface.html">QSurface</a>.</p>
+<p>The format includes the size of the color buffers, red, green, and blue; the size of the alpha buffer; the size of the depth and stencil buffers; and number of samples per pixel for multisampling. In addition, the format contains surface configuration parameters such as <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> profile and version for rendering, whether or not enable stereo buffers, and swap behaviour.</p>
+</div>
+<!-- @@@QSurfaceFormat -->
+<div class="types">
+<h2>Member Type Documentation</h2>
+<!-- $$$FormatOption$$$StereoBuffers$$$DebugContext$$$DeprecatedFunctions -->
+<h3 class="flags"><a name="FormatOption-enum"></a>enum QSurfaceFormat::<span class="name">FormatOption</span><br/>flags QSurfaceFormat::<span class="name">FormatOptions</span></h3>
+<p>This enum contains format options for use with <a href="qsurfaceformat.html">QSurfaceFormat</a>.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::StereoBuffers</tt></td><td class="topAlign"><tt>0x0001</tt></td><td class="topAlign">Used to request stereo buffers in the surface format.</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::DebugContext</tt></td><td class="topAlign"><tt>0x0002</tt></td><td class="topAlign">Used to request a debug context with extra debugging information.</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::DeprecatedFunctions</tt></td><td class="topAlign"><tt>0x0004</tt></td><td class="topAlign">Used to request that deprecated functions be included in the <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> context profile. If not specified, you should get a forward compatible context without support functionality marked as deprecated. This requires <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version 3.0 or higher.</td></tr>
+</table>
+<p>The FormatOptions type is a typedef for <a href="qflags.html">QFlags</a>&lt;FormatOption&gt;. It stores an OR combination of FormatOption values.</p>
+<!-- @@@FormatOption -->
+<!-- $$$OpenGLContextProfile$$$NoProfile$$$CoreProfile$$$CompatibilityProfile -->
+<h3 class="fn"><a name="OpenGLContextProfile-enum"></a>enum QSurfaceFormat::<span class="name">OpenGLContextProfile</span></h3>
+<p>This enum is used to specify the <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> context profile, in conjunction with <a href="qsurfaceformat.html#setMajorVersion">QSurfaceFormat::setMajorVersion</a>() and <a href="qsurfaceformat.html#setMinorVersion">QSurfaceFormat::setMinorVersion</a>().</p>
+<p>Profiles are exposed in <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> 3.2 and above, and are used to choose between a restricted core profile, and a compatibility profile which might contain deprecated support functionality.</p>
+<p>Note that the core profile might still contain functionality that is deprecated and scheduled for removal in a higher version. To get access to the deprecated functionality for the core profile in the set <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version you can use the <a href="qsurfaceformat.html">QSurfaceFormat</a> format option <a href="qsurfaceformat.html#FormatOption-enum">QSurfaceFormat::DeprecatedFunctions</a>.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::NoProfile</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign"><a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version is lower than 3.2&#x2e;</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::CoreProfile</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">Functionality deprecated in <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version 3.0 is not available.</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::CompatibilityProfile</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">Functionality from earlier <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> versions is available.</td></tr>
+</table>
+<!-- @@@OpenGLContextProfile -->
+<!-- $$$RenderableType$$$DefaultRenderableType$$$OpenGL$$$OpenGLES$$$OpenVG -->
+<h3 class="fn"><a name="RenderableType-enum"></a>enum QSurfaceFormat::<span class="name">RenderableType</span></h3>
+<p>This enum specifies the rendering backend for the surface.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::DefaultRenderableType</tt></td><td class="topAlign"><tt>0x0</tt></td><td class="topAlign">The default, unspecified rendering method</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::OpenGL</tt></td><td class="topAlign"><tt>0x1</tt></td><td class="topAlign">Desktop OpenGL rendering</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::OpenGLES</tt></td><td class="topAlign"><tt>0x2</tt></td><td class="topAlign">OpenGL ES 2.0 rendering</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::OpenVG</tt></td><td class="topAlign"><tt>0x4</tt></td><td class="topAlign">Open Vector Graphics rendering</td></tr>
+</table>
+<!-- @@@RenderableType -->
+<!-- $$$SwapBehavior$$$DefaultSwapBehavior$$$SingleBuffer$$$DoubleBuffer$$$TripleBuffer -->
+<h3 class="fn"><a name="SwapBehavior-enum"></a>enum QSurfaceFormat::<span class="name">SwapBehavior</span></h3>
+<p>This enum is used by <a href="qsurfaceformat.html">QSurfaceFormat</a> to specify the swap behaviour of a surface. The swap behaviour is mostly transparent to the application, but it affects factors such as rendering latency and throughput.</p>
+<table class="valuelist"><tr valign="top" class="odd"><th class="tblConst">Constant</th><th class="tblval">Value</th><th class="tbldscr">Description</th></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::DefaultSwapBehavior</tt></td><td class="topAlign"><tt>0</tt></td><td class="topAlign">The default, unspecified swap behaviour of the platform.</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::SingleBuffer</tt></td><td class="topAlign"><tt>1</tt></td><td class="topAlign">Used to request single buffering, which might result in flickering when <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> rendering is done directly to screen without an intermediate offscreen buffer.</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::DoubleBuffer</tt></td><td class="topAlign"><tt>2</tt></td><td class="topAlign">This is typically the default swap behaviour on desktop platforms, consisting of one back buffer and one front buffer. Rendering is done to the back buffer, and then the back buffer and front buffer are swapped, or the contents of the back buffer are copied to the front buffer, depending on the implementation.</td></tr>
+<tr><td class="topAlign"><tt>QSurfaceFormat::TripleBuffer</tt></td><td class="topAlign"><tt>3</tt></td><td class="topAlign">This swap behaviour is sometimes used in order to decrease the risk of skipping a frame when the rendering rate is just barely keeping up with the screen refresh rate. Depending on the platform it might also lead to slightly more efficient use of the GPU due to improved pipelining behaviour. Triple buffering comes at the cost of an extra frame of memory usage and latency, and might not be supported depending on the underlying platform.</td></tr>
+</table>
+<!-- @@@SwapBehavior -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QSurfaceFormat[overload1]$$$QSurfaceFormat -->
+<h3 class="fn"><a name="QSurfaceFormat"></a>QSurfaceFormat::<span class="name">QSurfaceFormat</span>()</h3>
+<p>Constructs a default initialized <a href="qsurfaceformat.html">QSurfaceFormat</a>.</p>
+<!-- @@@QSurfaceFormat -->
+<!-- $$$QSurfaceFormat$$$QSurfaceFormatFormatOptions -->
+<h3 class="fn"><a name="QSurfaceFormat-2"></a>QSurfaceFormat::<span class="name">QSurfaceFormat</span>(<span class="type"><a href="qsurfaceformat.html#FormatOption-enum">FormatOptions</a></span><i> options</i>)</h3>
+<p>Constructs a <a href="qsurfaceformat.html">QSurfaceFormat</a> with the given format <i>options</i>.</p>
+<!-- @@@QSurfaceFormat -->
+<!-- $$$QSurfaceFormat$$$QSurfaceFormatconstQSurfaceFormat& -->
+<h3 class="fn"><a name="QSurfaceFormat-3"></a>QSurfaceFormat::<span class="name">QSurfaceFormat</span>(const <span class="type">QSurfaceFormat</span> &amp;<i> other</i>)</h3>
+<p>Constructs a copy of <i>other</i>.</p>
+<!-- @@@QSurfaceFormat -->
+<!-- $$$~QSurfaceFormat[overload1]$$$~QSurfaceFormat -->
+<h3 class="fn"><a name="dtor.QSurfaceFormat"></a>QSurfaceFormat::<span class="name">~QSurfaceFormat</span>()</h3>
+<p>Destroys the <a href="qsurfaceformat.html">QSurfaceFormat</a>.</p>
+<!-- @@@~QSurfaceFormat -->
+<!-- $$$alphaBufferSize[overload1]$$$alphaBufferSize -->
+<h3 class="fn"><a name="alphaBufferSize"></a><span class="type">int</span> QSurfaceFormat::<span class="name">alphaBufferSize</span>() const</h3>
+<p>Get the size in bits of the alpha channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setAlphaBufferSize">setAlphaBufferSize</a>().</p>
+<!-- @@@alphaBufferSize -->
+<!-- $$$blueBufferSize[overload1]$$$blueBufferSize -->
+<h3 class="fn"><a name="blueBufferSize"></a><span class="type">int</span> QSurfaceFormat::<span class="name">blueBufferSize</span>() const</h3>
+<p>Get the size in bits of the blue channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setBlueBufferSize">setBlueBufferSize</a>().</p>
+<!-- @@@blueBufferSize -->
+<!-- $$$depthBufferSize[overload1]$$$depthBufferSize -->
+<h3 class="fn"><a name="depthBufferSize"></a><span class="type">int</span> QSurfaceFormat::<span class="name">depthBufferSize</span>() const</h3>
+<p>Returns the depth buffer size.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setDepthBufferSize">setDepthBufferSize</a>(), setDepth(), and depth().</p>
+<!-- @@@depthBufferSize -->
+<!-- $$$greenBufferSize[overload1]$$$greenBufferSize -->
+<h3 class="fn"><a name="greenBufferSize"></a><span class="type">int</span> QSurfaceFormat::<span class="name">greenBufferSize</span>() const</h3>
+<p>Get the size in bits of the green channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setGreenBufferSize">setGreenBufferSize</a>().</p>
+<!-- @@@greenBufferSize -->
+<!-- $$$hasAlpha[overload1]$$$hasAlpha -->
+<h3 class="fn"><a name="hasAlpha"></a><span class="type">bool</span> QSurfaceFormat::<span class="name">hasAlpha</span>() const</h3>
+<p>Returns true if the alpha buffer size is greater than zero.</p>
+<p>This means that the surface might be used with per pixel translucency effects.</p>
+<!-- @@@hasAlpha -->
+<!-- $$$majorVersion[overload1]$$$majorVersion -->
+<h3 class="fn"><a name="majorVersion"></a><span class="type">int</span> QSurfaceFormat::<span class="name">majorVersion</span>() const</h3>
+<p>Returns the major <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version.</p>
+<p>The default version is 2.0&#x2e;</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setMajorVersion">setMajorVersion</a>().</p>
+<!-- @@@majorVersion -->
+<!-- $$$minorVersion[overload1]$$$minorVersion -->
+<h3 class="fn"><a name="minorVersion"></a><span class="type">int</span> QSurfaceFormat::<span class="name">minorVersion</span>() const</h3>
+<p>Returns the minor <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setMinorVersion">setMinorVersion</a>().</p>
+<!-- @@@minorVersion -->
+<!-- $$$profile[overload1]$$$profile -->
+<h3 class="fn"><a name="profile"></a><span class="type"><a href="qsurfaceformat.html#OpenGLContextProfile-enum">OpenGLContextProfile</a></span> QSurfaceFormat::<span class="name">profile</span>() const</h3>
+<p>Get the configured <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> context profile.</p>
+<p>This setting is ignored if the requested <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version is less than 3.2&#x2e;</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setProfile">setProfile</a>().</p>
+<!-- @@@profile -->
+<!-- $$$redBufferSize[overload1]$$$redBufferSize -->
+<h3 class="fn"><a name="redBufferSize"></a><span class="type">int</span> QSurfaceFormat::<span class="name">redBufferSize</span>() const</h3>
+<p>Get the size in bits of the red channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setRedBufferSize">setRedBufferSize</a>().</p>
+<!-- @@@redBufferSize -->
+<!-- $$$renderableType[overload1]$$$renderableType -->
+<h3 class="fn"><a name="renderableType"></a><span class="type"><a href="qsurfaceformat.html#RenderableType-enum">RenderableType</a></span> QSurfaceFormat::<span class="name">renderableType</span>() const</h3>
+<p>Gets the renderable type.</p>
+<p>Chooses between desktop <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a>, <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> ES, and <a href="qsurfaceformat.html#RenderableType-enum">OpenVG</a>.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setRenderableType">setRenderableType</a>().</p>
+<!-- @@@renderableType -->
+<!-- $$$samples[overload1]$$$samples -->
+<h3 class="fn"><a name="samples"></a><span class="type">int</span> QSurfaceFormat::<span class="name">samples</span>() const</h3>
+<p>Returns the number of samples per pixel when multisampling is enabled. By default, multisampling is disabled.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setSamples">setSamples</a>().</p>
+<!-- @@@samples -->
+<!-- $$$setAlphaBufferSize[overload1]$$$setAlphaBufferSizeint -->
+<h3 class="fn"><a name="setAlphaBufferSize"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setAlphaBufferSize</span>(<span class="type">int</span><i> size</i>)</h3>
+<p>Set the desired <i>size</i> in bits of the alpha channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#alphaBufferSize">alphaBufferSize</a>().</p>
+<!-- @@@setAlphaBufferSize -->
+<!-- $$$setBlueBufferSize[overload1]$$$setBlueBufferSizeint -->
+<h3 class="fn"><a name="setBlueBufferSize"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setBlueBufferSize</span>(<span class="type">int</span><i> size</i>)</h3>
+<p>Set the desired <i>size</i> in bits of the blue channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#blueBufferSize">blueBufferSize</a>().</p>
+<!-- @@@setBlueBufferSize -->
+<!-- $$$setDepthBufferSize[overload1]$$$setDepthBufferSizeint -->
+<h3 class="fn"><a name="setDepthBufferSize"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setDepthBufferSize</span>(<span class="type">int</span><i> size</i>)</h3>
+<p>Set the minimum depth buffer size to <i>size</i>.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#depthBufferSize">depthBufferSize</a>(), setDepth(), and depth().</p>
+<!-- @@@setDepthBufferSize -->
+<!-- $$$setGreenBufferSize[overload1]$$$setGreenBufferSizeint -->
+<h3 class="fn"><a name="setGreenBufferSize"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setGreenBufferSize</span>(<span class="type">int</span><i> size</i>)</h3>
+<p>Set the desired <i>size</i> in bits of the green channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#greenBufferSize">greenBufferSize</a>().</p>
+<!-- @@@setGreenBufferSize -->
+<!-- $$$setMajorVersion[overload1]$$$setMajorVersionint -->
+<h3 class="fn"><a name="setMajorVersion"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setMajorVersion</span>(<span class="type">int</span><i> major</i>)</h3>
+<p>Sets the desired <i>major</i> <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#majorVersion">majorVersion</a>().</p>
+<!-- @@@setMajorVersion -->
+<!-- $$$setMinorVersion[overload1]$$$setMinorVersionint -->
+<h3 class="fn"><a name="setMinorVersion"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setMinorVersion</span>(<span class="type">int</span><i> minor</i>)</h3>
+<p>Sets the desired <i>minor</i> <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version.</p>
+<p>The default version is 2.0&#x2e;</p>
+<p><b>See also </b><a href="qsurfaceformat.html#minorVersion">minorVersion</a>().</p>
+<!-- @@@setMinorVersion -->
+<!-- $$$setOption[overload1]$$$setOptionQSurfaceFormat::FormatOptions -->
+<h3 class="fn"><a name="setOption"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setOption</span>(<span class="type"><a href="qsurfaceformat.html#FormatOption-enum">QSurfaceFormat::FormatOptions</a></span><i> opt</i>)</h3>
+<p>Sets the format option to <i>opt</i>.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#testOption">testOption</a>().</p>
+<!-- @@@setOption -->
+<!-- $$$setProfile[overload1]$$$setProfileOpenGLContextProfile -->
+<h3 class="fn"><a name="setProfile"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setProfile</span>(<span class="type"><a href="qsurfaceformat.html#OpenGLContextProfile-enum">OpenGLContextProfile</a></span><i> profile</i>)</h3>
+<p>Sets the desired <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> context <i>profile</i>.</p>
+<p>This setting is ignored if the requested <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> version is less than 3.2&#x2e;</p>
+<p><b>See also </b><a href="qsurfaceformat.html#profile">profile</a>().</p>
+<!-- @@@setProfile -->
+<!-- $$$setRedBufferSize[overload1]$$$setRedBufferSizeint -->
+<h3 class="fn"><a name="setRedBufferSize"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setRedBufferSize</span>(<span class="type">int</span><i> size</i>)</h3>
+<p>Set the desired <i>size</i> in bits of the red channel of the color buffer.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#redBufferSize">redBufferSize</a>().</p>
+<!-- @@@setRedBufferSize -->
+<!-- $$$setRenderableType[overload1]$$$setRenderableTypeRenderableType -->
+<h3 class="fn"><a name="setRenderableType"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setRenderableType</span>(<span class="type"><a href="qsurfaceformat.html#RenderableType-enum">RenderableType</a></span><i> type</i>)</h3>
+<p>Sets the desired renderable <i>type</i>.</p>
+<p>Chooses between desktop <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a>, <a href="qsurfaceformat.html#RenderableType-enum">OpenGL</a> ES, and <a href="qsurfaceformat.html#RenderableType-enum">OpenVG</a>.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#renderableType">renderableType</a>().</p>
+<!-- @@@setRenderableType -->
+<!-- $$$setSamples[overload1]$$$setSamplesint -->
+<h3 class="fn"><a name="setSamples"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setSamples</span>(<span class="type">int</span><i> numSamples</i>)</h3>
+<p>Set the preferred number of samples per pixel when multisampling is enabled to <i>numSamples</i>. By default, multisampling is disabled.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#samples">samples</a>().</p>
+<!-- @@@setSamples -->
+<!-- $$$setStencilBufferSize[overload1]$$$setStencilBufferSizeint -->
+<h3 class="fn"><a name="setStencilBufferSize"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setStencilBufferSize</span>(<span class="type">int</span><i> size</i>)</h3>
+<p>Set the preferred stencil buffer size to <i>size</i> bits.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#stencilBufferSize">stencilBufferSize</a>(), setStencil(), and stencil().</p>
+<!-- @@@setStencilBufferSize -->
+<!-- $$$setStereo[overload1]$$$setStereobool -->
+<h3 class="fn"><a name="setStereo"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setStereo</span>(<span class="type">bool</span><i> enable</i>)</h3>
+<p>If <i>enable</i> is true enables stereo buffering; otherwise disables stereo buffering.</p>
+<p>Stereo buffering is disabled by default.</p>
+<p>Stereo buffering provides extra color buffers to generate left-eye and right-eye images.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#stereo">stereo</a>().</p>
+<!-- @@@setStereo -->
+<!-- $$$setSwapBehavior[overload1]$$$setSwapBehaviorSwapBehavior -->
+<h3 class="fn"><a name="setSwapBehavior"></a><span class="type">void</span> QSurfaceFormat::<span class="name">setSwapBehavior</span>(<span class="type"><a href="qsurfaceformat.html#SwapBehavior-enum">SwapBehavior</a></span><i> behavior</i>)</h3>
+<p>Set the swap <i>behavior</i> of the surface.</p>
+<p>The swap behavior specifies whether single, double, or triple buffering is desired. The default, SwapBehavior::DefaultSwapBehavior, gives the default swap behavior of the platform.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#swapBehavior">swapBehavior</a>().</p>
+<!-- @@@setSwapBehavior -->
+<!-- $$$stencilBufferSize[overload1]$$$stencilBufferSize -->
+<h3 class="fn"><a name="stencilBufferSize"></a><span class="type">int</span> QSurfaceFormat::<span class="name">stencilBufferSize</span>() const</h3>
+<p>Returns the stencil buffer size in bits.</p>
+<p><b>See also </b>stencil(), setStencil(), and <a href="qsurfaceformat.html#setStencilBufferSize">setStencilBufferSize</a>().</p>
+<!-- @@@stencilBufferSize -->
+<!-- $$$stereo[overload1]$$$stereo -->
+<h3 class="fn"><a name="stereo"></a><span class="type">bool</span> QSurfaceFormat::<span class="name">stereo</span>() const</h3>
+<p>Returns true if stereo buffering is enabled; otherwise returns false. Stereo buffering is disabled by default.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setStereo">setStereo</a>().</p>
+<!-- @@@stereo -->
+<!-- $$$swapBehavior[overload1]$$$swapBehavior -->
+<h3 class="fn"><a name="swapBehavior"></a><span class="type"><a href="qsurfaceformat.html#SwapBehavior-enum">SwapBehavior</a></span> QSurfaceFormat::<span class="name">swapBehavior</span>() const</h3>
+<p>Returns the configured swap behaviour.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setSwapBehavior">setSwapBehavior</a>().</p>
+<!-- @@@swapBehavior -->
+<!-- $$$testOption[overload1]$$$testOptionQSurfaceFormat::FormatOptions -->
+<h3 class="fn"><a name="testOption"></a><span class="type">bool</span> QSurfaceFormat::<span class="name">testOption</span>(<span class="type"><a href="qsurfaceformat.html#FormatOption-enum">QSurfaceFormat::FormatOptions</a></span><i> opt</i>) const</h3>
+<p>Returns true if format option <i>opt</i> is set; otherwise returns false.</p>
+<p><b>See also </b><a href="qsurfaceformat.html#setOption">setOption</a>().</p>
+<!-- @@@testOption -->
+<!-- $$$operator=[overload1]$$$operator=constQSurfaceFormat& -->
+<h3 class="fn"><a name="operator-eq"></a><span class="type">QSurfaceFormat</span> &amp; QSurfaceFormat::<span class="name">operator=</span>(const <span class="type">QSurfaceFormat</span> &amp;<i> other</i>)</h3>
+<p>Assigns <i>other</i> to this object.</p>
+<!-- @@@operator= -->
+</div>
+<div class="relnonmem">
+<h2>Related Non-Members</h2>
+<!-- $$$operator!=$$$operator!=constQSurfaceFormat&constQSurfaceFormat& -->
+<h3 class="fn"><a name="operator-not-eq-30"></a><span class="type">bool</span> <span class="name">operator!=</span>(const <span class="type">QSurfaceFormat</span> &amp;<i> a</i>, const <span class="type">QSurfaceFormat</span> &amp;<i> b</i>)</h3>
+<p>Returns false if all the options of the two <a href="qsurfaceformat.html">QSurfaceFormat</a> objects <i>a</i> and <i>b</i> are equal; otherwise returns true.</p>
+<!-- @@@operator!= -->
+<!-- $$$operator==$$$operator==constQSurfaceFormat&constQSurfaceFormat& -->
+<h3 class="fn"><a name="operator-eq-eq-37"></a><span class="type">bool</span> <span class="name">operator==</span>(const <span class="type">QSurfaceFormat</span> &amp;<i> a</i>, const <span class="type">QSurfaceFormat</span> &amp;<i> b</i>)</h3>
+<p>Returns true if all the options of the two <a href="qsurfaceformat.html">QSurfaceFormat</a> objects <i>a</i> and <i>b</i> are equal.</p>
+<!-- @@@operator== -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

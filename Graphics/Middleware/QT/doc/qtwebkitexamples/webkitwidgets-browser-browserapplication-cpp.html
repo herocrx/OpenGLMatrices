@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>QtWebKitExamples 5.0: browserapplication.cpp Example File (webkitwidgets/browser/browserapplication.cpp)</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">browserapplication.cpp Example File</h1>
+<span class="small-subtitle">webkitwidgets/browser/browserapplication.cpp</span>
+<!-- $$$webkitwidgets/browser/browserapplication.cpp-description -->
+<div class="descr"> <a name="details"></a>
+<pre class="cpp"><span class="comment">/****************************************************************************
+**
+** Copyright (C) 2013 Digia Plc and/or its subsidiary(-ies).
+** Contact: http://www.qt-project.org/legal
+**
+** This file is part of the demonstration applications of the Qt Toolkit.
+**
+** $QT_BEGIN_LICENSE:LGPL$
+** Commercial License Usage
+** Licensees holding valid commercial Qt licenses may use this file in
+** accordance with the commercial license agreement provided with the
+** Software or, alternatively, in accordance with the terms contained in
+** a written agreement between you and Digia.  For licensing terms and
+** conditions see http://qt.digia.com/licensing.  For further information
+** use the contact form at http://qt.digia.com/contact-us.
+**
+** GNU Lesser General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU Lesser
+** General Public License version 2.1 as published by the Free Software
+** Foundation and appearing in the file LICENSE.LGPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU Lesser General Public License version 2.1 requirements
+** will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+** In addition, as a special exception, Digia gives you certain additional
+** rights.  These rights are described in the Digia Qt LGPL Exception
+** version 1.1, included in the file LGPL_EXCEPTION.txt in this package.
+**
+** GNU General Public License Usage
+** Alternatively, this file may be used under the terms of the GNU
+** General Public License version 3.0 as published by the Free Software
+** Foundation and appearing in the file LICENSE.GPL included in the
+** packaging of this file.  Please review the following information to
+** ensure the GNU General Public License version 3.0 requirements will be
+** met: http://www.gnu.org/copyleft/gpl.html.
+**
+**
+** $QT_END_LICENSE$
+**
+****************************************************************************/</span>
+
+<span class="preprocessor">#include &quot;browserapplication.h&quot;</span>
+
+<span class="preprocessor">#include &quot;bookmarks.h&quot;</span>
+<span class="preprocessor">#include &quot;browsermainwindow.h&quot;</span>
+<span class="preprocessor">#include &quot;cookiejar.h&quot;</span>
+<span class="preprocessor">#include &quot;downloadmanager.h&quot;</span>
+<span class="preprocessor">#include &quot;history.h&quot;</span>
+<span class="preprocessor">#include &quot;networkaccessmanager.h&quot;</span>
+<span class="preprocessor">#include &quot;tabwidget.h&quot;</span>
+<span class="preprocessor">#include &quot;webview.h&quot;</span>
+
+<span class="preprocessor">#include &lt;QtCore/QBuffer&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QDir&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QLibraryInfo&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QSettings&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QTextStream&gt;</span>
+<span class="preprocessor">#include &lt;QtCore/QTranslator&gt;</span>
+
+<span class="preprocessor">#include &lt;QtGui/QDesktopServices&gt;</span>
+<span class="preprocessor">#include &lt;QtGui/QFileOpenEvent&gt;</span>
+<span class="preprocessor">#include &lt;QtWidgets/QMessageBox&gt;</span>
+
+<span class="preprocessor">#include &lt;QtNetwork/QLocalServer&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QLocalSocket&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QNetworkProxy&gt;</span>
+<span class="preprocessor">#include &lt;QtNetwork/QSslSocket&gt;</span>
+
+<span class="preprocessor">#include &lt;QWebSettings&gt;</span>
+
+<span class="preprocessor">#include &lt;QtCore/QDebug&gt;</span>
+
+DownloadManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>s_downloadManager <span class="operator">=</span> <span class="number">0</span>;
+HistoryManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>s_historyManager <span class="operator">=</span> <span class="number">0</span>;
+NetworkAccessManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>s_networkAccessManager <span class="operator">=</span> <span class="number">0</span>;
+BookmarksManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>s_bookmarksManager <span class="operator">=</span> <span class="number">0</span>;
+
+BrowserApplication<span class="operator">::</span>BrowserApplication(<span class="type">int</span> <span class="operator">&amp;</span>argc<span class="operator">,</span> <span class="type">char</span> <span class="operator">*</span><span class="operator">*</span>argv)
+    : <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span>(argc<span class="operator">,</span> argv)
+    <span class="operator">,</span> m_localServer(<span class="number">0</span>)
+{
+    <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>setOrganizationName(QLatin1String(<span class="string">&quot;Qt&quot;</span>));
+    <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>setApplicationName(QLatin1String(<span class="string">&quot;demobrowser&quot;</span>));
+    <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>setApplicationVersion(QLatin1String(<span class="string">&quot;0.1&quot;</span>));
+<span class="preprocessor">#ifdef Q_WS_QWS</span>
+    <span class="comment">// Use a different server name for QWS so we can run an X11</span>
+    <span class="comment">// browser and a QWS browser in parallel on the same machine for</span>
+    <span class="comment">// debugging</span>
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> serverName <span class="operator">=</span> <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>applicationName() <span class="operator">+</span> QLatin1String(<span class="string">&quot;_qws&quot;</span>);
+<span class="preprocessor">#else</span>
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> serverName <span class="operator">=</span> <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>applicationName();
+<span class="preprocessor">#endif</span>
+    <span class="type">QLocalSocket</span> socket;
+    socket<span class="operator">.</span>connectToServer(serverName);
+    <span class="keyword">if</span> (socket<span class="operator">.</span>waitForConnected(<span class="number">500</span>)) {
+        <span class="type"><a href="../qtcore/qtextstream.html">QTextStream</a></span> stream(<span class="operator">&amp;</span>socket);
+        <span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> args <span class="operator">=</span> <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>arguments();
+        <span class="keyword">if</span> (args<span class="operator">.</span>count() <span class="operator">&gt;</span> <span class="number">1</span>)
+            stream <span class="operator">&lt;</span><span class="operator">&lt;</span> args<span class="operator">.</span>last();
+        <span class="keyword">else</span>
+            stream <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span>();
+        stream<span class="operator">.</span>flush();
+        socket<span class="operator">.</span>waitForBytesWritten();
+        <span class="keyword">return</span>;
+    }
+
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+    <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span><span class="operator">::</span>setQuitOnLastWindowClosed(<span class="keyword">false</span>);
+<span class="preprocessor">#else</span>
+    <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span><span class="operator">::</span>setQuitOnLastWindowClosed(<span class="keyword">true</span>);
+<span class="preprocessor">#endif</span>
+
+    m_localServer <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QLocalServer</span>(<span class="keyword">this</span>);
+    connect(m_localServer<span class="operator">,</span> SIGNAL(newConnection())<span class="operator">,</span>
+            <span class="keyword">this</span><span class="operator">,</span> SLOT(newLocalSocketConnection()));
+    <span class="keyword">if</span> (<span class="operator">!</span>m_localServer<span class="operator">-</span><span class="operator">&gt;</span>listen(serverName)) {
+        <span class="keyword">if</span> (m_localServer<span class="operator">-</span><span class="operator">&gt;</span>serverError() <span class="operator">=</span><span class="operator">=</span> <span class="type">QAbstractSocket</span><span class="operator">::</span>AddressInUseError
+            <span class="operator">&amp;</span><span class="operator">&amp;</span> <span class="type"><a href="../qtcore/qfile.html">QFile</a></span><span class="operator">::</span>exists(m_localServer<span class="operator">-</span><span class="operator">&gt;</span>serverName())) {
+            <span class="type"><a href="../qtcore/qfile.html">QFile</a></span><span class="operator">::</span>remove(m_localServer<span class="operator">-</span><span class="operator">&gt;</span>serverName());
+            m_localServer<span class="operator">-</span><span class="operator">&gt;</span>listen(serverName);
+        }
+    }
+
+<span class="preprocessor">#ifndef QT_NO_OPENSSL</span>
+    <span class="keyword">if</span> (<span class="operator">!</span><span class="type">QSslSocket</span><span class="operator">::</span>supportsSsl()) {
+    <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>information(<span class="number">0</span><span class="operator">,</span> <span class="string">&quot;Demo Browser&quot;</span><span class="operator">,</span>
+                 <span class="string">&quot;This system does not support OpenSSL. SSL websites will not be available.&quot;</span>);
+    }
+<span class="preprocessor">#endif</span>
+
+    <span class="type"><a href="../qtgui/qdesktopservices.html">QDesktopServices</a></span><span class="operator">::</span>setUrlHandler(QLatin1String(<span class="string">&quot;http&quot;</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="string">&quot;openUrl&quot;</span>);
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> localSysName <span class="operator">=</span> <span class="type"><a href="../qtcore/qlocale.html">QLocale</a></span><span class="operator">::</span>system()<span class="operator">.</span>name();
+
+    installTranslator(QLatin1String(<span class="string">&quot;qt_&quot;</span>) <span class="operator">+</span> localSysName);
+
+    <span class="type"><a href="../qtcore/qsettings.html">QSettings</a></span> settings;
+    settings<span class="operator">.</span>beginGroup(QLatin1String(<span class="string">&quot;sessions&quot;</span>));
+    m_lastSession <span class="operator">=</span> settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;lastSession&quot;</span>))<span class="operator">.</span>toByteArray();
+    settings<span class="operator">.</span>endGroup();
+
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+    connect(<span class="keyword">this</span><span class="operator">,</span> SIGNAL(lastWindowClosed())<span class="operator">,</span>
+            <span class="keyword">this</span><span class="operator">,</span> SLOT(lastWindowClosed()));
+<span class="preprocessor">#endif</span>
+
+    <span class="type"><a href="../qtcore/qtimer.html">QTimer</a></span><span class="operator">::</span>singleShot(<span class="number">0</span><span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> SLOT(postLaunch()));
+}
+
+BrowserApplication<span class="operator">::</span><span class="operator">~</span>BrowserApplication()
+{
+    <span class="keyword">delete</span> s_downloadManager;
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> m_mainWindows<span class="operator">.</span>size(); <span class="operator">+</span><span class="operator">+</span>i) {
+        BrowserMainWindow <span class="operator">*</span>window <span class="operator">=</span> m_mainWindows<span class="operator">.</span>at(i);
+        <span class="keyword">delete</span> window;
+    }
+    <span class="keyword">delete</span> s_networkAccessManager;
+    <span class="keyword">delete</span> s_bookmarksManager;
+}
+
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>lastWindowClosed()
+{
+    clean();
+    BrowserMainWindow <span class="operator">*</span>mw <span class="operator">=</span> <span class="keyword">new</span> BrowserMainWindow;
+    mw<span class="operator">-</span><span class="operator">&gt;</span>slotHome();
+    m_mainWindows<span class="operator">.</span>prepend(mw);
+}
+<span class="preprocessor">#endif</span>
+
+BrowserApplication <span class="operator">*</span>BrowserApplication<span class="operator">::</span>instance()
+{
+    <span class="keyword">return</span> (<span class="keyword">static_cast</span><span class="operator">&lt;</span>BrowserApplication <span class="operator">*</span><span class="operator">&gt;</span>(<span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>instance()));
+}
+
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+<span class="preprocessor">#include &lt;QtWidgets/QMessageBox&gt;</span>
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>quitBrowser()
+{
+    clean();
+    <span class="type">int</span> tabCount <span class="operator">=</span> <span class="number">0</span>;
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> m_mainWindows<span class="operator">.</span>count(); <span class="operator">+</span><span class="operator">+</span>i) {
+        tabCount <span class="operator">=</span><span class="operator">+</span> m_mainWindows<span class="operator">.</span>at(i)<span class="operator">-</span><span class="operator">&gt;</span>tabWidget()<span class="operator">-</span><span class="operator">&gt;</span>count();
+    }
+
+    <span class="keyword">if</span> (tabCount <span class="operator">&gt;</span> <span class="number">1</span>) {
+        <span class="type">int</span> ret <span class="operator">=</span> <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>warning(mainWindow()<span class="operator">,</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span>()<span class="operator">,</span>
+                           tr(<span class="string">&quot;There are %1 windows and %2 tabs open\n&quot;</span>
+                              <span class="string">&quot;Do you want to quit anyway?&quot;</span>)<span class="operator">.</span>arg(m_mainWindows<span class="operator">.</span>count())<span class="operator">.</span>arg(tabCount)<span class="operator">,</span>
+                           <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>Yes <span class="operator">|</span> <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>No<span class="operator">,</span>
+                           <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>No);
+        <span class="keyword">if</span> (ret <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="../qtwidgets/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>No)
+            <span class="keyword">return</span>;
+    }
+
+    exit(<span class="number">0</span>);
+}
+<span class="preprocessor">#endif</span>
+
+<span class="comment">/*!
+    Any actions that can be delayed until the window is visible
+ */</span>
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>postLaunch()
+{
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> directory <span class="operator">=</span> <span class="type"><a href="../qtcore/qstandardpaths.html">QStandardPaths</a></span><span class="operator">::</span>writableLocation(<span class="type"><a href="../qtcore/qstandardpaths.html">QStandardPaths</a></span><span class="operator">::</span>DataLocation);
+    <span class="keyword">if</span> (directory<span class="operator">.</span>isEmpty())
+        directory <span class="operator">=</span> <span class="type"><a href="../qtcore/qdir.html">QDir</a></span><span class="operator">::</span>homePath() <span class="operator">+</span> QLatin1String(<span class="string">&quot;/.&quot;</span>) <span class="operator">+</span> <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>applicationName();
+    <span class="type">QWebSettings</span><span class="operator">::</span>setIconDatabasePath(directory);
+    <span class="type">QWebSettings</span><span class="operator">::</span>setOfflineStoragePath(directory);
+
+    setWindowIcon(<span class="type"><a href="../qtgui/qicon.html">QIcon</a></span>(QLatin1String(<span class="string">&quot;:browser.svg&quot;</span>)));
+
+    loadSettings();
+
+    <span class="comment">// newMainWindow() needs to be called in main() for this to happen</span>
+    <span class="keyword">if</span> (m_mainWindows<span class="operator">.</span>count() <span class="operator">&gt;</span> <span class="number">0</span>) {
+        <span class="type"><a href="../qtcore/qstringlist.html">QStringList</a></span> args <span class="operator">=</span> <span class="type"><a href="../qtcore/qcoreapplication.html">QCoreApplication</a></span><span class="operator">::</span>arguments();
+        <span class="keyword">if</span> (args<span class="operator">.</span>count() <span class="operator">&gt;</span> <span class="number">1</span>)
+            mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>loadPage(args<span class="operator">.</span>last());
+        <span class="keyword">else</span>
+            mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>slotHome();
+    }
+    BrowserApplication<span class="operator">::</span>historyManager();
+}
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>loadSettings()
+{
+    <span class="type"><a href="../qtcore/qsettings.html">QSettings</a></span> settings;
+    settings<span class="operator">.</span>beginGroup(QLatin1String(<span class="string">&quot;websettings&quot;</span>));
+
+    <span class="type">QWebSettings</span> <span class="operator">*</span>defaultSettings <span class="operator">=</span> <span class="type">QWebSettings</span><span class="operator">::</span>globalSettings();
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> standardFontFamily <span class="operator">=</span> defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>fontFamily(<span class="type">QWebSettings</span><span class="operator">::</span>StandardFont);
+    <span class="type">int</span> standardFontSize <span class="operator">=</span> defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>fontSize(<span class="type">QWebSettings</span><span class="operator">::</span>DefaultFontSize);
+    <span class="type"><a href="../qtgui/qfont.html">QFont</a></span> standardFont <span class="operator">=</span> <span class="type"><a href="../qtgui/qfont.html">QFont</a></span>(standardFontFamily<span class="operator">,</span> standardFontSize);
+    standardFont <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtgui/qfont.html">QFont</a></span><span class="operator">&gt;</span>(settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;standardFont&quot;</span>)<span class="operator">,</span> standardFont));
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setFontFamily(<span class="type">QWebSettings</span><span class="operator">::</span>StandardFont<span class="operator">,</span> standardFont<span class="operator">.</span>family());
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setFontSize(<span class="type">QWebSettings</span><span class="operator">::</span>DefaultFontSize<span class="operator">,</span> standardFont<span class="operator">.</span>pointSize());
+
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> fixedFontFamily <span class="operator">=</span> defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>fontFamily(<span class="type">QWebSettings</span><span class="operator">::</span>FixedFont);
+    <span class="type">int</span> fixedFontSize <span class="operator">=</span> defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>fontSize(<span class="type">QWebSettings</span><span class="operator">::</span>DefaultFixedFontSize);
+    <span class="type"><a href="../qtgui/qfont.html">QFont</a></span> fixedFont <span class="operator">=</span> <span class="type"><a href="../qtgui/qfont.html">QFont</a></span>(fixedFontFamily<span class="operator">,</span> fixedFontSize);
+    fixedFont <span class="operator">=</span> qvariant_cast<span class="operator">&lt;</span><span class="type"><a href="../qtgui/qfont.html">QFont</a></span><span class="operator">&gt;</span>(settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;fixedFont&quot;</span>)<span class="operator">,</span> fixedFont));
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setFontFamily(<span class="type">QWebSettings</span><span class="operator">::</span>FixedFont<span class="operator">,</span> fixedFont<span class="operator">.</span>family());
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setFontSize(<span class="type">QWebSettings</span><span class="operator">::</span>DefaultFixedFontSize<span class="operator">,</span> fixedFont<span class="operator">.</span>pointSize());
+
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setAttribute(<span class="type">QWebSettings</span><span class="operator">::</span>JavascriptEnabled<span class="operator">,</span> settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;enableJavascript&quot;</span>)<span class="operator">,</span> <span class="keyword">true</span>)<span class="operator">.</span>toBool());
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setAttribute(<span class="type">QWebSettings</span><span class="operator">::</span>PluginsEnabled<span class="operator">,</span> settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;enablePlugins&quot;</span>)<span class="operator">,</span> <span class="keyword">true</span>)<span class="operator">.</span>toBool());
+
+    <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> url <span class="operator">=</span> settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;userStyleSheet&quot;</span>))<span class="operator">.</span>toUrl();
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setUserStyleSheetUrl(url);
+
+    defaultSettings<span class="operator">-</span><span class="operator">&gt;</span>setAttribute(<span class="type">QWebSettings</span><span class="operator">::</span>DnsPrefetchEnabled<span class="operator">,</span> <span class="keyword">true</span>);
+
+    settings<span class="operator">.</span>endGroup();
+}
+
+<span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span>BrowserMainWindow<span class="operator">*</span><span class="operator">&gt;</span> BrowserApplication<span class="operator">::</span>mainWindows()
+{
+    clean();
+    <span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span>BrowserMainWindow<span class="operator">*</span><span class="operator">&gt;</span> list;
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> m_mainWindows<span class="operator">.</span>count(); <span class="operator">+</span><span class="operator">+</span>i)
+        list<span class="operator">.</span>append(m_mainWindows<span class="operator">.</span>at(i));
+    <span class="keyword">return</span> list;
+}
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>clean()
+{
+    <span class="comment">// cleanup any deleted main windows first</span>
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> m_mainWindows<span class="operator">.</span>count() <span class="operator">-</span> <span class="number">1</span>; i <span class="operator">&gt;</span><span class="operator">=</span> <span class="number">0</span>; <span class="operator">-</span><span class="operator">-</span>i)
+        <span class="keyword">if</span> (m_mainWindows<span class="operator">.</span>at(i)<span class="operator">.</span>isNull())
+            m_mainWindows<span class="operator">.</span>removeAt(i);
+}
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>saveSession()
+{
+    <span class="type">QWebSettings</span> <span class="operator">*</span>globalSettings <span class="operator">=</span> <span class="type">QWebSettings</span><span class="operator">::</span>globalSettings();
+    <span class="keyword">if</span> (globalSettings<span class="operator">-</span><span class="operator">&gt;</span>testAttribute(<span class="type">QWebSettings</span><span class="operator">::</span>PrivateBrowsingEnabled))
+        <span class="keyword">return</span>;
+
+    clean();
+
+    <span class="type"><a href="../qtcore/qsettings.html">QSettings</a></span> settings;
+    settings<span class="operator">.</span>beginGroup(QLatin1String(<span class="string">&quot;sessions&quot;</span>));
+
+    <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> data;
+    <span class="type"><a href="../qtcore/qbuffer.html">QBuffer</a></span> buffer(<span class="operator">&amp;</span>data);
+    <span class="type"><a href="../qtcore/qdatastream.html">QDataStream</a></span> stream(<span class="operator">&amp;</span>buffer);
+    buffer<span class="operator">.</span>open(<span class="type"><a href="../qtcore/qiodevice.html">QIODevice</a></span><span class="operator">::</span>ReadWrite);
+
+    stream <span class="operator">&lt;</span><span class="operator">&lt;</span> m_mainWindows<span class="operator">.</span>count();
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> m_mainWindows<span class="operator">.</span>count(); <span class="operator">+</span><span class="operator">+</span>i)
+        stream <span class="operator">&lt;</span><span class="operator">&lt;</span> m_mainWindows<span class="operator">.</span>at(i)<span class="operator">-</span><span class="operator">&gt;</span>saveState();
+    settings<span class="operator">.</span>setValue(QLatin1String(<span class="string">&quot;lastSession&quot;</span>)<span class="operator">,</span> data);
+    settings<span class="operator">.</span>endGroup();
+}
+
+<span class="type">bool</span> BrowserApplication<span class="operator">::</span>canRestoreSession() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> <span class="operator">!</span>m_lastSession<span class="operator">.</span>isEmpty();
+}
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>restoreLastSession()
+{
+    <span class="type"><a href="../qtcore/qlist.html">QList</a></span><span class="operator">&lt;</span><span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span><span class="operator">&gt;</span> windows;
+    <span class="type"><a href="../qtcore/qbuffer.html">QBuffer</a></span> buffer(<span class="operator">&amp;</span>m_lastSession);
+    <span class="type"><a href="../qtcore/qdatastream.html">QDataStream</a></span> stream(<span class="operator">&amp;</span>buffer);
+    buffer<span class="operator">.</span>open(<span class="type"><a href="../qtcore/qiodevice.html">QIODevice</a></span><span class="operator">::</span>ReadOnly);
+    <span class="type">int</span> windowCount;
+    stream <span class="operator">&gt;</span><span class="operator">&gt;</span> windowCount;
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> windowCount; <span class="operator">+</span><span class="operator">+</span>i) {
+        <span class="type"><a href="../qtcore/qbytearray.html">QByteArray</a></span> windowState;
+        stream <span class="operator">&gt;</span><span class="operator">&gt;</span> windowState;
+        windows<span class="operator">.</span>append(windowState);
+    }
+    <span class="keyword">for</span> (<span class="type">int</span> i <span class="operator">=</span> <span class="number">0</span>; i <span class="operator">&lt;</span> windows<span class="operator">.</span>count(); <span class="operator">+</span><span class="operator">+</span>i) {
+        BrowserMainWindow <span class="operator">*</span>newWindow <span class="operator">=</span> <span class="number">0</span>;
+        <span class="keyword">if</span> (m_mainWindows<span class="operator">.</span>count() <span class="operator">=</span><span class="operator">=</span> <span class="number">1</span>
+            <span class="operator">&amp;</span><span class="operator">&amp;</span> mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>tabWidget()<span class="operator">-</span><span class="operator">&gt;</span>count() <span class="operator">=</span><span class="operator">=</span> <span class="number">1</span>
+            <span class="operator">&amp;</span><span class="operator">&amp;</span> mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>currentTab()<span class="operator">-</span><span class="operator">&gt;</span>url() <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span>()) {
+            newWindow <span class="operator">=</span> mainWindow();
+        } <span class="keyword">else</span> {
+            newWindow <span class="operator">=</span> newMainWindow();
+        }
+        newWindow<span class="operator">-</span><span class="operator">&gt;</span>restoreState(windows<span class="operator">.</span>at(i));
+    }
+}
+
+<span class="type">bool</span> BrowserApplication<span class="operator">::</span>isTheOnlyBrowser() <span class="keyword">const</span>
+{
+    <span class="keyword">return</span> (m_localServer <span class="operator">!</span><span class="operator">=</span> <span class="number">0</span>);
+}
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>installTranslator(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qstring.html">QString</a></span> <span class="operator">&amp;</span>name)
+{
+    <span class="type"><a href="../qtcore/qtranslator.html">QTranslator</a></span> <span class="operator">*</span>translator <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="../qtcore/qtranslator.html">QTranslator</a></span>(<span class="keyword">this</span>);
+    translator<span class="operator">-</span><span class="operator">&gt;</span>load(name<span class="operator">,</span> <span class="type"><a href="../qtcore/qlibraryinfo.html">QLibraryInfo</a></span><span class="operator">::</span>location(<span class="type"><a href="../qtcore/qlibraryinfo.html">QLibraryInfo</a></span><span class="operator">::</span>TranslationsPath));
+    <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span><span class="operator">::</span>installTranslator(translator);
+}
+
+<span class="preprocessor">#if defined(Q_WS_MAC)</span>
+<span class="type">bool</span> BrowserApplication<span class="operator">::</span>event(<span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">*</span> event)
+{
+    <span class="keyword">switch</span> (event<span class="operator">-</span><span class="operator">&gt;</span>type()) {
+    <span class="keyword">case</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>ApplicationActivate: {
+        clean();
+        <span class="keyword">if</span> (<span class="operator">!</span>m_mainWindows<span class="operator">.</span>isEmpty()) {
+            BrowserMainWindow <span class="operator">*</span>mw <span class="operator">=</span> mainWindow();
+            <span class="keyword">if</span> (mw <span class="operator">&amp;</span><span class="operator">&amp;</span> <span class="operator">!</span>mw<span class="operator">-</span><span class="operator">&gt;</span>isMinimized()) {
+                mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>show();
+            }
+            <span class="keyword">return</span> <span class="keyword">true</span>;
+        }
+    }
+    <span class="keyword">case</span> <span class="type"><a href="../qtcore/qevent.html">QEvent</a></span><span class="operator">::</span>FileOpen:
+        <span class="keyword">if</span> (<span class="operator">!</span>m_mainWindows<span class="operator">.</span>isEmpty()) {
+            mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>loadPage(<span class="keyword">static_cast</span><span class="operator">&lt;</span><span class="type"><a href="../qtgui/qfileopenevent.html">QFileOpenEvent</a></span> <span class="operator">*</span><span class="operator">&gt;</span>(event)<span class="operator">-</span><span class="operator">&gt;</span>file());
+            <span class="keyword">return</span> <span class="keyword">true</span>;
+        }
+    <span class="keyword">default</span>:
+        <span class="keyword">break</span>;
+    }
+    <span class="keyword">return</span> <span class="type"><a href="../qtwidgets/qapplication.html">QApplication</a></span><span class="operator">::</span>event(event);
+}
+<span class="preprocessor">#endif</span>
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>openUrl(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> <span class="operator">&amp;</span>url)
+{
+    mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>loadPage(url<span class="operator">.</span>toString());
+}
+
+BrowserMainWindow <span class="operator">*</span>BrowserApplication<span class="operator">::</span>newMainWindow()
+{
+    BrowserMainWindow <span class="operator">*</span>browser <span class="operator">=</span> <span class="keyword">new</span> BrowserMainWindow();
+    m_mainWindows<span class="operator">.</span>prepend(browser);
+    browser<span class="operator">-</span><span class="operator">&gt;</span>show();
+    <span class="keyword">return</span> browser;
+}
+
+BrowserMainWindow <span class="operator">*</span>BrowserApplication<span class="operator">::</span>mainWindow()
+{
+    clean();
+    <span class="keyword">if</span> (m_mainWindows<span class="operator">.</span>isEmpty())
+        newMainWindow();
+    <span class="keyword">return</span> m_mainWindows<span class="operator">[</span><span class="number">0</span><span class="operator">]</span>;
+}
+
+<span class="type">void</span> BrowserApplication<span class="operator">::</span>newLocalSocketConnection()
+{
+    <span class="type">QLocalSocket</span> <span class="operator">*</span>socket <span class="operator">=</span> m_localServer<span class="operator">-</span><span class="operator">&gt;</span>nextPendingConnection();
+    <span class="keyword">if</span> (<span class="operator">!</span>socket)
+        <span class="keyword">return</span>;
+    socket<span class="operator">-</span><span class="operator">&gt;</span>waitForReadyRead(<span class="number">1000</span>);
+    <span class="type"><a href="../qtcore/qtextstream.html">QTextStream</a></span> stream(socket);
+    <span class="type"><a href="../qtcore/qstring.html">QString</a></span> url;
+    stream <span class="operator">&gt;</span><span class="operator">&gt;</span> url;
+    <span class="keyword">if</span> (<span class="operator">!</span>url<span class="operator">.</span>isEmpty()) {
+        <span class="type"><a href="../qtcore/qsettings.html">QSettings</a></span> settings;
+        settings<span class="operator">.</span>beginGroup(QLatin1String(<span class="string">&quot;general&quot;</span>));
+        <span class="type">int</span> openLinksIn <span class="operator">=</span> settings<span class="operator">.</span>value(QLatin1String(<span class="string">&quot;openLinksIn&quot;</span>)<span class="operator">,</span> <span class="number">0</span>)<span class="operator">.</span>toInt();
+        settings<span class="operator">.</span>endGroup();
+        <span class="keyword">if</span> (openLinksIn <span class="operator">=</span><span class="operator">=</span> <span class="number">1</span>)
+            newMainWindow();
+        <span class="keyword">else</span>
+            mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>tabWidget()<span class="operator">-</span><span class="operator">&gt;</span>newTab();
+        openUrl(url);
+    }
+    <span class="keyword">delete</span> socket;
+    mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>raise();
+    mainWindow()<span class="operator">-</span><span class="operator">&gt;</span>activateWindow();
+}
+
+CookieJar <span class="operator">*</span>BrowserApplication<span class="operator">::</span>cookieJar()
+{
+    <span class="keyword">return</span> (CookieJar<span class="operator">*</span>)networkAccessManager()<span class="operator">-</span><span class="operator">&gt;</span>cookieJar();
+}
+
+DownloadManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>downloadManager()
+{
+    <span class="keyword">if</span> (<span class="operator">!</span>s_downloadManager) {
+        s_downloadManager <span class="operator">=</span> <span class="keyword">new</span> DownloadManager();
+    }
+    <span class="keyword">return</span> s_downloadManager;
+}
+
+NetworkAccessManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>networkAccessManager()
+{
+    <span class="keyword">if</span> (<span class="operator">!</span>s_networkAccessManager) {
+        s_networkAccessManager <span class="operator">=</span> <span class="keyword">new</span> NetworkAccessManager();
+        s_networkAccessManager<span class="operator">-</span><span class="operator">&gt;</span>setCookieJar(<span class="keyword">new</span> CookieJar);
+    }
+    <span class="keyword">return</span> s_networkAccessManager;
+}
+
+HistoryManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>historyManager()
+{
+    <span class="keyword">if</span> (<span class="operator">!</span>s_historyManager) {
+        s_historyManager <span class="operator">=</span> <span class="keyword">new</span> HistoryManager();
+        <span class="type">QWebHistoryInterface</span><span class="operator">::</span>setDefaultInterface(s_historyManager);
+    }
+    <span class="keyword">return</span> s_historyManager;
+}
+
+BookmarksManager <span class="operator">*</span>BrowserApplication<span class="operator">::</span>bookmarksManager()
+{
+    <span class="keyword">if</span> (<span class="operator">!</span>s_bookmarksManager) {
+        s_bookmarksManager <span class="operator">=</span> <span class="keyword">new</span> BookmarksManager;
+    }
+    <span class="keyword">return</span> s_bookmarksManager;
+}
+
+<span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> BrowserApplication<span class="operator">::</span>icon(<span class="keyword">const</span> <span class="type"><a href="../qtcore/qurl.html">QUrl</a></span> <span class="operator">&amp;</span>url) <span class="keyword">const</span>
+{
+    <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span> icon <span class="operator">=</span> <span class="type">QWebSettings</span><span class="operator">::</span>iconForUrl(url);
+    <span class="keyword">if</span> (<span class="operator">!</span>icon<span class="operator">.</span>isNull())
+        <span class="keyword">return</span> icon<span class="operator">.</span>pixmap(<span class="number">16</span><span class="operator">,</span> <span class="number">16</span>);
+    <span class="keyword">if</span> (m_defaultIcon<span class="operator">.</span>isNull())
+        m_defaultIcon <span class="operator">=</span> <span class="type"><a href="../qtgui/qicon.html">QIcon</a></span>(QLatin1String(<span class="string">&quot;:defaulticon.png&quot;</span>));
+    <span class="keyword">return</span> m_defaultIcon<span class="operator">.</span>pixmap(<span class="number">16</span><span class="operator">,</span> <span class="number">16</span>);
+}</pre>
+</div>
+<!-- @@@webkitwidgets/browser/browserapplication.cpp -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

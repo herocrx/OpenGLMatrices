@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qjsengine.cpp -->
+  <title>QtQml 5.0: QJSEngine Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+<li class="level2"><a href="#evaluating-scripts">Evaluating Scripts</a></li>
+<li class="level2"><a href="#engine-configuration">Engine Configuration</a></li>
+<li class="level2"><a href="#script-exceptions">Script Exceptions</a></li>
+<li class="level2"><a href="#script-object-creation">Script Object Creation</a></li>
+<li class="level2"><a href="#qobject-integration">QObject Integration</a></li>
+</ul>
+</div>
+<h1 class="title">QJSEngine Class</h1>
+<!-- $$$QJSEngine-brief -->
+<p>The QJSEngine class provides an environment for evaluating JavaScript code. <a href="#details">More...</a></p>
+<!-- @@@QJSEngine -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QJSEngine&gt;</span></pre><p><b>Inherits: </b><a href="../qtcore/qobject.html">QObject</a>.</p>
+<p><b>Inherited by: </b><a href="qqmlengine.html">QQmlEngine</a>.</p>
+<p>This class was introduced in QtQml 5.0.</p>
+<ul>
+<li><a href="qjsengine-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#QJSEngine">QJSEngine</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#QJSEngine-2">QJSEngine</a></b>(QObject *<i> parent</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> virtual </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#dtor.QJSEngine">~QJSEngine</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#collectGarbage">collectGarbage</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJSValue </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#evaluate">evaluate</a></b>(const QString &amp;<i> program</i>, const QString &amp;<i> fileName</i> = QString(), int<i> lineNumber</i> = 1)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> T </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#fromScriptValue">fromScriptValue</a></b>(const QJSValue &amp;<i> value</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJSValue </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#globalObject">globalObject</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJSValue </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#newArray">newArray</a></b>(uint<i> length</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJSValue </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#newObject">newObject</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJSValue </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#newQObject">newQObject</a></b>(QObject *<i> object</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QJSValue </td><td class="memItemRight bottomAlign"><b><a href="qjsengine.html#toScriptValue">toScriptValue</a></b>(const T &amp;<i> value</i>)</td></tr>
+</table>
+<ul>
+<li class="fn">31 public functions inherited from <a href="../qtcore/qobject.html#public-functions">QObject</a></li>
+</ul>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 property inherited from <a href="../qtcore/qobject.html#properties">QObject</a></li>
+<li class="fn">1 public slot inherited from <a href="../qtcore/qobject.html#public-slots">QObject</a></li>
+<li class="fn">2 signals inherited from <a href="../qtcore/qobject.html#signals">QObject</a></li>
+<li class="fn">1 public variable inherited from <a href="../qtcore/qobject.html#public-variables">QObject</a></li>
+<li class="fn">9 static public members inherited from <a href="../qtcore/qobject.html#static-public-members">QObject</a></li>
+<li class="fn">9 protected functions inherited from <a href="../qtcore/qobject.html#protected-functions">QObject</a></li>
+<li class="fn">2 protected variables inherited from <a href="../qtcore/qobject.html#protected-variables">QObject</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QJSEngine-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QJSEngine class provides an environment for evaluating JavaScript code.</p>
+<a name="evaluating-scripts"></a>
+<h3>Evaluating Scripts</h3>
+<p>Use <a href="qjsengine.html#evaluate">evaluate</a>() to evaluate script code.</p>
+<pre class="cpp"><span class="type">QJSEngine</span> myEngine;
+<span class="type"><a href="qjsvalue.html">QJSValue</a></span> three <span class="operator">=</span> myEngine<span class="operator">.</span><a href="qjsengine.html#evaluate">evaluate</a>(<span class="string">&quot;1 + 2&quot;</span>);</pre>
+<p><a href="qjsengine.html#evaluate">evaluate</a>() returns a <a href="qjsvalue.html">QJSValue</a> that holds the result of the evaluation. The <a href="qjsvalue.html">QJSValue</a> class provides functions for converting the result to various C++ types (e.g&#x2e; <a href="qjsvalue.html#toString">QJSValue::toString</a>() and <a href="qjsvalue.html#toNumber">QJSValue::toNumber</a>()).</p>
+<p>The following code snippet shows how a script function can be defined and then invoked from C++ using <a href="qjsvalue.html#call">QJSValue::call</a>():</p>
+<pre class="cpp"><span class="type"><a href="qjsvalue.html">QJSValue</a></span> fun <span class="operator">=</span> myEngine<span class="operator">.</span><a href="qjsengine.html#evaluate">evaluate</a>(<span class="string">&quot;(function(a, b) { return a + b; })&quot;</span>);
+<span class="type">QJSValueList</span> args;
+args <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="number">1</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="number">2</span>;
+<span class="type"><a href="qjsvalue.html">QJSValue</a></span> threeAgain <span class="operator">=</span> fun<span class="operator">.</span>call(<span class="type"><a href="qjsvalue.html">QJSValue</a></span>()<span class="operator">,</span> args);</pre>
+<p>As can be seen from the above snippets, a script is provided to the engine in the form of a string. One common way of loading scripts is by reading the contents of a file and passing it to <a href="qjsengine.html#evaluate">evaluate</a>():</p>
+<pre class="cpp"><span class="type"><a href="../qtcore/qstring.html">QString</a></span> fileName <span class="operator">=</span> <span class="string">&quot;helloworld.qs&quot;</span>;
+<span class="type"><a href="../qtcore/qfile.html">QFile</a></span> scriptFile(fileName);
+<span class="keyword">if</span> (<span class="operator">!</span>scriptFile<span class="operator">.</span>open(<span class="type"><a href="../qtcore/qiodevice.html">QIODevice</a></span><span class="operator">::</span>ReadOnly))
+    <span class="comment">// handle error</span>
+<span class="type"><a href="../qtcore/qtextstream.html">QTextStream</a></span> stream(<span class="operator">&amp;</span>scriptFile);
+<span class="type"><a href="../qtcore/qstring.html">QString</a></span> contents <span class="operator">=</span> stream<span class="operator">.</span>readAll();
+scriptFile<span class="operator">.</span>close();
+myEngine<span class="operator">.</span><a href="qjsengine.html#evaluate">evaluate</a>(contents<span class="operator">,</span> fileName);</pre>
+<p>Here we pass the name of the file as the second argument to <a href="qjsengine.html#evaluate">evaluate</a>(). This does not affect evaluation in any way; the second argument is a general-purpose string that is used to identify the script for debugging purposes.</p>
+<a name="engine-configuration"></a>
+<h3>Engine Configuration</h3>
+<p>The <a href="qjsengine.html#globalObject">globalObject</a>() function returns the <b>Global Object</b> associated with the script engine. Properties of the Global Object are accessible from any script code (i.e&#x2e; they are global variables). Typically, before evaluating &quot;user&quot; scripts, you will want to configure a script engine by adding one or more properties to the Global Object:</p>
+<pre class="cpp">myEngine<span class="operator">.</span><a href="qjsengine.html#globalObject">globalObject</a>()<span class="operator">.</span><a href="../qtcore/qobject.html#setProperty">setProperty</a>(<span class="string">&quot;myNumber&quot;</span><span class="operator">,</span> <span class="number">123</span>);
+<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>
+<span class="type"><a href="qjsvalue.html">QJSValue</a></span> myNumberPlusOne <span class="operator">=</span> myEngine<span class="operator">.</span><a href="qjsengine.html#evaluate">evaluate</a>(<span class="string">&quot;myNumber + 1&quot;</span>);</pre>
+<p>Adding custom properties to the scripting environment is one of the standard means of providing a scripting API that is specific to your application. Usually these custom properties are objects created by the <a href="qjsengine.html#newQObject">newQObject</a>() or <a href="qjsengine.html#newObject">newObject</a>() functions.</p>
+<a name="script-exceptions"></a>
+<h3>Script Exceptions</h3>
+<p><a href="qjsengine.html#evaluate">evaluate</a>() can throw a script exception (e.g&#x2e; due to a syntax error); in that case, the return value is the value that was thrown (typically an <tt>Error</tt> object). You can check whether the evaluation caused an exception by calling isError() on the return value. If isError() returns true, you can call toString() on the error object to obtain an error message.</p>
+<pre class="cpp"><span class="type"><a href="qjsvalue.html">QJSValue</a></span> result <span class="operator">=</span> myEngine<span class="operator">.</span><a href="qjsengine.html#evaluate">evaluate</a>(<span class="operator">.</span><span class="operator">.</span><span class="operator">.</span>);
+<span class="keyword">if</span> (result<span class="operator">.</span>isError())
+    <a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> <span class="string">&quot;uncaught exception:&quot;</span> <span class="operator">&lt;</span><span class="operator">&lt;</span> result<span class="operator">.</span>toString();</pre>
+<a name="script-object-creation"></a>
+<h3>Script Object Creation</h3>
+<p>Use <a href="qjsengine.html#newObject">newObject</a>() to create a JavaScript object; this is the C++ equivalent of the script statement <tt>new Object()</tt>. You can use the object-specific functionality in <a href="qjsvalue.html">QJSValue</a> to manipulate the script object (e.g&#x2e; <a href="qjsvalue.html#setProperty">QJSValue::setProperty</a>()). Similarly, use <a href="qjsengine.html#newArray">newArray</a>() to create a JavaScript array object.</p>
+<a name="qobject-integration"></a>
+<h3>QObject Integration</h3>
+<p>Use <a href="qjsengine.html#newQObject">newQObject</a>() to wrap a <a href="../qtcore/qobject.html">QObject</a> (or subclass) pointer. <a href="qjsengine.html#newQObject">newQObject</a>() returns a proxy script object; properties, children, and signals and slots of the <a href="../qtcore/qobject.html">QObject</a> are available as properties of the proxy object. No binding code is needed because it is done dynamically using the Qt meta object system.</p>
+<pre class="cpp"><span class="type">QPushButton</span> button;
+<span class="type"><a href="qjsvalue.html">QJSValue</a></span> scriptButton <span class="operator">=</span> myEngine<span class="operator">.</span><a href="qjsengine.html#newQObject">newQObject</a>(<span class="operator">&amp;</span>button);
+myEngine<span class="operator">.</span><a href="qjsengine.html#globalObject">globalObject</a>()<span class="operator">.</span><a href="../qtcore/qobject.html#setProperty">setProperty</a>(<span class="string">&quot;button&quot;</span><span class="operator">,</span> scriptButton);
+
+myEngine<span class="operator">.</span><a href="qjsengine.html#evaluate">evaluate</a>(<span class="string">&quot;button.checkable = true&quot;</span>);
+
+<a href="../qtcore/qtglobal.html#qDebug">qDebug</a>() <span class="operator">&lt;</span><span class="operator">&lt;</span> scriptButton<span class="operator">.</span><a href="../qtcore/qobject.html#property">property</a>(<span class="string">&quot;checkable&quot;</span>)<span class="operator">.</span>toBoolean();
+scriptButton<span class="operator">.</span><a href="../qtcore/qobject.html#property">property</a>(<span class="string">&quot;show&quot;</span>)<span class="operator">.</span>call(); <span class="comment">// call the show() slot</span></pre>
+</div>
+<p><b>See also </b><a href="qjsvalue.html">QJSValue</a> and <a href="qtjavascript.html">Making Applications Scriptable</a>.</p>
+<!-- @@@QJSEngine -->
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QJSEngine[overload1]$$$QJSEngine -->
+<h3 class="fn"><a name="QJSEngine"></a>QJSEngine::<span class="name">QJSEngine</span>()</h3>
+<p>Constructs a <a href="qjsengine.html">QJSEngine</a> object.</p>
+<p>The <a href="qjsengine.html#globalObject">globalObject</a>() is initialized to have properties as described in <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>, Section 15.1&#x2e;</p>
+<!-- @@@QJSEngine -->
+<!-- $$$QJSEngine$$$QJSEngineQObject* -->
+<h3 class="fn"><a name="QJSEngine-2"></a>QJSEngine::<span class="name">QJSEngine</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> parent</i>)</h3>
+<p>Constructs a <a href="qjsengine.html">QJSEngine</a> object with the given <i>parent</i>.</p>
+<p>The <a href="qjsengine.html#globalObject">globalObject</a>() is initialized to have properties as described in <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>, Section 15.1&#x2e;</p>
+<!-- @@@QJSEngine -->
+<!-- $$$~QJSEngine[overload1]$$$~QJSEngine -->
+<h3 class="fn"><a name="dtor.QJSEngine"></a>QJSEngine::<span class="name">~QJSEngine</span>()<tt> [virtual]</tt></h3>
+<p>Destroys this <a href="qjsengine.html">QJSEngine</a>.</p>
+<!-- @@@~QJSEngine -->
+<!-- $$$collectGarbage[overload1]$$$collectGarbage -->
+<h3 class="fn"><a name="collectGarbage"></a><span class="type">void</span> QJSEngine::<span class="name">collectGarbage</span>()</h3>
+<p>Runs the garbage collector.</p>
+<p>The garbage collector will attempt to reclaim memory by locating and disposing of objects that are no longer reachable in the script environment.</p>
+<p>Normally you don't need to call this function; the garbage collector will automatically be invoked when the <a href="qjsengine.html">QJSEngine</a> decides that it's wise to do so (i.e&#x2e; when a certain number of new objects have been created). However, you can call this function to explicitly request that garbage collection should be performed as soon as possible.</p>
+<!-- @@@collectGarbage -->
+<!-- $$$evaluate[overload1]$$$evaluateconstQString&constQString&int -->
+<h3 class="fn"><a name="evaluate"></a><span class="type"><a href="qjsvalue.html">QJSValue</a></span> QJSEngine::<span class="name">evaluate</span>(const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> program</i>, const <span class="type"><a href="../qtcore/qstring.html">QString</a></span> &amp;<i> fileName</i> = QString(), <span class="type">int</span><i> lineNumber</i> = 1)</h3>
+<p>Evaluates <i>program</i>, using <i>lineNumber</i> as the base line number, and returns the result of the evaluation.</p>
+<p>The script code will be evaluated in the current context.</p>
+<p>The evaluation of <i>program</i> can cause an exception in the engine; in this case the return value will be the exception that was thrown (typically an <tt>Error</tt> object; see <a href="qjsvalue.html#isError">QJSValue::isError</a>()).</p>
+<p><i>lineNumber</i> is used to specify a starting line number for <i>program</i>; line number information reported by the engine that pertain to this evaluation will be based on this argument. For example, if <i>program</i> consists of two lines of code, and the statement on the second line causes a script exception, the exception line number would be <i>lineNumber</i> plus one. When no starting line number is specified, line numbers will be 1-based.</p>
+<p><i>fileName</i> is used for error reporting. For example in error objects the file name is accessible through the &quot;fileName&quot; property if it's provided with this function.</p>
+<p><b>Note: </b>If an exception was thrown and the exception value is not an Error instance (i.e&#x2e;, <a href="qjsvalue.html#isError">QJSValue::isError</a>() returns false), the exception value will still be returned, but there is currently no API for detecting that an exception did occur in this case.</p><!-- @@@evaluate -->
+<!-- $$$fromScriptValue[overload1]$$$fromScriptValueconstQJSValue& -->
+<h3 class="fn"><a name="fromScriptValue"></a><span class="type">T</span> QJSEngine::<span class="name">fromScriptValue</span>(const <span class="type"><a href="qjsvalue.html">QJSValue</a></span> &amp;<i> value</i>)</h3>
+<p>Returns the given <i>value</i> converted to the template type <tt>T</tt>.</p>
+<p><b>See also </b><a href="qjsengine.html#toScriptValue">toScriptValue</a>().</p>
+<!-- @@@fromScriptValue -->
+<!-- $$$globalObject[overload1]$$$globalObject -->
+<h3 class="fn"><a name="globalObject"></a><span class="type"><a href="qjsvalue.html">QJSValue</a></span> QJSEngine::<span class="name">globalObject</span>() const</h3>
+<p>Returns this engine's Global Object.</p>
+<p>By default, the Global Object contains the built-in objects that are part of <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMA-262</a>, such as Math, Date and String. Additionally, you can set properties of the Global Object to make your own extensions available to all script code. Non-local variables in script code will be created as properties of the Global Object, as well as local variables in global code.</p>
+<!-- @@@globalObject -->
+<!-- $$$newArray[overload1]$$$newArrayuint -->
+<h3 class="fn"><a name="newArray"></a><span class="type"><a href="qjsvalue.html">QJSValue</a></span> QJSEngine::<span class="name">newArray</span>(<span class="type"><a href="../qtcore/qtglobal.html#uint-typedef">uint</a></span><i> length</i> = 0)</h3>
+<p>Creates a JavaScript object of class Array with the given <i>length</i>.</p>
+<p><b>See also </b><a href="qjsengine.html#newObject">newObject</a>().</p>
+<!-- @@@newArray -->
+<!-- $$$newObject[overload1]$$$newObject -->
+<h3 class="fn"><a name="newObject"></a><span class="type"><a href="qjsvalue.html">QJSValue</a></span> QJSEngine::<span class="name">newObject</span>()</h3>
+<p>Creates a JavaScript object of class Object.</p>
+<p>The prototype of the created object will be the Object prototype object.</p>
+<p><b>See also </b><a href="qjsengine.html#newArray">newArray</a>() and <a href="qjsvalue.html#setProperty">QJSValue::setProperty</a>().</p>
+<!-- @@@newObject -->
+<!-- $$$newQObject[overload1]$$$newQObjectQObject* -->
+<h3 class="fn"><a name="newQObject"></a><span class="type"><a href="qjsvalue.html">QJSValue</a></span> QJSEngine::<span class="name">newQObject</span>(<span class="type"><a href="../qtcore/qobject.html">QObject</a></span> *<i> object</i>)</h3>
+<p>Creates a JavaScript object that wraps the given <a href="../qtcore/qobject.html">QObject</a> <i>object</i>, using JavaScriptOwnership.</p>
+<p>Signals and slots, properties and children of <i>object</i> are available as properties of the created <a href="qjsvalue.html">QJSValue</a>.</p>
+<p>If <i>object</i> is a null pointer, this function returns a null value.</p>
+<p>If a default prototype has been registered for the <i>object</i>'s class (or its superclass, recursively), the prototype of the new script object will be set to be that default prototype.</p>
+<p>If the given <i>object</i> is deleted outside of the engine's control, any attempt to access the deleted <a href="../qtcore/qobject.html">QObject</a>'s members through the JavaScript wrapper object (either by script code or C++) will result in a script exception.</p>
+<p><b>See also </b><a href="qjsvalue.html#toQObject">QJSValue::toQObject</a>().</p>
+<!-- @@@newQObject -->
+<!-- $$$toScriptValue[overload1]$$$toScriptValueconstT& -->
+<h3 class="fn"><a name="toScriptValue"></a><span class="type"><a href="qjsvalue.html">QJSValue</a></span> QJSEngine::<span class="name">toScriptValue</span>(const <span class="type">T</span> &amp;<i> value</i>)</h3>
+<p>Creates a <a href="qjsvalue.html">QJSValue</a> with the given <i>value</i>.</p>
+<p><b>See also </b><a href="qjsengine.html#fromScriptValue">fromScriptValue</a>().</p>
+<!-- @@@toScriptValue -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

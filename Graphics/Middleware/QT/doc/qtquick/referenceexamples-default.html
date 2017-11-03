@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qml-extending.qdoc -->
+  <title>QtQuick 5.0: Extending QML - Default Property Example</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#declaring-the-birthdayparty-class">Declaring the BirthdayParty class</a></li>
+<li class="level1"><a href="#running-the-example">Running the example</a></li>
+</ul>
+</div>
+<h1 class="title">Extending QML - Default Property Example</h1>
+<span class="subtitle"></span>
+<!-- $$$referenceexamples/default-description -->
+<div class="descr"> <a name="details"></a>
+<p>Default Property<p>This example builds on:</p>
+<ul>
+<li><a href="referenceexamples-coercion.html">Extending QML - Inheritance and Coercion Example</a></li>
+<li><a href="referenceexamples-properties.html">Extending QML - Object and List Property Types Example</a></li>
+<li><a href="referenceexamples-adding.html">Extending QML - Adding Types Example</a></li>
+</ul>
+<p>The Default Property Example is a minor modification of the <a href="referenceexamples-coercion.html">Extending QML - Inheritance and Coercion Example</a> that simplifies the specification of a BirthdayParty through the use of a default property.</p>
+<pre class="qml"></pre>
+<a name="declaring-the-birthdayparty-class"></a>
+<h2>Declaring the BirthdayParty class</h2>
+<p>The only difference between this example and the last, is the addition of the <tt>DefaultProperty</tt> class info annotation.</p>
+<pre class="cpp"></pre>
+<p>The default property specifies the property to assign to whenever an explicit property is not specified, in the case of the BirthdayParty element the guest property. It is purely a syntactic simplification, the behavior is identical to specifying the property by name, but it can add a more natural feel in many situations. The default property must be either an object or list property.</p>
+<a name="running-the-example"></a>
+<h2>Running the example</h2>
+<p>The main.cpp file in the example includes a simple shell application that loads and runs the QML snippet shown at the beginning of this page.</p>
+</div>
+<!-- @@@referenceexamples/default -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

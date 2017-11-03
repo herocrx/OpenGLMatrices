@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- basictypes.qdoc -->
+  <title>QtQml 5.0: QML Basic Type: url</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#using-the-url-type">Using the url Type</a></li>
+</ul>
+</div>
+<h1 class="title">QML Basic Type: url</h1>
+<span class="subtitle"></span>
+<!-- $$$url-description -->
+<div class="descr"> <a name="details"></a>
+<p>The <tt>url</tt> type refers to a resource locator (like a file name, for example). It can be either absolute, e.g&#x2e; &quot;http://qt.nokia.com&quot;, or relative, e.g&#x2e; &quot;pics/logo.png&quot;. A relative URL is resolved relative to the URL of the containing component.</p>
+<p>For example, the following assigns a valid URL to the <a href="../qtquick/qml-qtquick2-image.html#source-prop">Image::source</a> property, which is of type <tt>url</tt>:</p>
+<pre class="qml"><span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> { <span class="name">source</span>: <span class="string">&quot;pics/logo.png&quot;</span> }</pre>
+<p>When integrating with C++, note that any <a href="../qtcore/qurl.html">QUrl</a> value <a href="qtqml-cppintegration-data.html">passed into QML from C++</a> is automatically converted into a <tt>url</tt> value, and vice-versa.</p>
+<a name="using-the-url-type"></a>
+<h2>Using the url Type</h2>
+<p>When a relative URL is written to a <tt>url</tt> type property, it is converted into a URL object, so <b>matching the URL value against the input string value will fail</b>. Instead, convert the string to a URL using Qt.resolvedUrl() for means of comparison, and use <tt>toString()</tt> to get the contents of the URL:</p>
+<pre class="qml"><span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> {
+    <span class="name">source</span>: <span class="string">&quot;pics/logo.png&quot;</span>
+
+    <span class="name">Component</span>.onCompleted: {
+        <span class="comment">// This prints 'false'. Although &quot;pics/logo.png&quot; was the input string,</span>
+        <span class="comment">// it's been converted from a string to a URL, so these two are not the same.</span>
+        <span class="name">console</span>.<span class="name">log</span>(<span class="name">source</span> <span class="operator">==</span> <span class="string">&quot;pics/logo.png&quot;</span>)
+
+        <span class="comment">// This prints 'true' as Qt.resovledUrl() converts the string into a</span>
+        <span class="comment">// URL with the correctly resolved path</span>
+        <span class="name">console</span>.<span class="name">log</span>(<span class="name">source</span> <span class="operator">==</span> <span class="name">Qt</span>.<span class="name">resolvedUrl</span>(<span class="string">&quot;pics/logo.png&quot;</span>))
+
+        <span class="comment">// This prints the absolute path, e.g. &quot;file:///path/to/pics/logo.png&quot;</span>
+        <span class="name">console</span>.<span class="name">log</span>(<span class="name">source</span>.<span class="name">toString</span>())
+    }
+}</pre>
+<p><b>Note: </b>When referring to files stored with the <a href="../qtcore/resources.html">Qt Resource System</a> from within QML, you should use &quot;qrc:///&quot; instead of &quot;:/&quot; as QML requires URL paths. Relative URLs resolved from within that file will use the same protocol.</p><p>Additionally, URLs may contain encoded characters using the 'percent-encoding' scheme specified by <a href="http://tools.ietf.org/html/rfc3986">RFC 3986</a>. These characters will be preserved within properties of type <tt>url</tt>, to allow QML code to construct precise URL values. An exception to this rule is the preemptive decoding of directory-separator characters (<tt>'/'</tt>) - these characters are decoded to allow the URL to be correctly classified.</p>
+<p>For example, a local file containing a '#' character, which would normally be interpreted as the beginning of the URL 'fragment' element, can be accessed by encoding the characters of the file name:</p>
+<pre class="qml"><span class="type"><a href="../qtquick/qml-qtquick2-image.html">Image</a></span> { <span class="name">source</span>: <span class="name">encodeURIComponent</span>(<span class="string">&quot;/tmp/test#1.png&quot;</span>) }</pre>
+<p>This basic type is provided by the QML language.</p>
+</div>
+<p><b>See also </b><a href="qtqml-typesystem-basictypes.html">QML Basic Types</a>.</p>
+<!-- @@@url -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

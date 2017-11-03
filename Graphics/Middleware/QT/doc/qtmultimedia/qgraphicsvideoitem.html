@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- qgraphicsvideoitem.cpp -->
+  <title>qtmultimedia 5.0: QGraphicsVideoItem Class</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<div class="toc">
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#properties">Properties</a></li>
+<li class="level1"><a href="#public-functions">Public Functions</a></li>
+<li class="level1"><a href="#signals">Signals</a></li>
+<li class="level1"><a href="#details">Detailed Description</a></li>
+</ul>
+</div>
+<h1 class="title">QGraphicsVideoItem Class</h1>
+<!-- $$$QGraphicsVideoItem-brief -->
+<p>The QGraphicsVideoItem class provides a graphics item which display video produced by a <a href="qmediaobject.html">QMediaObject</a>. <a href="#details">More...</a></p>
+<!-- @@@QGraphicsVideoItem -->
+<pre class="cpp"><span class="preprocessor">#include &lt;QGraphicsVideoItem&gt;</span></pre><p><b>Inherits: </b><a href="qmediabindableinterface.html">QMediaBindableInterface</a>.</p>
+<ul>
+<li><a href="qgraphicsvideoitem-members.html">List of all members, including inherited members</a></li>
+</ul>
+<a name="properties"></a>
+<h2>Properties</h2>
+<table class="propsummary">
+<tr><td class="topAlign"><ul>
+<li class="fn"><b><a href="qgraphicsvideoitem.html#aspectRatioMode-prop">aspectRatioMode</a></b> : Qt::AspectRatioMode</li>
+<li class="fn"><b><a href="qgraphicsvideoitem.html#mediaObject-prop">mediaObject</a></b> : QMediaObject * const</li>
+<li class="fn"><b><a href="qgraphicsvideoitem.html#nativeSize-prop">nativeSize</a></b> : const QSizeF</li>
+</ul></td><td class="topAlign"><ul>
+<li class="fn"><b><a href="qgraphicsvideoitem.html#offset-prop">offset</a></b> : QPointF</li>
+<li class="fn"><b><a href="qgraphicsvideoitem.html#size-prop">size</a></b> : QSizeF</li>
+</ul>
+</td></tr>
+</table>
+<a name="public-functions"></a>
+<h2>Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#QGraphicsVideoItem">QGraphicsVideoItem</a></b>(QGraphicsItem *<i> parent</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#dtor.QGraphicsVideoItem">~QGraphicsVideoItem</a></b>()</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> Qt::AspectRatioMode </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#aspectRatioMode-prop">aspectRatioMode</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QRectF </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#boundingRect">boundingRect</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSizeF </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#nativeSize-prop">nativeSize</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QPointF </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#offset-prop">offset</a></b>() const</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#paint">paint</a></b>(QPainter *<i> painter</i>, const QStyleOptionGraphicsItem *<i> option</i>, QWidget *<i> widget</i> = 0)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#aspectRatioMode-prop">setAspectRatioMode</a></b>(Qt::AspectRatioMode<i> mode</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#offset-prop">setOffset</a></b>(const QPointF &amp;<i> offset</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#size-prop">setSize</a></b>(const QSizeF &amp;<i> size</i>)</td></tr>
+<tr><td class="memItemLeft rightAlign topAlign"> QSizeF </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#size-prop">size</a></b>() const</td></tr>
+</table>
+<a name="reimplemented-public-functions"></a>
+<h2>Reimplemented Public Functions</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> virtual QMediaObject * </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#mediaObject-prop">mediaObject</a></b>() const</td></tr>
+</table>
+<ul>
+<li class="fn">1 public function inherited from <a href="qmediabindableinterface.html#public-functions">QMediaBindableInterface</a></li>
+</ul>
+<a name="signals"></a>
+<h2>Signals</h2>
+<table class="alignedsummary">
+<tr><td class="memItemLeft rightAlign topAlign"> void </td><td class="memItemRight bottomAlign"><b><a href="qgraphicsvideoitem.html#nativeSize-prop">nativeSizeChanged</a></b>(const QSizeF &amp;<i> size</i>)</td></tr>
+</table>
+<h3>Additional Inherited Members</h3>
+<ul>
+<li class="fn">1 protected function inherited from <a href="qmediabindableinterface.html#protected-functions">QMediaBindableInterface</a></li>
+</ul>
+<a name="details"></a>
+<!-- $$$QGraphicsVideoItem-description -->
+<div class="descr">
+<h2>Detailed Description</h2>
+<p>The QGraphicsVideoItem class provides a graphics item which display video produced by a <a href="qmediaobject.html">QMediaObject</a>.</p>
+<p>Attaching a QGraphicsVideoItem to a <a href="qmediaobject.html">QMediaObject</a> allows it to display the video or image output of that media object. A QGraphicsVideoItem is attached to a media object by passing a pointer to the <a href="qmediaobject.html">QMediaObject</a> to the <a href="qmediabindableinterface.html#setMediaObject">setMediaObject</a>() function.</p>
+<pre class="cpp">player <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="qmediaplayer.html">QMediaPlayer</a></span>(<span class="keyword">this</span>);
+
+<span class="type">QGraphicsVideoItem</span> <span class="operator">*</span>item <span class="operator">=</span> <span class="keyword">new</span> <span class="type">QGraphicsVideoItem</span>;
+player<span class="operator">-</span><span class="operator">&gt;</span>setVideoOutput(item);
+graphicsView<span class="operator">-</span><span class="operator">&gt;</span>scene()<span class="operator">-</span><span class="operator">&gt;</span>addItem(item);
+graphicsView<span class="operator">-</span><span class="operator">&gt;</span>show();
+
+player<span class="operator">-</span><span class="operator">&gt;</span>setMedia(<span class="type"><a href="../qtcore/qurl.html">QUrl</a></span>(<span class="string">&quot;http://example.com/myclip4.ogv&quot;</span>));
+player<span class="operator">-</span><span class="operator">&gt;</span>play();</pre>
+<p><b>Note</b>: Only a single display output can be attached to a media object at one time.</p>
+</div>
+<p><b>See also </b><a href="qmediaobject.html">QMediaObject</a>, <a href="qmediaplayer.html">QMediaPlayer</a>, and <a href="qvideowidget.html">QVideoWidget</a>.</p>
+<!-- @@@QGraphicsVideoItem -->
+<div class="prop">
+<h2>Property Documentation</h2>
+<!-- $$$aspectRatioMode-prop$$$aspectRatioMode$$$setAspectRatioModeQt::AspectRatioMode -->
+<h3 class="fn"><a name="aspectRatioMode-prop"></a><span class="name">aspectRatioMode</span> : <span class="type"><a href="../qtcore/qt.html#AspectRatioMode-enum">Qt::AspectRatioMode</a></span></h3>
+<p>This property holds how a video is scaled to fit the graphics item's size.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> Qt::AspectRatioMode </td><td class="memItemRight bottomAlign"><span class="name"><b>aspectRatioMode</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setAspectRatioMode</b></span>(Qt::AspectRatioMode<i> mode</i>)</td></tr>
+</table>
+<!-- @@@aspectRatioMode -->
+<!-- $$$mediaObject-prop$$$mediaObject -->
+<h3 class="fn"><a name="mediaObject-prop"></a><span class="name">mediaObject</span> : <span class="type"><a href="qmediaobject.html">QMediaObject</a></span> * const</h3>
+<p>This property holds the media object which provides the video displayed by a graphics item.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> virtual QMediaObject * </td><td class="memItemRight bottomAlign"><span class="name"><b>mediaObject</b></span>() const</td></tr>
+</table>
+<!-- @@@mediaObject -->
+<!-- $$$nativeSize-prop$$$nativeSize$$$nativeSizeChangedconstQSizeF& -->
+<h3 class="fn"><a name="nativeSize-prop"></a><span class="name">nativeSize</span> : const <span class="type"><a href="../qtcore/qsizef.html">QSizeF</a></span></h3>
+<p>This property holds the native size of the video.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QSizeF </td><td class="memItemRight bottomAlign"><span class="name"><b>nativeSize</b></span>() const</td></tr>
+</table>
+<p><b>Notifier signal:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>nativeSizeChanged</b></span>(const QSizeF &amp;<i> size</i>)</td></tr>
+</table>
+<!-- @@@nativeSize -->
+<!-- $$$offset-prop$$$offset$$$setOffsetconstQPointF& -->
+<h3 class="fn"><a name="offset-prop"></a><span class="name">offset</span> : <span class="type"><a href="../qtcore/qpointf.html">QPointF</a></span></h3>
+<p>This property holds the video item's offset.</p>
+<p><a href="qgraphicsvideoitem.html">QGraphicsVideoItem</a> will draw video using the offset for its top left corner.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QPointF </td><td class="memItemRight bottomAlign"><span class="name"><b>offset</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setOffset</b></span>(const QPointF &amp;<i> offset</i>)</td></tr>
+</table>
+<!-- @@@offset -->
+<!-- $$$size-prop$$$size$$$setSizeconstQSizeF& -->
+<h3 class="fn"><a name="size-prop"></a><span class="name">size</span> : <span class="type"><a href="../qtcore/qsizef.html">QSizeF</a></span></h3>
+<p>This property holds the video item's size.</p>
+<p><a href="qgraphicsvideoitem.html">QGraphicsVideoItem</a> will draw video scaled to fit size according to its fillMode.</p>
+<p><b>Access functions:</b></p>
+<table class="alignedsummary">
+<tr><td class="memItemLeft topAlign rightAlign"> QSizeF </td><td class="memItemRight bottomAlign"><span class="name"><b>size</b></span>() const</td></tr>
+<tr><td class="memItemLeft topAlign rightAlign"> void </td><td class="memItemRight bottomAlign"><span class="name"><b>setSize</b></span>(const QSizeF &amp;<i> size</i>)</td></tr>
+</table>
+<!-- @@@size -->
+</div>
+<div class="func">
+<h2>Member Function Documentation</h2>
+<!-- $$$QGraphicsVideoItem[overload1]$$$QGraphicsVideoItemQGraphicsItem* -->
+<h3 class="fn"><a name="QGraphicsVideoItem"></a>QGraphicsVideoItem::<span class="name">QGraphicsVideoItem</span>(<span class="type">QGraphicsItem</span> *<i> parent</i> = 0)</h3>
+<p>Constructs a graphics item that displays video.</p>
+<p>The <i>parent</i> is passed to QGraphicsItem.</p>
+<!-- @@@QGraphicsVideoItem -->
+<!-- $$$~QGraphicsVideoItem[overload1]$$$~QGraphicsVideoItem -->
+<h3 class="fn"><a name="dtor.QGraphicsVideoItem"></a>QGraphicsVideoItem::<span class="name">~QGraphicsVideoItem</span>()</h3>
+<p>Destroys a video graphics item.</p>
+<!-- @@@~QGraphicsVideoItem -->
+<!-- $$$boundingRect[overload1]$$$boundingRect -->
+<h3 class="fn"><a name="boundingRect"></a><span class="type"><a href="../qtcore/qrectf.html">QRectF</a></span> QGraphicsVideoItem::<span class="name">boundingRect</span>() const</h3>
+<!-- @@@boundingRect -->
+<!-- $$$paint[overload1]$$$paintQPainter*constQStyleOptionGraphicsItem*QWidget* -->
+<h3 class="fn"><a name="paint"></a><span class="type">void</span> QGraphicsVideoItem::<span class="name">paint</span>(<span class="type">QPainter</span> *<i> painter</i>, const <span class="type">QStyleOptionGraphicsItem</span> *<i> option</i>, <span class="type">QWidget</span> *<i> widget</i> = 0)</h3>
+<!-- @@@paint -->
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en_US" lang="en_US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- imageparticle.qdoc -->
+  <title>QtQuick 5.0: QtQuick.Particles Examples - Affectors</title>
+  <link rel="stylesheet" type="text/css" href="style/offline.css" />
+</head>
+<body>
+<div class="header" id="qtdocheader"></div>
+<div class="content">
+<div class="line">
+<div class="content mainContent">
+<h1 class="title">QtQuick.Particles Examples - Affectors</h1>
+<span class="subtitle"></span>
+<!-- $$$particles/imageparticle-description -->
+<div class="descr"> <a name="details"></a>
+<p>This is a collection of examples using Affectors in the QML particle system.<p class="centerAlign"><img src="images/qml-imageparticle-example.png" alt="" /></p><p>This is a collection of small QML examples relating to using Affectors in the particle system. Each example is a small QML file emphasizing a particular element or feature.</p>
+<p>All at once shows off several of the features of <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a> at the same time.</p>
+<pre class="qml"></pre>
+<p>Colored shows a simple <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a> with some color variation.</p>
+<pre class="qml"></pre>
+<p>Color Table sets the color over life on the particles to provide a fixed rainbow effect.</p>
+<pre class="qml"></pre>
+<p>Deformation spins and squishes a starfish particle.</p>
+<pre class="qml"></pre>
+<p>Rotation demonstrates the autoRotate property, so that particles rotate in the direction that they travel.</p>
+<p>Sharing demonstrates what happens when multiple ImageParticles try to render the same particle. The following <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a> renders the particles inside the <a href="qml-qtquick2-listview.html">ListView</a>:</p>
+<pre class="qml"></pre>
+<p>The following <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a> is placed inside the list highlight, and renders the particles above the other <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a>.</p>
+<pre class="qml"></pre>
+<p>Note that because it sets the color and alpha in this <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a>, it renders the particles in a different color. Since it doesn't specify anything about the rotation, it shares the rotation with the other <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a> so that the flowers are rotated the same way in both. Note that you can undo rotation in another <a href="qml-qtquick-particles2-imageparticle.html">ImageParticle</a>, you just need to explicity set rotationVariation to 0.</p>
+<p>Sprites demonstrates using an image particle to render animated sprites instead of static images for each particle.</p>
+<p>Files:</p>
+<ul>
+<li><a href="particles-imageparticle-imageparticle-qml.html">particles/imageparticle/imageparticle.qml</a></li>
+<li><a href="particles-imageparticle-content-allatonce-qml.html">particles/imageparticle/content/allatonce.qml</a></li>
+<li><a href="particles-imageparticle-content-colored-qml.html">particles/imageparticle/content/colored.qml</a></li>
+<li><a href="particles-imageparticle-content-colortable-qml.html">particles/imageparticle/content/colortable.qml</a></li>
+<li><a href="particles-imageparticle-content-deformation-qml.html">particles/imageparticle/content/deformation.qml</a></li>
+<li><a href="particles-imageparticle-content-rotation-qml.html">particles/imageparticle/content/rotation.qml</a></li>
+<li><a href="particles-imageparticle-content-sharing-qml.html">particles/imageparticle/content/sharing.qml</a></li>
+<li><a href="particles-imageparticle-content-sprites-qml.html">particles/imageparticle/content/sprites.qml</a></li>
+<li><a href="particles-imageparticle-main-cpp.html">particles/imageparticle/main.cpp</a></li>
+<li><a href="particles-imageparticle-imageparticle-pro.html">particles/imageparticle/imageparticle.pro</a></li>
+<li><a href="particles-imageparticle-imageparticle-qmlproject.html">particles/imageparticle/imageparticle.qmlproject</a></li>
+<li><a href="particles-imageparticle-imageparticle-qrc.html">particles/imageparticle/imageparticle.qrc</a></li>
+</ul>
+</div>
+<!-- @@@particles/imageparticle -->
+</div>
+</div>
+</div>
+<div class="footer">
+    <p>
+      <acronym title="Copyright">&copy;</acronym> 2013 Digia Plc and/or its
+      subsidiaries. Documentation contributions included herein are the copyrights of
+      their respective owners.</p>
+    <br />
+    <p>
+      The documentation provided herein is licensed under the terms of the
+      <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation
+      License version 1.3</a> as published by the Free Software Foundation.</p>
+    <p>
+      Documentation sources may be obtained from <a href="http://www.qt-project.org">
+      www.qt-project.org</a>.</p>
+    <br />
+    <p>
+      Digia, Qt and their respective logos are trademarks of Digia Plc 
+      in Finland and/or other countries worldwide. All other trademarks are property
+      of their respective owners. <a title="Privacy Policy"
+      href="http://en.gitorious.org/privacy_policy/">Privacy Policy</a></p>
+</div>
+</body>
+</html>

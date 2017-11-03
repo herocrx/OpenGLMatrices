@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE QDOCINDEX>
+<INDEX url="http://qt-project.org/doc/qt-5.0/qtdesigner" title="Qt Designer Manual" version="">
+    <namespace access="public" threadsafety="unspecified" status="commendable" name="" href="" location="">
+        <function access="public" threadsafety="unspecified" status="commendable" name="Q_DECLARE_EXTENSION_INTERFACE" href="qextensionmanager.html#Q_DECLARE_EXTENSION_INTERFACE" location="" virtual="non" meta="macrowithparams" const="false" static="false" overload="false" relates="QExtensionManager" type="" signature="Q_DECLARE_EXTENSION_INTERFACE( ExtensionName,  Identifier)">
+            <parameter left="" right="" name="ExtensionName" default=""/>
+            <parameter left="" right="" name="Identifier" default=""/>
+        </function>
+        <page access="public" status="commendable" name="arthurplugin" href="arthurplugin.html" subtype="example" title="Arthur Plugin" fulltitle="Arthur Plugin" subtitle="" location="arthurplugin.qdoc" module="QtDesigner" groups="examples-designer">
+            <page access="public" status="commendable" name="arthurplugin/arthur_plugin.qrc" href="arthurplugin-arthur-plugin-qrc.html" subtype="file" title="" fulltitle="arthur_plugin.qrc Example File" subtitle="arthurplugin/arthur_plugin.qrc" location=""/>
+            <page access="public" status="commendable" name="arthurplugin/arthurplugin.pro" href="arthurplugin-arthurplugin-pro.html" subtype="file" title="" fulltitle="arthurplugin.pro Example File" subtitle="arthurplugin/arthurplugin.pro" location=""/>
+            <page access="public" status="commendable" name="arthurplugin/plugin.cpp" href="arthurplugin-plugin-cpp.html" subtype="file" title="" fulltitle="plugin.cpp Example File" subtitle="arthurplugin/plugin.cpp" location=""/>
+        </page>
+        <page access="public" status="commendable" name="calculatorbuilder" href="calculatorbuilder.html" subtype="example" title="Calculator Builder Example" fulltitle="Calculator Builder Example" subtitle="" location="calculatorbuilder.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="preparation" title="Preparation" level="1"/>
+            <contents name="calculatorform-class-definition" title="CalculatorForm Class Definition" level="1"/>
+            <contents name="calculatorform-class-implementation" title="CalculatorForm Class Implementation" level="1"/>
+            <page access="public" status="commendable" name="calculatorbuilder/calculatorbuilder.pro" href="calculatorbuilder-calculatorbuilder-pro.html" subtype="file" title="" fulltitle="calculatorbuilder.pro Example File" subtitle="calculatorbuilder/calculatorbuilder.pro" location=""/>
+            <page access="public" status="commendable" name="calculatorbuilder/calculatorbuilder.qrc" href="calculatorbuilder-calculatorbuilder-qrc.html" subtype="file" title="" fulltitle="calculatorbuilder.qrc Example File" subtitle="calculatorbuilder/calculatorbuilder.qrc" location=""/>
+            <page access="public" status="commendable" name="calculatorbuilder/calculatorform.cpp" href="calculatorbuilder-calculatorform-cpp.html" subtype="file" title="" fulltitle="calculatorform.cpp Example File" subtitle="calculatorbuilder/calculatorform.cpp" location=""/>
+            <page access="public" status="commendable" name="calculatorbuilder/calculatorform.h" href="calculatorbuilder-calculatorform-h.html" subtype="file" title="" fulltitle="calculatorform.h Example File" subtitle="calculatorbuilder/calculatorform.h" location=""/>
+            <page access="public" status="commendable" name="calculatorbuilder/calculatorform.ui" href="calculatorbuilder-calculatorform-ui.html" subtype="file" title="" fulltitle="calculatorform.ui Example File" subtitle="calculatorbuilder/calculatorform.ui" location=""/>
+            <page access="public" status="commendable" name="calculatorbuilder/main.cpp" href="calculatorbuilder-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="calculatorbuilder/main.cpp" location=""/>
+        </page>
+        <page access="public" status="commendable" name="calculatorform" href="calculatorform.html" subtype="example" title="Calculator Form Example" fulltitle="Calculator Form Example" subtitle="" location="calculatorform.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="preparation" title="Preparation" level="1"/>
+            <contents name="calculatorform-class-definition" title="CalculatorForm Class Definition" level="1"/>
+            <contents name="calculatorform-class-implementation" title="CalculatorForm Class Implementation" level="1"/>
+            <page access="public" status="commendable" name="calculatorform/calculatorform.cpp" href="calculatorform-calculatorform-cpp.html" subtype="file" title="" fulltitle="calculatorform.cpp Example File" subtitle="calculatorform/calculatorform.cpp" location=""/>
+            <page access="public" status="commendable" name="calculatorform/calculatorform.h" href="calculatorform-calculatorform-h.html" subtype="file" title="" fulltitle="calculatorform.h Example File" subtitle="calculatorform/calculatorform.h" location=""/>
+            <page access="public" status="commendable" name="calculatorform/calculatorform.pro" href="calculatorform-calculatorform-pro.html" subtype="file" title="" fulltitle="calculatorform.pro Example File" subtitle="calculatorform/calculatorform.pro" location=""/>
+            <page access="public" status="commendable" name="calculatorform/calculatorform.ui" href="calculatorform-calculatorform-ui.html" subtype="file" title="" fulltitle="calculatorform.ui Example File" subtitle="calculatorform/calculatorform.ui" location=""/>
+            <page access="public" status="commendable" name="calculatorform/main.cpp" href="calculatorform-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="calculatorform/main.cpp" location=""/>
+        </page>
+        <page access="public" status="commendable" name="containerextension" href="containerextension.html" subtype="example" title="Container Extension Example" fulltitle="Container Extension Example" subtitle="" location="containerextension.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="the-project-file-containerextension-pro" title="The Project File: containerextension.pro" level="1"/>
+            <contents name="multipagewidgetplugin-class-definition" title="MultiPageWidgetPlugin Class Definition" level="1"/>
+            <contents name="multipagewidgetplugin-class-implementation" title="MultiPageWidgetPlugin Class Implementation" level="1"/>
+            <contents name="multipagewidgetextensionfactory-class-definition" title="MultiPageWidgetExtensionFactory Class Definition" level="1"/>
+            <contents name="multipagewidgetextensionfactory-class-implementation" title="MultiPageWidgetExtensionFactory Class Implementation" level="1"/>
+            <contents name="multipagewidgetcontainerextension-class-definition" title="MultiPageWidgetContainerExtension Class Definition" level="1"/>
+            <contents name="multipagewidgetcontainerextension-class-implementation" title="MultiPageWidgetContainerExtension Class Implementation" level="1"/>
+            <contents name="multipagewidget-class-definition" title="MultiPageWidget Class Definition" level="1"/>
+            <page access="public" status="commendable" name="containerextension/containerextension.pro" href="containerextension-containerextension-pro.html" subtype="file" title="" fulltitle="containerextension.pro Example File" subtitle="containerextension/containerextension.pro" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidget.cpp" href="containerextension-multipagewidget-cpp.html" subtype="file" title="" fulltitle="multipagewidget.cpp Example File" subtitle="containerextension/multipagewidget.cpp" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidget.h" href="containerextension-multipagewidget-h.html" subtype="file" title="" fulltitle="multipagewidget.h Example File" subtitle="containerextension/multipagewidget.h" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidgetcontainerextension.cpp" href="containerextension-multipagewidgetcontainerextension-cpp.html" subtype="file" title="" fulltitle="multipagewidgetcontainerextension.cpp Example File" subtitle="containerextension/multipagewidgetcontainerextension.cpp" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidgetcontainerextension.h" href="containerextension-multipagewidgetcontainerextension-h.html" subtype="file" title="" fulltitle="multipagewidgetcontainerextension.h Example File" subtitle="containerextension/multipagewidgetcontainerextension.h" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidgetextensionfactory.cpp" href="containerextension-multipagewidgetextensionfactory-cpp.html" subtype="file" title="" fulltitle="multipagewidgetextensionfactory.cpp Example File" subtitle="containerextension/multipagewidgetextensionfactory.cpp" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidgetextensionfactory.h" href="containerextension-multipagewidgetextensionfactory-h.html" subtype="file" title="" fulltitle="multipagewidgetextensionfactory.h Example File" subtitle="containerextension/multipagewidgetextensionfactory.h" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidgetplugin.cpp" href="containerextension-multipagewidgetplugin-cpp.html" subtype="file" title="" fulltitle="multipagewidgetplugin.cpp Example File" subtitle="containerextension/multipagewidgetplugin.cpp" location=""/>
+            <page access="public" status="commendable" name="containerextension/multipagewidgetplugin.h" href="containerextension-multipagewidgetplugin-h.html" subtype="file" title="" fulltitle="multipagewidgetplugin.h Example File" subtitle="containerextension/multipagewidgetplugin.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="customwidgetplugin" href="customwidgetplugin.html" subtype="example" title="Custom Widget Plugin Example" fulltitle="Custom Widget Plugin Example" subtitle="" location="customwidgetplugin.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="preparation" title="Preparation" level="1"/>
+            <contents name="analogclock-class-definition-and-implementation" title="AnalogClock Class Definition and Implementation" level="1"/>
+            <contents name="analogclockplugin-class-definition" title="AnalogClockPlugin Class Definition" level="1"/>
+            <contents name="analogclockplugin-implementation" title="AnalogClockPlugin Implementation" level="1"/>
+            <page access="public" status="commendable" name="customwidgetplugin/analogclock.cpp" href="customwidgetplugin-analogclock-cpp.html" subtype="file" title="" fulltitle="analogclock.cpp Example File" subtitle="customwidgetplugin/analogclock.cpp" location=""/>
+            <page access="public" status="commendable" name="customwidgetplugin/analogclock.h" href="customwidgetplugin-analogclock-h.html" subtype="file" title="" fulltitle="analogclock.h Example File" subtitle="customwidgetplugin/analogclock.h" location=""/>
+            <page access="public" status="commendable" name="customwidgetplugin/customwidgetplugin.cpp" href="customwidgetplugin-customwidgetplugin-cpp.html" subtype="file" title="" fulltitle="customwidgetplugin.cpp Example File" subtitle="customwidgetplugin/customwidgetplugin.cpp" location=""/>
+            <page access="public" status="commendable" name="customwidgetplugin/customwidgetplugin.h" href="customwidgetplugin-customwidgetplugin-h.html" subtype="file" title="" fulltitle="customwidgetplugin.h Example File" subtitle="customwidgetplugin/customwidgetplugin.h" location=""/>
+            <page access="public" status="commendable" name="customwidgetplugin/customwidgetplugin.pro" href="customwidgetplugin-customwidgetplugin-pro.html" subtype="file" title="" fulltitle="customwidgetplugin.pro Example File" subtitle="customwidgetplugin/customwidgetplugin.pro" location=""/>
+        </page>
+        <page access="public" status="commendable" name="taskmenuextension" href="taskmenuextension.html" subtype="example" title="Task Menu Extension Example" fulltitle="Task Menu Extension Example" subtitle="" location="taskmenuextension.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="the-project-file-taskmenuextension-pro" title="The Project File: taskmenuextension.pro" level="1"/>
+            <contents name="tictactoeplugin-class-definition" title="TicTacToePlugin Class Definition" level="1"/>
+            <contents name="tictactoeplugin-class-implementation" title="TicTacToePlugin Class Implementation" level="1"/>
+            <contents name="tictactoetaskmenufactory-class-definition" title="TicTacToeTaskMenuFactory Class Definition" level="1"/>
+            <contents name="tictactoetaskmenufactory-class-implementation" title="TicTacToeTaskMenuFactory Class Implementation" level="1"/>
+            <contents name="tictactoetaskmenu-class-definition" title="TicTacToeTaskMenu Class Definition" level="1"/>
+            <contents name="tictactoetaskmenu-class-implementation" title="TicTacToeTaskMenu Class Implementation" level="1"/>
+            <contents name="tictactoedialog-class-definition" title="TicTacToeDialog Class Definition" level="1"/>
+            <contents name="tictactoedialog-class-implementation" title="TicTacToeDialog Class Implementation" level="1"/>
+            <contents name="tictactoe-class-definition" title="TicTacToe Class Definition" level="1"/>
+            <page access="public" status="commendable" name="taskmenuextension/taskmenuextension.pro" href="taskmenuextension-taskmenuextension-pro.html" subtype="file" title="" fulltitle="taskmenuextension.pro Example File" subtitle="taskmenuextension/taskmenuextension.pro" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoe.cpp" href="taskmenuextension-tictactoe-cpp.html" subtype="file" title="" fulltitle="tictactoe.cpp Example File" subtitle="taskmenuextension/tictactoe.cpp" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoe.h" href="taskmenuextension-tictactoe-h.html" subtype="file" title="" fulltitle="tictactoe.h Example File" subtitle="taskmenuextension/tictactoe.h" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoedialog.cpp" href="taskmenuextension-tictactoedialog-cpp.html" subtype="file" title="" fulltitle="tictactoedialog.cpp Example File" subtitle="taskmenuextension/tictactoedialog.cpp" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoedialog.h" href="taskmenuextension-tictactoedialog-h.html" subtype="file" title="" fulltitle="tictactoedialog.h Example File" subtitle="taskmenuextension/tictactoedialog.h" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoeplugin.cpp" href="taskmenuextension-tictactoeplugin-cpp.html" subtype="file" title="" fulltitle="tictactoeplugin.cpp Example File" subtitle="taskmenuextension/tictactoeplugin.cpp" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoeplugin.h" href="taskmenuextension-tictactoeplugin-h.html" subtype="file" title="" fulltitle="tictactoeplugin.h Example File" subtitle="taskmenuextension/tictactoeplugin.h" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoetaskmenu.cpp" href="taskmenuextension-tictactoetaskmenu-cpp.html" subtype="file" title="" fulltitle="tictactoetaskmenu.cpp Example File" subtitle="taskmenuextension/tictactoetaskmenu.cpp" location=""/>
+            <page access="public" status="commendable" name="taskmenuextension/tictactoetaskmenu.h" href="taskmenuextension-tictactoetaskmenu-h.html" subtype="file" title="" fulltitle="tictactoetaskmenu.h Example File" subtitle="taskmenuextension/tictactoetaskmenu.h" location=""/>
+        </page>
+        <page access="public" status="commendable" name="worldtimeclockbuilder" href="worldtimeclockbuilder.html" subtype="example" title="World Time Clock Builder Example" fulltitle="World Time Clock Builder Example" subtitle="" location="worldtimeclockbuilder.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="preparation" title="Preparation" level="1"/>
+            <contents name="loading-and-building-the-form" title="Loading and Building the Form" level="1"/>
+            <page access="public" status="commendable" name="worldtimeclockbuilder/form.ui" href="worldtimeclockbuilder-form-ui.html" subtype="file" title="" fulltitle="form.ui Example File" subtitle="worldtimeclockbuilder/form.ui" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockbuilder/main.cpp" href="worldtimeclockbuilder-main-cpp.html" subtype="file" title="" fulltitle="main.cpp Example File" subtitle="worldtimeclockbuilder/main.cpp" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockbuilder/worldtimeclockbuilder.pro" href="worldtimeclockbuilder-worldtimeclockbuilder-pro.html" subtype="file" title="" fulltitle="worldtimeclockbuilder.pro Example File" subtitle="worldtimeclockbuilder/worldtimeclockbuilder.pro" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockbuilder/worldtimeclockbuilder.qrc" href="worldtimeclockbuilder-worldtimeclockbuilder-qrc.html" subtype="file" title="" fulltitle="worldtimeclockbuilder.qrc Example File" subtitle="worldtimeclockbuilder/worldtimeclockbuilder.qrc" location=""/>
+        </page>
+        <page access="public" status="commendable" name="worldtimeclockplugin" href="worldtimeclockplugin.html" subtype="example" title="World Time Clock Plugin Example" fulltitle="World Time Clock Plugin Example" subtitle="" location="worldtimeclockplugin.qdoc" module="QtDesigner" groups="examples-designer">
+            <contents name="worldtimeclock-class" title="WorldTimeClock Class" level="1"/>
+            <contents name="worldtimeclockplugin-class" title="WorldTimeClockPlugin Class" level="1"/>
+            <contents name="the-project-file-worldtimeclockplugin-pro" title="The Project File: worldtimeclockplugin.pro" level="1"/>
+            <page access="public" status="commendable" name="worldtimeclockplugin/worldtimeclock.cpp" href="worldtimeclockplugin-worldtimeclock-cpp.html" subtype="file" title="" fulltitle="worldtimeclock.cpp Example File" subtitle="worldtimeclockplugin/worldtimeclock.cpp" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockplugin/worldtimeclock.h" href="worldtimeclockplugin-worldtimeclock-h.html" subtype="file" title="" fulltitle="worldtimeclock.h Example File" subtitle="worldtimeclockplugin/worldtimeclock.h" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockplugin/worldtimeclockplugin.cpp" href="worldtimeclockplugin-worldtimeclockplugin-cpp.html" subtype="file" title="" fulltitle="worldtimeclockplugin.cpp Example File" subtitle="worldtimeclockplugin/worldtimeclockplugin.cpp" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockplugin/worldtimeclockplugin.h" href="worldtimeclockplugin-worldtimeclockplugin-h.html" subtype="file" title="" fulltitle="worldtimeclockplugin.h Example File" subtitle="worldtimeclockplugin/worldtimeclockplugin.h" location=""/>
+            <page access="public" status="commendable" name="worldtimeclockplugin/worldtimeclockplugin.pro" href="worldtimeclockplugin-worldtimeclockplugin-pro.html" subtype="file" title="" fulltitle="worldtimeclockplugin.pro Example File" subtitle="worldtimeclockplugin/worldtimeclockplugin.pro" location=""/>
+        </page>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QExtensionFactory" href="qextensionfactory.html" location="default_extensionfactory.h" bases="QObject,QAbstractExtensionFactory" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QExtensionFactory" fullname="QExtensionFactory::QExtensionFactory" href="qextensionfactory.html#QExtensionFactory" location="default_extensionfactory.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QExtensionFactory(QExtensionManager * parent)">
+                <parameter left="QExtensionManager *" right="" name="parent" default="0"/>
+            </function>
+            <function access="protected" threadsafety="unspecified" status="commendable" name="createExtension" fullname="QExtensionFactory::createExtension" href="qextensionfactory.html#createExtension" location="default_extensionfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="createExtension(QObject * object, const QString &amp; iid, QObject * parent) const">
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+                <parameter left="QObject *" right="" name="parent" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="extension" fullname="QExtensionFactory::extension" href="qextensionfactory.html#extension" location="default_extensionfactory.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="extension(QObject * object, const QString &amp; iid) const">
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="extensionManager" fullname="QExtensionFactory::extensionManager" href="qextensionfactory.html#extensionManager" location="default_extensionfactory.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QExtensionManager *" signature="extensionManager() const"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAbstractExtensionFactory" href="qabstractextensionfactory.html" location="extension.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="extension" fullname="QAbstractExtensionFactory::extension" href="qabstractextensionfactory.html#extension" location="extension.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="extension(QObject * object, const QString &amp; iid) const">
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractExtensionFactory" fullname="QAbstractExtensionFactory::~QAbstractExtensionFactory" href="qabstractextensionfactory.html#dtor.QAbstractExtensionFactory" location="extension.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractExtensionFactory()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAbstractExtensionManager" href="qabstractextensionmanager.html" location="extension.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="extension" fullname="QAbstractExtensionManager::extension" href="qabstractextensionmanager.html#extension" location="extension.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="extension(QObject * object, const QString &amp; iid) const">
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerExtensions" fullname="QAbstractExtensionManager::registerExtensions" href="qabstractextensionmanager.html#registerExtensions" location="extension.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="registerExtensions(QAbstractExtensionFactory * factory, const QString &amp; iid)">
+                <parameter left="QAbstractExtensionFactory *" right="" name="factory" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unregisterExtensions" fullname="QAbstractExtensionManager::unregisterExtensions" href="qabstractextensionmanager.html#unregisterExtensions" location="extension.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="unregisterExtensions(QAbstractExtensionFactory * factory, const QString &amp; iid)">
+                <parameter left="QAbstractExtensionFactory *" right="" name="factory" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractExtensionManager" fullname="QAbstractExtensionManager::~QAbstractExtensionManager" href="qabstractextensionmanager.html#dtor.QAbstractExtensionManager" location="extension.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractExtensionManager()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="qt_extension" href="qextensionmanager.html#qt_extension" location="extension.h" virtual="non" meta="plain" const="false" static="false" overload="false" relates="QExtensionManager" type="T" signature="qt_extension(QAbstractExtensionManager * manager, QObject * object)">
+            <parameter left="QAbstractExtensionManager *" right="" name="manager" default=""/>
+            <parameter left="QObject *" right="" name="object" default=""/>
+        </function>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QExtensionManager" href="qextensionmanager.html" location="qextensionmanager.h" bases="QObject,QAbstractExtensionManager" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QExtensionManager" fullname="QExtensionManager::QExtensionManager" href="qextensionmanager.html#QExtensionManager" location="qextensionmanager.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QExtensionManager(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="extension" fullname="QExtensionManager::extension" href="qextensionmanager.html#extension" location="qextensionmanager.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="extension(QObject * object, const QString &amp; iid) const">
+                <parameter left="QObject *" right="" name="object" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="registerExtensions" fullname="QExtensionManager::registerExtensions" href="qextensionmanager.html#registerExtensions" location="qextensionmanager.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="registerExtensions(QAbstractExtensionFactory * factory, const QString &amp; iid)">
+                <parameter left="QAbstractExtensionFactory *" right="" name="factory" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unregisterExtensions" fullname="QExtensionManager::unregisterExtensions" href="qextensionmanager.html#unregisterExtensions" location="qextensionmanager.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="unregisterExtensions(QAbstractExtensionFactory * factory, const QString &amp; iid)">
+                <parameter left="QAbstractExtensionFactory *" right="" name="factory" default=""/>
+                <parameter left="const QString &amp;" right="" name="iid" default="QString()"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QExtensionManager" fullname="QExtensionManager::~QExtensionManager" href="qextensionmanager.html#dtor.QExtensionManager" location="qextensionmanager.h" virtual="non" meta="destructor" const="false" static="false" overload="false" type="" signature="~QExtensionManager()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerActionEditorInterface" href="qdesigneractioneditorinterface.html" location="abstractactioneditor.h" bases="QWidget" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerActionEditorInterface" fullname="QDesignerActionEditorInterface::QDesignerActionEditorInterface" href="qdesigneractioneditorinterface.html#QDesignerActionEditorInterface" location="abstractactioneditor.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerActionEditorInterface(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default=""/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="core" fullname="QDesignerActionEditorInterface::core" href="qdesigneractioneditorinterface.html#core" location="abstractactioneditor.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormEditorInterface *" signature="core() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="manageAction" fullname="QDesignerActionEditorInterface::manageAction" href="qdesigneractioneditorinterface.html#manageAction" location="abstractactioneditor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="manageAction(QAction * action)">
+                <parameter left="QAction *" right="" name="action" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFormWindow" fullname="QDesignerActionEditorInterface::setFormWindow" href="qdesigneractioneditorinterface.html#setFormWindow" location="abstractactioneditor.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setFormWindow(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unmanageAction" fullname="QDesignerActionEditorInterface::unmanageAction" href="qdesigneractioneditorinterface.html#unmanageAction" location="abstractactioneditor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="unmanageAction(QAction * action)">
+                <parameter left="QAction *" right="" name="action" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerActionEditorInterface" fullname="QDesignerActionEditorInterface::~QDesignerActionEditorInterface" href="qdesigneractioneditorinterface.html#dtor.QDesignerActionEditorInterface" location="abstractactioneditor.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerActionEditorInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormEditorInterface" href="qdesignerformeditorinterface.html" location="abstractformeditor.h" bases="QObject" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormEditorInterface" fullname="QDesignerFormEditorInterface::QDesignerFormEditorInterface" href="qdesignerformeditorinterface.html#QDesignerFormEditorInterface" location="abstractformeditor.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerFormEditorInterface(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="actionEditor" fullname="QDesignerFormEditorInterface::actionEditor" href="qdesignerformeditorinterface.html#actionEditor" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDesignerActionEditorInterface *" signature="actionEditor() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="extensionManager" fullname="QDesignerFormEditorInterface::extensionManager" href="qdesignerformeditorinterface.html#extensionManager" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QExtensionManager *" signature="extensionManager() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindowManager" fullname="QDesignerFormEditorInterface::formWindowManager" href="qdesignerformeditorinterface.html#formWindowManager" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDesignerFormWindowManagerInterface *" signature="formWindowManager() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="objectInspector" fullname="QDesignerFormEditorInterface::objectInspector" href="qdesignerformeditorinterface.html#objectInspector" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDesignerObjectInspectorInterface *" signature="objectInspector() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyEditor" fullname="QDesignerFormEditorInterface::propertyEditor" href="qdesignerformeditorinterface.html#propertyEditor" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDesignerPropertyEditorInterface *" signature="propertyEditor() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setActionEditor" fullname="QDesignerFormEditorInterface::setActionEditor" href="qdesignerformeditorinterface.html#setActionEditor" location="abstractformeditor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setActionEditor(QDesignerActionEditorInterface * actionEditor)">
+                <parameter left="QDesignerActionEditorInterface *" right="" name="actionEditor" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setObjectInspector" fullname="QDesignerFormEditorInterface::setObjectInspector" href="qdesignerformeditorinterface.html#setObjectInspector" location="abstractformeditor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setObjectInspector(QDesignerObjectInspectorInterface * objectInspector)">
+                <parameter left="QDesignerObjectInspectorInterface *" right="" name="objectInspector" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPropertyEditor" fullname="QDesignerFormEditorInterface::setPropertyEditor" href="qdesignerformeditorinterface.html#setPropertyEditor" location="abstractformeditor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPropertyEditor(QDesignerPropertyEditorInterface * propertyEditor)">
+                <parameter left="QDesignerPropertyEditorInterface *" right="" name="propertyEditor" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setWidgetBox" fullname="QDesignerFormEditorInterface::setWidgetBox" href="qdesignerformeditorinterface.html#setWidgetBox" location="abstractformeditor.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setWidgetBox(QDesignerWidgetBoxInterface * widgetBox)">
+                <parameter left="QDesignerWidgetBoxInterface *" right="" name="widgetBox" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="topLevel" fullname="QDesignerFormEditorInterface::topLevel" href="qdesignerformeditorinterface.html#topLevel" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="topLevel() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widgetBox" fullname="QDesignerFormEditorInterface::widgetBox" href="qdesignerformeditorinterface.html#widgetBox" location="abstractformeditor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDesignerWidgetBoxInterface *" signature="widgetBox() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerFormEditorInterface" fullname="QDesignerFormEditorInterface::~QDesignerFormEditorInterface" href="qdesignerformeditorinterface.html#dtor.QDesignerFormEditorInterface" location="abstractformeditor.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerFormEditorInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormWindowInterface" href="qdesignerformwindowinterface.html" location="abstractformwindow.h" bases="QWidget" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="findFormWindow" fullname="QDesignerFormWindowInterface::findFormWindow" href="qdesignerformwindowinterface.html#findFormWindow-2" location="abstractformwindow.cpp" since="4.4" virtual="non" meta="plain" const="false" static="true" overload="true" overload-number="2" type="QDesignerFormWindowInterface *" signature="findFormWindow(QObject * object)">
+                <parameter left="QObject *" right="" name="object" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="findFormWindow" fullname="QDesignerFormWindowInterface::findFormWindow" href="qdesignerformwindowinterface.html#findFormWindow" location="abstractformwindow.cpp" virtual="non" meta="plain" const="false" static="true" overload="false" type="QDesignerFormWindowInterface *" signature="findFormWindow(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="FeatureFlag" fullname="QDesignerFormWindowInterface::FeatureFlag" href="qdesignerformwindowinterface.html#FeatureFlag-enum" location="abstractformwindow.h" typedef="QDesignerFormWindowInterface::Feature">
+                <value name="EditFeature" value="0x01"/>
+                <value name="GridFeature" value="0x02"/>
+                <value name="TabOrderFeature" value="0x04"/>
+                <value name="DefaultFeature" value="EditFeature | GridFeature"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ResourceFileSaveMode" fullname="QDesignerFormWindowInterface::ResourceFileSaveMode" href="qdesignerformwindowinterface.html#ResourceFileSaveMode-enum" location="abstractformwindow.h" since="5.0">
+                <value name="SaveAllResourceFiles" value="0"/>
+                <value name="SaveOnlyUsedResourceFiles" value="1"/>
+                <value name="DontSaveResourceFiles" value="2"/>
+            </enum>
+            <typedef access="public" threadsafety="unspecified" status="commendable" name="Feature" fullname="QDesignerFormWindowInterface::Feature" href="qdesignerformwindowinterface.html#Feature-typedef" location="abstractformwindow.h" enum="QDesignerFormWindowInterface::FeatureFlag"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormWindowInterface" fullname="QDesignerFormWindowInterface::QDesignerFormWindowInterface" href="qdesignerformwindowinterface.html#QDesignerFormWindowInterface" location="abstractformwindow.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerFormWindowInterface(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="aboutToUnmanageWidget" fullname="QDesignerFormWindowInterface::aboutToUnmanageWidget" href="qdesignerformwindowinterface.html#aboutToUnmanageWidget" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="aboutToUnmanageWidget(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="absoluteDir" fullname="QDesignerFormWindowInterface::absoluteDir" href="qdesignerformwindowinterface.html#absoluteDir" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QDir" signature="absoluteDir() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="activateResourceFilePaths" fullname="QDesignerFormWindowInterface::activateResourceFilePaths" href="qdesignerformwindowinterface.html#activateResourceFilePaths" location="abstractformwindow.h" since="5.0" virtual="non" meta="slot" const="false" static="false" overload="false" type="void" signature="activateResourceFilePaths(const QStringList &amp; paths, int * errorCount, QString * errorMessages)">
+                <parameter left="const QStringList &amp;" right="" name="paths" default=""/>
+                <parameter left="int *" right="" name="errorCount" default="0"/>
+                <parameter left="QString *" right="" name="errorMessages" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="activated" fullname="QDesignerFormWindowInterface::activated" href="qdesignerformwindowinterface.html#activated" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="activated(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="activeResourceFilePaths" fullname="QDesignerFormWindowInterface::activeResourceFilePaths" href="qdesignerformwindowinterface.html#activeResourceFilePaths" location="abstractformwindow.h" since="5.0" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="activeResourceFilePaths() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addResourceFile" fullname="QDesignerFormWindowInterface::addResourceFile" href="qdesignerformwindowinterface.html#addResourceFile" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="addResourceFile(const QString &amp; path)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="author" fullname="QDesignerFormWindowInterface::author" href="qdesignerformwindowinterface.html#author" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="author() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="changed" fullname="QDesignerFormWindowInterface::changed" href="qdesignerformwindowinterface.html#changed" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="changed()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="checkContents" fullname="QDesignerFormWindowInterface::checkContents" href="qdesignerformwindowinterface.html#checkContents" location="abstractformwindow.h" since="5.0" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="checkContents() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clearSelection" fullname="QDesignerFormWindowInterface::clearSelection" href="qdesignerformwindowinterface.html#clearSelection" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="clearSelection(bool update)">
+                <parameter left="bool" right="" name="update" default="true"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="comment" fullname="QDesignerFormWindowInterface::comment" href="qdesignerformwindowinterface.html#comment" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="comment() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="contents" fullname="QDesignerFormWindowInterface::contents" href="qdesignerformwindowinterface.html#contents" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="contents() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="core" fullname="QDesignerFormWindowInterface::core" href="qdesignerformwindowinterface.html#core" location="abstractformwindow.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormEditorInterface *" signature="core() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="cursor" fullname="QDesignerFormWindowInterface::cursor" href="qdesignerformwindowinterface.html#cursor" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormWindowCursorInterface *" signature="cursor() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="emitSelectionChanged" fullname="QDesignerFormWindowInterface::emitSelectionChanged" href="qdesignerformwindowinterface.html#emitSelectionChanged" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="emitSelectionChanged()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="exportMacro" fullname="QDesignerFormWindowInterface::exportMacro" href="qdesignerformwindowinterface.html#exportMacro" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="exportMacro() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="featureChanged" fullname="QDesignerFormWindowInterface::featureChanged" href="qdesignerformwindowinterface.html#featureChanged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="featureChanged(QFlags&lt;QDesignerFormWindowInterface::FeatureFlag&gt; feature)">
+                <parameter left="QFlags&lt;QDesignerFormWindowInterface::FeatureFlag&gt;" right="" name="feature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="features" fullname="QDesignerFormWindowInterface::features" href="qdesignerformwindowinterface.html#features" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="Feature" signature="features() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fileName" fullname="QDesignerFormWindowInterface::fileName" href="qdesignerformwindowinterface.html#fileName" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="fileName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fileNameChanged" fullname="QDesignerFormWindowInterface::fileNameChanged" href="qdesignerformwindowinterface.html#fileNameChanged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="fileNameChanged(const QString &amp; fileName)">
+                <parameter left="const QString &amp;" right="" name="fileName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formContainer" fullname="QDesignerFormWindowInterface::formContainer" href="qdesignerformwindowinterface.html#formContainer" location="abstractformwindow.h" since="5.0" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="formContainer() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="geometryChanged" fullname="QDesignerFormWindowInterface::geometryChanged" href="qdesignerformwindowinterface.html#geometryChanged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="geometryChanged()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="grid" fullname="QDesignerFormWindowInterface::grid" href="qdesignerformwindowinterface.html#grid" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QPoint" signature="grid() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasFeature" fullname="QDesignerFormWindowInterface::hasFeature" href="qdesignerformwindowinterface.html#hasFeature" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasFeature(QFlags&lt;QDesignerFormWindowInterface::FeatureFlag&gt; feature) const">
+                <parameter left="QFlags&lt;QDesignerFormWindowInterface::FeatureFlag&gt;" right="" name="feature" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="includeHints" fullname="QDesignerFormWindowInterface::includeHints" href="qdesignerformwindowinterface.html#includeHints" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="includeHints() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDirty" fullname="QDesignerFormWindowInterface::isDirty" href="qdesignerformwindowinterface.html#isDirty" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isDirty() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isManaged" fullname="QDesignerFormWindowInterface::isManaged" href="qdesignerformwindowinterface.html#isManaged" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isManaged(QWidget * widget) const">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="layoutDefault" fullname="QDesignerFormWindowInterface::layoutDefault" href="qdesignerformwindowinterface.html#layoutDefault" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="layoutDefault(int * margin, int * spacing)">
+                <parameter left="int *" right="" name="margin" default=""/>
+                <parameter left="int *" right="" name="spacing" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="layoutFunction" fullname="QDesignerFormWindowInterface::layoutFunction" href="qdesignerformwindowinterface.html#layoutFunction" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="layoutFunction(QString * margin, QString * spacing)">
+                <parameter left="QString *" right="" name="margin" default=""/>
+                <parameter left="QString *" right="" name="spacing" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="mainContainerChanged" fullname="QDesignerFormWindowInterface::mainContainerChanged" href="qdesignerformwindowinterface.html#mainContainerChanged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="mainContainerChanged(QWidget * mainContainer)">
+                <parameter left="QWidget *" right="" name="mainContainer" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="manageWidget" fullname="QDesignerFormWindowInterface::manageWidget" href="qdesignerformwindowinterface.html#manageWidget" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="manageWidget(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="objectRemoved" fullname="QDesignerFormWindowInterface::objectRemoved" href="qdesignerformwindowinterface.html#objectRemoved" location="abstractformwindow.h" since="4.5" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="objectRemoved(QObject * object)">
+                <parameter left="QObject *" right="" name="object" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="pixmapFunction" fullname="QDesignerFormWindowInterface::pixmapFunction" href="qdesignerformwindowinterface.html#pixmapFunction" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="pixmapFunction() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeResourceFile" fullname="QDesignerFormWindowInterface::removeResourceFile" href="qdesignerformwindowinterface.html#removeResourceFile" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="removeResourceFile(const QString &amp; path)">
+                <parameter left="const QString &amp;" right="" name="path" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="resourceFileSaveMode" fullname="QDesignerFormWindowInterface::resourceFileSaveMode" href="qdesignerformwindowinterface.html#resourceFileSaveMode" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="ResourceFileSaveMode" signature="resourceFileSaveMode() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="resourceFiles" fullname="QDesignerFormWindowInterface::resourceFiles" href="qdesignerformwindowinterface.html#resourceFiles" location="abstractformwindow.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="resourceFiles() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="resourceFilesChanged" fullname="QDesignerFormWindowInterface::resourceFilesChanged" href="qdesignerformwindowinterface.html#resourceFilesChanged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="resourceFilesChanged()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="selectWidget" fullname="QDesignerFormWindowInterface::selectWidget" href="qdesignerformwindowinterface.html#selectWidget" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="selectWidget(QWidget * widget, bool select)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="bool" right="" name="select" default="true"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="selectionChanged" fullname="QDesignerFormWindowInterface::selectionChanged" href="qdesignerformwindowinterface.html#selectionChanged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="selectionChanged()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setAuthor" fullname="QDesignerFormWindowInterface::setAuthor" href="qdesignerformwindowinterface.html#setAuthor" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setAuthor(const QString &amp; author)">
+                <parameter left="const QString &amp;" right="" name="author" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setComment" fullname="QDesignerFormWindowInterface::setComment" href="qdesignerformwindowinterface.html#setComment" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setComment(const QString &amp; comment)">
+                <parameter left="const QString &amp;" right="" name="comment" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setContents" fullname="QDesignerFormWindowInterface::setContents" href="qdesignerformwindowinterface.html#setContents" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="setContents(QIODevice * device, QString * errorMessage)">
+                <parameter left="QIODevice *" right="" name="device" default=""/>
+                <parameter left="QString *" right="" name="errorMessage" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setContents" fullname="QDesignerFormWindowInterface::setContents" href="qdesignerformwindowinterface.html#setContents-2" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="true" overload-number="2" type="bool" signature="setContents(const QString &amp; contents)">
+                <parameter left="const QString &amp;" right="" name="contents" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setDirty" fullname="QDesignerFormWindowInterface::setDirty" href="qdesignerformwindowinterface.html#setDirty" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setDirty(bool dirty)">
+                <parameter left="bool" right="" name="dirty" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setExportMacro" fullname="QDesignerFormWindowInterface::setExportMacro" href="qdesignerformwindowinterface.html#setExportMacro" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setExportMacro(const QString &amp; exportMacro)">
+                <parameter left="const QString &amp;" right="" name="exportMacro" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFeatures" fullname="QDesignerFormWindowInterface::setFeatures" href="qdesignerformwindowinterface.html#setFeatures" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setFeatures(QFlags&lt;QDesignerFormWindowInterface::FeatureFlag&gt; features)">
+                <parameter left="QFlags&lt;QDesignerFormWindowInterface::FeatureFlag&gt;" right="" name="features" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFileName" fullname="QDesignerFormWindowInterface::setFileName" href="qdesignerformwindowinterface.html#setFileName" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setFileName(const QString &amp; fileName)">
+                <parameter left="const QString &amp;" right="" name="fileName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setGrid" fullname="QDesignerFormWindowInterface::setGrid" href="qdesignerformwindowinterface.html#setGrid" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setGrid(const QPoint &amp; grid)">
+                <parameter left="const QPoint &amp;" right="" name="grid" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setIncludeHints" fullname="QDesignerFormWindowInterface::setIncludeHints" href="qdesignerformwindowinterface.html#setIncludeHints" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setIncludeHints(const QStringList &amp; includeHints)">
+                <parameter left="const QStringList &amp;" right="" name="includeHints" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setLayoutDefault" fullname="QDesignerFormWindowInterface::setLayoutDefault" href="qdesignerformwindowinterface.html#setLayoutDefault" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setLayoutDefault(int margin, int spacing)">
+                <parameter left="int" right="" name="margin" default=""/>
+                <parameter left="int" right="" name="spacing" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setLayoutFunction" fullname="QDesignerFormWindowInterface::setLayoutFunction" href="qdesignerformwindowinterface.html#setLayoutFunction" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setLayoutFunction(const QString &amp; margin, const QString &amp; spacing)">
+                <parameter left="const QString &amp;" right="" name="margin" default=""/>
+                <parameter left="const QString &amp;" right="" name="spacing" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setMainContainer" fullname="QDesignerFormWindowInterface::setMainContainer" href="qdesignerformwindowinterface.html#setMainContainer" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setMainContainer(QWidget * mainContainer)">
+                <parameter left="QWidget *" right="" name="mainContainer" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPixmapFunction" fullname="QDesignerFormWindowInterface::setPixmapFunction" href="qdesignerformwindowinterface.html#setPixmapFunction" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setPixmapFunction(const QString &amp; pixmapFunction)">
+                <parameter left="const QString &amp;" right="" name="pixmapFunction" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setResourceFileSaveMode" fullname="QDesignerFormWindowInterface::setResourceFileSaveMode" href="qdesignerformwindowinterface.html#setResourceFileSaveMode" location="abstractformwindow.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setResourceFileSaveMode(ResourceFileSaveMode behaviour)">
+                <parameter left="ResourceFileSaveMode" right="" name="behaviour" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="unmanageWidget" fullname="QDesignerFormWindowInterface::unmanageWidget" href="qdesignerformwindowinterface.html#unmanageWidget" location="abstractformwindow.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="unmanageWidget(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widgetManaged" fullname="QDesignerFormWindowInterface::widgetManaged" href="qdesignerformwindowinterface.html#widgetManaged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="widgetManaged(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widgetRemoved" fullname="QDesignerFormWindowInterface::widgetRemoved" href="qdesignerformwindowinterface.html#widgetRemoved" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="widgetRemoved(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widgetUnmanaged" fullname="QDesignerFormWindowInterface::widgetUnmanaged" href="qdesignerformwindowinterface.html#widgetUnmanaged" location="abstractformwindow.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="widgetUnmanaged(QWidget * widget)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerFormWindowInterface" fullname="QDesignerFormWindowInterface::~QDesignerFormWindowInterface" href="qdesignerformwindowinterface.html#dtor.QDesignerFormWindowInterface" location="abstractformwindow.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerFormWindowInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormWindowCursorInterface" href="qdesignerformwindowcursorinterface.html" location="abstractformwindowcursor.h" bases="" module="QtDesigner">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="MoveMode" fullname="QDesignerFormWindowCursorInterface::MoveMode" href="qdesignerformwindowcursorinterface.html#MoveMode-enum" location="abstractformwindowcursor.h">
+                <value name="MoveAnchor" value="0"/>
+                <value name="KeepAnchor" value="1"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="MoveOperation" fullname="QDesignerFormWindowCursorInterface::MoveOperation" href="qdesignerformwindowcursorinterface.html#MoveOperation-enum" location="abstractformwindowcursor.h">
+                <value name="NoMove" value="0"/>
+                <value name="Start" value="1"/>
+                <value name="End" value="2"/>
+                <value name="Next" value="3"/>
+                <value name="Prev" value="4"/>
+                <value name="Left" value="5"/>
+                <value name="Right" value="6"/>
+                <value name="Up" value="7"/>
+                <value name="Down" value="8"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="current" fullname="QDesignerFormWindowCursorInterface::current" href="qdesignerformwindowcursorinterface.html#current" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="current() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindow" fullname="QDesignerFormWindowCursorInterface::formWindow" href="qdesignerformwindowcursorinterface.html#formWindow" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormWindowInterface *" signature="formWindow() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasSelection" fullname="QDesignerFormWindowCursorInterface::hasSelection" href="qdesignerformwindowcursorinterface.html#hasSelection" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasSelection() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isWidgetSelected" fullname="QDesignerFormWindowCursorInterface::isWidgetSelected" href="qdesignerformwindowcursorinterface.html#isWidgetSelected" location="abstractformwindowcursor.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="bool" signature="isWidgetSelected(QWidget * widget) const">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="movePosition" fullname="QDesignerFormWindowCursorInterface::movePosition" href="qdesignerformwindowcursorinterface.html#movePosition" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="movePosition(MoveOperation operation, MoveMode mode)">
+                <parameter left="MoveOperation" right="" name="operation" default=""/>
+                <parameter left="MoveMode" right="" name="mode" default="MoveAnchor"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="position" fullname="QDesignerFormWindowCursorInterface::position" href="qdesignerformwindowcursorinterface.html#position" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="position() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="resetWidgetProperty" fullname="QDesignerFormWindowCursorInterface::resetWidgetProperty" href="qdesignerformwindowcursorinterface.html#resetWidgetProperty" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="resetWidgetProperty(QWidget * widget, const QString &amp; name)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="selectedWidget" fullname="QDesignerFormWindowCursorInterface::selectedWidget" href="qdesignerformwindowcursorinterface.html#selectedWidget" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="selectedWidget(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="selectedWidgetCount" fullname="QDesignerFormWindowCursorInterface::selectedWidgetCount" href="qdesignerformwindowcursorinterface.html#selectedWidgetCount" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="selectedWidgetCount() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPosition" fullname="QDesignerFormWindowCursorInterface::setPosition" href="qdesignerformwindowcursorinterface.html#setPosition" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setPosition(int position, MoveMode mode)">
+                <parameter left="int" right="" name="position" default=""/>
+                <parameter left="MoveMode" right="" name="mode" default="MoveAnchor"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setProperty" fullname="QDesignerFormWindowCursorInterface::setProperty" href="qdesignerformwindowcursorinterface.html#setProperty" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setProperty(const QString &amp; name, const QVariant &amp; value)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setWidgetProperty" fullname="QDesignerFormWindowCursorInterface::setWidgetProperty" href="qdesignerformwindowcursorinterface.html#setWidgetProperty" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setWidgetProperty(QWidget * widget, const QString &amp; name, const QVariant &amp; value)">
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widget" fullname="QDesignerFormWindowCursorInterface::widget" href="qdesignerformwindowcursorinterface.html#widget" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="widget(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widgetCount" fullname="QDesignerFormWindowCursorInterface::widgetCount" href="qdesignerformwindowcursorinterface.html#widgetCount" location="abstractformwindowcursor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="widgetCount() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerFormWindowCursorInterface" fullname="QDesignerFormWindowCursorInterface::~QDesignerFormWindowCursorInterface" href="qdesignerformwindowcursorinterface.html#dtor.QDesignerFormWindowCursorInterface" location="abstractformwindowcursor.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerFormWindowCursorInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormWindowManagerInterface" href="qdesignerformwindowmanagerinterface.html" location="abstractformwindowmanager.h" bases="QObject" module="QtDesigner">
+            <enum access="public" threadsafety="unspecified" status="commendable" name="Action" fullname="QDesignerFormWindowManagerInterface::Action" href="qdesignerformwindowmanagerinterface.html#Action-enum" location="abstractformwindowmanager.h" since="5.0">
+                <value name="CutAction" value="100"/>
+                <value name="CopyAction" value="101"/>
+                <value name="PasteAction" value="102"/>
+                <value name="DeleteAction" value="103"/>
+                <value name="SelectAllAction" value="104"/>
+                <value name="LowerAction" value="200"/>
+                <value name="RaiseAction" value="201"/>
+                <value name="UndoAction" value="300"/>
+                <value name="RedoAction" value="301"/>
+                <value name="HorizontalLayoutAction" value="400"/>
+                <value name="VerticalLayoutAction" value="401"/>
+                <value name="SplitHorizontalAction" value="402"/>
+                <value name="SplitVerticalAction" value="403"/>
+                <value name="GridLayoutAction" value="404"/>
+                <value name="FormLayoutAction" value="405"/>
+                <value name="BreakLayoutAction" value="406"/>
+                <value name="AdjustSizeAction" value="407"/>
+                <value name="SimplifyLayoutAction" value="408"/>
+                <value name="DefaultPreviewAction" value="500"/>
+                <value name="FormWindowSettingsDialogAction" value="600"/>
+            </enum>
+            <enum access="public" threadsafety="unspecified" status="commendable" name="ActionGroup" fullname="QDesignerFormWindowManagerInterface::ActionGroup" href="qdesignerformwindowmanagerinterface.html#ActionGroup-enum" location="abstractformwindowmanager.h" since="5.0">
+                <value name="StyledPreviewActionGroup" value="100"/>
+            </enum>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerFormWindowManagerInterface" fullname="QDesignerFormWindowManagerInterface::QDesignerFormWindowManagerInterface" href="qdesignerformwindowmanagerinterface.html#QDesignerFormWindowManagerInterface" location="abstractformwindowmanager.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerFormWindowManagerInterface(QObject * parent)">
+                <parameter left="QObject *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="action" fullname="QDesignerFormWindowManagerInterface::action" href="qdesignerformwindowmanagerinterface.html#action" location="abstractformwindowmanager.h" since="5.0" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="action(Action action) const">
+                <parameter left="Action" right="" name="action" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionAdjustSize" fullname="QDesignerFormWindowManagerInterface::actionAdjustSize" href="qdesignerformwindowmanagerinterface-obsolete.html#actionAdjustSize" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionAdjustSize() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionBreakLayout" fullname="QDesignerFormWindowManagerInterface::actionBreakLayout" href="qdesignerformwindowmanagerinterface-obsolete.html#actionBreakLayout" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionBreakLayout() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionCopy" fullname="QDesignerFormWindowManagerInterface::actionCopy" href="qdesignerformwindowmanagerinterface-obsolete.html#actionCopy" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionCopy() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionCut" fullname="QDesignerFormWindowManagerInterface::actionCut" href="qdesignerformwindowmanagerinterface-obsolete.html#actionCut" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionCut() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionDelete" fullname="QDesignerFormWindowManagerInterface::actionDelete" href="qdesignerformwindowmanagerinterface-obsolete.html#actionDelete" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionDelete() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionFormLayout" fullname="QDesignerFormWindowManagerInterface::actionFormLayout" href="qdesignerformwindowmanagerinterface-obsolete.html#actionFormLayout" location="abstractformwindowmanager.h" since="4.4" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionFormLayout() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionGridLayout" fullname="QDesignerFormWindowManagerInterface::actionGridLayout" href="qdesignerformwindowmanagerinterface-obsolete.html#actionGridLayout" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionGridLayout() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="actionGroup" fullname="QDesignerFormWindowManagerInterface::actionGroup" href="qdesignerformwindowmanagerinterface.html#actionGroup" location="abstractformwindowmanager.h" since="5.0" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QActionGroup *" signature="actionGroup(ActionGroup actionGroup) const">
+                <parameter left="ActionGroup" right="" name="actionGroup" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionHorizontalLayout" fullname="QDesignerFormWindowManagerInterface::actionHorizontalLayout" href="qdesignerformwindowmanagerinterface-obsolete.html#actionHorizontalLayout" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionHorizontalLayout() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionLower" fullname="QDesignerFormWindowManagerInterface::actionLower" href="qdesignerformwindowmanagerinterface-obsolete.html#actionLower" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionLower() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionPaste" fullname="QDesignerFormWindowManagerInterface::actionPaste" href="qdesignerformwindowmanagerinterface-obsolete.html#actionPaste" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionPaste() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionRaise" fullname="QDesignerFormWindowManagerInterface::actionRaise" href="qdesignerformwindowmanagerinterface-obsolete.html#actionRaise" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionRaise() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionRedo" fullname="QDesignerFormWindowManagerInterface::actionRedo" href="qdesignerformwindowmanagerinterface-obsolete.html#actionRedo" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionRedo() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionSelectAll" fullname="QDesignerFormWindowManagerInterface::actionSelectAll" href="qdesignerformwindowmanagerinterface-obsolete.html#actionSelectAll" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionSelectAll() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionSimplifyLayout" fullname="QDesignerFormWindowManagerInterface::actionSimplifyLayout" href="qdesignerformwindowmanagerinterface-obsolete.html#actionSimplifyLayout" location="abstractformwindowmanager.h" since="4.4" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionSimplifyLayout() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionSplitHorizontal" fullname="QDesignerFormWindowManagerInterface::actionSplitHorizontal" href="qdesignerformwindowmanagerinterface-obsolete.html#actionSplitHorizontal" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionSplitHorizontal() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionSplitVertical" fullname="QDesignerFormWindowManagerInterface::actionSplitVertical" href="qdesignerformwindowmanagerinterface-obsolete.html#actionSplitVertical" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionSplitVertical() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionUndo" fullname="QDesignerFormWindowManagerInterface::actionUndo" href="qdesignerformwindowmanagerinterface-obsolete.html#actionUndo" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionUndo() const"/>
+            <function access="public" threadsafety="unspecified" status="obsolete" name="actionVerticalLayout" fullname="QDesignerFormWindowManagerInterface::actionVerticalLayout" href="qdesignerformwindowmanagerinterface-obsolete.html#actionVerticalLayout" location="abstractformwindowmanager.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="actionVerticalLayout() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="activeFormWindow" fullname="QDesignerFormWindowManagerInterface::activeFormWindow" href="qdesignerformwindowmanagerinterface.html#activeFormWindow" location="abstractformwindowmanager.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormWindowInterface *" signature="activeFormWindow() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="activeFormWindowChanged" fullname="QDesignerFormWindowManagerInterface::activeFormWindowChanged" href="qdesignerformwindowmanagerinterface.html#activeFormWindowChanged" location="abstractformwindowmanager.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="activeFormWindowChanged(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addFormWindow" fullname="QDesignerFormWindowManagerInterface::addFormWindow" href="qdesignerformwindowmanagerinterface.html#addFormWindow" location="abstractformwindowmanager.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="addFormWindow(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="closeAllPreviews" fullname="QDesignerFormWindowManagerInterface::closeAllPreviews" href="qdesignerformwindowmanagerinterface.html#closeAllPreviews" location="abstractformwindowmanager.h" since="5.0" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="closeAllPreviews()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="core" fullname="QDesignerFormWindowManagerInterface::core" href="qdesignerformwindowmanagerinterface.html#core" location="abstractformwindowmanager.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormEditorInterface *" signature="core() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createFormWindow" fullname="QDesignerFormWindowManagerInterface::createFormWindow" href="qdesignerformwindowmanagerinterface.html#createFormWindow" location="abstractformwindowmanager.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="QDesignerFormWindowInterface *" signature="createFormWindow(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createPreviewPixmap" fullname="QDesignerFormWindowManagerInterface::createPreviewPixmap" href="qdesignerformwindowmanagerinterface.html#createPreviewPixmap" location="abstractformwindowmanager.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QPixmap" signature="createPreviewPixmap() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindow" fullname="QDesignerFormWindowManagerInterface::formWindow" href="qdesignerformwindowmanagerinterface.html#formWindow" location="abstractformwindowmanager.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormWindowInterface *" signature="formWindow(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindowAdded" fullname="QDesignerFormWindowManagerInterface::formWindowAdded" href="qdesignerformwindowmanagerinterface.html#formWindowAdded" location="abstractformwindowmanager.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="formWindowAdded(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindowCount" fullname="QDesignerFormWindowManagerInterface::formWindowCount" href="qdesignerformwindowmanagerinterface.html#formWindowCount" location="abstractformwindowmanager.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="formWindowCount() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindowRemoved" fullname="QDesignerFormWindowManagerInterface::formWindowRemoved" href="qdesignerformwindowmanagerinterface.html#formWindowRemoved" location="abstractformwindowmanager.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="formWindowRemoved(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="formWindowSettingsChanged" fullname="QDesignerFormWindowManagerInterface::formWindowSettingsChanged" href="qdesignerformwindowmanagerinterface.html#formWindowSettingsChanged" location="abstractformwindowmanager.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="formWindowSettingsChanged(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeFormWindow" fullname="QDesignerFormWindowManagerInterface::removeFormWindow" href="qdesignerformwindowmanagerinterface.html#removeFormWindow" location="abstractformwindowmanager.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="removeFormWindow(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setActiveFormWindow" fullname="QDesignerFormWindowManagerInterface::setActiveFormWindow" href="qdesignerformwindowmanagerinterface.html#setActiveFormWindow" location="abstractformwindowmanager.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setActiveFormWindow(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="showPluginDialog" fullname="QDesignerFormWindowManagerInterface::showPluginDialog" href="qdesignerformwindowmanagerinterface.html#showPluginDialog" location="abstractformwindowmanager.h" since="5.0" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="showPluginDialog()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="showPreview" fullname="QDesignerFormWindowManagerInterface::showPreview" href="qdesignerformwindowmanagerinterface.html#showPreview" location="abstractformwindowmanager.h" since="5.0" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="showPreview()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerFormWindowManagerInterface" fullname="QDesignerFormWindowManagerInterface::~QDesignerFormWindowManagerInterface" href="qdesignerformwindowmanagerinterface.html#dtor.QDesignerFormWindowManagerInterface" location="abstractformwindowmanager.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerFormWindowManagerInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerObjectInspectorInterface" href="qdesignerobjectinspectorinterface.html" location="abstractobjectinspector.h" bases="QWidget" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerObjectInspectorInterface" fullname="QDesignerObjectInspectorInterface::QDesignerObjectInspectorInterface" href="qdesignerobjectinspectorinterface.html#QDesignerObjectInspectorInterface" location="abstractobjectinspector.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerObjectInspectorInterface(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default=""/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="core" fullname="QDesignerObjectInspectorInterface::core" href="qdesignerobjectinspectorinterface.html#core" location="abstractobjectinspector.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormEditorInterface *" signature="core() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFormWindow" fullname="QDesignerObjectInspectorInterface::setFormWindow" href="qdesignerobjectinspectorinterface.html#setFormWindow" location="abstractobjectinspector.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setFormWindow(QDesignerFormWindowInterface * formWindow)">
+                <parameter left="QDesignerFormWindowInterface *" right="" name="formWindow" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerObjectInspectorInterface" fullname="QDesignerObjectInspectorInterface::~QDesignerObjectInspectorInterface" href="qdesignerobjectinspectorinterface.html#dtor.QDesignerObjectInspectorInterface" location="abstractobjectinspector.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerObjectInspectorInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerPropertyEditorInterface" href="qdesignerpropertyeditorinterface.html" location="abstractpropertyeditor.h" bases="QWidget" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerPropertyEditorInterface" fullname="QDesignerPropertyEditorInterface::QDesignerPropertyEditorInterface" href="qdesignerpropertyeditorinterface.html#QDesignerPropertyEditorInterface" location="abstractpropertyeditor.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerPropertyEditorInterface(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default=""/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="core" fullname="QDesignerPropertyEditorInterface::core" href="qdesignerpropertyeditorinterface.html#core" location="abstractpropertyeditor.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QDesignerFormEditorInterface *" signature="core() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="currentPropertyName" fullname="QDesignerPropertyEditorInterface::currentPropertyName" href="qdesignerpropertyeditorinterface.html#currentPropertyName" location="abstractpropertyeditor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="currentPropertyName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isReadOnly" fullname="QDesignerPropertyEditorInterface::isReadOnly" href="qdesignerpropertyeditorinterface.html#isReadOnly" location="abstractpropertyeditor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isReadOnly() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="object" fullname="QDesignerPropertyEditorInterface::object" href="qdesignerpropertyeditorinterface.html#object" location="abstractpropertyeditor.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QObject *" signature="object() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyChanged" fullname="QDesignerPropertyEditorInterface::propertyChanged" href="qdesignerpropertyeditorinterface.html#propertyChanged" location="abstractpropertyeditor.h" virtual="non" meta="signal" const="false" static="false" overload="false" type="void" signature="propertyChanged(const QString &amp; name, const QVariant &amp; value)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setObject" fullname="QDesignerPropertyEditorInterface::setObject" href="qdesignerpropertyeditorinterface.html#setObject" location="abstractpropertyeditor.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setObject(QObject * object)">
+                <parameter left="QObject *" right="" name="object" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPropertyValue" fullname="QDesignerPropertyEditorInterface::setPropertyValue" href="qdesignerpropertyeditorinterface.html#setPropertyValue" location="abstractpropertyeditor.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setPropertyValue(const QString &amp; name, const QVariant &amp; value, bool changed)">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+                <parameter left="bool" right="" name="changed" default="true"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setReadOnly" fullname="QDesignerPropertyEditorInterface::setReadOnly" href="qdesignerpropertyeditorinterface.html#setReadOnly" location="abstractpropertyeditor.h" virtual="pure" meta="slot" const="false" static="false" overload="false" type="void" signature="setReadOnly(bool readOnly)">
+                <parameter left="bool" right="" name="readOnly" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerPropertyEditorInterface" fullname="QDesignerPropertyEditorInterface::~QDesignerPropertyEditorInterface" href="qdesignerpropertyeditorinterface.html#dtor.QDesignerPropertyEditorInterface" location="abstractpropertyeditor.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerPropertyEditorInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerWidgetBoxInterface" href="qdesignerwidgetboxinterface.html" location="abstractwidgetbox.h" bases="QWidget" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QDesignerWidgetBoxInterface" fullname="QDesignerWidgetBoxInterface::QDesignerWidgetBoxInterface" href="qdesignerwidgetboxinterface.html#QDesignerWidgetBoxInterface" location="abstractwidgetbox.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QDesignerWidgetBoxInterface(QWidget * parent, Qt::WindowFlags flags)">
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+                <parameter left="Qt::WindowFlags" right="" name="flags" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="fileName" fullname="QDesignerWidgetBoxInterface::fileName" href="qdesignerwidgetboxinterface.html#fileName" location="abstractwidgetbox.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="fileName() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QDesignerWidgetBoxInterface::load" href="qdesignerwidgetboxinterface.html#load" location="abstractwidgetbox.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="load()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="save" fullname="QDesignerWidgetBoxInterface::save" href="qdesignerwidgetboxinterface.html#save" location="abstractwidgetbox.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="save()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setFileName" fullname="QDesignerWidgetBoxInterface::setFileName" href="qdesignerwidgetboxinterface.html#setFileName" location="abstractwidgetbox.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setFileName(const QString &amp; fileName)">
+                <parameter left="const QString &amp;" right="" name="fileName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerWidgetBoxInterface" fullname="QDesignerWidgetBoxInterface::~QDesignerWidgetBoxInterface" href="qdesignerwidgetboxinterface.html#dtor.QDesignerWidgetBoxInterface" location="abstractwidgetbox.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerWidgetBoxInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerDynamicPropertySheetExtension" href="qdesignerdynamicpropertysheetextension.html" location="dynamicpropertysheet.h" since="4.3" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="addDynamicProperty" fullname="QDesignerDynamicPropertySheetExtension::addDynamicProperty" href="qdesignerdynamicpropertysheetextension.html#addDynamicProperty" location="dynamicpropertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="int" signature="addDynamicProperty(const QString &amp; propertyName, const QVariant &amp; value)">
+                <parameter left="const QString &amp;" right="" name="propertyName" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="canAddDynamicProperty" fullname="QDesignerDynamicPropertySheetExtension::canAddDynamicProperty" href="qdesignerdynamicpropertysheetextension.html#canAddDynamicProperty" location="dynamicpropertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="canAddDynamicProperty(const QString &amp; propertyName) const">
+                <parameter left="const QString &amp;" right="" name="propertyName" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="dynamicPropertiesAllowed" fullname="QDesignerDynamicPropertySheetExtension::dynamicPropertiesAllowed" href="qdesignerdynamicpropertysheetextension.html#dynamicPropertiesAllowed" location="dynamicpropertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="dynamicPropertiesAllowed() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isDynamicProperty" fullname="QDesignerDynamicPropertySheetExtension::isDynamicProperty" href="qdesignerdynamicpropertysheetextension.html#isDynamicProperty" location="dynamicpropertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isDynamicProperty(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="removeDynamicProperty" fullname="QDesignerDynamicPropertySheetExtension::removeDynamicProperty" href="qdesignerdynamicpropertysheetextension.html#removeDynamicProperty" location="dynamicpropertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="removeDynamicProperty(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerDynamicPropertySheetExtension" fullname="QDesignerDynamicPropertySheetExtension::~QDesignerDynamicPropertySheetExtension" href="qdesignerdynamicpropertysheetextension.html#dtor.QDesignerDynamicPropertySheetExtension" location="dynamicpropertysheet.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerDynamicPropertySheetExtension()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerMemberSheetExtension" href="qdesignermembersheetextension.html" location="membersheet.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="count" fullname="QDesignerMemberSheetExtension::count" href="qdesignermembersheetextension.html#count" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="count() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="declaredInClass" fullname="QDesignerMemberSheetExtension::declaredInClass" href="qdesignermembersheetextension.html#declaredInClass" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="declaredInClass(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="indexOf" fullname="QDesignerMemberSheetExtension::indexOf" href="qdesignermembersheetextension.html#indexOf" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="indexOf(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="inheritedFromWidget" fullname="QDesignerMemberSheetExtension::inheritedFromWidget" href="qdesignermembersheetextension.html#inheritedFromWidget" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="inheritedFromWidget(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isSignal" fullname="QDesignerMemberSheetExtension::isSignal" href="qdesignermembersheetextension.html#isSignal" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isSignal(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isSlot" fullname="QDesignerMemberSheetExtension::isSlot" href="qdesignermembersheetextension.html#isSlot" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isSlot(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isVisible" fullname="QDesignerMemberSheetExtension::isVisible" href="qdesignermembersheetextension.html#isVisible" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isVisible(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="memberGroup" fullname="QDesignerMemberSheetExtension::memberGroup" href="qdesignermembersheetextension.html#memberGroup" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="memberGroup(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="memberName" fullname="QDesignerMemberSheetExtension::memberName" href="qdesignermembersheetextension.html#memberName" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="memberName(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="parameterNames" fullname="QDesignerMemberSheetExtension::parameterNames" href="qdesignermembersheetextension.html#parameterNames" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QList&lt;QByteArray&gt;" signature="parameterNames(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="parameterTypes" fullname="QDesignerMemberSheetExtension::parameterTypes" href="qdesignermembersheetextension.html#parameterTypes" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QList&lt;QByteArray&gt;" signature="parameterTypes(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setMemberGroup" fullname="QDesignerMemberSheetExtension::setMemberGroup" href="qdesignermembersheetextension.html#setMemberGroup" location="membersheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setMemberGroup(int index, const QString &amp; group)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="const QString &amp;" right="" name="group" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setVisible" fullname="QDesignerMemberSheetExtension::setVisible" href="qdesignermembersheetextension.html#setVisible" location="membersheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setVisible(int index, bool visible)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="bool" right="" name="visible" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="signature" fullname="QDesignerMemberSheetExtension::signature" href="qdesignermembersheetextension.html#signature" location="membersheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="signature(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerMemberSheetExtension" fullname="QDesignerMemberSheetExtension::~QDesignerMemberSheetExtension" href="qdesignermembersheetextension.html#dtor.QDesignerMemberSheetExtension" location="membersheet.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerMemberSheetExtension()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerPropertySheetExtension" href="qdesignerpropertysheetextension.html" location="propertysheet.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="count" fullname="QDesignerPropertySheetExtension::count" href="qdesignerpropertysheetextension.html#count" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="count() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="hasReset" fullname="QDesignerPropertySheetExtension::hasReset" href="qdesignerpropertysheetextension.html#hasReset" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="hasReset(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="indexOf" fullname="QDesignerPropertySheetExtension::indexOf" href="qdesignerpropertysheetextension.html#indexOf" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="indexOf(const QString &amp; name) const">
+                <parameter left="const QString &amp;" right="" name="name" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isAttribute" fullname="QDesignerPropertySheetExtension::isAttribute" href="qdesignerpropertysheetextension.html#isAttribute" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isAttribute(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isChanged" fullname="QDesignerPropertySheetExtension::isChanged" href="qdesignerpropertysheetextension.html#isChanged" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isChanged(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isEnabled" fullname="QDesignerPropertySheetExtension::isEnabled" href="qdesignerpropertysheetextension.html#isEnabled" location="propertysheet.h" since="5.0" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isEnabled(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isVisible" fullname="QDesignerPropertySheetExtension::isVisible" href="qdesignerpropertysheetextension.html#isVisible" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isVisible(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="property" fullname="QDesignerPropertySheetExtension::property" href="qdesignerpropertysheetextension.html#property" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QVariant" signature="property(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyGroup" fullname="QDesignerPropertySheetExtension::propertyGroup" href="qdesignerpropertysheetextension.html#propertyGroup" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="propertyGroup(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="propertyName" fullname="QDesignerPropertySheetExtension::propertyName" href="qdesignerpropertysheetextension.html#propertyName" location="propertysheet.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="propertyName(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="reset" fullname="QDesignerPropertySheetExtension::reset" href="qdesignerpropertysheetextension.html#reset" location="propertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="bool" signature="reset(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setAttribute" fullname="QDesignerPropertySheetExtension::setAttribute" href="qdesignerpropertysheetextension.html#setAttribute" location="propertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setAttribute(int index, bool attribute)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="bool" right="" name="attribute" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setChanged" fullname="QDesignerPropertySheetExtension::setChanged" href="qdesignerpropertysheetextension.html#setChanged" location="propertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setChanged(int index, bool changed)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="bool" right="" name="changed" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setProperty" fullname="QDesignerPropertySheetExtension::setProperty" href="qdesignerpropertysheetextension.html#setProperty" location="propertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setProperty(int index, const QVariant &amp; value)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="const QVariant &amp;" right="" name="value" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPropertyGroup" fullname="QDesignerPropertySheetExtension::setPropertyGroup" href="qdesignerpropertysheetextension.html#setPropertyGroup" location="propertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setPropertyGroup(int index, const QString &amp; group)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="const QString &amp;" right="" name="group" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setVisible" fullname="QDesignerPropertySheetExtension::setVisible" href="qdesignerpropertysheetextension.html#setVisible" location="propertysheet.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setVisible(int index, bool visible)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="bool" right="" name="visible" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerPropertySheetExtension" fullname="QDesignerPropertySheetExtension::~QDesignerPropertySheetExtension" href="qdesignerpropertysheetextension.html#dtor.QDesignerPropertySheetExtension" location="propertysheet.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerPropertySheetExtension()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerTaskMenuExtension" href="qdesignertaskmenuextension.html" location="taskmenu.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="preferredEditAction" fullname="QDesignerTaskMenuExtension::preferredEditAction" href="qdesignertaskmenuextension.html#preferredEditAction" location="taskmenu.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QAction *" signature="preferredEditAction() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="taskActions" fullname="QDesignerTaskMenuExtension::taskActions" href="qdesignertaskmenuextension.html#taskActions" location="taskmenu.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QList&lt;QAction *&gt;" signature="taskActions() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerTaskMenuExtension" fullname="QDesignerTaskMenuExtension::~QDesignerTaskMenuExtension" href="qdesignertaskmenuextension.html#dtor.QDesignerTaskMenuExtension" location="taskmenu.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerTaskMenuExtension()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QAbstractFormBuilder" href="qabstractformbuilder.html" location="abstractformbuilder.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="load" fullname="QAbstractFormBuilder::load" href="qabstractformbuilder.html#load" location="abstractformbuilder.cpp" virtual="impure" meta="plain" const="false" static="false" overload="false" type="QWidget *" signature="load(QIODevice * device, QWidget * parent)">
+                <parameter left="QIODevice *" right="" name="device" default=""/>
+                <parameter left="QWidget *" right="" name="parent" default="0"/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="save" fullname="QAbstractFormBuilder::save" href="qabstractformbuilder.html#save" location="abstractformbuilder.cpp" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="save(QIODevice * device, QWidget * widget)">
+                <parameter left="QIODevice *" right="" name="device" default=""/>
+                <parameter left="QWidget *" right="" name="widget" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="QAbstractFormBuilder" fullname="QAbstractFormBuilder::QAbstractFormBuilder" href="qabstractformbuilder.html#QAbstractFormBuilder" location="abstractformbuilder.h" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QAbstractFormBuilder()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="errorString" fullname="QAbstractFormBuilder::errorString" href="qabstractformbuilder.html#errorString" location="abstractformbuilder.h" since="5.0" virtual="non" meta="plain" const="true" static="false" overload="false" type="QString" signature="errorString() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setWorkingDirectory" fullname="QAbstractFormBuilder::setWorkingDirectory" href="qabstractformbuilder.html#setWorkingDirectory" location="abstractformbuilder.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setWorkingDirectory(const QDir &amp; directory)">
+                <parameter left="const QDir &amp;" right="" name="directory" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="workingDirectory" fullname="QAbstractFormBuilder::workingDirectory" href="qabstractformbuilder.html#workingDirectory" location="abstractformbuilder.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QDir" signature="workingDirectory() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QAbstractFormBuilder" fullname="QAbstractFormBuilder::~QAbstractFormBuilder" href="qabstractformbuilder.html#dtor.QAbstractFormBuilder" location="abstractformbuilder.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QAbstractFormBuilder()"/>
+            <variable access="protected" threadsafety="unspecified" status="commendable" name="d" fullname="QAbstractFormBuilder::d" href="qabstractformbuilder.html#d-var" location="abstractformbuilder.h" type="QScopedPointer&lt;QFormBuilderExtra&gt;" static="false"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerContainerExtension" href="qdesignercontainerextension.html" location="container.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="addWidget" fullname="QDesignerContainerExtension::addWidget" href="qdesignercontainerextension.html#addWidget" location="container.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="addWidget(QWidget * page)">
+                <parameter left="QWidget *" right="" name="page" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="canAddWidget" fullname="QDesignerContainerExtension::canAddWidget" href="qdesignercontainerextension.html#canAddWidget" location="container.h" since="5.0" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="canAddWidget() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="canRemove" fullname="QDesignerContainerExtension::canRemove" href="qdesignercontainerextension.html#canRemove" location="container.h" since="5.0" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="canRemove(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="count" fullname="QDesignerContainerExtension::count" href="qdesignercontainerextension.html#count" location="container.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="count() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="currentIndex" fullname="QDesignerContainerExtension::currentIndex" href="qdesignercontainerextension.html#currentIndex" location="container.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="int" signature="currentIndex() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="insertWidget" fullname="QDesignerContainerExtension::insertWidget" href="qdesignercontainerextension.html#insertWidget" location="container.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="insertWidget(int index, QWidget * page)">
+                <parameter left="int" right="" name="index" default=""/>
+                <parameter left="QWidget *" right="" name="page" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="remove" fullname="QDesignerContainerExtension::remove" href="qdesignercontainerextension.html#remove" location="container.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="remove(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setCurrentIndex" fullname="QDesignerContainerExtension::setCurrentIndex" href="qdesignercontainerextension.html#setCurrentIndex" location="container.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="void" signature="setCurrentIndex(int index)">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="widget" fullname="QDesignerContainerExtension::widget" href="qdesignercontainerextension.html#widget" location="container.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QWidget *" signature="widget(int index) const">
+                <parameter left="int" right="" name="index" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerContainerExtension" fullname="QDesignerContainerExtension::~QDesignerContainerExtension" href="qdesignercontainerextension.html#dtor.QDesignerContainerExtension" location="container.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerContainerExtension()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerCustomWidgetCollectionInterface" href="qdesignercustomwidgetcollectioninterface.html" location="customwidget.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="customWidgets" fullname="QDesignerCustomWidgetCollectionInterface::customWidgets" href="qdesignercustomwidgetcollectioninterface.html#customWidgets" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QList&lt;QDesignerCustomWidgetInterface *&gt;" signature="customWidgets() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerCustomWidgetCollectionInterface" fullname="QDesignerCustomWidgetCollectionInterface::~QDesignerCustomWidgetCollectionInterface" href="qdesignercustomwidgetcollectioninterface.html#dtor.QDesignerCustomWidgetCollectionInterface" location="customwidget.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerCustomWidgetCollectionInterface()"/>
+        </class>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QDesignerCustomWidgetInterface" href="qdesignercustomwidgetinterface.html" location="customwidget.h" bases="" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="codeTemplate" fullname="QDesignerCustomWidgetInterface::codeTemplate" href="qdesignercustomwidgetinterface.html#codeTemplate" location="customwidget.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="codeTemplate() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="createWidget" fullname="QDesignerCustomWidgetInterface::createWidget" href="qdesignercustomwidgetinterface.html#createWidget" location="customwidget.h" virtual="pure" meta="plain" const="false" static="false" overload="false" type="QWidget *" signature="createWidget(QWidget * parent)">
+                <parameter left="QWidget *" right="" name="parent" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="domXml" fullname="QDesignerCustomWidgetInterface::domXml" href="qdesignercustomwidgetinterface.html#domXml" location="customwidget.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="QString" signature="domXml() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="group" fullname="QDesignerCustomWidgetInterface::group" href="qdesignercustomwidgetinterface.html#group" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="group() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="icon" fullname="QDesignerCustomWidgetInterface::icon" href="qdesignercustomwidgetinterface.html#icon" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QIcon" signature="icon() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="includeFile" fullname="QDesignerCustomWidgetInterface::includeFile" href="qdesignercustomwidgetinterface.html#includeFile" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="includeFile() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="initialize" fullname="QDesignerCustomWidgetInterface::initialize" href="qdesignercustomwidgetinterface.html#initialize" location="customwidget.h" virtual="impure" meta="plain" const="false" static="false" overload="false" type="void" signature="initialize(QDesignerFormEditorInterface * formEditor)">
+                <parameter left="QDesignerFormEditorInterface *" right="" name="formEditor" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isContainer" fullname="QDesignerCustomWidgetInterface::isContainer" href="qdesignercustomwidgetinterface.html#isContainer" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isContainer() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="isInitialized" fullname="QDesignerCustomWidgetInterface::isInitialized" href="qdesignercustomwidgetinterface.html#isInitialized" location="customwidget.h" virtual="impure" meta="plain" const="true" static="false" overload="false" type="bool" signature="isInitialized() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="name" fullname="QDesignerCustomWidgetInterface::name" href="qdesignercustomwidgetinterface.html#name" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="name() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="toolTip" fullname="QDesignerCustomWidgetInterface::toolTip" href="qdesignercustomwidgetinterface.html#toolTip" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="toolTip() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="whatsThis" fullname="QDesignerCustomWidgetInterface::whatsThis" href="qdesignercustomwidgetinterface.html#whatsThis" location="customwidget.h" virtual="pure" meta="plain" const="true" static="false" overload="false" type="QString" signature="whatsThis() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QDesignerCustomWidgetInterface" fullname="QDesignerCustomWidgetInterface::~QDesignerCustomWidgetInterface" href="qdesignercustomwidgetinterface.html#dtor.QDesignerCustomWidgetInterface" location="customwidget.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QDesignerCustomWidgetInterface()"/>
+        </class>
+        <function access="public" threadsafety="unspecified" status="commendable" name="QDESIGNER_WIDGET_EXPORT" href="qdesignercustomwidgetinterface.html#QDESIGNER_WIDGET_EXPORT" location="customwidget.qdoc" since="4.1" virtual="non" meta="macrowithoutparams" const="false" static="false" overload="false" relates="QDesignerCustomWidgetInterface" type="" signature="QDESIGNER_WIDGET_EXPORT()"/>
+        <class access="public" threadsafety="unspecified" status="commendable" name="QFormBuilder" href="qformbuilder.html" location="formbuilder.h" bases="QAbstractFormBuilder" module="QtDesigner">
+            <function access="public" threadsafety="unspecified" status="commendable" name="QFormBuilder" fullname="QFormBuilder::QFormBuilder" href="qformbuilder.html#QFormBuilder" location="formbuilder.cpp" virtual="non" meta="constructor" const="false" static="false" overload="false" type="" signature="QFormBuilder()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="customWidgets" fullname="QFormBuilder::customWidgets" href="qformbuilder.html#customWidgets" location="formbuilder.cpp" virtual="non" meta="plain" const="true" static="false" overload="false" type="QList&lt;QDesignerCustomWidgetInterface *&gt;" signature="customWidgets() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="addPluginPath" fullname="QFormBuilder::addPluginPath" href="qformbuilder.html#addPluginPath" location="formbuilder.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="addPluginPath(const QString &amp; pluginPath)">
+                <parameter left="const QString &amp;" right="" name="pluginPath" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="clearPluginPaths" fullname="QFormBuilder::clearPluginPaths" href="qformbuilder.html#clearPluginPaths" location="formbuilder.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="clearPluginPaths()"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="pluginPaths" fullname="QFormBuilder::pluginPaths" href="qformbuilder.html#pluginPaths" location="formbuilder.h" virtual="non" meta="plain" const="true" static="false" overload="false" type="QStringList" signature="pluginPaths() const"/>
+            <function access="public" threadsafety="unspecified" status="commendable" name="setPluginPath" fullname="QFormBuilder::setPluginPath" href="qformbuilder.html#setPluginPath" location="formbuilder.h" virtual="non" meta="plain" const="false" static="false" overload="false" type="void" signature="setPluginPath(const QStringList &amp; pluginPaths)">
+                <parameter left="const QStringList &amp;" right="" name="pluginPaths" default=""/>
+            </function>
+            <function access="public" threadsafety="unspecified" status="commendable" name="~QFormBuilder" fullname="QFormBuilder::~QFormBuilder" href="qformbuilder.html#dtor.QFormBuilder" location="formbuilder.h" virtual="impure" meta="destructor" const="false" static="false" overload="false" type="" signature="~QFormBuilder()"/>
+        </class>
+        <page access="public" status="commendable" name="qtdesigner-components.html" href="qtdesigner-components.html" subtype="page" title="Creating and Using Components for Qt Designer" fulltitle="Creating and Using Components for Qt Designer" subtitle="" location="designer-custom-widgets.qdoc" module="QtDesigner" groups="best-practices">
+            <contents name="creating-custom-widget-plugins" title="Creating Custom Widget Plugins" level="1"/>
+            <contents name="retrieving-access-to-qt-designer-components" title="Retrieving Access to Qt Designer Components" level="1"/>
+            <contents name="creating-user-interfaces-at-run-time" title="Creating User Interfaces at Run-Time" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-buddy-mode.html" href="designer-buddy-mode.html" subtype="page" title="Qt Designer's Buddy Editing Mode" fulltitle="Qt Designer's Buddy Editing Mode" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="makingbuddies"/>
+            <contents name="linking-labels-to-buddy-widgets" title="Linking Labels to Buddy Widgets" level="1"/>
+            <contents name="removing-buddy-connections" title="Removing Buddy Connections" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-connection-mode.html" href="designer-connection-mode.html" subtype="page" title="Qt Designer's Signals and Slots Editing Mode" fulltitle="Qt Designer's Signals and Slots Editing Mode" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="highlightedobjects"/>
+            <target name="makingaconnection"/>
+            <target name="connectingtotheform"/>
+            <target name="connectioneditor"/>
+            <target name="deletingconnections"/>
+            <contents name="connecting-objects" title="Connecting Objects" level="1"/>
+            <contents name="editing-and-deleting-connections" title="Editing and Deleting Connections" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-creating-custom-widgets-extensions.html" href="designer-creating-custom-widgets-extensions.html" subtype="page" title="Creating Custom Widget Extensions" fulltitle="Creating Custom Widget Extensions" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <contents name="extension-types" title="Extension Types" level="1"/>
+            <contents name="creating-an-extension" title="Creating an Extension" level="1"/>
+            <contents name="exposing-an-extension-to-qt-designer" title="Exposing an Extension to Qt Designer" level="1"/>
+            <contents name="creating-an-extension-factory" title="Creating an Extension Factory" level="2"/>
+            <contents name="accessing-qt-designer-s-extension-manager" title="Accessing Qt Designer's Extension Manager" level="2"/>
+            <contents name="related-examples" title="Related Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-creating-custom-widgets.html" href="designer-creating-custom-widgets.html" subtype="page" title="Creating Custom Widgets for Qt Designer" fulltitle="Creating Custom Widgets for Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="buildingandinstallingtheplugin"/>
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="providing-an-interface-description" title="Providing an Interface Description" level="2"/>
+            <contents name="notes-on-the-func-target-domxml-domxml-func-function" title="Notes on the &lt;@func target=&quot;domXml()&quot;&gt;domXml&lt;/@func&gt;() Function" level="2"/>
+            <contents name="plugin-requirements" title="Plugin Requirements" level="1"/>
+            <contents name="creating-well-behaved-widgets" title="Creating Well Behaved Widgets" level="1"/>
+            <contents name="building-and-installing-the-plugin" title="Building and Installing the Plugin" level="1"/>
+            <contents name="a-simple-plugin" title="A Simple Plugin" level="2"/>
+            <contents name="splitting-up-the-plugin" title="Splitting up the Plugin" level="2"/>
+            <contents name="related-examples" title="Related Examples" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-creating-mainwindows.html" href="designer-creating-mainwindows.html" subtype="page" title="Creating Main Windows in Qt Designer" fulltitle="Creating Main Windows in Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="creatingamenu"/>
+            <target name="creatingamenuentry"/>
+            <target name="theactioneditor"/>
+            <target name="addinganaction"/>
+            <target name="addingadockwidget"/>
+            <contents name="menus" title="Menus" level="1"/>
+            <contents name="creating-a-menu" title="Creating a Menu" level="2"/>
+            <contents name="creating-a-menu-entry" title="Creating a Menu Entry" level="2"/>
+            <contents name="toolbars" title="Toolbars" level="1"/>
+            <contents name="creating-and-removing-a-toolbar" title="Creating and Removing a Toolbar" level="2"/>
+            <contents name="adding-and-removing-toolbar-buttons" title="Adding and Removing Toolbar Buttons" level="2"/>
+            <contents name="actions" title="Actions" level="1"/>
+            <contents name="the-action-editor" title="The Action Editor" level="2"/>
+            <contents name="creating-an-action" title="Creating an Action" level="2"/>
+            <contents name="adding-an-action" title="Adding an Action" level="2"/>
+            <contents name="dock-widgets" title="Dock Widgets" level="1"/>
+            <contents name="adding-a-dock-widget" title="Adding a Dock Widget" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="designer-customizing-forms.html" href="designer-customizing-forms.html" subtype="page" title="Customizing Qt Designer Forms" fulltitle="Customizing Qt Designer Forms" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="layoutfunction"/>
+            <contents name="modifying-the-form-settings" title="Modifying the Form Settings" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-editing-mode.html" href="designer-editing-mode.html" subtype="page" title="Qt Designer's Editing Modes" fulltitle="Qt Designer's Editing Modes" subtitle="" location="designer-manual.qdoc" module="QtDesigner"/>
+        <page access="public" status="commendable" name="designer-layouts.html" href="designer-layouts.html" subtype="page" title="Using Layouts in Qt Designer" fulltitle="Using Layouts in Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="insertingobjectsintoalayout"/>
+            <target name="layoutshortcuts"/>
+            <contents name="applying-and-breaking-layouts" title="Applying and Breaking Layouts" level="1"/>
+            <contents name="setting-a-top-level-layout" title="Setting A Top Level Layout" level="2"/>
+            <contents name="horizontal-and-vertical-layouts" title="Horizontal and Vertical Layouts" level="2"/>
+            <contents name="the-grid-layout" title="The Grid Layout" level="3"/>
+            <contents name="the-form-layout" title="The Form Layout" level="3"/>
+            <contents name="splitter-layouts" title="Splitter Layouts" level="3"/>
+            <contents name="shortcut-keys" title="Shortcut Keys" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="designer-preview.html" href="designer-preview.html" subtype="page" title="Saving, Previewing and Printing Forms in Qt Designer" fulltitle="Saving, Previewing and Printing Forms in Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <contents name="viewing-the-form-s-code" title="Viewing the Form's Code" level="1"/>
+            <contents name="saving-and-printing-the-form" title="Saving and Printing the Form" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-quick-start.html" href="designer-quick-start.html" subtype="page" title="A Quick Start to Qt Designer" fulltitle="A Quick Start to Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner"/>
+        <page access="public" status="commendable" name="designer-recursive-shadow-casting.html" href="designer-recursive-shadow-casting.html" subtype="page" title="Implementation of the Recursive Shadow Casting Algorithm in Qt Designer" fulltitle="Implementation of the Recursive Shadow Casting Algorithm in Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner" groups="licensing"/>
+        <page access="public" status="commendable" name="designer-resources.html" href="designer-resources.html" subtype="page" title="Editing Resources with Qt Designer" fulltitle="Editing Resources with Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="resourcefiles"/>
+            <target name="editresource"/>
+            <target name="usingresources"/>
+            <contents name="defining-a-resource-file" title="Defining a Resource File" level="1"/>
+            <contents name="using-the-resources" title="Using the Resources" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-stylesheet.html" href="designer-stylesheet.html" subtype="page" title="Using Stylesheets with Qt Designer" fulltitle="Using Stylesheets with Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="usingstylesheets"/>
+        </page>
+        <page access="public" status="commendable" name="designer-tab-order.html" href="designer-tab-order.html" subtype="page" title="Qt Designer's Tab Order Editing Mode" fulltitle="Qt Designer's Tab Order Editing Mode" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <contents name="setting-the-tab-order" title="Setting the Tab Order" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-to-know.html" href="designer-to-know.html" subtype="page" title="Getting to Know Qt Designer" fulltitle="Getting to Know Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="mainwindow"/>
+            <target name="widgetbox"/>
+            <contents name="launching-designer" title="Launching Designer" level="1"/>
+            <contents name="the-user-interface" title="The User Interface" level="1"/>
+            <contents name="the-concept-of-layouts-in-qt" title="The Concept of Layouts in Qt" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="designer-ui-file-format.html" href="designer-ui-file-format.html" subtype="page" title="Qt Designer's UI File Format" fulltitle="Qt Designer's UI File Format" subtitle="" location="designer-manual.qdoc" module="QtDesigner"/>
+        <page access="public" status="commendable" name="designer-using-a-ui-file.html" href="designer-using-a-ui-file.html" subtype="page" title="Using a Designer UI File in Your Application" fulltitle="Using a Designer UI File in Your Application" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <contents name="compile-time-form-processing" title="Compile Time Form Processing" level="1"/>
+            <contents name="the-direct-approach" title="The Direct Approach" level="2"/>
+            <contents name="the-single-inheritance-approach" title="The Single Inheritance Approach" level="2"/>
+            <contents name="using-a-member-variable" title="Using a Member Variable" level="3"/>
+            <contents name="using-a-pointer-member-variable" title="Using a Pointer Member Variable" level="3"/>
+            <contents name="the-multiple-inheritance-approach" title="The Multiple Inheritance Approach" level="2"/>
+            <contents name="reacting-to-language-changes" title="Reacting to Language Changes" level="2"/>
+            <contents name="run-time-form-processing" title="Run Time Form Processing" level="1"/>
+            <contents name="the-uitools-approach" title="The UiTools Approach" level="2"/>
+            <contents name="automatic-connections" title="Automatic Connections" level="1"/>
+            <contents name="a-dialog-without-auto-connect" title="A Dialog Without Auto-Connect" level="2"/>
+            <contents name="widgets-and-dialogs-with-auto-connect" title="Widgets and Dialogs with Auto-Connect" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="designer-using-containers.html" href="designer-using-containers.html" subtype="page" title="Using Containers in Qt Designer" fulltitle="Using Containers in Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner"/>
+        <page access="public" status="commendable" name="designer-using-custom-widgets.html" href="designer-using-custom-widgets.html" subtype="page" title="Using Custom Widgets with Qt Designer" fulltitle="Using Custom Widgets with Qt Designer" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <contents name="handling-custom-widgets" title="Handling Custom Widgets" level="1"/>
+            <contents name="promoting-widgets" title="Promoting Widgets" level="2"/>
+            <contents name="user-defined-custom-widgets" title="User Defined Custom Widgets" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="designer-widget-mode.html" href="designer-widget-mode.html" subtype="page" title="Qt Designer's Widget Editing Mode" fulltitle="Qt Designer's Widget Editing Mode" subtitle="" location="designer-manual.qdoc" module="QtDesigner">
+            <target name="selectingobjects"/>
+            <target name="shortcutsforediting"/>
+            <target name="draganddrop"/>
+            <target name="editingproperties"/>
+            <contents name="editing-a-form" title="Editing A Form" level="1"/>
+            <contents name="the-property-editor" title="The Property Editor" level="2"/>
+            <contents name="dynamic-properties" title="Dynamic Properties" level="2"/>
+            <contents name="the-object-inspector" title="The Object Inspector" level="2"/>
+        </page>
+        <page access="public" status="commendable" name="qtdesigner-manual.html" href="qtdesigner-manual.html" subtype="page" title="Qt Designer Manual" fulltitle="Qt Designer Manual" subtitle="" location="designer-manual.qdoc" module="QtDesigner" groups="qttools">
+            <keyword name="qt-designer"/>
+            <contents name="table-of-contents" title="Table of Contents" level="1"/>
+            <contents name="legal-notices" title="Legal Notices" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="qtdesigner-index.html" href="qtdesigner-index.html" subtype="page" title="Qt Designer" fulltitle="Qt Designer" subtitle="" location="qtdesigner-index.qdoc" module="QtDesigner">
+            <contents name="getting-started" title="Getting Started" level="1"/>
+            <contents name="articles-and-guides" title="Articles and Guides" level="1"/>
+            <contents name="api-reference" title="API Reference" level="1"/>
+        </page>
+        <page access="public" status="commendable" name="QtDesigner" href="qtdesigner-module.html" subtype="module" title="Qt Designer C++ Classes" fulltitle="Qt Designer C++ Classes" subtitle="" location="qtdesigner-module.qdoc" groups="modules"/>
+    </namespace>
+    <page access="public" status="commendable" name="examples-designer" href="examples-designer.html" subtype="group" seen="true" members="arthurplugin,calculatorbuilder,calculatorform,containerextension,customwidgetplugin,taskmenuextension,worldtimeclockbuilder,worldtimeclockplugin,all-examples" title="Qt Designer Examples" fulltitle="Qt Designer Examples" subtitle="" location="designer-examples.qdoc" groups="all-examples"/>
+</INDEX>
