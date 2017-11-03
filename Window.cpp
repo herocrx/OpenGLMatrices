@@ -14,9 +14,7 @@ GLuint indexBufferID;
 
 void Window::paintGL() {
     glViewport(0,0,width(),height());
-  //  glDrawArrays(GL_LINE_SMOOTH, 0, 6);
-
-    glDrawArrays(GL_LINE_STRIP,0,5);
+    glDrawArrays(GL_LINES,0,40);
 
 
 }
@@ -25,16 +23,111 @@ void sendDataToOpenGL()
 {
 
     GLfloat verts [] =
-            {    -1.0f, 0.5f, 0.0f,
+            {
+                    -1.0f, +0.5f, +0.0f,
+                 +0.0f, +0.0f, +1.0f,
+                 -0.9f, -0.5f, +0.0f,
+                 +1.0f, +0.0f, +0.0f,
+
+                 -0.9f, -0.5f, 0.0f,
+                 1.0f,  0.0f,0.0f,
+                 -0.8f, 0.5f, 0.0f,
                  0.0f,  0.0f,1.0f,
-                -0.9f, -0.5f, 0.0f,
-                1.0f,  0.0f,0.0f,
+
+                 -0.7f, -0.5f, 0.0f,
+                 1.0f,  0.0f,0.0f,
                 -0.8f, 0.5f, 0.0f,
                 0.0f,  0.0f,1.0f,
+
                 -0.7f, -0.5f, 0.0f,
                 1.0f,  0.0f,0.0f,
                 -0.6f, 0.5f, 0.0f,
                 0.0f,  0.0f,1.0f,
+
+                 -0.5f, 0.5f, 0.0f,
+                 0.0f,  0.0f,1.0f,
+                 -0.5f, -0.5f, 0.0f,
+                 1.0f,  0.0f,0.0f,
+
+                 -0.513f, 0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+                 -0.30f, 0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+
+
+                 -0.513f, 0.0f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+                 -0.30f, 0.0f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+
+                 -0.513f, -0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+                 -0.30f, -0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+
+                 -0.20f, 0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+                 -0.20f, -0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+
+                 -0.20f, 0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+                 -0.0f, 0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+
+                 0.0f, 0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.0f, -0.05f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 0.0f, 0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.0f, -0.02f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 -0.2f,  0.0f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.0f,  0.0f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 -0.2f,  0.0f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.0f,  -0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 0.2f,  0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.2f,  -0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 0.2f,  0.0f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.4f,  0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 0.2f,  0.0f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.4f,  -0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+
+                 0.5f,  -0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+                 0.6f,  0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+                 0.6f,  0.5f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+                 0.7f,  -0.5f, 0.0f,
+                 1.0f,  0.0f, 0.0f,
+
+                 0.55f,  0.0f, 0.0f,
+                 1.0f,  0.0f, 1.0f,
+                 0.65f,  -0.0f, 0.0f,
+                 0.0f,  0.0f, 1.0f,
+
+
+
 
             };
     GLuint triangleBufferID;
@@ -52,14 +145,6 @@ void sendDataToOpenGL()
     glEnableVertexAttribArray(1);
     glLineWidth(8.0);
     //glDrawArrays(GL_POINTS,0,3);
-
-/*
-    GLushort indices[] = { 0 , 1 , 2};
-    glGenBuffers(1, &indexBufferID);
-    glGenVertexArrays(1,&indexBufferID);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,indexBufferID);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER,sizeof(indices),indices,GL_STATIC_DRAW);
-*/
 
 }
 
