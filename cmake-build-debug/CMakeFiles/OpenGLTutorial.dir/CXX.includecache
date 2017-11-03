@@ -1137,6 +1137,8 @@ QtGui/qevent.h
 /home/heroadm/CLionProjects/OpenGLTutorial/Window.cpp
 GL/glew.h
 -
+iostream
+-
 Window.h
 /home/heroadm/CLionProjects/OpenGLTutorial/Window.h
 
