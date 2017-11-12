@@ -259,32 +259,32 @@ OpenGLTutorial_automoc.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.s
 .PHONY : OpenGLTutorial_automoc.cpp.s
 
-ShaderCode.o: ShaderCode.cpp.o
+ShapeGenerator.o: ShapeGenerator.cpp.o
 
-.PHONY : ShaderCode.o
+.PHONY : ShapeGenerator.o
 
 # target to build an object file
-ShaderCode.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o
-.PHONY : ShaderCode.cpp.o
+ShapeGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o
+.PHONY : ShapeGenerator.cpp.o
 
-ShaderCode.i: ShaderCode.cpp.i
+ShapeGenerator.i: ShapeGenerator.cpp.i
 
-.PHONY : ShaderCode.i
+.PHONY : ShapeGenerator.i
 
 # target to preprocess a source file
-ShaderCode.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.i
-.PHONY : ShaderCode.cpp.i
+ShapeGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.i
+.PHONY : ShapeGenerator.cpp.i
 
-ShaderCode.s: ShaderCode.cpp.s
+ShapeGenerator.s: ShapeGenerator.cpp.s
 
-.PHONY : ShaderCode.s
+.PHONY : ShapeGenerator.s
 
 # target to generate assembly for a file
-ShaderCode.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.s
-.PHONY : ShaderCode.cpp.s
+ShapeGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.s
+.PHONY : ShapeGenerator.cpp.s
 
 Window.o: Window.cpp.o
 
@@ -361,9 +361,9 @@ help:
 	@echo "... OpenGLTutorial_automoc.o"
 	@echo "... OpenGLTutorial_automoc.i"
 	@echo "... OpenGLTutorial_automoc.s"
-	@echo "... ShaderCode.o"
-	@echo "... ShaderCode.i"
-	@echo "... ShaderCode.s"
+	@echo "... ShapeGenerator.o"
+	@echo "... ShapeGenerator.i"
+	@echo "... ShapeGenerator.s"
 	@echo "... Window.o"
 	@echo "... Window.i"
 	@echo "... Window.s"

@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o"
-  "/home/heroadm/CLionProjects/OpenGLTutorial/ShaderCode.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o"
+  "/home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o"
   "/home/heroadm/CLionProjects/OpenGLTutorial/Window.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/Window.cpp.o"
   "/home/heroadm/CLionProjects/OpenGLTutorial/main.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/main.cpp.o"
   )

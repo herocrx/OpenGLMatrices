@@ -344,7 +344,16 @@
 			<Option target="libglewmx_static"/>
 			<Option target="libglew_static"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShaderCode.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShapeData.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Vertex.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Window.cpp">

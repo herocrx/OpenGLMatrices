@@ -105,28 +105,28 @@ CMakeFiles/OpenGLTutorial.dir/Window.cpp.o.provides: CMakeFiles/OpenGLTutorial.d
 CMakeFiles/OpenGLTutorial.dir/Window.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/Window.cpp.o
 
 
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o: ../ShaderCode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/ShaderCode.cpp
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o: ../ShapeGenerator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp
 
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heroadm/CLionProjects/OpenGLTutorial/ShaderCode.cpp > CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.i
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp > CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.i
 
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heroadm/CLionProjects/OpenGLTutorial/ShaderCode.cpp -o CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.s
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp -o CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.s
 
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.requires:
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.requires:
 
-.PHONY : CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.requires
+.PHONY : CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.requires
 
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.provides: CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.requires
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.provides.build
-.PHONY : CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.provides
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.provides: CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.requires
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.provides.build
+.PHONY : CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.provides
 
-CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o
+CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o
 
 
 CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
@@ -157,7 +157,7 @@ CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o.provides.build: CMake
 OpenGLTutorial_OBJECTS = \
 "CMakeFiles/OpenGLTutorial.dir/main.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/Window.cpp.o" \
-"CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o" \
+"CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o"
 
 # External object files for target OpenGLTutorial
@@ -165,7 +165,7 @@ OpenGLTutorial_EXTERNAL_OBJECTS =
 
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/main.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/Window.cpp.o
-OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o
+OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/build.make
 OpenGLTutorial: ../Graphics/Middleware/QT/lib/libQt5OpenGL.so.5.0.2
@@ -175,6 +175,8 @@ OpenGLTutorial: ../Graphics/Middleware/QT/lib/libQt5Core.so.5.0.2
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable OpenGLTutorial"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLTutorial.dir/link.txt --verbose=$(VERBOSE)
+	/home/heroadm/Pobrane/clion-2017.1.2/bin/cmake/bin/cmake -E copy /home/heroadm/CLionProjects/OpenGLTutorial/VertexShaderCode.glsl /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/VertexShaderCode.glsl
+	/home/heroadm/Pobrane/clion-2017.1.2/bin/cmake/bin/cmake -E copy /home/heroadm/CLionProjects/OpenGLTutorial/FragmentShaderCode.glsl /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/FragmentShaderCode.glsl
 
 # Rule to build all files generated by this target.
 CMakeFiles/OpenGLTutorial.dir/build: OpenGLTutorial
@@ -183,7 +185,7 @@ CMakeFiles/OpenGLTutorial.dir/build: OpenGLTutorial
 
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/main.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/Window.cpp.o.requires
-CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/ShaderCode.cpp.o.requires
+CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o.requires
 
 .PHONY : CMakeFiles/OpenGLTutorial.dir/requires
