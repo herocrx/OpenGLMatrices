@@ -41,7 +41,10 @@ glUniform3fv(colorUniformLocation,1,x);
 
  */
 
-    glm::mat4 modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -3.0f));
+    glm::mat4 modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -4.0f));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(0,1,0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(0,0,1));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(1,0,0));
     glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), float(width()) / height(), 0.1f, 10.0f);
     GLint modelTransformMatrixLocation =
             glGetUniformLocation(programID, "modelTransformMatrix");
