@@ -12,12 +12,13 @@ ShapeData ShapeGenerator::createTriangle() {
             {
                     glm::vec3(-1.0f, +1.0f, +0.0f),
                     glm::vec3(+0.0f, +0.0f, +1.0f),
-
+                    glm::vec3(+0.0f, +0.0f, +1.0f),
                     glm::vec3(+1.0f, +1.0f, +0.0f),
                     glm::vec3(+1.0f, +0.0f, +0.0f),
-
+                    glm::vec3(+0.0f, +0.0f, +1.0f),
                     glm::vec3(+0.0f, -1.0f, +0.0f),
                     glm::vec3(+0.0f, +1.0f, +0.0f),
+                    glm::vec3(+0.0f, +0.0f, +1.0f),
             };
     returnObject.numberVertices = sizeof(vertices) / sizeof(*vertices);
     returnObject.vertices = new Vertex[returnObject.numberVertices];
@@ -111,7 +112,7 @@ ShapeData ShapeGenerator::createCube() {
                     glm::vec3(+0.0f, -1.0f, +0.0f),  // Normal
             };
 
-    returnObject.numberVertices = sizeof(vertices) / sizeof(*vertices);
+    returnObject.numberVertices = sizeof(vertices) / sizeof(Vertex);
     returnObject.vertices = new Vertex[returnObject.numberVertices];
     memcpy(returnObject.vertices, vertices, sizeof(vertices));
 
@@ -124,7 +125,7 @@ ShapeData ShapeGenerator::createCube() {
             16, 17, 18, 16, 18, 19, // Back
             20, 22, 21, 20, 23, 22, // Bottom
     };
-    returnObject.numIndices = sizeof(stackIndices) / sizeof(*stackIndices);
+    returnObject.numIndices = sizeof(stackIndices) / sizeof(unsigned short);
     returnObject.indices = new GLushort[returnObject.numIndices];
     memcpy(returnObject.indices, stackIndices, sizeof(stackIndices));
 

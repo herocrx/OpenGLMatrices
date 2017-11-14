@@ -26,7 +26,7 @@ struct ShapeData {
         return numberVertices * sizeof(Vertex);
     }
 
-    GLsizeiptr indexBuffersize() const {
+    GLsizeiptr indexBufferSize() const {
         return numIndices * sizeof(GLushort);
     }
 
