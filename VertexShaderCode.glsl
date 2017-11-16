@@ -6,6 +6,7 @@ out vec3 theColor;
 
 uniform mat4 projectedMatrix;
 uniform mat4 modelTransformMatrix;
+uniform mat4 viewMatrix;
 
 
 
@@ -15,7 +16,8 @@ void main()
 {
     vec4 v = vec4(position,1.0f);
     vec4 newPosition = modelTransformMatrix*v;
-    vec4 projectedPosition = projectedMatrix * newPosition;
+    vec4 worldToView = viewMatrix*newPosition;
+    vec4 projectedPosition = projectedMatrix * worldToView;
     gl_Position = projectedPosition;
     theColor = vertexColor;
 }

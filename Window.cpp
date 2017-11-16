@@ -45,20 +45,29 @@ glUniform3fv(colorUniformLocation,1,x);
     modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(0,1,0));
     modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(0,0,1));
     modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(1,0,0));
+
     glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), float(width()) / height(), 0.1f, 10.0f);
+    glm::mat4 viewMatrix = glm::lookAt(glm::vec3(0.0f,3.0f,0.0f),glm::vec3(0.0f,0.0f,-3.0f),glm::vec3(0,1,0));
     GLint modelTransformMatrixLocation =
             glGetUniformLocation(programID, "modelTransformMatrix");
     GLint projectionMatrixLocation =
             glGetUniformLocation(programID,"projectedMatrix");
+    GLint projectToViewMatrixLocation =
+            glGetUniformLocation(programID, "viewMatrix");
 
-    std::cout << "MmodelTransformLocation: " << modelTransformMatrixLocation << std::endl;
-    std::cout << "projectionMatrix: " << projectionMatrixLocation << std::endl;
+
+    glUniformMatrix4fv(
+            projectToViewMatrixLocation,
+            1,
+            GL_FALSE,
+            &modelTransformMatrix[0][0]
+    );
 
     glUniformMatrix4fv(
             modelTransformMatrixLocation,
             1,
             GL_FALSE,
-            &modelTransformMatrix[0][0]
+            &viewMatrix[0][0]
     );
 
 
@@ -69,6 +78,13 @@ glUniform3fv(colorUniformLocation,1,x);
             &projectionMatrix[0][0]
     );
     glDrawElements(GL_TRIANGLES, numIndices, GL_UNSIGNED_SHORT, 0);
+
+    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -2.0f));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(60.0f),glm::vec3(0,1,0));
+    glDrawElements(GL_TRIANGLES, numIndices, GL_UNSIGNED_SHORT, 0);
+
+
+
 }
 
 void sendDataToOpenGL()
