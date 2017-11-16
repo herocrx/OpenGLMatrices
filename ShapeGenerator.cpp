@@ -1,8 +1,11 @@
 //
 // Created by heroadm on 12.11.17.
 //
+#include <vector>
 #include "ShapeData.h"
 #include "ShapeGenerator.h"
+
+#include <iostream>
 
 
 ShapeData ShapeGenerator::createTriangle() {
@@ -130,4 +133,52 @@ ShapeData ShapeGenerator::createCube() {
     memcpy(returnObject.indices, stackIndices, sizeof(stackIndices));
 
     return returnObject;
+
+}
+ShapeData ShapeGenerator::createFloor()
+    {
+    ShapeData returnObject;
+    const float SpaceBetweenLines = 1.0f;
+    const float minX = -10;
+    const float maxX = 10;
+    const float minY = -10;
+    const float maxY = 10;
+    int Occurences = 0;
+    for ( float i = minY ; i<=maxY; i+=SpaceBetweenLines)
+        Occurences+=2;
+    for ( float i = minX ; i<=maxX; i+=SpaceBetweenLines)
+        Occurences+=2;
+    Vertex myVector[Occurences];
+
+    int lineVertex = 0;
+        for ( float i = minY ; i<=maxY; )
+    {
+        myVector[lineVertex].position   = glm::vec3(minX, i, +0.0f);
+        myVector[lineVertex].color      = glm::vec3(+1.0f, +0.0f, +0.0f);
+        myVector[lineVertex].normal     = glm::vec3(+0.0f, +1.0f, +0.0f);
+        myVector[lineVertex+1].position = glm::vec3(maxX, i, +0.0f);
+        myVector[lineVertex+1].color    = glm::vec3(+1.0f, +0.0f, +0.0f);
+        myVector[lineVertex+1].normal   = glm::vec3(+0.0f, +1.0f, +0.0f);
+        std::cout <<  "Your position to draw: " << i << std::endl;
+        i+=SpaceBetweenLines;
+        lineVertex+=2;
+    }
+        for ( float i = minX ; i<=maxX;)
+    {
+        myVector[lineVertex].position   = glm::vec3(i,minY, +0.0f);
+        myVector[lineVertex].color      = glm::vec3(+1.0f, +0.0f, +0.0f);
+        myVector[lineVertex].normal     = glm::vec3(+0.0f, +1.0f, +0.0f);
+        myVector[lineVertex+1].position = glm::vec3(i, maxY, +0.0f);
+        myVector[lineVertex+1].color    = glm::vec3(1.0f,  +0.0f, +0.0f);
+        myVector[lineVertex+1].normal   = glm::vec3(+0.0f, +1.0f, +0.0f);
+        i+=SpaceBetweenLines;
+        lineVertex+=2;
+    }
+        lineVertex-=2;
+    returnObject.numberVertices = Occurences;
+    returnObject.vertices = new Vertex[Occurences];
+    memcpy(returnObject.vertices,myVector,sizeof(myVector));
+    return returnObject;
+
+
 }

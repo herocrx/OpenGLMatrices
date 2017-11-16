@@ -16,10 +16,23 @@
 GLuint programID;
 GLuint numIndices;
 
+ShapeData ground;
+
 const GLuint NUMBER_ELEMENTS_PER_VERTICE = 9;
 const GLuint VERTEX_BYTE_SIZE = NUMBER_ELEMENTS_PER_VERTICE * sizeof(float);
 
 void sendDataToOpenGL();
+
+void displayMatrix(glm::mat4 matrix)
+{
+    matrix = glm::transpose(matrix);
+    std::cout  << std::endl << "MATRIX" << std::endl;
+
+    std::cout << "[" << matrix[0][0] << "] [" <<  matrix[0][1] << "] [" <<  matrix[0][2] << "] [" << matrix[0][3] << "] " << std::endl;
+    std::cout << "[" << matrix[1][0] << "] [" <<  matrix[1][1] << "] [" <<  matrix[1][2] << "] [" << matrix[1][3] << "] " << std::endl;
+    std::cout << "[" << matrix[2][0] << "] [" <<  matrix[2][1] << "] [" <<  matrix[2][2] << "] [" << matrix[2][3] << "] " << std::endl;
+    std::cout << "[" << matrix[3][0] << "] [" <<  matrix[3][1] << "] [" <<  matrix[3][2] << "] [" << matrix[3][3] << "] " << std::endl;
+}
 
 void Window::paintGL() {
     glClear(GL_DEPTH_BUFFER_BIT | GL_COLOR_BUFFER_BIT);
@@ -41,13 +54,16 @@ glUniform3fv(colorUniformLocation,1,x);
 
  */
 
-    glm::mat4 modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -4.0f));
+    glm::mat4 modelTransformMatrix =  glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f));
+    /*
     modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(0,1,0));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(0,0,1));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(30.0f),glm::vec3(1,0,0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(10.0f),glm::vec3(1,0,0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(10.0f),glm::vec3(0,0,1));
+ */
+    displayMatrix(modelTransformMatrix);
 
-    glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), float(width()) / height(), 0.1f, 10.0f);
-    glm::mat4 viewMatrix = glm::lookAt(glm::vec3(0.0f,3.0f,0.0f),glm::vec3(0.0f,0.0f,-3.0f),glm::vec3(0,1,0));
+    glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), float(width()) / height(), 0.1f, 25.0f);
+    glm::mat4 viewMatrix = glm::lookAt(glm::vec3(5.0f,0.0f,20.0f),glm::vec3(0.0f,0.0f,0.0f),glm::vec3(0,1,0));
     GLint modelTransformMatrixLocation =
             glGetUniformLocation(programID, "modelTransformMatrix");
     GLint projectionMatrixLocation =
@@ -57,14 +73,14 @@ glUniform3fv(colorUniformLocation,1,x);
 
 
     glUniformMatrix4fv(
-            projectToViewMatrixLocation,
+            modelTransformMatrixLocation,
             1,
             GL_FALSE,
             &modelTransformMatrix[0][0]
     );
 
     glUniformMatrix4fv(
-            modelTransformMatrixLocation,
+            projectToViewMatrixLocation,
             1,
             GL_FALSE,
             &viewMatrix[0][0]
@@ -77,18 +93,40 @@ glUniform3fv(colorUniformLocation,1,x);
             GL_FALSE,
             &projectionMatrix[0][0]
     );
-    glDrawElements(GL_TRIANGLES, numIndices, GL_UNSIGNED_SHORT, 0);
 
-    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -2.0f));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix,glm::radians(60.0f),glm::vec3(0,1,0));
-    glDrawElements(GL_TRIANGLES, numIndices, GL_UNSIGNED_SHORT, 0);
 
+
+  //  glDrawElements(GL_TRIANGLES, numIndices, GL_UNSIGNED_SHORT, 0);
+
+
+    GLuint floorBufferID;
+    ground = ShapeGenerator::createFloor();
+    glGenBuffers(1, &floorBufferID);
+    glBindBuffer(GL_ARRAY_BUFFER, floorBufferID);
+
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, 0);
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, (char *) (sizeof(float) * 3));
+    glEnableVertexAttribArray(0);
+    glEnableVertexAttribArray(1);
+
+    glBufferData(GL_ARRAY_BUFFER, ground.vertexBufferSize(), ground.vertices, GL_STATIC_DRAW);
+    std::cout << "your vertexBufferSize: " << ground.vertexBufferSize() << std::endl;
+    glLineWidth(1);
+    glDrawArrays(GL_LINES,0,ground.numberVertices);
 
 
 }
 
 void sendDataToOpenGL()
 {
+    /*
+    for(int i = 0 ; i < ground.numberVertices ;i++)
+        std::cout << "x: " << ground.vertices[i].position.x  <<" y: " << ground.vertices[i].position.y << " z: " << ground.vertices[i].position.z << std::endl;
+    */
+
+
+/*
+
     ShapeData Shape = ShapeGenerator::createCube();
     GLuint triangleBufferID;
     glGenBuffers(1, &triangleBufferID);
@@ -104,6 +142,7 @@ void sendDataToOpenGL()
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, Shape.indexBufferSize(), Shape.indices, GL_STATIC_DRAW);
     numIndices = Shape.numIndices;
     Shape.cleanup();
+    */
 }
 
 bool checkShaderStatus(GLuint shaderID, char *shaderName) {

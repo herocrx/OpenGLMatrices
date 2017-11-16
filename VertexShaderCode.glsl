@@ -9,9 +9,6 @@ uniform mat4 modelTransformMatrix;
 uniform mat4 viewMatrix;
 
 
-
-
-
 void main()
 {
     vec4 v = vec4(position,1.0f);
