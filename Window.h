@@ -17,7 +17,9 @@ private:
 private:
     void paintGL();
     void initializeGL();
+    void HubiTomistrz();
 };
+
 
 
 #endif //OPENGLTUTORIAL_WINDOW_H

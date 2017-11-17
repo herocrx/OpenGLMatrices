@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -1184,7 +1184,7 @@ fstream
 QtOpenGL/QGLWidget
 -
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp
 
 /home/heroadm/CLionProjects/OpenGLTutorial/main.cpp
 QtWidgets/qapplication.h

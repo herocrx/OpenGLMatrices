@@ -16,6 +16,8 @@ public:
     static ShapeData createTriangle();
 
     static ShapeData createFloor();
+
+    static ShapeData createArrow();
 };
 
 

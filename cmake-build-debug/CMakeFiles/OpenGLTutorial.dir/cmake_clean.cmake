@@ -1,9 +1,10 @@
 file(REMOVE_RECURSE
-  "OpenGLTutorial_automoc.cpp"
+  "CMakeFiles/OpenGLTutorial_autogen.dir//AutogenOldSettings.cmake"
+  "OpenGLTutorial_autogen/"
   "CMakeFiles/OpenGLTutorial.dir/main.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/Window.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o"
-  "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o"
+  "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o"
   "OpenGLTutorial.pdb"
   "OpenGLTutorial"
 )
