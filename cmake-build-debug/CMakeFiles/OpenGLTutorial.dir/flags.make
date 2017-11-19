@@ -6,5 +6,5 @@ CXX_FLAGS = -g -fPIE   -fPIC -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include -I/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include -I/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include -isystem /usr/local/include 
+CXX_INCLUDES = -I/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include -I/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include -I/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include -I/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents -isystem /usr/local/include 
 

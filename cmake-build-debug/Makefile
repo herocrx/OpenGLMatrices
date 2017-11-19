@@ -234,6 +234,33 @@ libglew_static/fast:
 	$(MAKE) -f Graphics/Middleware/GLEW/glew-cmake/CMakeFiles/libglew_static.dir/build.make Graphics/Middleware/GLEW/glew-cmake/CMakeFiles/libglew_static.dir/build
 .PHONY : libglew_static/fast
 
+GuiComponents/DebugSlider.o: GuiComponents/DebugSlider.cpp.o
+
+.PHONY : GuiComponents/DebugSlider.o
+
+# target to build an object file
+GuiComponents/DebugSlider.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o
+.PHONY : GuiComponents/DebugSlider.cpp.o
+
+GuiComponents/DebugSlider.i: GuiComponents/DebugSlider.cpp.i
+
+.PHONY : GuiComponents/DebugSlider.i
+
+# target to preprocess a source file
+GuiComponents/DebugSlider.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.i
+.PHONY : GuiComponents/DebugSlider.cpp.i
+
+GuiComponents/DebugSlider.s: GuiComponents/DebugSlider.cpp.s
+
+.PHONY : GuiComponents/DebugSlider.s
+
+# target to generate assembly for a file
+GuiComponents/DebugSlider.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.s
+.PHONY : GuiComponents/DebugSlider.cpp.s
+
 OpenGLTutorial_autogen/moc_compilation.o: OpenGLTutorial_autogen/moc_compilation.cpp.o
 
 .PHONY : OpenGLTutorial_autogen/moc_compilation.o
@@ -396,6 +423,33 @@ OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
 .PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
 
+QT/QtMainWindow.o: QT/QtMainWindow.cpp.o
+
+.PHONY : QT/QtMainWindow.o
+
+# target to build an object file
+QT/QtMainWindow.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o
+.PHONY : QT/QtMainWindow.cpp.o
+
+QT/QtMainWindow.i: QT/QtMainWindow.cpp.i
+
+.PHONY : QT/QtMainWindow.i
+
+# target to preprocess a source file
+QT/QtMainWindow.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.i
+.PHONY : QT/QtMainWindow.cpp.i
+
+QT/QtMainWindow.s: QT/QtMainWindow.cpp.s
+
+.PHONY : QT/QtMainWindow.s
+
+# target to generate assembly for a file
+QT/QtMainWindow.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.s
+.PHONY : QT/QtMainWindow.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -441,6 +495,9 @@ help:
 	@echo "... libglew_shared"
 	@echo "... libglewmx_static"
 	@echo "... libglew_static"
+	@echo "... GuiComponents/DebugSlider.o"
+	@echo "... GuiComponents/DebugSlider.i"
+	@echo "... GuiComponents/DebugSlider.s"
 	@echo "... OpenGLTutorial_autogen/moc_compilation.o"
 	@echo "... OpenGLTutorial_autogen/moc_compilation.i"
 	@echo "... OpenGLTutorial_autogen/moc_compilation.s"
@@ -459,6 +516,9 @@ help:
 	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.o"
 	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.i"
 	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.s"
+	@echo "... QT/QtMainWindow.o"
+	@echo "... QT/QtMainWindow.i"
+	@echo "... QT/QtMainWindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

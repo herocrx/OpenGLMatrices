@@ -3,8 +3,6 @@
 //
 
 #include "Window.h"
-#include <QtGui/QMouseEvent>
-
 
 
 

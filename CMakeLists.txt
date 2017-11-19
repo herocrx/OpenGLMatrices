@@ -9,6 +9,8 @@ add_subdirectory(Graphics/Middleware/GLEW/glew-cmake/)
 
 set(SOURCE_FILES
         main.cpp
+        GuiComponents/DebugSlider.cpp
+        GuiComponents/DebugSlider.h
         OpenglWindow/Window.cpp
         OpenglWindow/Window.h
         OpenglWindow/World/WorldPrmitives/Vertex.h
@@ -21,7 +23,7 @@ set(SOURCE_FILES
         OpenglWindow/World/WorldManager.h
         OpenglWindow/World/Shaders/ShadersManager.cpp
         OpenglWindow/World/Shaders/ShadersManager.h
-        OpenglWindow/World/helpers.h)
+        OpenglWindow/World/helpers.h QT/QtMainWindow.cpp QT/QtMainWindow.h)
 
 set(
         CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/Graphics/Middleware/QT/lib/cmake/"
@@ -42,6 +44,7 @@ set( CMAKE_AUTOMOC ON )  # to automoc remove the need to wrap by hand
 include_directories(
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/QT/include
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/GLEW/glew-cmake/include/
+        ${PROJECT_SOURCE_DIR}/GuiComponents/
         )
 
 if (Qt5_POSITION_INDEPENDENT_CODE)

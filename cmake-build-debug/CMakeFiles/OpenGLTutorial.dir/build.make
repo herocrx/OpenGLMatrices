@@ -81,9 +81,33 @@ CMakeFiles/OpenGLTutorial.dir/main.cpp.o.provides: CMakeFiles/OpenGLTutorial.dir
 CMakeFiles/OpenGLTutorial.dir/main.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/main.cpp.o
 
 
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o: ../GuiComponents/DebugSlider.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.cpp
+
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.cpp > CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.i
+
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.cpp -o CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.s
+
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.requires:
+
+.PHONY : CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.requires
+
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.provides: CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.requires
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.provides.build
+.PHONY : CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.provides
+
+CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o
+
+
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o: ../OpenglWindow/Window.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.i: cmake_force
@@ -107,7 +131,7 @@ CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o.provides.build: CMakeFil
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o: ../OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.i: cmake_force
@@ -131,7 +155,7 @@ CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.c
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o: ../OpenglWindow/World/WorldManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.cpp
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.i: cmake_force
@@ -155,7 +179,7 @@ CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o.provides.bui
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o: ../OpenglWindow/World/Camera/Camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.cpp
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.i: cmake_force
@@ -179,7 +203,7 @@ CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o.provides.bu
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o: ../OpenglWindow/World/Shaders/ShadersManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp
 
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.i: cmake_force
@@ -201,9 +225,33 @@ CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o.pr
 CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o
 
 
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o: ../QT/QtMainWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp
+
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp > CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.i
+
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp -o CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.s
+
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.requires:
+
+.PHONY : CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.requires
+
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.provides: CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.provides.build
+.PHONY : CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.provides
+
+CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.provides.build: CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o
+
+
 CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o: CMakeFiles/OpenGLTutorial.dir/flags.make
 CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o: OpenGLTutorial_autogen/moc_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp
 
 CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.i: cmake_force
@@ -228,22 +276,26 @@ CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o.provi
 # Object files for target OpenGLTutorial
 OpenGLTutorial_OBJECTS = \
 "CMakeFiles/OpenGLTutorial.dir/main.cpp.o" \
+"CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o" \
+"CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o" \
 "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o"
 
 # External object files for target OpenGLTutorial
 OpenGLTutorial_EXTERNAL_OBJECTS =
 
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/main.cpp.o
+OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o
+OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/build.make
 OpenGLTutorial: ../Graphics/Middleware/QT/lib/libQt5OpenGL.so.5.0.2
@@ -251,7 +303,7 @@ OpenGLTutorial: ../Graphics/Middleware/QT/lib/libQt5Widgets.so.5.0.2
 OpenGLTutorial: ../Graphics/Middleware/QT/lib/libQt5Gui.so.5.0.2
 OpenGLTutorial: ../Graphics/Middleware/QT/lib/libQt5Core.so.5.0.2
 OpenGLTutorial: CMakeFiles/OpenGLTutorial.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable OpenGLTutorial"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable OpenGLTutorial"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLTutorial.dir/link.txt --verbose=$(VERBOSE)
 	/home/heroadm/Pobrane/clion-2017.2.3/bin/cmake/bin/cmake -E copy /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/VertexShaderCode.glsl /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/VertexShaderCode.glsl
 	/home/heroadm/Pobrane/clion-2017.2.3/bin/cmake/bin/cmake -E copy /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/FragmentShaderCode.glsl /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/FragmentShaderCode.glsl
@@ -262,11 +314,13 @@ CMakeFiles/OpenGLTutorial.dir/build: OpenGLTutorial
 .PHONY : CMakeFiles/OpenGLTutorial.dir/build
 
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/main.cpp.o.requires
+CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o.requires
+CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o.requires
 CMakeFiles/OpenGLTutorial.dir/requires: CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o.requires
 
 .PHONY : CMakeFiles/OpenGLTutorial.dir/requires
