@@ -8,9 +8,12 @@
 #include <glm/vec4.hpp>
 #include <glm/mat4x4.hpp>
 #include <glm/gtc/matrix_transform.hpp>
-#include "Shaders/ShadersManager.h"
 
-WorldManager::WorldManager(int width, int height) : width(width),height(height){
+#define STREAM_OUTPUT_VEC3(vector) std::cout <<  "vector -> x: " << vector.x << " " << "y: " << vector.y << " z: " << vector.z << std::endl;
+
+
+
+WorldManager::WorldManager(int width, int height) : width(width),height(height), mainCamera(){
 
 }
 
@@ -61,7 +64,8 @@ void WorldManager::drawObjects()
 
    // displayMatrix(modelTransformMatrix);
     glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), float(width) / height, 0.1f, 25.0f);
-    glm::mat4 viewMatrix = glm::lookAt(glm::vec3(10.0f, 3.0f, 3.0f), glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0, 1, 0));
+    glm::mat4 viewMatrix = mainCamera.getViewToWorldMatrix();
+
     GLint modelTransformMatrixLocation = glGetUniformLocation(shadersManager.getCurrentProgramID(), "modelTransformMatrix");
     GLint projectionMatrixLocation = glGetUniformLocation(shadersManager.getCurrentProgramID(), "projectedMatrix");
     GLint projectToViewMatrixLocation = glGetUniformLocation(shadersManager.getCurrentProgramID(), "viewMatrix");
@@ -102,6 +106,7 @@ void WorldManager::init() {
     shadersManager.installShaders();
     initalizeVAO();
     sendDataToOpenGL();
+
 }
 
 
@@ -139,4 +144,9 @@ void WorldManager::initalizeVAO()
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
 
+}
+
+void WorldManager::updateMousePosition(QMouseEvent * e) {
+    STREAM_OUTPUT_VEC3(glm::vec3(e->x(),e->y(),0.0));
+    mainCamera.mouseUpdate(glm::vec2(e->x(),e->y()));
 }

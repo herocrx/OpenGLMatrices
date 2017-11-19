@@ -288,6 +288,33 @@ OpenglWindow/Window.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.s
 .PHONY : OpenglWindow/Window.cpp.s
 
+OpenglWindow/World/Camera/Camera.o: OpenglWindow/World/Camera/Camera.cpp.o
+
+.PHONY : OpenglWindow/World/Camera/Camera.o
+
+# target to build an object file
+OpenglWindow/World/Camera/Camera.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o
+.PHONY : OpenglWindow/World/Camera/Camera.cpp.o
+
+OpenglWindow/World/Camera/Camera.i: OpenglWindow/World/Camera/Camera.cpp.i
+
+.PHONY : OpenglWindow/World/Camera/Camera.i
+
+# target to preprocess a source file
+OpenglWindow/World/Camera/Camera.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.i
+.PHONY : OpenglWindow/World/Camera/Camera.cpp.i
+
+OpenglWindow/World/Camera/Camera.s: OpenglWindow/World/Camera/Camera.cpp.s
+
+.PHONY : OpenglWindow/World/Camera/Camera.s
+
+# target to generate assembly for a file
+OpenglWindow/World/Camera/Camera.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.s
+.PHONY : OpenglWindow/World/Camera/Camera.cpp.s
+
 OpenglWindow/World/Shaders/ShadersManager.o: OpenglWindow/World/Shaders/ShadersManager.cpp.o
 
 .PHONY : OpenglWindow/World/Shaders/ShadersManager.o
@@ -420,6 +447,9 @@ help:
 	@echo "... OpenglWindow/Window.o"
 	@echo "... OpenglWindow/Window.i"
 	@echo "... OpenglWindow/Window.s"
+	@echo "... OpenglWindow/World/Camera/Camera.o"
+	@echo "... OpenglWindow/World/Camera/Camera.i"
+	@echo "... OpenglWindow/World/Camera/Camera.s"
 	@echo "... OpenglWindow/World/Shaders/ShadersManager.o"
 	@echo "... OpenglWindow/World/Shaders/ShadersManager.i"
 	@echo "... OpenglWindow/World/Shaders/ShadersManager.s"

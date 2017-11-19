@@ -16,6 +16,9 @@ set(SOURCE_FILES
         OpenglWindow/World/WorldPrmitives/ShapeData.h
         OpenglWindow/World/WorldManager.cpp
         OpenglWindow/World/WorldManager.h
+        OpenglWindow/World/Camera/Camera.cpp
+        OpenglWindow/World/Camera/Camera.h
+        OpenglWindow/World/WorldManager.h
         OpenglWindow/World/Shaders/ShadersManager.cpp
         OpenglWindow/World/Shaders/ShadersManager.h
         OpenglWindow/World/helpers.h)

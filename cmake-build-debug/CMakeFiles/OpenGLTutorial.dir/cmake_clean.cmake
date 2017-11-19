@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o"
+  "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Camera/Camera.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o"
   "OpenGLTutorial.pdb"

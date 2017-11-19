@@ -352,6 +352,12 @@
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>

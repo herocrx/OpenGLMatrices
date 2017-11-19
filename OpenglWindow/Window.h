@@ -7,7 +7,6 @@
 
 
 #include <QtOpenGL/QGLWidget>
-
 #include "World/WorldManager.h"
 //#include <GL/glew.h>
 
@@ -18,6 +17,7 @@ private:
 
     void paintGL();
     void initializeGL();
+    void mouseMoveEvent(QMouseEvent *);
     WorldManager worldManager;
     //todo
     //add interaction with keyboard

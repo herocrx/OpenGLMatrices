@@ -159,7 +159,6 @@ ShapeData ShapeGenerator::createFloor() {
         myVector[lineVertex + 1].position = glm::vec3(maxX, i, +0.0f);
         myVector[lineVertex + 1].color = glm::vec3(+1.0f, +0.0f, +0.0f);
         myVector[lineVertex + 1].normal = glm::vec3(+0.0f, +1.0f, +0.0f);
-        std::cout << "Your position to draw: " << i << std::endl;
         i += SpaceBetweenLines;
         lineVertex += 2;
     }

@@ -5,14 +5,16 @@
 #ifndef OPENGLTUTORIAL_WORLD_H
 #define OPENGLTUTORIAL_WORLD_H
 
-#include "WorldPrmitives/ShapeData.h"
 
 #ifndef __glew_h__
 #define __glew_h__
 #include "GL/glew.h"
-
 #endif /* __glew_h__ */
+
+#include "WorldPrmitives/ShapeData.h"
 #include "Shaders/ShadersManager.h"
+#include "Camera/Camera.h"
+#include <QtGui/QMouseEvent>
 //
 
 
@@ -22,7 +24,7 @@ public:
     WorldManager(int, int);
     void init();
     void drawObjects();
-
+    void updateMousePosition(QMouseEvent *);
 
 private:
     int width;
@@ -45,7 +47,7 @@ private:
     ShapeData Cube;
 
     ShadersManager shadersManager;
-
+    Camera mainCamera;
 
     const GLuint NUMBER_ELEMENTS_PER_VERTICE = 9;
     const GLuint VERTEX_BYTE_SIZE = NUMBER_ELEMENTS_PER_VERTICE * sizeof(float);

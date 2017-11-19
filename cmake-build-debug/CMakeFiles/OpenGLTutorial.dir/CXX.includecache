@@ -690,6 +690,10 @@ initializer_list
 QtCore/qpoint.h
 -
 
+../Graphics/Middleware/QT/include/QtGui/QMouseEvent
+qevent.h
+../Graphics/Middleware/QT/include/QtGui/qevent.h
+
 ../Graphics/Middleware/QT/include/QtGui/QSurfaceFormat
 qsurfaceformat.h
 ../Graphics/Middleware/QT/include/QtGui/qsurfaceformat.h
@@ -1133,29 +1137,9 @@ QtGui/qevent.h
 -
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp
-GL/glew.h
--
-iostream
--
-glm/vec3.hpp
--
-glm/vec4.hpp
--
-glm/mat4x4.hpp
--
-World/WorldPrmitives/Vertex.h
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h
 Window.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
-World/WorldPrmitives/ShapeData.h
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
-World/WorldPrmitives/ShapeGenerator.h
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
-glm/gtc/matrix_transform.hpp
--
-World/helpers.h
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h
-fstream
+QtGui/QMouseEvent
 -
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
@@ -1163,6 +1147,20 @@ QtOpenGL/QGLWidget
 -
 World/WorldManager.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.cpp
+Camera.h
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
+glm/gtc/matrix_transform.hpp
+-
+iostream
+-
+
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
+glm/vec3.hpp
+-
+glm/mat4x4.hpp
+-
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp
 ShadersManager.h
@@ -1189,16 +1187,18 @@ glm/mat4x4.hpp
 -
 glm/gtc/matrix_transform.hpp
 -
-Shaders/ShadersManager.h
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
-WorldPrmitives/ShapeData.h
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
 GL/glew.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/GL/glew.h
+WorldPrmitives/ShapeData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
 Shaders/ShadersManager.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h
+Camera/Camera.h
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
+QtGui/QMouseEvent
+-
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
 Vertex.h
@@ -1226,12 +1226,6 @@ GL/glew.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h
 glm/vec3.hpp
--
-
-/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h
-iostream
--
-glm/mat4x4.hpp
 -
 
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp
