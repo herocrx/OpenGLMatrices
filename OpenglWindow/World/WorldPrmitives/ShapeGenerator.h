@@ -7,7 +7,10 @@
 
 
 #include "ShapeData.h"
-
+#ifndef __glew_h__
+#define __glew_h__
+#include "GL/glew.h"
+#endif /* __glew_h__ */
 
 class ShapeGenerator {
 public:

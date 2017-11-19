@@ -2,7 +2,7 @@
 #include <QtWidgets/qapplication.h>
 #include <QtWidgets/qwidget.h>
 
-#include "Window.h"
+#include "OpenglWindow/Window.h"
 
 int main(int argc, char **argv)
 {

@@ -3,24 +3,7 @@
 
 CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.o
  /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp
-CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o
- ../Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h
- /home/heroadm/CLionProjects/OpenGLTutorial/ShapeData.h
- /home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp
- /home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.h
- /home/heroadm/CLionProjects/OpenGLTutorial/Vertex.h
- /usr/local/include/glm/detail/_swizzle.hpp
- /usr/local/include/glm/detail/_swizzle_func.hpp
- /usr/local/include/glm/detail/compute_vector_relational.hpp
- /usr/local/include/glm/detail/qualifier.hpp
- /usr/local/include/glm/detail/setup.hpp
- /usr/local/include/glm/detail/type_int.hpp
- /usr/local/include/glm/detail/type_vec.hpp
- /usr/local/include/glm/detail/type_vec3.hpp
- /usr/local/include/glm/detail/type_vec3.inl
- /usr/local/include/glm/simd/platform.h
- /usr/local/include/glm/vec3.hpp
-CMakeFiles/OpenGLTutorial.dir/Window.cpp.o
+CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o
  ../Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h
  ../Graphics/Middleware/QT/include/QtCore/qalgorithms.h
  ../Graphics/Middleware/QT/include/QtCore/qarraydata.h
@@ -141,11 +124,14 @@ CMakeFiles/OpenGLTutorial.dir/Window.cpp.o
  ../Graphics/Middleware/QT/include/QtOpenGL/qtopenglglobal.h
  ../Graphics/Middleware/QT/include/QtWidgets/qsizepolicy.h
  ../Graphics/Middleware/QT/include/QtWidgets/qwidget.h
- /home/heroadm/CLionProjects/OpenGLTutorial/ShapeData.h
- /home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.h
- /home/heroadm/CLionProjects/OpenGLTutorial/Vertex.h
- /home/heroadm/CLionProjects/OpenGLTutorial/Window.cpp
- /home/heroadm/CLionProjects/OpenGLTutorial/Window.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h
  /usr/local/include/glm/common.hpp
  /usr/local/include/glm/detail/_fixes.hpp
  /usr/local/include/glm/detail/_swizzle.hpp
@@ -224,7 +210,115 @@ CMakeFiles/OpenGLTutorial.dir/Window.cpp.o
  /usr/local/include/glm/vec3.hpp
  /usr/local/include/glm/vec4.hpp
  /usr/local/include/glm/vector_relational.hpp
+CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o
+ ../Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h
+CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o
+ ../Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.cpp
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h
+ /usr/local/include/glm/common.hpp
+ /usr/local/include/glm/detail/_fixes.hpp
+ /usr/local/include/glm/detail/_swizzle.hpp
+ /usr/local/include/glm/detail/_swizzle_func.hpp
+ /usr/local/include/glm/detail/_vectorize.hpp
+ /usr/local/include/glm/detail/compute_vector_relational.hpp
+ /usr/local/include/glm/detail/func_common.inl
+ /usr/local/include/glm/detail/func_common_simd.inl
+ /usr/local/include/glm/detail/func_exponential.inl
+ /usr/local/include/glm/detail/func_exponential_simd.inl
+ /usr/local/include/glm/detail/func_geometric.inl
+ /usr/local/include/glm/detail/func_geometric_simd.inl
+ /usr/local/include/glm/detail/func_matrix.inl
+ /usr/local/include/glm/detail/func_matrix_simd.inl
+ /usr/local/include/glm/detail/func_trigonometric.inl
+ /usr/local/include/glm/detail/func_trigonometric_simd.inl
+ /usr/local/include/glm/detail/func_vector_relational.inl
+ /usr/local/include/glm/detail/func_vector_relational_simd.inl
+ /usr/local/include/glm/detail/qualifier.hpp
+ /usr/local/include/glm/detail/setup.hpp
+ /usr/local/include/glm/detail/type_float.hpp
+ /usr/local/include/glm/detail/type_int.hpp
+ /usr/local/include/glm/detail/type_mat.hpp
+ /usr/local/include/glm/detail/type_mat2x2.hpp
+ /usr/local/include/glm/detail/type_mat2x2.inl
+ /usr/local/include/glm/detail/type_mat2x3.hpp
+ /usr/local/include/glm/detail/type_mat2x3.inl
+ /usr/local/include/glm/detail/type_mat2x4.hpp
+ /usr/local/include/glm/detail/type_mat2x4.inl
+ /usr/local/include/glm/detail/type_mat3x2.hpp
+ /usr/local/include/glm/detail/type_mat3x2.inl
+ /usr/local/include/glm/detail/type_mat3x3.hpp
+ /usr/local/include/glm/detail/type_mat3x3.inl
+ /usr/local/include/glm/detail/type_mat3x4.hpp
+ /usr/local/include/glm/detail/type_mat3x4.inl
+ /usr/local/include/glm/detail/type_mat4x2.hpp
+ /usr/local/include/glm/detail/type_mat4x2.inl
+ /usr/local/include/glm/detail/type_mat4x3.hpp
+ /usr/local/include/glm/detail/type_mat4x3.inl
+ /usr/local/include/glm/detail/type_mat4x4.hpp
+ /usr/local/include/glm/detail/type_mat4x4.inl
+ /usr/local/include/glm/detail/type_mat4x4_simd.inl
+ /usr/local/include/glm/detail/type_vec.hpp
+ /usr/local/include/glm/detail/type_vec1.hpp
+ /usr/local/include/glm/detail/type_vec2.hpp
+ /usr/local/include/glm/detail/type_vec2.inl
+ /usr/local/include/glm/detail/type_vec3.hpp
+ /usr/local/include/glm/detail/type_vec3.inl
+ /usr/local/include/glm/detail/type_vec4.hpp
+ /usr/local/include/glm/detail/type_vec4.inl
+ /usr/local/include/glm/detail/type_vec4_simd.inl
+ /usr/local/include/glm/exponential.hpp
+ /usr/local/include/glm/fwd.hpp
+ /usr/local/include/glm/geometric.hpp
+ /usr/local/include/glm/gtc/constants.hpp
+ /usr/local/include/glm/gtc/constants.inl
+ /usr/local/include/glm/gtc/matrix_transform.hpp
+ /usr/local/include/glm/gtc/matrix_transform.inl
+ /usr/local/include/glm/mat2x2.hpp
+ /usr/local/include/glm/mat2x3.hpp
+ /usr/local/include/glm/mat2x4.hpp
+ /usr/local/include/glm/mat3x2.hpp
+ /usr/local/include/glm/mat3x3.hpp
+ /usr/local/include/glm/mat3x4.hpp
+ /usr/local/include/glm/mat4x2.hpp
+ /usr/local/include/glm/mat4x3.hpp
+ /usr/local/include/glm/mat4x4.hpp
+ /usr/local/include/glm/matrix.hpp
+ /usr/local/include/glm/simd/common.h
+ /usr/local/include/glm/simd/exponential.h
+ /usr/local/include/glm/simd/geometric.h
+ /usr/local/include/glm/simd/matrix.h
+ /usr/local/include/glm/simd/platform.h
+ /usr/local/include/glm/trigonometric.hpp
+ /usr/local/include/glm/vec2.hpp
+ /usr/local/include/glm/vec3.hpp
+ /usr/local/include/glm/vec4.hpp
+ /usr/local/include/glm/vector_relational.hpp
+CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o
+ ../Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h
+ /usr/local/include/glm/detail/_swizzle.hpp
+ /usr/local/include/glm/detail/_swizzle_func.hpp
+ /usr/local/include/glm/detail/compute_vector_relational.hpp
+ /usr/local/include/glm/detail/qualifier.hpp
+ /usr/local/include/glm/detail/setup.hpp
+ /usr/local/include/glm/detail/type_int.hpp
+ /usr/local/include/glm/detail/type_vec.hpp
+ /usr/local/include/glm/detail/type_vec3.hpp
+ /usr/local/include/glm/detail/type_vec3.inl
+ /usr/local/include/glm/simd/platform.h
+ /usr/local/include/glm/vec3.hpp
 CMakeFiles/OpenGLTutorial.dir/main.cpp.o
+ ../Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h
  ../Graphics/Middleware/QT/include/QtCore/qalgorithms.h
  ../Graphics/Middleware/QT/include/QtCore/qarraydata.h
  ../Graphics/Middleware/QT/include/QtCore/qatomic.h
@@ -350,5 +444,20 @@ CMakeFiles/OpenGLTutorial.dir/main.cpp.o
  ../Graphics/Middleware/QT/include/QtWidgets/qdesktopwidget.h
  ../Graphics/Middleware/QT/include/QtWidgets/qsizepolicy.h
  ../Graphics/Middleware/QT/include/QtWidgets/qwidget.h
- /home/heroadm/CLionProjects/OpenGLTutorial/Window.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
+ /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h
  /home/heroadm/CLionProjects/OpenGLTutorial/main.cpp
+ /usr/local/include/glm/detail/_swizzle.hpp
+ /usr/local/include/glm/detail/_swizzle_func.hpp
+ /usr/local/include/glm/detail/compute_vector_relational.hpp
+ /usr/local/include/glm/detail/qualifier.hpp
+ /usr/local/include/glm/detail/setup.hpp
+ /usr/local/include/glm/detail/type_int.hpp
+ /usr/local/include/glm/detail/type_vec.hpp
+ /usr/local/include/glm/detail/type_vec3.hpp
+ /usr/local/include/glm/detail/type_vec3.inl
+ /usr/local/include/glm/simd/platform.h
+ /usr/local/include/glm/vec3.hpp

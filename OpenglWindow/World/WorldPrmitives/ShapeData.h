@@ -5,9 +5,12 @@
 #ifndef OPENGLTUTORIAL_SHAPEDATA_H
 #define OPENGLTUTORIAL_SHAPEDATA_H
 
-
-#include <GL/glew.h>
 #include "Vertex.h"
+#ifndef __glew_h__
+#define __glew_h__
+#include "GL/glew.h"
+#endif /* __glew_h__ */
+
 
 struct ShapeData {
     Vertex *vertices;
@@ -37,6 +40,7 @@ struct ShapeData {
     }
 
 };
+
 
 
 #endif //OPENGLTUTORIAL_SHAPEDATA_H

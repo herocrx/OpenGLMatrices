@@ -261,59 +261,113 @@ OpenGLTutorial_autogen/moc_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/moc_compilation.cpp.s
 .PHONY : OpenGLTutorial_autogen/moc_compilation.cpp.s
 
-ShapeGenerator.o: ShapeGenerator.cpp.o
+OpenglWindow/Window.o: OpenglWindow/Window.cpp.o
 
-.PHONY : ShapeGenerator.o
-
-# target to build an object file
-ShapeGenerator.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.o
-.PHONY : ShapeGenerator.cpp.o
-
-ShapeGenerator.i: ShapeGenerator.cpp.i
-
-.PHONY : ShapeGenerator.i
-
-# target to preprocess a source file
-ShapeGenerator.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.i
-.PHONY : ShapeGenerator.cpp.i
-
-ShapeGenerator.s: ShapeGenerator.cpp.s
-
-.PHONY : ShapeGenerator.s
-
-# target to generate assembly for a file
-ShapeGenerator.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/ShapeGenerator.cpp.s
-.PHONY : ShapeGenerator.cpp.s
-
-Window.o: Window.cpp.o
-
-.PHONY : Window.o
+.PHONY : OpenglWindow/Window.o
 
 # target to build an object file
-Window.cpp.o:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/Window.cpp.o
-.PHONY : Window.cpp.o
+OpenglWindow/Window.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o
+.PHONY : OpenglWindow/Window.cpp.o
 
-Window.i: Window.cpp.i
+OpenglWindow/Window.i: OpenglWindow/Window.cpp.i
 
-.PHONY : Window.i
+.PHONY : OpenglWindow/Window.i
 
 # target to preprocess a source file
-Window.cpp.i:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/Window.cpp.i
-.PHONY : Window.cpp.i
+OpenglWindow/Window.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.i
+.PHONY : OpenglWindow/Window.cpp.i
 
-Window.s: Window.cpp.s
+OpenglWindow/Window.s: OpenglWindow/Window.cpp.s
 
-.PHONY : Window.s
+.PHONY : OpenglWindow/Window.s
 
 # target to generate assembly for a file
-Window.cpp.s:
-	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/Window.cpp.s
-.PHONY : Window.cpp.s
+OpenglWindow/Window.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.s
+.PHONY : OpenglWindow/Window.cpp.s
+
+OpenglWindow/World/Shaders/ShadersManager.o: OpenglWindow/World/Shaders/ShadersManager.cpp.o
+
+.PHONY : OpenglWindow/World/Shaders/ShadersManager.o
+
+# target to build an object file
+OpenglWindow/World/Shaders/ShadersManager.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o
+.PHONY : OpenglWindow/World/Shaders/ShadersManager.cpp.o
+
+OpenglWindow/World/Shaders/ShadersManager.i: OpenglWindow/World/Shaders/ShadersManager.cpp.i
+
+.PHONY : OpenglWindow/World/Shaders/ShadersManager.i
+
+# target to preprocess a source file
+OpenglWindow/World/Shaders/ShadersManager.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.i
+.PHONY : OpenglWindow/World/Shaders/ShadersManager.cpp.i
+
+OpenglWindow/World/Shaders/ShadersManager.s: OpenglWindow/World/Shaders/ShadersManager.cpp.s
+
+.PHONY : OpenglWindow/World/Shaders/ShadersManager.s
+
+# target to generate assembly for a file
+OpenglWindow/World/Shaders/ShadersManager.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.s
+.PHONY : OpenglWindow/World/Shaders/ShadersManager.cpp.s
+
+OpenglWindow/World/WorldManager.o: OpenglWindow/World/WorldManager.cpp.o
+
+.PHONY : OpenglWindow/World/WorldManager.o
+
+# target to build an object file
+OpenglWindow/World/WorldManager.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o
+.PHONY : OpenglWindow/World/WorldManager.cpp.o
+
+OpenglWindow/World/WorldManager.i: OpenglWindow/World/WorldManager.cpp.i
+
+.PHONY : OpenglWindow/World/WorldManager.i
+
+# target to preprocess a source file
+OpenglWindow/World/WorldManager.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.i
+.PHONY : OpenglWindow/World/WorldManager.cpp.i
+
+OpenglWindow/World/WorldManager.s: OpenglWindow/World/WorldManager.cpp.s
+
+.PHONY : OpenglWindow/World/WorldManager.s
+
+# target to generate assembly for a file
+OpenglWindow/World/WorldManager.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.s
+.PHONY : OpenglWindow/World/WorldManager.cpp.s
+
+OpenglWindow/World/WorldPrmitives/ShapeGenerator.o: OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o
+
+.PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.o
+
+# target to build an object file
+OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o
+.PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o
+
+OpenglWindow/World/WorldPrmitives/ShapeGenerator.i: OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.i
+
+.PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.i
+
+# target to preprocess a source file
+OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.i
+.PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.i
+
+OpenglWindow/World/WorldPrmitives/ShapeGenerator.s: OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
+
+.PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.s
+
+# target to generate assembly for a file
+OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
+.PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
 
 main.o: main.cpp.o
 
@@ -363,12 +417,18 @@ help:
 	@echo "... OpenGLTutorial_autogen/moc_compilation.o"
 	@echo "... OpenGLTutorial_autogen/moc_compilation.i"
 	@echo "... OpenGLTutorial_autogen/moc_compilation.s"
-	@echo "... ShapeGenerator.o"
-	@echo "... ShapeGenerator.i"
-	@echo "... ShapeGenerator.s"
-	@echo "... Window.o"
-	@echo "... Window.i"
-	@echo "... Window.s"
+	@echo "... OpenglWindow/Window.o"
+	@echo "... OpenglWindow/Window.i"
+	@echo "... OpenglWindow/Window.s"
+	@echo "... OpenglWindow/World/Shaders/ShadersManager.o"
+	@echo "... OpenglWindow/World/Shaders/ShadersManager.i"
+	@echo "... OpenglWindow/World/Shaders/ShadersManager.s"
+	@echo "... OpenglWindow/World/WorldManager.o"
+	@echo "... OpenglWindow/World/WorldManager.i"
+	@echo "... OpenglWindow/World/WorldManager.s"
+	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.o"
+	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.i"
+	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -9,12 +9,16 @@ add_subdirectory(Graphics/Middleware/GLEW/glew-cmake/)
 
 set(SOURCE_FILES
         main.cpp
-        Window.cpp
-        Vertex.h
-        ShapeGenerator.cpp
-        ShapeData.h
-
-        )
+        OpenglWindow/Window.cpp
+        OpenglWindow/Window.h
+        OpenglWindow/World/WorldPrmitives/Vertex.h
+        OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp
+        OpenglWindow/World/WorldPrmitives/ShapeData.h
+        OpenglWindow/World/WorldManager.cpp
+        OpenglWindow/World/WorldManager.h
+        OpenglWindow/World/Shaders/ShadersManager.cpp
+        OpenglWindow/World/Shaders/ShadersManager.h
+        OpenglWindow/World/helpers.h)
 
 set(
         CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/Graphics/Middleware/QT/lib/cmake/"
@@ -51,13 +55,13 @@ add_executable(OpenGLTutorial
 add_custom_command(
         TARGET OpenGLTutorial POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_SOURCE_DIR}/VertexShaderCode.glsl
+        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/VertexShaderCode.glsl
         ${CMAKE_CURRENT_BINARY_DIR}/VertexShaderCode.glsl)
 
 add_custom_command(
         TARGET OpenGLTutorial POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_SOURCE_DIR}/FragmentShaderCode.glsl
+        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/FragmentShaderCode.glsl
         ${CMAKE_CURRENT_BINARY_DIR}/FragmentShaderCode.glsl)
 
 

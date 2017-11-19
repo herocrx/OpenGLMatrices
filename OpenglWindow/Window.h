@@ -8,16 +8,20 @@
 
 #include <QtOpenGL/QGLWidget>
 
+#include "World/WorldManager.h"
+//#include <GL/glew.h>
 
 class Window : public QGLWidget {
 public:
-
+    Window();
 private:
 
-private:
     void paintGL();
     void initializeGL();
-    void HubiTomistrz();
+    WorldManager worldManager;
+    //todo
+    //add interaction with keyboard
+    //add interaction with mouse
 };
 
 

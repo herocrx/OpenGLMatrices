@@ -346,22 +346,37 @@
 			<Option target="libglewmx_static"/>
 			<Option target="libglew_static"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShapeData.h">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShapeGenerator.h">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Vertex.h">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Window.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Window.h">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp">
