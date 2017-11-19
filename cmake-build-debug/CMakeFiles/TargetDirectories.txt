@@ -5,7 +5,7 @@
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial_automoc.dir
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial_autogen.dir
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Graphics/Middleware/GLEW/glew-cmake/CMakeFiles/install.dir
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Graphics/Middleware/GLEW/glew-cmake/CMakeFiles/list_install_components.dir
 /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Graphics/Middleware/GLEW/glew-cmake/CMakeFiles/rebuild_cache.dir

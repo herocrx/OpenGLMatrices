@@ -9,8 +9,21 @@ add_subdirectory(Graphics/Middleware/GLEW/glew-cmake/)
 
 set(SOURCE_FILES
         main.cpp
-        Window.cpp
-        ShaderCode.cpp)
+        GuiComponents/DebugSlider.cpp
+        GuiComponents/DebugSlider.h
+        OpenglWindow/Window.cpp
+        OpenglWindow/Window.h
+        OpenglWindow/World/WorldPrmitives/Vertex.h
+        OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp
+        OpenglWindow/World/WorldPrmitives/ShapeData.h
+        OpenglWindow/World/WorldManager.cpp
+        OpenglWindow/World/WorldManager.h
+        OpenglWindow/World/Camera/Camera.cpp
+        OpenglWindow/World/Camera/Camera.h
+        OpenglWindow/World/WorldManager.h
+        OpenglWindow/World/Shaders/ShadersManager.cpp
+        OpenglWindow/World/Shaders/ShadersManager.h
+        OpenglWindow/World/helpers.h QT/QtMainWindow.cpp QT/QtMainWindow.h)
 
 set(
         CMAKE_PREFIX_PATH "${PROJECT_SOURCE_DIR}/Graphics/Middleware/QT/lib/cmake/"
@@ -31,8 +44,8 @@ set( CMAKE_AUTOMOC ON )  # to automoc remove the need to wrap by hand
 include_directories(
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/QT/include
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/GLEW/glew-cmake/include/
+        ${PROJECT_SOURCE_DIR}/GuiComponents/
         )
-
 
 if (Qt5_POSITION_INDEPENDENT_CODE)
        add_definitions(-fPIC)
@@ -44,6 +57,18 @@ endif()
 add_executable(OpenGLTutorial
         ${SOURCE_FILES}
         )
+
+add_custom_command(
+        TARGET OpenGLTutorial POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/VertexShaderCode.glsl
+        ${CMAKE_CURRENT_BINARY_DIR}/VertexShaderCode.glsl)
+
+add_custom_command(
+        TARGET OpenGLTutorial POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/FragmentShaderCode.glsl
+        ${CMAKE_CURRENT_BINARY_DIR}/FragmentShaderCode.glsl)
 
 
 target_link_libraries(OpenGLTutorial

@@ -1,13 +1,13 @@
 
-#include <QtWidgets/qapplication.h>
-#include <QtWidgets/qwidget.h>
 
-#include "Window.h"
+
+#include "QT/QtMainWindow.h"
 
 int main(int argc, char **argv)
 {
     QApplication application(argc,argv);
-    Window myGlWindow;
-    myGlWindow.show();
+    QtMainWindow * mainWindow = new QtMainWindow;
+    mainWindow->init();
+    mainWindow->show();
     return application.exec();
 }

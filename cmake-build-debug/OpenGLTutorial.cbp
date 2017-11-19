@@ -84,8 +84,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
+					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/c++/4.9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
@@ -109,8 +111,10 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
+					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/include/c++/4.9"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
@@ -127,11 +131,11 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="OpenGLTutorial_automoc">
+			<Target title="OpenGLTutorial_autogen">
 				<Option working_dir="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLTutorial_automoc"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLTutorial_autogen"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -344,16 +348,58 @@
 			<Option target="libglewmx_static"/>
 			<Option target="libglew_static"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/ShaderCode.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Window.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/Window.h">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/main.cpp">
