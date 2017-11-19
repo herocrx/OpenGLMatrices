@@ -28,7 +28,12 @@ void Window::initializeGL() {
 }
 
 void Window::mouseMoveEvent(QMouseEvent * e) {
-    worldManager.updateMousePosition(e);
+    worldManager.updateCameraOrientation(e);
+    repaint();
+}
+
+void Window::keyPressEvent(QKeyEvent * e ) {
+    worldManager.updateCameraPosition(e);
     repaint();
 }
 

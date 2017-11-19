@@ -101,6 +101,7 @@ void WorldManager::drawObjects()
 void WorldManager::init() {
     glewInit();
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glEnable(GL_CULL_FACE);
     glViewport(0,0,width,height);
     glEnable(GL_DEPTH_TEST);
     shadersManager.installShaders();
@@ -146,7 +147,34 @@ void WorldManager::initalizeVAO()
 
 }
 
-void WorldManager::updateMousePosition(QMouseEvent * e) {
-    STREAM_OUTPUT_VEC3(glm::vec3(e->x(),e->y(),0.0));
-    mainCamera.mouseUpdate(glm::vec2(e->x(),e->y()));
+void WorldManager::updateCameraPosition(QKeyEvent * e) {
+    switch (e->key()) {
+        case Qt::Key::Key_W:
+            mainCamera.moveForward();
+            break;
+        case Qt::Key::Key_S:
+            mainCamera.moveBackward();
+            break;
+        case Qt::Key::Key_A:
+            mainCamera.moveLeft();
+            break;
+        case Qt::Key::Key_D:
+            mainCamera.moveRight();
+            break;
+        case Qt::Key::Key_Q:
+            mainCamera.moveUp();
+            break;
+        case Qt::Key::Key_E:
+            mainCamera.moveDown();
+            break;
+    }
+    std::cout << mainCamera << std::endl;
 }
+
+void WorldManager::updateCameraOrientation(QMouseEvent * e) {
+    STREAM_OUTPUT_VEC3(glm::vec3(e->x(),e->y(),0.0));
+    mainCamera.orientationUpdate(glm::vec2(e->x(),e->y()));
+    std::cout << mainCamera << std::endl;
+}
+
+

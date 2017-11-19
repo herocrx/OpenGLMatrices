@@ -1153,13 +1153,13 @@ Camera.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
 glm/gtc/matrix_transform.hpp
 -
-iostream
--
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
 glm/vec3.hpp
 -
 glm/mat4x4.hpp
+-
+iostream
 -
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp

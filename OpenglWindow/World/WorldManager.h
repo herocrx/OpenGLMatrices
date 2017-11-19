@@ -24,7 +24,8 @@ public:
     WorldManager(int, int);
     void init();
     void drawObjects();
-    void updateMousePosition(QMouseEvent *);
+    void updateCameraOrientation(QMouseEvent *);
+    void updateCameraPosition(QKeyEvent *);
 
 private:
     int width;
