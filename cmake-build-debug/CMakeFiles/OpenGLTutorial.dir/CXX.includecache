@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -20,6 +20,36 @@ Availability.h
 OpenGL/glu.h
 -
 GL/glu.h
+-
+
+../Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h
+stb_image.h
+../Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h
+stdio.h
+-
+stdarg.h
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+math.h
+-
+stdio.h
+-
+assert.h
+-
+stdint.h
+-
+emmintrin.h
+-
+intrin.h
+-
+arm_neon.h
 -
 
 ../Graphics/Middleware/QT/include/QtCore/qalgorithms.h
@@ -1291,6 +1321,8 @@ glm/mat4x4.hpp
 -
 glm/gtc/matrix_transform.hpp
 -
+stb_image.h
+-
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
 GL/glew.h
@@ -1356,17 +1388,17 @@ QtWidgets/QHBoxLayout
 QtWidgets/QVBoxLayout
 -
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
-../../../GuiComponents/DebugSlider.h
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp
+OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
+../../GuiComponents/DebugSlider.h
 /home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
-
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp
-LEFPV74OLB/moc_DebugSlider.cpp
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
 
 /home/heroadm/CLionProjects/OpenGLTutorial/main.cpp
 QT/QtMainWindow.h

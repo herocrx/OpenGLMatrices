@@ -20,6 +20,8 @@ public:
 
     static ShapeData createFloor();
 
+    static ShapeData createSimpleFloor();
+
     static ShapeData createArrow();
 };
 

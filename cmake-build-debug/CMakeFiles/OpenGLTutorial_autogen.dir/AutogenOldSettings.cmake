@@ -1,1 +1,0 @@
-set(AM_MOC_OLD_SETTINGS " ~~~ /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include;/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents;/usr/local/include ~~~  ~~~ FALSE ~~~ ")

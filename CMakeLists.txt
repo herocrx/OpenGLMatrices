@@ -23,6 +23,7 @@ set(SOURCE_FILES
         OpenglWindow/World/WorldManager.h
         OpenglWindow/World/Shaders/ShadersManager.cpp
         OpenglWindow/World/Shaders/ShadersManager.h
+        Graphics/Middleware/ImageLoadingLibrary/stb/
         OpenglWindow/World/helpers.h QT/QtMainWindow.cpp QT/QtMainWindow.h)
 
 set(
@@ -45,6 +46,7 @@ include_directories(
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/QT/include
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/GLEW/glew-cmake/include/
         ${PROJECT_SOURCE_DIR}/GuiComponents/
+        ${PROJECT_SOURCE_DIR}/Graphics/Middleware/ImageLoadingLibrary/stb/
         )
 
 if (Qt5_POSITION_INDEPENDENT_CODE)
@@ -61,14 +63,15 @@ add_executable(OpenGLTutorial
 add_custom_command(
         TARGET OpenGLTutorial POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/VertexShaderCode.glsl
-        ${CMAKE_CURRENT_BINARY_DIR}/VertexShaderCode.glsl)
+        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/*.glsl
+        ${CMAKE_CURRENT_BINARY_DIR}/)
+
 
 add_custom_command(
         TARGET OpenGLTutorial POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
-        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/FragmentShaderCode.glsl
-        ${CMAKE_CURRENT_BINARY_DIR}/FragmentShaderCode.glsl)
+        ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Textures/*.png
+        ${CMAKE_CURRENT_BINARY_DIR}/Textures/)
 
 
 target_link_libraries(OpenGLTutorial
@@ -79,5 +82,6 @@ target_link_libraries(OpenGLTutorial
         GLEW
         GL
         glm
+        ${PROJECT_SOURCE_DIR}/Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h
         )
 

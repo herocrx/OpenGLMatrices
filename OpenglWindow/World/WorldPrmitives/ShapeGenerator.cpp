@@ -3,10 +3,8 @@
 //
 
 #include "GL/glew.h"
-#include <vector>
 #include "ShapeData.h"
 #include "ShapeGenerator.h"
-#include <iostream>
 
 
 ShapeData ShapeGenerator::createTriangle() {
@@ -14,13 +12,13 @@ ShapeData ShapeGenerator::createTriangle() {
 
     Vertex vertices[] =
             {
-                    glm::vec3(-1.0f, +1.0f, +0.0f),
+                    glm::vec3(-1.0f, +1.0f, +0.0f),//0
                     glm::vec3(+0.0f, +0.0f, +1.0f),
                     glm::vec3(+0.0f, +0.0f, +1.0f),
-                    glm::vec3(+1.0f, +1.0f, +0.0f),
+                    glm::vec3(+1.0f, +1.0f, +0.0f),//1
                     glm::vec3(+1.0f, +0.0f, +0.0f),
                     glm::vec3(+0.0f, +0.0f, +1.0f),
-                    glm::vec3(+0.0f, -1.0f, +0.0f),
+                    glm::vec3(+0.0f, -1.0f, +0.0f),//2
                     glm::vec3(+0.0f, +1.0f, +0.0f),
                     glm::vec3(+0.0f, +0.0f, +1.0f),
             };
@@ -29,7 +27,7 @@ ShapeData ShapeGenerator::createTriangle() {
     memcpy(returnObject.vertices, vertices, sizeof(vertices));
 
 
-    GLushort indices[] = {0, 1, 2};
+    GLushort indices[] = {0, 1, 2, 0, 2, 3};
     returnObject.numIndices = (sizeof(indices) / sizeof(*indices));
     returnObject.indices = new GLushort[returnObject.numIndices];
     memcpy(returnObject.indices, indices, sizeof(indices));
@@ -135,6 +133,54 @@ ShapeData ShapeGenerator::createCube() {
 
     return returnObject;
 
+}
+
+ShapeData ShapeGenerator::createSimpleFloor() {
+    ShapeData returnObject;
+    const float minX = -10;
+    const float maxX = 10;
+    const float minY = -10;
+    const float maxY = 10;
+
+    Vertex vertices[] =
+            {
+                    glm::vec3(minX, minY, +0.0f),  // 0
+                    glm::vec3(+1.0f, +0.5f, +0.5f),    // Color
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Normal
+                    glm::vec3(minX, maxY, +1.0f),  // 1
+                    glm::vec3(+1.0f, +0.0f, +0.0f),    // Color
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Normal
+                    glm::vec3(maxX, maxY, -1.0f),  // 2
+                    glm::vec3(+1.0f, +0.0f, +0.0f),  // Color
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Normal
+                    glm::vec3(maxX, minY, -1.0f),  // 3
+                    glm::vec3(+1.0f, +0.0f, +0.0f),  // Color
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Normal
+
+                    glm::vec3(2 * maxX, maxY, -1.0f),  // 4
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Color
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Normal
+                    glm::vec3(2 * maxX, minY, -1.0f),  // 5
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Color
+                    glm::vec3(+0.0f, +1.0f, +0.0f),  // Normal
+
+
+            };
+
+    returnObject.numberVertices = sizeof(vertices) / sizeof(Vertex);
+    returnObject.vertices = new Vertex[returnObject.numberVertices];
+    memcpy(returnObject.vertices, vertices, sizeof(vertices));
+    unsigned short stackIndices[] = {
+            0, 2, 1,
+            0, 3, 2,
+            3, 4, 2,
+            3, 5, 4,
+    };
+    returnObject.numIndices = sizeof(stackIndices) / sizeof(unsigned short);
+    returnObject.indices = new GLushort[returnObject.numIndices];
+    memcpy(returnObject.indices, stackIndices, sizeof(stackIndices));
+
+    return returnObject;
 }
 
 ShapeData ShapeGenerator::createFloor() {
