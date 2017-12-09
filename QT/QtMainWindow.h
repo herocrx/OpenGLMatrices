@@ -9,9 +9,7 @@
 #include <QtWidgets/qapplication.h>
 #include <QtWidgets/qwidget.h>
 #include "../OpenglWindow/Window.h"
-#include <QtWidgets/qpushbutton.h>
-#include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QVBoxLayout>
+#include "GuiObjectController.h"
 
 class QtMainWindow : public QWidget {
 public:
@@ -21,7 +19,7 @@ public:
     void init();
 
 private:
-
+    std::list<GuiObjectController *> GuiObjectControllerList;
 };
 
 

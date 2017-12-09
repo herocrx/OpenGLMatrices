@@ -24,6 +24,11 @@ set(SOURCE_FILES
         OpenglWindow/World/Shaders/ShadersManager.cpp
         OpenglWindow/World/Shaders/ShadersManager.h
         Graphics/Middleware/ImageLoadingLibrary/stb/
+        QT/GuiObjectController.cpp
+        QT/GuiObjectController.h
+        QT/ControlStrip.cpp
+        QT/ControlStrip.h
+        QT/ObjectMatrix.cpp
         OpenglWindow/World/helpers.h QT/QtMainWindow.cpp QT/QtMainWindow.h)
 
 set(

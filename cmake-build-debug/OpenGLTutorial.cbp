@@ -396,6 +396,24 @@
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.cpp">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h">
+			<Option target="OpenGLTutorial"/>
+		</Unit>
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>

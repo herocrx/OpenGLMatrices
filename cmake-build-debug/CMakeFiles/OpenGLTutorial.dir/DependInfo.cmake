@@ -11,6 +11,9 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/Shaders/ShadersManager.cpp.o"
   "/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldManager.cpp.o"
   "/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.o"
+  "/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/QT/ControlStrip.cpp.o"
+  "/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/QT/GuiObjectController.cpp.o"
+  "/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/QT/ObjectMatrix.cpp.o"
   "/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o"
   "/home/heroadm/CLionProjects/OpenGLTutorial/main.cpp" "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/OpenGLTutorial.dir/main.cpp.o"
   )

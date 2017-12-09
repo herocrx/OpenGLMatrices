@@ -5,12 +5,8 @@
 #include "Window.h"
 
 
-
-
-
-Window::Window() : worldManager(width(),height())
-{
-
+Window::Window() : worldManager(width(),height()){
+    
 }
 
 

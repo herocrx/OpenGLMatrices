@@ -40,8 +40,7 @@ std::string ShadersManager::ReadShaderCode(const char *filename) {
 void ShadersManager::installShaders() {
     vertexShaderID = glCreateShader(GL_VERTEX_SHADER);
     fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
-    vertexTextureShaderID = glCreateShader(GL_VERTEX_SHADER);
-    fragmentTextureShaderID = glCreateShader(GL_FRAGMENT_SHADER);
+
     const GLchar *adapter[1];
     std::string temp = ReadShaderCode("VertexShaderCode.glsl");
     adapter[0] = temp.c_str();
@@ -49,32 +48,21 @@ void ShadersManager::installShaders() {
     temp = ReadShaderCode("FragmentShaderCode.glsl");
     adapter[0] = temp.c_str();
     glShaderSource(fragmentShaderID, 1, adapter, 0);
-    temp = ReadShaderCode("FragmentTextureShaderCode.glsl");
-    adapter[0] = temp.c_str();
-    glShaderSource(fragmentTextureShaderID, 1, adapter, 0);
-    temp = ReadShaderCode("VertexTextureShaderCode.glsl");
-    adapter[0] = temp.c_str();
-    glShaderSource(vertexTextureShaderID, 1, adapter, 0);
     glCompileShader(vertexShaderID);
     glCompileShader(fragmentShaderID);
-    glCompileShader(vertexTextureShaderID);
-    glCompileShader(fragmentTextureShaderID);
     if (!checkShaderStatus(fragmentShaderID, C_TEXT("Fragment")) ||
         !checkShaderStatus(vertexShaderID, C_TEXT("Vertex")))
         return;
     programShaderID = glCreateProgram();
-
-    if (!checkShaderStatus(fragmentTextureShaderID, C_TEXT("FragmentTexture")) ||
-        !checkShaderStatus(vertexTextureShaderID, C_TEXT("VertexTexture")))
-        return;
-
+    glLinkProgram(programShaderID);
     glAttachShader(programShaderID, vertexShaderID);
     glAttachShader(programShaderID, fragmentShaderID);
     glLinkProgram(programShaderID);
     std::cout << "Program ID = " << programShaderID << std::endl;
-    //  glUseProgram(programShaderID);
+    glUseProgram(programShaderID);
 
-
+    vertexTextureShaderID = glCreateShader(GL_VERTEX_SHADER);
+    fragmentTextureShaderID = glCreateShader(GL_FRAGMENT_SHADER);
     temp = ReadShaderCode("FragmentTextureShaderCode.glsl");
     adapter[0] = temp.c_str();
     glShaderSource(fragmentTextureShaderID, 1, adapter, 0);
@@ -85,21 +73,25 @@ void ShadersManager::installShaders() {
     glCompileShader(fragmentTextureShaderID);
     glAttachShader(programTextureShaderID, vertexTextureShaderID);
     glAttachShader(programTextureShaderID, fragmentTextureShaderID);
-    programTextureShaderID = glCreateProgram();
+    glLinkProgram(programTextureShaderID);
     if (!checkShaderStatus(fragmentTextureShaderID, C_TEXT("FragmentTexture")) ||
         !checkShaderStatus(vertexTextureShaderID, C_TEXT("VertexTexture")))
         return;
+    programTextureShaderID = glCreateProgram();
+    glLinkProgram(programTextureShaderID);
 }
 
 
 int ShadersManager::getCurrentProgramID() {
-    return programShaderID;
+    return programUsed;
 }
 
 void ShadersManager::attachTextureShaders() {
+    programUsed = programTextureShaderID;
     glUseProgram(programTextureShaderID);
 }
 
 void ShadersManager::attachShaders() {
+    programUsed = programShaderID;
     glUseProgram(programShaderID);
 }

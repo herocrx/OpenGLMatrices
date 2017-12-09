@@ -421,6 +421,87 @@ OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s:
 	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
 .PHONY : OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp.s
 
+QT/ControlStrip.o: QT/ControlStrip.cpp.o
+
+.PHONY : QT/ControlStrip.o
+
+# target to build an object file
+QT/ControlStrip.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/ControlStrip.cpp.o
+.PHONY : QT/ControlStrip.cpp.o
+
+QT/ControlStrip.i: QT/ControlStrip.cpp.i
+
+.PHONY : QT/ControlStrip.i
+
+# target to preprocess a source file
+QT/ControlStrip.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/ControlStrip.cpp.i
+.PHONY : QT/ControlStrip.cpp.i
+
+QT/ControlStrip.s: QT/ControlStrip.cpp.s
+
+.PHONY : QT/ControlStrip.s
+
+# target to generate assembly for a file
+QT/ControlStrip.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/ControlStrip.cpp.s
+.PHONY : QT/ControlStrip.cpp.s
+
+QT/GuiObjectController.o: QT/GuiObjectController.cpp.o
+
+.PHONY : QT/GuiObjectController.o
+
+# target to build an object file
+QT/GuiObjectController.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/GuiObjectController.cpp.o
+.PHONY : QT/GuiObjectController.cpp.o
+
+QT/GuiObjectController.i: QT/GuiObjectController.cpp.i
+
+.PHONY : QT/GuiObjectController.i
+
+# target to preprocess a source file
+QT/GuiObjectController.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/GuiObjectController.cpp.i
+.PHONY : QT/GuiObjectController.cpp.i
+
+QT/GuiObjectController.s: QT/GuiObjectController.cpp.s
+
+.PHONY : QT/GuiObjectController.s
+
+# target to generate assembly for a file
+QT/GuiObjectController.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/GuiObjectController.cpp.s
+.PHONY : QT/GuiObjectController.cpp.s
+
+QT/ObjectMatrix.o: QT/ObjectMatrix.cpp.o
+
+.PHONY : QT/ObjectMatrix.o
+
+# target to build an object file
+QT/ObjectMatrix.cpp.o:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/ObjectMatrix.cpp.o
+.PHONY : QT/ObjectMatrix.cpp.o
+
+QT/ObjectMatrix.i: QT/ObjectMatrix.cpp.i
+
+.PHONY : QT/ObjectMatrix.i
+
+# target to preprocess a source file
+QT/ObjectMatrix.cpp.i:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/ObjectMatrix.cpp.i
+.PHONY : QT/ObjectMatrix.cpp.i
+
+QT/ObjectMatrix.s: QT/ObjectMatrix.cpp.s
+
+.PHONY : QT/ObjectMatrix.s
+
+# target to generate assembly for a file
+QT/ObjectMatrix.cpp.s:
+	$(MAKE) -f CMakeFiles/OpenGLTutorial.dir/build.make CMakeFiles/OpenGLTutorial.dir/QT/ObjectMatrix.cpp.s
+.PHONY : QT/ObjectMatrix.cpp.s
+
 QT/QtMainWindow.o: QT/QtMainWindow.cpp.o
 
 .PHONY : QT/QtMainWindow.o
@@ -514,6 +595,15 @@ help:
 	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.o"
 	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.i"
 	@echo "... OpenglWindow/World/WorldPrmitives/ShapeGenerator.s"
+	@echo "... QT/ControlStrip.o"
+	@echo "... QT/ControlStrip.i"
+	@echo "... QT/ControlStrip.s"
+	@echo "... QT/GuiObjectController.o"
+	@echo "... QT/GuiObjectController.i"
+	@echo "... QT/GuiObjectController.s"
+	@echo "... QT/ObjectMatrix.o"
+	@echo "... QT/ObjectMatrix.i"
+	@echo "... QT/ObjectMatrix.s"
 	@echo "... QT/QtMainWindow.o"
 	@echo "... QT/QtMainWindow.i"
 	@echo "... QT/QtMainWindow.s"

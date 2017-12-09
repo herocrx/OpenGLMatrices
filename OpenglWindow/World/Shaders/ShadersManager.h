@@ -21,7 +21,7 @@ public:
 private:
     bool checkShaderStatus(GLuint shaderID, char *shaderName);
     std::string ReadShaderCode(const char *filename);
-
+    GLuint programUsed;
     GLuint programShaderID;
     GLuint programTextureShaderID;
     GLuint vertexShaderID;

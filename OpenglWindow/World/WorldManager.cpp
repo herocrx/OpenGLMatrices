@@ -15,8 +15,8 @@
 
 
 
-WorldManager::WorldManager(int width, int height) : width(width),height(height), mainCamera(){
-
+WorldManager::WorldManager(int width = 800, int height = 600) : width(width),height(height), mainCamera(){
+    std::cout << "GL window width: " << width <<  " height: " << height  << std::endl;
 }
 
 
@@ -86,10 +86,10 @@ void WorldManager::sendDataToOpenGL()
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
     GLuint IndicesCubeTextureBufferID;
-    //  glGenBuffers(1, &CubeTextureVertexIndex);
-    // glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndicesCubeTextureBufferID);
-    //   glBufferData(GL_ELEMENT_ARRAY_BUFFER, CubeTexture.indexBufferSize(), CubeTexture.indices, GL_STATIC_DRAW);
-    //   numIndicesTextureCube = CubeTexture.numIndices;
+    glGenBuffers(1, &CubeTextureVertexIndex);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndicesCubeTextureBufferID);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, CubeTexture.indexBufferSize(), CubeTexture.indices, GL_STATIC_DRAW);
+    numIndicesTextureCube = CubeTexture.numIndices;
     CubeTexture.cleanup();
 
 }
@@ -140,12 +140,14 @@ void WorldManager::drawObjects()
     glDrawElements(GL_TRIANGLES, numIndicesArrow, GL_UNSIGNED_SHORT, 0);
 
 
-    //   shadersManager.attachTextureShaders();
-
+    shadersManager.attachTextureShaders();
+    GLint texture = glGetUniformLocation(shadersManager.getCurrentProgramID(), "myTextureSampler");
+    glUniform1i(texture, 1);
+    glEnableVertexAttribArray(texture);
     modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-0.0f, -1.0f, -1.0f));
     glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
     glBindVertexArray(cubeTextureBufferID);
-    glDrawElements(GL_TRIANGLES, numIndicesTextureCube, GL_UNSIGNED_SHORT, 0);
+  //  glDrawElements(GL_TRIANGLES, 2, GL_UNSIGNED_SHORT, 0);
 
 }
 

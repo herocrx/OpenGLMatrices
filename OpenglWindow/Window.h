@@ -14,15 +14,11 @@ class Window : public QGLWidget {
 public:
     Window();
 private:
-
     void paintGL();
     void initializeGL();
     void mouseMoveEvent(QMouseEvent *);
     void keyPressEvent(QKeyEvent *);
     WorldManager worldManager;
-    //todo
-    //add interaction with keyboard
-    //add interaction with mouse
 };
 
 
