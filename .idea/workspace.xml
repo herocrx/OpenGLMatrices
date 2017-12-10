@@ -672,7 +672,7 @@
       <workItem from="1512833629188" duration="426000" />
       <workItem from="1512834068104" duration="200000" />
       <workItem from="1512834407651" duration="11851000" />
-      <workItem from="1512926660051" duration="9265000" />
+      <workItem from="1512926660051" duration="9399000" />
     </task>
     <task id="LOCAL-00001" summary="Hello world works.&#10;&#10;Now, I need to understand all details about VAO, VBO, and other buffers">
       <created>1509705323848</created>
@@ -692,7 +692,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="221301000" />
+    <option name="totallyTimeSpent" value="221435000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
