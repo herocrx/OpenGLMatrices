@@ -26,12 +26,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -51,12 +51,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -76,12 +76,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -101,12 +101,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -126,12 +126,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -151,12 +151,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -176,12 +176,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>
@@ -201,12 +201,12 @@
 				<Compiler>
 					<Add option="-DGLEW_NO_GLU"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
-					<Add directory="/usr/include/c++/4.9"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/4.9"/>
-					<Add directory="/usr/include/c++/4.9/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/4.9/include-fixed"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include"/>
 				</Compiler>

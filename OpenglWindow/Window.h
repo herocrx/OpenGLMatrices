@@ -8,21 +8,17 @@
 
 #include <QtOpenGL/QGLWidget>
 #include "World/WorldManager.h"
-//#include <GL/glew.h>
+#include "../QT/ModelData.h"
 
 class Window : public QGLWidget {
 public:
-    Window();
+    Window(std::list<ModelData *> ObjectsData);
 private:
-
     void paintGL();
     void initializeGL();
     void mouseMoveEvent(QMouseEvent *);
     void keyPressEvent(QKeyEvent *);
     WorldManager worldManager;
-    //todo
-    //add interaction with keyboard
-    //add interaction with mouse
 };
 
 

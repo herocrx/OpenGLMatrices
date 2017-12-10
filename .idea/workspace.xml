@@ -4,8 +4,8 @@
     <generated>
       <config projectName="OpenGLTutorial" targetName="OpenGLTutorial" />
       <config projectName="OpenGLTutorial" targetName="libglew_shared" />
-      <config projectName="OpenGLTutorial" targetName="OpenGLTutorial_autogen" />
       <config projectName="OpenGLTutorial" targetName="libglewmx_shared" />
+      <config projectName="OpenGLTutorial" targetName="OpenGLTutorial_automoc" />
       <config projectName="OpenGLTutorial" targetName="libglewmx_static" />
       <config projectName="OpenGLTutorial" targetName="libglew_static" />
     </generated>
@@ -16,8 +16,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51528f6b-af2f-4ad3-b2a6-5f0701cd962a" name="Default" comment="Trying to implement 3D world">
+    <list default="true" id="51528f6b-af2f-4ad3-b2a6-5f0701cd962a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graphics/Middleware/GLEW/glew-cmake" afterPath="$PROJECT_DIR$/Graphics/Middleware/GLEW/glew-cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Graphics/Middleware/ImageLoadingLibrary/stb" afterPath="$PROJECT_DIR$/Graphics/Middleware/ImageLoadingLibrary/stb" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/Graphics/Middleware/GLEW/glew-cmake/CMakeFiles/" />
@@ -29,72 +30,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="OpenGLTutorial" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="257">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QtMainWindow.cpp" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="76">
+      <file leaf-file-name="QtMainWindow.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-              <folding>
-                <element signature="e#42#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="widgets-charactermap-characterwidget-h.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graphics/Middleware/QT/doc/qtwidgets/widgets-charactermap-characterwidget-h.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="87" column="35" lean-forward="false" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QtMainWindow.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="241">
-              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding>
-                <element signature="e#118#148#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DebugSlider.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/GuiComponents/DebugSlider.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-224">
-              <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#24#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DebugSlider.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/GuiComponents/DebugSlider.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+            <state relative-caret-position="340">
+              <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -103,8 +49,28 @@
       <file leaf-file-name="Window.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelData.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QT/ModelData.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WorldManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldManager.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-62">
+              <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -113,10 +79,68 @@
       <file leaf-file-name="Window.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="172">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="e#108#137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlStrip.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QT/ControlStrip.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+              <folding>
+                <element signature="e#42#61#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiObjectController.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QT/GuiObjectController.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-100">
+              <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GuiObjectController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QT/GuiObjectController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+              <folding>
+                <element signature="e#134#166#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlStrip.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QT/ControlStrip.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+              <folding>
+                <element signature="e#119#146#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QtMainWindow.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+              <folding>
+                <element signature="e#118#148#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,20 +157,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>modelTra</find>
-      <find>indexBufferSize</find>
-      <find>sha</find>
-      <find>program</find>
-      <find>numberVertices</find>
-      <find>programID</find>
-      <find>numIndices = Shape.numIndices;</find>
-      <find>Shape.numIndices</find>
-      <find>numIndices</find>
-      <find>indices</find>
-      <find>numindices</find>
-      <find>GLbindbuffer</find>
-      <find>VERTEX_BYTE_SIZE</find>
-      <find>vetex</find>
       <find>CubeVertexIndex</find>
       <find>gl</find>
       <find>glcreate</find>
@@ -163,6 +173,20 @@
       <find>include</find>
       <find>QM</find>
       <find>mouseMoveEvent</find>
+      <find>floor</find>
+      <find>ground</find>
+      <find>floorVertexIndex</find>
+      <find>cull</find>
+      <find>numIndicesArrow</find>
+      <find>ini</find>
+      <find>create</find>
+      <find>cul</find>
+      <find>stbi_load</find>
+      <find>shader</find>
+      <find>texBufferID</find>
+      <find>numIndicesCube</find>
+      <find>height</find>
+      <find>setMinimumSize</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -181,12 +205,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-        <option value="$PROJECT_DIR$/ShaderCode.cpp" />
-        <option value="$PROJECT_DIR$/ShapeData.h" />
-        <option value="$PROJECT_DIR$/FragmentShaderCode.glsl" />
-        <option value="$PROJECT_DIR$/cmake-build-debug/FragmentShaderCode.glsl" />
-        <option value="$PROJECT_DIR$/Vertex.h" />
         <option value="$PROJECT_DIR$/Camera.h" />
         <option value="$PROJECT_DIR$/Camera.cpp" />
         <option value="$PROJECT_DIR$/VertexShaderCode.glsl" />
@@ -206,23 +224,37 @@
         <option value="$PROJECT_DIR$/OpenglWindow/OGLtools/Shaders.h" />
         <option value="$PROJECT_DIR$/OpenglWindow/OGLtools/Shaders.cpp" />
         <option value="$PROJECT_DIR$/OpenglWindow/OGLtools/ShadersManager.cpp" />
-        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.h" />
-        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h" />
         <option value="$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeData.h" />
-        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.cpp" />
-        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp" />
-        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldManager.h" />
-        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldManager.cpp" />
         <option value="$PROJECT_DIR$/OpenglWindow/World/Camera/Camera.cpp" />
         <option value="$PROJECT_DIR$/OpenglWindow/World/Camera/Camera.h" />
-        <option value="$PROJECT_DIR$/OpenglWindow/Window.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/GuiComponents/DebugSlider.h" />
-        <option value="$PROJECT_DIR$/GuiComponents/DebugSlider.cpp" />
         <option value="$PROJECT_DIR$/GuiComponents/DebugSlider_moc.cpp" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp" />
+        <option value="$PROJECT_DIR$/ImageLoadingLibrary/stb/stb_image.h" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/FragmentShaderCode.glsl" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/VertexTextureShaderCode.glsl" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/FragmentTextureShaderCode.glsl" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/FragmentTextureShaderCode.glsl" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.h" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/QT/ObjectMatrix.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldManager.cpp" />
+        <option value="$PROJECT_DIR$/OpenglWindow/World/WorldManager.h" />
+        <option value="$PROJECT_DIR$/QT/ModelData.cpp" />
+        <option value="$PROJECT_DIR$/QT/ObjectMatrix.cpp" />
+        <option value="$PROJECT_DIR$/GuiComponents/DebugSlider.cpp" />
+        <option value="$PROJECT_DIR$/GuiComponents/DebugSlider.h" />
+        <option value="$PROJECT_DIR$/QT/StripData.h" />
+        <option value="$PROJECT_DIR$/QT/GuiObjectController.cpp" />
+        <option value="$PROJECT_DIR$/QT/ControlStrip.h" />
+        <option value="$PROJECT_DIR$/QT/ControlStrip.cpp" />
+        <option value="$PROJECT_DIR$/QT/GuiObjectController.h" />
         <option value="$PROJECT_DIR$/QT/QtMainWindow.h" />
         <option value="$PROJECT_DIR$/OpenglWindow/Window.cpp" />
+        <option value="$PROJECT_DIR$/OpenglWindow/Window.h" />
+        <option value="$PROJECT_DIR$/QT/ModelData.h" />
         <option value="$PROJECT_DIR$/QT/QtMainWindow.cpp" />
       </list>
     </option>
@@ -235,10 +267,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
-    <option name="y" value="52" />
+    <option name="x" value="45" />
+    <option name="y" value="15" />
     <option name="width" value="1321" />
-    <option name="height" value="717" />
+    <option name="height" value="753" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -274,32 +306,72 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="OpenGLTutorial" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="OpenGLTutorial" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenGLTutorial" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="OpenGLTutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="GuiComponents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenGLTutorial" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="OpenGLTutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="OpenglWindow" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenGLTutorial" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="OpenGLTutorial" type="462c0819:PsiDirectoryNode" />
-              <item name="QT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpenGLTutorial" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="QT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenglWindow" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GuiComponents" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenGLTutorial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmake-build-debug" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -307,15 +379,15 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Graphics/Middleware" />
       <recent name="$PROJECT_DIR$/OpenglWindow/World/Shaders" />
       <recent name="$PROJECT_DIR$/OpenglWindow/World" />
       <recent name="$PROJECT_DIR$/OpenglWindow/OGLtools/Shaders" />
       <recent name="$PROJECT_DIR$/OpenglWindow" />
-      <recent name="$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -330,28 +402,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Build All">
-    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLTutorial" RUN_TARGET_NAME="OpenGLTutorial" EXPLICIT_BUILD_TARGET_NAME="all">
-      <envs />
-    </configuration>
-    <configuration name="OpenGLTutorial" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="OpenGLTutorial" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLTutorial" RUN_TARGET_NAME="OpenGLTutorial">
-      <envs />
-    </configuration>
-    <configuration name="OpenGLTutorial_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="OpenGLTutorial_autogen" CONFIG_NAME="Debug">
-      <envs />
-    </configuration>
-    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
-      <node-interpreter value="project" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="Application.Build">
     <configuration default="true" type="CLion_Remote" factoryName="GDB Remote Debug" remoteCommand="" symbolFile="" sysroot="">
       <method />
     </configuration>
@@ -447,6 +498,20 @@
       <JdkChoice value="FROM_MODULE" />
       <method />
     </configuration>
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
       <command value="run" />
       <scripts />
@@ -520,26 +585,47 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration name="libglew_shared" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglew_shared" CONFIG_NAME="Debug">
+    <configuration default="false" name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLTutorial" RUN_TARGET_NAME="OpenGLTutorial" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
+      <method />
     </configuration>
-    <configuration name="libglew_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglew_static" CONFIG_NAME="Debug">
+    <configuration default="false" name="OpenGLTutorial" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="OpenGLTutorial" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLTutorial" RUN_TARGET_NAME="OpenGLTutorial">
       <envs />
+      <method />
     </configuration>
-    <configuration name="libglewmx_shared" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglewmx_shared" CONFIG_NAME="Debug">
+    <configuration default="false" name="OpenGLTutorial_automoc" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="OpenGLTutorial_automoc" CONFIG_NAME="Debug">
       <envs />
+      <method />
     </configuration>
-    <configuration name="libglewmx_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglewmx_static" CONFIG_NAME="Debug">
+    <configuration default="false" name="libglew_shared" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglew_shared" CONFIG_NAME="Debug">
       <envs />
+      <method />
     </configuration>
-    <list size="7">
+    <configuration default="false" name="libglew_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglew_static" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="libglewmx_shared" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglewmx_shared" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="libglewmx_static" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="libglewmx_static" CONFIG_NAME="Debug">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Build" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="OpenGLTutorial" TARGET_NAME="OpenGLTutorial" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="OpenGLTutorial" RUN_TARGET_NAME="OpenGLTutorial">
+      <envs />
+      <method />
+    </configuration>
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.OpenGLTutorial" />
-      <item index="2" class="java.lang.String" itemvalue="Application.OpenGLTutorial_autogen" />
+      <item index="2" class="java.lang.String" itemvalue="Application.OpenGLTutorial_automoc" />
       <item index="3" class="java.lang.String" itemvalue="Application.libglew_shared" />
       <item index="4" class="java.lang.String" itemvalue="Application.libglew_static" />
       <item index="5" class="java.lang.String" itemvalue="Application.libglewmx_shared" />
       <item index="6" class="java.lang.String" itemvalue="Application.libglewmx_static" />
+      <item index="7" class="java.lang.String" itemvalue="Application.Build" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -581,6 +667,12 @@
       <workItem from="1511092028814" duration="706000" />
       <workItem from="1511093156012" duration="1360000" />
       <workItem from="1511094537154" duration="19954000" />
+      <workItem from="1512763689023" duration="616000" />
+      <workItem from="1512804332123" duration="17138000" />
+      <workItem from="1512833629188" duration="426000" />
+      <workItem from="1512834068104" duration="200000" />
+      <workItem from="1512834407651" duration="11851000" />
+      <workItem from="1512926660051" duration="9265000" />
     </task>
     <task id="LOCAL-00001" summary="Hello world works.&#10;&#10;Now, I need to understand all details about VAO, VBO, and other buffers">
       <created>1509705323848</created>
@@ -589,11 +681,18 @@
       <option name="project" value="LOCAL" />
       <updated>1509705323848</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Implementing textures&#10;still crashed">
+      <created>1512814140350</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1512814140350</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175923000" />
+    <option name="totallyTimeSpent" value="221301000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -605,20 +704,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="52" width="1321" height="717" extended-state="0" />
+    <frame x="45" y="15" width="1321" height="753" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278328" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36133122" sideWeight="0.32034296" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22345483" sideWeight="0.49415433" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34115806" sideWeight="0.67965704" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707354" sideWeight="0.49103662" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30110934" sideWeight="0.3320343" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20708749" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25283876" sideWeight="0.48433736" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.497272" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15324472" sideWeight="0.48433736" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32707354" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596059" sideWeight="0.32034296" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22167487" sideWeight="0.49415433" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28851965" sideWeight="0.67396224" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33655393" sideWeight="0.49103662" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29885057" sideWeight="0.32603773" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21252371" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20525451" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13545817" sideWeight="0.51566267" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3977813" sideWeight="0.6079501" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39593115" sideWeight="0.6079501" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1250996" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -626,11 +724,12 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.497272" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -665,7 +764,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <MESSAGE value="Hello world works.&#10;&#10;Now, I need to understand all details about VAO, VBO, and other buffers" />
     <MESSAGE value="Trying to implement 3D world" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to implement 3D world" />
+    <MESSAGE value="Implementing textures&#10;still crashed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing textures&#10;still crashed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -685,7 +785,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/OpenglWindow/World/WorldManager.cpp</url>
-          <line>174</line>
+          <line>234</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
@@ -693,11 +793,16 @@
           <line>72</line>
           <option name="timeStamp" value="78" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/QT/ControlStrip.h</url>
+          <line>26</line>
+          <option name="timeStamp" value="83" />
+        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="79" />
+      <option name="time" value="86" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -707,240 +812,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/19553933_1600176883348656_5033357774734028570_n.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/glm/gtc/matrix_transform.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="94" lean-forward="false" selection-start-line="56" selection-start-column="85" selection-end-line="56" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/streambuf_iterator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="111" column="6" lean-forward="false" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/QT/include/QtOpenGL/qgl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="435" column="17" lean-forward="false" selection-start-line="435" selection-start-column="17" selection-end-line="435" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/VertexShaderCode.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="71" column="11" lean-forward="false" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/OpenGLTutorial.cbp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/FragmentShaderCode.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="11" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/glm/gtc/matrix_transform.inl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="430" column="46" lean-forward="false" selection-start-line="430" selection-start-column="46" selection-end-line="430" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/4.9/bits/stl_algobase.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="388" column="56" lean-forward="false" selection-start-line="388" selection-start-column="56" selection-end-line="388" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/glm/detail/type_vec3.hpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="88" column="0" lean-forward="false" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/local/include/glm/detail/func_trigonometric.inl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="13" column="8" lean-forward="false" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/QT/include/QtGui/qkeysequence.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3072">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src.h" />
-    <entry file="file://$PROJECT_DIR$/src.cpp" />
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/OGLtools.cpp" />
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/OGLtools.h" />
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/Camera.cpp" />
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/Camera.h" />
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/Vertex.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="22" column="111" lean-forward="false" selection-start-line="21" selection-start-column="15" selection-end-line="22" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/GLM/glm/Build/test/ext/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/FragmentShaderCode.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="27" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233520">
-          <caret line="15568" column="46" lean-forward="false" selection-start-line="15568" selection-start-column="46" selection-end-line="15568" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeData.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/VertexShaderCode.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/helpers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-470">
-          <caret line="160" column="73" lean-forward="false" selection-start-line="160" selection-start-column="73" selection-end-line="160" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="39" column="21" lean-forward="false" selection-start-line="39" selection-start-column="21" selection-end-line="39" selection-end-column="21" />
-          <folding>
-            <element signature="e#42#69#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="13" column="9" lean-forward="false" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <element signature="e#110#129#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="27" column="22" lean-forward="false" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-          <folding>
-            <element signature="e#125#164#0" expanded="false" />
-            <element signature="e#190#227#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="177" column="1" lean-forward="false" selection-start-line="177" selection-start-column="1" selection-end-line="177" selection-end-column="1" />
-          <folding>
-            <element signature="e#42#62#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Camera/Camera.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -955,9 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#107#130#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,110 +833,330 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="468" column="9" lean-forward="false" selection-start-line="468" selection-start-column="9" selection-end-line="468" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GuiComponents/DebugSlider_moc.cpp" />
+    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/QT/doc/qtwidgets/widgets-charactermap-characterwidget-h.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="87" column="35" lean-forward="false" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Window.cpp" />
+    <entry file="file://$PROJECT_DIR$/ShaderCode.cpp" />
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="4" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="150" column="48" lean-forward="false" selection-start-line="150" selection-start-column="48" selection-end-line="150" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/ImageLoadingLibrary/stb/stb.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="127" column="58" lean-forward="false" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="1017" column="1" lean-forward="false" selection-start-line="1017" selection-start-column="1" selection-end-line="1017" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/GLEW/glew-cmake/include/GL/glew.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="1148" column="34" lean-forward="false" selection-start-line="1148" selection-start-column="22" selection-end-line="1148" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/FragmentShaderCode.glsl" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/FragmentTextureShaderCode.glsl" />
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/VertexTextureShaderCode.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/VertexShaderCode.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="17" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/FragmentShaderCode.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/FragmentTextureShaderCode.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/Shaders/ShadersManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="94" column="34" lean-forward="false" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GuiComponents/DebugSlider_moc.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Hubert" />
+    <entry file="file://$PROJECT_DIR$/QT/UserController.cpp" />
+    <entry file="file://$PROJECT_DIR$/QT/UserController.h" />
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/helpers.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="61" column="6" lean-forward="false" selection-start-line="61" selection-start-column="6" selection-end-line="61" selection-end-column="6" />
-          <folding />
+        <state relative-caret-position="84">
+          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="46" column="44" lean-forward="false" selection-start-line="46" selection-start-column="44" selection-end-line="46" selection-end-column="44" />
+        <state relative-caret-position="252">
+          <caret line="30" column="27" lean-forward="false" selection-start-line="30" selection-start-column="27" selection-end-line="30" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.h">
+    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/QT/include/QtOpenGL/qgl.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="e#108#137#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-463">
+          <caret line="363" column="22" lean-forward="false" selection-start-line="363" selection-start-column="22" selection-end-line="363" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="22" column="7" lean-forward="false" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="170">
+          <caret line="10" column="2" lean-forward="false" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graphics/Middleware/QT/doc/qtwidgets/widgets-charactermap-characterwidget-h.html">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/VertexTextureShaderCode.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="87" column="35" lean-forward="false" selection-start-line="87" selection-start-column="35" selection-end-line="87" selection-end-column="35" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/VertexShaderCode.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.h">
+    <entry file="file://$PROJECT_DIR$/QT/ObjectMatrix.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#118#148#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="159">
+          <caret line="12" column="16" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.cpp">
+    <entry file="file://$PROJECT_DIR$/QT/ObjectMatrix.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
-          <folding>
-            <element signature="e#42#67#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="206">
+          <caret line="20" column="52" lean-forward="false" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/ModelData.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/StripData.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/OpenGLTutorial_automoc.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_GuiObjectContr_MQWEVYOUXKCTIN.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="69" column="49" lean-forward="false" selection-start-line="69" selection-start-column="49" selection-end-line="69" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GuiComponents/DebugSlider.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-224">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Window.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="393">
+          <caret line="38" column="13" lean-forward="false" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShaderCode.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="223">
+          <caret line="128" column="18" lean-forward="false" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GuiComponents/DebugSlider.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
+        <state relative-caret-position="206">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/StripData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="16" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/GuiObjectController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="29" column="32" lean-forward="false" selection-start-line="29" selection-start-column="32" selection-end-line="29" selection-end-column="32" />
+          <folding>
+            <element signature="e#134#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/ControlStrip.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <folding>
+            <element signature="e#119#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="e#118#148#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#108#137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/Window.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OpenglWindow/World/WorldManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-62">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/GuiObjectController.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="30" column="51" lean-forward="false" selection-start-line="30" selection-start-column="51" selection-end-line="30" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/ModelData.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="7" column="41" lean-forward="false" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/ControlStrip.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
+          <folding>
+            <element signature="e#42#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QT/QtMainWindow.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
           <folding />
         </state>
       </provider>

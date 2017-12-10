@@ -33,6 +33,8 @@ private:
 
     GLuint numIndicesArrow;
     GLuint numIndicesCube;
+    GLuint numIndicesTextureCube;
+    GLuint numIndicesFloor;
 
     GLuint CubeVertexIndex;
     GLuint cubeBufferID;
@@ -43,9 +45,15 @@ private:
     GLuint arrowVertexIndex;
     GLuint arrowBufferID;
 
+    GLuint CubeTextureVertexIndex;
+    GLuint cubeTextureBufferID;
+    GLuint texBufferID;
+    GLuint texCoordID, texID;
+
     ShapeData ground;
     ShapeData arrow;
     ShapeData Cube;
+    ShapeData CubeTexture;
 
     ShadersManager shadersManager;
     Camera mainCamera;

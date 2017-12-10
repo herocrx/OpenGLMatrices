@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -20,6 +20,36 @@ Availability.h
 OpenGL/glu.h
 -
 GL/glu.h
+-
+
+../Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h
+stb_image.h
+../Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h
+stdio.h
+-
+stdarg.h
+-
+stddef.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+math.h
+-
+stdio.h
+-
+assert.h
+-
+stdint.h
+-
+emmintrin.h
+-
+intrin.h
+-
+arm_neon.h
 -
 
 ../Graphics/Middleware/QT/include/QtCore/qalgorithms.h
@@ -1251,6 +1281,8 @@ QtOpenGL/QGLWidget
 -
 World/WorldManager.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
+../QT/ModelData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.cpp
 Camera.h
@@ -1285,11 +1317,9 @@ WorldManager.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
 WorldPrmitives/ShapeGenerator.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
-glm/vec4.hpp
--
-glm/mat4x4.hpp
--
 glm/gtc/matrix_transform.hpp
+-
+stb_image.h
 -
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
@@ -1313,14 +1343,10 @@ GL/glew.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp
 GL/glew.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/GL/glew.h
-vector
--
 ShapeData.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
 ShapeGenerator.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
-iostream
--
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
 ShapeData.h
@@ -1332,13 +1358,61 @@ GL/glew.h
 glm/vec3.hpp
 -
 
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.cpp
+iostream
+-
+ControlStrip.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h
+QtWidgets/QLabel
+-
+QtWidgets/qpushbutton.h
+-
+QtWidgets/QHBoxLayout
+-
+QtWidgets/QVBoxLayout
+-
+../GuiComponents/DebugSlider.h
+/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
+StripData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/StripData.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.cpp
+GuiObjectController.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.h
+QtWidgets/QHBoxLayout
+-
+QtWidgets/QVBoxLayout
+-
+../QT/ControlStrip.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h
+../QT/ObjectMatrix.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h
+ModelData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
+stdlib.h
+-
+StripData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/StripData.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.cpp
+ObjectMatrix.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h
+QtWidgets/qgridlayout.h
+-
+QtWidgets/QLabel
+-
+
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp
 QtMainWindow.h
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.h
-../GuiComponents/DebugSlider.h
-/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
-QtWidgets/QLabel
--
 
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.h
 QtWidgets/qwidget.h
@@ -1349,24 +1423,34 @@ QtWidgets/qwidget.h
 -
 ../OpenglWindow/Window.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
-QtWidgets/qpushbutton.h
--
-QtWidgets/QHBoxLayout
--
-QtWidgets/QVBoxLayout
--
+GuiObjectController.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.h
+ModelData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
-../../../GuiComponents/DebugSlider.h
-/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/StripData.h
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp
+OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
+OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
+../../QT/ControlStrip.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/moc_compilation.cpp
-LEFPV74OLB/moc_DebugSlider.cpp
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
+../../GuiComponents/DebugSlider.h
+/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
 
 /home/heroadm/CLionProjects/OpenGLTutorial/main.cpp
 QT/QtMainWindow.h

@@ -14,10 +14,20 @@ public:
     void installShaders();
     int getCurrentProgramID();
 
+    void attachTextureShaders();
+
+    void attachShaders();
+
 private:
     bool checkShaderStatus(GLuint shaderID, char *shaderName);
     std::string ReadShaderCode(const char *filename);
-    GLuint programID;
+    GLuint programUsed;
+    GLuint programShaderID;
+    GLuint programTextureShaderID;
+    GLuint vertexShaderID;
+    GLuint fragmentShaderID;
+    GLuint vertexTextureShaderID;
+    GLuint fragmentTextureShaderID;
 };
 
 
