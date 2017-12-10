@@ -5,7 +5,7 @@
 #include "Window.h"
 
 
-Window::Window() : worldManager(width(),height()){
+Window::Window(std::list<ModelData *> ObjectsData) : worldManager(width(),height()){
     
 }
 

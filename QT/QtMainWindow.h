@@ -10,6 +10,7 @@
 #include <QtWidgets/qwidget.h>
 #include "../OpenglWindow/Window.h"
 #include "GuiObjectController.h"
+#include "ModelData.h"
 
 class QtMainWindow : public QWidget {
 public:
@@ -19,7 +20,9 @@ public:
     void init();
 
 private:
+    void setupSignals();
     std::list<GuiObjectController *> GuiObjectControllerList;
+    std::list<ModelData *> ModelDataContainer;
 };
 
 

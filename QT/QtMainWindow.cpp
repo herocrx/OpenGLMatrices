@@ -18,11 +18,14 @@ void QtMainWindow::changeSize() {
 }
 
 void QtMainWindow::init() {
-    Window  * myGlWindow = new Window();
-    GuiObjectControllerList.push_back(new GuiObjectController());
-    GuiObjectControllerList.push_back(new GuiObjectController());
- //   GuiObjectControllerList.push_back(new GuiObjectController());
-//    GuiObjectControllerList.push_back(new GuiObjectController());
+    const int elementNumber = 2;
+    for(int i = 0 ; i<elementNumber ; i++)
+    {
+        ModelData * ObjectModelData = new ModelData;
+        ModelDataContainer.push_back(ObjectModelData);
+        GuiObjectControllerList.push_back(new GuiObjectController(ObjectModelData));
+    }
+    Window  * myGlWindow = new Window(ModelDataContainer) ;
     myGlWindow->setFixedSize(width(),height());
     QHBoxLayout * controllerLayout = new QHBoxLayout;
     for(std::list<GuiObjectController *>::const_iterator object = GuiObjectControllerList.begin(); object != GuiObjectControllerList.end() ; object++) {
@@ -33,4 +36,10 @@ void QtMainWindow::init() {
     mainLayout->addLayout(controllerLayout);
     mainLayout->addWidget(myGlWindow);
     this->setLayout(mainLayout);
+    setupSignals();
+}
+
+void QtMainWindow::setupSignals() {
+
+
 }
