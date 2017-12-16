@@ -1,3 +1,6 @@
 [submodule "glew-cmake"]
 	path = glew-cmake
 	url = /home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake
+[submodule "glm"]
+	path = glm
+	url = /home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLM/glm/
