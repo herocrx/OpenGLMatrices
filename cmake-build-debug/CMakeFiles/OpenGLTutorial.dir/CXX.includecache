@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -1333,6 +1333,8 @@ Camera/Camera.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
 QtGui/QMouseEvent
 -
+../../QT/ModelData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
 Vertex.h
@@ -1430,27 +1432,27 @@ ModelData.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/StripData.h
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp
-OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
-OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
-
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
-../../QT/ControlStrip.h
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_ControlStrip.cpp
+../../../QT/ControlStrip.h
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
-../../GuiComponents/DebugSlider.h
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
+../../../GuiComponents/DebugSlider.h
 /home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/mocs_compilation.cpp
+LEFPV74OLB/moc_DebugSlider.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
+H2RNZ2EBQL/moc_ControlStrip.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_ControlStrip.cpp
 
 /home/heroadm/CLionProjects/OpenGLTutorial/main.cpp
 QT/QtMainWindow.h

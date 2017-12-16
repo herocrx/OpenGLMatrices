@@ -1,1 +1,0 @@
-set(AM_OLD_COMPILE_SETTINGS " ~~~ /home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include;/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/ImageLoadingLibrary/stb;/usr/local/include ~~~  ~~~ FALSE ~~~ ")
