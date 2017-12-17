@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "OpenGLTutorial_automoc.cpp"
+  "OpenGLTutorial_autogen"
+  "CMakeFiles/OpenGLTutorial_autogen.dir/AutogenOldSettings.cmake"
   "CMakeFiles/OpenGLTutorial.dir/main.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/GuiComponents/DebugSlider.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/OpenglWindow/Window.cpp.o"
@@ -11,7 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/OpenGLTutorial.dir/QT/ControlStrip.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/QT/ObjectMatrix.cpp.o"
   "CMakeFiles/OpenGLTutorial.dir/QT/QtMainWindow.cpp.o"
-  "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_automoc.cpp.o"
+  "CMakeFiles/OpenGLTutorial.dir/OpenGLTutorial_autogen/mocs_compilation.cpp.o"
   "OpenGLTutorial.pdb"
   "OpenGLTutorial"
 )

@@ -17,7 +17,7 @@ class ControlStrip : public QWidget {
     Q_OBJECT
 public:
     QHBoxLayout * getQHBoxLayout();
-    ControlStrip(std::string, StripData *);
+    ControlStrip(std::string, StripData *, float min=-10.0f, float max=10.0f);
     ~ControlStrip();
     void updateValues(StripData *);
 private:
@@ -32,6 +32,7 @@ private slots:
     void updateSliderXData(float);
     void updateSliderYData(float);
     void updateSliderZData(float);
+
 };
 
 

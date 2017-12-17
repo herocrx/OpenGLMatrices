@@ -5,7 +5,6 @@
 #ifndef OPENGLTUTORIAL_QTMAINWINDOW_H
 #define OPENGLTUTORIAL_QTMAINWINDOW_H
 #include <QtWidgets/qwidget.h>
-
 #include <QtWidgets/qapplication.h>
 #include <QtWidgets/qwidget.h>
 #include "../OpenglWindow/Window.h"
@@ -23,6 +22,8 @@ private:
     void setupSignals();
     std::list<GuiObjectController *> GuiObjectControllerList;
     std::list<ModelData *> ModelDataContainer;
+    void keyPressEvent(QKeyEvent *) override ;
+    Window  * myGlWindow;
 };
 
 

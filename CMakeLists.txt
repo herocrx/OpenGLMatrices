@@ -60,26 +60,34 @@ if (Qt5_POSITION_INDEPENDENT_CODE)
 endif()
 
 
-
 add_executable(OpenGLTutorial
         ${SOURCE_FILES}
         )
+
+
 
 add_custom_command(
         TARGET OpenGLTutorial POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
         ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Shaders/*.glsl
-        ${CMAKE_CURRENT_BINARY_DIR}/)
+        ${CMAKE_CURRENT_BINARY_DIR}/Shaders
+)
 
+
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/Textures)
+file(MAKE_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/Shaders)
 
 add_custom_command(
         TARGET OpenGLTutorial POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy
         ${CMAKE_SOURCE_DIR}/OpenglWindow/World/Textures/*.png
-        ${CMAKE_CURRENT_BINARY_DIR}/Textures/)
+        ${CMAKE_CURRENT_BINARY_DIR}/Textures/
+)
 
 
-target_link_libraries(OpenGLTutorial
+
+target_link_libraries(
+        OpenGLTutorial
         Qt5::Widgets
         Qt5::Gui
         Qt5::Core
@@ -88,5 +96,6 @@ target_link_libraries(OpenGLTutorial
         GL
         glm
         ${PROJECT_SOURCE_DIR}/Graphics/Middleware/ImageLoadingLibrary/stb/stb_image.h
-        )
+)
+
 

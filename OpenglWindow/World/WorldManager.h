@@ -15,24 +15,30 @@
 #include "Shaders/ShadersManager.h"
 #include "Camera/Camera.h"
 #include <QtGui/QMouseEvent>
-//
+#include "../../QT/ModelData.h"
 
 
-class WorldManager {
-
+class WorldManager : public QObject {
+    Q_OBJECT
 public:
-    WorldManager(int, int);
+    WorldManager(int, int, std::list<ModelData *>);
     void init();
-    void drawObjects();
     void updateCameraOrientation(QMouseEvent *);
     void updateCameraPosition(QKeyEvent *);
+    void updateVerticies();
+
+public slots:
+        void drawObjects();
 
 private:
     int width;
     int height;
 
+    int numberObject;
+
     GLuint numIndicesArrow;
     GLuint numIndicesCube;
+    GLuint numLinesCube;
     GLuint numIndicesTextureCube;
     GLuint numIndicesFloor;
 
@@ -58,10 +64,13 @@ private:
     ShadersManager shadersManager;
     Camera mainCamera;
 
+    std::list<ModelData *> _modelData;
+
     const GLuint NUMBER_ELEMENTS_PER_VERTICE = 9;
     const GLuint VERTEX_BYTE_SIZE = NUMBER_ELEMENTS_PER_VERTICE * sizeof(float);
     void sendDataToOpenGL();
     void initalizeVAO();
+
 };
 
 

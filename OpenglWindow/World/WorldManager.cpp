@@ -6,6 +6,7 @@
 #include "WorldManager.h"
 #include "WorldPrmitives/ShapeGenerator.h"
 #include <glm/gtc/matrix_transform.hpp>
+#include <QtCore/QTimer>
 
 #define STB_IMAGE_IMPLEMENTATION
 
@@ -15,7 +16,7 @@
 
 
 
-WorldManager::WorldManager(int width = 800, int height = 600) : width(width),height(height), mainCamera(){
+WorldManager::WorldManager(int width, int height, std::list<ModelData *> _modelData) : width(width),height(height), _modelData(_modelData), mainCamera(){
     std::cout << "GL window width: " << width <<  " height: " << height  << std::endl;
 }
 
@@ -24,15 +25,18 @@ WorldManager::WorldManager(int width = 800, int height = 600) : width(width),hei
 
 void WorldManager::sendDataToOpenGL()
 {
-    ground = ShapeGenerator::createSimpleFloor();
+    ground = ShapeGenerator::createFloor();
     glBindVertexArray(floorVertexIndex);
     glBindBuffer(GL_ARRAY_BUFFER, floorBufferID);
     glBufferData(GL_ARRAY_BUFFER, ground.vertexBufferSize(), ground.vertices, GL_STATIC_DRAW);
+    numLinesCube = ground.vertexBufferSize();
+/*
     GLuint IndicesFloorBufferID;
     glGenBuffers(1, &IndicesFloorBufferID);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndicesFloorBufferID);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, ground.indexBufferSize(), ground.indices, GL_STATIC_DRAW);
     numIndicesFloor = ground.numIndices;
+    */
     ground.cleanup();
 
 
@@ -58,96 +62,60 @@ void WorldManager::sendDataToOpenGL()
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, arrow.indexBufferSize(), arrow.indices, GL_STATIC_DRAW);
     numIndicesArrow = arrow.numIndices;
     arrow.cleanup();
-
-    CubeTexture = ShapeGenerator::createCube();
-    glBindBuffer(GL_ARRAY_BUFFER, cubeTextureBufferID);
-    glBindVertexArray(cubeTextureBufferID);
-
-    glEnable(GL_TEXTURE_2D);
-    glGenTextures(1, &texBufferID);
-    glBindTexture(GL_TEXTURE_2D, texBufferID);
-
-    std::string filename = "Textures/side1.png";
-    int w;
-    int h;
-    int comp;
-    unsigned char *image = stbi_load(filename.c_str(), &w, &h, &comp, STBI_rgb);
-
-    if (image == nullptr)
-        throw (std::string("Failed to load texture"));
-
-    glActiveTexture(GL_TEXTURE0);
-    // Give the image to OpenGL
-
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, image);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-
-    GLuint IndicesCubeTextureBufferID;
-    glGenBuffers(1, &CubeTextureVertexIndex);
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IndicesCubeTextureBufferID);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, CubeTexture.indexBufferSize(), CubeTexture.indices, GL_STATIC_DRAW);
-    numIndicesTextureCube = CubeTexture.numIndices;
-    CubeTexture.cleanup();
-
 }
 
 
 void WorldManager::drawObjects()
 {
     shadersManager.attachShaders();
-    glm::mat4 modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(2.0f, 0.0f, 0.0f));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(30.0f), glm::vec3(0, 1, 0));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(70.0f), glm::vec3(1, 0, 0));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(60.0f), glm::vec3(0, 0, 1));
+
+
+    glm::mat4 modelTransformMatrix;
 
 
    // displayMatrix(modelTransformMatrix);
-    glm::mat4 projectionMatrix = glm::perspective(glm::radians(60.0f), float(width) / height, 0.1f, 25.0f);
+    glm::mat4 projectionMatrix = glm::perspective(glm::radians(80.0f), float(width) / height, 0.1f, 25.0f);
     glm::mat4 viewMatrix = mainCamera.getViewToWorldMatrix();
+
 
     GLint modelTransformMatrixLocation = glGetUniformLocation(shadersManager.getCurrentProgramID(), "modelTransformMatrix");
     GLint projectionMatrixLocation = glGetUniformLocation(shadersManager.getCurrentProgramID(), "projectedMatrix");
     GLint projectToViewMatrixLocation = glGetUniformLocation(shadersManager.getCurrentProgramID(), "viewMatrix");
+
     glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
     glUniformMatrix4fv(projectToViewMatrixLocation, 1, GL_FALSE, &viewMatrix[0][0]);
     glUniformMatrix4fv(projectionMatrixLocation, 1, GL_FALSE, &projectionMatrix[0][0]);
 
-
-    glBindVertexArray(CubeVertexIndex);
-    glDrawElements(GL_TRIANGLES, numIndicesCube, GL_UNSIGNED_SHORT, 0);
-
-
-    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-2.0f, 4.0f, 3.0f));
-    glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
-    glBindVertexArray(CubeVertexIndex);
-    glDrawElements(GL_TRIANGLES, numIndicesCube, GL_UNSIGNED_SHORT, 0);
-
-
     modelTransformMatrix = glm::mat4(1.0f);
     glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
     glBindVertexArray(floorVertexIndex);
-    glDrawElements(GL_TRIANGLES, numIndicesFloor, GL_UNSIGNED_SHORT, 0);
-    // glDrawArrays(GL_LINES, 0, ground.numberVertices);
+    glDrawArrays(GL_LINES, 0, numLinesCube);
 
 
-    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-2.0f, -3.0f, 2.0f));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(90.0f), glm::vec3(1, 0, 0));
+
+    std::list<ModelData *>::iterator it = _modelData.begin();
+    modelTransformMatrix = glm::translate(glm::mat4(1.0f),
+                                          glm::vec3((*it)->translate.valueX,(*it)->translate.valueY, (*it)->translate.valueZ));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueX), glm::vec3(1, 0, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueY), glm::vec3(0, 1, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueZ), glm::vec3(0, 0, 1));
+    modelTransformMatrix = glm::scale(modelTransformMatrix,glm::vec3((*it)->scale.valueX,(*it)->scale.valueY,(*it)->scale.valueZ));
+
+    glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
+    glBindVertexArray(CubeVertexIndex);
+    glDrawElements(GL_TRIANGLES, numIndicesCube, GL_UNSIGNED_SHORT, 0);
+    (*it)->objectMatrix = modelTransformMatrix;
+    it = std::next(it,1);
+    modelTransformMatrix = glm::translate(glm::mat4(1.0f),
+                                          glm::vec3((*it)->translate.valueX,(*it)->translate.valueY, (*it)->translate.valueZ));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueX), glm::vec3(1, 0, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueY), glm::vec3(0, 1, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueZ), glm::vec3(0, 0, 1));
+    modelTransformMatrix = glm::scale(modelTransformMatrix,glm::vec3((*it)->scale.valueX,(*it)->scale.valueY,(*it)->scale.valueZ));
+    (*it)->objectMatrix = modelTransformMatrix;
     glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
     glBindVertexArray(arrowVertexIndex);
     glDrawElements(GL_TRIANGLES, numIndicesArrow, GL_UNSIGNED_SHORT, 0);
-
-
-    shadersManager.attachTextureShaders();
-    GLint texture = glGetUniformLocation(shadersManager.getCurrentProgramID(), "myTextureSampler");
-    glUniform1i(texture, 1);
-    glEnableVertexAttribArray(texture);
-    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-0.0f, -1.0f, -1.0f));
-    glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
-    glBindVertexArray(cubeTextureBufferID);
-  //  glDrawElements(GL_TRIANGLES, 2, GL_UNSIGNED_SHORT, 0);
 
 }
 
@@ -174,7 +142,7 @@ void WorldManager::initalizeVAO() {
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, (char *) (sizeof(float) * 3));
     glEnableVertexAttribArray(0);
     glEnableVertexAttribArray(1);
-    //   glLineWidth(1);
+    glLineWidth(1);
 
     //Cube
     glGenVertexArrays(1, &CubeVertexIndex);
@@ -191,16 +159,6 @@ void WorldManager::initalizeVAO() {
     glBindVertexArray(arrowVertexIndex);
     glGenBuffers(1, &arrowBufferID);
     glBindBuffer(GL_ARRAY_BUFFER, arrowBufferID);
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, 0);
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, (char *) (sizeof(float) * 3));
-    glEnableVertexAttribArray(0);
-    glEnableVertexAttribArray(1);
-
-    //Cube with Texture
-    glGenVertexArrays(1, &CubeTextureVertexIndex);
-    glBindVertexArray(CubeTextureVertexIndex);
-    glGenBuffers(1, &cubeTextureBufferID);
-    glBindBuffer(GL_ARRAY_BUFFER, cubeTextureBufferID);
     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, 0);
     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, VERTEX_BYTE_SIZE, (char *) (sizeof(float) * 3));
     glEnableVertexAttribArray(0);

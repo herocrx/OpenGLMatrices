@@ -1,10 +1,11 @@
+
+
 //
 // Created by heroadm on 19.11.17.
 //
 
 #include "QtMainWindow.h"
-
-
+#include <ctime>
 QtMainWindow::QtMainWindow() {
 
 }
@@ -25,7 +26,7 @@ void QtMainWindow::init() {
         ModelDataContainer.push_back(ObjectModelData);
         GuiObjectControllerList.push_back(new GuiObjectController(ObjectModelData));
     }
-    Window  * myGlWindow = new Window(ModelDataContainer) ;
+    myGlWindow = new Window(ModelDataContainer) ;
     myGlWindow->setFixedSize(width(),height());
     QHBoxLayout * controllerLayout = new QHBoxLayout;
     for(std::list<GuiObjectController *>::const_iterator object = GuiObjectControllerList.begin(); object != GuiObjectControllerList.end() ; object++) {
@@ -42,4 +43,10 @@ void QtMainWindow::init() {
 void QtMainWindow::setupSignals() {
 
 
+}
+
+
+void QtMainWindow::keyPressEvent(QKeyEvent * e ) {
+    myGlWindow->keyPressEvent(e);
+    repaint();
 }

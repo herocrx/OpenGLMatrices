@@ -1,0 +1,33 @@
+# Directories and files
+set(AM_CMAKE_BINARY_DIR "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/")
+set(AM_CMAKE_SOURCE_DIR "/home/heroadm/CLionProjects/OpenGLTutorial/")
+set(AM_CMAKE_CURRENT_SOURCE_DIR "/home/heroadm/CLionProjects/OpenGLTutorial/")
+set(AM_CMAKE_CURRENT_BINARY_DIR "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/")
+set(AM_CMAKE_INCLUDE_DIRECTORIES_PROJECT_BEFORE "")
+set(AM_BUILD_DIR "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen")
+set(AM_SOURCES "/home/heroadm/CLionProjects/OpenGLTutorial/main.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.cpp;/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp")
+set(AM_HEADERS "/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/Vertex.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Shaders/ShadersManager.h;/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.h;/home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h;/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/helpers.h;/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.h")
+# Qt environment
+set(AM_QT_VERSION_MAJOR "5")
+set(AM_QT_MOC_EXECUTABLE "/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/bin/moc")
+set(AM_QT_UIC_EXECUTABLE )
+set(AM_QT_RCC_EXECUTABLE )
+# MOC settings
+set(AM_MOC_SKIP "")
+set(AM_MOC_DEFINITIONS "")
+set(AM_MOC_INCLUDES "/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include;/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents;/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/ImageLoadingLibrary/stb;/usr/local/include")
+set(AM_MOC_OPTIONS "")
+set(AM_MOC_RELAXED_MODE "FALSE")
+set(AM_MOC_DEPEND_FILTERS "")
+set(AM_MOC_PREDEFS_CMD )
+# UIC settings
+set(AM_UIC_SKIP )
+set(AM_UIC_TARGET_OPTIONS )
+set(AM_UIC_OPTIONS_FILES )
+set(AM_UIC_OPTIONS_OPTIONS )
+set(AM_UIC_SEARCH_PATHS )
+# RCC settings
+set(AM_RCC_SOURCES  )
+set(AM_RCC_INPUTS )
+set(AM_RCC_OPTIONS_FILES )
+set(AM_RCC_OPTIONS_OPTIONS )

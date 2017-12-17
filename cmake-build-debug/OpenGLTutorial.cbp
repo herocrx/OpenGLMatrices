@@ -84,6 +84,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents"/>
@@ -111,6 +112,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
+					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/QT/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/Graphics/Middleware/GLEW/glew-cmake/include"/>
 					<Add directory="/home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents"/>
@@ -131,11 +133,11 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="OpenGLTutorial_automoc">
+			<Target title="OpenGLTutorial_autogen">
 				<Option working_dir="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLTutorial_automoc"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 OpenGLTutorial_autogen"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -420,7 +422,7 @@
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.h">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
-		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp">
+		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/mocs_compilation.cpp">
 			<Option target="OpenGLTutorial"/>
 		</Unit>
 		<Unit filename="/home/heroadm/CLionProjects/OpenGLTutorial/main.cpp">

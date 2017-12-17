@@ -23,7 +23,7 @@ signals:
 public:
 	DebugSlider(float value = 0.0f,
 		float min = -10.0f, float max = 10.0f, 
-		bool textOnLeft = false, float granularity = 40.0);
+		bool textOnLeft = false, float granularity = 200.0);
 	float value() const;
 	void setValue(float newValue);
 };

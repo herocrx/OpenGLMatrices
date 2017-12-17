@@ -51,7 +51,6 @@ Camera::Camera() : position(0.0f, 3.0f, 15.0f),
 }
 
 void Camera::moveForward() {
-    std::cout << "chuj";
     position = position + viewDirection;
 
 }

@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -51,6 +51,10 @@ intrin.h
 -
 arm_neon.h
 -
+
+../Graphics/Middleware/QT/include/QtCore/QTimer
+qtimer.h
+../Graphics/Middleware/QT/include/QtCore/qtimer.h
 
 ../Graphics/Middleware/QT/include/QtCore/qalgorithms.h
 QtCore/qglobal.h
@@ -202,6 +206,12 @@ QtCore/qatomic_cxx11.h
 QtCore/qatomic_gcc.h
 -
 QtCore/qatomic_unix.h
+-
+
+../Graphics/Middleware/QT/include/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 ../Graphics/Middleware/QT/include/QtCore/qbytearray.h
@@ -626,6 +636,12 @@ QtCore/qlocale.h
 QtCore/qscopedpointer.h
 -
 stdio.h
+-
+
+../Graphics/Middleware/QT/include/QtCore/qtimer.h
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
 -
 
 ../Graphics/Middleware/QT/include/QtCore/qtypeinfo.h
@@ -1275,6 +1291,8 @@ QtWidgets/qwidget.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.cpp
 Window.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
+QtCore/QTimer
+-
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
 QtOpenGL/QGLWidget
@@ -1319,6 +1337,8 @@ WorldPrmitives/ShapeGenerator.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeGenerator.h
 glm/gtc/matrix_transform.hpp
 -
+QtCore/QTimer
+-
 stb_image.h
 -
 
@@ -1333,6 +1353,8 @@ Camera/Camera.h
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/Camera/Camera.h
 QtGui/QMouseEvent
 -
+../../QT/ModelData.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldPrmitives/ShapeData.h
 Vertex.h
@@ -1397,17 +1419,25 @@ ModelData.h
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/ModelData.h
 stdlib.h
 -
+glm/gtc/matrix_transform.hpp
+-
 StripData.h
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/StripData.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.cpp
 ObjectMatrix.h
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h
+QtCore/QTimer
+-
+iostream
+-
 
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h
 QtWidgets/qgridlayout.h
 -
 QtWidgets/QLabel
+-
+glm/gtc/matrix_transform.hpp
 -
 
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/QtMainWindow.cpp
@@ -1430,27 +1460,67 @@ ModelData.h
 
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/StripData.h
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.cpp
-OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
-OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/34DFXDC7FY/moc_WorldManager.cpp
+../../../OpenglWindow/World/WorldManager.h
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/World/WorldManager.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_ControlStrip_YH4B2PJFUS3NAE.cpp
-../../QT/ControlStrip.h
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_ControlStrip.cpp
+../../../QT/ControlStrip.h
 /home/heroadm/CLionProjects/OpenGLTutorial/QT/ControlStrip.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
 
-/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_automoc.dir/moc_DebugSlider_VIXLQGXMZHKXHB.cpp
-../../GuiComponents/DebugSlider.h
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_GuiObjectController.cpp
+../../../QT/GuiObjectController.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/GuiObjectController.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_ObjectMatrix.cpp
+../../../QT/ObjectMatrix.h
+/home/heroadm/CLionProjects/OpenGLTutorial/QT/ObjectMatrix.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
+../../../GuiComponents/DebugSlider.h
 /home/heroadm/CLionProjects/OpenGLTutorial/GuiComponents/DebugSlider.h
 QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/YACICKFY43/moc_Window.cpp
+../../../OpenglWindow/Window.h
+/home/heroadm/CLionProjects/OpenGLTutorial/OpenglWindow/Window.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/mocs_compilation.cpp
+LEFPV74OLB/moc_DebugSlider.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/LEFPV74OLB/moc_DebugSlider.cpp
+YACICKFY43/moc_Window.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/YACICKFY43/moc_Window.cpp
+34DFXDC7FY/moc_WorldManager.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/34DFXDC7FY/moc_WorldManager.cpp
+H2RNZ2EBQL/moc_ControlStrip.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_ControlStrip.cpp
+H2RNZ2EBQL/moc_GuiObjectController.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_GuiObjectController.cpp
+H2RNZ2EBQL/moc_ObjectMatrix.cpp
+/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/OpenGLTutorial_autogen/H2RNZ2EBQL/moc_ObjectMatrix.cpp
 
 /home/heroadm/CLionProjects/OpenGLTutorial/main.cpp
 QT/QtMainWindow.h

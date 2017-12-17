@@ -42,10 +42,10 @@ void ShadersManager::installShaders() {
     fragmentShaderID = glCreateShader(GL_FRAGMENT_SHADER);
 
     const GLchar *adapter[1];
-    std::string temp = ReadShaderCode("VertexShaderCode.glsl");
+    std::string temp = ReadShaderCode("Shaders/VertexShaderCode.glsl");
     adapter[0] = temp.c_str();
     glShaderSource(vertexShaderID, 1, adapter, 0);
-    temp = ReadShaderCode("FragmentShaderCode.glsl");
+    temp = ReadShaderCode("Shaders/FragmentShaderCode.glsl");
     adapter[0] = temp.c_str();
     glShaderSource(fragmentShaderID, 1, adapter, 0);
     glCompileShader(vertexShaderID);
@@ -63,10 +63,10 @@ void ShadersManager::installShaders() {
 
     vertexTextureShaderID = glCreateShader(GL_VERTEX_SHADER);
     fragmentTextureShaderID = glCreateShader(GL_FRAGMENT_SHADER);
-    temp = ReadShaderCode("FragmentTextureShaderCode.glsl");
+    temp = ReadShaderCode("Shaders/FragmentTextureShaderCode.glsl");
     adapter[0] = temp.c_str();
     glShaderSource(fragmentTextureShaderID, 1, adapter, 0);
-    temp = ReadShaderCode("VertexTextureShaderCode.glsl");
+    temp = ReadShaderCode("Shaders/VertexTextureShaderCode.glsl");
     adapter[0] = temp.c_str();
     glShaderSource(vertexTextureShaderID, 1, adapter, 0);
     glCompileShader(vertexTextureShaderID);

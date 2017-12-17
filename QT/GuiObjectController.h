@@ -14,6 +14,7 @@
 
 class  GuiObjectController : public QHBoxLayout
 {
+    Q_OBJECT
 public:
     GuiObjectController(ModelData *);
     ~GuiObjectController();
@@ -29,6 +30,8 @@ private:
     ControlStrip * rotate;
     ObjectMatrix * matrixObject;
     void setupSignals(ControlStrip *,float,float,float);
+private slots:
+    void updateMatrix();
 };
 
 #endif //OPENGLTUTORIAL_GUIOBJECTCONTROLLER_H
