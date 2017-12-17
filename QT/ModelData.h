@@ -6,14 +6,14 @@
 #define OPENGLTUTORIAL_MODELDATA_H
 
 #include <stdlib.h>     /* srand, rand */
-
+#include <glm/gtc/matrix_transform.hpp>
 #include "StripData.h"
+
 
 struct ModelData {
     ModelData()
     {
         const int maxValue = 10;
-
         translate.valueX = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/maxValue));
         translate.valueY = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/maxValue));
         translate.valueZ = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/maxValue));
@@ -31,7 +31,7 @@ struct ModelData {
     StripData translate;
     StripData scale;
     StripData rotate;
-    float objectMatrix[4][4];
+    glm::mat4 objectMatrix;
 };
 
 

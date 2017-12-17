@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/libglewmx_shared.dir/src/glew.c.o"
-  "../../../../lib/libglewmx.pdb"
-  "../../../../lib/libglewmx.so"
+  "../../../../lib/libglewmxd.pdb"
+  "../../../../lib/libglewmxd.so"
 )
 
 # Per-language clean rules from dependency scanning.

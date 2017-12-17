@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/heroadm/CLionProjects/Op
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_29921/fast"
-/usr/bin/make -f CMakeFiles/cmTC_29921.dir/build.make CMakeFiles/cmTC_29921.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_380f7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_380f7.dir/build.make CMakeFiles/cmTC_380f7.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_29921.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_29921.dir/testCCompiler.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_29921
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29921.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_29921.dir/testCCompiler.c.o  -o cmTC_29921 
+Building C object CMakeFiles/cmTC_380f7.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_380f7.dir/testCCompiler.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_380f7
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_380f7.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_380f7.dir/testCCompiler.c.o  -o cmTC_380f7 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_684ef/fast"
-/usr/bin/make -f CMakeFiles/cmTC_684ef.dir/build.make CMakeFiles/cmTC_684ef.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ee085/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ee085.dir/build.make CMakeFiles/cmTC_ee085.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_684ef
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_684ef.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o  -o cmTC_684ef 
+Building C object CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o   -c /home/heroadm/Pobrane/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_ee085
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee085.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o  -o cmTC_ee085 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.2.1 20171205 (Ubuntu 7.2.0-17ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_684ef' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyOjTHB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_684ef /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_684ef' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee085' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccikk9ni.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ee085 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee085' '-mtune=generic' '-march=x86-64'
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_684ef/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_684ef.dir/build.make CMakeFiles/cmTC_684ef.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ee085/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ee085.dir/build.make CMakeFiles/cmTC_ee085.dir/build]
   ignore line: [make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o   -c /usr/local/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_684ef]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_684ef.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o  -o cmTC_684ef ]
+  ignore line: [Building C object CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o   -c /home/heroadm/Pobrane/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_ee085]
+  ignore line: [/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee085.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o  -o cmTC_ee085 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.2.1 20171205 (Ubuntu 7.2.0-17ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_684ef' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccyOjTHB.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_684ef /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee085' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccikk9ni.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ee085 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccyOjTHB.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccikk9ni.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_684ef] ==> ignore
+    arg [cmTC_ee085] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_684ef.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_ee085.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -157,14 +157,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e5d21/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e5d21.dir/build.make CMakeFiles/cmTC_e5d21.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3854e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3854e.dir/build.make CMakeFiles/cmTC_3854e.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e5d21.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e5d21.dir/feature_tests.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e5d21
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5d21.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_e5d21.dir/feature_tests.c.o  -o cmTC_e5d21 
+Building C object CMakeFiles/cmTC_3854e.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_3854e.dir/feature_tests.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3854e
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3854e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_3854e.dir/feature_tests.c.o  -o cmTC_3854e 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -177,14 +177,14 @@ make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cfd39/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cfd39.dir/build.make CMakeFiles/cmTC_cfd39.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_67f06/fast"
+/usr/bin/make -f CMakeFiles/cmTC_67f06.dir/build.make CMakeFiles/cmTC_67f06.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_cfd39.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_cfd39.dir/feature_tests.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_cfd39
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cfd39.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_cfd39.dir/feature_tests.c.o  -o cmTC_cfd39 
+Building C object CMakeFiles/cmTC_67f06.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_67f06.dir/feature_tests.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_67f06
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67f06.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_67f06.dir/feature_tests.c.o  -o cmTC_67f06 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -197,14 +197,14 @@ make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5fb61/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5fb61.dir/build.make CMakeFiles/cmTC_5fb61.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_8287d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8287d.dir/build.make CMakeFiles/cmTC_8287d.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_5fb61.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_5fb61.dir/feature_tests.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_5fb61
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5fb61.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_5fb61.dir/feature_tests.c.o  -o cmTC_5fb61 
+Building C object CMakeFiles/cmTC_8287d.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_8287d.dir/feature_tests.c.o   -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_8287d
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8287d.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_8287d.dir/feature_tests.c.o  -o cmTC_8287d 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -215,28 +215,28 @@ make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d69bc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d69bc.dir/build.make CMakeFiles/cmTC_d69bc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_359a1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_359a1.dir/build.make CMakeFiles/cmTC_359a1.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d69bc.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_d69bc.dir/testCXXCompiler.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_d69bc
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d69bc.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_d69bc.dir/testCXXCompiler.cxx.o  -o cmTC_d69bc 
+Building CXX object CMakeFiles/cmTC_359a1.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_359a1.dir/testCXXCompiler.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_359a1
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_359a1.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_359a1.dir/testCXXCompiler.cxx.o  -o cmTC_359a1 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5ba14/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5ba14.dir/build.make CMakeFiles/cmTC_5ba14.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_39fdf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_39fdf.dir/build.make CMakeFiles/cmTC_39fdf.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_5ba14
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ba14.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5ba14 
+Building CXX object CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o -c /home/heroadm/Pobrane/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_39fdf
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39fdf.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_39fdf 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -248,9 +248,9 @@ Thread model: posix
 gcc version 7.2.1 20171205 (Ubuntu 7.2.0-17ubuntu1) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ba14' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2ylAxQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5ba14 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ba14' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_39fdf' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccP0YhiD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_39fdf /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_39fdf' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -258,14 +258,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_5ba14/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_5ba14.dir/build.make CMakeFiles/cmTC_5ba14.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_39fdf/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_39fdf.dir/build.make CMakeFiles/cmTC_39fdf.dir/build]
   ignore line: [make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_5ba14]
-  ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5ba14.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5ba14 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o -c /home/heroadm/Pobrane/clion-2017.3/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_39fdf]
+  ignore line: [/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39fdf.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_39fdf ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -277,13 +277,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.2.1 20171205 (Ubuntu 7.2.0-17ubuntu1) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5ba14' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc2ylAxQ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_5ba14 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_39fdf' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccP0YhiD.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_39fdf /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc2ylAxQ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccP0YhiD.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -302,7 +302,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_5ba14] ==> ignore
+    arg [cmTC_39fdf] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -314,7 +314,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_5ba14.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_39fdf.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -342,14 +342,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_7d207/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7d207.dir/build.make CMakeFiles/cmTC_7d207.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e4aaf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e4aaf.dir/build.make CMakeFiles/cmTC_e4aaf.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_7d207.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_7d207.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_7d207
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d207.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_7d207.dir/feature_tests.cxx.o  -o cmTC_7d207 
+Building CXX object CMakeFiles/cmTC_e4aaf.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_e4aaf.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_e4aaf
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4aaf.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_e4aaf.dir/feature_tests.cxx.o  -o cmTC_e4aaf 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -415,14 +415,14 @@ make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1d192/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1d192.dir/build.make CMakeFiles/cmTC_1d192.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_28197/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28197.dir/build.make CMakeFiles/cmTC_28197.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1d192.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_1d192.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1d192
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1d192.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_1d192.dir/feature_tests.cxx.o  -o cmTC_1d192 
+Building CXX object CMakeFiles/cmTC_28197.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_28197.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_28197
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28197.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_28197.dir/feature_tests.cxx.o  -o cmTC_28197 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -488,14 +488,14 @@ make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_ae9c9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ae9c9.dir/build.make CMakeFiles/cmTC_ae9c9.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_29285/fast"
+/usr/bin/make -f CMakeFiles/cmTC_29285.dir/build.make CMakeFiles/cmTC_29285.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ae9c9.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_ae9c9.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ae9c9
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae9c9.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_ae9c9.dir/feature_tests.cxx.o  -o cmTC_ae9c9 
+Building CXX object CMakeFiles/cmTC_29285.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_29285.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_29285
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29285.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_29285.dir/feature_tests.cxx.o  -o cmTC_29285 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -561,14 +561,14 @@ make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_6a37d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_6a37d.dir/build.make CMakeFiles/cmTC_6a37d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_50b18/fast"
+/usr/bin/make -f CMakeFiles/cmTC_50b18.dir/build.make CMakeFiles/cmTC_50b18.dir/build
 make[1]: Wejście do katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6a37d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_6a37d.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6a37d
-/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a37d.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_6a37d.dir/feature_tests.cxx.o  -o cmTC_6a37d 
+Building CXX object CMakeFiles/cmTC_50b18.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_50b18.dir/feature_tests.cxx.o -c /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_50b18
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_50b18.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_50b18.dir/feature_tests.cxx.o  -o cmTC_50b18 
 make[1]: Opuszczenie katalogu '/home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

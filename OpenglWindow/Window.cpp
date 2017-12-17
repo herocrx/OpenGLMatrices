@@ -3,10 +3,15 @@
 //
 
 #include "Window.h"
+#include <QtCore/QTimer>
+
+Window::Window(std::list<ModelData *> ObjectsData) : worldManager(width(),height(),ObjectsData){
+    QTimer *timer = new QTimer(this);
+    timer->setInterval(1000);
+    connect(timer, SIGNAL(timeout()), this, SLOT(updateVerticies()));
+    timer->start(10);
 
 
-Window::Window(std::list<ModelData *> ObjectsData) : worldManager(width(),height()){
-    
 }
 
 
@@ -31,4 +36,9 @@ void Window::keyPressEvent(QKeyEvent * e ) {
     repaint();
 }
 
+void Window::updateVerticies()
+{
+    worldManager.drawObjects();
+    repaint();
+}
 

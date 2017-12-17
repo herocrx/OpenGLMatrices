@@ -6,6 +6,7 @@
 #include "WorldManager.h"
 #include "WorldPrmitives/ShapeGenerator.h"
 #include <glm/gtc/matrix_transform.hpp>
+#include <QtCore/QTimer>
 
 #define STB_IMAGE_IMPLEMENTATION
 
@@ -15,7 +16,7 @@
 
 
 
-WorldManager::WorldManager(int width = 800, int height = 600) : width(width),height(height), mainCamera(){
+WorldManager::WorldManager(int width, int height, std::list<ModelData *> _modelData) : width(width),height(height), _modelData(_modelData), mainCamera(){
     std::cout << "GL window width: " << width <<  " height: " << height  << std::endl;
 }
 
@@ -77,7 +78,7 @@ void WorldManager::sendDataToOpenGL()
         throw (std::string("Failed to load texture"));
 
     glActiveTexture(GL_TEXTURE0);
-    // Give the image to OpenGL
+
 
     glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_BGR, GL_UNSIGNED_BYTE, image);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
@@ -98,10 +99,9 @@ void WorldManager::sendDataToOpenGL()
 void WorldManager::drawObjects()
 {
     shadersManager.attachShaders();
-    glm::mat4 modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(2.0f, 0.0f, 0.0f));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(30.0f), glm::vec3(0, 1, 0));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(70.0f), glm::vec3(1, 0, 0));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(60.0f), glm::vec3(0, 0, 1));
+
+
+    glm::mat4 modelTransformMatrix;
 
 
    // displayMatrix(modelTransformMatrix);
@@ -115,26 +115,35 @@ void WorldManager::drawObjects()
     glUniformMatrix4fv(projectToViewMatrixLocation, 1, GL_FALSE, &viewMatrix[0][0]);
     glUniformMatrix4fv(projectionMatrixLocation, 1, GL_FALSE, &projectionMatrix[0][0]);
 
-
-    glBindVertexArray(CubeVertexIndex);
-    glDrawElements(GL_TRIANGLES, numIndicesCube, GL_UNSIGNED_SHORT, 0);
-
-
-    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-2.0f, 4.0f, 3.0f));
-    glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
-    glBindVertexArray(CubeVertexIndex);
-    glDrawElements(GL_TRIANGLES, numIndicesCube, GL_UNSIGNED_SHORT, 0);
-
-
     modelTransformMatrix = glm::mat4(1.0f);
     glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
     glBindVertexArray(floorVertexIndex);
     glDrawElements(GL_TRIANGLES, numIndicesFloor, GL_UNSIGNED_SHORT, 0);
     // glDrawArrays(GL_LINES, 0, ground.numberVertices);
 
+   //
+    std::list<ModelData *>::iterator it = _modelData.begin();
 
-    modelTransformMatrix = glm::translate(glm::mat4(1.0f), glm::vec3(-2.0f, -3.0f, 2.0f));
-    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians(90.0f), glm::vec3(1, 0, 0));
+    modelTransformMatrix = glm::translate(glm::mat4(1.0f),
+                                          glm::vec3((*it)->translate.valueX,(*it)->translate.valueY, (*it)->translate.valueZ));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueX), glm::vec3(1, 0, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueY), glm::vec3(0, 1, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueZ), glm::vec3(0, 0, 1));
+    modelTransformMatrix = glm::scale(modelTransformMatrix,glm::vec3((*it)->scale.valueX,(*it)->scale.valueY,(*it)->scale.valueZ));
+    //(*it)->objectMatrix = modelTransformMatrix;
+    //memcpy( (*it)->objectMatrix, modelTransformMatrix), sizeof(modelTransformMatrix) );
+    glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
+    glBindVertexArray(CubeVertexIndex);
+    glDrawElements(GL_TRIANGLES, numIndicesCube, GL_UNSIGNED_SHORT, 0);
+    (*it)->objectMatrix = modelTransformMatrix;
+    it = std::next(it,1);
+    modelTransformMatrix = glm::translate(glm::mat4(1.0f),
+                                          glm::vec3((*it)->translate.valueX,(*it)->translate.valueY, (*it)->translate.valueZ));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueX), glm::vec3(1, 0, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueY), glm::vec3(0, 1, 0));
+    modelTransformMatrix = glm::rotate(modelTransformMatrix, glm::radians((*it)->rotate.valueZ), glm::vec3(0, 0, 1));
+    modelTransformMatrix = glm::scale(modelTransformMatrix,glm::vec3((*it)->scale.valueX,(*it)->scale.valueY,(*it)->scale.valueZ));
+    (*it)->objectMatrix = modelTransformMatrix;
     glUniformMatrix4fv(modelTransformMatrixLocation, 1, GL_FALSE, &modelTransformMatrix[0][0]);
     glBindVertexArray(arrowVertexIndex);
     glDrawElements(GL_TRIANGLES, numIndicesArrow, GL_UNSIGNED_SHORT, 0);
@@ -235,6 +244,12 @@ void WorldManager::updateCameraOrientation(QMouseEvent * e) {
     STREAM_OUTPUT_VEC3(glm::vec3(e->x(),e->y(),0.0));
     mainCamera.orientationUpdate(glm::vec2(e->x(),e->y()));
     std::cout << mainCamera << std::endl;
+}
+
+
+void WorldManager::updateVerticies()
+{
+    drawObjects();
 }
 
 

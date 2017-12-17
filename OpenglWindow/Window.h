@@ -11,14 +11,20 @@
 #include "../QT/ModelData.h"
 
 class Window : public QGLWidget {
+    Q_OBJECT
 public:
     Window(std::list<ModelData *> ObjectsData);
+
+private slots:
+    void updateVerticies();
+
 private:
     void paintGL();
     void initializeGL();
     void mouseMoveEvent(QMouseEvent *);
     void keyPressEvent(QKeyEvent *);
     WorldManager worldManager;
+    std::list<ModelData *> ObjectsToDrawData;
 };
 
 

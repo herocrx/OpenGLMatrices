@@ -1,0 +1,4 @@
+/home/heroadm/Pobrane/clion-2017.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/heroadm/CLionProjects/OpenGLTutorial
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/heroadm/CLionProjects/OpenGLTutorial/cmake-build-debug

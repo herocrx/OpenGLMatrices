@@ -7,16 +7,21 @@
 
 #include <QtWidgets/qgridlayout.h>
 #include <QtWidgets/QLabel>
+#include <glm/gtc/matrix_transform.hpp>
 
 class ObjectMatrix : public  QGridLayout {
+    Q_OBJECT
 public:
-    ObjectMatrix();
+    ObjectMatrix(glm::mat4 *);
     ~ObjectMatrix();
     void init();
-    void updateMatrix(float matrix[4][4]);
+
 private:
+    glm::mat4 * matrixObject;
     QLabel labelData[4][4];
     QVBoxLayout * TransRotateScaleLayout;
+private slots:
+        void updateMatrix();
 };
 
 

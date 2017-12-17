@@ -5,12 +5,12 @@
 #include <iostream>
 #include "ControlStrip.h"
 
-ControlStrip::ControlStrip(std::string labelName, StripData * stripData){
+ControlStrip::ControlStrip(std::string labelName, StripData * stripData, float min, float max){
     stripModelData = stripData;
     nameLabel = new QLabel( QString::fromStdString(labelName));
-    sliderX = new DebugSlider;
-    sliderY = new DebugSlider;
-    sliderZ = new DebugSlider;
+    sliderX = new DebugSlider(1.0f,min,max);
+    sliderY = new DebugSlider(1.0f,min,max);
+    sliderZ = new DebugSlider(1.0f,min,max);
     layout = new QHBoxLayout;
     init();
 }
@@ -45,19 +45,16 @@ void ControlStrip::updateValues(StripData * stripRandomData ) {
 
 void ControlStrip::updateSliderXData(float data )
 {
-    std::cout << "Slider X data has changed: " << data <<  std::endl;
     stripModelData->valueX = data;
     return;
 }
 void ControlStrip::updateSliderYData(float data )
 {
-    std::cout << "Slider Y data has changed:  " << data << std::endl;
     stripModelData->valueY = data;
     return;
 }
 void ControlStrip::updateSliderZData(float data )
 {
-    std::cout << "Slider Z  data has changed: " << data << std::endl;
     stripModelData->valueZ = data;
     return;
 }

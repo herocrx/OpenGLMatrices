@@ -23,9 +23,9 @@ GuiObjectController::GuiObjectController(ModelData * storageData) {
     translate->updateValues(&attachedModel->translate);
     scale = new ControlStrip("Scale:     ",&storageData->scale);
     scale->updateValues(&attachedModel->scale);
-    rotate = new ControlStrip("Rotate:  ",&attachedModel->rotate);
+    rotate = new ControlStrip("Rotate:  ",&attachedModel->rotate,-180.0f,180.0f);
     rotate->updateValues(&attachedModel->rotate);
-    matrixObject = new ObjectMatrix;
+    matrixObject = new ObjectMatrix(&attachedModel->objectMatrix);
     TransRotateScaleLayout = new QVBoxLayout;
 
     TransRotateScaleLayout->addLayout(translate->getQHBoxLayout());
@@ -40,7 +40,7 @@ GuiObjectController::GuiObjectController(ModelData * storageData) {
 
 
 void GuiObjectController::setupSignals(ControlStrip * strip, float x, float y, float z ) {
-    //connect(translate,SIGNAL(translate.valueChanged(int)));
+
 }
 
 ControlStrip *GuiObjectController::getTranslateStrip() {
@@ -52,4 +52,9 @@ ControlStrip *GuiObjectController::getScaleStrip() {
 }
 ControlStrip * GuiObjectController::getRotateStrip() {
     return rotate;
+}
+
+
+void GuiObjectController::updateMatrix() {
+
 }
