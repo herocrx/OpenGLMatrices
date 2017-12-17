@@ -22,6 +22,8 @@ private:
     void setupSignals();
     std::list<GuiObjectController *> GuiObjectControllerList;
     std::list<ModelData *> ModelDataContainer;
+    void keyPressEvent(QKeyEvent *) override ;
+    Window  * myGlWindow;
 };
 
 

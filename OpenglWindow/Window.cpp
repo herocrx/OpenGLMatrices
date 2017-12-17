@@ -33,6 +33,7 @@ void Window::mouseMoveEvent(QMouseEvent * e) {
 
 void Window::keyPressEvent(QKeyEvent * e ) {
     worldManager.updateCameraPosition(e);
+
     repaint();
 }
 

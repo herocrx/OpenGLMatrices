@@ -14,15 +14,15 @@ class Window : public QGLWidget {
     Q_OBJECT
 public:
     Window(std::list<ModelData *> ObjectsData);
-
+    void keyPressEvent(QKeyEvent *) override ;
 private slots:
     void updateVerticies();
 
 private:
     void paintGL();
     void initializeGL();
-    void mouseMoveEvent(QMouseEvent *);
-    void keyPressEvent(QKeyEvent *);
+    void mouseMoveEvent(QMouseEvent *) override ;
+
     WorldManager worldManager;
     std::list<ModelData *> ObjectsToDrawData;
 };

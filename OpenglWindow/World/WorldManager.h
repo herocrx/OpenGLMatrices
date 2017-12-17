@@ -38,6 +38,7 @@ private:
 
     GLuint numIndicesArrow;
     GLuint numIndicesCube;
+    GLuint numLinesCube;
     GLuint numIndicesTextureCube;
     GLuint numIndicesFloor;
 
@@ -70,8 +71,6 @@ private:
     void sendDataToOpenGL();
     void initalizeVAO();
 
-    glm::mat4 modelTransformMatrix1;
-    glm::mat4 modelTransformMatrix2;
 };
 
 
